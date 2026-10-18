@@ -2528,10 +2528,10 @@
     }
   },
   {
-    "slug": "mt/butte-silver-bow-balance",
+    "slug": "mt/butte",
     "cityId": "3011397",
     "countyFips": "30113",
-    "name": "Butte-Silver Bow",
+    "name": "Butte",
     "stateCode": "mt",
     "stateName": "Montana",
     "countyName": "Butte-Silver Bow Metropolitan Area",

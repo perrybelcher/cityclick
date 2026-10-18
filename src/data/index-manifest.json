@@ -285,7 +285,7 @@
     "timeZone": "ET"
   },
   {
-    "slug": "in/indianapolis-balance",
+    "slug": "in/indianapolis",
     "name": "Indianapolis",
     "stateCode": "in",
     "stateName": "Indiana",
@@ -513,8 +513,8 @@
     "timeZone": "PT"
   },
   {
-    "slug": "ky/louisville-jefferson-county-metro-government-balance",
-    "name": "Louisville/Jefferson County metro government",
+    "slug": "ky/louisville",
+    "name": "Louisville",
     "stateCode": "ky",
     "stateName": "Kentucky",
     "population": 622981,
@@ -2337,8 +2337,8 @@
     "timeZone": "ET"
   },
   {
-    "slug": "ga/augusta-richmond-county-consolidated-government-balance",
-    "name": "Augusta-Richmond County consolidated government",
+    "slug": "ga/augusta",
+    "name": "Augusta",
     "stateCode": "ga",
     "stateName": "Georgia",
     "population": 200884,
@@ -4237,8 +4237,8 @@
     "timeZone": "CT"
   },
   {
-    "slug": "ga/athens-clarke-county-unified-government-balance",
-    "name": "Athens-Clarke County unified government",
+    "slug": "ga/athens",
+    "name": "Athens",
     "stateCode": "ga",
     "stateName": "Georgia",
     "population": 128628,
@@ -15067,7 +15067,7 @@
     "timeZone": "CT"
   },
   {
-    "slug": "ct/milford-balance",
+    "slug": "ct/milford",
     "name": "Milford",
     "stateCode": "ct",
     "stateName": "Connecticut",
@@ -21470,8 +21470,8 @@
     "timeZone": "CT"
   },
   {
-    "slug": "mt/butte-silver-bow-balance",
-    "name": "Butte-Silver Bow",
+    "slug": "mt/butte",
+    "name": "Butte",
     "stateCode": "mt",
     "stateName": "Montana",
     "population": 35701,

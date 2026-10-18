@@ -1264,10 +1264,10 @@
     }
   },
   {
-    "slug": "ga/augusta-richmond-county-consolidated-government-balance",
+    "slug": "ga/augusta",
     "cityId": "1304204",
     "countyFips": "13042",
-    "name": "Augusta-Richmond County consolidated government",
+    "name": "Augusta",
     "stateCode": "ga",
     "stateName": "Georgia",
     "countyName": "Augusta-Richmond County consolidated government Metropolitan Area",
@@ -3160,10 +3160,10 @@
     }
   },
   {
-    "slug": "ga/athens-clarke-county-unified-government-balance",
+    "slug": "ga/athens",
     "cityId": "1303440",
     "countyFips": "13034",
-    "name": "Athens-Clarke County unified government",
+    "name": "Athens",
     "stateCode": "ga",
     "stateName": "Georgia",
     "countyName": "Athens-Clarke County unified government Metropolitan Area",
