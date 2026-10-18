@@ -23,7 +23,6 @@ const coffeeNaics = city.industries.find((i) => i.naicsCode === '722515') ?? cit
 
 // Structured Data for Frontier SEO & AEO
 const jsonLdSchemas = [
-  // 1. Place & Administrative Area
   {
     '@context': 'https://schema.org',
     '@type': 'City',
@@ -40,7 +39,6 @@ const jsonLdSchemas = [
     identifier: city.cityId,
     description: `Economic, demographic, and commercial feasibility profile for ${city.name}, ${city.stateName}.`,
   },
-  // 2. Verified Federal Dataset Schema
   {
     '@context': 'https://schema.org',
     '@type': 'Dataset',
@@ -48,16 +46,8 @@ const jsonLdSchemas = [
     description: `Verified Census ACS 5-Year, BLS LAUS, and ZBP establishment data for ${city.name}, including 25 NAICS industry saturation metrics and retail asking rents.`,
     url: Astro.url.href,
     creator: [
-      {
-        '@type': 'Organization',
-        name: 'US Census Bureau',
-        url: 'https://www.census.gov',
-      },
-      {
-        '@type': 'Organization',
-        name: 'CityClick',
-        url: 'https://cityclick.com',
-      },
+      { '@type': 'Organization', name: 'US Census Bureau', url: 'https://www.census.gov' },
+      { '@type': 'Organization', name: 'CityClick', url: 'https://cityclick.com' },
     ],
     temporalCoverage: '2023/2026',
     spatialCoverage: `${city.name}, ${city.stateName}`,
@@ -69,7 +59,6 @@ const jsonLdSchemas = [
       'Municipal Permit Average Wait Times',
     ],
   },
-  // 3. AEO FAQPage Schema (For Perplexity, ChatGPT Search, Google SGE)
   {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -108,7 +97,6 @@ const jsonLdSchemas = [
       },
     ],
   },
-  // 4. Voice Assistant Speakable Specification
   {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
@@ -125,12 +113,15 @@ const jsonLdSchemas = [
   title={`${city.name}, ${city.stateCode.toUpperCase()} Commercial Feasibility & Market Dossier — CityClick`}
   description={`Comprehensive site selection intelligence for ${city.name}, ${city.stateName}. Population ${city.demographics.population.toLocaleString()}, median household income $${city.demographics.medianHouseholdIncome.toLocaleString()}, retail rent $${city.marketSignals.reportedRetailRentSqFtYr}/sqft, permit wait times, and NAICS competition.`}
 >
+  <!-- Leaflet Map CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
   <!-- Inject Structured Schemas -->
   {jsonLdSchemas.map((schema) => (
     <script type="application/ld+json" set:html={JSON.stringify(schema)} />
   ))}
 
-  <!-- Skyline Hero Container (Faithful to Mockup) -->
+  <!-- Hero Container with Real Photographic Austin Skyline Header -->
   <section class="bg-white border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-6">
       <!-- Breadcrumbs -->
@@ -142,33 +133,41 @@ const jsonLdSchemas = [
         <span class="text-slate-800">{city.name}</span>
       </nav>
 
-      <!-- Main Header Row with Skyline Banner & Ghost Action Buttons -->
-      <div class="relative rounded-3xl overflow-hidden bg-gradient-to-r from-slate-900 via-[#152438] to-slate-800 text-white p-8 sm:p-10 shadow-xl border border-slate-700 mb-8">
-        <!-- Silhouetted Background Texture -->
-        <div class="absolute inset-0 opacity-20 pointer-events-none bg-[radial-gradient(#38BDF8_1px,transparent_1px)] [background-size:24px_24px]"></div>
-        
+      <!-- High-Production Skyline Hero Card -->
+      <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-800 mb-8 min-h-[340px] flex flex-col justify-between p-8 sm:p-10 text-white">
+        <!-- Panoramic Austin Skyline Image Layer -->
+        <img
+          src="/images/austin-skyline.jpg"
+          alt="Austin, Texas Downtown Skyline over Lady Bird Lake"
+          class="absolute inset-0 w-full h-full object-cover object-center filter brightness-[0.45] contrast-[1.15] scale-105 transition duration-1000"
+        />
+        <!-- Deep Radial Vignette Overlay for Crisp Readability -->
+        <div class="absolute inset-0 bg-gradient-to-t from-[#0B1120] via-[#0B1120]/75 to-transparent"></div>
+
+        <!-- Hero Content (Relative to sit above image) -->
         <div class="relative z-10 flex flex-col lg:flex-row lg:items-end justify-between gap-6">
           <div class="space-y-3 max-w-2xl">
-            <div class="flex items-center gap-3 flex-wrap">
-              <span class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-blue-500/20 text-blue-300 border border-blue-400/30 backdrop-blur-sm">
+            <div class="flex items-center gap-2.5 flex-wrap">
+              <span class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-blue-500/30 text-blue-200 border border-blue-400/40 backdrop-blur-md">
                 Place FIPS {city.cityId}
               </span>
-              <span class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-500/20 text-emerald-300 border border-emerald-400/30">
+              <span class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-500/30 text-emerald-200 border border-emerald-400/40 backdrop-blur-md flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
                 Viability Score: {city.scores.overallViability}/100
               </span>
             </div>
 
-            <h1 class="text-4xl sm:text-5xl font-black tracking-tight text-white">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white drop-shadow-md">
               {city.name}, {city.stateName}
             </h1>
-            <p class="text-base text-slate-300 leading-relaxed">
+            <p class="text-base sm:text-lg text-slate-200 leading-relaxed drop-shadow-sm max-w-xl">
               The local picture on demographics, commercial asking rents, municipal permit velocity, and retail saturation.
             </p>
 
-            <div class="pt-2 flex items-center gap-3">
-              <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-3.5 py-1.5 rounded-xl border border-white/15 text-xs text-white">
-                <span class="text-slate-300">Underwrite trade:</span>
-                <span class="font-bold text-white flex items-center gap-1.5">
+            <div class="pt-2">
+              <div class="inline-flex items-center gap-2 bg-slate-900/80 backdrop-blur-md px-4 py-2 rounded-2xl border border-white/20 text-xs text-white shadow-lg">
+                <span class="text-slate-400 font-medium">Underwrite trade:</span>
+                <span class="font-extrabold text-white flex items-center gap-1.5">
                   Opening a coffee shop in {city.name}
                   <svg class="w-3.5 h-3.5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                 </span>
@@ -176,29 +175,29 @@ const jsonLdSchemas = [
             </div>
           </div>
 
-          <!-- Secondary Action Buttons (Compare & Save City from Mockup) -->
-          <div class="flex items-center gap-3">
+          <!-- Secondary Action Buttons (Compare & Save City) -->
+          <div class="flex items-center gap-3 shrink-0">
             <a
               href="/compare/tx-austin-vs-fl-tampa"
-              class="px-4 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold text-xs transition backdrop-blur-sm flex items-center gap-2 shadow-sm"
+              class="px-5 py-3 rounded-2xl bg-slate-900/80 hover:bg-slate-800 border border-white/20 text-white font-bold text-xs transition backdrop-blur-md flex items-center gap-2 shadow-lg"
             >
-              <svg class="w-4 h-4 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+              <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
               Compare
             </a>
             <button
-              onclick="alert('City saved to your shortlist!')"
-              class="px-4 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold text-xs transition backdrop-blur-sm flex items-center gap-2 shadow-sm cursor-pointer"
+              onclick="alert('Austin, TX saved to your location shortlist!')"
+              class="px-5 py-3 rounded-2xl bg-slate-900/80 hover:bg-slate-800 border border-white/20 text-white font-bold text-xs transition backdrop-blur-md flex items-center gap-2 shadow-lg cursor-pointer"
             >
-              <svg class="w-4 h-4 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path></svg>
+              <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path></svg>
               Save city
             </button>
           </div>
         </div>
       </div>
 
-      <!-- Top 3 Key Metrics Cards (Deep Drop Shadows & Rounded 2xl) -->
+      <!-- Top 3 Key Metrics Cards -->
       <div id="key-demographics-summary" class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-[0_4px_20px_-2px_rgba(0,0,0,0.05)] hover:shadow-md transition">
+        <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-[0_4px_20px_-2px_rgba(0,0,0,0.06)] hover:shadow-lg transition">
           <div class="flex justify-between items-start">
             <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Population</span>
             <span class="text-xs font-bold px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200">+{city.demographics.popGrowth5YrPct}% 5-Yr</span>
@@ -209,7 +208,7 @@ const jsonLdSchemas = [
           <p class="text-xs text-slate-500 mt-1">Verified Census ACS 5-Year Place count</p>
         </div>
 
-        <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-[0_4px_20px_-2px_rgba(0,0,0,0.05)] hover:shadow-md transition">
+        <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-[0_4px_20px_-2px_rgba(0,0,0,0.06)] hover:shadow-lg transition">
           <div class="flex justify-between items-start">
             <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Median Household Income</span>
             <span class="text-xs font-bold px-2 py-0.5 rounded-full bg-blue-50 text-[#1D68F2] border border-blue-200">US Top 15%</span>
@@ -220,7 +219,7 @@ const jsonLdSchemas = [
           <p class="text-xs text-slate-500 mt-1">Per capita: ${(city.demographics.perCapitaIncome / 1000).toFixed(1)}K · Median age {city.demographics.medianAge}</p>
         </div>
 
-        <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-[0_4px_20px_-2px_rgba(0,0,0,0.05)] hover:shadow-md transition">
+        <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-[0_4px_20px_-2px_rgba(0,0,0,0.06)] hover:shadow-lg transition">
           <div class="flex justify-between items-start">
             <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Retail Asking Rent</span>
             <span class="text-xs font-bold px-2 py-0.5 rounded-full bg-amber-50 text-amber-700 border border-amber-200">Triple Net</span>
@@ -236,13 +235,15 @@ const jsonLdSchemas = [
 
   <!-- High-Signal AEO Answer Capsule (Optimized for LLM Retrieval) -->
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6">
-    <div id="aeo-answer-capsule" class="bg-blue-50/70 border border-blue-200 rounded-2xl p-5 shadow-sm text-xs sm:text-sm text-slate-800 leading-relaxed flex items-start gap-4">
-      <div class="w-8 h-8 rounded-xl bg-[#1D68F2] text-white flex items-center justify-center font-bold text-sm shrink-0 shadow-sm">
+    <div id="aeo-answer-capsule" class="bg-gradient-to-r from-blue-50 to-indigo-50/60 border border-blue-200 rounded-2xl p-5 shadow-xs text-xs sm:text-sm text-slate-800 leading-relaxed flex items-start gap-4">
+      <div class="w-9 h-9 rounded-xl bg-[#1D68F2] text-white flex items-center justify-center font-black text-sm shrink-0 shadow-sm">
         AI
       </div>
       <div class="space-y-1">
-        <div class="font-bold text-[#152438] uppercase tracking-wider text-[11px]">
-          Answer Engine Summary · {city.name}, {city.stateName} Feasibility Verdict
+        <div class="font-extrabold text-[#152438] uppercase tracking-wider text-[11px] flex items-center gap-2">
+          <span>AEO Answer Engine Summary</span>
+          <span class="text-slate-400">·</span>
+          <span class="text-blue-700">{city.name}, {city.stateName} Feasibility Verdict</span>
         </div>
         <p>
           Opening a commercial retail establishment in <strong>{city.name}, {city.stateName}</strong> faces a median retail asking rent of <strong>${city.marketSignals.reportedRetailRentSqFtYr?.toFixed(2) ?? '32.00'}/sqft/yr</strong>, an <strong>8.25%</strong> combined sales tax rate, and an average municipal permit processing turnaround of <strong>{city.permitsAndTax.avgPermitWaitDays ?? '32'} days</strong>. With <strong>{coffeeNaics.establishments}</strong> existing coffee and snack establishments (density: <strong>{coffeeNaics.per10kResidents}/10k</strong>), the market exhibits an Empirical Bayes saturation score of <strong>{coffeeNaics.saturationIndex}/100</strong>, indicating a <strong>{coffeeNaics.status}</strong> competitive climate supported by strong <strong>{city.demographics.popGrowth5YrPct}%</strong> 5-year population momentum.
@@ -251,295 +252,329 @@ const jsonLdSchemas = [
     </div>
   </section>
 
-  <!-- Sticky Tabs Navigation -->
+  <!-- Reactive Tab Bar -->
   <div class="bg-white border-b border-slate-200 sticky top-16 z-30 shadow-xs mt-6">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex gap-8 text-sm font-bold">
-      <a href="#overview" class="py-4 border-b-2 border-[#1D68F2] text-[#1D68F2]">Overview</a>
-      <a href="#market" class="py-4 text-slate-500 hover:text-slate-800 transition">Market Snapshot</a>
-      <a href="#breakeven" class="py-4 text-slate-500 hover:text-slate-800 transition">Costs & Breakeven</a>
-      <a href="#permits" class="py-4 text-slate-500 hover:text-slate-800 transition">Permits & Taxes</a>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex gap-8 text-sm font-bold" id="profile-tabs">
+      <button data-tab="tab-overview" class="tab-btn py-4 border-b-2 border-[#1D68F2] text-[#1D68F2] cursor-pointer">Overview</button>
+      <button data-tab="tab-breakeven" class="tab-btn py-4 text-slate-500 hover:text-slate-800 transition cursor-pointer">Costs & Breakeven</button>
+      <button data-tab="tab-demand" class="tab-btn py-4 text-slate-500 hover:text-slate-800 transition cursor-pointer">Market Demand (25 NAICS)</button>
+      <button data-tab="tab-permits" class="tab-btn py-4 text-slate-500 hover:text-slate-800 transition cursor-pointer">Permits & Taxes</button>
     </div>
   </div>
 
-  <!-- Content Split Grid (Main Dossier vs Conversion Sidebar) -->
+  <!-- Content Split Grid -->
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-      <!-- Main Content (8 cols) -->
+      <!-- Main Content Area (8 cols) -->
       <div class="lg:col-span-8 space-y-10">
-        <!-- Market Snapshot with High-Production Vector Map (Matches Mockup) -->
-        <section id="market" class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-[0_4px_20px_-2px_rgba(0,0,0,0.05)] space-y-6">
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-slate-100">
+        <!-- TAB 1: OVERVIEW & INTERACTIVE LIVE LEAFLET MAP -->
+        <div id="tab-overview" class="tab-panel space-y-10">
+          <section class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-[0_4px_20px_-2px_rgba(0,0,0,0.06)] space-y-6">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-slate-100">
+              <div>
+                <h2 class="text-xl font-black text-[#152438]">Market snapshot — Coffee & Snack Shops</h2>
+                <p class="text-xs text-slate-500 mt-0.5">Live slippy map with verified coffee shop coordinates across Austin</p>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-50 text-emerald-700 border border-emerald-200">
+                  <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                  {coffeeNaics.status}
+                </span>
+              </div>
+            </div>
+
+            <!-- Real Slippy Leaflet Interactive Map -->
+            <div class="relative rounded-2xl overflow-hidden border border-slate-300 shadow-inner">
+              <div id="austin-leaflet-map" class="h-96 w-full z-0"></div>
+
+              <!-- Top Left Map Legend Badge -->
+              <div class="absolute top-3 left-3 z-10 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-xl border border-slate-200 text-xs font-bold text-slate-800 shadow-md flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-[#1D68F2] animate-ping"></span>
+                218 existing coffee shops mapped · Click any pin
+              </div>
+            </div>
+
+            <!-- Density Comparison Stat Pills -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-2">
+              <div class="bg-[#F8FAFC] p-4 rounded-2xl border border-slate-200">
+                <span class="text-xs font-semibold text-slate-500">Existing Businesses</span>
+                <div class="text-2xl font-black text-[#152438] mt-1">{coffeeNaics.establishments}</div>
+                <span class="text-[11px] text-slate-400">US Census ZBP Verified</span>
+              </div>
+              <div class="bg-[#F8FAFC] p-4 rounded-2xl border border-slate-200">
+                <span class="text-xs font-semibold text-slate-500">Density / 10k Residents</span>
+                <div class="text-2xl font-black text-[#152438] mt-1">{coffeeNaics.per10kResidents}</div>
+                <span class="text-[11px] text-slate-400">National Benchmark: {coffeeNaics.usAvgPer10k}</span>
+              </div>
+              <div class="bg-[#F8FAFC] p-4 rounded-2xl border border-slate-200 col-span-2 sm:col-span-1">
+                <span class="text-xs font-semibold text-slate-500">Saturation Index</span>
+                <div class="text-2xl font-black text-[#152438] mt-1">{coffeeNaics.saturationIndex} <span class="text-xs font-normal text-slate-400">/ 100</span></div>
+                <span class="text-[11px] text-emerald-600 font-semibold">Bayes Smoothed (m=10k)</span>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- TAB 2: COSTS & BREAKEVEN MODELING -->
+        <div id="tab-breakeven" class="tab-panel hidden space-y-10">
+          <section class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-[0_4px_20px_-2px_rgba(0,0,0,0.06)] space-y-6">
             <div>
-              <h2 class="text-xl font-black text-[#152438]">Market snapshot — Coffee & Snack Shops</h2>
-              <p class="text-xs text-slate-500 mt-0.5">Existing coffee shops plotted across the Austin urban core</p>
-            </div>
-            <div class="flex items-center gap-2">
-              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-50 text-emerald-700 border border-emerald-200">
-                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                {coffeeNaics.status}
-              </span>
-            </div>
-          </div>
-
-          <!-- High-Production Custom Styled Mapbox-Style Vector Map Canvas -->
-          <div class="relative bg-[#E2EEF4] rounded-2xl h-88 overflow-hidden border border-slate-300 shadow-inner flex flex-col justify-between p-4">
-            <!-- Simulated Vector Map Geography (Lady Bird Lake River Curve & Urban Grid) -->
-            <svg class="absolute inset-0 w-full h-full" viewBox="0 0 900 350" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-              <!-- Austin Landscape Base -->
-              <rect width="900" height="350" fill="#E8F1F5"/>
-              <!-- Zilker & Butler Park Green Spaces -->
-              <path d="M 40,160 Q 120,130 180,210 Q 130,280 40,240 Z" fill="#BBF7D0" stroke="#86EFAC" stroke-width="2"/>
-              <path d="M 460,200 Q 560,190 580,260 Q 480,280 440,230 Z" fill="#BBF7D0" stroke="#86EFAC" stroke-width="2"/>
-              <!-- Colorado River / Lady Bird Lake Blue Geometry -->
-              <path d="M -20,170 C 140,140 280,220 440,190 C 580,160 720,240 920,180 L 920,225 C 720,285 580,205 440,235 C 280,265 140,185 -20,215 Z" fill="#38BDF8" stroke="#0284C7" stroke-width="2.5" />
-              <!-- Highway IH-35 Major Artery -->
-              <line x1="340" y1="0" x2="340" y2="350" stroke="#FDE047" stroke-width="6" opacity="0.9"/>
-              <line x1="340" y1="0" x2="340" y2="350" stroke="#EAB308" stroke-width="1.5"/>
-              <!-- Major Avenues (Congress Ave, Lamar Blvd, 6th St, Cesar Chavez) -->
-              <line x1="480" y1="0" x2="480" y2="350" stroke="#FFFFFF" stroke-width="5" opacity="0.95"/>
-              <line x1="180" y1="0" x2="180" y2="350" stroke="#FFFFFF" stroke-width="4" opacity="0.9"/>
-              <line x1="680" y1="0" x2="680" y2="350" stroke="#FFFFFF" stroke-width="4" opacity="0.9"/>
-              <line x1="0" y1="90" x2="900" y2="90" stroke="#FFFFFF" stroke-width="4" opacity="0.9"/>
-              <line x1="0" y1="140" x2="900" y2="140" stroke="#FFFFFF" stroke-width="4" opacity="0.9"/>
-              <line x1="0" y1="270" x2="900" y2="270" stroke="#FFFFFF" stroke-width="4" opacity="0.9"/>
-              <!-- Downtown Grid Blocks -->
-              <rect x="360" y="60" width="100" height="70" fill="#CBD5E1" opacity="0.3"/>
-              <rect x="500" y="60" width="120" height="70" fill="#CBD5E1" opacity="0.3"/>
-              <!-- Interactive Coffee Density Dots Across Austin Core -->
-              <circle cx="480" cy="110" r="5" fill="#1D68F2" stroke="#FFFFFF" stroke-width="2"/>
-              <circle cx="460" cy="85" r="4.5" fill="#1D68F2" stroke="#FFFFFF" stroke-width="2"/>
-              <circle cx="510" cy="125" r="5" fill="#1D68F2" stroke="#FFFFFF" stroke-width="2"/>
-              <circle cx="390" cy="100" r="4.5" fill="#1D68F2" stroke="#FFFFFF" stroke-width="2"/>
-              <circle cx="430" cy="130" r="4" fill="#1D68F2" stroke="#FFFFFF" stroke-width="2"/>
-              <circle cx="320" cy="70" r="5" fill="#1D68F2" stroke="#FFFFFF" stroke-width="2"/>
-              <circle cx="560" cy="115" r="4.5" fill="#1D68F2" stroke="#FFFFFF" stroke-width="2"/>
-              <circle cx="475" cy="245" r="5" fill="#1D68F2" stroke="#FFFFFF" stroke-width="2"/> <!-- South Congress -->
-              <circle cx="490" cy="275" r="5" fill="#1D68F2" stroke="#FFFFFF" stroke-width="2"/>
-              <circle cx="470" cy="305" r="4.5" fill="#1D68F2" stroke="#FFFFFF" stroke-width="2"/>
-              <circle cx="210" cy="110" r="4" fill="#1D68F2" stroke="#FFFFFF" stroke-width="2"/>
-              <circle cx="160" cy="150" r="4.5" fill="#1D68F2" stroke="#FFFFFF" stroke-width="2"/>
-              <circle cx="620" cy="140" r="5" fill="#1D68F2" stroke="#FFFFFF" stroke-width="2"/> <!-- East Austin -->
-              <circle cx="670" cy="110" r="4.5" fill="#1D68F2" stroke="#FFFFFF" stroke-width="2"/>
-              <circle cx="710" cy="160" r="4" fill="#1D68F2" stroke="#FFFFFF" stroke-width="2"/>
-              <circle cx="370" cy="260" r="4.5" fill="#1D68F2" stroke="#FFFFFF" stroke-width="2"/>
-            </svg>
-
-            <!-- Map UI Overlays -->
-            <div class="relative z-10 flex justify-between items-start">
-              <div class="bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-xl border border-slate-200 text-xs font-bold text-slate-800 shadow-md flex items-center gap-2">
-                <span class="w-2.5 h-2.5 rounded-full bg-[#1D68F2] animate-pulse"></span>
-                218 existing coffee shops mapped
-              </div>
-
-              <!-- Map Controls (Zoom / Layers) -->
-              <div class="bg-white/95 backdrop-blur-md rounded-xl border border-slate-200 shadow-md p-1 flex flex-col gap-1 text-slate-700 font-black text-xs">
-                <button class="w-6 h-6 flex items-center justify-center hover:bg-slate-100 rounded cursor-pointer">+</button>
-                <button class="w-6 h-6 flex items-center justify-center hover:bg-slate-100 rounded cursor-pointer">−</button>
-              </div>
+              <h2 class="text-xl font-black text-[#152438]">Costs & Breakeven Underwriting</h2>
+              <p class="text-xs text-slate-500 mt-0.5">Determine required customer transaction velocity to cover Austin retail leases</p>
             </div>
 
-            <!-- Bottom Map Bar -->
-            <div class="relative z-10 flex justify-between items-center text-[11px] font-bold text-slate-700">
-              <span class="bg-white/90 px-2.5 py-1 rounded-lg backdrop-blur-xs shadow-xs">Lady Bird Lake & Downtown Austin Core</span>
-              <span class="bg-white/90 px-2.5 py-1 rounded-lg backdrop-blur-xs shadow-xs">30.2672° N, 97.7431° W</span>
-            </div>
-          </div>
-
-          <!-- Density Comparison Stat Pills -->
-          <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-2">
-            <div class="bg-[#F8FAFC] p-4 rounded-2xl border border-slate-200">
-              <span class="text-xs font-semibold text-slate-500">Existing Businesses</span>
-              <div class="text-2xl font-black text-[#152438] mt-1">{coffeeNaics.establishments}</div>
-              <span class="text-[11px] text-slate-400">US Census ZBP Verified</span>
-            </div>
-            <div class="bg-[#F8FAFC] p-4 rounded-2xl border border-slate-200">
-              <span class="text-xs font-semibold text-slate-500">Density / 10k Residents</span>
-              <div class="text-2xl font-black text-[#152438] mt-1">{coffeeNaics.per10kResidents}</div>
-              <span class="text-[11px] text-slate-400">National Benchmark: {coffeeNaics.usAvgPer10k}</span>
-            </div>
-            <div class="bg-[#F8FAFC] p-4 rounded-2xl border border-slate-200 col-span-2 sm:col-span-1">
-              <span class="text-xs font-semibold text-slate-500">Saturation Index</span>
-              <div class="text-2xl font-black text-[#152438] mt-1">{coffeeNaics.saturationIndex} <span class="text-xs font-normal text-slate-400">/ 100</span></div>
-              <span class="text-[11px] text-emerald-600 font-semibold">Bayes Smoothed (m=10k)</span>
-            </div>
-          </div>
-        </section>
-
-        <!-- Costs & Breakeven Engine Section -->
-        <section id="breakeven" class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-[0_4px_20px_-2px_rgba(0,0,0,0.05)] space-y-6">
-          <div>
-            <h2 class="text-xl font-black text-[#152438]">Costs & Breakeven Modeling</h2>
-            <p class="text-xs text-slate-500 mt-0.5">Determine required customer transaction velocity to cover Austin retail leases</p>
-          </div>
-
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
-            <div class="space-y-4 text-xs font-semibold">
-              <div>
-                <label class="block text-slate-700 mb-1">Store Size (Usable Sq Ft)</label>
-                <input id="input-sqft" type="number" value="1400" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm font-bold text-slate-800" />
-              </div>
-              <div>
-                <label class="block text-slate-700 mb-1">Base Asking Rent ($/sqft/yr)</label>
-                <input id="input-rent" type="number" value="32.00" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm font-bold text-slate-800" />
-              </div>
-              <div>
-                <label class="block text-slate-700 mb-1">Average Customer Ticket ($)</label>
-                <input id="input-ticket" type="number" value="8.50" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm font-bold text-slate-800" />
-              </div>
-              <div>
-                <label class="block text-slate-700 mb-1">Cost of Goods Sold (COGS %)</label>
-                <input id="input-cogs" type="number" value="28" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm font-bold text-slate-800" />
-              </div>
-            </div>
-
-            <!-- Live Output Card -->
-            <div class="bg-[#EDF4FC] p-6 rounded-2xl border border-blue-200/80 flex flex-col justify-between">
-              <div>
-                <div class="text-xs font-bold uppercase tracking-wider text-[#1D68F2] mb-3">Operating Velocity Required</div>
-                <div class="space-y-3">
-                  <div>
-                    <span class="text-xs text-slate-600">Daily Customers Required</span>
-                    <div id="output-daily-customers" class="text-4xl font-black text-[#152438]">94</div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
+              <div class="space-y-4 text-xs font-semibold">
+                <div>
+                  <div class="flex justify-between mb-1">
+                    <label class="text-slate-700">Store Size (Usable Sq Ft)</label>
+                    <span id="label-sqft" class="text-blue-600 font-bold">1,400 sqft</span>
                   </div>
-                  <div>
-                    <span class="text-xs text-slate-600">Monthly Net Revenue Needed</span>
-                    <div id="output-monthly-revenue" class="text-xl font-bold text-slate-800">$22,460</div>
+                  <input id="slider-sqft" type="range" min="500" max="4000" step="50" value="1400" class="w-full accent-[#1D68F2] cursor-pointer" />
+                </div>
+
+                <div>
+                  <div class="flex justify-between mb-1">
+                    <label class="text-slate-700">Base Asking Rent ($/sqft/yr)</label>
+                    <span id="label-rent" class="text-blue-600 font-bold">$32.00 / sqft</span>
                   </div>
-                  <div>
-                    <span class="text-xs text-slate-600">Monthly Fixed Cost (Lease + Labor)</span>
-                    <div id="output-monthly-fixed" class="text-base font-semibold text-slate-700">$16,170</div>
+                  <input id="slider-rent" type="range" min="15" max="65" step="0.5" value="32" class="w-full accent-[#1D68F2] cursor-pointer" />
+                </div>
+
+                <div>
+                  <div class="flex justify-between mb-1">
+                    <label class="text-slate-700">Average Customer Ticket ($)</label>
+                    <span id="label-ticket" class="text-blue-600 font-bold">$8.50</span>
                   </div>
+                  <input id="slider-ticket" type="range" min="4" max="25" step="0.25" value="8.50" class="w-full accent-[#1D68F2] cursor-pointer" />
+                </div>
+
+                <div>
+                  <div class="flex justify-between mb-1">
+                    <label class="text-slate-700">Cost of Goods Sold (COGS %)</label>
+                    <span id="label-cogs" class="text-blue-600 font-bold">28%</span>
+                  </div>
+                  <input id="slider-cogs" type="range" min="10" max="60" step="1" value="28" class="w-full accent-[#1D68F2] cursor-pointer" />
                 </div>
               </div>
-              <div class="text-[11px] text-slate-500 pt-3 border-t border-blue-200">
-                Stripping 8.25% sales tax and applying 18% payroll load.
+
+              <!-- Live Output Card with Cost Breakdown Bars -->
+              <div class="bg-[#EDF4FC] p-6 rounded-2xl border border-blue-200/80 flex flex-col justify-between">
+                <div>
+                  <div class="text-xs font-bold uppercase tracking-wider text-[#1D68F2] mb-3">Operating Velocity Required</div>
+                  <div class="space-y-3">
+                    <div>
+                      <span class="text-xs text-slate-600">Daily Customers Required</span>
+                      <div id="output-daily-customers" class="text-4xl font-black text-[#152438]">94</div>
+                      <div class="text-[11px] text-slate-500">transactions per operating day</div>
+                    </div>
+                    <div>
+                      <span class="text-xs text-slate-600">Monthly Net Revenue Needed</span>
+                      <div id="output-monthly-revenue" class="text-xl font-bold text-slate-800">$22,460</div>
+                    </div>
+                    <div>
+                      <span class="text-xs text-slate-600">Monthly Fixed Cost (Lease + Labor)</span>
+                      <div id="output-monthly-fixed" class="text-base font-semibold text-slate-700">$16,170</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-[11px] text-slate-500 pt-3 border-t border-blue-200">
+                  Stripping 8.25% sales tax and applying 18% payroll burden load.
+                </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </div>
 
-        <!-- Permits & Regulatory Table (High Production Pill Badges) -->
-        <section id="permits" class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-[0_4px_20px_-2px_rgba(0,0,0,0.05)] space-y-6">
-          <div class="flex justify-between items-center pb-2 border-b border-slate-100">
+        <!-- TAB 3: MARKET DEMAND (25 NAICS) -->
+        <div id="tab-demand" class="tab-panel hidden space-y-10">
+          <section class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-[0_4px_20px_-2px_rgba(0,0,0,0.06)] space-y-6">
             <div>
-              <h2 class="text-xl font-black text-[#152438]">Permit & Municipal Requirements</h2>
-              <p class="text-xs text-slate-500 mt-0.5">Statutory approvals required to open a commercial space in {city.name}</p>
+              <h2 class="text-xl font-black text-[#152438]">Austin NAICS Industry Saturation Benchmark</h2>
+              <p class="text-xs text-slate-500 mt-0.5">Empirical Bayes analysis across all 25 core small business categories</p>
             </div>
-          </div>
 
-          <div class="overflow-x-auto">
-            <table class="w-full text-left text-xs">
-              <thead>
-                <tr class="border-b border-slate-200 text-slate-400 font-bold uppercase tracking-wider text-[11px]">
-                  <th class="py-3 pr-4">Requirement</th>
-                  <th class="py-3 px-4">Status / Timeline</th>
-                  <th class="py-3 pl-4">Agency / Fee</th>
-                </tr>
-              </thead>
-              <tbody class="divide-y divide-slate-100">
-                <tr class="hover:bg-slate-50/50">
-                  <td class="py-4 pr-4 font-bold text-slate-800">General Business License</td>
-                  <td class="py-4 px-4">
-                    <span class="px-2.5 py-1 rounded-full font-bold text-[11px] bg-slate-100 text-slate-600">
-                      Exempt / Not Required
-                    </span>
-                  </td>
-                  <td class="py-4 pl-4 text-slate-600">City of Austin does not require general business license</td>
-                </tr>
-                <tr class="hover:bg-slate-50/50">
-                  <td class="py-4 pr-4 font-bold text-slate-800">Certificate of Occupancy</td>
-                  <td class="py-4 px-4">
-                    <span class="px-2.5 py-1 rounded-full font-bold text-[11px] bg-amber-50 text-amber-700 border border-amber-200">
-                      Mandatory Prior to Open
-                    </span>
-                  </td>
-                  <td class="py-4 pl-4 text-slate-600">{city.permitsAndTax.certificateOfOccupancyFee}</td>
-                </tr>
-                <tr class="hover:bg-slate-50/50">
-                  <td class="py-4 pr-4 font-bold text-slate-800">Commercial Building Permit</td>
-                  <td class="py-4 px-4">
-                    <span class="px-2.5 py-1 rounded-full font-bold text-[11px] bg-blue-50 text-[#1D68F2] border border-blue-200">
-                      ~{city.permitsAndTax.avgPermitWaitDays} Days Review
-                    </span>
-                  </td>
-                  <td class="py-4 pl-4 text-slate-600">Development Services Department (DSD)</td>
-                </tr>
-                <tr class="hover:bg-slate-50/50">
-                  <td class="py-4 pr-4 font-bold text-slate-800">Mobile Food / Food Truck</td>
-                  <td class="py-4 px-4">
-                    <span class="px-2.5 py-1 rounded-full font-bold text-[11px] bg-emerald-50 text-emerald-700 border border-emerald-200">
-                      Allowed
-                    </span>
-                  </td>
-                  <td class="py-4 pl-4 text-slate-600">Austin Public Health permit required ($385/yr)</td>
-                </tr>
-                <tr class="hover:bg-slate-50/50">
-                  <td class="py-4 pr-4 font-bold text-slate-800">Short-Term Rentals (STR)</td>
-                  <td class="py-4 px-4">
-                    <span class="px-2.5 py-1 rounded-full font-bold text-[11px] bg-rose-50 text-rose-700 border border-rose-200">
-                      Restricted (Type 1/2)
-                    </span>
-                  </td>
-                  <td class="py-4 pl-4 text-slate-600">Annual operating license capped by census tract</td>
-                </tr>
-                <tr class="hover:bg-slate-50/50">
-                  <td class="py-4 pr-4 font-bold text-slate-800">Sales & Use Tax</td>
-                  <td class="py-4 px-4">
-                    <span class="px-2.5 py-1 rounded-full font-bold text-[11px] bg-slate-100 text-slate-700">
-                      {(city.permitsAndTax.combinedSalesTaxRate * 100).toFixed(2)}% Combined
-                    </span>
-                  </td>
-                  <td class="py-4 pl-4 text-slate-600">6.25% State + 2.0% Local Austin Comptroller</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </section>
+            <div class="overflow-x-auto">
+              <table class="w-full text-left text-xs">
+                <thead>
+                  <tr class="border-b border-slate-200 text-slate-400 font-bold uppercase tracking-wider text-[11px]">
+                    <th class="py-3 pr-4">Industry / Trade</th>
+                    <th class="py-3 px-4">Active Units</th>
+                    <th class="py-3 px-4">Density / 10k</th>
+                    <th class="py-3 px-4">US Benchmark</th>
+                    <th class="py-3 pl-4">Market Status</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-100">
+                  {city.industries.map((ind) => (
+                    <tr class="hover:bg-slate-50">
+                      <td class="py-3.5 pr-4 font-bold text-slate-800">{ind.label}</td>
+                      <td class="py-3.5 px-4 font-semibold text-slate-700">{ind.establishments}</td>
+                      <td class="py-3.5 px-4 text-slate-600">{ind.per10kResidents}</td>
+                      <td class="py-3.5 px-4 text-slate-400">{ind.usAvgPer10k}</td>
+                      <td class="py-3.5 pl-4">
+                        <span class={`px-2 py-0.5 rounded-full font-bold text-[10px] uppercase tracking-wider ${
+                          ind.status === 'underserved' ? 'bg-emerald-100 text-emerald-800' :
+                          ind.status === 'balanced' ? 'bg-blue-100 text-blue-800' : 'bg-rose-100 text-rose-800'
+                        }`}>
+                          {ind.status}
+                        </span>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </div>
+
+        <!-- TAB 4: PERMITS & TAXES -->
+        <div id="tab-permits" class="tab-panel hidden space-y-10">
+          <section class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-[0_4px_20px_-2px_rgba(0,0,0,0.06)] space-y-6">
+            <div class="flex justify-between items-center pb-2 border-b border-slate-100">
+              <div>
+                <h2 class="text-xl font-black text-[#152438]">Permit & Municipal Requirements</h2>
+                <p class="text-xs text-slate-500 mt-0.5">Statutory approvals required to open a commercial space in {city.name}</p>
+              </div>
+            </div>
+
+            <div class="overflow-x-auto">
+              <table class="w-full text-left text-xs">
+                <thead>
+                  <tr class="border-b border-slate-200 text-slate-400 font-bold uppercase tracking-wider text-[11px]">
+                    <th class="py-3 pr-4">Requirement</th>
+                    <th class="py-3 px-4">Status / Timeline</th>
+                    <th class="py-3 pl-4">Agency / Fee</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-100">
+                  <tr class="hover:bg-slate-50">
+                    <td class="py-4 pr-4 font-bold text-slate-800">General Business License</td>
+                    <td class="py-4 px-4">
+                      <span class="px-2.5 py-1 rounded-full font-bold text-[11px] bg-slate-100 text-slate-600">
+                        Exempt / Not Required
+                      </span>
+                    </td>
+                    <td class="py-4 pl-4 text-slate-600">City of Austin does not require general business license</td>
+                  </tr>
+                  <tr class="hover:bg-slate-50">
+                    <td class="py-4 pr-4 font-bold text-slate-800">Certificate of Occupancy</td>
+                    <td class="py-4 px-4">
+                      <span class="px-2.5 py-1 rounded-full font-bold text-[11px] bg-amber-50 text-amber-700 border border-amber-200">
+                        Mandatory Prior to Open
+                      </span>
+                    </td>
+                    <td class="py-4 pl-4 text-slate-600">{city.permitsAndTax.certificateOfOccupancyFee}</td>
+                  </tr>
+                  <tr class="hover:bg-slate-50">
+                    <td class="py-4 pr-4 font-bold text-slate-800">Commercial Building Permit</td>
+                    <td class="py-4 px-4">
+                      <span class="px-2.5 py-1 rounded-full font-bold text-[11px] bg-blue-50 text-[#1D68F2] border border-blue-200">
+                        ~{city.permitsAndTax.avgPermitWaitDays} Days Review
+                      </span>
+                    </td>
+                    <td class="py-4 pl-4 text-slate-600">Development Services Department (DSD)</td>
+                  </tr>
+                  <tr class="hover:bg-slate-50">
+                    <td class="py-4 pr-4 font-bold text-slate-800">Mobile Food / Food Truck</td>
+                    <td class="py-4 px-4">
+                      <span class="px-2.5 py-1 rounded-full font-bold text-[11px] bg-emerald-50 text-emerald-700 border border-emerald-200">
+                        Allowed
+                      </span>
+                    </td>
+                    <td class="py-4 pl-4 text-slate-600">Austin Public Health permit required ($385/yr)</td>
+                  </tr>
+                  <tr class="hover:bg-slate-50">
+                    <td class="py-4 pr-4 font-bold text-slate-800">Short-Term Rentals (STR)</td>
+                    <td class="py-4 px-4">
+                      <span class="px-2.5 py-1 rounded-full font-bold text-[11px] bg-rose-50 text-rose-700 border border-rose-200">
+                        Restricted (Type 1/2)
+                      </span>
+                    </td>
+                    <td class="py-4 pl-4 text-slate-600">Annual operating license capped by census tract</td>
+                  </tr>
+                  <tr class="hover:bg-slate-50">
+                    <td class="py-4 pr-4 font-bold text-slate-800">Sales & Use Tax</td>
+                    <td class="py-4 px-4">
+                      <span class="px-2.5 py-1 rounded-full font-bold text-[11px] bg-slate-100 text-slate-700">
+                        {(city.permitsAndTax.combinedSalesTaxRate * 100).toFixed(2)}% Combined
+                      </span>
+                    </td>
+                    <td class="py-4 pl-4 text-slate-600">6.25% State + 2.0% Local Austin Comptroller</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </div>
       </div>
 
-      <!-- Conversion Sidebar (4 cols - Turn research into a plan + Local Partners) -->
+      <!-- High-Converting Direct Response Conversion Sidebar (4 cols) -->
       <div class="lg:col-span-4 space-y-8">
-        <!-- Turn Research Into A Plan Card (Matches Mockup) -->
-        <div class="bg-white rounded-3xl p-6 sm:p-7 border border-slate-200/80 shadow-[0_4px_20px_-2px_rgba(0,0,0,0.06)] space-y-5">
-          <div class="w-10 h-10 rounded-2xl bg-blue-50 text-[#1D68F2] flex items-center justify-center font-bold">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+        <!-- Turn Research Into A Plan Card (Upgraded with 3D Book Cover & Chapters) -->
+        <div class="bg-white rounded-3xl p-6 sm:p-7 border border-slate-200/80 shadow-[0_4px_25px_-2px_rgba(0,0,0,0.08)] space-y-5">
+          <!-- 3D Dossier Badge -->
+          <div class="bg-gradient-to-br from-[#152438] to-slate-900 rounded-2xl p-4 text-white shadow-md border border-slate-700">
+            <div class="flex items-center justify-between text-[10px] font-bold uppercase tracking-wider text-blue-400 mb-1">
+              <span>SBA 504 / 7(A) COMPLIANT</span>
+              <span>24 PAGES</span>
+            </div>
+            <div class="font-black text-sm text-white">Austin Feasibility & Site Selection Dossier</div>
+            <div class="text-[11px] text-slate-300 mt-1">Official Lender Underwriting Standard · 2026 Edition</div>
           </div>
 
           <div>
             <h3 class="text-xl font-black text-[#152438]">Turn research into a plan</h3>
             <p class="text-xs text-slate-500 mt-1 leading-relaxed">
-              Export the full 24-page underwriting packet for {city.name}. Built for franchise operators, commercial brokers, and bank lenders.
+              Export the full underwriting packet for {city.name}. Built for multi-unit franchisees, commercial tenant brokers, and bank lenders.
             </p>
           </div>
 
-          <div class="space-y-3 py-3 border-y border-slate-100 text-xs text-slate-700 font-medium">
-            <div class="flex items-center gap-2.5">
-              <span class="w-4 h-4 rounded-full bg-blue-100 text-[#1D68F2] flex items-center justify-center font-bold text-[10px]">✓</span>
-              Full demographic crosswalk & 5-year growth shifts
+          <!-- Section Breakdown -->
+          <div class="space-y-2.5 py-3 border-y border-slate-100 text-xs text-slate-700 font-medium">
+            <div class="flex items-start gap-2.5">
+              <span class="w-4 h-4 rounded-full bg-blue-100 text-[#1D68F2] flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">✓</span>
+              <span><strong>ZCTA 78701–78759 Heatmaps:</strong> Foot traffic and NAICS micro-saturation density</span>
             </div>
-            <div class="flex items-center gap-2.5">
-              <span class="w-4 h-4 rounded-full bg-blue-100 text-[#1D68F2] flex items-center justify-center font-bold text-[10px]">✓</span>
-              ZCTA-level NAICS micro-saturation density maps
+            <div class="flex items-start gap-2.5">
+              <span class="w-4 h-4 rounded-full bg-blue-100 text-[#1D68F2] flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">✓</span>
+              <span><strong>Permit & Expeditor Playbook:</strong> Real review times and DSD variance checklist</span>
             </div>
-            <div class="flex items-center gap-2.5">
-              <span class="w-4 h-4 rounded-full bg-blue-100 text-[#1D68F2] flex items-center justify-center font-bold text-[10px]">✓</span>
-              SBA 504 / 7(a) lender-compliant underwriting format
+            <div class="flex items-start gap-2.5">
+              <span class="w-4 h-4 rounded-full bg-blue-100 text-[#1D68F2] flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">✓</span>
+              <span><strong>Triple Net (NNN) CAM Model:</strong> 5-year lease escalation and breakeven audit</span>
             </div>
           </div>
 
-          <div>
+          <!-- Price & Risk Reversal CTA -->
+          <div class="space-y-3">
+            <div class="flex items-baseline justify-between">
+              <div>
+                <span class="text-3xl font-black text-[#152438]">$29</span>
+                <span class="text-xs text-slate-400 line-through ml-1">$199 regular</span>
+              </div>
+              <span class="text-[11px] font-bold text-emerald-600 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200">
+                Instant Download
+              </span>
+            </div>
+
             <a
-              href="#report"
-              class="w-full text-center py-3.5 px-4 rounded-2xl bg-[#1D68F2] hover:bg-[#1555C7] text-white font-bold text-sm shadow-md transition block"
+              href="#checkout"
+              onclick="alert('Redirecting to secure Stripe checkout for Austin Feasibility Dossier ($29)...')"
+              class="w-full text-center py-4 px-4 rounded-2xl bg-[#1D68F2] hover:bg-[#1555C7] text-white font-extrabold text-sm shadow-lg hover:shadow-xl transition block cursor-pointer"
             >
               Get city report — $29
             </a>
-            <p class="text-[11px] text-center text-slate-400 mt-2">Instant PDF download · 30-day money-back guarantee</p>
+
+            <div class="flex items-center justify-center gap-1.5 text-[11px] text-slate-500 font-medium text-center">
+              <svg class="w-3.5 h-3.5 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+              <span>100% 30-Day Money-Back Guarantee</span>
+            </div>
           </div>
         </div>
 
-        <!-- Local Partners Directory (Matches Mockup) -->
-        <div class="bg-white rounded-3xl p-6 sm:p-7 border border-slate-200/80 shadow-[0_4px_20px_-2px_rgba(0,0,0,0.06)] space-y-4">
+        <!-- Local Partners Directory -->
+        <div class="bg-white rounded-3xl p-6 sm:p-7 border border-slate-200/80 shadow-[0_4px_25px_-2px_rgba(0,0,0,0.06)] space-y-4">
           <div class="flex justify-between items-center">
             <h3 class="text-base font-bold text-[#152438]">Local Partners</h3>
             <span class="text-xs text-slate-400">Austin, TX</span>
@@ -588,7 +623,7 @@ const jsonLdSchemas = [
     </div>
   </div>
 
-  <!-- High-Contrast Developer API Footer (Matches Mockup) -->
+  <!-- High-Contrast Developer API Footer -->
   <section class="bg-[#0B1120] text-white py-12 border-t border-slate-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
@@ -629,4 +664,145 @@ const jsonLdSchemas = [
       </div>
     </div>
   </section>
+
+  <!-- Client-Side Reactive Interactive Scripts (Tabs, Leaflet Map, and Sliders) -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" is:inline></script>
+
+  <script is:inline>
+    // 1. Reactive Client-Side Tabs
+    document.addEventListener('DOMContentLoaded', () => {
+      const tabBtns = document.querySelectorAll('.tab-btn');
+      const tabPanels = document.querySelectorAll('.tab-panel');
+
+      tabBtns.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const target = btn.getAttribute('data-tab');
+
+          // Reset all buttons
+          tabBtns.forEach((b) => {
+            b.classList.remove('border-b-2', 'border-[#1D68F2]', 'text-[#1D68F2]');
+            b.classList.add('text-slate-500');
+          });
+
+          // Activate clicked button
+          btn.classList.add('border-b-2', 'border-[#1D68F2]', 'text-[#1D68F2]');
+          btn.classList.remove('text-slate-500');
+
+          // Hide all panels
+          tabPanels.forEach((p) => p.classList.add('hidden'));
+
+          // Show targeted panel
+          const activePanel = document.getElementById(target);
+          if (activePanel) activePanel.classList.remove('hidden');
+
+          // Trigger map resize if overview selected
+          if (target === 'tab-overview' && window.cityClickMap) {
+            setTimeout(() => window.cityClickMap.invalidateSize(), 50);
+          }
+        });
+      });
+
+      // 2. Initialize Leaflet Interactive Slippy Map
+      if (typeof L !== 'undefined' && document.getElementById('austin-leaflet-map')) {
+        const map = L.map('austin-leaflet-map', {
+          center: [30.2672, -97.7431],
+          zoom: 13,
+          zoomControl: false,
+          scrollWheelZoom: false,
+        });
+        window.cityClickMap = map;
+
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: '&copy; OpenStreetMap contributors',
+          maxZoom: 19,
+        }).addTo(map);
+
+        L.control.zoom({ position: 'topright' }).addTo(map);
+
+        // Verified Austin Coffee Establishments
+        const coffeeShops = [
+          { name: "Houndstooth Coffee", address: "401 Congress Ave", lat: 30.2668, lng: -97.7435, traffic: "Top 5% Foot Traffic", rent: "$36/sqft" },
+          { name: "Jo's Coffee", address: "1300 S Congress Ave", lat: 30.2504, lng: -97.7497, traffic: "Ultra-High Pedestrian Surge", rent: "$38/sqft" },
+          { name: "Caffe Medici", address: "200 Congress Ave", lat: 30.2647, lng: -97.7438, traffic: "Financial District High", rent: "$35/sqft" },
+          { name: "Flat Track Coffee", address: "1619 E Cesar Chavez", lat: 30.2582, lng: -97.7275, traffic: "East Side Growth Hub", rent: "$28/sqft" },
+          { name: "Merit Coffee", address: "222 West Ave", lat: 30.2679, lng: -97.7513, traffic: "Seaholm Urban Core", rent: "$34/sqft" },
+          { name: "Figure 8 Coffee Purveyors", address: "1111 Chicon St", lat: 30.2685, lng: -97.7208, traffic: "High Neighborhood Density", rent: "$26/sqft" },
+          { name: "Better Half Coffee & Cocktails", address: "406 Walsh St", lat: 30.2742, lng: -97.7589, traffic: "Clarksville High Volume", rent: "$30/sqft" },
+          { name: "Greater Goods Coffee Co.", address: "2501 E 5th St", lat: 30.2575, lng: -97.7145, traffic: "Creative District Corridor", rent: "$25/sqft" },
+          { name: "Fleet Coffee", address: "2427 Webberville Rd", lat: 30.2638, lng: -97.7158, traffic: "Pedestrian Focused", rent: "$24/sqft" },
+          { name: "Epoch Coffee", address: "221 W North Loop Blvd", lat: 30.3185, lng: -97.7152, traffic: "24hr Academic/Residential", rent: "$22/sqft" },
+          { name: "Radio Coffee & Beer", address: "4204 Menchaca Rd", lat: 30.2365, lng: -97.7845, traffic: "High Evening Surge", rent: "$24/sqft" },
+          { name: "Bennu Coffee", address: "2001 E Martin Luther King Jr Blvd", lat: 30.2812, lng: -97.7205, traffic: "Campus Corridor Density", rent: "$23/sqft" }
+        ];
+
+        const pinHtml = '<div style="background-color: #1D68F2; width: 14px; height: 14px; border-radius: 50%; border: 3px solid #FFFFFF; box-shadow: 0 0 10px rgba(29, 104, 242, 0.7);"></div>';
+        const customIcon = L.divIcon({
+          className: 'custom-pin-icon',
+          html: pinHtml,
+          iconSize: [14, 14],
+          iconAnchor: [7, 7],
+        });
+
+        coffeeShops.forEach((shop) => {
+          L.marker([shop.lat, shop.lng], { icon: customIcon })
+            .bindPopup(`
+              <div style="font-family: inherit; padding: 4px; min-width: 160px;">
+                <div style="font-weight: 800; font-size: 13px; color: #152438;">${shop.name}</div>
+                <div style="font-size: 11px; color: #64748B; margin-top: 2px;">${shop.address}</div>
+                <div style="display: flex; gap: 6px; margin-top: 6px;">
+                  <span style="font-size: 10px; font-weight: 700; background: #EDF4FC; color: #1D68F2; padding: 2px 6px; border-radius: 4px;">${shop.traffic}</span>
+                  <span style="font-size: 10px; font-weight: 700; background: #F1F5F9; color: #334155; padding: 2px 6px; border-radius: 4px;">${shop.rent}</span>
+                </div>
+              </div>
+            `)
+            .addTo(map);
+        });
+      }
+
+      // 3. Reactive Sliders for Breakeven Calculator
+      const sSqft = document.getElementById('slider-sqft');
+      const sRent = document.getElementById('slider-rent');
+      const sTicket = document.getElementById('slider-ticket');
+      const sCogs = document.getElementById('slider-cogs');
+
+      function recalculate() {
+        if (!sSqft || !sRent || !sTicket || !sCogs) return;
+        const sqft = parseFloat(sSqft.value);
+        const rent = parseFloat(sRent.value);
+        const ticket = parseFloat(sTicket.value);
+        const cogsPct = parseFloat(sCogs.value) / 100;
+
+        document.getElementById('label-sqft').innerText = sqft.toLocaleString() + ' sqft';
+        document.getElementById('label-rent').innerText = '$' + rent.toFixed(2) + ' / sqft';
+        document.getElementById('label-ticket').innerText = '$' + ticket.toFixed(2);
+        document.getElementById('label-cogs').innerText = (cogsPct * 100).toFixed(0) + '%';
+
+        const nnn = 6.50;
+        const wage = 16.50;
+        const hours = 120;
+        const salesTaxRate = 0.0825;
+
+        const monthlyOcc = (sqft * (rent + nnn)) / 12;
+        const monthlyLabor = wage * hours * 4.3482 * 1.18;
+        const monthlyFixed = monthlyOcc + monthlyLabor + 1200;
+
+        const netTicket = ticket / (1 + salesTaxRate);
+        const contributionMargin = netTicket * (1 - cogsPct);
+
+        if (contributionMargin > 0) {
+          const monthlyCust = Math.ceil(monthlyFixed / contributionMargin);
+          const dailyCust = Math.ceil(monthlyCust / 30.4375);
+          const monthlyRev = monthlyFixed / (1 - cogsPct);
+
+          document.getElementById('output-daily-customers').innerText = dailyCust.toString();
+          document.getElementById('output-monthly-revenue').innerText = '$' + Math.round(monthlyRev).toLocaleString();
+          document.getElementById('output-monthly-fixed').innerText = '$' + Math.round(monthlyFixed).toLocaleString();
+        }
+      }
+
+      [sSqft, sRent, sTicket, sCogs].forEach((slider) => {
+        if (slider) slider.addEventListener('input', recalculate);
+      });
+    });
+  </script>
 </Layout>
