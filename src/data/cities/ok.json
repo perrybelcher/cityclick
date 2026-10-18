@@ -56,7 +56,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "145 establishments (NAICS 722515) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population of those ZIPs (695,373). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "145 employer establishments (NAICS 722515) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population of those ZIPs (695,373). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -74,7 +74,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "691 establishments (NAICS 722511) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population of those ZIPs (695,373). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "691 employer establishments (NAICS 722511) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population of those ZIPs (695,373). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -92,7 +92,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "707 establishments (NAICS 722513) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population of those ZIPs (695,373). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "707 employer establishments (NAICS 722513) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population of those ZIPs (695,373). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -110,25 +110,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "80 establishments (NAICS 722410) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population of those ZIPs (695,373). National benchmark = all US ZIP rows / US population."
-        }
-      },
-      {
-        "naicsCode": "812111",
-        "slug": "barber-shops",
-        "label": "Barber Shops",
-        "establishments": 3,
-        "per10kResidents": 0.04,
-        "usAvgPer10k": 0.08,
-        "saturationIndex": 52,
-        "status": "underserved",
-        "provenance": {
-          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
-          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
-          "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "3 establishments (NAICS 812111) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population of those ZIPs (695,373). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "80 employer establishments (NAICS 722410) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population of those ZIPs (695,373). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -146,7 +128,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "141 establishments (NAICS 812112) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population of those ZIPs (695,373). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "141 employer establishments (NAICS 812112) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population of those ZIPs (695,373). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -164,7 +146,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "22 establishments (NAICS 812113) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population of those ZIPs (695,373). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "22 employer establishments (NAICS 812113) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population of those ZIPs (695,373). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -182,7 +164,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "60 establishments (NAICS 713940) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population of those ZIPs (695,373). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "60 employer establishments (NAICS 713940) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population of those ZIPs (695,373). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -200,7 +182,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "32 establishments (NAICS 812910) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population of those ZIPs (695,373). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "32 employer establishments (NAICS 812910) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population of those ZIPs (695,373). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -218,7 +200,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "58 establishments (NAICS 541940) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population of those ZIPs (695,373). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "58 employer establishments (NAICS 541940) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population of those ZIPs (695,373). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -236,7 +218,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "117 establishments (NAICS 811111) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population of those ZIPs (695,373). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "117 employer establishments (NAICS 811111) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population of those ZIPs (695,373). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -254,43 +236,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "34 establishments (NAICS 811192) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population of those ZIPs (695,373). National benchmark = all US ZIP rows / US population."
-        }
-      },
-      {
-        "naicsCode": "812310",
-        "slug": "laundromats",
-        "label": "Coin-Operated Laundromats",
-        "establishments": 15,
-        "per10kResidents": 0.22,
-        "usAvgPer10k": 0.16,
-        "saturationIndex": 136,
-        "status": "saturated",
-        "provenance": {
-          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
-          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
-          "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "15 establishments (NAICS 812310) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population of those ZIPs (695,373). National benchmark = all US ZIP rows / US population."
-        }
-      },
-      {
-        "naicsCode": "812320",
-        "slug": "dry-cleaners",
-        "label": "Dry Cleaning & Laundry Services",
-        "establishments": 11,
-        "per10kResidents": 0.16,
-        "usAvgPer10k": 0.29,
-        "saturationIndex": 54,
-        "status": "underserved",
-        "provenance": {
-          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
-          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
-          "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "11 establishments (NAICS 812320) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population of those ZIPs (695,373). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "34 employer establishments (NAICS 811192) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population of those ZIPs (695,373). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -308,7 +254,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "356 establishments (NAICS 621210) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population of those ZIPs (695,373). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "356 employer establishments (NAICS 621210) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population of those ZIPs (695,373). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -326,7 +272,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "74 establishments (NAICS 621310) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population of those ZIPs (695,373). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "74 employer establishments (NAICS 621310) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population of those ZIPs (695,373). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -344,7 +290,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "99 establishments (NAICS 621340) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population of those ZIPs (695,373). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "99 employer establishments (NAICS 621340) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population of those ZIPs (695,373). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -362,7 +308,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "193 establishments (NAICS 624410) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population of those ZIPs (695,373). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "193 employer establishments (NAICS 624410) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population of those ZIPs (695,373). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -380,7 +326,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "18 establishments (NAICS 445120) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population of those ZIPs (695,373). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "18 employer establishments (NAICS 445120) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population of those ZIPs (695,373). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -398,43 +344,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "72 establishments (NAICS 448140) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population of those ZIPs (695,373). National benchmark = all US ZIP rows / US population."
-        }
-      },
-      {
-        "naicsCode": "445291",
-        "slug": "bakeries",
-        "label": "Retail Bakeries & Pastry Shops",
-        "establishments": 0,
-        "per10kResidents": 0.0,
-        "usAvgPer10k": 0.01,
-        "saturationIndex": 0,
-        "status": "underserved",
-        "provenance": {
-          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
-          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
-          "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "0 establishments (NAICS 445291) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population of those ZIPs (695,373). National benchmark = all US ZIP rows / US population."
-        }
-      },
-      {
-        "naicsCode": "453110",
-        "slug": "florists",
-        "label": "Florists & Floral Gift Shops",
-        "establishments": 6,
-        "per10kResidents": 0.09,
-        "usAvgPer10k": 0.11,
-        "saturationIndex": 82,
-        "status": "balanced",
-        "provenance": {
-          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
-          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
-          "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "6 establishments (NAICS 453110) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population of those ZIPs (695,373). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "72 employer establishments (NAICS 448140) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population of those ZIPs (695,373). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -452,7 +362,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "786 establishments (NAICS 541110) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population of those ZIPs (695,373). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "786 employer establishments (NAICS 541110) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population of those ZIPs (695,373). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -470,7 +380,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "172 establishments (NAICS 541211) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population of those ZIPs (695,373). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "172 employer establishments (NAICS 541211) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population of those ZIPs (695,373). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -488,7 +398,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "319 establishments (NAICS 531210) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population of those ZIPs (695,373). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "319 employer establishments (NAICS 531210) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population of those ZIPs (695,373). National benchmark = all US ZIP rows / US population."
         }
       }
     ],

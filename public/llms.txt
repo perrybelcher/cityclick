@@ -18,7 +18,7 @@ CityClick is the authority engine for US municipal demographics, commercial aski
     - Cost Efficiency (25%): 50% Income-to-Rent Ratio + 30% Low Unemployment + 20% FEMA Resilience
     - Regulatory Friction (20%): 65% Low Sales Tax + 35% Short Permit Review Turnaround
 - Empirical Bayes NAICS Saturation Index (100 = US Benchmark):
-  - Uses empirical Bayes shrinkage (m = 10,000 prior) against 25 small-business NAICS codes.
+  - Uses empirical Bayes shrinkage (m = 10,000 prior) against small-business NAICS codes.
   - Classification:
     - Underserved: < 80
     - Balanced: 80 - 120

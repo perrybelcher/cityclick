@@ -122,6 +122,11 @@ export function runQA(): boolean {
     for (const b of BANNED_PHRASES) {
       if (h.toLowerCase().includes(b.toLowerCase())) { console.error(`FAIL [BANNED-PHRASE] in ${f.name}: '${b}'`); errors++; }
     }
+    // Key Facts section must exist and every fact must carry a source and an as-of date
+    const factBlocks = (h.match(/Source: [^<]{5,200} · As of: /g) || []).length;
+    if (factBlocks < 6) { console.error(`FAIL [FACTS] ${f.name}: only ${factBlocks} sourced fact blocks (need 6+)`); errors++; }
+    if (!h.includes('"@type":"FAQPage"')) { console.error(`FAIL [FAQ-SCHEMA] ${f.name}: no FAQPage JSON-LD`); errors++; }
+    if (/ of 25<\/(div|span)>/.test(h)) { console.error(`FAIL [HARDCODED-COUNT] ${f.name}: hardcoded '25' trade count`); errors++; }
     // duplicate H3 section headings on one page
     const heads = [...h.matchAll(/<h3[^>]*>([^<]{4,80})<\/h3>/g)].map(m => m[1].trim());
     const dupH = [...new Set(heads.filter((x, i) => heads.indexOf(x) !== i))];

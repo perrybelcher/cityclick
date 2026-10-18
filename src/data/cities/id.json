@@ -53,7 +53,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "83 establishments (NAICS 722515) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population of those ZIPs (265,704). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "83 employer establishments (NAICS 722515) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population of those ZIPs (265,704). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -71,7 +71,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "207 establishments (NAICS 722511) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population of those ZIPs (265,704). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "207 employer establishments (NAICS 722511) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population of those ZIPs (265,704). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -89,7 +89,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "236 establishments (NAICS 722513) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population of those ZIPs (265,704). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "236 employer establishments (NAICS 722513) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population of those ZIPs (265,704). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -107,25 +107,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "70 establishments (NAICS 722410) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population of those ZIPs (265,704). National benchmark = all US ZIP rows / US population."
-        }
-      },
-      {
-        "naicsCode": "812111",
-        "slug": "barber-shops",
-        "label": "Barber Shops",
-        "establishments": 0,
-        "per10kResidents": 0.0,
-        "usAvgPer10k": 0.08,
-        "saturationIndex": 0,
-        "status": "underserved",
-        "provenance": {
-          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
-          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
-          "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "0 establishments (NAICS 812111) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population of those ZIPs (265,704). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "70 employer establishments (NAICS 722410) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population of those ZIPs (265,704). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -143,7 +125,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "87 establishments (NAICS 812112) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population of those ZIPs (265,704). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "87 employer establishments (NAICS 812112) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population of those ZIPs (265,704). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -161,7 +143,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "19 establishments (NAICS 812113) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population of those ZIPs (265,704). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "19 employer establishments (NAICS 812113) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population of those ZIPs (265,704). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -179,7 +161,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "36 establishments (NAICS 713940) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population of those ZIPs (265,704). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "36 employer establishments (NAICS 713940) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population of those ZIPs (265,704). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -197,7 +179,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "32 establishments (NAICS 812910) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population of those ZIPs (265,704). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "32 employer establishments (NAICS 812910) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population of those ZIPs (265,704). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -215,7 +197,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "34 establishments (NAICS 541940) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population of those ZIPs (265,704). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "34 employer establishments (NAICS 541940) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population of those ZIPs (265,704). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -233,61 +215,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "59 establishments (NAICS 811111) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population of those ZIPs (265,704). National benchmark = all US ZIP rows / US population."
-        }
-      },
-      {
-        "naicsCode": "811192",
-        "slug": "car-washes",
-        "label": "Car Washes & Auto Detailing",
-        "establishments": 11,
-        "per10kResidents": 0.41,
-        "usAvgPer10k": 0.35,
-        "saturationIndex": 118,
-        "status": "balanced",
-        "provenance": {
-          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
-          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
-          "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "11 establishments (NAICS 811192) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population of those ZIPs (265,704). National benchmark = all US ZIP rows / US population."
-        }
-      },
-      {
-        "naicsCode": "812310",
-        "slug": "laundromats",
-        "label": "Coin-Operated Laundromats",
-        "establishments": 0,
-        "per10kResidents": 0.0,
-        "usAvgPer10k": 0.16,
-        "saturationIndex": 0,
-        "status": "underserved",
-        "provenance": {
-          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
-          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
-          "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "0 establishments (NAICS 812310) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population of those ZIPs (265,704). National benchmark = all US ZIP rows / US population."
-        }
-      },
-      {
-        "naicsCode": "812320",
-        "slug": "dry-cleaners",
-        "label": "Dry Cleaning & Laundry Services",
-        "establishments": 4,
-        "per10kResidents": 0.15,
-        "usAvgPer10k": 0.29,
-        "saturationIndex": 51,
-        "status": "underserved",
-        "provenance": {
-          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
-          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
-          "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "4 establishments (NAICS 812320) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population of those ZIPs (265,704). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "59 employer establishments (NAICS 811111) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population of those ZIPs (265,704). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -305,7 +233,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "157 establishments (NAICS 621210) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population of those ZIPs (265,704). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "157 employer establishments (NAICS 621210) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population of those ZIPs (265,704). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -323,7 +251,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "69 establishments (NAICS 621310) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population of those ZIPs (265,704). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "69 employer establishments (NAICS 621310) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population of those ZIPs (265,704). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -341,7 +269,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "60 establishments (NAICS 621340) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population of those ZIPs (265,704). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "60 employer establishments (NAICS 621340) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population of those ZIPs (265,704). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -359,7 +287,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "74 establishments (NAICS 624410) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population of those ZIPs (265,704). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "74 employer establishments (NAICS 624410) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population of those ZIPs (265,704). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -377,7 +305,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "0 establishments (NAICS 445120) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population of those ZIPs (265,704). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "0 employer establishments (NAICS 445120) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population of those ZIPs (265,704). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -395,43 +323,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "29 establishments (NAICS 448140) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population of those ZIPs (265,704). National benchmark = all US ZIP rows / US population."
-        }
-      },
-      {
-        "naicsCode": "445291",
-        "slug": "bakeries",
-        "label": "Retail Bakeries & Pastry Shops",
-        "establishments": 0,
-        "per10kResidents": 0.0,
-        "usAvgPer10k": 0.01,
-        "saturationIndex": 0,
-        "status": "underserved",
-        "provenance": {
-          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
-          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
-          "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "0 establishments (NAICS 445291) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population of those ZIPs (265,704). National benchmark = all US ZIP rows / US population."
-        }
-      },
-      {
-        "naicsCode": "453110",
-        "slug": "florists",
-        "label": "Florists & Floral Gift Shops",
-        "establishments": 7,
-        "per10kResidents": 0.26,
-        "usAvgPer10k": 0.11,
-        "saturationIndex": 250,
-        "status": "saturated",
-        "provenance": {
-          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
-          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
-          "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "7 establishments (NAICS 453110) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population of those ZIPs (265,704). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "29 employer establishments (NAICS 448140) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population of those ZIPs (265,704). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -449,7 +341,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "259 establishments (NAICS 541110) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population of those ZIPs (265,704). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "259 employer establishments (NAICS 541110) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population of those ZIPs (265,704). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -467,7 +359,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "98 establishments (NAICS 541211) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population of those ZIPs (265,704). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "98 employer establishments (NAICS 541211) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population of those ZIPs (265,704). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -485,7 +377,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "379 establishments (NAICS 531210) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population of those ZIPs (265,704). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "379 employer establishments (NAICS 531210) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population of those ZIPs (265,704). National benchmark = all US ZIP rows / US population."
         }
       }
     ],

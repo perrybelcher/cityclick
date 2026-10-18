@@ -25,8 +25,7 @@ num=lambda v:(None if v in(None,'','.','-','N') else float(v))
 pop_est={}
 for r in csv.DictReader(open(A+'popest.csv',encoding='latin1')):
     if r['SUMLEV']=='162': pop_est[(r['STATE'],r['NAME'])]=r
-naics=json.load(open('src/data/cities/tx.json'))[0]['industries']  # label/slug/usAvg template
-defs=[{k:i[k] for k in('naicsCode','slug','label')} for i in naics]
+defs=json.load(open(__import__('os').path.join(__import__('os').path.dirname(__import__('os').path.abspath(__file__)),'naics_defs.json')))
 codes={d['naicsCode'] for d in defs}
 zbp=zipfile.ZipFile(A+'zbp22.zip').open('zbp22detail.txt').read().decode('latin1').splitlines()
 est=collections.defaultdict(lambda:collections.defaultdict(int)); us=collections.defaultdict(int); zcity=collections.defaultdict(set); ztot=collections.defaultdict(int)
@@ -72,9 +71,12 @@ for slug,(st,nm,ab,gid,fips,pname) in CITIES.items():
         p10=e/zpop*10000
         idx=round(p10/usd*100) if usd else None
         status='underserved' if idx<80 else ('saturated' if idx>120 else 'balanced')
+        expected=usd*zpop/10000
+        if usd<0.3 or expected<10:   # benchmark too small / category dominated by non-employer shops: blank beats wrong
+            continue
         inds.append({**df,'establishments':e,'per10kResidents':round(p10,2),'usAvgPer10k':round(usd,2),'saturationIndex':idx,'status':status,
           'provenance':{'sourceName':'US Census Bureau ZIP Code Business Patterns 2022','sourceUrl':'https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip','datasetVintage':'ZBP-2022','verifiedAt':NOW,'granularity':'zip_aggregated',
-            'evidenceQuote':f'{e} establishments (NAICS {n}) across {len(use)} ZIP codes whose USPS city is {nm.title()}, {ab}; density uses ACS 2023 ZCTA population of those ZIPs ({int(zpop):,}). National benchmark = all US ZIP rows / US population.'}})
+            'evidenceQuote':f'{e} employer establishments (NAICS {n}) across {len(use)} ZIP codes whose USPS city is {nm.title()}, {ab}; density uses ACS 2023 ZCTA population of those ZIPs ({int(zpop):,}). National benchmark = all US ZIP rows / US population.'}})
     c['industries']=inds
     c.setdefault('marketSignals',{}).pop('reportedRetailRentSqFtYr',None)
     for k in('reportedIndustrialRentSqFtYr','topSearchedNaics30d','verifiedLocalProsCount','camExpenseSqFtYr','commercialElectricityCentsKwh'): c['marketSignals'].pop(k,None)

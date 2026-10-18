@@ -56,7 +56,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "380 establishments (NAICS 722515) across 44 ZIP codes whose USPS city is Austin, TX; density uses ACS 2023 ZCTA population of those ZIPs (1,157,348). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "380 employer establishments (NAICS 722515) across 44 ZIP codes whose USPS city is Austin, TX; density uses ACS 2023 ZCTA population of those ZIPs (1,157,348). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -74,7 +74,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "1067 establishments (NAICS 722511) across 44 ZIP codes whose USPS city is Austin, TX; density uses ACS 2023 ZCTA population of those ZIPs (1,157,348). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "1067 employer establishments (NAICS 722511) across 44 ZIP codes whose USPS city is Austin, TX; density uses ACS 2023 ZCTA population of those ZIPs (1,157,348). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -92,7 +92,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "1064 establishments (NAICS 722513) across 44 ZIP codes whose USPS city is Austin, TX; density uses ACS 2023 ZCTA population of those ZIPs (1,157,348). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "1064 employer establishments (NAICS 722513) across 44 ZIP codes whose USPS city is Austin, TX; density uses ACS 2023 ZCTA population of those ZIPs (1,157,348). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -110,25 +110,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "265 establishments (NAICS 722410) across 44 ZIP codes whose USPS city is Austin, TX; density uses ACS 2023 ZCTA population of those ZIPs (1,157,348). National benchmark = all US ZIP rows / US population."
-        }
-      },
-      {
-        "naicsCode": "812111",
-        "slug": "barber-shops",
-        "label": "Barber Shops",
-        "establishments": 26,
-        "per10kResidents": 0.22,
-        "usAvgPer10k": 0.08,
-        "saturationIndex": 273,
-        "status": "saturated",
-        "provenance": {
-          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
-          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
-          "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "26 establishments (NAICS 812111) across 44 ZIP codes whose USPS city is Austin, TX; density uses ACS 2023 ZCTA population of those ZIPs (1,157,348). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "265 employer establishments (NAICS 722410) across 44 ZIP codes whose USPS city is Austin, TX; density uses ACS 2023 ZCTA population of those ZIPs (1,157,348). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -146,7 +128,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "464 establishments (NAICS 812112) across 44 ZIP codes whose USPS city is Austin, TX; density uses ACS 2023 ZCTA population of those ZIPs (1,157,348). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "464 employer establishments (NAICS 812112) across 44 ZIP codes whose USPS city is Austin, TX; density uses ACS 2023 ZCTA population of those ZIPs (1,157,348). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -164,7 +146,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "134 establishments (NAICS 812113) across 44 ZIP codes whose USPS city is Austin, TX; density uses ACS 2023 ZCTA population of those ZIPs (1,157,348). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "134 employer establishments (NAICS 812113) across 44 ZIP codes whose USPS city is Austin, TX; density uses ACS 2023 ZCTA population of those ZIPs (1,157,348). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -182,7 +164,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "252 establishments (NAICS 713940) across 44 ZIP codes whose USPS city is Austin, TX; density uses ACS 2023 ZCTA population of those ZIPs (1,157,348). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "252 employer establishments (NAICS 713940) across 44 ZIP codes whose USPS city is Austin, TX; density uses ACS 2023 ZCTA population of those ZIPs (1,157,348). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -200,7 +182,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "114 establishments (NAICS 812910) across 44 ZIP codes whose USPS city is Austin, TX; density uses ACS 2023 ZCTA population of those ZIPs (1,157,348). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "114 employer establishments (NAICS 812910) across 44 ZIP codes whose USPS city is Austin, TX; density uses ACS 2023 ZCTA population of those ZIPs (1,157,348). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -218,7 +200,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "149 establishments (NAICS 541940) across 44 ZIP codes whose USPS city is Austin, TX; density uses ACS 2023 ZCTA population of those ZIPs (1,157,348). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "149 employer establishments (NAICS 541940) across 44 ZIP codes whose USPS city is Austin, TX; density uses ACS 2023 ZCTA population of those ZIPs (1,157,348). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -236,7 +218,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "209 establishments (NAICS 811111) across 44 ZIP codes whose USPS city is Austin, TX; density uses ACS 2023 ZCTA population of those ZIPs (1,157,348). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "209 employer establishments (NAICS 811111) across 44 ZIP codes whose USPS city is Austin, TX; density uses ACS 2023 ZCTA population of those ZIPs (1,157,348). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -254,43 +236,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "50 establishments (NAICS 811192) across 44 ZIP codes whose USPS city is Austin, TX; density uses ACS 2023 ZCTA population of those ZIPs (1,157,348). National benchmark = all US ZIP rows / US population."
-        }
-      },
-      {
-        "naicsCode": "812310",
-        "slug": "laundromats",
-        "label": "Coin-Operated Laundromats",
-        "establishments": 20,
-        "per10kResidents": 0.17,
-        "usAvgPer10k": 0.16,
-        "saturationIndex": 109,
-        "status": "balanced",
-        "provenance": {
-          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
-          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
-          "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "20 establishments (NAICS 812310) across 44 ZIP codes whose USPS city is Austin, TX; density uses ACS 2023 ZCTA population of those ZIPs (1,157,348). National benchmark = all US ZIP rows / US population."
-        }
-      },
-      {
-        "naicsCode": "812320",
-        "slug": "dry-cleaners",
-        "label": "Dry Cleaning & Laundry Services",
-        "establishments": 52,
-        "per10kResidents": 0.45,
-        "usAvgPer10k": 0.29,
-        "saturationIndex": 154,
-        "status": "saturated",
-        "provenance": {
-          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
-          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
-          "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "52 establishments (NAICS 812320) across 44 ZIP codes whose USPS city is Austin, TX; density uses ACS 2023 ZCTA population of those ZIPs (1,157,348). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "50 employer establishments (NAICS 811192) across 44 ZIP codes whose USPS city is Austin, TX; density uses ACS 2023 ZCTA population of those ZIPs (1,157,348). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -308,7 +254,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "643 establishments (NAICS 621210) across 44 ZIP codes whose USPS city is Austin, TX; density uses ACS 2023 ZCTA population of those ZIPs (1,157,348). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "643 employer establishments (NAICS 621210) across 44 ZIP codes whose USPS city is Austin, TX; density uses ACS 2023 ZCTA population of those ZIPs (1,157,348). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -326,7 +272,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "168 establishments (NAICS 621310) across 44 ZIP codes whose USPS city is Austin, TX; density uses ACS 2023 ZCTA population of those ZIPs (1,157,348). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "168 employer establishments (NAICS 621310) across 44 ZIP codes whose USPS city is Austin, TX; density uses ACS 2023 ZCTA population of those ZIPs (1,157,348). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -344,7 +290,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "196 establishments (NAICS 621340) across 44 ZIP codes whose USPS city is Austin, TX; density uses ACS 2023 ZCTA population of those ZIPs (1,157,348). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "196 employer establishments (NAICS 621340) across 44 ZIP codes whose USPS city is Austin, TX; density uses ACS 2023 ZCTA population of those ZIPs (1,157,348). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -362,7 +308,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "235 establishments (NAICS 624410) across 44 ZIP codes whose USPS city is Austin, TX; density uses ACS 2023 ZCTA population of those ZIPs (1,157,348). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "235 employer establishments (NAICS 624410) across 44 ZIP codes whose USPS city is Austin, TX; density uses ACS 2023 ZCTA population of those ZIPs (1,157,348). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -380,7 +326,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "150 establishments (NAICS 445120) across 44 ZIP codes whose USPS city is Austin, TX; density uses ACS 2023 ZCTA population of those ZIPs (1,157,348). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "150 employer establishments (NAICS 445120) across 44 ZIP codes whose USPS city is Austin, TX; density uses ACS 2023 ZCTA population of those ZIPs (1,157,348). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -398,43 +344,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "109 establishments (NAICS 448140) across 44 ZIP codes whose USPS city is Austin, TX; density uses ACS 2023 ZCTA population of those ZIPs (1,157,348). National benchmark = all US ZIP rows / US population."
-        }
-      },
-      {
-        "naicsCode": "445291",
-        "slug": "bakeries",
-        "label": "Retail Bakeries & Pastry Shops",
-        "establishments": 0,
-        "per10kResidents": 0.0,
-        "usAvgPer10k": 0.01,
-        "saturationIndex": 0,
-        "status": "underserved",
-        "provenance": {
-          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
-          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
-          "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "0 establishments (NAICS 445291) across 44 ZIP codes whose USPS city is Austin, TX; density uses ACS 2023 ZCTA population of those ZIPs (1,157,348). National benchmark = all US ZIP rows / US population."
-        }
-      },
-      {
-        "naicsCode": "453110",
-        "slug": "florists",
-        "label": "Florists & Floral Gift Shops",
-        "establishments": 21,
-        "per10kResidents": 0.18,
-        "usAvgPer10k": 0.11,
-        "saturationIndex": 172,
-        "status": "saturated",
-        "provenance": {
-          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
-          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
-          "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "21 establishments (NAICS 453110) across 44 ZIP codes whose USPS city is Austin, TX; density uses ACS 2023 ZCTA population of those ZIPs (1,157,348). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "109 employer establishments (NAICS 448140) across 44 ZIP codes whose USPS city is Austin, TX; density uses ACS 2023 ZCTA population of those ZIPs (1,157,348). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -452,7 +362,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "1258 establishments (NAICS 541110) across 44 ZIP codes whose USPS city is Austin, TX; density uses ACS 2023 ZCTA population of those ZIPs (1,157,348). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "1258 employer establishments (NAICS 541110) across 44 ZIP codes whose USPS city is Austin, TX; density uses ACS 2023 ZCTA population of those ZIPs (1,157,348). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -470,7 +380,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "250 establishments (NAICS 541211) across 44 ZIP codes whose USPS city is Austin, TX; density uses ACS 2023 ZCTA population of those ZIPs (1,157,348). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "250 employer establishments (NAICS 541211) across 44 ZIP codes whose USPS city is Austin, TX; density uses ACS 2023 ZCTA population of those ZIPs (1,157,348). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -488,7 +398,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "1225 establishments (NAICS 531210) across 44 ZIP codes whose USPS city is Austin, TX; density uses ACS 2023 ZCTA population of those ZIPs (1,157,348). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "1225 employer establishments (NAICS 531210) across 44 ZIP codes whose USPS city is Austin, TX; density uses ACS 2023 ZCTA population of those ZIPs (1,157,348). National benchmark = all US ZIP rows / US population."
         }
       }
     ],

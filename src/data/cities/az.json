@@ -3847,7 +3847,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "118 establishments (NAICS 722515) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population of those ZIPs (293,445). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "118 employer establishments (NAICS 722515) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population of those ZIPs (293,445). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -3865,7 +3865,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "412 establishments (NAICS 722511) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population of those ZIPs (293,445). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "412 employer establishments (NAICS 722511) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population of those ZIPs (293,445). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -3883,7 +3883,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "277 establishments (NAICS 722513) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population of those ZIPs (293,445). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "277 employer establishments (NAICS 722513) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population of those ZIPs (293,445). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -3901,25 +3901,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "35 establishments (NAICS 722410) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population of those ZIPs (293,445). National benchmark = all US ZIP rows / US population."
-        }
-      },
-      {
-        "naicsCode": "812111",
-        "slug": "barber-shops",
-        "label": "Barber Shops",
-        "establishments": 5,
-        "per10kResidents": 0.17,
-        "usAvgPer10k": 0.08,
-        "saturationIndex": 207,
-        "status": "saturated",
-        "provenance": {
-          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
-          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
-          "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "5 establishments (NAICS 812111) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population of those ZIPs (293,445). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "35 employer establishments (NAICS 722410) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population of those ZIPs (293,445). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -3937,7 +3919,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "213 establishments (NAICS 812112) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population of those ZIPs (293,445). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "213 employer establishments (NAICS 812112) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population of those ZIPs (293,445). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -3955,7 +3937,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "54 establishments (NAICS 812113) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population of those ZIPs (293,445). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "54 employer establishments (NAICS 812113) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population of those ZIPs (293,445). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -3973,7 +3955,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "90 establishments (NAICS 713940) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population of those ZIPs (293,445). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "90 employer establishments (NAICS 713940) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population of those ZIPs (293,445). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -3991,7 +3973,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "33 establishments (NAICS 812910) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population of those ZIPs (293,445). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "33 employer establishments (NAICS 812910) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population of those ZIPs (293,445). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -4009,7 +3991,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "66 establishments (NAICS 541940) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population of those ZIPs (293,445). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "66 employer establishments (NAICS 541940) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population of those ZIPs (293,445). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -4027,7 +4009,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "65 establishments (NAICS 811111) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population of those ZIPs (293,445). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "65 employer establishments (NAICS 811111) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population of those ZIPs (293,445). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -4045,43 +4027,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "11 establishments (NAICS 811192) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population of those ZIPs (293,445). National benchmark = all US ZIP rows / US population."
-        }
-      },
-      {
-        "naicsCode": "812310",
-        "slug": "laundromats",
-        "label": "Coin-Operated Laundromats",
-        "establishments": 0,
-        "per10kResidents": 0.0,
-        "usAvgPer10k": 0.16,
-        "saturationIndex": 0,
-        "status": "underserved",
-        "provenance": {
-          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
-          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
-          "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "0 establishments (NAICS 812310) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population of those ZIPs (293,445). National benchmark = all US ZIP rows / US population."
-        }
-      },
-      {
-        "naicsCode": "812320",
-        "slug": "dry-cleaners",
-        "label": "Dry Cleaning & Laundry Services",
-        "establishments": 38,
-        "per10kResidents": 1.29,
-        "usAvgPer10k": 0.29,
-        "saturationIndex": 443,
-        "status": "saturated",
-        "provenance": {
-          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
-          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
-          "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "38 establishments (NAICS 812320) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population of those ZIPs (293,445). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "11 employer establishments (NAICS 811192) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population of those ZIPs (293,445). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -4099,7 +4045,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "285 establishments (NAICS 621210) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population of those ZIPs (293,445). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "285 employer establishments (NAICS 621210) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population of those ZIPs (293,445). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -4117,7 +4063,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "102 establishments (NAICS 621310) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population of those ZIPs (293,445). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "102 employer establishments (NAICS 621310) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population of those ZIPs (293,445). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -4135,7 +4081,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "112 establishments (NAICS 621340) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population of those ZIPs (293,445). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "112 employer establishments (NAICS 621340) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population of those ZIPs (293,445). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -4153,7 +4099,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "44 establishments (NAICS 624410) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population of those ZIPs (293,445). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "44 employer establishments (NAICS 624410) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population of those ZIPs (293,445). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -4171,7 +4117,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "5 establishments (NAICS 445120) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population of those ZIPs (293,445). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "5 employer establishments (NAICS 445120) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population of those ZIPs (293,445). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -4189,43 +4135,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "52 establishments (NAICS 448140) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population of those ZIPs (293,445). National benchmark = all US ZIP rows / US population."
-        }
-      },
-      {
-        "naicsCode": "445291",
-        "slug": "bakeries",
-        "label": "Retail Bakeries & Pastry Shops",
-        "establishments": 0,
-        "per10kResidents": 0.0,
-        "usAvgPer10k": 0.01,
-        "saturationIndex": 0,
-        "status": "underserved",
-        "provenance": {
-          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
-          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
-          "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "0 establishments (NAICS 445291) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population of those ZIPs (293,445). National benchmark = all US ZIP rows / US population."
-        }
-      },
-      {
-        "naicsCode": "453110",
-        "slug": "florists",
-        "label": "Florists & Floral Gift Shops",
-        "establishments": 5,
-        "per10kResidents": 0.17,
-        "usAvgPer10k": 0.11,
-        "saturationIndex": 162,
-        "status": "saturated",
-        "provenance": {
-          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
-          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
-          "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "5 establishments (NAICS 453110) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population of those ZIPs (293,445). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "52 employer establishments (NAICS 448140) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population of those ZIPs (293,445). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -4243,7 +4153,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "380 establishments (NAICS 541110) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population of those ZIPs (293,445). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "380 employer establishments (NAICS 541110) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population of those ZIPs (293,445). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -4261,7 +4171,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "139 establishments (NAICS 541211) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population of those ZIPs (293,445). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "139 employer establishments (NAICS 541211) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population of those ZIPs (293,445). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -4279,7 +4189,7 @@
           "datasetVintage": "ZBP-2022",
           "verifiedAt": "2026-10-18",
           "granularity": "zip_aggregated",
-          "evidenceQuote": "1001 establishments (NAICS 531210) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population of those ZIPs (293,445). National benchmark = all US ZIP rows / US population."
+          "evidenceQuote": "1001 employer establishments (NAICS 531210) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population of those ZIPs (293,445). National benchmark = all US ZIP rows / US population."
         }
       }
     ],

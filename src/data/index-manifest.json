@@ -197,9 +197,7 @@
   "population": 979882,
   "medianHouseholdIncome": 91461,
   "combinedSalesTaxRate": 0.0825,
-  "topUnderservedNaics": [
-   "Retail Bakeries & Pastry Shops"
-  ],
+  "topUnderservedNaics": [],
   "timeZone": "CT",
   "popChange2020to2023Pct": 1.9,
   "medianHomeValue": 512700,
@@ -367,9 +365,9 @@
   "medianHouseholdIncome": 66702,
   "combinedSalesTaxRate": 0.08625,
   "topUnderservedNaics": [
-   "Retail Bakeries & Pastry Shops",
    "Convenience Retail Stores",
-   "Nail Salons"
+   "Nail Salons",
+   "General Automotive Repair"
   ],
   "timeZone": "CT",
   "popChange2020to2023Pct": 3.2,
@@ -386,9 +384,9 @@
   "medianHouseholdIncome": 75197,
   "combinedSalesTaxRate": 0.0975,
   "topUnderservedNaics": [
-   "Retail Bakeries & Pastry Shops",
    "Nail Salons",
-   "Florists & Floral Gift Shops"
+   "Child Day Care Services",
+   "Physical, Occupational & Speech Therapists"
   ],
   "timeZone": "CT",
   "popChange2020to2023Pct": -0.2,
@@ -918,7 +916,6 @@
   "medianHouseholdIncome": 71302,
   "combinedSalesTaxRate": 0.075,
   "topUnderservedNaics": [
-   "Dry Cleaning & Laundry Services",
    "Nail Salons"
   ],
   "timeZone": "ET",
@@ -1753,9 +1750,8 @@
   "medianHouseholdIncome": 107372,
   "combinedSalesTaxRate": 0.08,
   "topUnderservedNaics": [
-   "Coin-Operated Laundromats",
-   "Retail Bakeries & Pastry Shops",
-   "Convenience Retail Stores"
+   "Convenience Retail Stores",
+   "Child Day Care Services"
   ],
   "timeZone": "MST",
   "popChange2020to2023Pct": 1.3,
@@ -1791,8 +1787,6 @@
   "medianHouseholdIncome": 81308,
   "combinedSalesTaxRate": 0.06,
   "topUnderservedNaics": [
-   "Barber Shops",
-   "Coin-Operated Laundromats",
    "Convenience Retail Stores"
   ],
   "timeZone": "MT",
@@ -28363,9 +28357,7 @@
   "medianHouseholdIncome": 69953,
   "combinedSalesTaxRate": 0.08,
   "topUnderservedNaics": [
-   "Coffee & Snack Shops",
-   "Drinking Places (Alcoholic Beverages)",
-   "Barber Shops"
+   "Limited-Service / Fast Food Restaurants"
   ],
   "timeZone": "CT",
   "popChange2020to2023Pct": null,

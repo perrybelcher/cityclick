@@ -1,0 +1,127 @@
+[
+ {
+  "naicsCode": "722515",
+  "slug": "coffee-shops",
+  "label": "Coffee & Snack Shops"
+ },
+ {
+  "naicsCode": "722511",
+  "slug": "restaurants",
+  "label": "Full-Service Restaurants"
+ },
+ {
+  "naicsCode": "722513",
+  "slug": "fast-food",
+  "label": "Limited-Service / Fast Food Restaurants"
+ },
+ {
+  "naicsCode": "722410",
+  "slug": "bars-taverns",
+  "label": "Drinking Places (Alcoholic Beverages)"
+ },
+ {
+  "naicsCode": "812111",
+  "slug": "barber-shops",
+  "label": "Barber Shops"
+ },
+ {
+  "naicsCode": "812112",
+  "slug": "beauty-salons",
+  "label": "Beauty Salons & Hair Studios"
+ },
+ {
+  "naicsCode": "812113",
+  "slug": "nail-salons",
+  "label": "Nail Salons"
+ },
+ {
+  "naicsCode": "713940",
+  "slug": "gyms-fitness",
+  "label": "Fitness & Recreational Sports Centers"
+ },
+ {
+  "naicsCode": "812910",
+  "slug": "pet-care",
+  "label": "Pet Care & Grooming Services"
+ },
+ {
+  "naicsCode": "541940",
+  "slug": "veterinary",
+  "label": "Veterinary Services & Animal Hospitals"
+ },
+ {
+  "naicsCode": "811111",
+  "slug": "auto-repair",
+  "label": "General Automotive Repair"
+ },
+ {
+  "naicsCode": "811192",
+  "slug": "car-washes",
+  "label": "Car Washes & Auto Detailing"
+ },
+ {
+  "naicsCode": "812310",
+  "slug": "laundromats",
+  "label": "Coin-Operated Laundromats"
+ },
+ {
+  "naicsCode": "812320",
+  "slug": "dry-cleaners",
+  "label": "Dry Cleaning & Laundry Services"
+ },
+ {
+  "naicsCode": "621210",
+  "slug": "dentists",
+  "label": "Offices of Dentists"
+ },
+ {
+  "naicsCode": "621310",
+  "slug": "chiropractors",
+  "label": "Offices of Chiropractors"
+ },
+ {
+  "naicsCode": "621340",
+  "slug": "physical-therapy",
+  "label": "Physical, Occupational & Speech Therapists"
+ },
+ {
+  "naicsCode": "624410",
+  "slug": "daycare",
+  "label": "Child Day Care Services"
+ },
+ {
+  "naicsCode": "445120",
+  "slug": "convenience-stores",
+  "label": "Convenience Retail Stores"
+ },
+ {
+  "naicsCode": "448140",
+  "slug": "clothing-boutiques",
+  "label": "Family Clothing Stores & Boutiques"
+ },
+ {
+  "naicsCode": "445291",
+  "slug": "bakeries",
+  "label": "Retail Bakeries & Pastry Shops"
+ },
+ {
+  "naicsCode": "453110",
+  "slug": "florists",
+  "label": "Florists & Floral Gift Shops"
+ },
+ {
+  "naicsCode": "541110",
+  "slug": "law-firms",
+  "label": "Offices of Lawyers"
+ },
+ {
+  "naicsCode": "541211",
+  "slug": "accounting-cpa",
+  "label": "Offices of Certified Public Accountants"
+ },
+ {
+  "naicsCode": "531210",
+  "slug": "real-estate-agencies",
+  "label": "Offices of Real Estate Agents & Brokers"
+ }
+]
