@@ -114,7 +114,7 @@ export function runQA(): boolean {
 
   // ---- FACT GATES (v1.1): data-level checks, not just string checks ----
   const BANNED_PHRASES = ['Regional Medical Center','Regional Memorial','Regional / Metropolitan','Commercial Gateway','(balance)',
-    'zero-hallucination','Zero-Hallucination','Zero-hallucination','ground truth','Ground truth','Ubiquitous 24/7','Non-Stop Service','210+ Days','Local Arts & Event Wire','Municipal Wire','Verification Pending','Loading verified','$32.00','$28.50','$22,460','$16,170','DSD Initial Review','Verified local guides across 1,501'];
+    'zero-hallucination','Zero-Hallucination','Zero-hallucination','ground truth','Ground truth','Ubiquitous 24/7','Non-Stop Service','210+ Days','Local Arts & Event Wire','Municipal Wire','Verification Pending','Young Professional','Verified Access Granted','austin-leaflet-map',"Arkansas's #1",'(HOT) (LIT)','Memorial Field','Climate Normals (30-Year','Loading verified','$32.00','$28.50','$22,460','$16,170','DSD Initial Review','Verified local guides across 1,501'];
   for (const f of flagships) {
     const fp = path.join(distDir, f.file);
     if (!fs.existsSync(fp)) continue;
@@ -122,6 +122,10 @@ export function runQA(): boolean {
     for (const b of BANNED_PHRASES) {
       if (h.toLowerCase().includes(b.toLowerCase())) { console.error(`FAIL [BANNED-PHRASE] in ${f.name}: '${b}'`); errors++; }
     }
+    // duplicate H3 section headings on one page
+    const heads = [...h.matchAll(/<h3[^>]*>([^<]{4,80})<\/h3>/g)].map(m => m[1].trim());
+    const dupH = [...new Set(heads.filter((x, i) => heads.indexOf(x) !== i))];
+    if (dupH.length) { console.error(`FAIL [DUPLICATE-SECTION] ${f.name}: ${dupH.join(' | ')}`); errors++; }
     // news links must be article-level (path deeper than one segment), never a section homepage
     const hubs = ['austinchronicle.com/events/','austinchronicle.com/food/','austinchronicle.com/music/','austinchronicle.com/screens/','bizjournals.com/austin/','statesman.com/business/'];
     for (const hub of hubs) if (h.includes(hub)) { console.error(`FAIL [NEWS-HUB-LINK] in ${f.name}: ${hub}`); errors++; }

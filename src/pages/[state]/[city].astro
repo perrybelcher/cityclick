@@ -271,7 +271,7 @@ const cityMapPins = {
 
 <Layout
   title={`${city.name}, ${city.stateCode.toUpperCase()}: Cost of Living, Taxes and Business Data — CityClick`}
-  description={`Explore ${city.name}, ${city.stateName}. Verified municipal guide covering cost of living, property taxes, schools, retail lease benchmarks, and neighborhood demographics.`}
+  description={`Explore ${city.name}, ${city.stateName}. Municipal guide covering cost of living, property taxes, schools, retail lease benchmarks, and neighborhood demographics.`}
   image={heroImage || 'https://cityclick.com/images/og-cityclick.jpg'}
   robots={robotsDirective}
 >
@@ -629,7 +629,7 @@ const cityMapPins = {
               <div class="space-y-3 pt-1">
                 <div class="flex justify-between items-center">
                   <h3 class="font-black text-xl text-[#152438]">{city.name} in Photos</h3>
-                  <span class="text-xs text-slate-400 font-medium">Wikimedia Commons & USGS Verified</span>
+                  <span class="text-xs text-slate-400 font-medium">Wikimedia Commons & USGS</span>
                 </div>
                 <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
                   {cityGallery.map((item) => (
@@ -726,7 +726,7 @@ const cityMapPins = {
                   </div>
                   <div class="p-4 rounded-2xl border border-slate-200 bg-white shadow-2xs">
                     <div class="font-bold text-slate-800 text-sm">Diamante Country Club & Fairways</div>
-                    <p class="text-slate-500 mt-1 leading-relaxed">Arkansas's #1 ranked championship private golf club, luxury fairway enclaves, tennis & pool pavilion.</p>
+                    <p class="text-slate-500 mt-1 leading-relaxed">Private championship golf club, luxury fairway enclaves, tennis & pool pavilion.</p>
                   </div>
                   <div class="p-4 rounded-2xl border border-slate-200 bg-white shadow-2xs">
                     <div class="font-bold text-slate-800 text-sm">Ponce de Leon Cultural Center</div>
@@ -778,7 +778,7 @@ const cityMapPins = {
                   </div>
                 </div>
                 <span class="px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-wider bg-blue-100 text-[#1D68F2] border border-blue-200 shrink-0">
-                  Verified Local Advisory
+                  Local Advisory
                 </span>
               </div>
 
@@ -862,7 +862,7 @@ const cityMapPins = {
             </div>
 
             <!-- Top Entertainment & Cultural Corridors -->
-            {isAustin ? (
+            {false /* duplicate of Districts to Explore; Austin/HSV render once above */ ? (
               <div class="space-y-3 pt-2">
                 <h3 class="font-bold text-base text-[#152438]">Top Cultural & Culinary Scouting Districts</h3>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
@@ -919,7 +919,7 @@ const cityMapPins = {
                   </div>
                 </div>
               </div>
-            ) : isHSV ? (
+            ) : false ? (
               <div class="space-y-3 pt-2">
                 <h3 class="font-bold text-base text-[#152438]">Top Recreational & Village Scouting Districts</h3>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
@@ -929,7 +929,7 @@ const cityMapPins = {
                   </div>
                   <div class="p-4 rounded-xl border border-slate-200 bg-white shadow-xs">
                     <div class="font-bold text-slate-800 text-sm">Diamante Country Club & Fairways</div>
-                    <p class="text-slate-500 mt-1">Arkansas's #1 ranked championship private golf club, luxury fairway enclaves, tennis & pool pavilion.</p>
+                    <p class="text-slate-500 mt-1">Private championship golf club, luxury fairway enclaves, tennis & pool pavilion.</p>
                   </div>
                   <div class="p-4 rounded-xl border border-slate-200 bg-white shadow-xs">
                     <div class="font-bold text-slate-800 text-sm">Ponce de Leon Cultural Center</div>
@@ -1030,7 +1030,7 @@ const cityMapPins = {
               <div class="bg-[#F8FAFC] p-4 rounded-2xl border border-slate-200">
                 <span class="text-xs font-semibold text-slate-500">Median Resident Age</span>
                 <div class="text-2xl font-black text-[#152438] mt-1">{city.demographics.medianAge} Years</div>
-                <span class="text-[11px] text-slate-500">Young Professional Core</span>
+                <span class="text-[11px] text-slate-500">Census ACS 2023 · U.S. median is about 39</span>
               </div>
             </div>
 
@@ -1064,7 +1064,7 @@ const cityMapPins = {
                 <div class="p-5 rounded-2xl bg-[#F8FAFC] border border-slate-200 space-y-2">
                   <div class="flex items-center gap-2">
                     <span class="text-lg">☀️</span>
-                    <h4 class="font-bold text-sm text-[#152438]">Climate Normals (30-Year Baseline)</h4>
+                    <h4 class="font-bold text-sm text-[#152438]">Climate Averages (2015–2024)</h4>
                   </div>
                   <div class="space-y-1.5 text-slate-600">
                     <div class="flex justify-between">
@@ -1226,7 +1226,7 @@ const cityMapPins = {
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-slate-100">
               <div>
                 <h2 id="active-trade-label" class="text-xl font-black text-[#152438]">Commercial Establishment Density — {defaultTrade.label}</h2>
-                <p id="active-trade-desc" class="text-xs text-slate-500 mt-0.5">Census County Business Patterns (ZBP) verified small-business metrics across {city.name}</p>
+                <p id="active-trade-desc" class="text-xs text-slate-500 mt-0.5">Census County Business Patterns (ZBP 2022) small-business metrics across {city.name}</p>
               </div>
               <span id="active-trade-badge" class={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider ${
                 defaultTrade.status === 'underserved' ? 'bg-emerald-50 text-emerald-700 border border-emerald-200' :
@@ -1241,7 +1241,7 @@ const cityMapPins = {
               <div class="bg-[#F8FAFC] p-4 rounded-2xl border border-slate-200">
                 <span class="text-xs font-semibold text-slate-500">Active Establishments</span>
                 <div id="active-trade-count" class="text-2xl font-black text-[#152438] mt-1">{defaultTrade.establishments}</div>
-                <span class="text-[11px] text-slate-400">US Census ZBP Verified</span>
+                <span class="text-[11px] text-slate-400">Census ZBP 2022</span>
               </div>
               <div class="bg-[#F8FAFC] p-4 rounded-2xl border border-slate-200">
                 <span class="text-xs font-semibold text-slate-500">Density / 10k Residents</span>
@@ -1454,7 +1454,7 @@ const cityMapPins = {
                 <span class="text-xl">🗺️</span>
                 <h2 class="text-xl font-black text-[#152438]">Interactive City Explorer</h2>
               </div>
-              <p id="map-layer-subtitle" class="text-xs text-slate-500 mt-0.5">Explore verified places, infrastructure, and commercial zones across {city.name}</p>
+              <p id="map-layer-subtitle" class="text-xs text-slate-500 mt-0.5">Explore places, infrastructure, and commercial zones across {city.name}</p>
             </div>
 
             <!-- Audience Layer Toggles -->
@@ -1489,7 +1489,7 @@ const cityMapPins = {
           <!-- Leaflet Map Container -->
           <div class="relative rounded-2xl overflow-hidden border border-slate-300 shadow-inner">
             <div
-              id="austin-leaflet-map"
+              id="city-leaflet-map"
               class="h-96 w-full z-0"
               data-lat={city.lat ?? 30.2672}
               data-lng={city.lng ?? -97.7431}
@@ -1501,7 +1501,7 @@ const cityMapPins = {
             ></div>
             <div class="absolute top-3 left-3 z-10 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-xl border border-slate-200 text-xs font-bold text-slate-800 shadow-md flex items-center gap-2">
               <span id="map-ping-indicator" class="w-2.5 h-2.5 rounded-full bg-[#1D68F2]"></span>
-              <span id="map-pin-status">Verified Municipal Map Pins</span>
+              <span id="map-pin-status">Municipal Map Pins</span>
             </div>
             <div class="absolute bottom-3 left-3 z-10 bg-slate-900/85 backdrop-blur-md px-3 py-1.5 rounded-xl text-[11px] font-semibold text-white shadow-lg flex items-center gap-2">
               <span id="map-layer-legend-dot" class="w-2.5 h-2.5 rounded-full bg-[#1D68F2]"></span>
@@ -1639,7 +1639,7 @@ const cityMapPins = {
               Print / Save Relocation Checklist
             </button>
             <div class="text-center text-[11px] text-slate-400 font-medium">
-              100% Free · Verified Municipal Guidelines
+              Free · Municipal Guidelines
             </div>
           </div>
 
@@ -1740,7 +1740,6 @@ const cityMapPins = {
                     Print / Save {city.name} Dossier PDF Now
                   </button>
                 )}
-                <div class="text-center text-[10px] text-emerald-700 font-bold">✓ Verified Access Granted</div>
               </div>
               <div class="mt-2.5 text-center text-[11px] text-slate-500 font-medium">
                 Audited Institutional Underwriting · Instant Access
@@ -1774,7 +1773,7 @@ const cityMapPins = {
                 <div class="flex-1 min-w-0">
                   <div class="text-xs font-bold text-slate-800 truncate">{city.countyName} Tenant Advisors</div>
                   <div class="text-[11px] text-slate-500">Retail Lease & Site Selection Broker</div>
-                  <a href="#austin-leaflet-map" onclick="window.switchCityMapLayer && window.switchCityMapLayer('business');" class="text-[11px] font-bold text-[#1D68F2] hover:underline mt-1 block">View Commercial Corridors →</a>
+                  <a href="#city-leaflet-map" onclick="window.switchCityMapLayer && window.switchCityMapLayer('business');" class="text-[11px] font-bold text-[#1D68F2] hover:underline mt-1 block">View Commercial Corridors →</a>
                 </div>
               </div>
             </div>
@@ -1898,14 +1897,14 @@ const cityMapPins = {
       });
 
       // 3. Multi-Audience Leaflet Map Initialization
-      const mapEl = document.getElementById('austin-leaflet-map');
+      const mapEl = document.getElementById('city-leaflet-map');
       if (window.L && mapEl) {
         const centerLat = parseFloat(mapEl.getAttribute('data-lat') || '30.2672');
         const centerLng = parseFloat(mapEl.getAttribute('data-lng') || '-97.7431');
         const zoom = parseInt(mapEl.getAttribute('data-zoom') || '13', 10);
         const cityName = mapEl.getAttribute('data-cityname') || 'City';
 
-        const map = L.map('austin-leaflet-map', {
+        const map = L.map('city-leaflet-map', {
           center: [centerLat, centerLng],
           zoom: zoom,
           zoomControl: false,
@@ -1960,7 +1959,7 @@ const cityMapPins = {
           if (legendDot) legendDot.style.backgroundColor = color;
           if (pingIndicator) pingIndicator.style.backgroundColor = color;
           if (legendText) legendText.innerText = label;
-          if (statusEl) statusEl.innerText = places.length + ' verified places mapped · Click any pin';
+          if (statusEl) statusEl.innerText = places.length + ' places mapped · Click any pin';
 
           const pinHtml = '<div style="background-color: ' + color + '; width: 14px; height: 14px; border-radius: 50%; border: 3px solid #FFFFFF; box-shadow: 0 0 10px ' + color + 'B3;"></div>';
           const customIcon = L.divIcon({
@@ -2125,7 +2124,7 @@ const cityMapPins = {
         if (labelEl) labelEl.innerText = 'Commercial Establishment Density — ' + trade.label;
 
         const descEl = document.getElementById('active-trade-desc');
-        if (descEl) descEl.innerText = 'Census County Business Patterns (ZBP) verified small-business metrics';
+        if (descEl) descEl.innerText = 'Census County Business Patterns (ZBP 2022) small-business metrics';
 
         const countEl = document.getElementById('active-trade-count');
         if (countEl) countEl.innerText = trade.establishments.toString();
