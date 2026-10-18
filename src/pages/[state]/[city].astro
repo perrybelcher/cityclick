@@ -38,7 +38,7 @@ const industriesWithDefaults = city.industries.map((ind) => {
     ...ind,
     defaultBreakeven: def?.defaultBreakeven ?? {
       typicalSqFt: 1500,
-      typicalBaseRentSqFtYr: city.marketSignals.reportedRetailRentSqFtYr ?? 25.0,
+      typicalBaseRentSqFtYr: null,
       typicalTicket: 25.0,
       typicalCogsPct: 0.25,
       typicalStaffHoursPerWeek: 140,
@@ -460,10 +460,10 @@ const cityMapPins = {
         <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
           <div class="flex justify-between items-start text-slate-400 text-[10px] uppercase font-bold tracking-wider">
             <span>Median Home</span>
-            <span class="text-blue-600 font-extrabold">Assessor</span>
+            <span class="text-blue-600 font-extrabold">ACS 2023</span>
           </div>
-          <div class="text-xl sm:text-2xl font-black text-[#152438] mt-1">${Math.round((city.housingAndTaxes?.medianHomePrice ?? 350000) / 1000)}K</div>
-          <div class="text-[10px] text-slate-500">Median Sales Benchmark</div>
+          <div class="text-xl sm:text-2xl font-black text-[#152438] mt-1">{city.housingAndTaxes?.medianHomeValue != null ? `$${Math.round(city.housingAndTaxes.medianHomeValue / 1000)}K` : '—'}</div>
+          <div class="text-[10px] text-slate-500">Median Home Value (ACS)</div>
         </div>
 
         <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
@@ -471,7 +471,7 @@ const cityMapPins = {
             <span>Typical Rent</span>
             <span class="text-emerald-700 font-extrabold">2-Bed Mkt</span>
           </div>
-          <div class="text-xl sm:text-2xl font-black text-[#152438] mt-1">${city.housingAndTaxes?.averageTwoBedRent ?? 1450}/mo</div>
+          <div class="text-xl sm:text-2xl font-black text-[#152438] mt-1">{city.housingAndTaxes?.medianGrossRent != null ? `$${city.housingAndTaxes.medianGrossRent.toLocaleString()}/mo` : '—'}</div>
           <div class="text-[10px] text-slate-500">Market Asking Rent</div>
         </div>
 
@@ -480,16 +480,16 @@ const cityMapPins = {
             <span>Property Tax</span>
             <span class="text-amber-700 font-extrabold">Ad-Valorem</span>
           </div>
-          <div class="text-xl sm:text-2xl font-black text-[#152438] mt-1">{(city.housingAndTaxes?.effectivePropertyTaxRatePct ?? 1.80).toFixed(2)}%</div>
-          <div class="text-[10px] text-slate-500">Effective Millage Rate</div>
+          <div class="text-xl sm:text-2xl font-black text-[#152438] mt-1">{city.housingAndTaxes?.effectivePropertyTaxRatePct != null ? `${city.housingAndTaxes.effectivePropertyTaxRatePct.toFixed(2)}%` : '—'}</div>
+          <div class="text-[10px] text-slate-500">Median RE tax ÷ median home value</div>
         </div>
 
         <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
           <div class="flex justify-between items-start text-slate-400 text-[10px] uppercase font-bold tracking-wider">
-            <span>Population Growth</span>
-            <span class="text-emerald-700 font-extrabold">5-Year</span>
+            <span>Population Change</span>
+            <span class="text-emerald-700 font-extrabold">2020–23</span>
           </div>
-          <div class="text-xl sm:text-2xl font-black text-[#152438] mt-1">{city.demographics.popGrowth5YrPct > 0 ? `+${city.demographics.popGrowth5YrPct}%` : `${city.demographics.popGrowth5YrPct}%`}</div>
+          <div class="text-xl sm:text-2xl font-black text-[#152438] mt-1">{city.demographics.popChange2020to2023Pct != null ? `${city.demographics.popChange2020to2023Pct > 0 ? '+' : ''}${city.demographics.popChange2020to2023Pct}%` : '—'}</div>
           <div class="text-[10px] text-slate-500">{(city.demographics.population / 1000).toFixed(1)}K Residents</div>
         </div>
       </div>
@@ -498,11 +498,11 @@ const cityMapPins = {
       <div id="stats-strip-business" class="stats-strip hidden grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
         <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
           <div class="flex justify-between items-start text-slate-400 text-[10px] uppercase font-bold tracking-wider">
-            <span>Commercial Rent</span>
-            <span class="text-indigo-600 font-extrabold">Base NNN</span>
+            <span>Underserved Trades</span>
+            <span class="text-indigo-600 font-extrabold">ZBP 2022</span>
           </div>
-          <div class="text-xl sm:text-2xl font-black text-[#152438] mt-1">${city.marketSignals.reportedRetailRentSqFtYr?.toFixed(2) ?? 'n/a'}</div>
-          <div class="text-[10px] text-slate-500">Base $/sqft/yr asking</div>
+          <div class="text-xl sm:text-2xl font-black text-[#152438] mt-1">{city.industries.filter((i) => i.status === 'underserved').length} of 25</div>
+          <div class="text-[10px] text-slate-500">Trades below 80% of national density</div>
         </div>
 
         <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
@@ -525,11 +525,11 @@ const cityMapPins = {
 
         <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
           <div class="flex justify-between items-start text-slate-400 text-[10px] uppercase font-bold tracking-wider">
-            <span>Permit Timeline</span>
-            <span class="text-slate-600 font-extrabold">Municipal</span>
+            <span>Saturated Trades</span>
+            <span class="text-slate-600 font-extrabold">ZBP 2022</span>
           </div>
-          <div class="text-xl sm:text-2xl font-black text-[#152438] mt-1">~{city.permitsAndTax.avgPermitWaitDays ?? 30} Days</div>
-          <div class="text-[10px] text-slate-500">DSD Initial Review</div>
+          <div class="text-xl sm:text-2xl font-black text-[#152438] mt-1">{city.industries.filter((i) => i.status === 'saturated').length} of 25</div>
+          <div class="text-[10px] text-slate-500">Trades above 120% of national density</div>
         </div>
       </div>
 
@@ -813,7 +813,7 @@ const cityMapPins = {
                       <span><strong>Optimal Window:</strong> March–May and Oct–Nov (72°–84°F). <em>Warning:</em> Avoid outdoor pedestrian site surveys in July–August when sustained heat exceeds 104°F.</span>
                     )}
                     {isHSV && (
-                      <span><strong>Optimal Window:</strong> April–May and Sept–Oct for 70°F outdoor recreation. 288 sunny days/yr across the Ouachita foothills; mild four-season climate with rare winter ice.</span>
+                      <span><strong>Optimal Window:</strong> April–May and Sept–Oct for 70°F outdoor recreation.</span>
                     )}
                     {!isHSV && !isAustin && (
                       <span>Spring and autumn provide optimal temperature envelopes for commercial site visits and neighborhood touring.</span>
@@ -998,20 +998,12 @@ const cityMapPins = {
                   </div>
                 </div>
               </div>
-            ) : (
-              <div class="space-y-3 pt-2">
-                <h3 class="font-bold text-base text-[#152438]">Commercial & Entertainment Corridors</h3>
-                <div class="p-5 rounded-2xl border border-dashed border-slate-300 bg-slate-50 text-slate-600 text-xs">
-                  <p class="font-semibold text-slate-800 mb-1">Municipal District Verification Pending</p>
-                  <p>Official commercial district boundary mappings and pedestrian retail corridor profiles for {city.name} are currently being audited from municipal GIS datasets.</p>
-                </div>
-              </div>
-            )}
+            ) : null}
           </section>
         </div>
 
         <!-- ========================================== -->
-        <!-- PILLAR 2: MOVING TO AUSTIN                -->
+        <!-- PILLAR 2: MOVING                         -->
         <!-- ========================================== -->
         <div id="pillar-moving" class="pillar-panel hidden space-y-8">
           <section class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-[0_4px_20px_-2px_rgba(0,0,0,0.06)] space-y-6">
@@ -1028,7 +1020,7 @@ const cityMapPins = {
               <div class="bg-[#F8FAFC] p-4 rounded-2xl border border-slate-200">
                 <span class="text-xs font-semibold text-slate-500">Total Population</span>
                 <div class="text-2xl font-black text-[#152438] mt-1">{city.demographics.population.toLocaleString()}</div>
-                <span class="text-[11px] text-emerald-600 font-semibold">{city.demographics.popGrowth5YrPct > 0 ? `+${city.demographics.popGrowth5YrPct}%` : `${city.demographics.popGrowth5YrPct}%`} 5-Yr Growth</span>
+                <span class="text-[11px] text-emerald-600 font-semibold">{city.demographics.popChange2020to2023Pct != null ? `${city.demographics.popChange2020to2023Pct > 0 ? '+' : ''}${city.demographics.popChange2020to2023Pct}%` : '—'} Since 2020 (Census est.)</span>
               </div>
               <div class="bg-[#F8FAFC] p-4 rounded-2xl border border-slate-200">
                 <span class="text-xs font-semibold text-slate-500">Median Household Income</span>
@@ -1146,18 +1138,18 @@ const cityMapPins = {
               <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
                 <div class="bg-[#F8FAFC] p-4 rounded-2xl border border-slate-200">
                   <span class="text-xs font-semibold text-slate-500">Median Home Price</span>
-                  <div class="text-2xl font-black text-[#152438] mt-1">{city.housingAndTaxes?.medianHomePrice ? `$${city.housingAndTaxes.medianHomePrice.toLocaleString()}` : isAustin ? '$545,000' : isHSV ? '$285,000' : isBoise ? '$475,000' : isTampa ? '$395,000' : '$340,000'}</div>
-                  <span class="text-[11px] text-slate-400">Single-Family · Local Assessor</span>
+                  <div class="text-2xl font-black text-[#152438] mt-1">{city.housingAndTaxes?.medianHomeValue != null ? `$${city.housingAndTaxes.medianHomeValue.toLocaleString()}` : '—'}</div>
+                  <span class="text-[11px] text-slate-400">Census ACS 2023 · owner-occupied median</span>
                 </div>
                 <div class="bg-[#F8FAFC] p-4 rounded-2xl border border-slate-200">
-                  <span class="text-xs font-semibold text-slate-500">Average 2-Bed Rent</span>
-                  <div class="text-2xl font-black text-[#152438] mt-1">{city.housingAndTaxes?.averageTwoBedRent ? `$${city.housingAndTaxes.averageTwoBedRent.toLocaleString()}` : isAustin ? '$1,850' : isHSV ? '$1,250' : isBoise ? '$1,550' : isTampa ? '$1,780' : '$1,450'} <span class="text-xs font-normal text-slate-400">/mo</span></div>
-                  <span class="text-[11px] text-slate-400">Local Market Average</span>
+                  <span class="text-xs font-semibold text-slate-500">Median Gross Rent</span>
+                  <div class="text-2xl font-black text-[#152438] mt-1">{city.housingAndTaxes?.medianGrossRent != null ? `$${city.housingAndTaxes.medianGrossRent.toLocaleString()}/mo` : '—'}</div>
+                  <span class="text-[11px] text-slate-400">ACS 2023 · all renter-occupied units</span>
                 </div>
                 <div class="bg-[#F8FAFC] p-4 rounded-2xl border border-slate-200">
                   <span class="text-xs font-semibold text-slate-500">Effective Property Tax</span>
-                  <div class="text-2xl font-black text-[#152438] mt-1">{city.housingAndTaxes?.effectivePropertyTaxRatePct ? `${city.housingAndTaxes.effectivePropertyTaxRatePct.toFixed(2)}%` : isAustin ? '2.18%' : isHSV ? '0.62%' : isBoise ? '0.63%' : isTampa ? '0.91%' : '1.15%'}</div>
-                  <span class="text-[11px] text-amber-700 font-semibold">{city.countyName} Ad-Valorem Rate</span>
+                  <div class="text-2xl font-black text-[#152438] mt-1">{city.housingAndTaxes?.effectivePropertyTaxRatePct != null ? `${city.housingAndTaxes.effectivePropertyTaxRatePct.toFixed(2)}%` : '—'}</div>
+                  <span class="text-[11px] text-amber-700 font-semibold">Census ACS 2023 · B25103 ÷ B25077</span>
                 </div>
               </div>
               <p class="text-[11px] text-slate-500">
@@ -1288,9 +1280,10 @@ const cityMapPins = {
                 <div>
                   <div class="flex justify-between mb-1">
                     <label class="text-slate-700">Base Asking Rent ($/sqft/yr)</label>
-                    <span id="label-rent" class="text-blue-600 font-bold">${city.marketSignals.reportedRetailRentSqFtYr?.toFixed(2) ?? 'n/a'} / sqft</span>
+                    <span id="label-rent" class="text-blue-600 font-bold">enter your quote</span>
                   </div>
-                  <input id="slider-rent" type="range" min="10" max="85" step="0.5" value={city.marketSignals.reportedRetailRentSqFtYr ?? 22} class="w-full accent-[#1D68F2] cursor-pointer" />
+                  <input id="slider-rent" type="number" min="1" max="500" step="0.5" placeholder="Enter quoted $/sqft/yr" data-tax={city.permitsAndTax.combinedSalesTaxRate} class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm text-[#152438]" />
+                  <p class="text-[11px] text-slate-400 mt-1">No verified free source exists for commercial asking rents. Enter the rate from a broker quote or listing.</p>
                 </div>
                 <div>
                   <div class="flex justify-between mb-1">
@@ -1323,21 +1316,21 @@ const cityMapPins = {
                   <div class="space-y-3">
                     <div>
                       <span class="text-xs text-slate-600">Daily Customers Required</span>
-                      <div id="output-daily-customers" class="text-4xl font-black text-[#152438]">94</div>
+                      <div id="output-daily-customers" class="text-4xl font-black text-[#152438]">—</div>
                       <div class="text-[11px] text-slate-500">transactions per operating day</div>
                     </div>
                     <div>
                       <span class="text-xs text-slate-600">Monthly Net Revenue Needed</span>
-                      <div id="output-monthly-revenue" class="text-xl font-bold text-slate-800">$22,460</div>
+                      <div id="output-monthly-revenue" class="text-xl font-bold text-slate-800">—</div>
                     </div>
                     <div>
                       <span class="text-xs text-slate-600">Monthly Fixed Cost (Lease + Labor + Overhead)</span>
-                      <div id="output-monthly-fixed" class="text-base font-semibold text-slate-700">$16,170</div>
+                      <div id="output-monthly-fixed" class="text-base font-semibold text-slate-700">—</div>
                     </div>
                   </div>
                 </div>
                 <div class="text-[11px] text-slate-500 pt-3 border-t border-blue-200">
-                  Stripping {(city.permitsAndTax.combinedSalesTaxRate * 100).toFixed(2)}% sales tax and applying 18% payroll burden load.
+                  Stripping {(city.permitsAndTax.combinedSalesTaxRate * 100).toFixed(2)}% sales tax and applying 18% payroll burden load. Assumes $6.50/sqft NNN, $16.50/hr labor and 120 staff-hours/week as illustrative defaults.
                 </div>
               </div>
             </div>
@@ -1435,33 +1428,6 @@ const cityMapPins = {
                   </tr>
                 </thead>
                 <tbody class="divide-y divide-slate-100">
-                  <tr class="hover:bg-slate-50">
-                    <td class="py-4 pr-4 font-bold text-slate-800">General Business License</td>
-                    <td class="py-4 px-4">
-                      <span class="px-2.5 py-1 rounded-full font-bold text-[11px] bg-slate-100 text-slate-600">
-                        {city.permitsAndTax.generalBusinessLicenseRequired ? 'Required' : 'Exempt / Not Required'}
-                      </span>
-                    </td>
-                    <td class="py-4 pl-4 text-slate-600">{city.permitsAndTax.businessLicenseFeeSummary ?? 'Standard municipal registration'}</td>
-                  </tr>
-                  <tr class="hover:bg-slate-50">
-                    <td class="py-4 pr-4 font-bold text-slate-800">Certificate of Occupancy</td>
-                    <td class="py-4 px-4">
-                      <span class="px-2.5 py-1 rounded-full font-bold text-[11px] bg-amber-50 text-amber-700 border border-amber-200">
-                        Mandatory Prior to Open
-                      </span>
-                    </td>
-                    <td class="py-4 pl-4 text-slate-600">{city.permitsAndTax.certificateOfOccupancyFee}</td>
-                  </tr>
-                  <tr class="hover:bg-slate-50">
-                    <td class="py-4 pr-4 font-bold text-slate-800">Commercial Building Permit</td>
-                    <td class="py-4 px-4">
-                      <span class="px-2.5 py-1 rounded-full font-bold text-[11px] bg-blue-50 text-[#1D68F2] border border-blue-200">
-                        ~{city.permitsAndTax.avgPermitWaitDays ?? '30'} Days Review
-                      </span>
-                    </td>
-                    <td class="py-4 pl-4 text-slate-600">Development Services Department (DSD)</td>
-                  </tr>
                   <tr class="hover:bg-slate-50">
                     <td class="py-4 pr-4 font-bold text-slate-800">Combined Sales Tax Rate</td>
                     <td class="py-4 px-4">
@@ -2037,10 +2003,16 @@ const cityMapPins = {
       const sCogs = document.getElementById('slider-cogs');
       const sOverhead = document.getElementById('slider-overhead');
 
+      function salesTaxRateOk() { const t = parseFloat(sRent.dataset.tax); return t >= 0 && t < 0.2; }
       function recalculate() {
         if (!sSqft || !sRent || !sTicket || !sCogs || !sOverhead) return;
         const sqft = parseFloat(sSqft.value);
         const rent = parseFloat(sRent.value);
+        if (!(rent > 0) || !(salesTaxRateOk())) {
+          document.getElementById('label-rent').innerText = 'enter your quote';
+          ['output-daily-customers','output-monthly-revenue','output-monthly-fixed'].forEach((id) => { const e = document.getElementById(id); if (e) e.innerText = '—'; });
+          return;
+        }
         const ticket = parseFloat(sTicket.value);
         const cogsPct = parseFloat(sCogs.value) / 100;
         const overhead = parseFloat(sOverhead.value);
@@ -2051,10 +2023,10 @@ const cityMapPins = {
         document.getElementById('label-cogs').innerText = (cogsPct * 100).toFixed(0) + '%';
         document.getElementById('label-overhead').innerText = '$' + Math.round(overhead).toLocaleString();
 
-        const nnn = 6.50;
+        const nnn = 6.50; // illustrative CAM/NNN assumption, disclosed in UI
         const wage = 16.50;
         const hours = 120;
-        const salesTaxRate = 0.0825;
+        const salesTaxRate = parseFloat(sRent.dataset.tax);
 
         const monthlyOcc = (sqft * (rent + nnn)) / 12;
         const monthlyLabor = wage * hours * 4.3482 * 1.18;

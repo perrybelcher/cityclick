@@ -114,7 +114,7 @@ export function runQA(): boolean {
 
   // ---- FACT GATES (v1.1): data-level checks, not just string checks ----
   const BANNED_PHRASES = ['Regional Medical Center','Regional Memorial','Regional / Metropolitan','Commercial Gateway','(balance)',
-    'zero-hallucination','Zero-Hallucination','Zero-hallucination','ground truth','Ground truth','Ubiquitous 24/7','Non-Stop Service','210+ Days','Local Arts & Event Wire','Municipal Wire'];
+    'zero-hallucination','Zero-Hallucination','Zero-hallucination','ground truth','Ground truth','Ubiquitous 24/7','Non-Stop Service','210+ Days','Local Arts & Event Wire','Municipal Wire','Verification Pending','Loading verified','$32.00','$28.50','$22,460','$16,170','DSD Initial Review','Verified local guides across 1,501'];
   for (const f of flagships) {
     const fp = path.join(distDir, f.file);
     if (!fs.existsSync(fp)) continue;

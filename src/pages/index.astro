@@ -19,7 +19,7 @@ const FEATURED_CITIES = [
     state: 'Arkansas',
     stateCode: 'AR',
     image: '/images/hsv-hero.jpg',
-    appeal: 'America’s largest gated community with 11 recreational lakes, 9 championship golf courses, and 0.62% property tax.',
+    appeal: 'America’s largest gated community with 11 recreational lakes, 9 championship golf courses, and a 0.51% effective property tax rate.',
     tagline: 'Scenic Lakeside Living'
   },
   {
@@ -81,7 +81,7 @@ const statesList = Object.values(stateCounts).sort((a, b) => a.name.localeCompar
 
 <Layout
   title="CityClick — Get to know your next city"
-  description="Plan a visit, find a place to live, or research your next business location. Verified local guides across 1,501 American cities."
+  description="Plan a visit, find a place to live, or research your next business location. Census-sourced guides for six verified cities, with 1,495 more in review."
   image="https://cityclick.com/images/og-cityclick.jpg"
 >
   <!-- Hero Section -->
@@ -92,7 +92,7 @@ const statesList = Object.values(stateCounts).sort((a, b) => a.name.localeCompar
         <div class="lg:col-span-7 space-y-6">
           <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-xs font-bold text-[#1D68F2]">
             <span class="w-2 h-2 rounded-full bg-[#1D68F2] animate-pulse"></span>
-            1,501 city guides available · More local information added every week
+            6 verified city guides · 1,495 more in review, added as each passes our data checks
           </div>
 
           <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-[#152438] tracking-tight leading-[1.12]">
@@ -372,7 +372,7 @@ const statesList = Object.values(stateCounts).sort((a, b) => a.name.localeCompar
           </div>
           <h3 class="text-base font-black text-[#152438]">Walk a Neighborhood</h3>
           <p class="text-xs text-slate-600 leading-relaxed">
-            4K aerial drone tours and street-level footage let you see housing styles, parks, and retail corridors before traveling.
+            Photo galleries and video tours show housing styles, parks, and retail corridors before you travel.
           </p>
           <a href="/ar/hot-springs-village/" class="inline-flex items-center text-xs font-bold text-[#1D68F2] hover:text-blue-700">
             Preview Video Experience →
@@ -406,82 +406,6 @@ const statesList = Object.values(stateCounts).sort((a, b) => a.name.localeCompar
             Preview Austin Guide →
           </a>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Section 5: Recently Verified Updates (Visible Continuous Research) -->
-  <section id="recent-updates" class="py-16 bg-white border-b border-slate-200">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-8">
-        <div>
-          <div class="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-emerald-50 text-[11px] font-bold text-emerald-700 mb-2 uppercase tracking-wider border border-emerald-200">
-            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
-            Continuous Research Wire
-          </div>
-          <h2 class="text-2xl sm:text-3xl font-black text-[#152438] tracking-tight">
-            Recently verified updates
-          </h2>
-          <p class="text-sm text-slate-500 mt-1">
-            Evidence of ongoing local research, public notices, and municipal record maintenance across our published guides.
-          </p>
-        </div>
-        <div class="mt-3 md:mt-0 text-xs font-semibold text-slate-400">
-          Source audits updated daily
-        </div>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <!-- Update 1: Hot Springs Village -->
-        <a href="/ar/hot-springs-village" class="p-5 rounded-3xl bg-[#F8FAFC] border border-slate-200/80 hover:border-emerald-400 hover:shadow-md transition flex flex-col justify-between group space-y-3">
-          <div class="space-y-2">
-            <div class="flex items-center justify-between text-[11px]">
-              <span class="font-extrabold text-[#152438] group-hover:text-emerald-700 transition">Hot Springs Village, AR</span>
-              <span class="text-slate-400 font-medium">Updated yesterday</span>
-            </div>
-            <div class="text-xs font-bold text-slate-800">Water Compliance & Gated Access Protocols</div>
-            <p class="text-[11px] text-slate-600 leading-relaxed">
-              Verified 100% EPA Safe Drinking Water Act compliance (PWSID AR0000208) and added 24/7 guarded gate access rules for East and West visitor checkpoints.
-            </p>
-          </div>
-          <span class="text-[11px] font-bold text-emerald-700 flex items-center gap-1 group-hover:underline">
-            View Verified Record →
-          </span>
-        </a>
-
-        <!-- Update 2: Austin -->
-        <a href="/tx/austin" class="p-5 rounded-3xl bg-[#F8FAFC] border border-slate-200/80 hover:border-blue-400 hover:shadow-md transition flex flex-col justify-between group space-y-3">
-          <div class="space-y-2">
-            <div class="flex items-center justify-between text-[11px]">
-              <span class="font-extrabold text-[#152438] group-hover:text-[#1D68F2] transition">Austin, Texas</span>
-              <span class="text-slate-400 font-medium">Updated 2 days ago</span>
-            </div>
-            <div class="text-xs font-bold text-slate-800">Airport Rideshare & Pool Maintenance Schedule</div>
-            <p class="text-[11px] text-slate-600 leading-relaxed">
-              Updated Austin-Bergstrom (AUS) rideshare pickup protocol (Level 1 Rental Car Garage) and confirmed Barton Springs Pool Thursday cleaning hours (closed 9am–7pm).
-            </p>
-          </div>
-          <span class="text-[11px] font-bold text-[#1D68F2] flex items-center gap-1 group-hover:underline">
-            View Verified Record →
-          </span>
-        </a>
-
-        <!-- Update 3: Boise -->
-        <a href="/id/boise" class="p-5 rounded-3xl bg-[#F8FAFC] border border-slate-200/80 hover:border-purple-400 hover:shadow-md transition flex flex-col justify-between group space-y-3">
-          <div class="space-y-2">
-            <div class="flex items-center justify-between text-[11px]">
-              <span class="font-extrabold text-[#152438] group-hover:text-purple-700 transition">Boise, Idaho</span>
-              <span class="text-slate-400 font-medium">Updated 3 days ago</span>
-            </div>
-            <div class="text-xs font-bold text-slate-800">Transit Corridor & Small-Business Lending</div>
-            <p class="text-[11px] text-slate-600 leading-relaxed">
-              Confirmed Valley Regional Transit Route 3 airport-to-downtown connection and verified $18.4M Ada County SBA 7(a) small-business lending volume.
-            </p>
-          </div>
-          <span class="text-[11px] font-bold text-purple-700 flex items-center gap-1 group-hover:underline">
-            View Verified Record →
-          </span>
-        </a>
       </div>
     </div>
   </section>
@@ -529,7 +453,7 @@ const statesList = Object.values(stateCounts).sort((a, b) => a.name.localeCompar
             </span>
             <h3 class="text-base font-black text-[#152438]">State Tax & Housing Comparison</h3>
             <p class="text-xs text-slate-600 leading-relaxed">
-              Compare effective property tax friction, 0% state income tax states (TX, FL, TN), median home prices, and public school systems.
+              Compare effective property tax, state income tax, median home values, and sales tax side by side.
             </p>
           </div>
           <a href="/tx/austin" class="inline-flex items-center text-xs font-bold text-emerald-700 hover:text-emerald-900 pt-2">
@@ -548,7 +472,7 @@ const statesList = Object.values(stateCounts).sort((a, b) => a.name.localeCompar
             </span>
             <h3 class="text-base font-black text-[#152438]">Commercial Lease & Breakeven</h3>
             <p class="text-xs text-slate-600 leading-relaxed">
-              Calculate daily customer velocity needed to cover commercial retail leases, NNN CAM fees, and payroll across 25 NAICS trades.
+              Enter your quoted lease rate and calculate the daily customers needed to break even across 25 trades.
             </p>
           </div>
           <a href="/tools/lease-calculator" class="inline-flex items-center text-xs font-bold text-purple-700 hover:text-purple-900 pt-2">
@@ -694,7 +618,7 @@ const statesList = Object.values(stateCounts).sort((a, b) => a.name.localeCompar
         dropdown.innerHTML = `
           <div class="px-4 py-2.5 bg-slate-50 border-b border-slate-100 flex items-center justify-between text-[11px] font-black uppercase tracking-wider text-slate-500">
             <span>🔥 Popular Destinations</span>
-            <span class="text-blue-600 font-bold">1,501 Guides Live</span>
+            <span class="text-blue-600 font-bold">6 Verified Guides</span>
           </div>
           <div class="divide-y divide-slate-100">
             <a href="/tx/austin" class="px-4 py-3 hover:bg-blue-50/60 text-xs font-bold text-slate-800 flex justify-between items-center transition">

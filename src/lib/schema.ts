@@ -113,12 +113,12 @@ export const CityRecordSchema = z.object({
   primaryZips: z.array(z.string().regex(/^\d{5}$/)).min(1),
   demographics: z.object({
     population: z.number().int().positive(),
-    popGrowth5YrPct: z.number().min(-50).max(200),
+    popGrowth5YrPct: z.number().min(-50).max(200).optional(),
     medianHouseholdIncome: z.number().int().positive(),
     perCapitaIncome: z.number().int().positive(),
     medianAge: z.number().min(15).max(85),
-    daytimeWorkerPop: z.number().int().nonnegative(),
-    daytimePopSurgePct: z.number().min(-80).max(500),
+    daytimeWorkerPop: z.number().int().nonnegative().optional(),
+    daytimePopSurgePct: z.number().min(-80).max(500).optional(),
     medianGrossRent: z.number().int().positive(),
     medianHomeValue: z.number().int().positive(),
     provenance: ProvenanceSchema

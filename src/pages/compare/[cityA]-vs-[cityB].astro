@@ -8,6 +8,7 @@ Astro.response.headers.set('Cache-Control', 'public, s-maxage=86400, stale-while
 
 const { cityA, cityB } = Astro.params;
 
+const CERTIFIED = ['tx/austin','ar/hot-springs-village','id/boise','fl/tampa','az/scottsdale','tn/nashville','ok/oklahoma-city'];
 let recordA: any = null;
 let recordB: any = null;
 
@@ -18,14 +19,14 @@ for (const c of manifest) {
 }
 
 // Fallback if not found
-if (!recordA || !recordB) {
+if (!recordA || !recordB || !CERTIFIED.includes(recordA.slug) || !CERTIFIED.includes(recordB.slug)) {
   return Astro.redirect('/?error=comparison_not_found');
 }
 ---
 
 <Layout
   title={`${recordA.name}, ${recordA.stateCode.toUpperCase()} vs ${recordB.name}, ${recordB.stateCode.toUpperCase()} Comparison — CityClick`}
-  description={`Compare ${recordA.name} and ${recordB.name} side-by-side on demographics, viability score, commercial retail asking rent, permit waiting times, and local sales tax.`}
+  description={`Compare ${recordA.name} and ${recordB.name} side-by-side on Census demographics, housing costs, property tax and sales tax, and local sales tax.`}
 >
   <section class="bg-gradient-to-b from-[#EDF4FC] to-white py-12 border-b border-slate-200">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
@@ -50,73 +51,45 @@ if (!recordA || !recordB) {
       </div>
 
       <div class="divide-y divide-slate-100 text-xs sm:text-sm">
-        <!-- Viability Score -->
         <div class="grid grid-cols-3 p-4 sm:p-6 items-center">
-          <div class="font-semibold text-slate-700">Viability Score</div>
-          <div class="text-center">
-            <span class="inline-block px-3 py-1 rounded-full font-extrabold bg-blue-100 text-[#1D68F2]">
-              {recordA.overallViability} / 100
-            </span>
-          </div>
-          <div class="text-center">
-            <span class="inline-block px-3 py-1 rounded-full font-extrabold bg-blue-100 text-[#1D68F2]">
-              {recordB.overallViability} / 100
-            </span>
-          </div>
+          <div class="font-semibold text-slate-700">Population (2023 est.)</div>
+          <div class="text-center font-bold text-slate-800">{recordA.population != null ? recordA.population.toLocaleString() : '—'}</div>
+          <div class="text-center font-bold text-slate-800">{recordB.population != null ? recordB.population.toLocaleString() : '—'}</div>
         </div>
-
-        <!-- Population -->
         <div class="grid grid-cols-3 p-4 sm:p-6 items-center bg-slate-50/50">
-          <div class="font-semibold text-slate-700">Population</div>
-          <div class="text-center font-bold text-slate-800">
-            {recordA.population.toLocaleString()}
-          </div>
-          <div class="text-center font-bold text-slate-800">
-            {recordB.population.toLocaleString()}
-          </div>
+          <div class="font-semibold text-slate-700">Population Change Since 2020</div>
+          <div class="text-center font-bold text-slate-800">{recordA.popChange2020to2023Pct != null ? `${recordA.popChange2020to2023Pct > 0 ? '+' : ''}${recordA.popChange2020to2023Pct}%` : '—'}</div>
+          <div class="text-center font-bold text-slate-800">{recordB.popChange2020to2023Pct != null ? `${recordB.popChange2020to2023Pct > 0 ? '+' : ''}${recordB.popChange2020to2023Pct}%` : '—'}</div>
         </div>
-
-        <!-- 5-Yr Growth -->
         <div class="grid grid-cols-3 p-4 sm:p-6 items-center">
-          <div class="font-semibold text-slate-700">5-Yr Population Growth</div>
-          <div class="text-center font-bold text-emerald-600">
-            +{recordA.popGrowth5YrPct}%
-          </div>
-          <div class="text-center font-bold text-emerald-600">
-            +{recordB.popGrowth5YrPct}%
-          </div>
-        </div>
-
-        <!-- Median Income -->
-        <div class="grid grid-cols-3 p-4 sm:p-6 items-center bg-slate-50/50">
           <div class="font-semibold text-slate-700">Median Household Income</div>
-          <div class="text-center font-bold text-slate-800">
-            ${recordA.medianHouseholdIncome.toLocaleString()}
-          </div>
-          <div class="text-center font-bold text-slate-800">
-            ${recordB.medianHouseholdIncome.toLocaleString()}
-          </div>
+          <div class="text-center font-bold text-slate-800">{recordA.medianHouseholdIncome != null ? `$${recordA.medianHouseholdIncome.toLocaleString()}` : '—'}</div>
+          <div class="text-center font-bold text-slate-800">{recordB.medianHouseholdIncome != null ? `$${recordB.medianHouseholdIncome.toLocaleString()}` : '—'}</div>
         </div>
-
-        <!-- Retail Rent -->
+        <div class="grid grid-cols-3 p-4 sm:p-6 items-center bg-slate-50/50">
+          <div class="font-semibold text-slate-700">Median Home Value</div>
+          <div class="text-center font-bold text-slate-800">{recordA.medianHomeValue != null ? `$${recordA.medianHomeValue.toLocaleString()}` : '—'}</div>
+          <div class="text-center font-bold text-slate-800">{recordB.medianHomeValue != null ? `$${recordB.medianHomeValue.toLocaleString()}` : '—'}</div>
+        </div>
         <div class="grid grid-cols-3 p-4 sm:p-6 items-center">
-          <div class="font-semibold text-slate-700">Retail Asking Rent ($/sqft)</div>
-          <div class="text-center font-bold text-slate-800">
-            ${recordA.reportedRetailRentSqFtYr?.toFixed(2) ?? '32.00'}
-          </div>
-          <div class="text-center font-bold text-slate-800">
-            ${recordB.reportedRetailRentSqFtYr?.toFixed(2) ?? '28.50'}
-          </div>
+          <div class="font-semibold text-slate-700">Median Gross Rent (monthly)</div>
+          <div class="text-center font-bold text-slate-800">{recordA.medianGrossRent != null ? `$${recordA.medianGrossRent.toLocaleString()}` : '—'}</div>
+          <div class="text-center font-bold text-slate-800">{recordB.medianGrossRent != null ? `$${recordB.medianGrossRent.toLocaleString()}` : '—'}</div>
+        </div>
+        <div class="grid grid-cols-3 p-4 sm:p-6 items-center bg-slate-50/50">
+          <div class="font-semibold text-slate-700">Effective Property Tax Rate</div>
+          <div class="text-center font-bold text-slate-800">{recordA.effectivePropertyTaxRatePct != null ? `${recordA.effectivePropertyTaxRatePct.toFixed(2)}%` : '—'}</div>
+          <div class="text-center font-bold text-slate-800">{recordB.effectivePropertyTaxRatePct != null ? `${recordB.effectivePropertyTaxRatePct.toFixed(2)}%` : '—'}</div>
         </div>
 
         <!-- Combined Sales Tax -->
         <div class="grid grid-cols-3 p-4 sm:p-6 items-center bg-slate-50/50">
           <div class="font-semibold text-slate-700">Combined Sales Tax Rate</div>
           <div class="text-center font-bold text-slate-800">
-            {(recordA.combinedSalesTaxRate * 100).toFixed(2)}%
+            {recordA.combinedSalesTaxRate != null ? `${(recordA.combinedSalesTaxRate * 100).toFixed(2)}%` : '—'}
           </div>
           <div class="text-center font-bold text-slate-800">
-            {(recordB.combinedSalesTaxRate * 100).toFixed(2)}%
+            {recordB.combinedSalesTaxRate != null ? `${(recordB.combinedSalesTaxRate * 100).toFixed(2)}%` : '—'}
           </div>
         </div>
 

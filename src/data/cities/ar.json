@@ -12021,41 +12021,31 @@
       "sqmi": 57.637
     },
     "demographics": {
-      "population": 16327,
-      "popGrowth5YrPct": 9.5,
-      "medianHouseholdIncome": 75370,
-      "perCapitaIncome": 42800,
-      "medianAge": 69.6,
-      "daytimePopulation": 14200
+      "population": 16509,
+      "medianHouseholdIncome": 69953,
+      "perCapitaIncome": 44568,
+      "medianAge": 69.8,
+      "medianGrossRent": 1167,
+      "medianHomeValue": 262000,
+      "provenance": {
+        "sourceName": "US Census Bureau ACS 5-Year Estimates 2023 (Table-Based Summary File)",
+        "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/",
+        "datasetVintage": "ACS-2023-5YR",
+        "verifiedAt": "2026-10-18",
+        "granularity": "place"
+      }
     },
-    "marketSignals": {
-      "reportedRetailRentSqFtYr": 18.5,
-      "camExpenseSqFtYr": 3.5,
-      "commercialElectricityCentsKwh": 9.2
-    },
-    "scores": {
-      "overallViability": 71,
-      "purchasingPower": 82,
-      "growthMomentum": 74
-    },
+    "marketSignals": {},
     "permitsAndTax": {
-      "generalBusinessLicenseRequired": false,
-      "businessLicenseFeeSummary": "No municipal business license; Garland County and Hot Springs Village POA commercial compliance applies.",
-      "buildingPermitPortalUrl": "https://www.explorethevillage.com/services/permitting",
-      "certificateOfOccupancyFee": "$125 POA inspection and occupancy clearance",
-      "avgPermitWaitDays": 14,
-      "shortTermRentalStatus": "allowed with POA registration",
-      "foodTruckPermitStatus": "restricted to designated event pavilions and golf clubhouses",
-      "combinedSalesTaxRate": 0.08,
       "stateTaxRate": 0.065,
       "localTaxRate": 0.015,
+      "combinedSalesTaxRate": 0.08,
       "provenance": {
-        "sourceName": "Arkansas Department of Finance & Administration and Garland County Revenue Office",
-        "sourceUrl": "https://www.dfa.arkansas.gov",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T16:00:00Z",
-        "granularity": "place",
-        "evidenceQuote": "Statutory 6.50% Arkansas state sales tax plus 1.50% Garland County rate. 0.0% municipal rate."
+        "sourceName": "Garland County portion: AR 6.5% + county 1.5% (Avalara); Saline County portion may differ",
+        "sourceUrl": "https://www.avalara.com/us/en/taxrates/state-rates/arkansas/cities/hot-springs-village.html",
+        "datasetVintage": "2026",
+        "verifiedAt": "2026-10-18",
+        "granularity": "place"
       }
     },
     "executiveTravel": {
@@ -12125,11 +12115,13 @@
       "sourceUrl": "https://open-meteo.com/en/docs/historical-weather-api"
     },
     "housingAndTaxes": {
-      "medianHomePrice": 285000,
-      "averageTwoBedRent": 1250,
-      "effectivePropertyTaxRatePct": 0.62,
-      "countyName": "Garland & Saline Counties",
-      "homesteadExemptionNote": "Arkansas $425 state homestead tax credit applies; low effective property tax rate of 0.62%."
+      "medianHomeValue": 262000,
+      "medianGrossRent": 1167,
+      "medianRealEstateTaxPaid": 1342,
+      "effectivePropertyTaxRatePct": 0.51,
+      "countyName": "Garland County",
+      "source": "ACS 2023 5-yr: B25077 median home value, B25064 median gross rent, B25103 median real estate taxes paid. Effective rate = B25103 / B25077.",
+      "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/"
     },
     "capitalAndSbaLending": {
       "annualSbaDisbursementMillion": 14.2,
@@ -12174,229 +12166,457 @@
     "industries": [
       {
         "naicsCode": "722515",
+        "slug": "coffee-shops",
         "label": "Coffee & Snack Shops",
-        "establishments": 4,
-        "per10kResidents": 2.45,
-        "usAvgPer10k": 2.15,
-        "saturationIndex": 98,
-        "status": "balanced"
+        "establishments": 0,
+        "per10kResidents": 0.0,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 0,
+        "status": "underserved",
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-18",
+          "granularity": "zip_aggregated",
+          "evidenceQuote": "0 establishments (NAICS 722515) across 1 ZIP codes whose USPS city is Hot Springs Village, AR; density uses ACS 2023 ZCTA population of those ZIPs (18,427). National benchmark = all US ZIP rows / US population."
+        }
       },
       {
         "naicsCode": "722511",
+        "slug": "restaurants",
         "label": "Full-Service Restaurants",
-        "establishments": 14,
-        "per10kResidents": 8.57,
-        "usAvgPer10k": 6.8,
-        "saturationIndex": 115,
-        "status": "saturated"
+        "establishments": 17,
+        "per10kResidents": 9.23,
+        "usAvgPer10k": 7.44,
+        "saturationIndex": 124,
+        "status": "saturated",
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-18",
+          "granularity": "zip_aggregated",
+          "evidenceQuote": "17 establishments (NAICS 722511) across 1 ZIP codes whose USPS city is Hot Springs Village, AR; density uses ACS 2023 ZCTA population of those ZIPs (18,427). National benchmark = all US ZIP rows / US population."
+        }
       },
       {
         "naicsCode": "722513",
-        "label": "Limited-Service / Fast Food",
-        "establishments": 6,
-        "per10kResidents": 3.67,
-        "usAvgPer10k": 7.2,
-        "saturationIndex": 65,
-        "status": "underserved"
+        "slug": "fast-food",
+        "label": "Limited-Service / Fast Food Restaurants",
+        "establishments": 7,
+        "per10kResidents": 3.8,
+        "usAvgPer10k": 7.75,
+        "saturationIndex": 49,
+        "status": "underserved",
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-18",
+          "granularity": "zip_aggregated",
+          "evidenceQuote": "7 establishments (NAICS 722513) across 1 ZIP codes whose USPS city is Hot Springs Village, AR; density uses ACS 2023 ZCTA population of those ZIPs (18,427). National benchmark = all US ZIP rows / US population."
+        }
       },
       {
         "naicsCode": "722410",
-        "label": "Drinking Places (Alcoholic)",
-        "establishments": 3,
-        "per10kResidents": 1.84,
-        "usAvgPer10k": 1.85,
-        "saturationIndex": 99,
-        "status": "balanced"
+        "slug": "bars-taverns",
+        "label": "Drinking Places (Alcoholic Beverages)",
+        "establishments": 0,
+        "per10kResidents": 0.0,
+        "usAvgPer10k": 0.9,
+        "saturationIndex": 0,
+        "status": "underserved",
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-18",
+          "granularity": "zip_aggregated",
+          "evidenceQuote": "0 establishments (NAICS 722410) across 1 ZIP codes whose USPS city is Hot Springs Village, AR; density uses ACS 2023 ZCTA population of those ZIPs (18,427). National benchmark = all US ZIP rows / US population."
+        }
       },
       {
         "naicsCode": "812111",
+        "slug": "barber-shops",
         "label": "Barber Shops",
-        "establishments": 2,
-        "per10kResidents": 1.22,
-        "usAvgPer10k": 1.35,
-        "saturationIndex": 92,
-        "status": "balanced"
+        "establishments": 0,
+        "per10kResidents": 0.0,
+        "usAvgPer10k": 0.08,
+        "saturationIndex": 0,
+        "status": "underserved",
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-18",
+          "granularity": "zip_aggregated",
+          "evidenceQuote": "0 establishments (NAICS 812111) across 1 ZIP codes whose USPS city is Hot Springs Village, AR; density uses ACS 2023 ZCTA population of those ZIPs (18,427). National benchmark = all US ZIP rows / US population."
+        }
       },
       {
         "naicsCode": "812112",
+        "slug": "beauty-salons",
         "label": "Beauty Salons & Hair Studios",
-        "establishments": 7,
-        "per10kResidents": 4.29,
-        "usAvgPer10k": 3.4,
-        "saturationIndex": 112,
-        "status": "saturated"
+        "establishments": 0,
+        "per10kResidents": 0.0,
+        "usAvgPer10k": 2.31,
+        "saturationIndex": 0,
+        "status": "underserved",
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-18",
+          "granularity": "zip_aggregated",
+          "evidenceQuote": "0 establishments (NAICS 812112) across 1 ZIP codes whose USPS city is Hot Springs Village, AR; density uses ACS 2023 ZCTA population of those ZIPs (18,427). National benchmark = all US ZIP rows / US population."
+        }
       },
       {
         "naicsCode": "812113",
+        "slug": "nail-salons",
         "label": "Nail Salons",
-        "establishments": 3,
-        "per10kResidents": 1.84,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 91,
-        "status": "balanced"
+        "establishments": 0,
+        "per10kResidents": 0.0,
+        "usAvgPer10k": 0.86,
+        "saturationIndex": 0,
+        "status": "underserved",
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-18",
+          "granularity": "zip_aggregated",
+          "evidenceQuote": "0 establishments (NAICS 812113) across 1 ZIP codes whose USPS city is Hot Springs Village, AR; density uses ACS 2023 ZCTA population of those ZIPs (18,427). National benchmark = all US ZIP rows / US population."
+        }
       },
       {
         "naicsCode": "713940",
-        "label": "Fitness & Recreational Sports",
-        "establishments": 5,
-        "per10kResidents": 3.06,
-        "usAvgPer10k": 1.25,
-        "saturationIndex": 145,
-        "status": "saturated"
+        "slug": "gyms-fitness",
+        "label": "Fitness & Recreational Sports Centers",
+        "establishments": 0,
+        "per10kResidents": 0.0,
+        "usAvgPer10k": 1.0,
+        "saturationIndex": 0,
+        "status": "underserved",
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-18",
+          "granularity": "zip_aggregated",
+          "evidenceQuote": "0 establishments (NAICS 713940) across 1 ZIP codes whose USPS city is Hot Springs Village, AR; density uses ACS 2023 ZCTA population of those ZIPs (18,427). National benchmark = all US ZIP rows / US population."
+        }
       },
       {
         "naicsCode": "812910",
+        "slug": "pet-care",
         "label": "Pet Care & Grooming Services",
-        "establishments": 3,
-        "per10kResidents": 1.84,
-        "usAvgPer10k": 0.95,
-        "saturationIndex": 135,
-        "status": "saturated"
+        "establishments": 0,
+        "per10kResidents": 0.0,
+        "usAvgPer10k": 0.46,
+        "saturationIndex": 0,
+        "status": "underserved",
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-18",
+          "granularity": "zip_aggregated",
+          "evidenceQuote": "0 establishments (NAICS 812910) across 1 ZIP codes whose USPS city is Hot Springs Village, AR; density uses ACS 2023 ZCTA population of those ZIPs (18,427). National benchmark = all US ZIP rows / US population."
+        }
       },
       {
         "naicsCode": "541940",
-        "label": "Veterinary Services",
-        "establishments": 3,
-        "per10kResidents": 1.84,
-        "usAvgPer10k": 1.05,
-        "saturationIndex": 128,
-        "status": "saturated"
+        "slug": "veterinary",
+        "label": "Veterinary Services & Animal Hospitals",
+        "establishments": 4,
+        "per10kResidents": 2.17,
+        "usAvgPer10k": 0.69,
+        "saturationIndex": 314,
+        "status": "saturated",
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-18",
+          "granularity": "zip_aggregated",
+          "evidenceQuote": "4 establishments (NAICS 541940) across 1 ZIP codes whose USPS city is Hot Springs Village, AR; density uses ACS 2023 ZCTA population of those ZIPs (18,427). National benchmark = all US ZIP rows / US population."
+        }
       },
       {
         "naicsCode": "811111",
+        "slug": "auto-repair",
         "label": "General Automotive Repair",
-        "establishments": 5,
-        "per10kResidents": 3.06,
-        "usAvgPer10k": 4.8,
-        "saturationIndex": 72,
-        "status": "underserved"
+        "establishments": 3,
+        "per10kResidents": 1.63,
+        "usAvgPer10k": 2.2,
+        "saturationIndex": 74,
+        "status": "underserved",
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-18",
+          "granularity": "zip_aggregated",
+          "evidenceQuote": "3 establishments (NAICS 811111) across 1 ZIP codes whose USPS city is Hot Springs Village, AR; density uses ACS 2023 ZCTA population of those ZIPs (18,427). National benchmark = all US ZIP rows / US population."
+        }
       },
       {
         "naicsCode": "811192",
+        "slug": "car-washes",
         "label": "Car Washes & Auto Detailing",
-        "establishments": 1,
-        "per10kResidents": 0.61,
-        "usAvgPer10k": 0.65,
-        "saturationIndex": 95,
-        "status": "balanced"
+        "establishments": 0,
+        "per10kResidents": 0.0,
+        "usAvgPer10k": 0.35,
+        "saturationIndex": 0,
+        "status": "underserved",
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-18",
+          "granularity": "zip_aggregated",
+          "evidenceQuote": "0 establishments (NAICS 811192) across 1 ZIP codes whose USPS city is Hot Springs Village, AR; density uses ACS 2023 ZCTA population of those ZIPs (18,427). National benchmark = all US ZIP rows / US population."
+        }
       },
       {
         "naicsCode": "812310",
+        "slug": "laundromats",
         "label": "Coin-Operated Laundromats",
-        "establishments": 1,
-        "per10kResidents": 0.61,
-        "usAvgPer10k": 0.55,
-        "saturationIndex": 105,
-        "status": "balanced"
+        "establishments": 0,
+        "per10kResidents": 0.0,
+        "usAvgPer10k": 0.16,
+        "saturationIndex": 0,
+        "status": "underserved",
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-18",
+          "granularity": "zip_aggregated",
+          "evidenceQuote": "0 establishments (NAICS 812310) across 1 ZIP codes whose USPS city is Hot Springs Village, AR; density uses ACS 2023 ZCTA population of those ZIPs (18,427). National benchmark = all US ZIP rows / US population."
+        }
       },
       {
         "naicsCode": "812320",
-        "label": "Dry Cleaning & Laundry",
-        "establishments": 1,
-        "per10kResidents": 0.61,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 78,
-        "status": "underserved"
+        "slug": "dry-cleaners",
+        "label": "Dry Cleaning & Laundry Services",
+        "establishments": 0,
+        "per10kResidents": 0.0,
+        "usAvgPer10k": 0.29,
+        "saturationIndex": 0,
+        "status": "underserved",
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-18",
+          "granularity": "zip_aggregated",
+          "evidenceQuote": "0 establishments (NAICS 812320) across 1 ZIP codes whose USPS city is Hot Springs Village, AR; density uses ACS 2023 ZCTA population of those ZIPs (18,427). National benchmark = all US ZIP rows / US population."
+        }
       },
       {
         "naicsCode": "621210",
+        "slug": "dentists",
         "label": "Offices of Dentists",
-        "establishments": 6,
-        "per10kResidents": 3.67,
-        "usAvgPer10k": 3.9,
-        "saturationIndex": 96,
-        "status": "balanced"
+        "establishments": 5,
+        "per10kResidents": 2.71,
+        "usAvgPer10k": 3.89,
+        "saturationIndex": 70,
+        "status": "underserved",
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-18",
+          "granularity": "zip_aggregated",
+          "evidenceQuote": "5 establishments (NAICS 621210) across 1 ZIP codes whose USPS city is Hot Springs Village, AR; density uses ACS 2023 ZCTA population of those ZIPs (18,427). National benchmark = all US ZIP rows / US population."
+        }
       },
       {
         "naicsCode": "621310",
+        "slug": "chiropractors",
         "label": "Offices of Chiropractors",
-        "establishments": 2,
-        "per10kResidents": 1.22,
-        "usAvgPer10k": 1.4,
-        "saturationIndex": 90,
-        "status": "balanced"
+        "establishments": 3,
+        "per10kResidents": 1.63,
+        "usAvgPer10k": 0.97,
+        "saturationIndex": 167,
+        "status": "saturated",
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-18",
+          "granularity": "zip_aggregated",
+          "evidenceQuote": "3 establishments (NAICS 621310) across 1 ZIP codes whose USPS city is Hot Springs Village, AR; density uses ACS 2023 ZCTA population of those ZIPs (18,427). National benchmark = all US ZIP rows / US population."
+        }
       },
       {
         "naicsCode": "621340",
-        "label": "Physical & Occupational Therapy",
-        "establishments": 5,
-        "per10kResidents": 3.06,
-        "usAvgPer10k": 1.55,
-        "saturationIndex": 140,
-        "status": "saturated"
+        "slug": "physical-therapy",
+        "label": "Physical, Occupational & Speech Therapists",
+        "establishments": 6,
+        "per10kResidents": 3.26,
+        "usAvgPer10k": 1.3,
+        "saturationIndex": 250,
+        "status": "saturated",
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-18",
+          "granularity": "zip_aggregated",
+          "evidenceQuote": "6 establishments (NAICS 621340) across 1 ZIP codes whose USPS city is Hot Springs Village, AR; density uses ACS 2023 ZCTA population of those ZIPs (18,427). National benchmark = all US ZIP rows / US population."
+        }
       },
       {
         "naicsCode": "624410",
+        "slug": "daycare",
         "label": "Child Day Care Services",
-        "establishments": 1,
-        "per10kResidents": 0.61,
-        "usAvgPer10k": 2.25,
-        "saturationIndex": 42,
-        "status": "underserved"
+        "establishments": 0,
+        "per10kResidents": 0.0,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 0,
+        "status": "underserved",
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-18",
+          "granularity": "zip_aggregated",
+          "evidenceQuote": "0 establishments (NAICS 624410) across 1 ZIP codes whose USPS city is Hot Springs Village, AR; density uses ACS 2023 ZCTA population of those ZIPs (18,427). National benchmark = all US ZIP rows / US population."
+        }
       },
       {
         "naicsCode": "445120",
+        "slug": "convenience-stores",
         "label": "Convenience Retail Stores",
-        "establishments": 2,
-        "per10kResidents": 1.22,
-        "usAvgPer10k": 1.95,
-        "saturationIndex": 74,
-        "status": "underserved"
+        "establishments": 0,
+        "per10kResidents": 0.0,
+        "usAvgPer10k": 0.82,
+        "saturationIndex": 0,
+        "status": "underserved",
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-18",
+          "granularity": "zip_aggregated",
+          "evidenceQuote": "0 establishments (NAICS 445120) across 1 ZIP codes whose USPS city is Hot Springs Village, AR; density uses ACS 2023 ZCTA population of those ZIPs (18,427). National benchmark = all US ZIP rows / US population."
+        }
       },
       {
         "naicsCode": "448140",
-        "label": "Family Clothing & Boutiques",
-        "establishments": 2,
-        "per10kResidents": 1.22,
-        "usAvgPer10k": 1.65,
-        "saturationIndex": 82,
-        "status": "balanced"
+        "slug": "clothing-boutiques",
+        "label": "Family Clothing Stores & Boutiques",
+        "establishments": 0,
+        "per10kResidents": 0.0,
+        "usAvgPer10k": 0.65,
+        "saturationIndex": 0,
+        "status": "underserved",
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-18",
+          "granularity": "zip_aggregated",
+          "evidenceQuote": "0 establishments (NAICS 448140) across 1 ZIP codes whose USPS city is Hot Springs Village, AR; density uses ACS 2023 ZCTA population of those ZIPs (18,427). National benchmark = all US ZIP rows / US population."
+        }
       },
       {
-        "naicsCode": "311811",
+        "naicsCode": "445291",
+        "slug": "bakeries",
         "label": "Retail Bakeries & Pastry Shops",
-        "establishments": 1,
-        "per10kResidents": 0.61,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 78,
-        "status": "underserved"
+        "establishments": 0,
+        "per10kResidents": 0.0,
+        "usAvgPer10k": 0.01,
+        "saturationIndex": 0,
+        "status": "underserved",
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-18",
+          "granularity": "zip_aggregated",
+          "evidenceQuote": "0 establishments (NAICS 445291) across 1 ZIP codes whose USPS city is Hot Springs Village, AR; density uses ACS 2023 ZCTA population of those ZIPs (18,427). National benchmark = all US ZIP rows / US population."
+        }
       },
       {
         "naicsCode": "453110",
+        "slug": "florists",
         "label": "Florists & Floral Gift Shops",
-        "establishments": 1,
-        "per10kResidents": 0.61,
-        "usAvgPer10k": 0.5,
-        "saturationIndex": 110,
-        "status": "balanced"
+        "establishments": 0,
+        "per10kResidents": 0.0,
+        "usAvgPer10k": 0.11,
+        "saturationIndex": 0,
+        "status": "underserved",
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-18",
+          "granularity": "zip_aggregated",
+          "evidenceQuote": "0 establishments (NAICS 453110) across 1 ZIP codes whose USPS city is Hot Springs Village, AR; density uses ACS 2023 ZCTA population of those ZIPs (18,427). National benchmark = all US ZIP rows / US population."
+        }
       },
       {
         "naicsCode": "541110",
+        "slug": "law-firms",
         "label": "Offices of Lawyers",
-        "establishments": 6,
-        "per10kResidents": 3.67,
-        "usAvgPer10k": 4.9,
-        "saturationIndex": 85,
-        "status": "balanced"
+        "establishments": 0,
+        "per10kResidents": 0.0,
+        "usAvgPer10k": 4.8,
+        "saturationIndex": 0,
+        "status": "underserved",
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-18",
+          "granularity": "zip_aggregated",
+          "evidenceQuote": "0 establishments (NAICS 541110) across 1 ZIP codes whose USPS city is Hot Springs Village, AR; density uses ACS 2023 ZCTA population of those ZIPs (18,427). National benchmark = all US ZIP rows / US population."
+        }
       },
       {
         "naicsCode": "541211",
-        "label": "Offices of CPAs & Accountants",
-        "establishments": 4,
-        "per10kResidents": 2.45,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 108,
-        "status": "balanced"
+        "slug": "accounting-cpa",
+        "label": "Offices of Certified Public Accountants",
+        "establishments": 3,
+        "per10kResidents": 1.63,
+        "usAvgPer10k": 1.44,
+        "saturationIndex": 113,
+        "status": "balanced",
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-18",
+          "granularity": "zip_aggregated",
+          "evidenceQuote": "3 establishments (NAICS 541211) across 1 ZIP codes whose USPS city is Hot Springs Village, AR; density uses ACS 2023 ZCTA population of those ZIPs (18,427). National benchmark = all US ZIP rows / US population."
+        }
       },
       {
         "naicsCode": "531210",
-        "label": "Real Estate Agents & Brokers",
-        "establishments": 18,
-        "per10kResidents": 11.02,
-        "usAvgPer10k": 3.8,
-        "saturationIndex": 185,
-        "status": "saturated"
+        "slug": "real-estate-agencies",
+        "label": "Offices of Real Estate Agents & Brokers",
+        "establishments": 15,
+        "per10kResidents": 8.14,
+        "usAvgPer10k": 4.74,
+        "saturationIndex": 172,
+        "status": "saturated",
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-18",
+          "granularity": "zip_aggregated",
+          "evidenceQuote": "15 establishments (NAICS 531210) across 1 ZIP codes whose USPS city is Hot Springs Village, AR; density uses ACS 2023 ZCTA population of those ZIPs (18,427). National benchmark = all US ZIP rows / US population."
+        }
       }
+    ],
+    "primaryZips": [
+      "71909"
     ]
   }
 ]
