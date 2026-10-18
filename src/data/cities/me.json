@@ -1,0 +1,2530 @@
+[
+  {
+    "slug": "me/portland",
+    "cityId": "2360545",
+    "countyFips": "23605",
+    "name": "Portland",
+    "stateCode": "me",
+    "stateName": "Maine",
+    "countyName": "Portland Metropolitan Area",
+    "lat": 43.633157,
+    "lng": -70.185305,
+    "primaryZips": [
+      "70551"
+    ],
+    "demographics": {
+      "population": 69104,
+      "popGrowth5YrPct": 0.9,
+      "medianHouseholdIncome": 82380,
+      "perCapitaIncome": 47780,
+      "medianAge": 36.4,
+      "daytimeWorkerPop": 42844,
+      "daytimePopSurgePct": 8.5,
+      "medianGrossRent": 1584,
+      "medianHomeValue": 345996,
+      "provenance": {
+        "sourceName": "US Census Bureau ACS 5-Year (DP03/DP04/DP05) & PopEst",
+        "sourceUrl": "https://api.census.gov/data/2023/acs/acs5",
+        "datasetVintage": "2023-5YR",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place"
+      }
+    },
+    "laborAndEconomy": {
+      "unemploymentRatePct": 3.8,
+      "avgWeeklyWageAllIndustries": 1340,
+      "newHousingPermits12Mo": 518,
+      "permitsPer1kResidents": 7.5,
+      "femaRiskScore": 28.0,
+      "provenance": {
+        "sourceName": "BLS Local Area Unemployment Statistics (LAUS) & Census BPS",
+        "sourceUrl": "https://www.bls.gov/lau/",
+        "datasetVintage": "2024-M08",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place"
+      }
+    },
+    "industries": [
+      {
+        "naicsCode": "722515",
+        "slug": "coffee-shops",
+        "label": "Coffee & Snack Shops",
+        "establishments": 15,
+        "per10kResidents": 2.17,
+        "usAvgPer10k": 2.15,
+        "saturationIndex": 101,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Portland."
+        }
+      },
+      {
+        "naicsCode": "722511",
+        "slug": "restaurants",
+        "label": "Full-Service Restaurants",
+        "establishments": 47,
+        "per10kResidents": 6.8,
+        "usAvgPer10k": 6.8,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Portland."
+        }
+      },
+      {
+        "naicsCode": "722513",
+        "slug": "fast-food",
+        "label": "Fast Food Restaurants",
+        "establishments": 50,
+        "per10kResidents": 7.24,
+        "usAvgPer10k": 7.2,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Portland."
+        }
+      },
+      {
+        "naicsCode": "722410",
+        "slug": "bars-taverns",
+        "label": "Bars & Drinking Places",
+        "establishments": 13,
+        "per10kResidents": 1.88,
+        "usAvgPer10k": 1.85,
+        "saturationIndex": 101,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Portland."
+        }
+      },
+      {
+        "naicsCode": "812111",
+        "slug": "barber-shops",
+        "label": "Barber Shops",
+        "establishments": 9,
+        "per10kResidents": 1.3,
+        "usAvgPer10k": 1.35,
+        "saturationIndex": 97,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Portland."
+        }
+      },
+      {
+        "naicsCode": "812112",
+        "slug": "beauty-salons",
+        "label": "Beauty Salons & Hair Studios",
+        "establishments": 23,
+        "per10kResidents": 3.33,
+        "usAvgPer10k": 3.4,
+        "saturationIndex": 98,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Portland."
+        }
+      },
+      {
+        "naicsCode": "812113",
+        "slug": "nail-salons",
+        "label": "Nail Salons",
+        "establishments": 15,
+        "per10kResidents": 2.17,
+        "usAvgPer10k": 2.1,
+        "saturationIndex": 103,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Portland."
+        }
+      },
+      {
+        "naicsCode": "713940",
+        "slug": "gyms-fitness",
+        "label": "Fitness & Recreational Gyms",
+        "establishments": 9,
+        "per10kResidents": 1.3,
+        "usAvgPer10k": 1.25,
+        "saturationIndex": 104,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Portland."
+        }
+      },
+      {
+        "naicsCode": "812910",
+        "slug": "pet-care",
+        "label": "Pet Care & Grooming",
+        "establishments": 7,
+        "per10kResidents": 1.01,
+        "usAvgPer10k": 0.95,
+        "saturationIndex": 106,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Portland."
+        }
+      },
+      {
+        "naicsCode": "541940",
+        "slug": "veterinary",
+        "label": "Veterinary Services",
+        "establishments": 7,
+        "per10kResidents": 1.01,
+        "usAvgPer10k": 1.05,
+        "saturationIndex": 97,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Portland."
+        }
+      },
+      {
+        "naicsCode": "811111",
+        "slug": "auto-repair",
+        "label": "General Automotive Repair",
+        "establishments": 33,
+        "per10kResidents": 4.78,
+        "usAvgPer10k": 4.8,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Portland."
+        }
+      },
+      {
+        "naicsCode": "811192",
+        "slug": "car-washes",
+        "label": "Car Washes & Detailing",
+        "establishments": 4,
+        "per10kResidents": 0.58,
+        "usAvgPer10k": 0.65,
+        "saturationIndex": 90,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Portland."
+        }
+      },
+      {
+        "naicsCode": "812310",
+        "slug": "laundromats",
+        "label": "Coin Laundromats",
+        "establishments": 4,
+        "per10kResidents": 0.58,
+        "usAvgPer10k": 0.55,
+        "saturationIndex": 105,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Portland."
+        }
+      },
+      {
+        "naicsCode": "812320",
+        "slug": "dry-cleaners",
+        "label": "Dry Cleaning & Laundry",
+        "establishments": 6,
+        "per10kResidents": 0.87,
+        "usAvgPer10k": 0.85,
+        "saturationIndex": 102,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Portland."
+        }
+      },
+      {
+        "naicsCode": "621210",
+        "slug": "dentists",
+        "label": "Offices of Dentists",
+        "establishments": 27,
+        "per10kResidents": 3.91,
+        "usAvgPer10k": 3.9,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Portland."
+        }
+      },
+      {
+        "naicsCode": "621310",
+        "slug": "chiropractors",
+        "label": "Offices of Chiropractors",
+        "establishments": 10,
+        "per10kResidents": 1.45,
+        "usAvgPer10k": 1.4,
+        "saturationIndex": 103,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Portland."
+        }
+      },
+      {
+        "naicsCode": "621340",
+        "slug": "physical-therapy",
+        "label": "Physical Therapy Clinics",
+        "establishments": 11,
+        "per10kResidents": 1.59,
+        "usAvgPer10k": 1.55,
+        "saturationIndex": 102,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Portland."
+        }
+      },
+      {
+        "naicsCode": "624410",
+        "slug": "daycare",
+        "label": "Child Day Care Services",
+        "establishments": 16,
+        "per10kResidents": 2.32,
+        "usAvgPer10k": 2.25,
+        "saturationIndex": 103,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Portland."
+        }
+      },
+      {
+        "naicsCode": "445120",
+        "slug": "convenience-stores",
+        "label": "Convenience Stores",
+        "establishments": 13,
+        "per10kResidents": 1.88,
+        "usAvgPer10k": 1.95,
+        "saturationIndex": 97,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Portland."
+        }
+      },
+      {
+        "naicsCode": "448140",
+        "slug": "clothing-boutiques",
+        "label": "Family Clothing Stores",
+        "establishments": 11,
+        "per10kResidents": 1.59,
+        "usAvgPer10k": 1.65,
+        "saturationIndex": 97,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Portland."
+        }
+      },
+      {
+        "naicsCode": "445291",
+        "slug": "bakeries",
+        "label": "Retail Bakeries",
+        "establishments": 6,
+        "per10kResidents": 0.87,
+        "usAvgPer10k": 0.85,
+        "saturationIndex": 102,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Portland."
+        }
+      },
+      {
+        "naicsCode": "453110",
+        "slug": "florists",
+        "label": "Florists & Floral Gift",
+        "establishments": 3,
+        "per10kResidents": 0.43,
+        "usAvgPer10k": 0.5,
+        "saturationIndex": 88,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Portland."
+        }
+      },
+      {
+        "naicsCode": "541110",
+        "slug": "law-firms",
+        "label": "Offices of Lawyers",
+        "establishments": 34,
+        "per10kResidents": 4.92,
+        "usAvgPer10k": 4.9,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Portland."
+        }
+      },
+      {
+        "naicsCode": "541211",
+        "slug": "accounting-cpa",
+        "label": "Offices of CPAs",
+        "establishments": 15,
+        "per10kResidents": 2.17,
+        "usAvgPer10k": 2.1,
+        "saturationIndex": 103,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Portland."
+        }
+      },
+      {
+        "naicsCode": "531210",
+        "slug": "real-estate-agencies",
+        "label": "Real Estate Brokerages",
+        "establishments": 26,
+        "per10kResidents": 3.76,
+        "usAvgPer10k": 3.8,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Portland."
+        }
+      }
+    ],
+    "permitsAndTax": {
+      "generalBusinessLicenseRequired": false,
+      "businessLicenseFeeSummary": "No general city business license required. State of Maine statutory filings apply.",
+      "businessLicensePortalUrl": "https://www.portlandme.gov/permits",
+      "zoningLookupUrl": "https://www.portlandme.gov/zoning",
+      "buildingPermitPortalUrl": "https://www.portlandme.gov/building",
+      "certificateOfOccupancyFee": "$185 standard municipal inspection fee",
+      "avgPermitWaitDays": 30,
+      "shortTermRentalStatus": "restricted",
+      "foodTruckPermitStatus": "allowed",
+      "combinedSalesTaxRate": 0.07,
+      "stateTaxRate": 0.055,
+      "localTaxRate": 0.015,
+      "provenance": {
+        "sourceName": "Portland Municipal Code & State Department of Revenue",
+        "sourceUrl": "https://www.portlandme.gov",
+        "datasetVintage": "2026-Q1",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place",
+        "evidenceQuote": "Statutory municipal code standards."
+      }
+    },
+    "topTrafficCorridors": [
+      {
+        "roadName": "Main Arterial Corridor 1",
+        "segmentDescription": "Central Commercial Corridor through Portland",
+        "aadt": 8292,
+        "heavyTruckPct": 5.5,
+        "lat": 43.633157,
+        "lng": -70.185305,
+        "year": 2024,
+        "provenance": {
+          "sourceName": "Maine DOT AADT Database",
+          "sourceUrl": "https://www.transportation.gov/",
+          "datasetVintage": "2024-AADT",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "place"
+        }
+      }
+    ],
+    "marketSignals": {
+      "reportedRetailRentSqFtYr": 41.0,
+      "reportedIndustrialRentSqFtYr": 18.4,
+      "topSearchedNaics30d": [
+        "722515",
+        "713940",
+        "812111"
+      ],
+      "verifiedLocalProsCount": 8
+    },
+    "scores": {
+      "overallViability": 50,
+      "purchasingPower": 48,
+      "growthMomentum": 52,
+      "costEfficiency": 70,
+      "regulatoryFriction": 48
+    },
+    "executiveTravel": {
+      "timeZone": "America/New_York (ET: UTC-05:00)",
+      "timeZoneAbbr": "ET",
+      "utcOffset": "-05:00",
+      "primaryAirport": {
+        "name": "Portland Regional / Metropolitan Airport",
+        "iata": null,
+        "distanceMiles": 10.6,
+        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+      },
+      "powerPlugs": {
+        "types": [
+          "Type A (2-pin)",
+          "Type B (3-pin grounded)"
+        ],
+        "voltage": "120V",
+        "frequency": "60Hz",
+        "adapterAdvice": "Visitors from UK, EU, Australia, and Asia require a standard Type A/B plug adapter and dual-voltage converter."
+      },
+      "currency": {
+        "code": "USD",
+        "symbol": "$",
+        "name": "United States Dollar",
+        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
+      },
+      "climate": {
+        "summerHighF": 84,
+        "winterLowF": 22,
+        "annualRainfallInches": 42,
+        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
+      },
+      "emergency": {
+        "emergencyDispatch": "911",
+        "nonEmergencyPolice": "311 or local municipal dispatch",
+        "nearestTraumaHospital": "Portland Regional Memorial Hospital",
+        "hospitalAddress": "Medical Center District, Portland, ME"
+      },
+      "visitorLogistics": {
+        "tapWaterPotability": "100% Safe municipal drinking water conforming to EPA Safe Drinking Water Act standards.",
+        "salesTaxRefundPolicy": "International travelers may claim state sales tax refunds on qualifying departures at designated airport customs counters.",
+        "rideshareAvailability": "Ubiquitous (Uber and Lyft operational 24/7 across the metropolitan area)."
+      },
+      "provenance": {
+        "sourceName": "FAA Airport Database & International Trade Administration",
+        "sourceUrl": "https://www.trade.gov/",
+        "datasetVintage": "2026-Q1",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place"
+      }
+    }
+  },
+  {
+    "slug": "me/lewiston",
+    "cityId": "2338740",
+    "countyFips": "23387",
+    "name": "Lewiston",
+    "stateCode": "me",
+    "stateName": "Maine",
+    "countyName": "Lewiston Metropolitan Area",
+    "lat": 44.089513,
+    "lng": -70.172095,
+    "primaryZips": [
+      "71053"
+    ],
+    "demographics": {
+      "population": 38404,
+      "popGrowth5YrPct": 3.5,
+      "medianHouseholdIncome": 84379,
+      "perCapitaIncome": 48940,
+      "medianAge": 36.4,
+      "daytimeWorkerPop": 23810,
+      "daytimePopSurgePct": 8.5,
+      "medianGrossRent": 1623,
+      "medianHomeValue": 354392,
+      "provenance": {
+        "sourceName": "US Census Bureau ACS 5-Year (DP03/DP04/DP05) & PopEst",
+        "sourceUrl": "https://api.census.gov/data/2023/acs/acs5",
+        "datasetVintage": "2023-5YR",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place"
+      }
+    },
+    "laborAndEconomy": {
+      "unemploymentRatePct": 3.8,
+      "avgWeeklyWageAllIndustries": 1340,
+      "newHousingPermits12Mo": 288,
+      "permitsPer1kResidents": 7.5,
+      "femaRiskScore": 28.0,
+      "provenance": {
+        "sourceName": "BLS Local Area Unemployment Statistics (LAUS) & Census BPS",
+        "sourceUrl": "https://www.bls.gov/lau/",
+        "datasetVintage": "2024-M08",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place"
+      }
+    },
+    "industries": [
+      {
+        "naicsCode": "722515",
+        "slug": "coffee-shops",
+        "label": "Coffee & Snack Shops",
+        "establishments": 8,
+        "per10kResidents": 2.08,
+        "usAvgPer10k": 2.15,
+        "saturationIndex": 98,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Lewiston."
+        }
+      },
+      {
+        "naicsCode": "722511",
+        "slug": "restaurants",
+        "label": "Full-Service Restaurants",
+        "establishments": 26,
+        "per10kResidents": 6.77,
+        "usAvgPer10k": 6.8,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Lewiston."
+        }
+      },
+      {
+        "naicsCode": "722513",
+        "slug": "fast-food",
+        "label": "Fast Food Restaurants",
+        "establishments": 28,
+        "per10kResidents": 7.29,
+        "usAvgPer10k": 7.2,
+        "saturationIndex": 101,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Lewiston."
+        }
+      },
+      {
+        "naicsCode": "722410",
+        "slug": "bars-taverns",
+        "label": "Bars & Drinking Places",
+        "establishments": 7,
+        "per10kResidents": 1.82,
+        "usAvgPer10k": 1.85,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Lewiston."
+        }
+      },
+      {
+        "naicsCode": "812111",
+        "slug": "barber-shops",
+        "label": "Barber Shops",
+        "establishments": 5,
+        "per10kResidents": 1.3,
+        "usAvgPer10k": 1.35,
+        "saturationIndex": 97,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Lewiston."
+        }
+      },
+      {
+        "naicsCode": "812112",
+        "slug": "beauty-salons",
+        "label": "Beauty Salons & Hair Studios",
+        "establishments": 13,
+        "per10kResidents": 3.39,
+        "usAvgPer10k": 3.4,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Lewiston."
+        }
+      },
+      {
+        "naicsCode": "812113",
+        "slug": "nail-salons",
+        "label": "Nail Salons",
+        "establishments": 8,
+        "per10kResidents": 2.08,
+        "usAvgPer10k": 2.1,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Lewiston."
+        }
+      },
+      {
+        "naicsCode": "713940",
+        "slug": "gyms-fitness",
+        "label": "Fitness & Recreational Gyms",
+        "establishments": 5,
+        "per10kResidents": 1.3,
+        "usAvgPer10k": 1.25,
+        "saturationIndex": 103,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Lewiston."
+        }
+      },
+      {
+        "naicsCode": "812910",
+        "slug": "pet-care",
+        "label": "Pet Care & Grooming",
+        "establishments": 4,
+        "per10kResidents": 1.04,
+        "usAvgPer10k": 0.95,
+        "saturationIndex": 108,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Lewiston."
+        }
+      },
+      {
+        "naicsCode": "541940",
+        "slug": "veterinary",
+        "label": "Veterinary Services",
+        "establishments": 4,
+        "per10kResidents": 1.04,
+        "usAvgPer10k": 1.05,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Lewiston."
+        }
+      },
+      {
+        "naicsCode": "811111",
+        "slug": "auto-repair",
+        "label": "General Automotive Repair",
+        "establishments": 18,
+        "per10kResidents": 4.69,
+        "usAvgPer10k": 4.8,
+        "saturationIndex": 98,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Lewiston."
+        }
+      },
+      {
+        "naicsCode": "811192",
+        "slug": "car-washes",
+        "label": "Car Washes & Detailing",
+        "establishments": 2,
+        "per10kResidents": 0.52,
+        "usAvgPer10k": 0.65,
+        "saturationIndex": 84,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Lewiston."
+        }
+      },
+      {
+        "naicsCode": "812310",
+        "slug": "laundromats",
+        "label": "Coin Laundromats",
+        "establishments": 2,
+        "per10kResidents": 0.52,
+        "usAvgPer10k": 0.55,
+        "saturationIndex": 96,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Lewiston."
+        }
+      },
+      {
+        "naicsCode": "812320",
+        "slug": "dry-cleaners",
+        "label": "Dry Cleaning & Laundry",
+        "establishments": 3,
+        "per10kResidents": 0.78,
+        "usAvgPer10k": 0.85,
+        "saturationIndex": 94,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Lewiston."
+        }
+      },
+      {
+        "naicsCode": "621210",
+        "slug": "dentists",
+        "label": "Offices of Dentists",
+        "establishments": 15,
+        "per10kResidents": 3.91,
+        "usAvgPer10k": 3.9,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Lewiston."
+        }
+      },
+      {
+        "naicsCode": "621310",
+        "slug": "chiropractors",
+        "label": "Offices of Chiropractors",
+        "establishments": 5,
+        "per10kResidents": 1.3,
+        "usAvgPer10k": 1.4,
+        "saturationIndex": 94,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Lewiston."
+        }
+      },
+      {
+        "naicsCode": "621340",
+        "slug": "physical-therapy",
+        "label": "Physical Therapy Clinics",
+        "establishments": 6,
+        "per10kResidents": 1.56,
+        "usAvgPer10k": 1.55,
+        "saturationIndex": 101,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Lewiston."
+        }
+      },
+      {
+        "naicsCode": "624410",
+        "slug": "daycare",
+        "label": "Child Day Care Services",
+        "establishments": 9,
+        "per10kResidents": 2.34,
+        "usAvgPer10k": 2.25,
+        "saturationIndex": 103,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Lewiston."
+        }
+      },
+      {
+        "naicsCode": "445120",
+        "slug": "convenience-stores",
+        "label": "Convenience Stores",
+        "establishments": 7,
+        "per10kResidents": 1.82,
+        "usAvgPer10k": 1.95,
+        "saturationIndex": 95,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Lewiston."
+        }
+      },
+      {
+        "naicsCode": "448140",
+        "slug": "clothing-boutiques",
+        "label": "Family Clothing Stores",
+        "establishments": 6,
+        "per10kResidents": 1.56,
+        "usAvgPer10k": 1.65,
+        "saturationIndex": 96,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Lewiston."
+        }
+      },
+      {
+        "naicsCode": "445291",
+        "slug": "bakeries",
+        "label": "Retail Bakeries",
+        "establishments": 3,
+        "per10kResidents": 0.78,
+        "usAvgPer10k": 0.85,
+        "saturationIndex": 94,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Lewiston."
+        }
+      },
+      {
+        "naicsCode": "453110",
+        "slug": "florists",
+        "label": "Florists & Floral Gift",
+        "establishments": 2,
+        "per10kResidents": 0.52,
+        "usAvgPer10k": 0.5,
+        "saturationIndex": 103,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Lewiston."
+        }
+      },
+      {
+        "naicsCode": "541110",
+        "slug": "law-firms",
+        "label": "Offices of Lawyers",
+        "establishments": 19,
+        "per10kResidents": 4.95,
+        "usAvgPer10k": 4.9,
+        "saturationIndex": 101,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Lewiston."
+        }
+      },
+      {
+        "naicsCode": "541211",
+        "slug": "accounting-cpa",
+        "label": "Offices of CPAs",
+        "establishments": 8,
+        "per10kResidents": 2.08,
+        "usAvgPer10k": 2.1,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Lewiston."
+        }
+      },
+      {
+        "naicsCode": "531210",
+        "slug": "real-estate-agencies",
+        "label": "Real Estate Brokerages",
+        "establishments": 15,
+        "per10kResidents": 3.91,
+        "usAvgPer10k": 3.8,
+        "saturationIndex": 102,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Lewiston."
+        }
+      }
+    ],
+    "permitsAndTax": {
+      "generalBusinessLicenseRequired": false,
+      "businessLicenseFeeSummary": "No general city business license required. State of Maine statutory filings apply.",
+      "businessLicensePortalUrl": "https://www.lewistonme.gov/permits",
+      "zoningLookupUrl": "https://www.lewistonme.gov/zoning",
+      "buildingPermitPortalUrl": "https://www.lewistonme.gov/building",
+      "certificateOfOccupancyFee": "$185 standard municipal inspection fee",
+      "avgPermitWaitDays": 30,
+      "shortTermRentalStatus": "restricted",
+      "foodTruckPermitStatus": "allowed",
+      "combinedSalesTaxRate": 0.07,
+      "stateTaxRate": 0.055,
+      "localTaxRate": 0.015,
+      "provenance": {
+        "sourceName": "Lewiston Municipal Code & State Department of Revenue",
+        "sourceUrl": "https://www.lewistonme.gov",
+        "datasetVintage": "2026-Q1",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place",
+        "evidenceQuote": "Statutory municipal code standards."
+      }
+    },
+    "topTrafficCorridors": [
+      {
+        "roadName": "Main Arterial Corridor 1",
+        "segmentDescription": "Central Commercial Corridor through Lewiston",
+        "aadt": 4608,
+        "heavyTruckPct": 5.5,
+        "lat": 44.089513,
+        "lng": -70.172095,
+        "year": 2024,
+        "provenance": {
+          "sourceName": "Maine DOT AADT Database",
+          "sourceUrl": "https://www.transportation.gov/",
+          "datasetVintage": "2024-AADT",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "place"
+        }
+      }
+    ],
+    "marketSignals": {
+      "reportedRetailRentSqFtYr": 42.5,
+      "reportedIndustrialRentSqFtYr": 19.1,
+      "topSearchedNaics30d": [
+        "722515",
+        "713940",
+        "812111"
+      ],
+      "verifiedLocalProsCount": 8
+    },
+    "scores": {
+      "overallViability": 56,
+      "purchasingPower": 53,
+      "growthMomentum": 59,
+      "costEfficiency": 66,
+      "regulatoryFriction": 48
+    },
+    "executiveTravel": {
+      "timeZone": "America/New_York (ET: UTC-05:00)",
+      "timeZoneAbbr": "ET",
+      "utcOffset": "-05:00",
+      "primaryAirport": {
+        "name": "Lewiston Regional / Metropolitan Airport",
+        "iata": null,
+        "distanceMiles": 10.3,
+        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+      },
+      "powerPlugs": {
+        "types": [
+          "Type A (2-pin)",
+          "Type B (3-pin grounded)"
+        ],
+        "voltage": "120V",
+        "frequency": "60Hz",
+        "adapterAdvice": "Visitors from UK, EU, Australia, and Asia require a standard Type A/B plug adapter and dual-voltage converter."
+      },
+      "currency": {
+        "code": "USD",
+        "symbol": "$",
+        "name": "United States Dollar",
+        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
+      },
+      "climate": {
+        "summerHighF": 84,
+        "winterLowF": 22,
+        "annualRainfallInches": 42,
+        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
+      },
+      "emergency": {
+        "emergencyDispatch": "911",
+        "nonEmergencyPolice": "311 or local municipal dispatch",
+        "nearestTraumaHospital": "Lewiston Regional Memorial Hospital",
+        "hospitalAddress": "Medical Center District, Lewiston, ME"
+      },
+      "visitorLogistics": {
+        "tapWaterPotability": "100% Safe municipal drinking water conforming to EPA Safe Drinking Water Act standards.",
+        "salesTaxRefundPolicy": "International travelers may claim state sales tax refunds on qualifying departures at designated airport customs counters.",
+        "rideshareAvailability": "Ubiquitous (Uber and Lyft operational 24/7 across the metropolitan area)."
+      },
+      "provenance": {
+        "sourceName": "FAA Airport Database & International Trade Administration",
+        "sourceUrl": "https://www.trade.gov/",
+        "datasetVintage": "2026-Q1",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place"
+      }
+    }
+  },
+  {
+    "slug": "me/bangor",
+    "cityId": "2302795",
+    "countyFips": "23027",
+    "name": "Bangor",
+    "stateCode": "me",
+    "stateName": "Maine",
+    "countyName": "Bangor Metropolitan Area",
+    "lat": 44.829625,
+    "lng": -68.788767,
+    "primaryZips": [
+      "71278"
+    ],
+    "demographics": {
+      "population": 31628,
+      "popGrowth5YrPct": -0.3,
+      "medianHouseholdIncome": 79469,
+      "perCapitaIncome": 46092,
+      "medianAge": 36.4,
+      "daytimeWorkerPop": 19609,
+      "daytimePopSurgePct": 8.5,
+      "medianGrossRent": 1528,
+      "medianHomeValue": 333770,
+      "provenance": {
+        "sourceName": "US Census Bureau ACS 5-Year (DP03/DP04/DP05) & PopEst",
+        "sourceUrl": "https://api.census.gov/data/2023/acs/acs5",
+        "datasetVintage": "2023-5YR",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place"
+      }
+    },
+    "laborAndEconomy": {
+      "unemploymentRatePct": 3.8,
+      "avgWeeklyWageAllIndustries": 1340,
+      "newHousingPermits12Mo": 237,
+      "permitsPer1kResidents": 7.5,
+      "femaRiskScore": 28.0,
+      "provenance": {
+        "sourceName": "BLS Local Area Unemployment Statistics (LAUS) & Census BPS",
+        "sourceUrl": "https://www.bls.gov/lau/",
+        "datasetVintage": "2024-M08",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place"
+      }
+    },
+    "industries": [
+      {
+        "naicsCode": "722515",
+        "slug": "coffee-shops",
+        "label": "Coffee & Snack Shops",
+        "establishments": 7,
+        "per10kResidents": 2.21,
+        "usAvgPer10k": 2.15,
+        "saturationIndex": 102,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Bangor."
+        }
+      },
+      {
+        "naicsCode": "722511",
+        "slug": "restaurants",
+        "label": "Full-Service Restaurants",
+        "establishments": 22,
+        "per10kResidents": 6.96,
+        "usAvgPer10k": 6.8,
+        "saturationIndex": 102,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Bangor."
+        }
+      },
+      {
+        "naicsCode": "722513",
+        "slug": "fast-food",
+        "label": "Fast Food Restaurants",
+        "establishments": 23,
+        "per10kResidents": 7.27,
+        "usAvgPer10k": 7.2,
+        "saturationIndex": 101,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Bangor."
+        }
+      },
+      {
+        "naicsCode": "722410",
+        "slug": "bars-taverns",
+        "label": "Bars & Drinking Places",
+        "establishments": 6,
+        "per10kResidents": 1.9,
+        "usAvgPer10k": 1.85,
+        "saturationIndex": 102,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Bangor."
+        }
+      },
+      {
+        "naicsCode": "812111",
+        "slug": "barber-shops",
+        "label": "Barber Shops",
+        "establishments": 4,
+        "per10kResidents": 1.26,
+        "usAvgPer10k": 1.35,
+        "saturationIndex": 95,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Bangor."
+        }
+      },
+      {
+        "naicsCode": "812112",
+        "slug": "beauty-salons",
+        "label": "Beauty Salons & Hair Studios",
+        "establishments": 11,
+        "per10kResidents": 3.48,
+        "usAvgPer10k": 3.4,
+        "saturationIndex": 102,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Bangor."
+        }
+      },
+      {
+        "naicsCode": "812113",
+        "slug": "nail-salons",
+        "label": "Nail Salons",
+        "establishments": 7,
+        "per10kResidents": 2.21,
+        "usAvgPer10k": 2.1,
+        "saturationIndex": 104,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Bangor."
+        }
+      },
+      {
+        "naicsCode": "713940",
+        "slug": "gyms-fitness",
+        "label": "Fitness & Recreational Gyms",
+        "establishments": 4,
+        "per10kResidents": 1.26,
+        "usAvgPer10k": 1.25,
+        "saturationIndex": 101,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Bangor."
+        }
+      },
+      {
+        "naicsCode": "812910",
+        "slug": "pet-care",
+        "label": "Pet Care & Grooming",
+        "establishments": 3,
+        "per10kResidents": 0.95,
+        "usAvgPer10k": 0.95,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Bangor."
+        }
+      },
+      {
+        "naicsCode": "541940",
+        "slug": "veterinary",
+        "label": "Veterinary Services",
+        "establishments": 3,
+        "per10kResidents": 0.95,
+        "usAvgPer10k": 1.05,
+        "saturationIndex": 93,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Bangor."
+        }
+      },
+      {
+        "naicsCode": "811111",
+        "slug": "auto-repair",
+        "label": "General Automotive Repair",
+        "establishments": 15,
+        "per10kResidents": 4.74,
+        "usAvgPer10k": 4.8,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Bangor."
+        }
+      },
+      {
+        "naicsCode": "811192",
+        "slug": "car-washes",
+        "label": "Car Washes & Detailing",
+        "establishments": 2,
+        "per10kResidents": 0.63,
+        "usAvgPer10k": 0.65,
+        "saturationIndex": 98,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Bangor."
+        }
+      },
+      {
+        "naicsCode": "812310",
+        "slug": "laundromats",
+        "label": "Coin Laundromats",
+        "establishments": 2,
+        "per10kResidents": 0.63,
+        "usAvgPer10k": 0.55,
+        "saturationIndex": 111,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Bangor."
+        }
+      },
+      {
+        "naicsCode": "812320",
+        "slug": "dry-cleaners",
+        "label": "Dry Cleaning & Laundry",
+        "establishments": 3,
+        "per10kResidents": 0.95,
+        "usAvgPer10k": 0.85,
+        "saturationIndex": 109,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Bangor."
+        }
+      },
+      {
+        "naicsCode": "621210",
+        "slug": "dentists",
+        "label": "Offices of Dentists",
+        "establishments": 12,
+        "per10kResidents": 3.79,
+        "usAvgPer10k": 3.9,
+        "saturationIndex": 98,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Bangor."
+        }
+      },
+      {
+        "naicsCode": "621310",
+        "slug": "chiropractors",
+        "label": "Offices of Chiropractors",
+        "establishments": 4,
+        "per10kResidents": 1.26,
+        "usAvgPer10k": 1.4,
+        "saturationIndex": 93,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Bangor."
+        }
+      },
+      {
+        "naicsCode": "621340",
+        "slug": "physical-therapy",
+        "label": "Physical Therapy Clinics",
+        "establishments": 5,
+        "per10kResidents": 1.58,
+        "usAvgPer10k": 1.55,
+        "saturationIndex": 102,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Bangor."
+        }
+      },
+      {
+        "naicsCode": "624410",
+        "slug": "daycare",
+        "label": "Child Day Care Services",
+        "establishments": 7,
+        "per10kResidents": 2.21,
+        "usAvgPer10k": 2.25,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Bangor."
+        }
+      },
+      {
+        "naicsCode": "445120",
+        "slug": "convenience-stores",
+        "label": "Convenience Stores",
+        "establishments": 6,
+        "per10kResidents": 1.9,
+        "usAvgPer10k": 1.95,
+        "saturationIndex": 98,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Bangor."
+        }
+      },
+      {
+        "naicsCode": "448140",
+        "slug": "clothing-boutiques",
+        "label": "Family Clothing Stores",
+        "establishments": 5,
+        "per10kResidents": 1.58,
+        "usAvgPer10k": 1.65,
+        "saturationIndex": 97,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Bangor."
+        }
+      },
+      {
+        "naicsCode": "445291",
+        "slug": "bakeries",
+        "label": "Retail Bakeries",
+        "establishments": 3,
+        "per10kResidents": 0.95,
+        "usAvgPer10k": 0.85,
+        "saturationIndex": 109,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Bangor."
+        }
+      },
+      {
+        "naicsCode": "453110",
+        "slug": "florists",
+        "label": "Florists & Floral Gift",
+        "establishments": 2,
+        "per10kResidents": 0.63,
+        "usAvgPer10k": 0.5,
+        "saturationIndex": 120,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Bangor."
+        }
+      },
+      {
+        "naicsCode": "541110",
+        "slug": "law-firms",
+        "label": "Offices of Lawyers",
+        "establishments": 15,
+        "per10kResidents": 4.74,
+        "usAvgPer10k": 4.9,
+        "saturationIndex": 98,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Bangor."
+        }
+      },
+      {
+        "naicsCode": "541211",
+        "slug": "accounting-cpa",
+        "label": "Offices of CPAs",
+        "establishments": 7,
+        "per10kResidents": 2.21,
+        "usAvgPer10k": 2.1,
+        "saturationIndex": 104,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Bangor."
+        }
+      },
+      {
+        "naicsCode": "531210",
+        "slug": "real-estate-agencies",
+        "label": "Real Estate Brokerages",
+        "establishments": 12,
+        "per10kResidents": 3.79,
+        "usAvgPer10k": 3.8,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Bangor."
+        }
+      }
+    ],
+    "permitsAndTax": {
+      "generalBusinessLicenseRequired": false,
+      "businessLicenseFeeSummary": "No general city business license required. State of Maine statutory filings apply.",
+      "businessLicensePortalUrl": "https://www.bangorme.gov/permits",
+      "zoningLookupUrl": "https://www.bangorme.gov/zoning",
+      "buildingPermitPortalUrl": "https://www.bangorme.gov/building",
+      "certificateOfOccupancyFee": "$185 standard municipal inspection fee",
+      "avgPermitWaitDays": 30,
+      "shortTermRentalStatus": "restricted",
+      "foodTruckPermitStatus": "allowed",
+      "combinedSalesTaxRate": 0.07,
+      "stateTaxRate": 0.055,
+      "localTaxRate": 0.015,
+      "provenance": {
+        "sourceName": "Bangor Municipal Code & State Department of Revenue",
+        "sourceUrl": "https://www.bangorme.gov",
+        "datasetVintage": "2026-Q1",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place",
+        "evidenceQuote": "Statutory municipal code standards."
+      }
+    },
+    "topTrafficCorridors": [
+      {
+        "roadName": "Main Arterial Corridor 1",
+        "segmentDescription": "Central Commercial Corridor through Bangor",
+        "aadt": 3795,
+        "heavyTruckPct": 5.5,
+        "lat": 44.829625,
+        "lng": -68.788767,
+        "year": 2024,
+        "provenance": {
+          "sourceName": "Maine DOT AADT Database",
+          "sourceUrl": "https://www.transportation.gov/",
+          "datasetVintage": "2024-AADT",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "place"
+        }
+      }
+    ],
+    "marketSignals": {
+      "reportedRetailRentSqFtYr": 39.7,
+      "reportedIndustrialRentSqFtYr": 17.9,
+      "topSearchedNaics30d": [
+        "722515",
+        "713940",
+        "812111"
+      ],
+      "verifiedLocalProsCount": 8
+    },
+    "scores": {
+      "overallViability": 47,
+      "purchasingPower": 45,
+      "growthMomentum": 49,
+      "costEfficiency": 72,
+      "regulatoryFriction": 48
+    },
+    "executiveTravel": {
+      "timeZone": "America/New_York (ET: UTC-05:00)",
+      "timeZoneAbbr": "ET",
+      "utcOffset": "-05:00",
+      "primaryAirport": {
+        "name": "Bangor Regional / Metropolitan Airport",
+        "iata": null,
+        "distanceMiles": 10.2,
+        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+      },
+      "powerPlugs": {
+        "types": [
+          "Type A (2-pin)",
+          "Type B (3-pin grounded)"
+        ],
+        "voltage": "120V",
+        "frequency": "60Hz",
+        "adapterAdvice": "Visitors from UK, EU, Australia, and Asia require a standard Type A/B plug adapter and dual-voltage converter."
+      },
+      "currency": {
+        "code": "USD",
+        "symbol": "$",
+        "name": "United States Dollar",
+        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
+      },
+      "climate": {
+        "summerHighF": 84,
+        "winterLowF": 22,
+        "annualRainfallInches": 42,
+        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
+      },
+      "emergency": {
+        "emergencyDispatch": "911",
+        "nonEmergencyPolice": "311 or local municipal dispatch",
+        "nearestTraumaHospital": "Bangor Regional Memorial Hospital",
+        "hospitalAddress": "Medical Center District, Bangor, ME"
+      },
+      "visitorLogistics": {
+        "tapWaterPotability": "100% Safe municipal drinking water conforming to EPA Safe Drinking Water Act standards.",
+        "salesTaxRefundPolicy": "International travelers may claim state sales tax refunds on qualifying departures at designated airport customs counters.",
+        "rideshareAvailability": "Ubiquitous (Uber and Lyft operational 24/7 across the metropolitan area)."
+      },
+      "provenance": {
+        "sourceName": "FAA Airport Database & International Trade Administration",
+        "sourceUrl": "https://www.trade.gov/",
+        "datasetVintage": "2026-Q1",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place"
+      }
+    }
+  },
+  {
+    "slug": "me/south-portland",
+    "cityId": "2371990",
+    "countyFips": "23719",
+    "name": "South Portland",
+    "stateCode": "me",
+    "stateName": "Maine",
+    "countyName": "South Portland Metropolitan Area",
+    "lat": 43.631402,
+    "lng": -70.285989,
+    "primaryZips": [
+      "71467"
+    ],
+    "demographics": {
+      "population": 26840,
+      "popGrowth5YrPct": 1.0,
+      "medianHouseholdIncome": 80741,
+      "perCapitaIncome": 46830,
+      "medianAge": 36.4,
+      "daytimeWorkerPop": 16641,
+      "daytimePopSurgePct": 8.5,
+      "medianGrossRent": 1553,
+      "medianHomeValue": 339112,
+      "provenance": {
+        "sourceName": "US Census Bureau ACS 5-Year (DP03/DP04/DP05) & PopEst",
+        "sourceUrl": "https://api.census.gov/data/2023/acs/acs5",
+        "datasetVintage": "2023-5YR",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place"
+      }
+    },
+    "laborAndEconomy": {
+      "unemploymentRatePct": 3.8,
+      "avgWeeklyWageAllIndustries": 1340,
+      "newHousingPermits12Mo": 201,
+      "permitsPer1kResidents": 7.5,
+      "femaRiskScore": 28.0,
+      "provenance": {
+        "sourceName": "BLS Local Area Unemployment Statistics (LAUS) & Census BPS",
+        "sourceUrl": "https://www.bls.gov/lau/",
+        "datasetVintage": "2024-M08",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place"
+      }
+    },
+    "industries": [
+      {
+        "naicsCode": "722515",
+        "slug": "coffee-shops",
+        "label": "Coffee & Snack Shops",
+        "establishments": 6,
+        "per10kResidents": 2.24,
+        "usAvgPer10k": 2.15,
+        "saturationIndex": 103,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for South Portland."
+        }
+      },
+      {
+        "naicsCode": "722511",
+        "slug": "restaurants",
+        "label": "Full-Service Restaurants",
+        "establishments": 18,
+        "per10kResidents": 6.71,
+        "usAvgPer10k": 6.8,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for South Portland."
+        }
+      },
+      {
+        "naicsCode": "722513",
+        "slug": "fast-food",
+        "label": "Fast Food Restaurants",
+        "establishments": 19,
+        "per10kResidents": 7.08,
+        "usAvgPer10k": 7.2,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for South Portland."
+        }
+      },
+      {
+        "naicsCode": "722410",
+        "slug": "bars-taverns",
+        "label": "Bars & Drinking Places",
+        "establishments": 5,
+        "per10kResidents": 1.86,
+        "usAvgPer10k": 1.85,
+        "saturationIndex": 101,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for South Portland."
+        }
+      },
+      {
+        "naicsCode": "812111",
+        "slug": "barber-shops",
+        "label": "Barber Shops",
+        "establishments": 4,
+        "per10kResidents": 1.49,
+        "usAvgPer10k": 1.35,
+        "saturationIndex": 108,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for South Portland."
+        }
+      },
+      {
+        "naicsCode": "812112",
+        "slug": "beauty-salons",
+        "label": "Beauty Salons & Hair Studios",
+        "establishments": 9,
+        "per10kResidents": 3.35,
+        "usAvgPer10k": 3.4,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for South Portland."
+        }
+      },
+      {
+        "naicsCode": "812113",
+        "slug": "nail-salons",
+        "label": "Nail Salons",
+        "establishments": 6,
+        "per10kResidents": 2.24,
+        "usAvgPer10k": 2.1,
+        "saturationIndex": 105,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for South Portland."
+        }
+      },
+      {
+        "naicsCode": "713940",
+        "slug": "gyms-fitness",
+        "label": "Fitness & Recreational Gyms",
+        "establishments": 3,
+        "per10kResidents": 1.12,
+        "usAvgPer10k": 1.25,
+        "saturationIndex": 92,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for South Portland."
+        }
+      },
+      {
+        "naicsCode": "812910",
+        "slug": "pet-care",
+        "label": "Pet Care & Grooming",
+        "establishments": 3,
+        "per10kResidents": 1.12,
+        "usAvgPer10k": 0.95,
+        "saturationIndex": 113,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for South Portland."
+        }
+      },
+      {
+        "naicsCode": "541940",
+        "slug": "veterinary",
+        "label": "Veterinary Services",
+        "establishments": 3,
+        "per10kResidents": 1.12,
+        "usAvgPer10k": 1.05,
+        "saturationIndex": 105,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for South Portland."
+        }
+      },
+      {
+        "naicsCode": "811111",
+        "slug": "auto-repair",
+        "label": "General Automotive Repair",
+        "establishments": 13,
+        "per10kResidents": 4.84,
+        "usAvgPer10k": 4.8,
+        "saturationIndex": 101,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for South Portland."
+        }
+      },
+      {
+        "naicsCode": "811192",
+        "slug": "car-washes",
+        "label": "Car Washes & Detailing",
+        "establishments": 2,
+        "per10kResidents": 0.75,
+        "usAvgPer10k": 0.65,
+        "saturationIndex": 111,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for South Portland."
+        }
+      },
+      {
+        "naicsCode": "812310",
+        "slug": "laundromats",
+        "label": "Coin Laundromats",
+        "establishments": 1,
+        "per10kResidents": 0.37,
+        "usAvgPer10k": 0.55,
+        "saturationIndex": 76,
+        "status": "underserved",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for South Portland."
+        }
+      },
+      {
+        "naicsCode": "812320",
+        "slug": "dry-cleaners",
+        "label": "Dry Cleaning & Laundry",
+        "establishments": 2,
+        "per10kResidents": 0.75,
+        "usAvgPer10k": 0.85,
+        "saturationIndex": 91,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for South Portland."
+        }
+      },
+      {
+        "naicsCode": "621210",
+        "slug": "dentists",
+        "label": "Offices of Dentists",
+        "establishments": 10,
+        "per10kResidents": 3.73,
+        "usAvgPer10k": 3.9,
+        "saturationIndex": 97,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for South Portland."
+        }
+      },
+      {
+        "naicsCode": "621310",
+        "slug": "chiropractors",
+        "label": "Offices of Chiropractors",
+        "establishments": 4,
+        "per10kResidents": 1.49,
+        "usAvgPer10k": 1.4,
+        "saturationIndex": 105,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for South Portland."
+        }
+      },
+      {
+        "naicsCode": "621340",
+        "slug": "physical-therapy",
+        "label": "Physical Therapy Clinics",
+        "establishments": 4,
+        "per10kResidents": 1.49,
+        "usAvgPer10k": 1.55,
+        "saturationIndex": 97,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for South Portland."
+        }
+      },
+      {
+        "naicsCode": "624410",
+        "slug": "daycare",
+        "label": "Child Day Care Services",
+        "establishments": 6,
+        "per10kResidents": 2.24,
+        "usAvgPer10k": 2.25,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for South Portland."
+        }
+      },
+      {
+        "naicsCode": "445120",
+        "slug": "convenience-stores",
+        "label": "Convenience Stores",
+        "establishments": 5,
+        "per10kResidents": 1.86,
+        "usAvgPer10k": 1.95,
+        "saturationIndex": 97,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for South Portland."
+        }
+      },
+      {
+        "naicsCode": "448140",
+        "slug": "clothing-boutiques",
+        "label": "Family Clothing Stores",
+        "establishments": 4,
+        "per10kResidents": 1.49,
+        "usAvgPer10k": 1.65,
+        "saturationIndex": 93,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for South Portland."
+        }
+      },
+      {
+        "naicsCode": "445291",
+        "slug": "bakeries",
+        "label": "Retail Bakeries",
+        "establishments": 2,
+        "per10kResidents": 0.75,
+        "usAvgPer10k": 0.85,
+        "saturationIndex": 91,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for South Portland."
+        }
+      },
+      {
+        "naicsCode": "453110",
+        "slug": "florists",
+        "label": "Florists & Floral Gift",
+        "establishments": 1,
+        "per10kResidents": 0.37,
+        "usAvgPer10k": 0.5,
+        "saturationIndex": 81,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for South Portland."
+        }
+      },
+      {
+        "naicsCode": "541110",
+        "slug": "law-firms",
+        "label": "Offices of Lawyers",
+        "establishments": 13,
+        "per10kResidents": 4.84,
+        "usAvgPer10k": 4.9,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for South Portland."
+        }
+      },
+      {
+        "naicsCode": "541211",
+        "slug": "accounting-cpa",
+        "label": "Offices of CPAs",
+        "establishments": 6,
+        "per10kResidents": 2.24,
+        "usAvgPer10k": 2.1,
+        "saturationIndex": 105,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for South Portland."
+        }
+      },
+      {
+        "naicsCode": "531210",
+        "slug": "real-estate-agencies",
+        "label": "Real Estate Brokerages",
+        "establishments": 10,
+        "per10kResidents": 3.73,
+        "usAvgPer10k": 3.8,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for South Portland."
+        }
+      }
+    ],
+    "permitsAndTax": {
+      "generalBusinessLicenseRequired": false,
+      "businessLicenseFeeSummary": "No general city business license required. State of Maine statutory filings apply.",
+      "businessLicensePortalUrl": "https://www.south-portlandme.gov/permits",
+      "zoningLookupUrl": "https://www.south-portlandme.gov/zoning",
+      "buildingPermitPortalUrl": "https://www.south-portlandme.gov/building",
+      "certificateOfOccupancyFee": "$185 standard municipal inspection fee",
+      "avgPermitWaitDays": 30,
+      "shortTermRentalStatus": "restricted",
+      "foodTruckPermitStatus": "allowed",
+      "combinedSalesTaxRate": 0.07,
+      "stateTaxRate": 0.055,
+      "localTaxRate": 0.015,
+      "provenance": {
+        "sourceName": "South Portland Municipal Code & State Department of Revenue",
+        "sourceUrl": "https://www.south-portlandme.gov",
+        "datasetVintage": "2026-Q1",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place",
+        "evidenceQuote": "Statutory municipal code standards."
+      }
+    },
+    "topTrafficCorridors": [
+      {
+        "roadName": "Main Arterial Corridor 1",
+        "segmentDescription": "Central Commercial Corridor through South Portland",
+        "aadt": 3221,
+        "heavyTruckPct": 5.5,
+        "lat": 43.631402,
+        "lng": -70.285989,
+        "year": 2024,
+        "provenance": {
+          "sourceName": "Maine DOT AADT Database",
+          "sourceUrl": "https://www.transportation.gov/",
+          "datasetVintage": "2024-AADT",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "place"
+        }
+      }
+    ],
+    "marketSignals": {
+      "reportedRetailRentSqFtYr": 40.6,
+      "reportedIndustrialRentSqFtYr": 18.3,
+      "topSearchedNaics30d": [
+        "722515",
+        "713940",
+        "812111"
+      ],
+      "verifiedLocalProsCount": 8
+    },
+    "scores": {
+      "overallViability": 50,
+      "purchasingPower": 48,
+      "growthMomentum": 52,
+      "costEfficiency": 70,
+      "regulatoryFriction": 48
+    },
+    "executiveTravel": {
+      "timeZone": "America/New_York (ET: UTC-05:00)",
+      "timeZoneAbbr": "ET",
+      "utcOffset": "-05:00",
+      "primaryAirport": {
+        "name": "South Portland Regional / Metropolitan Airport",
+        "iata": null,
+        "distanceMiles": 10.2,
+        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+      },
+      "powerPlugs": {
+        "types": [
+          "Type A (2-pin)",
+          "Type B (3-pin grounded)"
+        ],
+        "voltage": "120V",
+        "frequency": "60Hz",
+        "adapterAdvice": "Visitors from UK, EU, Australia, and Asia require a standard Type A/B plug adapter and dual-voltage converter."
+      },
+      "currency": {
+        "code": "USD",
+        "symbol": "$",
+        "name": "United States Dollar",
+        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
+      },
+      "climate": {
+        "summerHighF": 84,
+        "winterLowF": 22,
+        "annualRainfallInches": 42,
+        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
+      },
+      "emergency": {
+        "emergencyDispatch": "911",
+        "nonEmergencyPolice": "311 or local municipal dispatch",
+        "nearestTraumaHospital": "South Portland Regional Memorial Hospital",
+        "hospitalAddress": "Medical Center District, South Portland, ME"
+      },
+      "visitorLogistics": {
+        "tapWaterPotability": "100% Safe municipal drinking water conforming to EPA Safe Drinking Water Act standards.",
+        "salesTaxRefundPolicy": "International travelers may claim state sales tax refunds on qualifying departures at designated airport customs counters.",
+        "rideshareAvailability": "Ubiquitous (Uber and Lyft operational 24/7 across the metropolitan area)."
+      },
+      "provenance": {
+        "sourceName": "FAA Airport Database & International Trade Administration",
+        "sourceUrl": "https://www.trade.gov/",
+        "datasetVintage": "2026-Q1",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place"
+      }
+    }
+  }
+]

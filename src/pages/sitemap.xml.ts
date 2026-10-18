@@ -1,28 +1,46 @@
 export const prerender = true;
 
 import type { APIRoute } from 'astro';
-import { ALL_CITIES } from '../data/catalog';
 
 export const GET: APIRoute = async () => {
-  const staticUrls = [
-    'https://cityclick.com/',
-    'https://cityclick.com/tools/lease-calculator',
-    'https://cityclick.com/developers',
+  // Certified indexable routes (Crawl Shield excludes all unverified cities)
+  const certifiedRoutes = [
+    { loc: 'https://cityclick.com/', priority: '1.0', changefreq: 'daily', lastmod: '2026-10-18' },
+    
+    // Top 6 Verified Benchmark City Guides
+    { loc: 'https://cityclick.com/tx/austin/', priority: '0.9', changefreq: 'weekly', lastmod: '2026-10-18' },
+    { loc: 'https://cityclick.com/ar/hot-springs-village/', priority: '0.9', changefreq: 'weekly', lastmod: '2026-10-18' },
+    { loc: 'https://cityclick.com/id/boise/', priority: '0.9', changefreq: 'weekly', lastmod: '2026-10-18' },
+    { loc: 'https://cityclick.com/fl/tampa/', priority: '0.9', changefreq: 'weekly', lastmod: '2026-10-18' },
+    { loc: 'https://cityclick.com/az/scottsdale/', priority: '0.9', changefreq: 'weekly', lastmod: '2026-10-18' },
+    { loc: 'https://cityclick.com/tn/nashville/', priority: '0.9', changefreq: 'weekly', lastmod: '2026-10-18' },
+
+    // Verified Compare Showdowns
+    { loc: 'https://cityclick.com/compare/tx-austin-vs-fl-tampa/', priority: '0.8', changefreq: 'monthly', lastmod: '2026-10-18' },
+    { loc: 'https://cityclick.com/compare/id-boise-vs-az-scottsdale/', priority: '0.8', changefreq: 'monthly', lastmod: '2026-10-18' },
+    { loc: 'https://cityclick.com/compare/tx-austin-vs-ar-hot-springs-village/', priority: '0.8', changefreq: 'monthly', lastmod: '2026-10-18' },
+
+    // Tools & Developer Platforms
+    { loc: 'https://cityclick.com/tools/lease-calculator/', priority: '0.8', changefreq: 'monthly', lastmod: '2026-10-18' },
+    { loc: 'https://cityclick.com/developers/', priority: '0.7', changefreq: 'monthly', lastmod: '2026-10-18' },
+    { loc: 'https://cityclick.com/partners/join/', priority: '0.6', changefreq: 'monthly', lastmod: '2026-10-18' },
+
+    // Institutional Standards
+    { loc: 'https://cityclick.com/about/', priority: '0.5', changefreq: 'monthly', lastmod: '2026-10-18' },
+    { loc: 'https://cityclick.com/methodology/', priority: '0.5', changefreq: 'monthly', lastmod: '2026-10-18' },
+    { loc: 'https://cityclick.com/privacy/', priority: '0.3', changefreq: 'yearly', lastmod: '2026-10-18' },
+    { loc: 'https://cityclick.com/terms/', priority: '0.3', changefreq: 'yearly', lastmod: '2026-10-18' }
   ];
-
-  const cityUrls = ALL_CITIES.map((c) => `https://cityclick.com/${c.slug}`);
-
-  const allUrls = [...staticUrls, ...cityUrls];
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${allUrls
+${certifiedRoutes
   .map(
-    (url) => `  <url>
-    <loc>${url}</loc>
-    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>${url === 'https://cityclick.com/' ? '1.0' : '0.8'}</priority>
+    (r) => `  <url>
+    <loc>${r.loc}</loc>
+    <lastmod>${r.lastmod}</lastmod>
+    <changefreq>${r.changefreq}</changefreq>
+    <priority>${r.priority}</priority>
   </url>`
   )
   .join('\n')}

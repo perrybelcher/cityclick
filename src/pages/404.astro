@@ -1,0 +1,48 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Page Not Found (404) — CityClick"
+  description="The city guide or page you requested could not be found. Search across 1,501 published US municipal guides on CityClick."
+>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center space-y-6">
+    <div class="inline-flex items-center justify-center w-16 h-16 rounded-3xl bg-blue-50 text-[#1D68F2] font-black text-2xl border border-blue-200">
+      404
+    </div>
+
+    <h1 class="text-3xl sm:text-4xl font-black text-[#152438] tracking-tight">
+      City or Page Not Found
+    </h1>
+
+    <p class="text-sm text-slate-600 max-w-md mx-auto leading-relaxed">
+      The municipal guide or page you requested does not exist or may have moved. Use our search below to explore 1,501 published US cities.
+    </p>
+
+    <!-- Quick Search Box -->
+    <div class="max-w-md mx-auto pt-2">
+      <form action="/" method="GET" class="flex gap-2 p-1.5 bg-white rounded-2xl border border-slate-200 shadow-md">
+        <input
+          type="text"
+          name="search"
+          placeholder="Search any city (e.g. Austin, Tampa, Boise)..."
+          class="flex-1 px-4 py-2.5 text-xs outline-none bg-transparent"
+        />
+        <button
+          type="submit"
+          class="px-4 py-2.5 rounded-xl bg-[#1D68F2] hover:bg-blue-600 text-white font-bold text-xs transition"
+        >
+          Search
+        </button>
+      </form>
+    </div>
+
+    <div class="pt-8 flex items-center justify-center gap-4 text-xs font-bold text-slate-500">
+      <a href="/" class="hover:text-[#1D68F2] transition">← Back to Homepage</a>
+      <span>·</span>
+      <a href="/#featured" class="hover:text-[#1D68F2] transition">Featured Cities</a>
+      <span>·</span>
+      <a href="/#states" class="hover:text-[#1D68F2] transition">Browse by State</a>
+    </div>
+  </div>
+</Layout>

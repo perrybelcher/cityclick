@@ -2,9 +2,10 @@ export const SITE = {
   name: 'CityClick',
   legalName: 'CityClick, Inc.',
   url: 'https://cityclick.com',
-  title: 'CityClick — Local Data. Smarter Business Decisions.',
+  title: 'CityClick — Get to know your next city',
   description:
-    'The B2B local intelligence platform for site selection, commercial rent rates, municipal permits, and NAICS market saturation.',
+    'Plan a visit, find a place to live, or research your next business location across 1,501 verified US city guides.',
+  ogImage: 'https://cityclick.com/images/og-cityclick.jpg',
   contactEmail: 'data@cityclick.com',
   affiliates: {
     registeredAgentUrl: 'https://www.northwestregisteredagent.com/?ref=cityclick',

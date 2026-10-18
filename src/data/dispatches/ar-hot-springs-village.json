@@ -1,0 +1,73 @@
+{
+  "updatedAt": "2026-10-18T16:00:00Z",
+  "city": "Hot Springs Village",
+  "state": "Arkansas",
+  "chronicleEvents": [
+    {
+      "title": "Fall Invitational at Diamante Championship Course: 36-Hole Regional Tournament",
+      "source": "The Village Voice",
+      "category": "Championship Golf",
+      "date": "Oct 17, 2026",
+      "url": "https://www.explorethevillage.com/events/",
+      "summary": "Premier 36-hole stroke play tournament drawing top amateur players from Arkansas, Texas, and Tennessee to Diamante's top-rated private course."
+    },
+    {
+      "title": "Lake Balboa Marina Sunset Flotilla & Community Pavilion Fish Fry",
+      "source": "HSV Recreation",
+      "category": "Lakes & Boating",
+      "date": "Oct 16, 2026",
+      "url": "https://www.explorethevillage.com/events/",
+      "summary": "Annual community lake gathering at Balboa Beach featuring boat parades, live bluegrass, and local culinary food vendors."
+    },
+    {
+      "title": "Woodlands Auditorium Fall Season: Arkansas Symphony Brass Quintet in Concert",
+      "source": "Ouachita Arts Council",
+      "category": "Performing Arts",
+      "date": "Oct 15, 2026",
+      "url": "https://www.explorethevillage.com/events/",
+      "summary": "650-seat cultural center hosts evening performance of classical and contemporary orchestral arrangements."
+    },
+    {
+      "title": "DeSoto Complex Pickleball Regional Open: 140 Competitors on 14 Lighted Courts",
+      "source": "The Village Voice",
+      "category": "Recreational Sports",
+      "date": "Oct 14, 2026",
+      "url": "https://www.explorethevillage.com/events/",
+      "summary": "Three-day multi-age pickleball championship at the recently expanded DeSoto recreation facility near the West Gate."
+    }
+  ],
+  "commercialWire": [
+    {
+      "title": "Hot Springs Village POA Approves 2027 Capital Infrastructure & Lake Dam Maintenance Plan",
+      "source": "HSV POA Official Dispatch",
+      "category": "Municipal & Infrastructure",
+      "date": "Oct 18, 2026",
+      "url": "https://www.explorethevillage.com/governance/",
+      "summary": "Board of Directors approves multi-million dollar capital maintenance program for village road resurfacing, gate access tech, and lake hydrology."
+    },
+    {
+      "title": "New Specialized Outpatient Physical Therapy Facility Opens Near West Gate Highway 7",
+      "source": "Arkansas Business",
+      "category": "Healthcare Commercial",
+      "date": "Oct 15, 2026",
+      "url": "https://www.arkansasbusiness.com/",
+      "summary": "Regional orthopedic healthcare provider secures 3,400 sqft facility to serve the village's active retiree population."
+    },
+    {
+      "title": "Garland County Small Business Lending Activity Surges 12% in Commercial Trade Services",
+      "source": "Arkansas Economic Council",
+      "category": "Capital & SBA Lending",
+      "date": "Oct 13, 2026",
+      "url": "https://www.arkansasbusiness.com/",
+      "summary": "First Security Bank and Simmons Bank expand credit lines for specialty contractors, boat mechanics, and home maintenance operators."
+    },
+    {
+      "title": "Entergy Arkansas Completes High-Voltage Distribution Reliability Upgrades Across Village",
+      "source": "Entergy News Wire",
+      "category": "Utilities & Power",
+      "date": "Oct 11, 2026",
+      "url": "https://www.entergy-arkansas.com/",
+      "summary": "Substation modernization strengthens power delivery and commercial bandwidth across Garland and Saline county sectors."
+    }
+  ]
+}

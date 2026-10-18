@@ -1,0 +1,81 @@
+{
+  "updatedAt": "2026-10-18T12:00:00Z",
+  "city": "Austin",
+  "state": "Texas",
+  "chronicleEvents": [
+    {
+      "title": "Rolling Into Fall at the VW Harvest: Hill Country Gathering of Vintage Volkswagens & Craft Vendors",
+      "source": "The Austin Chronicle",
+      "category": "Culture & Festivals",
+      "date": "Oct 17, 2026",
+      "url": "https://www.austinchronicle.com/events/",
+      "summary": "Annual Central Texas festival bringing over 200 classic air-cooled VWs, Hill Country food trucks, and live roots music to Dripping Springs."
+    },
+    {
+      "title": "Jason Takes the House of Torment: Flagship Halloween Production Opens in North Austin",
+      "source": "The Austin Chronicle",
+      "category": "Entertainment & Nightlife",
+      "date": "Oct 16, 2026",
+      "url": "https://www.austinchronicle.com/events/",
+      "summary": "Nationally recognized multi-attraction horror installation launches full October run featuring 40,000 sqft of interactive theatrical sets."
+    },
+    {
+      "title": "Gorillaz Electrify Moody Center: Multi-Artist Collaboration at UT Austin Premier Arena",
+      "source": "The Austin Chronicle",
+      "category": "Live Music & Concerts",
+      "date": "Oct 16, 2026",
+      "url": "https://www.austinchronicle.com/music/",
+      "summary": "Damon Albarn and full backing orchestra bring arena-scale visuals and special guests to downtown Austin's top concert venue."
+    },
+    {
+      "title": "HotLuck Live Food and Music Festival: Franklin BBQ & Top Chefs Announce Downtown Venues",
+      "source": "The Austin Chronicle",
+      "category": "Culinary & Dining",
+      "date": "Oct 15, 2026",
+      "url": "https://www.austinchronicle.com/food/",
+      "summary": "Aaron Franklin's multi-day culinary celebration brings national pitmasters and live indie rock across East Austin and Mohawk."
+    },
+    {
+      "title": "Austin Film Festival 2026: Writers Conference Sets The Driskill and Paramount Theatre Venues",
+      "source": "The Austin Chronicle",
+      "category": "Film & Industry",
+      "date": "Oct 14, 2026",
+      "url": "https://www.austinchronicle.com/screens/",
+      "summary": "33rd annual conference bringing 1,500+ film executives, screenwriters, and independent filmmakers to downtown historic venues."
+    }
+  ],
+  "commercialWire": [
+    {
+      "title": "Behind the Deal: How Hutto Landed Blue Origin Near Austin's High-Tech Corridor",
+      "source": "Austin Business Journal",
+      "category": "Industrial & Aerospace",
+      "date": "Oct 18, 2026",
+      "url": "https://www.bizjournals.com/austin/",
+      "summary": "Aerospace giant finalizes major manufacturing facility footprint in the booming Williamson County metro cluster northeast of Austin."
+    },
+    {
+      "title": "City of Austin and University of Texas Near Historic Agreement to Preserve Lions Muny",
+      "source": "City of Austin (.gov)",
+      "category": "Municipal & Land Use",
+      "date": "Oct 14, 2026",
+      "url": "https://www.austintexas.gov/news/",
+      "summary": "Historic 141-acre West Austin golf course slated for long-term municipal park and heritage protection under proposed joint lease framework."
+    },
+    {
+      "title": "Austin-Bergstrom International (AUS) Advances $45M Terminal Modernization & Gate Expansion",
+      "source": "Austin Business Journal",
+      "category": "Infrastructure & Transit",
+      "date": "Oct 13, 2026",
+      "url": "https://www.bizjournals.com/austin/",
+      "summary": "Department of Aviation approves next-stage civil contracts to handle surging transcontinental and transatlantic corporate flight traffic."
+    },
+    {
+      "title": "Travis County Commercial Property Valuations Hold Steady Amid Q3 Retail Absorption",
+      "source": "Austin American-Statesman",
+      "category": "Commercial Real Estate",
+      "date": "Oct 12, 2026",
+      "url": "https://www.statesman.com/business/",
+      "summary": "Appraisal district reports resilient submarket occupancy rates on South Congress, Domain, and East 6th Street corridors."
+    }
+  ]
+}

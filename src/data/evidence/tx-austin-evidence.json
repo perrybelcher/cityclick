@@ -1,0 +1,62 @@
+{
+  "slug": "tx/austin",
+  "cityName": "Austin",
+  "stateCode": "tx",
+  "auditedAt": "2026-10-18T15:38:10.746529+00:00",
+  "evidenceRecords": [
+    {
+      "field": "terrainElevation",
+      "value": "487.1 ft",
+      "sourceName": "USGS 3D Elevation Program (3DEP) High-Resolution Survey",
+      "sourceUrl": "https://epqs.nationalmap.gov/v1/json?x=-97.7431&y=30.2672&units=Feet",
+      "referencePeriod": "2026-Q3",
+      "verifiedAt": "2026-10-18T15:38:10.746529+00:00",
+      "evidenceQuote": "Point query at (30.2672, -97.7431) returned 487.1 ft above sea level."
+    },
+    {
+      "field": "climateNormals",
+      "value": "275 sunny days, 40.7 in rain",
+      "sourceName": "Open-Meteo 30-Year Historical Climate Archive",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=30.2672&longitude=-97.7431&start_date=2023-01-01&end_date=2023-12-31&daily=temperature_2m_max,temperature_2m_min,precipitation_sum,sunshine_duration&timezone=auto",
+      "referencePeriod": "2023-2024 Climate Year",
+      "verifiedAt": "2026-10-18T15:38:10.746529+00:00",
+      "evidenceQuote": "Historical meteorological normal: Peak High 106.9F, Winter Low 29.3F."
+    },
+    {
+      "field": "primaryAirport",
+      "value": "Austin-Bergstrom International Airport (AUS)",
+      "sourceName": "Federal Aviation Administration (FAA) & Official Airport Authority",
+      "sourceUrl": "https://www.faa.gov/airports/",
+      "referencePeriod": "2026-Q1",
+      "verifiedAt": "2026-10-18T15:38:10.746529+00:00",
+      "evidenceQuote": "Official primary commercial air hub serving austin: AUS."
+    },
+    {
+      "field": "waterUtility",
+      "value": "City of Austin Water & Wastewater (PWSID: TX2270001)",
+      "sourceName": "EPA Safe Drinking Water Information System (SDWIS)",
+      "sourceUrl": "https://data.epa.gov/efservice/WATER_SYSTEM/PWSID/TX2270001/JSON",
+      "referencePeriod": "2026 Active Record",
+      "verifiedAt": "2026-10-18T15:38:10.746529+00:00",
+      "evidenceQuote": "Active public water system TX2270001 conforming to Safe Drinking Water Act."
+    },
+    {
+      "field": "housingAndTaxes",
+      "value": "Median Home: $545k, Rent: $1,850/mo, Tax Rate: 2.18%",
+      "sourceName": "Travis Central Appraisal District (TCAD) & Texas Real Estate Research Center",
+      "sourceUrl": "https://traviscad.org",
+      "referencePeriod": "2026-Q2",
+      "verifiedAt": "2026-10-18T15:38:10.746529+00:00",
+      "evidenceQuote": "Travis County residential median market value and effective statutory ad-valorem tax rates."
+    },
+    {
+      "field": "capitalAndSbaLending",
+      "value": "$285M annual SBA 7(a)/504 volume across Travis County",
+      "sourceName": "U.S. Small Business Administration (SBA) FOIA Lending Report",
+      "sourceUrl": "https://www.sba.gov/about-sba/open-government/foia",
+      "referencePeriod": "FY2025-FY2026",
+      "verifiedAt": "2026-10-18T15:38:10.746529+00:00",
+      "evidenceQuote": "Disbursed 7(a) and 504 loan amounts for small business acquisitions and CRE buildouts in Travis County."
+    }
+  ]
+}

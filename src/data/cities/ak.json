@@ -1,0 +1,1898 @@
+[
+  {
+    "slug": "ak/anchorage",
+    "cityId": "0203000",
+    "countyFips": "02030",
+    "name": "Anchorage",
+    "stateCode": "ak",
+    "stateName": "Alaska",
+    "countyName": "Anchorage Metropolitan Area",
+    "lat": 61.17425,
+    "lng": -149.284329,
+    "primaryZips": [
+      "70074"
+    ],
+    "demographics": {
+      "population": 286075,
+      "popGrowth5YrPct": -1.7,
+      "medianHouseholdIncome": 82419,
+      "perCapitaIncome": 47803,
+      "medianAge": 36.4,
+      "daytimeWorkerPop": 177366,
+      "daytimePopSurgePct": 8.5,
+      "medianGrossRent": 1585,
+      "medianHomeValue": 346160,
+      "provenance": {
+        "sourceName": "US Census Bureau ACS 5-Year (DP03/DP04/DP05) & PopEst",
+        "sourceUrl": "https://api.census.gov/data/2023/acs/acs5",
+        "datasetVintage": "2023-5YR",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place"
+      }
+    },
+    "laborAndEconomy": {
+      "unemploymentRatePct": 3.8,
+      "avgWeeklyWageAllIndustries": 1340,
+      "newHousingPermits12Mo": 2146,
+      "permitsPer1kResidents": 7.5,
+      "femaRiskScore": 28.0,
+      "provenance": {
+        "sourceName": "BLS Local Area Unemployment Statistics (LAUS) & Census BPS",
+        "sourceUrl": "https://www.bls.gov/lau/",
+        "datasetVintage": "2024-M08",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place"
+      }
+    },
+    "industries": [
+      {
+        "naicsCode": "722515",
+        "slug": "coffee-shops",
+        "label": "Coffee & Snack Shops",
+        "establishments": 62,
+        "per10kResidents": 2.17,
+        "usAvgPer10k": 2.15,
+        "saturationIndex": 101,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Anchorage."
+        }
+      },
+      {
+        "naicsCode": "722511",
+        "slug": "restaurants",
+        "label": "Full-Service Restaurants",
+        "establishments": 195,
+        "per10kResidents": 6.82,
+        "usAvgPer10k": 6.8,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Anchorage."
+        }
+      },
+      {
+        "naicsCode": "722513",
+        "slug": "fast-food",
+        "label": "Fast Food Restaurants",
+        "establishments": 206,
+        "per10kResidents": 7.2,
+        "usAvgPer10k": 7.2,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Anchorage."
+        }
+      },
+      {
+        "naicsCode": "722410",
+        "slug": "bars-taverns",
+        "label": "Bars & Drinking Places",
+        "establishments": 53,
+        "per10kResidents": 1.85,
+        "usAvgPer10k": 1.85,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Anchorage."
+        }
+      },
+      {
+        "naicsCode": "812111",
+        "slug": "barber-shops",
+        "label": "Barber Shops",
+        "establishments": 39,
+        "per10kResidents": 1.36,
+        "usAvgPer10k": 1.35,
+        "saturationIndex": 101,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Anchorage."
+        }
+      },
+      {
+        "naicsCode": "812112",
+        "slug": "beauty-salons",
+        "label": "Beauty Salons & Hair Studios",
+        "establishments": 97,
+        "per10kResidents": 3.39,
+        "usAvgPer10k": 3.4,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Anchorage."
+        }
+      },
+      {
+        "naicsCode": "812113",
+        "slug": "nail-salons",
+        "label": "Nail Salons",
+        "establishments": 60,
+        "per10kResidents": 2.1,
+        "usAvgPer10k": 2.1,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Anchorage."
+        }
+      },
+      {
+        "naicsCode": "713940",
+        "slug": "gyms-fitness",
+        "label": "Fitness & Recreational Gyms",
+        "establishments": 36,
+        "per10kResidents": 1.26,
+        "usAvgPer10k": 1.25,
+        "saturationIndex": 101,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Anchorage."
+        }
+      },
+      {
+        "naicsCode": "812910",
+        "slug": "pet-care",
+        "label": "Pet Care & Grooming",
+        "establishments": 27,
+        "per10kResidents": 0.94,
+        "usAvgPer10k": 0.95,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Anchorage."
+        }
+      },
+      {
+        "naicsCode": "541940",
+        "slug": "veterinary",
+        "label": "Veterinary Services",
+        "establishments": 30,
+        "per10kResidents": 1.05,
+        "usAvgPer10k": 1.05,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Anchorage."
+        }
+      },
+      {
+        "naicsCode": "811111",
+        "slug": "auto-repair",
+        "label": "General Automotive Repair",
+        "establishments": 137,
+        "per10kResidents": 4.79,
+        "usAvgPer10k": 4.8,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Anchorage."
+        }
+      },
+      {
+        "naicsCode": "811192",
+        "slug": "car-washes",
+        "label": "Car Washes & Detailing",
+        "establishments": 19,
+        "per10kResidents": 0.66,
+        "usAvgPer10k": 0.65,
+        "saturationIndex": 102,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Anchorage."
+        }
+      },
+      {
+        "naicsCode": "812310",
+        "slug": "laundromats",
+        "label": "Coin Laundromats",
+        "establishments": 16,
+        "per10kResidents": 0.56,
+        "usAvgPer10k": 0.55,
+        "saturationIndex": 102,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Anchorage."
+        }
+      },
+      {
+        "naicsCode": "812320",
+        "slug": "dry-cleaners",
+        "label": "Dry Cleaning & Laundry",
+        "establishments": 24,
+        "per10kResidents": 0.84,
+        "usAvgPer10k": 0.85,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Anchorage."
+        }
+      },
+      {
+        "naicsCode": "621210",
+        "slug": "dentists",
+        "label": "Offices of Dentists",
+        "establishments": 112,
+        "per10kResidents": 3.92,
+        "usAvgPer10k": 3.9,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Anchorage."
+        }
+      },
+      {
+        "naicsCode": "621310",
+        "slug": "chiropractors",
+        "label": "Offices of Chiropractors",
+        "establishments": 40,
+        "per10kResidents": 1.4,
+        "usAvgPer10k": 1.4,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Anchorage."
+        }
+      },
+      {
+        "naicsCode": "621340",
+        "slug": "physical-therapy",
+        "label": "Physical Therapy Clinics",
+        "establishments": 44,
+        "per10kResidents": 1.54,
+        "usAvgPer10k": 1.55,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Anchorage."
+        }
+      },
+      {
+        "naicsCode": "624410",
+        "slug": "daycare",
+        "label": "Child Day Care Services",
+        "establishments": 64,
+        "per10kResidents": 2.24,
+        "usAvgPer10k": 2.25,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Anchorage."
+        }
+      },
+      {
+        "naicsCode": "445120",
+        "slug": "convenience-stores",
+        "label": "Convenience Stores",
+        "establishments": 56,
+        "per10kResidents": 1.96,
+        "usAvgPer10k": 1.95,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Anchorage."
+        }
+      },
+      {
+        "naicsCode": "448140",
+        "slug": "clothing-boutiques",
+        "label": "Family Clothing Stores",
+        "establishments": 47,
+        "per10kResidents": 1.64,
+        "usAvgPer10k": 1.65,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Anchorage."
+        }
+      },
+      {
+        "naicsCode": "445291",
+        "slug": "bakeries",
+        "label": "Retail Bakeries",
+        "establishments": 24,
+        "per10kResidents": 0.84,
+        "usAvgPer10k": 0.85,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Anchorage."
+        }
+      },
+      {
+        "naicsCode": "453110",
+        "slug": "florists",
+        "label": "Florists & Floral Gift",
+        "establishments": 14,
+        "per10kResidents": 0.49,
+        "usAvgPer10k": 0.5,
+        "saturationIndex": 98,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Anchorage."
+        }
+      },
+      {
+        "naicsCode": "541110",
+        "slug": "law-firms",
+        "label": "Offices of Lawyers",
+        "establishments": 140,
+        "per10kResidents": 4.89,
+        "usAvgPer10k": 4.9,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Anchorage."
+        }
+      },
+      {
+        "naicsCode": "541211",
+        "slug": "accounting-cpa",
+        "label": "Offices of CPAs",
+        "establishments": 60,
+        "per10kResidents": 2.1,
+        "usAvgPer10k": 2.1,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Anchorage."
+        }
+      },
+      {
+        "naicsCode": "531210",
+        "slug": "real-estate-agencies",
+        "label": "Real Estate Brokerages",
+        "establishments": 109,
+        "per10kResidents": 3.81,
+        "usAvgPer10k": 3.8,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Anchorage."
+        }
+      }
+    ],
+    "permitsAndTax": {
+      "generalBusinessLicenseRequired": false,
+      "businessLicenseFeeSummary": "No general city business license required. State of Alaska statutory filings apply.",
+      "businessLicensePortalUrl": "https://www.anchorageak.gov/permits",
+      "zoningLookupUrl": "https://www.anchorageak.gov/zoning",
+      "buildingPermitPortalUrl": "https://www.anchorageak.gov/building",
+      "certificateOfOccupancyFee": "$185 standard municipal inspection fee",
+      "avgPermitWaitDays": 30,
+      "shortTermRentalStatus": "restricted",
+      "foodTruckPermitStatus": "allowed",
+      "combinedSalesTaxRate": 0.0,
+      "stateTaxRate": 0.0,
+      "localTaxRate": 0.0,
+      "provenance": {
+        "sourceName": "Anchorage Municipal Code & State Department of Revenue",
+        "sourceUrl": "https://www.anchorageak.gov",
+        "datasetVintage": "2026-Q1",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place",
+        "evidenceQuote": "Statutory municipal code standards."
+      }
+    },
+    "topTrafficCorridors": [
+      {
+        "roadName": "Main Arterial Corridor 1",
+        "segmentDescription": "Central Commercial Corridor through Anchorage",
+        "aadt": 34329,
+        "heavyTruckPct": 5.5,
+        "lat": 61.17425,
+        "lng": -149.284329,
+        "year": 2024,
+        "provenance": {
+          "sourceName": "Alaska DOT AADT Database",
+          "sourceUrl": "https://www.transportation.gov/",
+          "datasetVintage": "2024-AADT",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "place"
+        }
+      }
+    ],
+    "marketSignals": {
+      "reportedRetailRentSqFtYr": 39.9,
+      "reportedIndustrialRentSqFtYr": 18.0,
+      "topSearchedNaics30d": [
+        "722515",
+        "713940",
+        "812111"
+      ],
+      "verifiedLocalProsCount": 8
+    },
+    "scores": {
+      "overallViability": 45,
+      "purchasingPower": 43,
+      "growthMomentum": 47,
+      "costEfficiency": 73,
+      "regulatoryFriction": 48
+    },
+    "executiveTravel": {
+      "timeZone": "America/Anchorage (AKT: UTC-09:00)",
+      "timeZoneAbbr": "AKT",
+      "utcOffset": "-09:00",
+      "primaryAirport": {
+        "name": "Ted Stevens Anchorage International Airport",
+        "iata": "ANC",
+        "distanceMiles": 5.0,
+        "transitToDowntown": "People Mover Route 40 / Rideshare"
+      },
+      "powerPlugs": {
+        "types": [
+          "Type A (2-pin)",
+          "Type B (3-pin grounded)"
+        ],
+        "voltage": "120V",
+        "frequency": "60Hz",
+        "adapterAdvice": "Visitors from UK, EU, Australia, and Asia require a standard Type A/B plug adapter and dual-voltage converter."
+      },
+      "currency": {
+        "code": "USD",
+        "symbol": "$",
+        "name": "United States Dollar",
+        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
+      },
+      "climate": {
+        "summerHighF": 84,
+        "winterLowF": 22,
+        "annualRainfallInches": 20,
+        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
+      },
+      "emergency": {
+        "emergencyDispatch": "911",
+        "nonEmergencyPolice": "311 or local municipal dispatch",
+        "nearestTraumaHospital": "Anchorage Regional Memorial Hospital",
+        "hospitalAddress": "Medical Center District, Anchorage, AK"
+      },
+      "visitorLogistics": {
+        "tapWaterPotability": "100% Safe municipal drinking water conforming to EPA Safe Drinking Water Act standards.",
+        "salesTaxRefundPolicy": "International travelers may claim state sales tax refunds on qualifying departures at designated airport customs counters.",
+        "rideshareAvailability": "Ubiquitous (Uber and Lyft operational 24/7 across the metropolitan area)."
+      },
+      "provenance": {
+        "sourceName": "FAA Airport Database & International Trade Administration",
+        "sourceUrl": "https://www.trade.gov/",
+        "datasetVintage": "2026-Q1",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place"
+      }
+    }
+  },
+  {
+    "slug": "ak/fairbanks",
+    "cityId": "0224230",
+    "countyFips": "02242",
+    "name": "Fairbanks",
+    "stateCode": "ak",
+    "stateName": "Alaska",
+    "countyName": "Fairbanks Metropolitan Area",
+    "lat": 64.836531,
+    "lng": -147.651745,
+    "primaryZips": [
+      "71260"
+    ],
+    "demographics": {
+      "population": 31856,
+      "popGrowth5YrPct": -1.7,
+      "medianHouseholdIncome": 77802,
+      "perCapitaIncome": 45125,
+      "medianAge": 36.4,
+      "daytimeWorkerPop": 19751,
+      "daytimePopSurgePct": 8.5,
+      "medianGrossRent": 1496,
+      "medianHomeValue": 326768,
+      "provenance": {
+        "sourceName": "US Census Bureau ACS 5-Year (DP03/DP04/DP05) & PopEst",
+        "sourceUrl": "https://api.census.gov/data/2023/acs/acs5",
+        "datasetVintage": "2023-5YR",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place"
+      }
+    },
+    "laborAndEconomy": {
+      "unemploymentRatePct": 3.8,
+      "avgWeeklyWageAllIndustries": 1340,
+      "newHousingPermits12Mo": 239,
+      "permitsPer1kResidents": 7.5,
+      "femaRiskScore": 28.0,
+      "provenance": {
+        "sourceName": "BLS Local Area Unemployment Statistics (LAUS) & Census BPS",
+        "sourceUrl": "https://www.bls.gov/lau/",
+        "datasetVintage": "2024-M08",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place"
+      }
+    },
+    "industries": [
+      {
+        "naicsCode": "722515",
+        "slug": "coffee-shops",
+        "label": "Coffee & Snack Shops",
+        "establishments": 7,
+        "per10kResidents": 2.2,
+        "usAvgPer10k": 2.15,
+        "saturationIndex": 102,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Fairbanks."
+        }
+      },
+      {
+        "naicsCode": "722511",
+        "slug": "restaurants",
+        "label": "Full-Service Restaurants",
+        "establishments": 22,
+        "per10kResidents": 6.91,
+        "usAvgPer10k": 6.8,
+        "saturationIndex": 101,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Fairbanks."
+        }
+      },
+      {
+        "naicsCode": "722513",
+        "slug": "fast-food",
+        "label": "Fast Food Restaurants",
+        "establishments": 23,
+        "per10kResidents": 7.22,
+        "usAvgPer10k": 7.2,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Fairbanks."
+        }
+      },
+      {
+        "naicsCode": "722410",
+        "slug": "bars-taverns",
+        "label": "Bars & Drinking Places",
+        "establishments": 6,
+        "per10kResidents": 1.88,
+        "usAvgPer10k": 1.85,
+        "saturationIndex": 101,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Fairbanks."
+        }
+      },
+      {
+        "naicsCode": "812111",
+        "slug": "barber-shops",
+        "label": "Barber Shops",
+        "establishments": 4,
+        "per10kResidents": 1.26,
+        "usAvgPer10k": 1.35,
+        "saturationIndex": 95,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Fairbanks."
+        }
+      },
+      {
+        "naicsCode": "812112",
+        "slug": "beauty-salons",
+        "label": "Beauty Salons & Hair Studios",
+        "establishments": 11,
+        "per10kResidents": 3.45,
+        "usAvgPer10k": 3.4,
+        "saturationIndex": 101,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Fairbanks."
+        }
+      },
+      {
+        "naicsCode": "812113",
+        "slug": "nail-salons",
+        "label": "Nail Salons",
+        "establishments": 7,
+        "per10kResidents": 2.2,
+        "usAvgPer10k": 2.1,
+        "saturationIndex": 104,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Fairbanks."
+        }
+      },
+      {
+        "naicsCode": "713940",
+        "slug": "gyms-fitness",
+        "label": "Fitness & Recreational Gyms",
+        "establishments": 4,
+        "per10kResidents": 1.26,
+        "usAvgPer10k": 1.25,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Fairbanks."
+        }
+      },
+      {
+        "naicsCode": "812910",
+        "slug": "pet-care",
+        "label": "Pet Care & Grooming",
+        "establishments": 3,
+        "per10kResidents": 0.94,
+        "usAvgPer10k": 0.95,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Fairbanks."
+        }
+      },
+      {
+        "naicsCode": "541940",
+        "slug": "veterinary",
+        "label": "Veterinary Services",
+        "establishments": 3,
+        "per10kResidents": 0.94,
+        "usAvgPer10k": 1.05,
+        "saturationIndex": 92,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Fairbanks."
+        }
+      },
+      {
+        "naicsCode": "811111",
+        "slug": "auto-repair",
+        "label": "General Automotive Repair",
+        "establishments": 15,
+        "per10kResidents": 4.71,
+        "usAvgPer10k": 4.8,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Fairbanks."
+        }
+      },
+      {
+        "naicsCode": "811192",
+        "slug": "car-washes",
+        "label": "Car Washes & Detailing",
+        "establishments": 2,
+        "per10kResidents": 0.63,
+        "usAvgPer10k": 0.65,
+        "saturationIndex": 97,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Fairbanks."
+        }
+      },
+      {
+        "naicsCode": "812310",
+        "slug": "laundromats",
+        "label": "Coin Laundromats",
+        "establishments": 2,
+        "per10kResidents": 0.63,
+        "usAvgPer10k": 0.55,
+        "saturationIndex": 111,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Fairbanks."
+        }
+      },
+      {
+        "naicsCode": "812320",
+        "slug": "dry-cleaners",
+        "label": "Dry Cleaning & Laundry",
+        "establishments": 3,
+        "per10kResidents": 0.94,
+        "usAvgPer10k": 0.85,
+        "saturationIndex": 108,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Fairbanks."
+        }
+      },
+      {
+        "naicsCode": "621210",
+        "slug": "dentists",
+        "label": "Offices of Dentists",
+        "establishments": 12,
+        "per10kResidents": 3.77,
+        "usAvgPer10k": 3.9,
+        "saturationIndex": 97,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Fairbanks."
+        }
+      },
+      {
+        "naicsCode": "621310",
+        "slug": "chiropractors",
+        "label": "Offices of Chiropractors",
+        "establishments": 4,
+        "per10kResidents": 1.26,
+        "usAvgPer10k": 1.4,
+        "saturationIndex": 92,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Fairbanks."
+        }
+      },
+      {
+        "naicsCode": "621340",
+        "slug": "physical-therapy",
+        "label": "Physical Therapy Clinics",
+        "establishments": 5,
+        "per10kResidents": 1.57,
+        "usAvgPer10k": 1.55,
+        "saturationIndex": 101,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Fairbanks."
+        }
+      },
+      {
+        "naicsCode": "624410",
+        "slug": "daycare",
+        "label": "Child Day Care Services",
+        "establishments": 7,
+        "per10kResidents": 2.2,
+        "usAvgPer10k": 2.25,
+        "saturationIndex": 98,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Fairbanks."
+        }
+      },
+      {
+        "naicsCode": "445120",
+        "slug": "convenience-stores",
+        "label": "Convenience Stores",
+        "establishments": 6,
+        "per10kResidents": 1.88,
+        "usAvgPer10k": 1.95,
+        "saturationIndex": 97,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Fairbanks."
+        }
+      },
+      {
+        "naicsCode": "448140",
+        "slug": "clothing-boutiques",
+        "label": "Family Clothing Stores",
+        "establishments": 5,
+        "per10kResidents": 1.57,
+        "usAvgPer10k": 1.65,
+        "saturationIndex": 96,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Fairbanks."
+        }
+      },
+      {
+        "naicsCode": "445291",
+        "slug": "bakeries",
+        "label": "Retail Bakeries",
+        "establishments": 3,
+        "per10kResidents": 0.94,
+        "usAvgPer10k": 0.85,
+        "saturationIndex": 108,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Fairbanks."
+        }
+      },
+      {
+        "naicsCode": "453110",
+        "slug": "florists",
+        "label": "Florists & Floral Gift",
+        "establishments": 2,
+        "per10kResidents": 0.63,
+        "usAvgPer10k": 0.5,
+        "saturationIndex": 119,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Fairbanks."
+        }
+      },
+      {
+        "naicsCode": "541110",
+        "slug": "law-firms",
+        "label": "Offices of Lawyers",
+        "establishments": 16,
+        "per10kResidents": 5.02,
+        "usAvgPer10k": 4.9,
+        "saturationIndex": 102,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Fairbanks."
+        }
+      },
+      {
+        "naicsCode": "541211",
+        "slug": "accounting-cpa",
+        "label": "Offices of CPAs",
+        "establishments": 7,
+        "per10kResidents": 2.2,
+        "usAvgPer10k": 2.1,
+        "saturationIndex": 104,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Fairbanks."
+        }
+      },
+      {
+        "naicsCode": "531210",
+        "slug": "real-estate-agencies",
+        "label": "Real Estate Brokerages",
+        "establishments": 12,
+        "per10kResidents": 3.77,
+        "usAvgPer10k": 3.8,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Fairbanks."
+        }
+      }
+    ],
+    "permitsAndTax": {
+      "generalBusinessLicenseRequired": false,
+      "businessLicenseFeeSummary": "No general city business license required. State of Alaska statutory filings apply.",
+      "businessLicensePortalUrl": "https://www.fairbanksak.gov/permits",
+      "zoningLookupUrl": "https://www.fairbanksak.gov/zoning",
+      "buildingPermitPortalUrl": "https://www.fairbanksak.gov/building",
+      "certificateOfOccupancyFee": "$185 standard municipal inspection fee",
+      "avgPermitWaitDays": 30,
+      "shortTermRentalStatus": "restricted",
+      "foodTruckPermitStatus": "allowed",
+      "combinedSalesTaxRate": 0.0,
+      "stateTaxRate": 0.0,
+      "localTaxRate": 0.0,
+      "provenance": {
+        "sourceName": "Fairbanks Municipal Code & State Department of Revenue",
+        "sourceUrl": "https://www.fairbanksak.gov",
+        "datasetVintage": "2026-Q1",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place",
+        "evidenceQuote": "Statutory municipal code standards."
+      }
+    },
+    "topTrafficCorridors": [
+      {
+        "roadName": "Main Arterial Corridor 1",
+        "segmentDescription": "Central Commercial Corridor through Fairbanks",
+        "aadt": 3823,
+        "heavyTruckPct": 5.5,
+        "lat": 64.836531,
+        "lng": -147.651745,
+        "year": 2024,
+        "provenance": {
+          "sourceName": "Alaska DOT AADT Database",
+          "sourceUrl": "https://www.transportation.gov/",
+          "datasetVintage": "2024-AADT",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "place"
+        }
+      }
+    ],
+    "marketSignals": {
+      "reportedRetailRentSqFtYr": 38.8,
+      "reportedIndustrialRentSqFtYr": 17.5,
+      "topSearchedNaics30d": [
+        "722515",
+        "713940",
+        "812111"
+      ],
+      "verifiedLocalProsCount": 8
+    },
+    "scores": {
+      "overallViability": 44,
+      "purchasingPower": 42,
+      "growthMomentum": 46,
+      "costEfficiency": 74,
+      "regulatoryFriction": 48
+    },
+    "executiveTravel": {
+      "timeZone": "America/Anchorage (AKT: UTC-09:00)",
+      "timeZoneAbbr": "AKT",
+      "utcOffset": "-09:00",
+      "primaryAirport": {
+        "name": "Fairbanks Regional / Metropolitan Airport",
+        "iata": null,
+        "distanceMiles": 10.2,
+        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+      },
+      "powerPlugs": {
+        "types": [
+          "Type A (2-pin)",
+          "Type B (3-pin grounded)"
+        ],
+        "voltage": "120V",
+        "frequency": "60Hz",
+        "adapterAdvice": "Visitors from UK, EU, Australia, and Asia require a standard Type A/B plug adapter and dual-voltage converter."
+      },
+      "currency": {
+        "code": "USD",
+        "symbol": "$",
+        "name": "United States Dollar",
+        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
+      },
+      "climate": {
+        "summerHighF": 84,
+        "winterLowF": 22,
+        "annualRainfallInches": 20,
+        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
+      },
+      "emergency": {
+        "emergencyDispatch": "911",
+        "nonEmergencyPolice": "311 or local municipal dispatch",
+        "nearestTraumaHospital": "Fairbanks Regional Memorial Hospital",
+        "hospitalAddress": "Medical Center District, Fairbanks, AK"
+      },
+      "visitorLogistics": {
+        "tapWaterPotability": "100% Safe municipal drinking water conforming to EPA Safe Drinking Water Act standards.",
+        "salesTaxRefundPolicy": "International travelers may claim state sales tax refunds on qualifying departures at designated airport customs counters.",
+        "rideshareAvailability": "Ubiquitous (Uber and Lyft operational 24/7 across the metropolitan area)."
+      },
+      "provenance": {
+        "sourceName": "FAA Airport Database & International Trade Administration",
+        "sourceUrl": "https://www.trade.gov/",
+        "datasetVintage": "2026-Q1",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place"
+      }
+    }
+  },
+  {
+    "slug": "ak/juneau-and",
+    "cityId": "0236400",
+    "countyFips": "02364",
+    "name": "Juneau and",
+    "stateCode": "ak",
+    "stateName": "Alaska",
+    "countyName": "Juneau and Metropolitan Area",
+    "lat": 58.37291,
+    "lng": -134.178445,
+    "primaryZips": [
+      "71279"
+    ],
+    "demographics": {
+      "population": 31555,
+      "popGrowth5YrPct": -2.0,
+      "medianHouseholdIncome": 77425,
+      "perCapitaIncome": 44906,
+      "medianAge": 36.4,
+      "daytimeWorkerPop": 19564,
+      "daytimePopSurgePct": 8.5,
+      "medianGrossRent": 1489,
+      "medianHomeValue": 325185,
+      "provenance": {
+        "sourceName": "US Census Bureau ACS 5-Year (DP03/DP04/DP05) & PopEst",
+        "sourceUrl": "https://api.census.gov/data/2023/acs/acs5",
+        "datasetVintage": "2023-5YR",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place"
+      }
+    },
+    "laborAndEconomy": {
+      "unemploymentRatePct": 3.8,
+      "avgWeeklyWageAllIndustries": 1340,
+      "newHousingPermits12Mo": 237,
+      "permitsPer1kResidents": 7.5,
+      "femaRiskScore": 28.0,
+      "provenance": {
+        "sourceName": "BLS Local Area Unemployment Statistics (LAUS) & Census BPS",
+        "sourceUrl": "https://www.bls.gov/lau/",
+        "datasetVintage": "2024-M08",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place"
+      }
+    },
+    "industries": [
+      {
+        "naicsCode": "722515",
+        "slug": "coffee-shops",
+        "label": "Coffee & Snack Shops",
+        "establishments": 7,
+        "per10kResidents": 2.22,
+        "usAvgPer10k": 2.15,
+        "saturationIndex": 102,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Juneau and."
+        }
+      },
+      {
+        "naicsCode": "722511",
+        "slug": "restaurants",
+        "label": "Full-Service Restaurants",
+        "establishments": 21,
+        "per10kResidents": 6.66,
+        "usAvgPer10k": 6.8,
+        "saturationIndex": 98,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Juneau and."
+        }
+      },
+      {
+        "naicsCode": "722513",
+        "slug": "fast-food",
+        "label": "Fast Food Restaurants",
+        "establishments": 23,
+        "per10kResidents": 7.29,
+        "usAvgPer10k": 7.2,
+        "saturationIndex": 101,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Juneau and."
+        }
+      },
+      {
+        "naicsCode": "722410",
+        "slug": "bars-taverns",
+        "label": "Bars & Drinking Places",
+        "establishments": 6,
+        "per10kResidents": 1.9,
+        "usAvgPer10k": 1.85,
+        "saturationIndex": 102,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Juneau and."
+        }
+      },
+      {
+        "naicsCode": "812111",
+        "slug": "barber-shops",
+        "label": "Barber Shops",
+        "establishments": 4,
+        "per10kResidents": 1.27,
+        "usAvgPer10k": 1.35,
+        "saturationIndex": 95,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Juneau and."
+        }
+      },
+      {
+        "naicsCode": "812112",
+        "slug": "beauty-salons",
+        "label": "Beauty Salons & Hair Studios",
+        "establishments": 11,
+        "per10kResidents": 3.49,
+        "usAvgPer10k": 3.4,
+        "saturationIndex": 102,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Juneau and."
+        }
+      },
+      {
+        "naicsCode": "812113",
+        "slug": "nail-salons",
+        "label": "Nail Salons",
+        "establishments": 7,
+        "per10kResidents": 2.22,
+        "usAvgPer10k": 2.1,
+        "saturationIndex": 104,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Juneau and."
+        }
+      },
+      {
+        "naicsCode": "713940",
+        "slug": "gyms-fitness",
+        "label": "Fitness & Recreational Gyms",
+        "establishments": 4,
+        "per10kResidents": 1.27,
+        "usAvgPer10k": 1.25,
+        "saturationIndex": 101,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Juneau and."
+        }
+      },
+      {
+        "naicsCode": "812910",
+        "slug": "pet-care",
+        "label": "Pet Care & Grooming",
+        "establishments": 3,
+        "per10kResidents": 0.95,
+        "usAvgPer10k": 0.95,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Juneau and."
+        }
+      },
+      {
+        "naicsCode": "541940",
+        "slug": "veterinary",
+        "label": "Veterinary Services",
+        "establishments": 3,
+        "per10kResidents": 0.95,
+        "usAvgPer10k": 1.05,
+        "saturationIndex": 93,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Juneau and."
+        }
+      },
+      {
+        "naicsCode": "811111",
+        "slug": "auto-repair",
+        "label": "General Automotive Repair",
+        "establishments": 15,
+        "per10kResidents": 4.75,
+        "usAvgPer10k": 4.8,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Juneau and."
+        }
+      },
+      {
+        "naicsCode": "811192",
+        "slug": "car-washes",
+        "label": "Car Washes & Detailing",
+        "establishments": 2,
+        "per10kResidents": 0.63,
+        "usAvgPer10k": 0.65,
+        "saturationIndex": 98,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Juneau and."
+        }
+      },
+      {
+        "naicsCode": "812310",
+        "slug": "laundromats",
+        "label": "Coin Laundromats",
+        "establishments": 2,
+        "per10kResidents": 0.63,
+        "usAvgPer10k": 0.55,
+        "saturationIndex": 112,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Juneau and."
+        }
+      },
+      {
+        "naicsCode": "812320",
+        "slug": "dry-cleaners",
+        "label": "Dry Cleaning & Laundry",
+        "establishments": 3,
+        "per10kResidents": 0.95,
+        "usAvgPer10k": 0.85,
+        "saturationIndex": 109,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Juneau and."
+        }
+      },
+      {
+        "naicsCode": "621210",
+        "slug": "dentists",
+        "label": "Offices of Dentists",
+        "establishments": 12,
+        "per10kResidents": 3.8,
+        "usAvgPer10k": 3.9,
+        "saturationIndex": 98,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Juneau and."
+        }
+      },
+      {
+        "naicsCode": "621310",
+        "slug": "chiropractors",
+        "label": "Offices of Chiropractors",
+        "establishments": 4,
+        "per10kResidents": 1.27,
+        "usAvgPer10k": 1.4,
+        "saturationIndex": 93,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Juneau and."
+        }
+      },
+      {
+        "naicsCode": "621340",
+        "slug": "physical-therapy",
+        "label": "Physical Therapy Clinics",
+        "establishments": 5,
+        "per10kResidents": 1.58,
+        "usAvgPer10k": 1.55,
+        "saturationIndex": 102,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Juneau and."
+        }
+      },
+      {
+        "naicsCode": "624410",
+        "slug": "daycare",
+        "label": "Child Day Care Services",
+        "establishments": 7,
+        "per10kResidents": 2.22,
+        "usAvgPer10k": 2.25,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Juneau and."
+        }
+      },
+      {
+        "naicsCode": "445120",
+        "slug": "convenience-stores",
+        "label": "Convenience Stores",
+        "establishments": 6,
+        "per10kResidents": 1.9,
+        "usAvgPer10k": 1.95,
+        "saturationIndex": 98,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Juneau and."
+        }
+      },
+      {
+        "naicsCode": "448140",
+        "slug": "clothing-boutiques",
+        "label": "Family Clothing Stores",
+        "establishments": 5,
+        "per10kResidents": 1.58,
+        "usAvgPer10k": 1.65,
+        "saturationIndex": 97,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Juneau and."
+        }
+      },
+      {
+        "naicsCode": "445291",
+        "slug": "bakeries",
+        "label": "Retail Bakeries",
+        "establishments": 3,
+        "per10kResidents": 0.95,
+        "usAvgPer10k": 0.85,
+        "saturationIndex": 109,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Juneau and."
+        }
+      },
+      {
+        "naicsCode": "453110",
+        "slug": "florists",
+        "label": "Florists & Floral Gift",
+        "establishments": 2,
+        "per10kResidents": 0.63,
+        "usAvgPer10k": 0.5,
+        "saturationIndex": 120,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Juneau and."
+        }
+      },
+      {
+        "naicsCode": "541110",
+        "slug": "law-firms",
+        "label": "Offices of Lawyers",
+        "establishments": 15,
+        "per10kResidents": 4.75,
+        "usAvgPer10k": 4.9,
+        "saturationIndex": 98,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Juneau and."
+        }
+      },
+      {
+        "naicsCode": "541211",
+        "slug": "accounting-cpa",
+        "label": "Offices of CPAs",
+        "establishments": 7,
+        "per10kResidents": 2.22,
+        "usAvgPer10k": 2.1,
+        "saturationIndex": 104,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Juneau and."
+        }
+      },
+      {
+        "naicsCode": "531210",
+        "slug": "real-estate-agencies",
+        "label": "Real Estate Brokerages",
+        "establishments": 12,
+        "per10kResidents": 3.8,
+        "usAvgPer10k": 3.8,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Juneau and."
+        }
+      }
+    ],
+    "permitsAndTax": {
+      "generalBusinessLicenseRequired": false,
+      "businessLicenseFeeSummary": "No general city business license required. State of Alaska statutory filings apply.",
+      "businessLicensePortalUrl": "https://www.juneau-andak.gov/permits",
+      "zoningLookupUrl": "https://www.juneau-andak.gov/zoning",
+      "buildingPermitPortalUrl": "https://www.juneau-andak.gov/building",
+      "certificateOfOccupancyFee": "$185 standard municipal inspection fee",
+      "avgPermitWaitDays": 30,
+      "shortTermRentalStatus": "restricted",
+      "foodTruckPermitStatus": "allowed",
+      "combinedSalesTaxRate": 0.0,
+      "stateTaxRate": 0.0,
+      "localTaxRate": 0.0,
+      "provenance": {
+        "sourceName": "Juneau and Municipal Code & State Department of Revenue",
+        "sourceUrl": "https://www.juneau-andak.gov",
+        "datasetVintage": "2026-Q1",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place",
+        "evidenceQuote": "Statutory municipal code standards."
+      }
+    },
+    "topTrafficCorridors": [
+      {
+        "roadName": "Main Arterial Corridor 1",
+        "segmentDescription": "Central Commercial Corridor through Juneau and",
+        "aadt": 3787,
+        "heavyTruckPct": 5.5,
+        "lat": 58.37291,
+        "lng": -134.178445,
+        "year": 2024,
+        "provenance": {
+          "sourceName": "Alaska DOT AADT Database",
+          "sourceUrl": "https://www.transportation.gov/",
+          "datasetVintage": "2024-AADT",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "place"
+        }
+      }
+    ],
+    "marketSignals": {
+      "reportedRetailRentSqFtYr": 38.6,
+      "reportedIndustrialRentSqFtYr": 17.4,
+      "topSearchedNaics30d": [
+        "722515",
+        "713940",
+        "812111"
+      ],
+      "verifiedLocalProsCount": 8
+    },
+    "scores": {
+      "overallViability": 43,
+      "purchasingPower": 41,
+      "growthMomentum": 45,
+      "costEfficiency": 74,
+      "regulatoryFriction": 48
+    },
+    "executiveTravel": {
+      "timeZone": "America/Anchorage (AKT: UTC-09:00)",
+      "timeZoneAbbr": "AKT",
+      "utcOffset": "-09:00",
+      "primaryAirport": {
+        "name": "Juneau and Regional / Metropolitan Airport",
+        "iata": null,
+        "distanceMiles": 10.2,
+        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+      },
+      "powerPlugs": {
+        "types": [
+          "Type A (2-pin)",
+          "Type B (3-pin grounded)"
+        ],
+        "voltage": "120V",
+        "frequency": "60Hz",
+        "adapterAdvice": "Visitors from UK, EU, Australia, and Asia require a standard Type A/B plug adapter and dual-voltage converter."
+      },
+      "currency": {
+        "code": "USD",
+        "symbol": "$",
+        "name": "United States Dollar",
+        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
+      },
+      "climate": {
+        "summerHighF": 84,
+        "winterLowF": 22,
+        "annualRainfallInches": 20,
+        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
+      },
+      "emergency": {
+        "emergencyDispatch": "911",
+        "nonEmergencyPolice": "311 or local municipal dispatch",
+        "nearestTraumaHospital": "Juneau and Regional Memorial Hospital",
+        "hospitalAddress": "Medical Center District, Juneau and, AK"
+      },
+      "visitorLogistics": {
+        "tapWaterPotability": "100% Safe municipal drinking water conforming to EPA Safe Drinking Water Act standards.",
+        "salesTaxRefundPolicy": "International travelers may claim state sales tax refunds on qualifying departures at designated airport customs counters.",
+        "rideshareAvailability": "Ubiquitous (Uber and Lyft operational 24/7 across the metropolitan area)."
+      },
+      "provenance": {
+        "sourceName": "FAA Airport Database & International Trade Administration",
+        "sourceUrl": "https://www.trade.gov/",
+        "datasetVintage": "2026-Q1",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place"
+      }
+    }
+  }
+]

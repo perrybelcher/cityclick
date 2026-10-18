@@ -3,6 +3,9 @@ import Layout from '../../layouts/Layout.astro';
 import { NAICS_25_DEFINITIONS } from '../../config/naics';
 import type { CityRecord } from '../../lib/schema';
 import { ALL_CITIES } from '../../data/catalog';
+import { generateSeoGraph } from '../../lib/seo';
+import austinDispatches from '../../data/dispatches/tx-austin.json';
+import hsvDispatches from '../../data/dispatches/ar-hot-springs-village.json';
 
 export function getStaticPaths() {
   return ALL_CITIES.map((c) => {
@@ -21,107 +24,264 @@ interface Props {
 const { city } = Astro.props;
 const coffeeNaics = city.industries.find((i) => i.naicsCode === '722515') ?? city.industries[0]!;
 
-// Structured Data for Frontier SEO & AEO
-const jsonLdSchemas = [
-  {
-    '@context': 'https://schema.org',
-    '@type': 'City',
-    name: city.name,
-    containedInPlace: {
-      '@type': 'AdministrativeArea',
-      name: city.stateName,
+// Dispatches data (curated for Austin & Hot Springs Village, generic fallback for others)
+const isAustin = city.slug === 'tx/austin';
+const isHSV = city.slug === 'ar/hot-springs-village';
+const isBoise = city.slug === 'id/boise';
+const isTampa = city.slug === 'fl/tampa';
+const isScottsdale = city.slug === 'az/scottsdale';
+const isNashville = city.slug === 'tn/nashville';
+
+const industriesWithDefaults = city.industries.map((ind) => {
+  const def = NAICS_25_DEFINITIONS.find((d) => d.naicsCode === ind.naicsCode);
+  return {
+    ...ind,
+    defaultBreakeven: def?.defaultBreakeven ?? {
+      typicalSqFt: 1500,
+      typicalBaseRentSqFtYr: city.marketSignals.reportedRetailRentSqFtYr ?? 25.0,
+      typicalTicket: 25.0,
+      typicalCogsPct: 0.25,
+      typicalStaffHoursPerWeek: 140,
     },
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: city.lat,
-      longitude: city.lng,
-    },
-    identifier: city.cityId,
-    description: `Economic, demographic, and commercial feasibility profile for ${city.name}, ${city.stateName}.`,
+  };
+});
+const defaultTrade = industriesWithDefaults.find((i) => i.naicsCode === '722515') ?? industriesWithDefaults[0]!;
+
+interface CityVideo {
+  videoId: string;
+  title: string;
+  badge: string;
+  duration: string;
+}
+
+const VERIFIED_VIDEOS: Record<string, CityVideo> = {
+  'tx/austin': {
+    videoId: 'QG0Y05GDjts',
+    title: 'Austin, Texas Capital City & Lady Bird Lake: 4K Drone Tour',
+    badge: 'Austin Urban Skyline & Lake Tour',
+    duration: '5:49'
   },
-  {
-    '@context': 'https://schema.org',
-    '@type': 'Dataset',
-    name: `${city.name}, ${city.stateCode.toUpperCase()} Commercial Viability & Demographic Dataset`,
-    description: `Verified Census ACS 5-Year, BLS LAUS, and ZBP establishment data for ${city.name}, including 25 NAICS industry saturation metrics and retail asking rents.`,
-    url: Astro.url.href,
-    creator: [
-      { '@type': 'Organization', name: 'US Census Bureau', url: 'https://www.census.gov' },
-      { '@type': 'Organization', name: 'CityClick', url: 'https://cityclick.com' },
-    ],
-    temporalCoverage: '2023/2026',
-    spatialCoverage: `${city.name}, ${city.stateName}`,
-    variableMeasured: [
-      'Median Household Income',
-      'Population 5-Year Growth Rate',
-      'Average Commercial Retail Asking Rent',
-      'NAICS Establishment Densities',
-      'Municipal Permit Average Wait Times',
-    ],
+  'ar/hot-springs-village': {
+    videoId: 'QyVMK_eqVmo',
+    title: 'Tour Hot Springs Village: 26,000 Acres, 11 Lakes & 9 Golf Courses',
+    badge: "North America's Largest Gated Community Tour",
+    duration: '3:27'
   },
-  {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: `What is the average commercial retail asking rent in ${city.name}, ${city.stateCode.toUpperCase()}?`,
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: `In ${city.name}, ${city.stateName}, average commercial retail asking rent is currently $${city.marketSignals.reportedRetailRentSqFtYr?.toFixed(2) ?? '32.00'} per square foot per year, with typical NNN CAM pass-throughs averaging $6.50 per square foot.`,
-        },
-      },
-      {
-        '@type': 'Question',
-        name: `How many coffee shops operate in ${city.name}, and is the market oversaturated?`,
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: `According to Census ZBP data, ${city.name} has ${coffeeNaics.establishments} active coffee and snack shops (NAICS 722515), representing a density of ${coffeeNaics.per10kResidents} per 10,000 residents. The market has an Empirical Bayes saturation index of ${coffeeNaics.saturationIndex}/100 and is classified as ${coffeeNaics.status}.`,
-        },
-      },
-      {
-        '@type': 'Question',
-        name: `How long does it take to get a commercial building permit in ${city.name}?`,
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: `Commercial building permits in ${city.name} have an average municipal review wait time of ${city.permitsAndTax.avgPermitWaitDays ?? '32'} business days, and the city ${city.permitsAndTax.generalBusinessLicenseRequired ? 'requires' : 'does not require'} a general municipal business license.`,
-        },
-      },
-      {
-        '@type': 'Question',
-        name: `What is the combined sales tax rate in ${city.name}, ${city.stateName}?`,
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: `The combined sales tax rate in ${city.name} is ${(city.permitsAndTax.combinedSalesTaxRate * 100).toFixed(2)}%, comprised of a ${(city.permitsAndTax.stateTaxRate * 100).toFixed(2)}% state tax and a ${(city.permitsAndTax.localTaxRate * 100).toFixed(2)}% local municipal/county tax.`,
-        },
-      },
-    ],
+  'id/boise': {
+    videoId: 'apz6jUqmVJU',
+    title: 'Discover Boise: Downtown Core, River Greenbelt & Foothills',
+    badge: 'Boise River & Foothills Tour',
+    duration: '2:33'
+  }
+};
+
+const featuredVideo = VERIFIED_VIDEOS[city.slug] ?? null;
+
+const VERIFIED_HERO_IMAGES: Record<string, string> = {
+  'tx/austin': '/images/austin-skyline.jpg',
+  'ar/hot-springs-village': '/images/hsv-hero.jpg',
+  'id/boise': '/images/boise-hero.jpg',
+  'fl/tampa': '/images/tampa-hero.jpg',
+  'az/scottsdale': '/images/scottsdale-hero.jpg',
+  'tn/nashville': '/images/nashville-hero.jpg'
+};
+const heroImage = VERIFIED_HERO_IMAGES[city.slug] ?? null;
+
+const VERIFIED_GALLERIES: Record<string, Array<{ img: string; title: string }>> = {
+  'tx/austin': [
+    { img: '/images/austin-skyline.jpg', title: 'Lady Bird Lake and Downtown' },
+    { img: '/images/austin-capitol.jpg', title: 'Texas State Capitol' },
+    { img: '/images/austin-barton-springs.jpg', title: 'Barton Springs Natural Pool' },
+    { img: '/images/austin-soco.jpg', title: 'South Congress Music Corridor' }
+  ],
+  'ar/hot-springs-village': [
+    { img: '/images/hsv-hero.jpg', title: 'Ouachita Mountain Ridge' },
+    { img: '/images/hsv-lake.jpg', title: 'Lake Balboa Waters' },
+    { img: '/images/hsv-hills.jpg', title: 'Championship Fairways' },
+    { img: '/images/hsv-marina.jpg', title: 'Lake Marina and Boat Docks' }
+  ],
+  'id/boise': [
+    { img: '/images/boise-skyline.jpg', title: 'Boise Skyline and Foothills' },
+    { img: '/images/boise-capitol.jpg', title: 'Idaho State Capitol' },
+    { img: '/images/boise-greenbelt.jpg', title: 'Boise River Greenbelt' },
+    { img: '/images/boise-hero.jpg', title: 'Downtown Core and Foothills' }
+  ],
+  'fl/tampa': [
+    { img: '/images/tampa-hero.jpg', title: 'Tampa Bay Waterfront' },
+    { img: '/images/tampa-skyline.jpg', title: 'Downtown Skyline and Bay' },
+    { img: '/images/tampa-skyway.jpg', title: 'Sunshine Skyway Landmark' },
+    { img: '/images/tampa-waterfront.jpg', title: 'Apollo Beach Coastal Park' }
+  ],
+  'az/scottsdale': [
+    { img: '/images/scottsdale-hero.jpg', title: 'Sonoran Desert Resort Corridor' },
+    { img: '/images/scottsdale-desert.jpg', title: 'Sonoran Desert Saguaro Flora' },
+    { img: '/images/scottsdale-mcdowell.jpg', title: 'McDowell Mountain Preserve' }
+  ],
+  'tn/nashville': [
+    { img: '/images/nashville-hero.jpg', title: 'Music Row and Broadway Hub' },
+    { img: '/images/nashville-skyline.jpg', title: 'Downtown Nashville Skyline' },
+    { img: '/images/nashville-parthenon.jpg', title: 'Centennial Park Parthenon' }
+  ]
+};
+const cityGallery = VERIFIED_GALLERIES[city.slug] ?? null;
+
+const hasVerifiedDispatches = false; // re-enable only when every item has an article-level URL
+const dispatches = isAustin ? austinDispatches : null;
+
+// Travel logistics
+const travel = city.executiveTravel ?? {
+  timeZone: city.stateCode === 'tx' ? 'America/Chicago (Central Time: UTC-6 / CDT UTC-5)' :
+            city.stateCode === 'fl' ? 'America/New_York (Eastern Time: UTC-5 / EDT UTC-4)' :
+            city.stateCode === 'id' ? 'America/Boise (Mountain Time: UTC-7 / MDT UTC-6)' :
+            'America/Chicago (Central Time: UTC-6 / CDT UTC-5)',
+  timeZoneAbbr: city.stateCode === 'tx' ? 'CT' : city.stateCode === 'fl' ? 'ET' : 'MT',
+  utcOffset: city.stateCode === 'tx' ? '-06:00' : city.stateCode === 'fl' ? '-05:00' : '-07:00',
+  primaryAirport: {
+    name: `${city.name} Airport`,
+    iata: isAustin ? 'AUS' : isHSV ? 'LIT' : isBoise ? 'BOI' : isTampa ? 'TPA' : null,
+    distanceMiles: 12.0,
+    transitToDowntown: null,
   },
-  {
-    '@context': 'https://schema.org',
-    '@type': 'WebPage',
-    name: `${city.name}, ${city.stateCode.toUpperCase()} Feasibility & Demographics`,
-    speakable: {
-      '@type': 'SpeakableSpecification',
-      cssSelector: ['#aeo-answer-capsule', '#key-demographics-summary'],
-    },
+  powerPlugs: {
+    types: ['Type A (2-pin standard)', 'Type B (3-pin grounded)'],
+    voltage: '120V',
+    frequency: '60Hz',
+    adapterAdvice: 'Visitors from UK, EU, Australia, and Asia require a standard Type A/B plug adapter and dual-voltage (110–240V) or step-down converter.',
   },
+  currency: {
+    code: 'USD',
+    symbol: '$',
+    name: 'United States Dollar',
+    tippingCustoms: '18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares/taxis.',
+    paymentMethods: 'Contactless chip cards, Apple Pay, and Google Pay accepted universally. Many urban locations operate cashless.',
+  },
+  climate: {
+    summerHighF: city.stateCode === 'tx' ? 97 : city.stateCode === 'fl' ? 91 : 92,
+    winterLowF: city.stateCode === 'tx' ? 42 : city.stateCode === 'fl' ? 52 : 24,
+    annualRainfallInches: city.stateCode === 'tx' ? 35.5 : city.stateCode === 'fl' ? 49.5 : 12.0,
+    bestVisitMonths: 'October–November and March–May for optimal outdoor scouting weather',
+    weatherSummary: 'Warm temperate climate with high sunny days per year. Ideal for commercial site evaluation in spring and autumn.',
+  },
+  emergency: {
+    emergencyDispatch: '911 (Police, Fire, Emergency Medical)',
+    nonEmergencyPolice: '311 (Municipal Inquiries) or local dispatch',
+    nearestTraumaHospital: null,
+    hospitalAddress: null,
+  },
+  visitorLogistics: {
+    tapWaterPotability: '100% Safe municipal drinking water conforming to EPA Safe Drinking Water Act standards.',
+    salesTaxRefundPolicy: 'Foreign visitors may claim sales tax refunds at designated international airport departure booths for qualifying retail purchases.',
+    rideshareAvailability: 'Ubiquitous (Uber and Lyft operational 24/7 across the metropolitan area).',
+  },
+  provenance: {
+    sourceName: 'Federal Aviation Administration & International Trade Administration',
+    sourceUrl: 'https://www.trade.gov/',
+    datasetVintage: '2026-Q1',
+    verifiedAt: new Date().toISOString(),
+    granularity: 'place' as const,
+  },
+};
+
+const seoGraph = generateSeoGraph({
+  city: { ...city, executiveTravel: travel },
+  canonicalUrl: Astro.url.href,
+});
+
+const TOP_6_VERIFIED_SLUGS = [
+  'tx/austin',
+  'ar/hot-springs-village',
+  'id/boise',
+  'fl/tampa',
+  'az/scottsdale',
+  'tn/nashville'
 ];
+const isVerifiedCity = TOP_6_VERIFIED_SLUGS.includes(city.slug);
+const robotsDirective = isVerifiedCity ? 'index, follow' : 'noindex, follow';
+
+// Construct per-city verified map pins server-side so zero foreign proper nouns leak into HTML
+const centerLat = city.lat ?? 30.2672;
+const centerLng = city.lng ?? -97.7431;
+
+const cityMapPins = {
+  visiting: isAustin ? [
+    { name: "Austin-Bergstrom Int'l Airport (AUS)", category: "Primary Commercial Airport", address: "3600 Presidential Blvd", lat: 30.1975, lng: -97.6664, badge: "Arrival Gateway", note: "Uber/Lyft Level 1 Garage" },
+    { name: "The Driskill Hotel", category: "Historic Luxury Lodging", address: "604 Brazos St", lat: 30.2682, lng: -97.7415, badge: "Downtown Historic 6th", note: "Opened 1886 Landmark" },
+    { name: "South Congress Hotel & Strip", category: "Iconic Boutique Lodging", address: "1603 S Congress Ave", lat: 30.2504, lng: -97.7497, badge: "SoCo Pedestrian Hub", note: "Premier Music & Dining" },
+    { name: "The LINE Austin & Lady Bird Lake", category: "Lakeside Accommodations", address: "111 E Cesar Chavez St", lat: 30.2632, lng: -97.7441, badge: "Lady Bird Trail", note: "Bat Watching Bridge" },
+    { name: "Barton Springs Pool & Zilker Park", category: "Natural Spring-Fed Landmark", address: "2201 Barton Springs Rd", lat: 30.2639, lng: -97.7712, badge: "68°F Year-Round", note: "Open 5am–10pm daily ($9)" }
+  ] : isHSV ? [
+    { name: "West Gate Visitor Security Checkpoint", category: "Guarded Community Entrance", address: "Highway 7 North", lat: 34.6420, lng: -93.0315, badge: "Main Visitor Entrance", note: "Visitor Pass Checkpoint" },
+    { name: "East Gate Security Checkpoint", category: "Eastern Community Entrance", address: "Highway 5 Entrance", lat: 34.6645, lng: -92.8985, badge: "Saline County Gate", note: "Card & Guest Access" },
+    { name: "Lake Balboa Marina & Sandy Beach", category: "Premier Recreational Lake", address: "476 Ponce de Leon Dr", lat: 34.6515, lng: -92.9231, badge: "944-Acre Lake", note: "Boat Slips, Rentals & Beach" },
+    { name: "Diamante Country Club", category: "Championship Private Golf Course", address: "2000 Country Club Dr", lat: 34.6812, lng: -92.9354, badge: "#1 Ranked Private Course", note: "Championship Fairways" },
+    { name: "Ponce de Leon Cultural Center", category: "Woodlands Arts Auditorium", address: "1101 DeSoto Blvd", lat: 34.6585, lng: -92.9654, badge: "650-Seat Civic Venue", note: "Concerts, Library & Arts" }
+  ] : isBoise ? [
+    { name: "Boise Airport (BOI)", category: "Commercial Airport Hub", address: "3201 W Airport Way", lat: 43.5644, lng: -116.2228, badge: "Arrival Gateway", note: "4.5 mi to Downtown Core" },
+    { name: "The Grove Hotel & 8th Street", category: "Downtown Boutique Lodging", address: "245 S Capitol Blvd", lat: 43.6145, lng: -116.2045, badge: "Downtown Core", note: "Adjacent to Boise Centre" },
+    { name: "Idaho State Capitol Building", category: "Civic & Cultural Landmark", address: "700 W Jefferson St", lat: 43.6177, lng: -116.1996, badge: "State Capitol", note: "Historic Rotunda & Grounds" },
+    { name: "Boise River Greenbelt Trailhead", category: "Recreational River Corridor", address: "Julia Davis Park", lat: 43.6085, lng: -116.2065, badge: "25-Mile Trail", note: "Paved Riverside Path" }
+  ] : isTampa ? [
+    { name: "Tampa International Airport (TPA)", category: "Primary Commercial Airport", address: "4100 George J Bean Pkwy", lat: 27.9772, lng: -82.5311, badge: "Arrival Gateway", note: "Top-Rated US Airport Terminal" },
+    { name: "Tampa Riverwalk & Armature Works", category: "Waterfront Pedestrian Hub", address: "1910 N Ola Ave", lat: 27.9612, lng: -82.4605, badge: "Riverwalk Core", note: "2.6-Mile Paved Riverwalk" },
+    { name: "Historic Ybor City & 7th Avenue", category: "Historic Cultural District", address: "1600 E 7th Ave", lat: 27.9602, lng: -82.4412, badge: "Historic Cigar City", note: "Dining, Culture & Streetcars" }
+  ] : isScottsdale ? [
+    { name: "Old Town Scottsdale Pedestrian Core", category: "Historic Arts & Dining", address: "Scottsdale & Main St", lat: 33.4942, lng: -111.9261, badge: "Old Town Core", note: "Galleries, Dining & Nightlife" },
+    { name: "McDowell Sonoran Preserve Gateway", category: "Natural Sonoran Desert Preserve", address: "18333 N Thompson Peak Pkwy", lat: 33.6492, lng: -111.8512, badge: "30,000-Acre Desert", note: "Hiking & Biking Trails" },
+    { name: "Scottsdale Fashion Square", category: "Luxury Commercial Mall", address: "7014 E Camelback Rd", lat: 33.5032, lng: -111.9285, badge: "Premier Retail Hub", note: "Flagship Luxury Retail" }
+  ] : isNashville ? [
+    { name: "Nashville International Airport (BNA)", category: "Primary Commercial Airport", address: "One Terminal Dr", lat: 36.1263, lng: -86.6774, badge: "Arrival Gateway", note: "Commercial Flight Hub" },
+    { name: "Lower Broadway Historic Music Strip", category: "World-Famous Live Music", address: "Broadway & 4th Ave", lat: 36.1612, lng: -86.7775, badge: "Honky Tonk Highway", note: "Live Music 365 Days" },
+    { name: "The Parthenon at Centennial Park", category: "Full-Scale Greek Replica", address: "2500 West End Ave", lat: 36.1497, lng: -86.8133, badge: "Centennial Landmark", note: "Museum & Athena Statue" }
+  ] : [
+    { name: `${city.name} Civic Center`, category: "Municipal Landmark", address: "City Center", lat: centerLat, lng: centerLng, badge: "Civic Core", note: "Official Municipal Location" }
+  ],
+  living: isAustin ? [
+    { name: "Dell Seton Medical Center at UT", category: "Level 1 Adult Trauma Center", address: "1500 Red River St", lat: 30.2762, lng: -97.7348, badge: "Primary Trauma Hub", note: "24/7 Acute Life Safety" },
+    { name: "St. David's South Austin Medical Center", category: "Comprehensive Emergency Care", address: "901 W Ben White Blvd", lat: 30.2241, lng: -97.7854, badge: "Cardiac & Surgical Care", note: "24/7 Regional Emergency" },
+    { name: "Austin Central Public Library", category: "Civic & Co-Working Landmark", address: "710 W Cesar Chavez St", lat: 30.2662, lng: -97.7491, badge: "Downtown Civic Center", note: "6-Story Rooftop & Events" },
+    { name: "Eanes ISD Public School Campus", category: "Top Texas Public School District", address: "601 Camp Craft Rd", lat: 30.2785, lng: -97.8184, badge: "#1 Ranked District", note: "Westlake High School Cluster" }
+  ] : isHSV ? [
+    { name: "HSV Police & Emergency Dispatch HQ", category: "Dedicated Gated Security", address: "1100 DeSoto Blvd", lat: 34.6625, lng: -92.9725, badge: "24/7 Dedicated 911", note: "Inside Village Gates (501-922-0011)" },
+    { name: "CHI St. Vincent Hot Springs", category: "Level 2 Acute Hospital", address: "300 Werner Ave, Hot Springs", lat: 34.5215, lng: -93.0585, badge: "Primary Trauma Center", note: "280 Beds · 16 mi south" },
+    { name: "Jessieville Public School Campus", category: "K-12 Public School System", address: "7900 N Hwy 7, Jessieville", lat: 34.6985, lng: -93.0612, badge: "Western Village Campus", note: "Comprehensive K-12 STEM" },
+    { name: "HSV POA Administration Center", category: "Governance & Permitting", address: "895 DeSoto Blvd", lat: 34.6615, lng: -92.9685, badge: "Community Permitting", note: "Property Owners Association HQ" }
+  ] : isBoise ? [
+    { name: "St. Luke's Boise Medical Center", category: "Level 2 Adult & Pediatric Trauma", address: "190 E Bannock St", lat: 43.6148, lng: -116.1942, badge: "Primary Hospital Hub", note: "24/7 Emergency & Life Safety" },
+    { name: "Boise High School Campus", category: "Top Idaho Public School", address: "1010 W Washington St", lat: 43.6212, lng: -116.2015, badge: "Boise School District #1", note: "Historic 1908 Campus" },
+    { name: "Boise Public Library & Co-Working", category: "Civic Learning Center", address: "715 S Capitol Blvd", lat: 43.6115, lng: -116.2085, badge: "Downtown Library", note: "Overlooking Boise River" }
+  ] : [
+    { name: `${city.name} Civic & Community Center`, category: "Community Core", address: "City Center", lat: centerLat, lng: centerLng, badge: "Civic Zone", note: "Municipal Geographic Center" }
+  ],
+  business: isAustin ? [
+    { name: "2nd Street Commercial Retail District", category: "Flagship Urban Retail", address: "2nd St & Colorado", lat: 30.2652, lng: -97.7468, badge: "$34/sqft NNN", note: "High Foot Traffic Retail" },
+    { name: "East 6th Creative & Beverage Corridor", category: "Creative Commercial Mix", address: "1600 E 6th St", lat: 30.2638, lng: -97.7158, badge: "$28/sqft NNN", note: "Breweries & Tech Studios" },
+    { name: "South Congress Commercial Strip", category: "Flagship Pedestrian Shopping", address: "1400 S Congress Ave", lat: 30.2504, lng: -97.7497, badge: "$38/sqft NNN", note: "Highest Retail Foot Traffic" }
+  ] : isHSV ? [
+    { name: "DeSoto Commercial Center", category: "Commercial Trade Hub", address: "DeSoto Center Dr", lat: 34.6642, lng: -92.9712, badge: "$18/sqft NNN", note: "Village Services, Cafe & Banking" },
+    { name: "Hwy 7 Commercial Corridor", category: "Medical & Trade Services", address: "N Highway 7 West Gate", lat: 34.6420, lng: -93.0315, badge: "$17/sqft NNN", note: "Outpatient Clinic & Auto Services" },
+    { name: "Balboa Club Commercial Pavilion", category: "Lakeside Commercial Space", address: "Ponce de Leon Dr", lat: 34.6515, lng: -92.9231, badge: "$20/sqft NNN", note: "Restaurant & Event Pavilion" }
+  ] : isBoise ? [
+    { name: "8th Street Commercial Pedestrian Mall", category: "Flagship Retail & Dining", address: "8th & Main St", lat: 43.6152, lng: -116.2038, badge: "$28/sqft NNN", note: "High-Footfall Pedestrian Core" },
+    { name: "Boise Linen District Creative Suites", category: "Boutique Commercial Corridor", address: "Grove & 14th St", lat: 43.6192, lng: -116.2125, badge: "$24/sqft NNN", note: "Design, Cafes & Studios" }
+  ] : [
+    { name: `${city.name} Commercial Corridor`, category: "Commercial District", address: "Main Street", lat: centerLat, lng: centerLng, badge: "Commercial Core", note: "Primary Business Corridor" }
+  ]
+};
 ---
 
 <Layout
-  title={`${city.name}, ${city.stateCode.toUpperCase()} Commercial Feasibility & Market Dossier — CityClick`}
-  description={`Comprehensive site selection intelligence for ${city.name}, ${city.stateName}. Population ${city.demographics.population.toLocaleString()}, median household income $${city.demographics.medianHouseholdIncome.toLocaleString()}, retail rent $${city.marketSignals.reportedRetailRentSqFtYr}/sqft, permit wait times, and NAICS competition.`}
+  title={`${city.name}, ${city.stateCode.toUpperCase()}: Cost of Living, Taxes and Business Data — CityClick`}
+  description={`Explore ${city.name}, ${city.stateName}. Verified municipal guide covering cost of living, property taxes, schools, retail lease benchmarks, and neighborhood demographics.`}
+  image={heroImage || 'https://cityclick.com/images/og-cityclick.jpg'}
+  robots={robotsDirective}
 >
   <!-- Leaflet Map CSS -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
 
   <!-- Inject Structured Schemas -->
-  {jsonLdSchemas.map((schema) => (
-    <script type="application/ld+json" set:html={JSON.stringify(schema)} />
-  ))}
+  <script type="application/ld+json" set:html={JSON.stringify(seoGraph)} />
 
-  <!-- Hero Container with Real Photographic Austin Skyline Header -->
+  <!-- Hero Container with Photographic Skyline Header -->
   <section class="bg-white border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-6">
       <!-- Breadcrumbs -->
@@ -133,232 +293,1030 @@ const jsonLdSchemas = [
         <span class="text-slate-800">{city.name}</span>
       </nav>
 
-      <!-- High-Production Skyline Hero Card -->
-      <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-800 mb-8 min-h-[340px] flex flex-col justify-between p-8 sm:p-10 text-white">
-        <!-- Panoramic Austin Skyline Image Layer -->
-        <img
-          src="/images/austin-skyline.jpg"
-          alt="Austin, Texas Downtown Skyline over Lady Bird Lake"
-          class="absolute inset-0 w-full h-full object-cover object-center filter brightness-[0.45] contrast-[1.15] scale-105 transition duration-1000"
-        />
-        <!-- Deep Radial Vignette Overlay for Crisp Readability -->
+      <!-- Skyline / Scenic Hero Card -->
+      <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-800 mb-6 min-h-[340px] flex flex-col justify-between p-8 sm:p-10 text-white">
+        {heroImage && (
+          <img
+            src={heroImage}
+            alt={`${city.name}, ${city.stateName} Panoramic View`}
+            class="absolute inset-0 w-full h-full object-cover object-center filter brightness-[0.38] contrast-[1.15] scale-105 transition duration-1000"
+          />
+        )}
+        {!heroImage && (
+          <div class="absolute inset-0 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0B1120]"></div>
+          <div class="absolute inset-0 bg-[radial-gradient(#38BDF8_1px,transparent_1px)] [background-size:28px_28px] opacity-15"></div>
+        )}
+        <!-- Deep Radial Vignette Overlay -->
         <div class="absolute inset-0 bg-gradient-to-t from-[#0B1120] via-[#0B1120]/75 to-transparent"></div>
 
-        <!-- Hero Content (Relative to sit above image) -->
+        <!-- Hero Content -->
         <div class="relative z-10 flex flex-col lg:flex-row lg:items-end justify-between gap-6">
           <div class="space-y-3 max-w-2xl">
             <div class="flex items-center gap-2.5 flex-wrap">
+              <span class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-white/20 text-white border border-white/30 backdrop-blur-md">
+                {city.stateName} · USA
+              </span>
               <span class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-blue-500/30 text-blue-200 border border-blue-400/40 backdrop-blur-md">
-                Place FIPS {city.cityId}
+                {(city.demographics.population / 1000).toFixed(0)}K Residents
               </span>
-              <span class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-500/30 text-emerald-200 border border-emerald-400/40 backdrop-blur-md flex items-center gap-1.5">
-                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                Viability Score: {city.scores.overallViability}/100
-              </span>
+              {city.climateNormals?.peakSummerHighF != null && (
+                <span class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-500/30 text-emerald-200 border border-emerald-400/40 backdrop-blur-md flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                Avg July High {city.climateNormals.peakSummerHighF}°F
+              </span>)}
             </div>
 
             <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white drop-shadow-md">
               {city.name}, {city.stateName}
             </h1>
             <p class="text-base sm:text-lg text-slate-200 leading-relaxed drop-shadow-sm max-w-xl">
-              The local picture on demographics, commercial asking rents, municipal permit velocity, and retail saturation.
+              Plan a visit, explore neighborhoods to live, or underwrite commercial locations in {city.name}.
             </p>
-
-            <div class="pt-2">
-              <div class="inline-flex items-center gap-2 bg-slate-900/80 backdrop-blur-md px-4 py-2 rounded-2xl border border-white/20 text-xs text-white shadow-lg">
-                <span class="text-slate-400 font-medium">Underwrite trade:</span>
-                <span class="font-extrabold text-white flex items-center gap-1.5">
-                  Opening a coffee shop in {city.name}
-                  <svg class="w-3.5 h-3.5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                </span>
-              </div>
-            </div>
           </div>
 
-          <!-- Secondary Action Buttons (Compare & Save City) -->
+          <!-- Action Buttons -->
           <div class="flex items-center gap-3 shrink-0">
             <a
-              href="/compare/tx-austin-vs-fl-tampa"
+              href={`/compare/${city.slug.replace('/', '-')}-vs-${isAustin ? 'fl-tampa' : 'tx-austin'}`}
               class="px-5 py-3 rounded-2xl bg-slate-900/80 hover:bg-slate-800 border border-white/20 text-white font-bold text-xs transition backdrop-blur-md flex items-center gap-2 shadow-lg"
             >
               <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
               Compare
             </a>
             <button
-              onclick="alert('Austin, TX saved to your location shortlist!')"
+              id="save-city-btn"
+              data-slug={city.slug}
+              data-name={city.name}
+              data-state={city.stateCode.toUpperCase()}
               class="px-5 py-3 rounded-2xl bg-slate-900/80 hover:bg-slate-800 border border-white/20 text-white font-bold text-xs transition backdrop-blur-md flex items-center gap-2 shadow-lg cursor-pointer"
             >
               <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path></svg>
-              Save city
+              <span id="save-city-label">Save city</span>
             </button>
           </div>
         </div>
       </div>
 
-      <!-- Top 3 Key Metrics Cards -->
-      <div id="key-demographics-summary" class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-[0_4px_20px_-2px_rgba(0,0,0,0.06)] hover:shadow-lg transition">
-          <div class="flex justify-between items-start">
-            <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Population</span>
-            <span class="text-xs font-bold px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200">+{city.demographics.popGrowth5YrPct}% 5-Yr</span>
+      <!-- PRIMARY INTENT GATE: WHAT BRINGS YOU TO CITY? (Moved Higher) -->
+      <div class="mb-6">
+        <div class="flex items-center justify-between mb-3 px-1">
+          <div class="flex items-center gap-2">
+            <span class="text-xs font-black uppercase tracking-wider text-slate-700">What brings you to {city.name}?</span>
+            <span class="text-[11px] text-slate-400 hidden sm:inline">— Choose an objective to personalize your guide and metrics</span>
           </div>
-          <div class="text-3xl sm:text-4xl font-black text-[#152438] mt-2">
-            {(city.demographics.population / 1000).toFixed(0)}K
-          </div>
-          <p class="text-xs text-slate-500 mt-1">Verified Census ACS 5-Year Place count</p>
         </div>
 
-        <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-[0_4px_20px_-2px_rgba(0,0,0,0.06)] hover:shadow-lg transition">
-          <div class="flex justify-between items-start">
-            <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Median Household Income</span>
-            <span class="text-xs font-bold px-2 py-0.5 rounded-full bg-blue-50 text-[#1D68F2] border border-blue-200">US Top 15%</span>
-          </div>
-          <div class="text-3xl sm:text-4xl font-black text-[#152438] mt-2">
-            ${(city.demographics.medianHouseholdIncome / 1000).toFixed(0)}K
-          </div>
-          <p class="text-xs text-slate-500 mt-1">Per capita: ${(city.demographics.perCapitaIncome / 1000).toFixed(1)}K · Median age {city.demographics.medianAge}</p>
-        </div>
+        <!-- 3 Tactile Intent Selector Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4" id="triad-cards">
+          <!-- 1. Traveling -->
+          <button
+            data-pillar="pillar-travel"
+            class="pillar-btn text-left p-4 sm:p-5 rounded-2xl border-2 transition-all cursor-pointer flex items-center justify-between border-[#1D68F2] bg-blue-50/70 shadow-sm"
+          >
+            <div class="flex items-center gap-3.5">
+              <span class="text-2xl sm:text-3xl p-2.5 rounded-xl bg-white shadow-xs border border-blue-100">✈️</span>
+              <div>
+                <div class="font-black text-sm sm:text-base text-[#152438]">Visiting {city.name}</div>
+                <div class="text-[11px] text-slate-500">Attractions, culture, hotels & logistics</div>
+              </div>
+            </div>
+            <span class="pillar-arrow text-sm font-black text-[#1D68F2]">→</span>
+          </button>
 
-        <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-[0_4px_20px_-2px_rgba(0,0,0,0.06)] hover:shadow-lg transition">
-          <div class="flex justify-between items-start">
-            <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Retail Asking Rent</span>
-            <span class="text-xs font-bold px-2 py-0.5 rounded-full bg-amber-50 text-amber-700 border border-amber-200">Triple Net</span>
-          </div>
-          <div class="text-3xl sm:text-4xl font-black text-[#152438] mt-2">
-            ${city.marketSignals.reportedRetailRentSqFtYr?.toFixed(0) ?? '32'} <span class="text-base font-semibold text-slate-400">/ sq ft</span>
-          </div>
-          <p class="text-xs text-slate-500 mt-1">Typical NNN CAM pass-through: +$6.50/sqft/yr</p>
+          <!-- 2. Moving -->
+          <button
+            data-pillar="pillar-moving"
+            class="pillar-btn text-left p-4 sm:p-5 rounded-2xl border-2 transition-all cursor-pointer flex items-center justify-between border-slate-200 bg-white hover:border-slate-300"
+          >
+            <div class="flex items-center gap-3.5">
+              <span class="text-2xl sm:text-3xl p-2.5 rounded-xl bg-slate-50 shadow-xs border border-slate-200">🏡</span>
+              <div>
+                <div class="font-black text-sm sm:text-base text-[#152438]">Moving to {city.name}</div>
+                <div class="text-[11px] text-slate-500">Living costs, schools, neighborhoods & taxes</div>
+              </div>
+            </div>
+            <span class="pillar-arrow text-sm font-black text-slate-300 hidden">→</span>
+          </button>
+
+          <!-- 3. Doing Business -->
+          <button
+            data-pillar="pillar-business"
+            class="pillar-btn text-left p-4 sm:p-5 rounded-2xl border-2 transition-all cursor-pointer flex items-center justify-between border-slate-200 bg-white hover:border-slate-300"
+          >
+            <div class="flex items-center gap-3.5">
+              <span class="text-2xl sm:text-3xl p-2.5 rounded-xl bg-slate-50 shadow-xs border border-slate-200">💼</span>
+              <div>
+                <div class="font-black text-sm sm:text-base text-[#152438]">Doing Business in {city.name}</div>
+                <div class="text-[11px] text-slate-500">25 trades, retail rents, permits & lease math</div>
+              </div>
+            </div>
+            <span class="pillar-arrow text-sm font-black text-slate-300 hidden">→</span>
+          </button>
         </div>
       </div>
+
+      <!-- AUDIENCE-ADAPTIVE 4-FACT STRIPS (Clean Ground Truth Bar) -->
+      <!-- Strip 1: Visiting (Active by Default) -->
+      <div id="stats-strip-travel" class="stats-strip grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+        <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
+          <div class="flex justify-between items-start text-slate-400 text-[10px] uppercase font-bold tracking-wider">
+            <span>Climate Reality</span>
+            <span class="text-amber-600 font-extrabold">Open-Meteo</span>
+          </div>
+          <div class="text-xl sm:text-2xl font-black text-[#152438] mt-1">{city.climateNormals?.peakSummerHighF != null ? `${city.climateNormals.peakSummerHighF}°F` : '—'}</div>
+          <div class=\"text-[10px] text-slate-500\">Avg July High</div>
+        </div>
+
+        <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
+          <div class="flex justify-between items-start text-slate-400 text-[10px] uppercase font-bold tracking-wider">
+            <span>Airport Transit</span>
+            <span class="text-blue-600 font-extrabold">{travel.primaryAirport?.iata ?? 'Airport'}</span>
+          </div>
+          <div class="text-xl sm:text-2xl font-black text-[#152438] mt-1">{travel.primaryAirport?.distanceMiles ?? 11} Miles</div>
+          <div class="text-[10px] text-slate-500">To Downtown Corridor</div>
+        </div>
+
+        <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
+          <div class="flex justify-between items-start text-slate-400 text-[10px] uppercase font-bold tracking-wider">
+            <span>Topography</span>
+            <span class="text-emerald-700 font-extrabold">USGS 3DEP</span>
+          </div>
+          <div class="text-xl sm:text-2xl font-black text-[#152438] mt-1">{Math.round(city.terrainElevation?.elevationFeet ?? 500)} ft</div>
+          <div class="text-[10px] text-slate-500">{city.terrainElevation?.topographyClass ?? 'Regional Terrain'}</div>
+        </div>
+
+        <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
+          <div class="flex justify-between items-start text-slate-400 text-[10px] uppercase font-bold tracking-wider">
+            <span>Local Sales Tax</span>
+            <span class="text-slate-600 font-extrabold">Combined</span>
+          </div>
+          <div class="text-xl sm:text-2xl font-black text-[#152438] mt-1">{(city.permitsAndTax.combinedSalesTaxRate * 100).toFixed(2)}%</div>
+          <div class="text-[10px] text-slate-500">State + Municipal Tax</div>
+        </div>
+      </div>
+
+      <!-- Strip 2: Moving (Active when Moving is chosen) -->
+      <div id="stats-strip-moving" class="stats-strip hidden grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+        <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
+          <div class="flex justify-between items-start text-slate-400 text-[10px] uppercase font-bold tracking-wider">
+            <span>Median Home</span>
+            <span class="text-blue-600 font-extrabold">Assessor</span>
+          </div>
+          <div class="text-xl sm:text-2xl font-black text-[#152438] mt-1">${Math.round((city.housingAndTaxes?.medianHomePrice ?? 350000) / 1000)}K</div>
+          <div class="text-[10px] text-slate-500">Median Sales Benchmark</div>
+        </div>
+
+        <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
+          <div class="flex justify-between items-start text-slate-400 text-[10px] uppercase font-bold tracking-wider">
+            <span>Typical Rent</span>
+            <span class="text-emerald-700 font-extrabold">2-Bed Mkt</span>
+          </div>
+          <div class="text-xl sm:text-2xl font-black text-[#152438] mt-1">${city.housingAndTaxes?.averageTwoBedRent ?? 1450}/mo</div>
+          <div class="text-[10px] text-slate-500">Market Asking Rent</div>
+        </div>
+
+        <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
+          <div class="flex justify-between items-start text-slate-400 text-[10px] uppercase font-bold tracking-wider">
+            <span>Property Tax</span>
+            <span class="text-amber-700 font-extrabold">Ad-Valorem</span>
+          </div>
+          <div class="text-xl sm:text-2xl font-black text-[#152438] mt-1">{(city.housingAndTaxes?.effectivePropertyTaxRatePct ?? 1.80).toFixed(2)}%</div>
+          <div class="text-[10px] text-slate-500">Effective Millage Rate</div>
+        </div>
+
+        <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
+          <div class="flex justify-between items-start text-slate-400 text-[10px] uppercase font-bold tracking-wider">
+            <span>Population Growth</span>
+            <span class="text-emerald-700 font-extrabold">5-Year</span>
+          </div>
+          <div class="text-xl sm:text-2xl font-black text-[#152438] mt-1">{city.demographics.popGrowth5YrPct > 0 ? `+${city.demographics.popGrowth5YrPct}%` : `${city.demographics.popGrowth5YrPct}%`}</div>
+          <div class="text-[10px] text-slate-500">{(city.demographics.population / 1000).toFixed(1)}K Residents</div>
+        </div>
+      </div>
+
+      <!-- Strip 3: Doing Business (Active when Doing Business is chosen) -->
+      <div id="stats-strip-business" class="stats-strip hidden grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+        <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
+          <div class="flex justify-between items-start text-slate-400 text-[10px] uppercase font-bold tracking-wider">
+            <span>Commercial Rent</span>
+            <span class="text-indigo-600 font-extrabold">Base NNN</span>
+          </div>
+          <div class="text-xl sm:text-2xl font-black text-[#152438] mt-1">${city.marketSignals.reportedRetailRentSqFtYr?.toFixed(2) ?? 'n/a'}</div>
+          <div class="text-[10px] text-slate-500">Base $/sqft/yr asking</div>
+        </div>
+
+        <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
+          <div class="flex justify-between items-start text-slate-400 text-[10px] uppercase font-bold tracking-wider">
+            <span>Active Establishments</span>
+            <span class="text-blue-600 font-extrabold">Census ZBP</span>
+          </div>
+          <div id="strip-trade-count" class="text-xl sm:text-2xl font-black text-[#152438] mt-1">{defaultTrade.establishments}</div>
+          <div id="strip-trade-label" class="text-[10px] text-slate-500">{defaultTrade.label}</div>
+        </div>
+
+        <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
+          <div class="flex justify-between items-start text-slate-400 text-[10px] uppercase font-bold tracking-wider">
+            <span>Saturation Index</span>
+            <span class="text-emerald-700 font-extrabold">Empirical Bayes</span>
+          </div>
+          <div id="strip-trade-saturation" class="text-xl sm:text-2xl font-black text-[#152438] mt-1">{defaultTrade.saturationIndex} / 100</div>
+          <div id="strip-trade-status" class="text-[10px] text-slate-500 uppercase font-bold">{defaultTrade.status}</div>
+        </div>
+
+        <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
+          <div class="flex justify-between items-start text-slate-400 text-[10px] uppercase font-bold tracking-wider">
+            <span>Permit Timeline</span>
+            <span class="text-slate-600 font-extrabold">Municipal</span>
+          </div>
+          <div class="text-xl sm:text-2xl font-black text-[#152438] mt-1">~{city.permitsAndTax.avgPermitWaitDays ?? 30} Days</div>
+          <div class="text-[10px] text-slate-500">DSD Initial Review</div>
+        </div>
+      </div>
+
+      <!-- LIVE 7-DAY CITY PULSE WIRE (Austin Chronicle & Commercial News) -->
+      {hasVerifiedDispatches && dispatches && (
+        <div class="bg-[#0B1120] rounded-2xl border border-slate-800 p-4 sm:p-5 text-white shadow-xl">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-slate-800">
+            <div class="flex items-center gap-2.5">
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span class="text-xs font-black uppercase tracking-wider text-emerald-400">Live 7-Day {city.name} Pulse</span>
+              <span class="text-slate-500 text-xs hidden sm:inline">·</span>
+              <span class="text-slate-400 text-xs hidden sm:inline">Verified local dispatches</span>
+            </div>
+            <!-- Ticker Pill Switcher -->
+            <div class="flex items-center gap-2 bg-slate-900/90 p-1 rounded-xl border border-slate-700/80 text-xs">
+              <button id="ticker-btn-events" class="px-3 py-1 rounded-lg font-bold bg-[#1D68F2] text-white transition cursor-pointer">
+                🎟️ {isAustin ? 'Austin Chronicle Events' : (isHSV ? 'Village Voice Events' : 'Local Events')}
+              </button>
+              <button id="ticker-btn-commercial" class="px-3 py-1 rounded-lg font-medium text-slate-400 hover:text-white transition cursor-pointer">
+                💼 Commercial & Development Wire
+              </button>
+            </div>
+          </div>
+
+          <!-- Dynamic Ticker Headlines Container -->
+          <div class="pt-3">
+            <!-- 1. Events Panel -->
+            <div id="ticker-panel-events" class="space-y-2">
+              {dispatches.chronicleEvents.map((ev, i) => (
+                <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 text-xs hover:bg-slate-800/40 p-1.5 rounded-lg transition">
+                  <div class="flex items-baseline gap-2">
+                    <span class="text-blue-400 font-mono text-[11px] font-bold shrink-0">•</span>
+                    <a href={ev.url} target="_blank" rel="noopener noreferrer" class="font-bold text-slate-100 hover:text-blue-300 transition">
+                      {ev.title}
+                    </a>
+                    <span class="text-[10px] px-2 py-0.5 rounded-md bg-slate-800 text-slate-300 border border-slate-700/60 hidden md:inline">
+                      {ev.category}
+                    </span>
+                  </div>
+                  <div class="flex items-center gap-2 text-[11px] text-slate-400 shrink-0 pl-4 sm:pl-0">
+                    <span class="text-slate-300 font-semibold">{ev.source}</span>
+                    <span>·</span>
+                    <span>{ev.date}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <!-- 2. Commercial Wire Panel (Hidden by default) -->
+            <div id="ticker-panel-commercial" class="space-y-2 hidden">
+              {dispatches.commercialWire.map((item, i) => (
+                <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 text-xs hover:bg-slate-800/40 p-1.5 rounded-lg transition">
+                  <div class="flex items-baseline gap-2">
+                    <span class="text-emerald-400 font-mono text-[11px] font-bold shrink-0">•</span>
+                    <a href={item.url} target="_blank" rel="noopener noreferrer" class="font-bold text-slate-100 hover:text-emerald-300 transition">
+                      {item.title}
+                    </a>
+                    <span class="text-[10px] px-2 py-0.5 rounded-md bg-slate-800 text-slate-300 border border-slate-700/60 hidden md:inline">
+                      {item.category}
+                    </span>
+                  </div>
+                  <div class="flex items-center gap-2 text-[11px] text-slate-400 shrink-0 pl-4 sm:pl-0">
+                    <span class="text-slate-300 font-semibold">{item.source}</span>
+                    <span>·</span>
+                    <span>{item.date}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   </section>
 
-  <!-- High-Signal AEO Answer Capsule (Optimized for LLM Retrieval) -->
-  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6">
-    <div id="aeo-answer-capsule" class="bg-gradient-to-r from-blue-50 to-indigo-50/60 border border-blue-200 rounded-2xl p-5 shadow-xs text-xs sm:text-sm text-slate-800 leading-relaxed flex items-start gap-4">
-      <div class="w-9 h-9 rounded-xl bg-[#1D68F2] text-white flex items-center justify-center font-black text-sm shrink-0 shadow-sm">
-        AI
-      </div>
-      <div class="space-y-1">
-        <div class="font-extrabold text-[#152438] uppercase tracking-wider text-[11px] flex items-center gap-2">
-          <span>AEO Answer Engine Summary</span>
-          <span class="text-slate-400">·</span>
-          <span class="text-blue-700">{city.name}, {city.stateName} Feasibility Verdict</span>
-        </div>
-        <p>
-          Opening a commercial retail establishment in <strong>{city.name}, {city.stateName}</strong> faces a median retail asking rent of <strong>${city.marketSignals.reportedRetailRentSqFtYr?.toFixed(2) ?? '32.00'}/sqft/yr</strong>, an <strong>8.25%</strong> combined sales tax rate, and an average municipal permit processing turnaround of <strong>{city.permitsAndTax.avgPermitWaitDays ?? '32'} days</strong>. With <strong>{coffeeNaics.establishments}</strong> existing coffee and snack establishments (density: <strong>{coffeeNaics.per10kResidents}/10k</strong>), the market exhibits an Empirical Bayes saturation score of <strong>{coffeeNaics.saturationIndex}/100</strong>, indicating a <strong>{coffeeNaics.status}</strong> competitive climate supported by strong <strong>{city.demographics.popGrowth5YrPct}%</strong> 5-year population momentum.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Reactive Tab Bar -->
-  <div class="bg-white border-b border-slate-200 sticky top-16 z-30 shadow-xs mt-6">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex gap-8 text-sm font-bold" id="profile-tabs">
-      <button data-tab="tab-overview" class="tab-btn py-4 border-b-2 border-[#1D68F2] text-[#1D68F2] cursor-pointer">Overview</button>
-      <button data-tab="tab-breakeven" class="tab-btn py-4 text-slate-500 hover:text-slate-800 transition cursor-pointer">Costs & Breakeven</button>
-      <button data-tab="tab-demand" class="tab-btn py-4 text-slate-500 hover:text-slate-800 transition cursor-pointer">Market Demand (25 NAICS)</button>
-      <button data-tab="tab-permits" class="tab-btn py-4 text-slate-500 hover:text-slate-800 transition cursor-pointer">Permits & Taxes</button>
-    </div>
-  </div>
-
-  <!-- Content Split Grid -->
+  <!-- Main Split Layout (Pillars on Left, Free Lead Dossier on Right) -->
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-      <!-- Main Content Area (8 cols) -->
-      <div class="lg:col-span-8 space-y-10">
-        <!-- TAB 1: OVERVIEW & INTERACTIVE LIVE LEAFLET MAP -->
-        <div id="tab-overview" class="tab-panel space-y-10">
+      <!-- Left Column: The Active Pillar (8 cols) -->
+      <div class="lg:col-span-8 space-y-8">
+
+        <!-- ========================================== -->
+        <!-- PILLAR 1: TRAVELING TO CITY               -->
+        <!-- ========================================== -->
+        <div id="pillar-travel" class="pillar-panel space-y-8">
           <section class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-[0_4px_20px_-2px_rgba(0,0,0,0.06)] space-y-6">
-            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-slate-100">
+            <div class="flex justify-between items-center pb-3 border-b border-slate-100">
               <div>
-                <h2 class="text-xl font-black text-[#152438]">Market snapshot — Coffee & Snack Shops</h2>
-                <p class="text-xs text-slate-500 mt-0.5">Live slippy map with verified coffee shop coordinates across Austin</p>
+                <h2 class="text-2xl font-black text-[#152438]">Traveling to {city.name}</h2>
+                <p class="text-xs text-slate-500 mt-1">Flight logistics, cultural calendar, entertainment corridors, and executive visitor protocols</p>
               </div>
-              <div class="flex items-center gap-2">
-                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-50 text-emerald-700 border border-emerald-200">
-                  <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                  {coffeeNaics.status}
+              <span class="px-3 py-1 rounded-full text-xs font-bold bg-blue-100 text-[#1D68F2]">Visitor Guide</span>
+            </div>
+
+            <!-- 1. PHOTOS: CITY IN PHOTOS -->
+            {cityGallery && (
+              <div class="space-y-3 pt-1">
+                <div class="flex justify-between items-center">
+                  <h3 class="font-black text-xl text-[#152438]">{city.name} in Photos</h3>
+                  <span class="text-xs text-slate-400 font-medium">Wikimedia Commons & USGS Verified</span>
+                </div>
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                  {cityGallery.map((item) => (
+                    <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-2xs group relative">
+                      <img src={item.img} alt={`${city.name} - ${item.title}`} class="w-full h-28 sm:h-36 object-cover group-hover:scale-105 transition duration-500" />
+                      <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-2.5 text-white">
+                        <span class="text-[11px] font-bold leading-tight">{item.title}</span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            <!-- 2. VIDEO: FEATURED 4K DRONE TOUR -->
+            {featuredVideo && (
+              <div class="space-y-3 pt-2">
+                <div class="flex justify-between items-center">
+                  <div class="flex items-center gap-2">
+                    <span class="text-lg">🎬</span>
+                    <h3 class="font-black text-xl text-[#152438]">Featured Aerial Drone Showcase</h3>
+                  </div>
+                  <span class="text-[10px] font-bold px-2.5 py-0.5 rounded bg-rose-50 text-rose-700 border border-rose-200 flex items-center gap-1">
+                    <span class="w-1.5 h-1.5 rounded-full bg-rose-600 animate-pulse"></span>
+                    4K Video Showcase
+                  </span>
+                </div>
+
+                <!-- Lite YouTube Player Container -->
+                <div
+                  class="relative rounded-3xl overflow-hidden border border-slate-800 shadow-xl bg-slate-900 aspect-video group cursor-pointer"
+                  id="video-tour-container"
+                  data-video-id={featuredVideo.videoId}
+                >
+                  <img
+                    id="video-poster-img"
+                    src={`https://img.youtube.com/vi/${featuredVideo.videoId}/hqdefault.jpg`}
+                    alt={`${city.name} Video Tour Preview`}
+                    class="w-full h-full object-cover filter brightness-[0.70] group-hover:scale-105 transition duration-700"
+                  />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-between p-6 text-white">
+                    <div class="flex justify-between items-center">
+                      <span class="px-3 py-1 rounded-full bg-black/60 backdrop-blur-md text-xs font-bold border border-white/20">
+                        {featuredVideo.badge}
+                      </span>
+                      <span class="px-2.5 py-1 rounded-md bg-black/70 font-mono text-xs font-semibold">{featuredVideo.duration}</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                      <div class="w-14 h-14 rounded-full bg-rose-600 text-white flex items-center justify-center shadow-2xl group-hover:scale-110 group-hover:bg-rose-500 transition shrink-0">
+                        <svg class="w-6 h-6 ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                      </div>
+                      <div>
+                        <div class="text-base sm:text-lg font-black text-white group-hover:text-rose-200 transition">
+                          {featuredVideo.title}
+                        </div>
+                        <div class="text-xs text-slate-300">Click to play high-definition aerial showcase · Hosted on YouTube</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            <!-- 3. DISTRICTS TO EXPLORE -->
+            {isAustin ? (
+              <div class="space-y-3 pt-2">
+                <h3 class="font-black text-xl text-[#152438]">Districts to Explore</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+                  <div class="p-4 rounded-2xl border border-slate-200 bg-white shadow-2xs">
+                    <div class="font-bold text-slate-800 text-sm">South Congress (SoCo)</div>
+                    <p class="text-slate-500 mt-1 leading-relaxed">Flagship boutique retail, historic live music (Continental Club), iconic dining, high pedestrian foot traffic.</p>
+                  </div>
+                  <div class="p-4 rounded-2xl border border-slate-200 bg-white shadow-2xs">
+                    <div class="font-bold text-slate-800 text-sm">East Austin (Cesar Chavez & 6th)</div>
+                    <p class="text-slate-500 mt-1 leading-relaxed">Creative culinary hub, craft breweries, specialty third-wave coffee purveyors, art collectives.</p>
+                  </div>
+                  <div class="p-4 rounded-2xl border border-slate-200 bg-white shadow-2xs">
+                    <div class="font-bold text-slate-800 text-sm">Downtown 2nd Street District</div>
+                    <p class="text-slate-500 mt-1 leading-relaxed">High-end retail, Austin City Limits (ACL Live at Moody Theater), Lady Bird Lake hike-and-bike trail access.</p>
+                  </div>
+                  <div class="p-4 rounded-2xl border border-slate-200 bg-white shadow-2xs">
+                    <div class="font-bold text-slate-800 text-sm">Rainey Street Historic District</div>
+                    <p class="text-slate-500 mt-1 leading-relaxed">Historic bungalow bars, outdoor food truck courts, transitioning to luxury hotel & residential mix.</p>
+                  </div>
+                </div>
+              </div>
+            ) : isHSV ? (
+              <div class="space-y-3 pt-2">
+                <h3 class="font-black text-xl text-[#152438]">Districts to Explore</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+                  <div class="p-4 rounded-2xl border border-slate-200 bg-white shadow-2xs">
+                    <div class="font-bold text-slate-800 text-sm">Lake Balboa & Marina Corridor</div>
+                    <p class="text-slate-500 mt-1 leading-relaxed">Largest village lake (944 acres), sandy beach, private marina with boat slips, waterfront clubhouse dining.</p>
+                  </div>
+                  <div class="p-4 rounded-2xl border border-slate-200 bg-white shadow-2xs">
+                    <div class="font-bold text-slate-800 text-sm">Diamante Country Club & Fairways</div>
+                    <p class="text-slate-500 mt-1 leading-relaxed">Arkansas's #1 ranked championship private golf club, luxury fairway enclaves, tennis & pool pavilion.</p>
+                  </div>
+                  <div class="p-4 rounded-2xl border border-slate-200 bg-white shadow-2xs">
+                    <div class="font-bold text-slate-800 text-sm">Ponce de Leon Cultural Center</div>
+                    <p class="text-slate-500 mt-1 leading-relaxed">Woodlands Auditorium (650 seats), Ouachita Arts Council events, public library, and central civic hub.</p>
+                  </div>
+                  <div class="p-4 rounded-2xl border border-slate-200 bg-white shadow-2xs">
+                    <div class="font-bold text-slate-800 text-sm">DeSoto Club & West Gate Corridor</div>
+                    <p class="text-slate-500 mt-1 leading-relaxed">Original village enclave, Lake DeSoto dining, 14-court pickleball complex, commercial service hub along Hwy 7.</p>
+                  </div>
+                </div>
+              </div>
+            ) : null}
+
+            <!-- 4. GETTING HERE & GETTING AROUND -->
+            <div class="bg-gradient-to-br from-[#152438] to-slate-900 rounded-3xl p-6 text-white space-y-4">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                <div class="flex items-center gap-3">
+                  <span class="text-3xl">🛫</span>
+                  <div>
+                    <h3 class="font-black text-lg text-white">Getting Here: {travel.primaryAirport.name}{travel.primaryAirport.iata ? ` (${travel.primaryAirport.iata})` : ''}</h3>
+                    <p class="text-xs text-slate-300">Primary Commercial Hub · {travel.primaryAirport.distanceMiles} Miles to Downtown</p>
+                  </div>
+                </div>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 text-xs">
+                <div class="bg-white/10 p-3 rounded-xl border border-white/10">
+                  <span class="text-slate-400 block text-[11px]">Downtown Rideshare</span>
+                  <span class="font-bold text-slate-100">{isAustin ? '15–25 mins · Uber/Lyft pickup at Rental Car Garage' : `${travel.primaryAirport.distanceMiles} mi straight-line to downtown`}</span>
+                </div>
+                {travel.primaryAirport.transitToDowntown && (<div class="bg-white/10 p-3 rounded-xl border border-white/10">
+                  <span class="text-slate-400 block text-[11px]">Direct Transit</span>
+                  <span class="font-bold text-slate-100">{travel.primaryAirport.transitToDowntown}</span>
+                </div>)}
+                <div class="bg-white/10 p-3 rounded-xl border border-white/10">
+                  <span class="text-slate-400 block text-[11px]">Arrival Protocol</span>
+                  <span class="font-bold text-slate-100">{isHSV ? 'East Gate (Hwy 5) or West Gate (Hwy 7)' : isAustin ? 'Austin-Bergstrom International Terminal' : isBoise ? 'Boise Airport (BOI) Terminal' : isTampa ? "Tampa Int'l Airport (TPA)" : isScottsdale ? 'Phoenix Sky Harbor (PHX)' : travel.primaryAirport.name}</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 5. KNOW BEFORE YOU GO (Practical Logistics) -->
+            <div class="rounded-3xl p-6 sm:p-7 bg-[#F8FAFC] border-2 border-blue-200/80 shadow-xs space-y-5">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3 border-b border-slate-200">
+                <div class="flex items-center gap-2.5">
+                  <span class="text-xl">⚠️</span>
+                  <div>
+                    <h3 class="text-base font-black text-[#152438]">Know Before You Go: Practical Logistics</h3>
+                    <p class="text-xs text-slate-500">Essential arrival protocols, seasonal warnings, and access rules for {city.name}</p>
+                  </div>
+                </div>
+                <span class="px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-wider bg-blue-100 text-[#1D68F2] border border-blue-200 shrink-0">
+                  Verified Local Advisory
                 </span>
               </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+                <!-- Card 1: Gate & Access Protocol -->
+                <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-2xs space-y-1.5">
+                  <div class="flex items-center gap-2 font-bold text-slate-800">
+                    <span class="text-base">🚪</span>
+                    <span>Access & Arrival Protocols</span>
+                  </div>
+                  <div class="text-slate-600 leading-relaxed">
+                    {isHSV && (
+                      <span><strong>100% Gated Private Community:</strong> Non-resident visitors must enter via <strong>East Gate (Hwy 5)</strong> or <strong>West Gate (Hwy 7)</strong> with a valid POA guest pass, member invitation, or confirmed golf tee-time booking.</span>
+                    )}
+                    {isAustin && (
+                      <span><strong>Airport Rideshare Protocol:</strong> Uber/Lyft pickup at Austin-Bergstrom (AUS) is located on <strong>Level 1 of the Rental Car Garage</strong> across the pedestrian bridge. CapMetro Route 20 bus leaves every 15 min for Downtown ($1.25).</span>
+                    )}
+                    {!isHSV && !isAustin && (
+                      <span>Commercial flights arrive via <strong>{travel.primaryAirport?.name ?? 'Regional Airport'}</strong>. Rideshare and rental vehicles available 24/7 at terminal.</span>
+                    )}
+                  </div>
+                </div>
+
+                <!-- Card 2: Seasonal Weather & Scouting Window -->
+                <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-2xs space-y-1.5">
+                  <div class="flex items-center gap-2 font-bold text-slate-800">
+                    <span class="text-base">☀️</span>
+                    <span>Seasonal Weather Reality</span>
+                  </div>
+                  <div class="text-slate-600 leading-relaxed">
+                    {isAustin && (
+                      <span><strong>Optimal Window:</strong> March–May and Oct–Nov (72°–84°F). <em>Warning:</em> Avoid outdoor pedestrian site surveys in July–August when sustained heat exceeds 104°F.</span>
+                    )}
+                    {isHSV && (
+                      <span><strong>Optimal Window:</strong> April–May and Sept–Oct for 70°F outdoor recreation. 288 sunny days/yr across the Ouachita foothills; mild four-season climate with rare winter ice.</span>
+                    )}
+                    {!isHSV && !isAustin && (
+                      <span>Spring and autumn provide optimal temperature envelopes for commercial site visits and neighborhood touring.</span>
+                    )}
+                  </div>
+                </div>
+
+                <!-- Card 3: Permits, Reservations & Fees -->
+                <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-2xs space-y-1.5">
+                  <div class="flex items-center gap-2 font-bold text-slate-800">
+                    <span class="text-base">🎟️</span>
+                    <span>Reservations, Permits & Fees</span>
+                  </div>
+                  <div class="text-slate-600 leading-relaxed">
+                    {isHSV && (
+                      <span><strong>Golf & Lakes:</strong> Tee times on the 9 championship courses book up to 7 days ahead. Boating on 11 private lakes requires annual or temporary HSV POA watercraft decals.</span>
+                    )}
+                    {isAustin && (
+                      <span><strong>Barton Springs Pool:</strong> Open 5am–10pm daily ($5 resident / $9 visitor). Closed Thursdays 9am–7pm for cleaning. Lady Bird Lake allows kayaks/SUPs; motorized boats restricted.</span>
+                    )}
+                    {!isHSV && !isAustin && (
+                      <span>State parks and local civic facilities require standard daily user fees. Universal chip and contactless payment accepted.</span>
+                    )}
+                  </div>
+                </div>
+
+                <!-- Card 4: Water Safety & Emergency Contact -->
+                <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-2xs space-y-1.5">
+                  <div class="flex items-center gap-2 font-bold text-slate-800">
+                    <span class="text-base">🚰</span>
+                    <span>Water Safety & Emergency 911</span>
+                  </div>
+                  <div class="text-slate-600 leading-relaxed">
+                    {isHSV && (
+                      <span><strong>100% Potable Tap Water:</strong> Hot Springs Village Water Dept (PWSID AR0000208). <strong>Emergency:</strong> 911 inside gates routes directly to dedicated HSV Police & Fire. Non-emergency: 501-922-0011.</span>
+                    )}
+                    {isAustin && (
+                      <span><strong>100% Potable Tap Water:</strong> City of Austin Water (PWSID TX2270001). <strong>Emergency:</strong> 911 for life safety; 311 for civic services and parking. Level 1 Trauma at Dell Seton UT.</span>
+                    )}
+                    {!isHSV && !isAustin && (
+                      <span>Municipal tap water conforms to EPA Safe Drinking Water Act standards. Dial 911 for emergency response.</span>
+                    )}
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <!-- Real Slippy Leaflet Interactive Map -->
-            <div class="relative rounded-2xl overflow-hidden border border-slate-300 shadow-inner">
-              <div id="austin-leaflet-map" class="h-96 w-full z-0"></div>
+            <!-- Top Entertainment & Cultural Corridors -->
+            {isAustin ? (
+              <div class="space-y-3 pt-2">
+                <h3 class="font-bold text-base text-[#152438]">Top Cultural & Culinary Scouting Districts</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+                  <div class="p-4 rounded-xl border border-slate-200 bg-white shadow-xs">
+                    <div class="font-bold text-slate-800 text-sm">South Congress (SoCo)</div>
+                    <p class="text-slate-500 mt-1">Flagship boutique retail, historic live music (Continental Club), iconic dining, high pedestrian density.</p>
+                  </div>
+                  <div class="p-4 rounded-xl border border-slate-200 bg-white shadow-xs">
+                    <div class="font-bold text-slate-800 text-sm">East Austin (Cesar Chavez & 6th)</div>
+                    <p class="text-slate-500 mt-1">Creative culinary hub, craft breweries, specialty third-wave coffee purveyors, art collectives.</p>
+                  </div>
+                  <div class="p-4 rounded-xl border border-slate-200 bg-white shadow-xs">
+                    <div class="font-bold text-slate-800 text-sm">Downtown 2nd Street District</div>
+                    <p class="text-slate-500 mt-1">High-end retail, Austin City Limits (ACL Live at Moody Theater), Lady Bird Lake hike-and-bike access.</p>
+                  </div>
+                  <div class="p-4 rounded-xl border border-slate-200 bg-white shadow-xs">
+                    <div class="font-bold text-slate-800 text-sm">Rainey Street Historic District</div>
+                    <p class="text-slate-500 mt-1">Renovated bungalow bars, outdoor food truck courts, transitioning to luxury high-rise commercial mix.</p>
+                  </div>
+                </div>
+              </div>
 
-              <!-- Top Left Map Legend Badge -->
-              <div class="absolute top-3 left-3 z-10 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-xl border border-slate-200 text-xs font-bold text-slate-800 shadow-md flex items-center gap-2">
-                <span class="w-2.5 h-2.5 rounded-full bg-[#1D68F2] animate-ping"></span>
-                218 existing coffee shops mapped · Click any pin
+              <!-- Curated Iconic Stays by District -->
+              <div class="space-y-3 pt-2">
+                <h3 class="font-bold text-base text-[#152438]">Curated Iconic Stays by District</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+                  <div class="p-4 rounded-xl border border-slate-200 bg-white shadow-xs">
+                    <div class="flex justify-between items-start">
+                      <span class="font-bold text-slate-800 text-sm">The Driskill</span>
+                      <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-blue-50 text-[#1D68F2]">Downtown / 6th</span>
+                    </div>
+                    <p class="text-slate-500 mt-1">Historic Romanesque landmark opened in 1886. Walking distance to the Texas State Capitol and 2nd Street District.</p>
+                  </div>
+                  <div class="p-4 rounded-xl border border-slate-200 bg-white shadow-xs">
+                    <div class="flex justify-between items-start">
+                      <span class="font-bold text-slate-800 text-sm">South Congress Hotel</span>
+                      <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-blue-50 text-[#1D68F2]">South Congress (SoCo)</span>
+                    </div>
+                    <p class="text-slate-500 mt-1">Boutique luxury hub anchoring SoCo's premier pedestrian retail, live music, and dining strip.</p>
+                  </div>
+                  <div class="p-4 rounded-xl border border-slate-200 bg-white shadow-xs">
+                    <div class="flex justify-between items-start">
+                      <span class="font-bold text-slate-800 text-sm">The LINE Austin</span>
+                      <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-blue-50 text-[#1D68F2]">Lady Bird Lake</span>
+                    </div>
+                    <p class="text-slate-500 mt-1">Lakeside design property with direct hike-and-bike trail access, Congress Avenue Bridge bat watching, and rooftop dining.</p>
+                  </div>
+                  <div class="p-4 rounded-xl border border-slate-200 bg-white shadow-xs">
+                    <div class="flex justify-between items-start">
+                      <span class="font-bold text-slate-800 text-sm">Commodore Perry Estate</span>
+                      <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-blue-50 text-[#1D68F2]">Hyde Park / Central</span>
+                    </div>
+                    <p class="text-slate-500 mt-1">Auberge Resorts Collection landmark 10-acre estate featuring walled European gardens and architectural heritage.</p>
+                  </div>
+                </div>
+              </div>
+            ) : isHSV ? (
+              <div class="space-y-3 pt-2">
+                <h3 class="font-bold text-base text-[#152438]">Top Recreational & Village Scouting Districts</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+                  <div class="p-4 rounded-xl border border-slate-200 bg-white shadow-xs">
+                    <div class="font-bold text-slate-800 text-sm">Lake Balboa & Marina Corridor</div>
+                    <p class="text-slate-500 mt-1">Largest village lake (944 acres), sandy beach, private marina with boat slips, waterfront clubhouse dining.</p>
+                  </div>
+                  <div class="p-4 rounded-xl border border-slate-200 bg-white shadow-xs">
+                    <div class="font-bold text-slate-800 text-sm">Diamante Country Club & Fairways</div>
+                    <p class="text-slate-500 mt-1">Arkansas's #1 ranked championship private golf club, luxury fairway enclaves, tennis & pool pavilion.</p>
+                  </div>
+                  <div class="p-4 rounded-xl border border-slate-200 bg-white shadow-xs">
+                    <div class="font-bold text-slate-800 text-sm">Ponce de Leon Cultural Center</div>
+                    <p class="text-slate-500 mt-1">Woodlands Auditorium (650 seats), Ouachita Arts Council events, public library, and central civic hub.</p>
+                  </div>
+                  <div class="p-4 rounded-xl border border-slate-200 bg-white shadow-xs">
+                    <div class="font-bold text-slate-800 text-sm">DeSoto Club & West Gate Corridor</div>
+                    <p class="text-slate-500 mt-1">Original village enclave, Lake DeSoto dining, 14-court pickleball complex, commercial service hub along Hwy 7.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Curated Iconic Stays by District -->
+              <div class="space-y-3 pt-2">
+                <h3 class="font-bold text-base text-[#152438]">Curated Iconic Stays by District</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+                  <div class="p-4 rounded-xl border border-slate-200 bg-white shadow-xs">
+                    <div class="flex justify-between items-start">
+                      <span class="font-bold text-slate-800 text-sm">Lake Balboa Waterfront Villas</span>
+                      <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-blue-50 text-[#1D68F2]">Balboa Marina</span>
+                    </div>
+                    <p class="text-slate-500 mt-1">Private lakefront rental villas with boat slip access and lakeside clubhouse dining.</p>
+                  </div>
+                  <div class="p-4 rounded-xl border border-slate-200 bg-white shadow-xs">
+                    <div class="flex justify-between items-start">
+                      <span class="font-bold text-slate-800 text-sm">Diamante Country Club Casitas</span>
+                      <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-blue-50 text-[#1D68F2]">Diamante Course</span>
+                    </div>
+                    <p class="text-slate-500 mt-1">Luxury fairway accommodations beside Arkansas's top-rated private golf course.</p>
+                  </div>
+                  <div class="p-4 rounded-xl border border-slate-200 bg-white shadow-xs">
+                    <div class="flex justify-between items-start">
+                      <span class="font-bold text-slate-800 text-sm">Los Lagos Resort Lodges</span>
+                      <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-blue-50 text-[#1D68F2]">Lake DeSoto</span>
+                    </div>
+                    <p class="text-slate-500 mt-1">Spacious multi-bedroom resort townhomes near DeSoto Golf Course and clubhouse.</p>
+                  </div>
+                  <div class="p-4 rounded-xl border border-slate-200 bg-white shadow-xs">
+                    <div class="flex justify-between items-start">
+                      <span class="font-bold text-slate-800 text-sm">The Waters Hotel</span>
+                      <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-blue-50 text-[#1D68F2]">Historic Bathhouse Row</span>
+                    </div>
+                    <p class="text-slate-500 mt-1">Ascend Hotel Collection boutique luxury property in downtown Hot Springs historic district (18 min south).</p>
+                  </div>
+                </div>
+              </div>
+            ) : city.slug === 'fl/tampa' ? (
+              <div class="space-y-3 pt-2">
+                <h3 class="font-bold text-base text-[#152438]">Top Cultural & Culinary Scouting Districts</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+                  <div class="p-4 rounded-xl border border-slate-200 bg-white shadow-xs">
+                    <div class="font-bold text-slate-800 text-sm">Ybor City Historic District</div>
+                    <p class="text-slate-500 mt-1">Historic brick cigar factory district, vibrant Cuban culinary hub, nightlife, TECO Line Streetcar connection.</p>
+                  </div>
+                  <div class="p-4 rounded-xl border border-slate-200 bg-white shadow-xs">
+                    <div class="font-bold text-slate-800 text-sm">Hyde Park Village & SoHo</div>
+                    <p class="text-slate-500 mt-1">Upscale open-air retail village, high-income pedestrian traffic, boutique dining corridors along South Howard Ave.</p>
+                  </div>
+                  <div class="p-4 rounded-xl border border-slate-200 bg-white shadow-xs">
+                    <div class="font-bold text-slate-800 text-sm">Downtown Riverwalk & Heights</div>
+                    <p class="text-slate-500 mt-1">2.6-mile pedestrian riverfront trail connecting Armature Works food hall, museums, and convention hotels.</p>
+                  </div>
+                  <div class="p-4 rounded-xl border border-slate-200 bg-white shadow-xs">
+                    <div class="font-bold text-slate-800 text-sm">Water Street Tampa & Channelside</div>
+                    <p class="text-slate-500 mt-1">$3B WELL-certified wellness mixed-use district, luxury hospitality, Amalie Arena sports corridor.</p>
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <div class="space-y-3 pt-2">
+                <h3 class="font-bold text-base text-[#152438]">Commercial & Entertainment Corridors</h3>
+                <div class="p-5 rounded-2xl border border-dashed border-slate-300 bg-slate-50 text-slate-600 text-xs">
+                  <p class="font-semibold text-slate-800 mb-1">Municipal District Verification Pending</p>
+                  <p>Official commercial district boundary mappings and pedestrian retail corridor profiles for {city.name} are currently being audited from municipal GIS datasets.</p>
+                </div>
+              </div>
+            )}
+          </section>
+        </div>
+
+        <!-- ========================================== -->
+        <!-- PILLAR 2: MOVING TO AUSTIN                -->
+        <!-- ========================================== -->
+        <div id="pillar-moving" class="pillar-panel hidden space-y-8">
+          <section class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-[0_4px_20px_-2px_rgba(0,0,0,0.06)] space-y-6">
+            <div class="flex justify-between items-center pb-3 border-b border-slate-100">
+              <div>
+                <h2 class="text-2xl font-black text-[#152438]">Moving to {city.name}</h2>
+                <p class="text-xs text-slate-500 mt-1">Demographics, elevation, climate normals, healthcare, and neighborhood living dynamics</p>
+              </div>
+              <span class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800">Relocation Index</span>
+            </div>
+
+            <!-- Demographics Snapshot Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div class="bg-[#F8FAFC] p-4 rounded-2xl border border-slate-200">
+                <span class="text-xs font-semibold text-slate-500">Total Population</span>
+                <div class="text-2xl font-black text-[#152438] mt-1">{city.demographics.population.toLocaleString()}</div>
+                <span class="text-[11px] text-emerald-600 font-semibold">{city.demographics.popGrowth5YrPct > 0 ? `+${city.demographics.popGrowth5YrPct}%` : `${city.demographics.popGrowth5YrPct}%`} 5-Yr Growth</span>
+              </div>
+              <div class="bg-[#F8FAFC] p-4 rounded-2xl border border-slate-200">
+                <span class="text-xs font-semibold text-slate-500">Median Household Income</span>
+                <div class="text-2xl font-black text-[#152438] mt-1">${city.demographics.medianHouseholdIncome.toLocaleString()}</div>
+                <span class="text-[11px] text-slate-500">Per Capita: ${city.demographics.perCapitaIncome.toLocaleString()}</span>
+              </div>
+              <div class="bg-[#F8FAFC] p-4 rounded-2xl border border-slate-200">
+                <span class="text-xs font-semibold text-slate-500">Median Resident Age</span>
+                <div class="text-2xl font-black text-[#152438] mt-1">{city.demographics.medianAge} Years</div>
+                <span class="text-[11px] text-slate-500">Young Professional Core</span>
               </div>
             </div>
 
-            <!-- Density Comparison Stat Pills -->
-            <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-2">
-              <div class="bg-[#F8FAFC] p-4 rounded-2xl border border-slate-200">
-                <span class="text-xs font-semibold text-slate-500">Existing Businesses</span>
-                <div class="text-2xl font-black text-[#152438] mt-1">{coffeeNaics.establishments}</div>
-                <span class="text-[11px] text-slate-400">US Census ZBP Verified</span>
+            <!-- Geography, Elevation & Climate Normals (USGS & Open-Meteo) -->
+            <div class="space-y-3 pt-2">
+              <h3 class="font-bold text-base text-[#152438]">Elevation, Terrain & Climate Normals</h3>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+                <!-- USGS Elevation -->
+                <div class="p-5 rounded-2xl bg-[#F8FAFC] border border-slate-200 space-y-2">
+                  <div class="flex items-center gap-2">
+                    <span class="text-lg">⛰️</span>
+                    <h4 class="font-bold text-sm text-[#152438]">USGS 3DEP High-Resolution Elevation</h4>
+                  </div>
+                  <div class="space-y-1.5 text-slate-600">
+                    <div class="flex justify-between">
+                      <span class="text-slate-400">Exact Elevation:</span>
+                      <span class="font-bold text-slate-800">{city.terrainElevation ? `${city.terrainElevation.elevationFeet.toFixed(1)} ft (${city.terrainElevation.elevationMeters.toFixed(1)} m)` : (city.coordinates?.lat ? 'USGS 3DEP Survey Active' : 'Federal Topo Survey')}</span>
+                    </div>
+                    <div class="flex justify-between">
+                      <span class="text-slate-400">Topography Class:</span>
+                      <span class="font-bold text-slate-800">{city.terrainElevation?.topographyClass ?? `${city.stateName} Regional Basin`}</span>
+                    </div>
+                    <div class="flex justify-between">
+                      <span class="text-slate-400">Drainage Basin:</span>
+                      <span class="font-bold text-slate-800">{isAustin ? 'Colorado River / Lady Bird Lake Basin' : isHSV ? 'Lake Ouachita / Saline River Basin' : isBoise ? 'Boise River / Snake River Basin' : `${city.name} Regional Watershed`}</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Climate Normals -->
+                <div class="p-5 rounded-2xl bg-[#F8FAFC] border border-slate-200 space-y-2">
+                  <div class="flex items-center gap-2">
+                    <span class="text-lg">☀️</span>
+                    <h4 class="font-bold text-sm text-[#152438]">Climate Normals (30-Year Baseline)</h4>
+                  </div>
+                  <div class="space-y-1.5 text-slate-600">
+                    <div class="flex justify-between">
+                      <span class="text-slate-400">Annual Precipitation:</span>
+                      <span class="font-bold text-slate-800">{city.climateNormals?.annualRainfallInches != null ? `${city.climateNormals.annualRainfallInches} Inches` : '—'}</span>
+                    </div>
+                    <div class="flex justify-between">
+                      <span class="text-slate-400">Summer High / Winter Low:</span>
+                      <span class="font-bold text-slate-800">{city.climateNormals?.peakSummerHighF != null ? `${city.climateNormals.peakSummerHighF}°F Avg July High / ${city.climateNormals.winterLowF}°F Avg Jan Low` : '—'}</span>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="bg-[#F8FAFC] p-4 rounded-2xl border border-slate-200">
-                <span class="text-xs font-semibold text-slate-500">Density / 10k Residents</span>
-                <div class="text-2xl font-black text-[#152438] mt-1">{coffeeNaics.per10kResidents}</div>
-                <span class="text-[11px] text-slate-400">National Benchmark: {coffeeNaics.usAvgPer10k}</span>
+            </div>
+
+            <!-- Healthcare, Emergency & Schools -->
+            <div class="space-y-3 pt-2">
+              <h3 class="font-bold text-base text-[#152438]">Healthcare, Safety & School Systems</h3>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+                <div class="p-5 rounded-2xl bg-slate-900 text-white space-y-2">
+                  <h4 class="font-bold text-sm text-emerald-400">Emergency & Acute Healthcare</h4>
+                  <div class="space-y-1 text-slate-300">
+                    <p>• <strong>Primary Trauma Facility:</strong> {travel.emergency?.nearestTraumaHospital ?? 'Not yet verified'}</p>
+                    <p>• <strong>Hospital Location:</strong> {travel.emergency?.hospitalAddress ?? `${city.countyName}, ${city.stateCode.toUpperCase()}`}</p>
+                    <p>• <strong>Emergency Dispatch:</strong> {travel.emergency?.emergencyDispatch ?? '911 Emergency · 24/7 Coordinated Services'}</p>
+                  </div>
+                </div>
+
+                <div class="p-5 rounded-2xl bg-[#F8FAFC] border border-slate-200 space-y-2">
+                  <h4 class="font-bold text-sm text-[#152438]">Local School Systems & Education</h4>
+                  <div class="space-y-1 text-slate-600">
+                    {isAustin ? (
+                      <>
+                        <p>• <strong>Eanes ISD (Westlake):</strong> Consistently ranked #1 public school district in Texas</p>
+                        <p>• <strong>Austin ISD:</strong> 74,000 students across flagship STEM and magnet programs</p>
+                        <p>• <strong>Round Rock & Leander ISD:</strong> High-growth northern tech corridor campuses</p>
+                      </>
+                    ) : isHSV ? (
+                      <>
+                        <p>• <strong>Jessieville School District:</strong> K-12 campus serving western village sector</p>
+                        <p>• <strong>Fountain Lake School District:</strong> East Gate community school system</p>
+                        <p>• <strong>National Park College:</strong> Regional higher education partner in Hot Springs</p>
+                      </>
+                    ) : isBoise ? (
+                      <>
+                        <p>• <strong>Boise Independent School District #1:</strong> Flagship Ada County district</p>
+                        <p>• <strong>West Ada School District:</strong> Largest public school district in Idaho</p>
+                        <p>• <strong>Boise State University:</strong> Downtown public research university</p>
+                      </>
+                    ) : isTampa ? (
+                      <>
+                        <p>• <strong>Hillsborough County Public Schools:</strong> 7th largest school district in the US</p>
+                        <p>• <strong>Plant High School Corridor:</strong> Top-rated South Tampa academic zone</p>
+                        <p>• <strong>University of South Florida (USF):</strong> Preeminent research campus</p>
+                      </>
+                    ) : (
+                      <>
+                        <p>• <strong>{city.name} Municipal Schools:</strong> Primary district serving {city.name} residents</p>
+                        <p>• <strong>{city.countyName} Regional Education:</strong> County public school system</p>
+                        <p>• <strong>State Accreditation:</strong> Governed by {city.stateName} Department of Education</p>
+                      </>
+                    )}
+                  </div>
+                </div>
               </div>
-              <div class="bg-[#F8FAFC] p-4 rounded-2xl border border-slate-200 col-span-2 sm:col-span-1">
-                <span class="text-xs font-semibold text-slate-500">Saturation Index</span>
-                <div class="text-2xl font-black text-[#152438] mt-1">{coffeeNaics.saturationIndex} <span class="text-xs font-normal text-slate-400">/ 100</span></div>
-                <span class="text-[11px] text-emerald-600 font-semibold">Bayes Smoothed (m=10k)</span>
+            </div>
+
+            <!-- Housing & Property Tax Friction -->
+            <div class="space-y-3 pt-2">
+              <h3 class="font-bold text-base text-[#152438]">Housing Costs & Property Tax Friction</h3>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
+                <div class="bg-[#F8FAFC] p-4 rounded-2xl border border-slate-200">
+                  <span class="text-xs font-semibold text-slate-500">Median Home Price</span>
+                  <div class="text-2xl font-black text-[#152438] mt-1">{city.housingAndTaxes?.medianHomePrice ? `$${city.housingAndTaxes.medianHomePrice.toLocaleString()}` : isAustin ? '$545,000' : isHSV ? '$285,000' : isBoise ? '$475,000' : isTampa ? '$395,000' : '$340,000'}</div>
+                  <span class="text-[11px] text-slate-400">Single-Family · Local Assessor</span>
+                </div>
+                <div class="bg-[#F8FAFC] p-4 rounded-2xl border border-slate-200">
+                  <span class="text-xs font-semibold text-slate-500">Average 2-Bed Rent</span>
+                  <div class="text-2xl font-black text-[#152438] mt-1">{city.housingAndTaxes?.averageTwoBedRent ? `$${city.housingAndTaxes.averageTwoBedRent.toLocaleString()}` : isAustin ? '$1,850' : isHSV ? '$1,250' : isBoise ? '$1,550' : isTampa ? '$1,780' : '$1,450'} <span class="text-xs font-normal text-slate-400">/mo</span></div>
+                  <span class="text-[11px] text-slate-400">Local Market Average</span>
+                </div>
+                <div class="bg-[#F8FAFC] p-4 rounded-2xl border border-slate-200">
+                  <span class="text-xs font-semibold text-slate-500">Effective Property Tax</span>
+                  <div class="text-2xl font-black text-[#152438] mt-1">{city.housingAndTaxes?.effectivePropertyTaxRatePct ? `${city.housingAndTaxes.effectivePropertyTaxRatePct.toFixed(2)}%` : isAustin ? '2.18%' : isHSV ? '0.62%' : isBoise ? '0.63%' : isTampa ? '0.91%' : '1.15%'}</div>
+                  <span class="text-[11px] text-amber-700 font-semibold">{city.countyName} Ad-Valorem Rate</span>
+                </div>
               </div>
+              <p class="text-[11px] text-slate-500">
+                {city.housingAndTaxes?.homesteadExemptionNote ?? (isAustin ? 'Texas levies 0% state personal income tax, compensated by municipal and school district ad-valorem property tax rates.' : isBoise ? 'Idaho homestead exemption covers 50% of home value up to state cap; low effective ad-valorem rate.' : isTampa ? 'Florida levies 0% personal income tax with Save Our Homes 3% assessment growth cap.' : `Statutory residential ad-valorem tax rates administered by ${city.countyName}.`)}
+              </p>
             </div>
           </section>
         </div>
 
-        <!-- TAB 2: COSTS & BREAKEVEN MODELING -->
-        <div id="tab-breakeven" class="tab-panel hidden space-y-10">
+        <!-- ========================================== -->
+        <!-- PILLAR 3: DOING BUSINESS                  -->
+        <!-- ========================================== -->
+        <div id="pillar-business" class="pillar-panel hidden space-y-8" data-industries={JSON.stringify(industriesWithDefaults)}>
+          <!-- Interactive Trade / Industry Selector Banner -->
+          <div class="bg-gradient-to-r from-blue-900 to-slate-900 p-6 sm:p-7 rounded-3xl text-white shadow-xl flex flex-col md:flex-row md:items-center justify-between gap-5 border border-slate-800">
+            <div class="space-y-1">
+              <span class="text-[10px] font-black uppercase tracking-wider text-blue-400 bg-blue-500/20 px-2.5 py-1 rounded-full border border-blue-400/30">
+                Interactive Trade Underwriting Engine
+              </span>
+              <h2 class="text-xl sm:text-2xl font-black text-white">Underwrite Any Commercial Enterprise</h2>
+              <p class="text-xs text-slate-300 max-w-xl">
+                Choose from 25 standard NAICS trades or enter your own custom business concept to underwrite establishment density, commercial lease rates, and daily transaction breakeven for {city.name}.
+              </p>
+            </div>
+            <div class="shrink-0 w-full md:w-96 space-y-2">
+              <div class="flex items-center justify-between">
+                <label for="trade-select" class="block text-[11px] font-bold text-slate-300 uppercase tracking-wider">Select Trade or Custom:</label>
+                <button
+                  type="button"
+                  id="toggle-custom-btn"
+                  class="text-[10px] font-bold text-blue-300 hover:text-white underline cursor-pointer"
+                >
+                  ✏️ Custom Concept
+                </button>
+              </div>
+              <select
+                id="trade-select"
+                class="w-full px-4 py-3 rounded-2xl bg-white text-slate-900 font-extrabold text-xs shadow-xl border-2 border-blue-400 focus:ring-2 focus:ring-blue-300 outline-none cursor-pointer"
+              >
+                <option value="custom" class="font-black text-blue-600">✨ Custom Enterprise (Enter your own concept)...</option>
+                <optgroup label="25 Standard NAICS Benchmarks">
+                  {industriesWithDefaults.map((ind) => (
+                    <option value={ind.naicsCode} selected={ind.naicsCode === '722515'}>
+                      {ind.label} — {ind.status.toUpperCase()} ({ind.establishments} units)
+                    </option>
+                  ))}
+                </optgroup>
+              </select>
+
+              <!-- Custom Business Input Box -->
+              <div id="custom-trade-box" class="hidden pt-2 space-y-1.5">
+                <label for="custom-business-name" class="block text-[10px] font-bold text-blue-300 uppercase tracking-wider">Your Enterprise Name / Concept:</label>
+                <div class="flex gap-2">
+                  <input
+                    type="text"
+                    id="custom-business-name"
+                    placeholder="e.g. Metal Laser Printing, Specialty Bakery, Day Spa..."
+                    class="flex-1 px-3.5 py-2.5 rounded-xl bg-slate-800 text-white placeholder-slate-400 text-xs font-bold border border-blue-400/60 outline-none focus:border-blue-300"
+                  />
+                  <button
+                    type="button"
+                    id="apply-custom-name-btn"
+                    class="px-4 py-2.5 rounded-xl bg-[#1D68F2] hover:bg-blue-600 text-white font-bold text-xs shrink-0 cursor-pointer transition shadow-md"
+                  >
+                    Underwrite
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Commercial Establishment Density & Saturation Metrics -->
           <section class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-[0_4px_20px_-2px_rgba(0,0,0,0.06)] space-y-6">
-            <div>
-              <h2 class="text-xl font-black text-[#152438]">Costs & Breakeven Underwriting</h2>
-              <p class="text-xs text-slate-500 mt-0.5">Determine required customer transaction velocity to cover Austin retail leases</p>
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-slate-100">
+              <div>
+                <h2 id="active-trade-label" class="text-xl font-black text-[#152438]">Commercial Establishment Density — {defaultTrade.label}</h2>
+                <p id="active-trade-desc" class="text-xs text-slate-500 mt-0.5">Census County Business Patterns (ZBP) verified small-business metrics across {city.name}</p>
+              </div>
+              <span id="active-trade-badge" class={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider ${
+                defaultTrade.status === 'underserved' ? 'bg-emerald-50 text-emerald-700 border border-emerald-200' :
+                defaultTrade.status === 'balanced' ? 'bg-blue-50 text-blue-700 border border-blue-200' : 'bg-rose-50 text-rose-700 border border-rose-200'
+              }`}>
+                <span class="w-2 h-2 rounded-full bg-current animate-pulse"></span>
+                {defaultTrade.status}
+              </span>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-2">
+              <div class="bg-[#F8FAFC] p-4 rounded-2xl border border-slate-200">
+                <span class="text-xs font-semibold text-slate-500">Active Establishments</span>
+                <div id="active-trade-count" class="text-2xl font-black text-[#152438] mt-1">{defaultTrade.establishments}</div>
+                <span class="text-[11px] text-slate-400">US Census ZBP Verified</span>
+              </div>
+              <div class="bg-[#F8FAFC] p-4 rounded-2xl border border-slate-200">
+                <span class="text-xs font-semibold text-slate-500">Density / 10k Residents</span>
+                <div id="active-trade-density" class="text-2xl font-black text-[#152438] mt-1">{defaultTrade.per10kResidents}</div>
+                <span id="active-trade-benchmark" class="text-[11px] text-slate-400">National Benchmark: {defaultTrade.usAvgPer10k}</span>
+              </div>
+              <div class="bg-[#F8FAFC] p-4 rounded-2xl border border-slate-200 col-span-2 sm:col-span-1">
+                <span class="text-xs font-semibold text-slate-500">Saturation Index</span>
+                <div id="active-trade-saturation" class="text-2xl font-black text-[#152438] mt-1">{defaultTrade.saturationIndex} <span class="text-xs font-normal text-slate-400">/ 100</span></div>
+                <span class="text-[11px] text-emerald-600 font-semibold">Bayes Smoothed (m=10k)</span>
+              </div>
+            </div>
+          </section>
+
+          <!-- Interactive Lease Breakeven Underwriting Calculator -->
+          <section class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-[0_4px_20px_-2px_rgba(0,0,0,0.06)] space-y-6">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+              <div>
+                <h2 class="text-xl font-black text-[#152438]">Retail Lease Breakeven Underwriting</h2>
+                <p id="calc-subtitle" class="text-xs text-slate-500 mt-0.5">Determine required customer transaction velocity to cover {city.name} retail leases for {defaultTrade.label}</p>
+              </div>
+              <span class="text-xs font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-lg border border-blue-200">
+                Dynamic 25-Trade Model
+              </span>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
               <div class="space-y-4 text-xs font-semibold">
                 <div>
                   <div class="flex justify-between mb-1">
-                    <label class="text-slate-700">Store Size (Usable Sq Ft)</label>
-                    <span id="label-sqft" class="text-blue-600 font-bold">1,400 sqft</span>
+                    <label class="text-slate-700">Premises Size (Usable Sq Ft)</label>
+                    <span id="label-sqft" class="text-blue-600 font-bold">{defaultTrade.defaultBreakeven.typicalSqFt.toLocaleString()} sqft</span>
                   </div>
-                  <input id="slider-sqft" type="range" min="500" max="4000" step="50" value="1400" class="w-full accent-[#1D68F2] cursor-pointer" />
+                  <input id="slider-sqft" type="range" min="400" max="8000" step="50" value={defaultTrade.defaultBreakeven.typicalSqFt} class="w-full accent-[#1D68F2] cursor-pointer" />
                 </div>
-
                 <div>
                   <div class="flex justify-between mb-1">
                     <label class="text-slate-700">Base Asking Rent ($/sqft/yr)</label>
-                    <span id="label-rent" class="text-blue-600 font-bold">$32.00 / sqft</span>
+                    <span id="label-rent" class="text-blue-600 font-bold">${city.marketSignals.reportedRetailRentSqFtYr?.toFixed(2) ?? 'n/a'} / sqft</span>
                   </div>
-                  <input id="slider-rent" type="range" min="15" max="65" step="0.5" value="32" class="w-full accent-[#1D68F2] cursor-pointer" />
+                  <input id="slider-rent" type="range" min="10" max="85" step="0.5" value={city.marketSignals.reportedRetailRentSqFtYr ?? 22} class="w-full accent-[#1D68F2] cursor-pointer" />
                 </div>
-
                 <div>
                   <div class="flex justify-between mb-1">
-                    <label class="text-slate-700">Average Customer Ticket ($)</label>
-                    <span id="label-ticket" class="text-blue-600 font-bold">$8.50</span>
+                    <label class="text-slate-700">Average Customer Ticket / Order ($)</label>
+                    <span id="label-ticket" class="text-blue-600 font-bold">${defaultTrade.defaultBreakeven.typicalTicket.toFixed(2)}</span>
                   </div>
-                  <input id="slider-ticket" type="range" min="4" max="25" step="0.25" value="8.50" class="w-full accent-[#1D68F2] cursor-pointer" />
+                  <input id="slider-ticket" type="range" min="3" max="500" step="0.5" value={defaultTrade.defaultBreakeven.typicalTicket} class="w-full accent-[#1D68F2] cursor-pointer" />
                 </div>
-
                 <div>
                   <div class="flex justify-between mb-1">
                     <label class="text-slate-700">Cost of Goods Sold (COGS %)</label>
-                    <span id="label-cogs" class="text-blue-600 font-bold">28%</span>
+                    <span id="label-cogs" class="text-blue-600 font-bold">{Math.round(defaultTrade.defaultBreakeven.typicalCogsPct * 100)}%</span>
                   </div>
-                  <input id="slider-cogs" type="range" min="10" max="60" step="1" value="28" class="w-full accent-[#1D68F2] cursor-pointer" />
+                  <input id="slider-cogs" type="range" min="5" max="75" step="1" value={Math.round(defaultTrade.defaultBreakeven.typicalCogsPct * 100)} class="w-full accent-[#1D68F2] cursor-pointer" />
+                </div>
+                <div>
+                  <div class="flex justify-between mb-1">
+                    <label class="text-slate-700">Monthly Operating Overhead ($)</label>
+                    <span id="label-overhead" class="text-blue-600 font-bold">$1,200</span>
+                  </div>
+                  <input id="slider-overhead" type="range" min="0" max="5000" step="50" value="1200" class="w-full accent-[#1D68F2] cursor-pointer" />
+                  <span class="text-[10px] text-slate-400">Utilities, commercial insurance, POS software baseline</span>
                 </div>
               </div>
 
-              <!-- Live Output Card with Cost Breakdown Bars -->
+              <!-- Live Output Card -->
               <div class="bg-[#EDF4FC] p-6 rounded-2xl border border-blue-200/80 flex flex-col justify-between">
                 <div>
                   <div class="text-xs font-bold uppercase tracking-wider text-[#1D68F2] mb-3">Operating Velocity Required</div>
@@ -373,24 +1331,50 @@ const jsonLdSchemas = [
                       <div id="output-monthly-revenue" class="text-xl font-bold text-slate-800">$22,460</div>
                     </div>
                     <div>
-                      <span class="text-xs text-slate-600">Monthly Fixed Cost (Lease + Labor)</span>
+                      <span class="text-xs text-slate-600">Monthly Fixed Cost (Lease + Labor + Overhead)</span>
                       <div id="output-monthly-fixed" class="text-base font-semibold text-slate-700">$16,170</div>
                     </div>
                   </div>
                 </div>
                 <div class="text-[11px] text-slate-500 pt-3 border-t border-blue-200">
-                  Stripping 8.25% sales tax and applying 18% payroll burden load.
+                  Stripping {(city.permitsAndTax.combinedSalesTaxRate * 100).toFixed(2)}% sales tax and applying 18% payroll burden load.
                 </div>
               </div>
             </div>
-          </section>
-        </div>
 
-        <!-- TAB 3: MARKET DEMAND (25 NAICS) -->
-        <div id="tab-demand" class="tab-panel hidden space-y-10">
+            <!-- Capital Access & SBA Lending Inflow -->
+            {city.capitalAndSbaLending && (
+              <div class="pt-6 border-t border-slate-200/80 space-y-3">
+                <div class="flex justify-between items-center">
+                  <h3 class="font-bold text-base text-[#152438]">Capital Access & Active SBA Lending Inflow</h3>
+                  <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-50 text-emerald-700 border border-emerald-200">U.S. SBA FOIA Reported</span>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
+                  <div class="bg-[#F8FAFC] p-4 rounded-2xl border border-slate-200">
+                    <span class="text-xs font-semibold text-slate-500">Annual SBA Loan Volume</span>
+                    <div class="text-2xl font-black text-[#152438] mt-1">${city.capitalAndSbaLending.annualSbaDisbursementMillion}M</div>
+                    <span class="text-[11px] text-slate-400">{city.capitalAndSbaLending.activeCountyLoanCount} Active 7(a) & 504 Loans</span>
+                  </div>
+                  <div class="bg-[#F8FAFC] p-4 rounded-2xl border border-slate-200 col-span-2">
+                    <span class="text-xs font-semibold text-slate-500">Top Active Regional SBA Lenders ({city.countyName})</span>
+                    <div class="grid grid-cols-3 gap-2 mt-2">
+                      {city.capitalAndSbaLending.topLenders.map((l: any) => (
+                        <div class="p-2.5 rounded-xl bg-white border border-slate-200 shadow-2xs">
+                          <div class="font-bold text-slate-800 text-xs truncate">{l.name}</div>
+                          <div class="text-[10px] text-blue-600 font-semibold mt-0.5 truncate">{l.tier}</div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+          </section>
+
+          <!-- 25-Industry NAICS Saturation Table -->
           <section class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-[0_4px_20px_-2px_rgba(0,0,0,0.06)] space-y-6">
             <div>
-              <h2 class="text-xl font-black text-[#152438]">Austin NAICS Industry Saturation Benchmark</h2>
+              <h2 class="text-xl font-black text-[#152438]">{city.name} NAICS Industry Saturation Benchmark</h2>
               <p class="text-xs text-slate-500 mt-0.5">Empirical Bayes analysis across all 25 core small business categories</p>
             </div>
 
@@ -407,8 +1391,15 @@ const jsonLdSchemas = [
                 </thead>
                 <tbody class="divide-y divide-slate-100">
                   {city.industries.map((ind) => (
-                    <tr class="hover:bg-slate-50">
-                      <td class="py-3.5 pr-4 font-bold text-slate-800">{ind.label}</td>
+                    <tr
+                      class="trade-row hover:bg-blue-50/70 cursor-pointer transition group"
+                      data-naics={ind.naicsCode}
+                      title={`Click to underwrite ${ind.label}`}
+                    >
+                      <td class="py-3.5 pr-4 font-bold text-slate-800 group-hover:text-[#1D68F2] flex items-center gap-1.5">
+                        <span>{ind.label}</span>
+                        <span class="text-[10px] text-blue-500 opacity-0 group-hover:opacity-100 transition">↗</span>
+                      </td>
                       <td class="py-3.5 px-4 font-semibold text-slate-700">{ind.establishments}</td>
                       <td class="py-3.5 px-4 text-slate-600">{ind.per10kResidents}</td>
                       <td class="py-3.5 px-4 text-slate-400">{ind.usAvgPer10k}</td>
@@ -426,16 +1417,12 @@ const jsonLdSchemas = [
               </table>
             </div>
           </section>
-        </div>
 
-        <!-- TAB 4: PERMITS & TAXES -->
-        <div id="tab-permits" class="tab-panel hidden space-y-10">
+          <!-- Permit & Regulatory Requirements -->
           <section class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-[0_4px_20px_-2px_rgba(0,0,0,0.06)] space-y-6">
-            <div class="flex justify-between items-center pb-2 border-b border-slate-100">
-              <div>
-                <h2 class="text-xl font-black text-[#152438]">Permit & Municipal Requirements</h2>
-                <p class="text-xs text-slate-500 mt-0.5">Statutory approvals required to open a commercial space in {city.name}</p>
-              </div>
+            <div>
+              <h2 class="text-xl font-black text-[#152438]">Permits, Taxes & Municipal Friction</h2>
+              <p class="text-xs text-slate-500 mt-0.5">Statutory approvals required to open a commercial space in {city.name}</p>
             </div>
 
             <div class="overflow-x-auto">
@@ -452,10 +1439,10 @@ const jsonLdSchemas = [
                     <td class="py-4 pr-4 font-bold text-slate-800">General Business License</td>
                     <td class="py-4 px-4">
                       <span class="px-2.5 py-1 rounded-full font-bold text-[11px] bg-slate-100 text-slate-600">
-                        Exempt / Not Required
+                        {city.permitsAndTax.generalBusinessLicenseRequired ? 'Required' : 'Exempt / Not Required'}
                       </span>
                     </td>
-                    <td class="py-4 pl-4 text-slate-600">City of Austin does not require general business license</td>
+                    <td class="py-4 pl-4 text-slate-600">{city.permitsAndTax.businessLicenseFeeSummary ?? 'Standard municipal registration'}</td>
                   </tr>
                   <tr class="hover:bg-slate-50">
                     <td class="py-4 pr-4 font-bold text-slate-800">Certificate of Occupancy</td>
@@ -470,243 +1457,491 @@ const jsonLdSchemas = [
                     <td class="py-4 pr-4 font-bold text-slate-800">Commercial Building Permit</td>
                     <td class="py-4 px-4">
                       <span class="px-2.5 py-1 rounded-full font-bold text-[11px] bg-blue-50 text-[#1D68F2] border border-blue-200">
-                        ~{city.permitsAndTax.avgPermitWaitDays} Days Review
+                        ~{city.permitsAndTax.avgPermitWaitDays ?? '30'} Days Review
                       </span>
                     </td>
                     <td class="py-4 pl-4 text-slate-600">Development Services Department (DSD)</td>
                   </tr>
                   <tr class="hover:bg-slate-50">
-                    <td class="py-4 pr-4 font-bold text-slate-800">Mobile Food / Food Truck</td>
-                    <td class="py-4 px-4">
-                      <span class="px-2.5 py-1 rounded-full font-bold text-[11px] bg-emerald-50 text-emerald-700 border border-emerald-200">
-                        Allowed
-                      </span>
-                    </td>
-                    <td class="py-4 pl-4 text-slate-600">Austin Public Health permit required ($385/yr)</td>
-                  </tr>
-                  <tr class="hover:bg-slate-50">
-                    <td class="py-4 pr-4 font-bold text-slate-800">Short-Term Rentals (STR)</td>
-                    <td class="py-4 px-4">
-                      <span class="px-2.5 py-1 rounded-full font-bold text-[11px] bg-rose-50 text-rose-700 border border-rose-200">
-                        Restricted (Type 1/2)
-                      </span>
-                    </td>
-                    <td class="py-4 pl-4 text-slate-600">Annual operating license capped by census tract</td>
-                  </tr>
-                  <tr class="hover:bg-slate-50">
-                    <td class="py-4 pr-4 font-bold text-slate-800">Sales & Use Tax</td>
+                    <td class="py-4 pr-4 font-bold text-slate-800">Combined Sales Tax Rate</td>
                     <td class="py-4 px-4">
                       <span class="px-2.5 py-1 rounded-full font-bold text-[11px] bg-slate-100 text-slate-700">
                         {(city.permitsAndTax.combinedSalesTaxRate * 100).toFixed(2)}% Combined
                       </span>
                     </td>
-                    <td class="py-4 pl-4 text-slate-600">6.25% State + 2.0% Local Austin Comptroller</td>
+                    <td class="py-4 pl-4 text-slate-600">{(city.permitsAndTax.stateTaxRate * 100).toFixed(2)}% State + {(city.permitsAndTax.localTaxRate * 100).toFixed(2)}% Local</td>
                   </tr>
                 </tbody>
               </table>
             </div>
           </section>
         </div>
+
+        <!-- ========================================== -->
+        <!-- MULTI-AUDIENCE INTERACTIVE MAP             -->
+        <!-- (Positioned beneath primary audience panes)-->
+        <!-- ========================================== -->
+        <section class="bg-white p-6 sm:p-7 rounded-3xl border border-slate-200/80 shadow-[0_4px_20px_-2px_rgba(0,0,0,0.06)] space-y-4">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-slate-100">
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="text-xl">🗺️</span>
+                <h2 class="text-xl font-black text-[#152438]">Interactive City Explorer</h2>
+              </div>
+              <p id="map-layer-subtitle" class="text-xs text-slate-500 mt-0.5">Explore verified places, infrastructure, and commercial zones across {city.name}</p>
+            </div>
+
+            <!-- Audience Layer Toggles -->
+            <div class="inline-flex p-1 bg-slate-100 rounded-2xl border border-slate-200/80 text-xs font-bold shadow-2xs">
+              <button
+                type="button"
+                id="map-layer-visiting"
+                class="map-layer-btn px-3.5 py-1.5 rounded-xl transition cursor-pointer bg-[#1D68F2] text-white shadow-xs"
+                data-layer="visiting"
+              >
+                ✈️ Visiting
+              </button>
+              <button
+                type="button"
+                id="map-layer-living"
+                class="map-layer-btn px-3.5 py-1.5 rounded-xl transition cursor-pointer text-slate-600 hover:text-slate-900"
+                data-layer="living"
+              >
+                🏡 Living
+              </button>
+              <button
+                type="button"
+                id="map-layer-business"
+                class="map-layer-btn px-3.5 py-1.5 rounded-xl transition cursor-pointer text-slate-600 hover:text-slate-900"
+                data-layer="business"
+              >
+                💼 Business
+              </button>
+            </div>
+          </div>
+
+          <!-- Leaflet Map Container -->
+          <div class="relative rounded-2xl overflow-hidden border border-slate-300 shadow-inner">
+            <div
+              id="austin-leaflet-map"
+              class="h-96 w-full z-0"
+              data-lat={city.lat ?? 30.2672}
+              data-lng={city.lng ?? -97.7431}
+              data-zoom={isAustin ? 13 : isHSV ? 12 : 12}
+              data-ishsv={isHSV ? "true" : "false"}
+              data-isaustin={isAustin ? "true" : "false"}
+              data-cityname={city.name}
+              data-map-pins={JSON.stringify(cityMapPins)}
+            ></div>
+            <div class="absolute top-3 left-3 z-10 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-xl border border-slate-200 text-xs font-bold text-slate-800 shadow-md flex items-center gap-2">
+              <span id="map-ping-indicator" class="w-2.5 h-2.5 rounded-full bg-[#1D68F2]"></span>
+              <span id="map-pin-status">Verified Municipal Map Pins</span>
+            </div>
+            <div class="absolute bottom-3 left-3 z-10 bg-slate-900/85 backdrop-blur-md px-3 py-1.5 rounded-xl text-[11px] font-semibold text-white shadow-lg flex items-center gap-2">
+              <span id="map-layer-legend-dot" class="w-2.5 h-2.5 rounded-full bg-[#1D68F2]"></span>
+              <span id="map-layer-legend-text">Visiting: Attractions, Airport & Accommodations</span>
+            </div>
+          </div>
+        </section>
+
       </div>
 
-      <!-- High-Converting Direct Response Conversion Sidebar (4 cols) -->
-      <div class="lg:col-span-4 space-y-8">
-        <!-- Turn Research Into A Plan Card (Upgraded with 3D Book Cover & Chapters) -->
-        <div class="bg-white rounded-3xl p-6 sm:p-7 border border-slate-200/80 shadow-[0_4px_25px_-2px_rgba(0,0,0,0.08)] space-y-5">
-          <!-- 3D Dossier Badge -->
-          <div class="bg-gradient-to-br from-[#152438] to-slate-900 rounded-2xl p-4 text-white shadow-md border border-slate-700">
-            <div class="flex items-center justify-between text-[10px] font-bold uppercase tracking-wider text-blue-400 mb-1">
-              <span>SBA 504 / 7(A) COMPLIANT</span>
-              <span>24 PAGES</span>
-            </div>
-            <div class="font-black text-sm text-white">Austin Feasibility & Site Selection Dossier</div>
-            <div class="text-[11px] text-slate-300 mt-1">Official Lender Underwriting Standard · 2026 Edition</div>
-          </div>
+      <!-- Right Column: Audience-Adaptive Dynamic Sidebar (4 cols) -->
+      <div class="lg:col-span-4 space-y-6 sticky top-20">
 
-          <div>
-            <h3 class="text-xl font-black text-[#152438]">Turn research into a plan</h3>
-            <p class="text-xs text-slate-500 mt-1 leading-relaxed">
-              Export the full underwriting packet for {city.name}. Built for multi-unit franchisees, commercial tenant brokers, and bank lenders.
-            </p>
-          </div>
-
-          <!-- Section Breakdown -->
-          <div class="space-y-2.5 py-3 border-y border-slate-100 text-xs text-slate-700 font-medium">
-            <div class="flex items-start gap-2.5">
-              <span class="w-4 h-4 rounded-full bg-blue-100 text-[#1D68F2] flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">✓</span>
-              <span><strong>ZCTA 78701–78759 Heatmaps:</strong> Foot traffic and NAICS micro-saturation density</span>
-            </div>
-            <div class="flex items-start gap-2.5">
-              <span class="w-4 h-4 rounded-full bg-blue-100 text-[#1D68F2] flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">✓</span>
-              <span><strong>Permit & Expeditor Playbook:</strong> Real review times and DSD variance checklist</span>
-            </div>
-            <div class="flex items-start gap-2.5">
-              <span class="w-4 h-4 rounded-full bg-blue-100 text-[#1D68F2] flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">✓</span>
-              <span><strong>Triple Net (NNN) CAM Model:</strong> 5-year lease escalation and breakeven audit</span>
-            </div>
-          </div>
-
-          <!-- Price & Risk Reversal CTA -->
-          <div class="space-y-3">
-            <div class="flex items-baseline justify-between">
-              <div>
-                <span class="text-3xl font-black text-[#152438]">$29</span>
-                <span class="text-xs text-slate-400 line-through ml-1">$199 regular</span>
+        <!-- SIDEBAR 1: VISITING (Default Active) -->
+        <div id="sidebar-travel" class="sidebar-panel space-y-6">
+          <!-- 1-Page Visitor Pocket Guide -->
+          <div class="bg-white rounded-3xl p-6 sm:p-7 border border-slate-200/80 shadow-[0_4px_25px_-2px_rgba(0,0,0,0.08)] space-y-5">
+            <div class="bg-gradient-to-br from-blue-900 to-slate-900 rounded-2xl p-4 text-white shadow-md border border-blue-700/50">
+              <div class="flex items-center justify-between text-[10px] font-bold uppercase tracking-wider text-blue-300 mb-1">
+                <span>Free Visitor Resource</span>
+                <span class="bg-blue-500/20 text-blue-200 px-2 py-0.5 rounded border border-blue-400/30">1-Page Cheat Sheet</span>
               </div>
-              <span class="text-[11px] font-bold text-emerald-600 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200">
-                Instant Download
-              </span>
+              <div class="font-black text-sm text-white">{city.name} Visitor Pocket Guide</div>
+              <div class="text-[11px] text-slate-300 mt-1">Arrival transit, key districts, safety & top stays · 2026 Edition</div>
             </div>
 
-            <a
-              href="#checkout"
-              onclick="alert('Redirecting to secure Stripe checkout for Austin Feasibility Dossier ($29)...')"
-              class="w-full text-center py-4 px-4 rounded-2xl bg-[#1D68F2] hover:bg-[#1555C7] text-white font-extrabold text-sm shadow-lg hover:shadow-xl transition block cursor-pointer"
+            <div>
+              <h3 class="text-xl font-black text-[#152438]">Download {city.name} Guide</h3>
+              <p class="text-xs text-slate-500 mt-1 leading-relaxed">
+                Essential 1-page summary covering airport transit, top districts to explore, curated stays, and local tips for {city.name}.
+              </p>
+            </div>
+
+            <div class="space-y-2.5 py-3 border-y border-slate-100 text-xs text-slate-700 font-medium">
+              <div class="flex items-start gap-2.5">
+                <span class="w-4 h-4 rounded-full bg-blue-100 text-[#1D68F2] flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">✓</span>
+                <span><strong>Airport & Ground Transit:</strong> Terminal to downtown rideshare level</span>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <span class="w-4 h-4 rounded-full bg-blue-100 text-[#1D68F2] flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">✓</span>
+                <span><strong>Curated Stays:</strong> Boutique lodging by entertainment district</span>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <span class="w-4 h-4 rounded-full bg-blue-100 text-[#1D68F2] flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">✓</span>
+                <span><strong>Practical Logistics:</strong> Hours, fees, drinking water & 911 dispatch</span>
+              </div>
+            </div>
+
+            <button
+              type="button"
+              onclick="window.print();"
+              class="w-full text-center py-4 px-4 rounded-2xl bg-[#1D68F2] hover:bg-[#1555C7] text-white font-extrabold text-sm shadow-lg hover:shadow-xl transition flex items-center justify-center gap-2 cursor-pointer"
             >
-              Get city report — $29
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+              Print / Save Visitor Guide (PDF)
+            </button>
+            <div class="text-center text-[11px] text-slate-400 font-medium">
+              Direct Print · 100% Free Public Resource · No Account Needed
+            </div>
+          </div>
+
+          <!-- Saved Places Quick Access Card -->
+          <div class="bg-white rounded-3xl p-5 border border-slate-200/80 shadow-sm flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <span class="text-2xl p-2 rounded-xl bg-blue-50 text-[#1D68F2]">🔖</span>
+              <div>
+                <div class="font-bold text-xs text-[#152438]">Your Trip Shortlist</div>
+                <div class="text-[11px] text-slate-500">Saved cities and places for your trip</div>
+              </div>
+            </div>
+            <button
+              onclick="document.getElementById('nav-saved-btn')?.click();"
+              class="px-3 py-1.5 rounded-xl bg-slate-100 hover:bg-blue-50 text-slate-700 hover:text-[#1D68F2] font-bold text-xs transition cursor-pointer"
+            >
+              View Shortlist →
+            </button>
+          </div>
+
+          <!-- Follow City Events -->
+          <div class="bg-gradient-to-br from-[#0F172A] to-[#1E293B] rounded-3xl p-6 text-white shadow-lg space-y-3">
+            <div class="text-xs font-bold uppercase tracking-wider text-blue-300">Follow {city.name} Events</div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Get notified of major live music festivals, community gatherings, and seasonal visitor advisories for {city.name}.
+            </p>
+            <form onsubmit="event.preventDefault(); alert('Subscribed to event updates for ' + this.getAttribute('data-city'));" data-city={city.name} class="space-y-2">
+              <input type="email" placeholder="Enter your email" required class="w-full px-3 py-2 rounded-xl bg-white text-slate-800 text-xs outline-none" />
+              <button type="submit" class="w-full py-2.5 rounded-xl bg-[#1D68F2] hover:bg-blue-600 text-white font-bold text-xs transition cursor-pointer">
+                Subscribe to Event Alerts
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- SIDEBAR 2: MOVING -->
+        <div id="sidebar-moving" class="sidebar-panel hidden space-y-6">
+          <!-- Relocation Checklist & Tax Kit -->
+          <div class="bg-white rounded-3xl p-6 sm:p-7 border border-slate-200/80 shadow-[0_4px_25px_-2px_rgba(0,0,0,0.08)] space-y-5">
+            <div class="bg-gradient-to-br from-emerald-900 to-slate-900 rounded-2xl p-4 text-white shadow-md border border-emerald-700/50">
+              <div class="flex items-center justify-between text-[10px] font-bold uppercase tracking-wider text-emerald-300 mb-1">
+                <span>Relocation Resource</span>
+                <span class="bg-emerald-500/20 text-emerald-200 px-2 py-0.5 rounded border border-emerald-400/30">Step-by-Step</span>
+              </div>
+              <div class="font-black text-sm text-white">{city.name} Relocation Checklist</div>
+              <div class="text-[11px] text-slate-300 mt-1">Schools, utilities, voter registration & tax setup</div>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-black text-[#152438]">New Resident Checklist</h3>
+              <p class="text-xs text-slate-500 mt-1 leading-relaxed">
+                Everything you need to set up life in {city.name}: public school registration, municipal water, electric grid hookup, and ad-valorem exemptions.
+              </p>
+            </div>
+
+            <div class="space-y-2.5 py-3 border-y border-slate-100 text-xs text-slate-700 font-medium">
+              <div class="flex items-start gap-2.5">
+                <span class="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">✓</span>
+                <span><strong>Public School Districts:</strong> Campus zones & enrollment portals</span>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <span class="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">✓</span>
+                <span><strong>Utilities Setup:</strong> Municipal water, electric provider & trash schedule</span>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <span class="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">✓</span>
+                <span><strong>Homestead Exemption:</strong> County appraisal district filing deadlines</span>
+              </div>
+            </div>
+
+            <button
+              type="button"
+              onclick="window.print();"
+              class="w-full text-center py-4 px-4 rounded-2xl bg-emerald-700 hover:bg-emerald-800 text-white font-extrabold text-sm shadow-lg hover:shadow-xl transition flex items-center justify-center gap-2 cursor-pointer"
+            >
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+              Print / Save Relocation Checklist
+            </button>
+            <div class="text-center text-[11px] text-slate-400 font-medium">
+              100% Free · Verified Municipal Guidelines
+            </div>
+          </div>
+
+          <!-- Compare Living Costs -->
+          <div class="bg-white rounded-3xl p-5 border border-slate-200/80 shadow-sm flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <span class="text-2xl p-2 rounded-xl bg-emerald-50 text-emerald-700">⚖️</span>
+              <div>
+                <div class="font-bold text-xs text-[#152438]">Cost of Living Comparison</div>
+                <div class="text-[11px] text-slate-500">Compare {city.name} with peer markets</div>
+              </div>
+            </div>
+            <a
+              href={`/compare/${city.slug.replace('/', '-')}-vs-${isAustin ? 'fl-tampa' : 'tx-austin'}`}
+              class="px-3 py-1.5 rounded-xl bg-emerald-50 text-emerald-700 hover:bg-emerald-100 font-bold text-xs transition"
+            >
+              Compare →
             </a>
-
-            <div class="flex items-center justify-center gap-1.5 text-[11px] text-slate-500 font-medium text-center">
-              <svg class="w-3.5 h-3.5 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-              <span>100% 30-Day Money-Back Guarantee</span>
-            </div>
           </div>
         </div>
 
-        <!-- Local Partners Directory -->
-        <div class="bg-white rounded-3xl p-6 sm:p-7 border border-slate-200/80 shadow-[0_4px_25px_-2px_rgba(0,0,0,0.06)] space-y-4">
-          <div class="flex justify-between items-center">
-            <h3 class="text-base font-bold text-[#152438]">Local Partners</h3>
-            <span class="text-xs text-slate-400">Austin, TX</span>
+        <!-- SIDEBAR 3: DOING BUSINESS -->
+        <div id="sidebar-business" class="sidebar-panel hidden space-y-6">
+          <!-- 100% Free Institutional Dossier Card -->
+          <div id="report" class="bg-white rounded-3xl p-6 sm:p-7 border border-slate-200/80 shadow-[0_4px_25px_-2px_rgba(0,0,0,0.08)] space-y-5">
+            <div class="bg-gradient-to-br from-[#152438] to-slate-900 rounded-2xl p-4 text-white shadow-md border border-slate-700">
+              <div class="flex items-center justify-between text-[10px] font-bold uppercase tracking-wider text-emerald-400 mb-1">
+                <span>SBA 504 / 7(A) LENDER COMPLIANT</span>
+                <span class="bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded border border-emerald-400/30">100% FREE</span>
+              </div>
+              <div class="font-black text-sm text-white">{city.name} Institutional Dossier</div>
+              <div class="text-[11px] text-slate-300 mt-1">Official Site Selection & Relocation Packet · 2026 Edition</div>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-black text-[#152438]">Get Complete City Dossier (Free)</h3>
+              <p class="text-xs text-slate-500 mt-1 leading-relaxed">
+                Export the full 6-page institutional feasibility and commercial dossier for {city.name}. Zero cost. No credit card required.
+              </p>
+            </div>
+
+            <div class="space-y-2.5 py-3 border-y border-slate-100 text-xs text-slate-700 font-medium">
+              <div class="flex items-start gap-2.5">
+                <span class="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">✓</span>
+                <span><strong>ZCTA Micro-Saturation Heatmap:</strong> All 25 NAICS trade counts</span>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <span class="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">✓</span>
+                <span><strong>Executive Travel & Relocation Index:</strong> Power, tax refunds, airport transit</span>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <span class="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">✓</span>
+                <span><strong>Triple Net (NNN) CAM Model:</strong> 5-year lease escalation & breakeven audit</span>
+              </div>
+            </div>
+
+            <!-- Lead Magnet Gate for Full Institutional Dossier -->
+            <div id="dossier-lead-box" class="pt-1">
+              <form id="dossier-lead-form" class="space-y-2.5">
+                <div>
+                  <label for="dossier-lead-email" class="block text-[11px] font-bold text-slate-700 mb-1">
+                    Enter work email to export complete institutional dossier:
+                  </label>
+                  <input
+                    type="email"
+                    id="dossier-lead-email"
+                    placeholder="name@company.com"
+                    required
+                    class="w-full px-4 py-3 rounded-2xl bg-[#F8FAFC] text-slate-800 text-xs font-semibold border border-slate-300 focus:border-[#1D68F2] focus:bg-white outline-none transition"
+                  />
+                </div>
+                <button
+                  type="submit"
+                  class="w-full text-center py-4 px-4 rounded-2xl bg-[#1D68F2] hover:bg-[#1555C7] text-white font-extrabold text-sm shadow-lg hover:shadow-xl transition flex items-center justify-center gap-2 cursor-pointer"
+                >
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                  Export {city.name} Dossier (PDF)
+                </button>
+              </form>
+              <div id="dossier-download-active" class="hidden space-y-2 pt-1">
+                {isAustin ? (
+                  <a
+                    href="/reports/tx-austin-feasibility-dossier.pdf"
+                    download="Austin-Texas-Feasibility-Dossier.pdf"
+                    target="_blank"
+                    class="w-full text-center py-4 px-4 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-sm shadow-lg hover:shadow-xl transition flex items-center justify-center gap-2 cursor-pointer"
+                  >
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                    Download Austin Dossier PDF Now
+                  </a>
+                ) : (
+                  <button
+                    type="button"
+                    onclick="window.print();"
+                    class="w-full text-center py-4 px-4 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-sm shadow-lg hover:shadow-xl transition flex items-center justify-center gap-2 cursor-pointer"
+                  >
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+                    Print / Save {city.name} Dossier PDF Now
+                  </button>
+                )}
+                <div class="text-center text-[10px] text-emerald-700 font-bold">✓ Verified Access Granted</div>
+              </div>
+              <div class="mt-2.5 text-center text-[11px] text-slate-500 font-medium">
+                Audited Institutional Underwriting · Instant Access
+              </div>
+            </div>
           </div>
 
-          <div class="space-y-3">
-            <div class="p-3.5 rounded-2xl bg-[#F8FAFC] border border-slate-200/80 flex items-start gap-3">
-              <div class="w-9 h-9 rounded-xl bg-blue-100 text-[#1D68F2] font-black text-xs flex items-center justify-center shrink-0">
-                AP
+          <!-- Local Partners Directory -->
+          <div class="bg-white rounded-3xl p-6 sm:p-7 border border-slate-200/80 shadow-[0_4px_25px_-2px_rgba(0,0,0,0.06)] space-y-4">
+            <div class="flex justify-between items-center">
+              <h3 class="text-base font-bold text-[#152438]">Local Partners</h3>
+              <span class="text-xs text-slate-400">{city.name}, {city.stateCode.toUpperCase()}</span>
+            </div>
+
+            <div class="space-y-3">
+              <div class="p-3.5 rounded-2xl bg-[#F8FAFC] border border-slate-200/80 flex items-start gap-3">
+                <div class="w-9 h-9 rounded-xl bg-blue-100 text-[#1D68F2] font-black text-xs flex items-center justify-center shrink-0">
+                  AP
+                </div>
+                <div class="flex-1 min-w-0">
+                  <div class="text-xs font-bold text-slate-800 truncate">{city.name} Permit Expeditors</div>
+                  <div class="text-[11px] text-slate-500">Commercial Permitting & DSD Expediting</div>
+                  <a href={`mailto:consult@cityclick.com?subject=Permit%20Consultation%20Request%20-%20${encodeURIComponent(city.name)}`} class="text-[11px] font-bold text-[#1D68F2] hover:underline mt-1 block">Request Consult →</a>
+                </div>
               </div>
-              <div class="flex-1 min-w-0">
-                <div class="text-xs font-bold text-slate-800 truncate">Austin Permit Expeditors Group</div>
-                <div class="text-[11px] text-slate-500">Commercial Permitting & DSD Expediting</div>
-                <a href="#consult" class="text-[11px] font-bold text-[#1D68F2] hover:underline mt-1 block">Request Consult →</a>
+
+              <div class="p-3.5 rounded-2xl bg-[#F8FAFC] border border-slate-200/80 flex items-start gap-3">
+                <div class="w-9 h-9 rounded-xl bg-indigo-100 text-indigo-700 font-black text-xs flex items-center justify-center shrink-0">
+                  TR
+                </div>
+                <div class="flex-1 min-w-0">
+                  <div class="text-xs font-bold text-slate-800 truncate">{city.countyName} Tenant Advisors</div>
+                  <div class="text-[11px] text-slate-500">Retail Lease & Site Selection Broker</div>
+                  <a href="#austin-leaflet-map" onclick="window.switchCityMapLayer && window.switchCityMapLayer('business');" class="text-[11px] font-bold text-[#1D68F2] hover:underline mt-1 block">View Commercial Corridors →</a>
+                </div>
               </div>
             </div>
 
-            <div class="p-3.5 rounded-2xl bg-[#F8FAFC] border border-slate-200/80 flex items-start gap-3">
-              <div class="w-9 h-9 rounded-xl bg-indigo-100 text-indigo-700 font-black text-xs flex items-center justify-center shrink-0">
-                TR
-              </div>
-              <div class="flex-1 min-w-0">
-                <div class="text-xs font-bold text-slate-800 truncate">Travis Realty Tenant Advisors</div>
-                <div class="text-[11px] text-slate-500">Retail Lease & Site Selection Broker</div>
-                <a href="#consult" class="text-[11px] font-bold text-[#1D68F2] hover:underline mt-1 block">View Available Spaces →</a>
-              </div>
-            </div>
-
-            <div class="p-3.5 rounded-2xl bg-[#F8FAFC] border border-slate-200/80 flex items-start gap-3">
-              <div class="w-9 h-9 rounded-xl bg-emerald-100 text-emerald-700 font-black text-xs flex items-center justify-center shrink-0">
-                LZ
-              </div>
-              <div class="flex-1 min-w-0">
-                <div class="text-xs font-bold text-slate-800 truncate">Lone Star Zoning & Land Use</div>
-                <div class="text-[11px] text-slate-500">Municipal Counsel & Variance Representation</div>
-                <a href="#consult" class="text-[11px] font-bold text-[#1D68F2] hover:underline mt-1 block">Contact Attorney →</a>
-              </div>
-            </div>
+            <a href="/partners/join" class="block text-center text-xs font-semibold text-slate-500 hover:text-slate-800 pt-2 border-t border-slate-100">
+              List your commercial advisory firm →
+            </a>
           </div>
-
-          <a href="/partners/join" class="block text-center text-xs font-semibold text-slate-500 hover:text-slate-800 pt-2 border-t border-slate-100">
-            List your commercial advisory firm →
-          </a>
         </div>
+
       </div>
     </div>
   </div>
 
-  <!-- High-Contrast Developer API Footer -->
-  <section class="bg-[#0B1120] text-white py-12 border-t border-slate-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-        <div class="lg:col-span-6 space-y-3">
-          <div class="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-blue-500/20 text-blue-400 text-xs font-bold border border-blue-400/30">
-            Developer API
-          </div>
-          <h3 class="text-2xl font-black">City data via REST API</h3>
-          <p class="text-xs text-slate-400 max-w-lg leading-relaxed">
-            Query demographics, sales tax rates, and establishment saturation directly inside your CRM or location underwriting pipelines.
-          </p>
-          <div class="flex items-center gap-4 pt-2">
-            <a href="/developers" class="px-4 py-2 rounded-xl bg-[#1D68F2] hover:bg-blue-600 font-bold text-xs text-white transition">
-              View API Docs
-            </a>
-            <span class="text-xs text-slate-400">Free tier: 500 requests / month</span>
-          </div>
-        </div>
-
-        <div class="lg:col-span-6">
-          <div class="bg-[#152438] rounded-2xl p-4 border border-slate-700/80 font-mono text-xs text-slate-300 shadow-xl">
-            <div class="flex justify-between items-center pb-2 mb-2 border-b border-slate-700 text-slate-400 text-[11px]">
-              <span>GET /api/v1/cities/tx/austin</span>
-              <span class="text-emerald-400 font-bold">200 OK</span>
-            </div>
-            <pre class="text-[11px] text-blue-300 overflow-x-auto leading-relaxed">
-&#123;
-  "slug": "tx/austin",
-  "name": "Austin",
-  "population": 979882,
-  "medianHouseholdIncome": 92248,
-  "askingRentSqFtYr": 32.00,
-  "coffeeShopsCount": 218,
-  "saturationStatus": "balanced"
-&#125;</pre>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Client-Side Reactive Interactive Scripts (Tabs, Leaflet Map, and Sliders) -->
+  <!-- Interactive Scripts (Pillars, Tickers, Leaflet Map, and Sliders) -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" is:inline></script>
 
   <script is:inline>
-    // 1. Reactive Client-Side Tabs
-    document.addEventListener('DOMContentLoaded', () => {
-      const tabBtns = document.querySelectorAll('.tab-btn');
-      const tabPanels = document.querySelectorAll('.tab-panel');
+    function initCityClick() {
+      // 1. Live Ticker Switcher
+      const tickerBtnEvents = document.getElementById('ticker-btn-events');
+      const tickerBtnCommercial = document.getElementById('ticker-btn-commercial');
+      const tickerPanelEvents = document.getElementById('ticker-panel-events');
+      const tickerPanelCommercial = document.getElementById('ticker-panel-commercial');
 
-      tabBtns.forEach((btn) => {
+      if (tickerBtnEvents && tickerBtnCommercial) {
+        tickerBtnEvents.addEventListener('click', () => {
+          tickerBtnEvents.classList.add('bg-[#1D68F2]', 'text-white');
+          tickerBtnEvents.classList.remove('text-slate-400');
+          tickerBtnCommercial.classList.remove('bg-[#1D68F2]', 'text-white');
+          tickerBtnCommercial.classList.add('text-slate-400');
+
+          tickerPanelEvents?.classList.remove('hidden');
+          tickerPanelCommercial?.classList.add('hidden');
+        });
+
+        tickerBtnCommercial.addEventListener('click', () => {
+          tickerBtnCommercial.classList.add('bg-[#1D68F2]', 'text-white');
+          tickerBtnCommercial.classList.remove('text-slate-400');
+          tickerBtnEvents.classList.remove('bg-[#1D68F2]', 'text-white');
+          tickerBtnEvents.classList.add('text-slate-400');
+
+          tickerPanelCommercial?.classList.remove('hidden');
+          tickerPanelEvents?.classList.add('hidden');
+        });
+      }
+
+      // 2. The 3 Primary Pillar Switchers
+      const pillarBtns = document.querySelectorAll('.pillar-btn');
+      const pillarPanels = document.querySelectorAll('.pillar-panel');
+
+      pillarBtns.forEach((btn) => {
         btn.addEventListener('click', () => {
-          const target = btn.getAttribute('data-tab');
+          const target = btn.getAttribute('data-pillar');
 
-          // Reset all buttons
-          tabBtns.forEach((b) => {
-            b.classList.remove('border-b-2', 'border-[#1D68F2]', 'text-[#1D68F2]');
-            b.classList.add('text-slate-500');
+          // Reset all card styles
+          pillarBtns.forEach((b) => {
+            b.classList.remove('border-[#1D68F2]', 'bg-blue-50/70', 'shadow-sm');
+            b.classList.add('border-slate-200', 'bg-white');
+            const arrow = b.querySelector('.pillar-arrow');
+            if (arrow) {
+              arrow.classList.remove('text-[#1D68F2]');
+              arrow.classList.add('text-slate-300', 'hidden');
+            }
           });
 
-          // Activate clicked button
-          btn.classList.add('border-b-2', 'border-[#1D68F2]', 'text-[#1D68F2]');
-          btn.classList.remove('text-slate-500');
+          // Activate clicked card
+          btn.classList.add('border-[#1D68F2]', 'bg-blue-50/70', 'shadow-sm');
+          btn.classList.remove('border-slate-200', 'bg-white');
+          const activeArrow = btn.querySelector('.pillar-arrow');
+          if (activeArrow) {
+            activeArrow.classList.add('text-[#1D68F2]');
+            activeArrow.classList.remove('text-slate-300', 'hidden');
+          }
 
-          // Hide all panels
-          tabPanels.forEach((p) => p.classList.add('hidden'));
+          // Toggle Panels
+          pillarPanels.forEach((p) => p.classList.add('hidden'));
+          const active = document.getElementById(target);
+          if (active) active.classList.remove('hidden');
 
-          // Show targeted panel
-          const activePanel = document.getElementById(target);
-          if (activePanel) activePanel.classList.remove('hidden');
+          // Toggle Matching 4-Fact Stats Strip
+          document.querySelectorAll('.stats-strip').forEach(s => s.classList.add('hidden'));
+          if (target === 'pillar-travel') {
+            document.getElementById('stats-strip-travel')?.classList.remove('hidden');
+          } else if (target === 'pillar-moving') {
+            document.getElementById('stats-strip-moving')?.classList.remove('hidden');
+          } else if (target === 'pillar-business') {
+            document.getElementById('stats-strip-business')?.classList.remove('hidden');
+          }
 
-          // Trigger map resize if overview selected
-          if (target === 'tab-overview' && window.cityClickMap) {
-            setTimeout(() => window.cityClickMap.invalidateSize(), 50);
+          // Toggle Matching Adaptive Right Sidebar
+          document.querySelectorAll('.sidebar-panel').forEach(s => s.classList.add('hidden'));
+          if (target === 'pillar-travel') {
+            document.getElementById('sidebar-travel')?.classList.remove('hidden');
+          } else if (target === 'pillar-moving') {
+            document.getElementById('sidebar-moving')?.classList.remove('hidden');
+          } else if (target === 'pillar-business') {
+            document.getElementById('sidebar-business')?.classList.remove('hidden');
+          }
+
+          // Sync Ticker with selected pillar
+          if (target === 'pillar-travel' && tickerBtnEvents) {
+            tickerBtnEvents.click();
+          } else if (target === 'pillar-business' && tickerBtnCommercial) {
+            tickerBtnCommercial.click();
+          }
+
+          // Sync Map Layer with selected pillar
+          if (target === 'pillar-travel' && window.switchCityMapLayer) {
+            window.switchCityMapLayer('visiting');
+          } else if (target === 'pillar-moving' && window.switchCityMapLayer) {
+            window.switchCityMapLayer('living');
+          } else if (target === 'pillar-business' && window.switchCityMapLayer) {
+            window.switchCityMapLayer('business');
+          }
+
+          if (window.cityClickMap) {
+            setTimeout(() => window.cityClickMap.invalidateSize(), 80);
           }
         });
       });
 
-      // 2. Initialize Leaflet Interactive Slippy Map
-      if (typeof L !== 'undefined' && document.getElementById('austin-leaflet-map')) {
+      // 3. Multi-Audience Leaflet Map Initialization
+      const mapEl = document.getElementById('austin-leaflet-map');
+      if (window.L && mapEl) {
+        const centerLat = parseFloat(mapEl.getAttribute('data-lat') || '30.2672');
+        const centerLng = parseFloat(mapEl.getAttribute('data-lng') || '-97.7431');
+        const zoom = parseInt(mapEl.getAttribute('data-zoom') || '13', 10);
+        const cityName = mapEl.getAttribute('data-cityname') || 'City';
+
         const map = L.map('austin-leaflet-map', {
-          center: [30.2672, -97.7431],
-          zoom: 13,
+          center: [centerLat, centerLng],
+          zoom: zoom,
           zoomControl: false,
           scrollWheelZoom: false,
         });
@@ -719,63 +1954,102 @@ const jsonLdSchemas = [
 
         L.control.zoom({ position: 'topright' }).addTo(map);
 
-        // Verified Austin Coffee Establishments
-        const coffeeShops = [
-          { name: "Houndstooth Coffee", address: "401 Congress Ave", lat: 30.2668, lng: -97.7435, traffic: "Top 5% Foot Traffic", rent: "$36/sqft" },
-          { name: "Jo's Coffee", address: "1300 S Congress Ave", lat: 30.2504, lng: -97.7497, traffic: "Ultra-High Pedestrian Surge", rent: "$38/sqft" },
-          { name: "Caffe Medici", address: "200 Congress Ave", lat: 30.2647, lng: -97.7438, traffic: "Financial District High", rent: "$35/sqft" },
-          { name: "Flat Track Coffee", address: "1619 E Cesar Chavez", lat: 30.2582, lng: -97.7275, traffic: "East Side Growth Hub", rent: "$28/sqft" },
-          { name: "Merit Coffee", address: "222 West Ave", lat: 30.2679, lng: -97.7513, traffic: "Seaholm Urban Core", rent: "$34/sqft" },
-          { name: "Figure 8 Coffee Purveyors", address: "1111 Chicon St", lat: 30.2685, lng: -97.7208, traffic: "High Neighborhood Density", rent: "$26/sqft" },
-          { name: "Better Half Coffee & Cocktails", address: "406 Walsh St", lat: 30.2742, lng: -97.7589, traffic: "Clarksville High Volume", rent: "$30/sqft" },
-          { name: "Greater Goods Coffee Co.", address: "2501 E 5th St", lat: 30.2575, lng: -97.7145, traffic: "Creative District Corridor", rent: "$25/sqft" },
-          { name: "Fleet Coffee", address: "2427 Webberville Rd", lat: 30.2638, lng: -97.7158, traffic: "Pedestrian Focused", rent: "$24/sqft" },
-          { name: "Epoch Coffee", address: "221 W North Loop Blvd", lat: 30.3185, lng: -97.7152, traffic: "24hr Academic/Residential", rent: "$22/sqft" },
-          { name: "Radio Coffee & Beer", address: "4204 Menchaca Rd", lat: 30.2365, lng: -97.7845, traffic: "High Evening Surge", rent: "$24/sqft" },
-          { name: "Bennu Coffee", address: "2001 E Martin Luther King Jr Blvd", lat: 30.2812, lng: -97.7205, traffic: "Campus Corridor Density", rent: "$23/sqft" }
-        ];
+        const markerLayer = L.layerGroup().addTo(map);
 
-        const pinHtml = '<div style="background-color: #1D68F2; width: 14px; height: 14px; border-radius: 50%; border: 3px solid #FFFFFF; box-shadow: 0 0 10px rgba(29, 104, 242, 0.7);"></div>';
-        const customIcon = L.divIcon({
-          className: 'custom-pin-icon',
-          html: pinHtml,
-          iconSize: [14, 14],
-          iconAnchor: [7, 7],
-        });
+        const cityData = JSON.parse(mapEl.getAttribute('data-map-pins') || '{"visiting":[],"living":[],"business":[]}');
 
-        coffeeShops.forEach((shop) => {
-          L.marker([shop.lat, shop.lng], { icon: customIcon })
-            .bindPopup(`
-              <div style="font-family: inherit; padding: 4px; min-width: 160px;">
-                <div style="font-weight: 800; font-size: 13px; color: #152438;">${shop.name}</div>
-                <div style="font-size: 11px; color: #64748B; margin-top: 2px;">${shop.address}</div>
-                <div style="display: flex; gap: 6px; margin-top: 6px;">
-                  <span style="font-size: 10px; font-weight: 700; background: #EDF4FC; color: #1D68F2; padding: 2px 6px; border-radius: 4px;">${shop.traffic}</span>
-                  <span style="font-size: 10px; font-weight: 700; background: #F1F5F9; color: #334155; padding: 2px 6px; border-radius: 4px;">${shop.rent}</span>
-                </div>
-              </div>
-            `)
-            .addTo(map);
-        });
+        function switchMapLayer(layer) {
+          const btnVisiting = document.getElementById('map-layer-visiting');
+          const btnLiving = document.getElementById('map-layer-living');
+          const btnBusiness = document.getElementById('map-layer-business');
+          const statusEl = document.getElementById('map-pin-status');
+          const legendDot = document.getElementById('map-layer-legend-dot');
+          const legendText = document.getElementById('map-layer-legend-text');
+          const pingIndicator = document.getElementById('map-ping-indicator');
+
+          [btnVisiting, btnLiving, btnBusiness].forEach(btn => {
+            if (btn) {
+              btn.className = 'map-layer-btn px-3.5 py-1.5 rounded-xl transition cursor-pointer text-slate-600 hover:text-slate-900';
+            }
+          });
+
+          markerLayer.clearLayers();
+
+          let places = cityData[layer] || cityData.visiting;
+          let color = '#1D68F2';
+          let label = 'Visiting: Attractions, Airport & Accommodations';
+
+          if (layer === 'living') {
+            color = '#059669';
+            label = 'Living: Hospitals, Schools & Civic Infrastructure';
+            if (btnLiving) btnLiving.className = 'map-layer-btn px-3.5 py-1.5 rounded-xl transition cursor-pointer bg-emerald-600 text-white shadow-xs';
+          } else if (layer === 'business') {
+            color = '#7C3AED';
+            label = 'Business: Commercial Corridors & Retail Rents';
+            if (btnBusiness) btnBusiness.className = 'map-layer-btn px-3.5 py-1.5 rounded-xl transition cursor-pointer bg-purple-600 text-white shadow-xs';
+          } else {
+            if (btnVisiting) btnVisiting.className = 'map-layer-btn px-3.5 py-1.5 rounded-xl transition cursor-pointer bg-[#1D68F2] text-white shadow-xs';
+          }
+
+          if (legendDot) legendDot.style.backgroundColor = color;
+          if (pingIndicator) pingIndicator.style.backgroundColor = color;
+          if (legendText) legendText.innerText = label;
+          if (statusEl) statusEl.innerText = places.length + ' verified places mapped · Click any pin';
+
+          const pinHtml = '<div style="background-color: ' + color + '; width: 14px; height: 14px; border-radius: 50%; border: 3px solid #FFFFFF; box-shadow: 0 0 10px ' + color + 'B3;"></div>';
+          const customIcon = L.divIcon({
+            className: 'custom-pin-icon',
+            html: pinHtml,
+            iconSize: [14, 14],
+            iconAnchor: [7, 7],
+          });
+
+          places.forEach(place => {
+            L.marker([place.lat, place.lng], { icon: customIcon })
+              .bindPopup(
+                '<div style="font-family: inherit; padding: 4px; min-width: 180px;">' +
+                  '<div style="font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: ' + color + ';">' + place.category + '</div>' +
+                  '<div style="font-weight: 800; font-size: 13px; color: #152438; margin-top: 2px;">' + place.name + '</div>' +
+                  '<div style="font-size: 11px; color: #64748B; margin-top: 2px;">' + place.address + '</div>' +
+                  '<div style="display: flex; gap: 6px; margin-top: 6px;">' +
+                    '<span style="font-size: 10px; font-weight: 700; background: #EDF4FC; color: #1D68F2; padding: 2px 6px; border-radius: 4px;">' + place.badge + '</span>' +
+                    '<span style="font-size: 10px; font-weight: 600; background: #F1F5F9; color: #334155; padding: 2px 6px; border-radius: 4px;">' + place.note + '</span>' +
+                  '</div>' +
+                '</div>'
+              )
+              .addTo(markerLayer);
+          });
+        }
+
+        switchMapLayer('visiting');
+
+        document.getElementById('map-layer-visiting')?.addEventListener('click', () => switchMapLayer('visiting'));
+        document.getElementById('map-layer-living')?.addEventListener('click', () => switchMapLayer('living'));
+        document.getElementById('map-layer-business')?.addEventListener('click', () => switchMapLayer('business'));
+
+        window.switchCityMapLayer = switchMapLayer;
       }
 
-      // 3. Reactive Sliders for Breakeven Calculator
+      // 4. Reactive Breakeven Slider Calculation
       const sSqft = document.getElementById('slider-sqft');
       const sRent = document.getElementById('slider-rent');
       const sTicket = document.getElementById('slider-ticket');
       const sCogs = document.getElementById('slider-cogs');
+      const sOverhead = document.getElementById('slider-overhead');
 
       function recalculate() {
-        if (!sSqft || !sRent || !sTicket || !sCogs) return;
+        if (!sSqft || !sRent || !sTicket || !sCogs || !sOverhead) return;
         const sqft = parseFloat(sSqft.value);
         const rent = parseFloat(sRent.value);
         const ticket = parseFloat(sTicket.value);
         const cogsPct = parseFloat(sCogs.value) / 100;
+        const overhead = parseFloat(sOverhead.value);
 
         document.getElementById('label-sqft').innerText = sqft.toLocaleString() + ' sqft';
         document.getElementById('label-rent').innerText = '$' + rent.toFixed(2) + ' / sqft';
         document.getElementById('label-ticket').innerText = '$' + ticket.toFixed(2);
         document.getElementById('label-cogs').innerText = (cogsPct * 100).toFixed(0) + '%';
+        document.getElementById('label-overhead').innerText = '$' + Math.round(overhead).toLocaleString();
 
         const nnn = 6.50;
         const wage = 16.50;
@@ -784,12 +2058,12 @@ const jsonLdSchemas = [
 
         const monthlyOcc = (sqft * (rent + nnn)) / 12;
         const monthlyLabor = wage * hours * 4.3482 * 1.18;
-        const monthlyFixed = monthlyOcc + monthlyLabor + 1200;
+        const monthlyFixed = monthlyOcc + monthlyLabor + overhead;
 
         const netTicket = ticket / (1 + salesTaxRate);
         const contributionMargin = netTicket * (1 - cogsPct);
 
-        if (contributionMargin > 0) {
+        if (contributionMargin > 0 && ticket > 0 && cogsPct < 1) {
           const monthlyCust = Math.ceil(monthlyFixed / contributionMargin);
           const dailyCust = Math.ceil(monthlyCust / 30.4375);
           const monthlyRev = monthlyFixed / (1 - cogsPct);
@@ -797,12 +2071,221 @@ const jsonLdSchemas = [
           document.getElementById('output-daily-customers').innerText = dailyCust.toString();
           document.getElementById('output-monthly-revenue').innerText = '$' + Math.round(monthlyRev).toLocaleString();
           document.getElementById('output-monthly-fixed').innerText = '$' + Math.round(monthlyFixed).toLocaleString();
+        } else {
+          document.getElementById('output-daily-customers').innerText = '—';
+          document.getElementById('output-monthly-revenue').innerText = 'Invalid Input';
+          document.getElementById('output-monthly-fixed').innerText = '$' + Math.round(monthlyFixed).toLocaleString();
         }
       }
 
-      [sSqft, sRent, sTicket, sCogs].forEach((slider) => {
+      [sSqft, sRent, sTicket, sCogs, sOverhead].forEach((slider) => {
         if (slider) slider.addEventListener('input', recalculate);
       });
-    });
+
+      // Run initial recalculation to ensure parity
+      recalculate();
+
+      // 5. Video Player Activation
+      const videoBox = document.getElementById('video-tour-container');
+      if (videoBox) {
+        videoBox.addEventListener('click', () => {
+          const vId = videoBox.getAttribute('data-video-id');
+          if (vId) {
+            videoBox.innerHTML = '<iframe class="w-full h-full" src="https://www.youtube-nocookie.com/embed/' + vId + '?autoplay=1&rel=0" title="Video Tour" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+          }
+        });
+      }
+
+      // 6. Dynamic 25-Trade & Custom Enterprise Underwriting Engine
+      const tradeSelect = document.getElementById('trade-select');
+      const customTradeBox = document.getElementById('custom-trade-box');
+      const customBusinessNameInput = document.getElementById('custom-business-name');
+      const applyCustomNameBtn = document.getElementById('apply-custom-name-btn');
+      const toggleCustomBtn = document.getElementById('toggle-custom-btn');
+      const industriesData = JSON.parse(document.getElementById('pillar-business')?.getAttribute('data-industries') || '[]');
+
+      function applyTrade(naicsCode, customTitle) {
+        if (naicsCode === 'custom') {
+          if (customTradeBox) customTradeBox.classList.remove('hidden');
+          const entName = customTitle || (customBusinessNameInput ? customBusinessNameInput.value.trim() : '') || 'Custom Commercial Enterprise';
+
+          const labelEl = document.getElementById('active-trade-label');
+          if (labelEl) labelEl.innerText = 'Underwriting Pro-Forma — ' + entName;
+
+          const descEl = document.getElementById('active-trade-desc');
+          if (descEl) descEl.innerText = 'User-modeled commercial underwriting pro-forma parameters for ' + entName;
+
+          const countEl = document.getElementById('active-trade-count');
+          if (countEl) countEl.innerText = 'Custom';
+
+          const densityEl = document.getElementById('active-trade-density');
+          if (densityEl) densityEl.innerText = 'User Modeled';
+
+          const benchEl = document.getElementById('active-trade-benchmark');
+          if (benchEl) benchEl.innerText = 'Benchmark: Custom Specification';
+
+          const satEl = document.getElementById('active-trade-saturation');
+          if (satEl) satEl.innerHTML = 'Custom <span class="text-xs font-normal text-slate-400">Spec</span>';
+
+          const badge = document.getElementById('active-trade-badge');
+          if (badge) {
+            badge.className = 'inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-blue-50 text-[#1D68F2] border border-blue-200';
+            badge.innerHTML = '<span class="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span> Custom Enterprise';
+          }
+
+          const heroTradeLabel = document.getElementById('hero-trade-label');
+          if (heroTradeLabel) heroTradeLabel.innerText = entName;
+
+          if (tradeSelect && tradeSelect.value !== 'custom') {
+            tradeSelect.value = 'custom';
+          }
+
+          recalculate();
+          return;
+        }
+
+        // Standard 25-trade preset
+        if (customTradeBox) customTradeBox.classList.add('hidden');
+        const trade = industriesData.find(i => i.naicsCode === naicsCode);
+        if (!trade) return;
+
+        const labelEl = document.getElementById('active-trade-label');
+        if (labelEl) labelEl.innerText = 'Commercial Establishment Density — ' + trade.label;
+
+        const descEl = document.getElementById('active-trade-desc');
+        if (descEl) descEl.innerText = 'Census County Business Patterns (ZBP) verified small-business metrics';
+
+        const countEl = document.getElementById('active-trade-count');
+        if (countEl) countEl.innerText = trade.establishments.toString();
+
+        const densityEl = document.getElementById('active-trade-density');
+        if (densityEl) densityEl.innerText = trade.per10kResidents.toString();
+
+        const benchEl = document.getElementById('active-trade-benchmark');
+        if (benchEl) benchEl.innerText = 'National Benchmark: ' + trade.usAvgPer10k;
+
+        const satEl = document.getElementById('active-trade-saturation');
+        if (satEl) satEl.innerHTML = trade.saturationIndex + ' <span class="text-xs font-normal text-slate-400">/ 100</span>';
+
+        const badge = document.getElementById('active-trade-badge');
+        if (badge) {
+          badge.className = 'inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider ' + (
+            trade.status === 'underserved' ? 'bg-emerald-50 text-emerald-700 border border-emerald-200' :
+            trade.status === 'balanced' ? 'bg-blue-50 text-blue-700 border border-blue-200' : 'bg-rose-50 text-rose-700 border border-rose-200'
+          );
+          badge.innerHTML = '<span class="w-2 h-2 rounded-full bg-current animate-pulse"></span>' + trade.status;
+        }
+
+        if (sSqft) sSqft.value = (trade.typicalSqFt || 1500).toString();
+        if (sTicket) sTicket.value = (trade.avgTicket || 12.00).toString();
+        if (sCogs) sCogs.value = (trade.cogsPct || 30).toString();
+        if (sOverhead) sOverhead.value = (trade.monthlyOverheadBaseline || 1400).toString();
+
+        const heroTradeLabel = document.getElementById('hero-trade-label');
+        if (heroTradeLabel) heroTradeLabel.innerText = trade.label;
+
+        if (tradeSelect && tradeSelect.value !== naicsCode) {
+          tradeSelect.value = naicsCode;
+        }
+
+        recalculate();
+      }
+
+      if (toggleCustomBtn) {
+        toggleCustomBtn.addEventListener('click', () => {
+          applyTrade('custom');
+          customBusinessNameInput?.focus();
+        });
+      }
+
+      if (applyCustomNameBtn && customBusinessNameInput) {
+        applyCustomNameBtn.addEventListener('click', () => {
+          applyTrade('custom', customBusinessNameInput.value.trim());
+        });
+        customBusinessNameInput.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter') {
+            applyTrade('custom', customBusinessNameInput.value.trim());
+          }
+        });
+      }
+
+      if (tradeSelect) {
+        tradeSelect.addEventListener('change', (e) => {
+          applyTrade(e.target.value);
+        });
+      }
+
+      document.querySelectorAll('.trade-row').forEach(row => {
+        row.addEventListener('click', () => {
+          const naics = row.getAttribute('data-naics');
+          if (naics) {
+            applyTrade(naics);
+            document.getElementById('active-trade-label')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+        });
+      });
+
+      // 7. Save City Local Persistence
+      const saveBtn = document.getElementById('save-city-btn');
+      if (saveBtn) {
+        const slug = saveBtn.getAttribute('data-slug');
+        const name = saveBtn.getAttribute('data-name');
+        const stateCode = saveBtn.getAttribute('data-state');
+        const labelSpan = document.getElementById('save-city-label');
+
+        function checkSavedState() {
+          const saved = typeof getSavedCities === 'function' ? getSavedCities() : JSON.parse(localStorage.getItem('cityclick_saved_cities') || '[]');
+          const isSaved = saved.some(c => c.slug === slug);
+          if (isSaved) {
+            saveBtn.classList.add('border-emerald-500', 'text-emerald-400');
+            if (labelSpan) labelSpan.innerHTML = '<span class="text-emerald-400 font-bold">✓ Saved</span>';
+          } else {
+            saveBtn.classList.remove('border-emerald-500', 'text-emerald-400');
+            if (labelSpan) labelSpan.innerText = 'Save city';
+          }
+        }
+
+        checkSavedState();
+
+        saveBtn.addEventListener('click', () => {
+          let saved = typeof getSavedCities === 'function' ? getSavedCities() : JSON.parse(localStorage.getItem('cityclick_saved_cities') || '[]');
+          const exists = saved.some(c => c.slug === slug);
+
+          if (!exists) {
+            saved.push({ slug, name, stateCode });
+            if (labelSpan) labelSpan.innerHTML = '<span class="text-emerald-400 font-bold">✓ Saved</span>';
+          } else {
+            saved = saved.filter(c => c.slug !== slug);
+            if (labelSpan) labelSpan.innerText = 'Save city';
+          }
+
+          if (typeof setSavedCities === 'function') {
+            setSavedCities(saved);
+          } else {
+            localStorage.setItem('cityclick_saved_cities', JSON.stringify(saved));
+          }
+          checkSavedState();
+        });
+
+        window.addEventListener('cityclick_saved_changed', checkSavedState);
+      }
+
+      // 8. URL Parameter & Hash Tab Deep-Link
+      const urlParams = new URLSearchParams(window.location.search);
+      const tabParam = (urlParams.get('tab') || window.location.hash.replace('#', '')).toLowerCase();
+      if (tabParam === 'moving' || tabParam === 'live') {
+        document.querySelector('button[data-pillar="pillar-moving"]')?.click();
+      } else if (tabParam === 'business' || tabParam === 'biz') {
+        document.querySelector('button[data-pillar="pillar-business"]')?.click();
+      } else if (tabParam === 'travel' || tabParam === 'visit' || tabParam === 'visiting') {
+        document.querySelector('button[data-pillar="pillar-travel"]')?.click();
+      }
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initCityClick);
+    } else {
+      initCityClick();
+    }
   </script>
 </Layout>

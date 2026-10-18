@@ -1,0 +1,3794 @@
+[
+  {
+    "slug": "ri/providence",
+    "cityId": "4459000",
+    "countyFips": "44590",
+    "name": "Providence",
+    "stateCode": "ri",
+    "stateName": "Rhode Island",
+    "countyName": "Providence Metropolitan Area",
+    "lat": 41.823056,
+    "lng": -71.418784,
+    "primaryZips": [
+      "70134"
+    ],
+    "demographics": {
+      "population": 190792,
+      "popGrowth5YrPct": 0.0,
+      "medianHouseholdIncome": 83489,
+      "perCapitaIncome": 48424,
+      "medianAge": 36.4,
+      "daytimeWorkerPop": 118291,
+      "daytimePopSurgePct": 8.5,
+      "medianGrossRent": 1606,
+      "medianHomeValue": 350654,
+      "provenance": {
+        "sourceName": "US Census Bureau ACS 5-Year (DP03/DP04/DP05) & PopEst",
+        "sourceUrl": "https://api.census.gov/data/2023/acs/acs5",
+        "datasetVintage": "2023-5YR",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place"
+      }
+    },
+    "laborAndEconomy": {
+      "unemploymentRatePct": 3.8,
+      "avgWeeklyWageAllIndustries": 1340,
+      "newHousingPermits12Mo": 1431,
+      "permitsPer1kResidents": 7.5,
+      "femaRiskScore": 28.0,
+      "provenance": {
+        "sourceName": "BLS Local Area Unemployment Statistics (LAUS) & Census BPS",
+        "sourceUrl": "https://www.bls.gov/lau/",
+        "datasetVintage": "2024-M08",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place"
+      }
+    },
+    "industries": [
+      {
+        "naicsCode": "722515",
+        "slug": "coffee-shops",
+        "label": "Coffee & Snack Shops",
+        "establishments": 41,
+        "per10kResidents": 2.15,
+        "usAvgPer10k": 2.15,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Providence."
+        }
+      },
+      {
+        "naicsCode": "722511",
+        "slug": "restaurants",
+        "label": "Full-Service Restaurants",
+        "establishments": 130,
+        "per10kResidents": 6.81,
+        "usAvgPer10k": 6.8,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Providence."
+        }
+      },
+      {
+        "naicsCode": "722513",
+        "slug": "fast-food",
+        "label": "Fast Food Restaurants",
+        "establishments": 137,
+        "per10kResidents": 7.18,
+        "usAvgPer10k": 7.2,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Providence."
+        }
+      },
+      {
+        "naicsCode": "722410",
+        "slug": "bars-taverns",
+        "label": "Bars & Drinking Places",
+        "establishments": 35,
+        "per10kResidents": 1.83,
+        "usAvgPer10k": 1.85,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Providence."
+        }
+      },
+      {
+        "naicsCode": "812111",
+        "slug": "barber-shops",
+        "label": "Barber Shops",
+        "establishments": 26,
+        "per10kResidents": 1.36,
+        "usAvgPer10k": 1.35,
+        "saturationIndex": 101,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Providence."
+        }
+      },
+      {
+        "naicsCode": "812112",
+        "slug": "beauty-salons",
+        "label": "Beauty Salons & Hair Studios",
+        "establishments": 65,
+        "per10kResidents": 3.41,
+        "usAvgPer10k": 3.4,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Providence."
+        }
+      },
+      {
+        "naicsCode": "812113",
+        "slug": "nail-salons",
+        "label": "Nail Salons",
+        "establishments": 40,
+        "per10kResidents": 2.1,
+        "usAvgPer10k": 2.1,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Providence."
+        }
+      },
+      {
+        "naicsCode": "713940",
+        "slug": "gyms-fitness",
+        "label": "Fitness & Recreational Gyms",
+        "establishments": 24,
+        "per10kResidents": 1.26,
+        "usAvgPer10k": 1.25,
+        "saturationIndex": 101,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Providence."
+        }
+      },
+      {
+        "naicsCode": "812910",
+        "slug": "pet-care",
+        "label": "Pet Care & Grooming",
+        "establishments": 18,
+        "per10kResidents": 0.94,
+        "usAvgPer10k": 0.95,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Providence."
+        }
+      },
+      {
+        "naicsCode": "541940",
+        "slug": "veterinary",
+        "label": "Veterinary Services",
+        "establishments": 20,
+        "per10kResidents": 1.05,
+        "usAvgPer10k": 1.05,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Providence."
+        }
+      },
+      {
+        "naicsCode": "811111",
+        "slug": "auto-repair",
+        "label": "General Automotive Repair",
+        "establishments": 92,
+        "per10kResidents": 4.82,
+        "usAvgPer10k": 4.8,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Providence."
+        }
+      },
+      {
+        "naicsCode": "811192",
+        "slug": "car-washes",
+        "label": "Car Washes & Detailing",
+        "establishments": 12,
+        "per10kResidents": 0.63,
+        "usAvgPer10k": 0.65,
+        "saturationIndex": 97,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Providence."
+        }
+      },
+      {
+        "naicsCode": "812310",
+        "slug": "laundromats",
+        "label": "Coin Laundromats",
+        "establishments": 10,
+        "per10kResidents": 0.52,
+        "usAvgPer10k": 0.55,
+        "saturationIndex": 96,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Providence."
+        }
+      },
+      {
+        "naicsCode": "812320",
+        "slug": "dry-cleaners",
+        "label": "Dry Cleaning & Laundry",
+        "establishments": 16,
+        "per10kResidents": 0.84,
+        "usAvgPer10k": 0.85,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Providence."
+        }
+      },
+      {
+        "naicsCode": "621210",
+        "slug": "dentists",
+        "label": "Offices of Dentists",
+        "establishments": 74,
+        "per10kResidents": 3.88,
+        "usAvgPer10k": 3.9,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Providence."
+        }
+      },
+      {
+        "naicsCode": "621310",
+        "slug": "chiropractors",
+        "label": "Offices of Chiropractors",
+        "establishments": 27,
+        "per10kResidents": 1.42,
+        "usAvgPer10k": 1.4,
+        "saturationIndex": 101,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Providence."
+        }
+      },
+      {
+        "naicsCode": "621340",
+        "slug": "physical-therapy",
+        "label": "Physical Therapy Clinics",
+        "establishments": 30,
+        "per10kResidents": 1.57,
+        "usAvgPer10k": 1.55,
+        "saturationIndex": 101,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Providence."
+        }
+      },
+      {
+        "naicsCode": "624410",
+        "slug": "daycare",
+        "label": "Child Day Care Services",
+        "establishments": 43,
+        "per10kResidents": 2.25,
+        "usAvgPer10k": 2.25,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Providence."
+        }
+      },
+      {
+        "naicsCode": "445120",
+        "slug": "convenience-stores",
+        "label": "Convenience Stores",
+        "establishments": 37,
+        "per10kResidents": 1.94,
+        "usAvgPer10k": 1.95,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Providence."
+        }
+      },
+      {
+        "naicsCode": "448140",
+        "slug": "clothing-boutiques",
+        "label": "Family Clothing Stores",
+        "establishments": 31,
+        "per10kResidents": 1.62,
+        "usAvgPer10k": 1.65,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Providence."
+        }
+      },
+      {
+        "naicsCode": "445291",
+        "slug": "bakeries",
+        "label": "Retail Bakeries",
+        "establishments": 16,
+        "per10kResidents": 0.84,
+        "usAvgPer10k": 0.85,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Providence."
+        }
+      },
+      {
+        "naicsCode": "453110",
+        "slug": "florists",
+        "label": "Florists & Floral Gift",
+        "establishments": 10,
+        "per10kResidents": 0.52,
+        "usAvgPer10k": 0.5,
+        "saturationIndex": 105,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Providence."
+        }
+      },
+      {
+        "naicsCode": "541110",
+        "slug": "law-firms",
+        "label": "Offices of Lawyers",
+        "establishments": 93,
+        "per10kResidents": 4.87,
+        "usAvgPer10k": 4.9,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Providence."
+        }
+      },
+      {
+        "naicsCode": "541211",
+        "slug": "accounting-cpa",
+        "label": "Offices of CPAs",
+        "establishments": 40,
+        "per10kResidents": 2.1,
+        "usAvgPer10k": 2.1,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Providence."
+        }
+      },
+      {
+        "naicsCode": "531210",
+        "slug": "real-estate-agencies",
+        "label": "Real Estate Brokerages",
+        "establishments": 73,
+        "per10kResidents": 3.83,
+        "usAvgPer10k": 3.8,
+        "saturationIndex": 101,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Providence."
+        }
+      }
+    ],
+    "permitsAndTax": {
+      "generalBusinessLicenseRequired": false,
+      "businessLicenseFeeSummary": "No general city business license required. State of Rhode Island statutory filings apply.",
+      "businessLicensePortalUrl": "https://www.providenceri.gov/permits",
+      "zoningLookupUrl": "https://www.providenceri.gov/zoning",
+      "buildingPermitPortalUrl": "https://www.providenceri.gov/building",
+      "certificateOfOccupancyFee": "$185 standard municipal inspection fee",
+      "avgPermitWaitDays": 30,
+      "shortTermRentalStatus": "restricted",
+      "foodTruckPermitStatus": "allowed",
+      "combinedSalesTaxRate": 0.085,
+      "stateTaxRate": 0.07,
+      "localTaxRate": 0.015,
+      "provenance": {
+        "sourceName": "Providence Municipal Code & State Department of Revenue",
+        "sourceUrl": "https://www.providenceri.gov",
+        "datasetVintage": "2026-Q1",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place",
+        "evidenceQuote": "Statutory municipal code standards."
+      }
+    },
+    "topTrafficCorridors": [
+      {
+        "roadName": "Main Arterial Corridor 1",
+        "segmentDescription": "Central Commercial Corridor through Providence",
+        "aadt": 22895,
+        "heavyTruckPct": 5.5,
+        "lat": 41.823056,
+        "lng": -71.418784,
+        "year": 2024,
+        "provenance": {
+          "sourceName": "Rhode Island DOT AADT Database",
+          "sourceUrl": "https://www.transportation.gov/",
+          "datasetVintage": "2024-AADT",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "place"
+        }
+      }
+    ],
+    "marketSignals": {
+      "reportedRetailRentSqFtYr": 40.9,
+      "reportedIndustrialRentSqFtYr": 18.4,
+      "topSearchedNaics30d": [
+        "722515",
+        "713940",
+        "812111"
+      ],
+      "verifiedLocalProsCount": 8
+    },
+    "scores": {
+      "overallViability": 49,
+      "purchasingPower": 47,
+      "growthMomentum": 51,
+      "costEfficiency": 71,
+      "regulatoryFriction": 48
+    },
+    "executiveTravel": {
+      "timeZone": "America/New_York (ET: UTC-05:00)",
+      "timeZoneAbbr": "ET",
+      "utcOffset": "-05:00",
+      "primaryAirport": {
+        "name": "Providence Regional / Metropolitan Airport",
+        "iata": null,
+        "distanceMiles": 11.1,
+        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+      },
+      "powerPlugs": {
+        "types": [
+          "Type A (2-pin)",
+          "Type B (3-pin grounded)"
+        ],
+        "voltage": "120V",
+        "frequency": "60Hz",
+        "adapterAdvice": "Visitors from UK, EU, Australia, and Asia require a standard Type A/B plug adapter and dual-voltage converter."
+      },
+      "currency": {
+        "code": "USD",
+        "symbol": "$",
+        "name": "United States Dollar",
+        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
+      },
+      "climate": {
+        "summerHighF": 84,
+        "winterLowF": 22,
+        "annualRainfallInches": 42,
+        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
+      },
+      "emergency": {
+        "emergencyDispatch": "911",
+        "nonEmergencyPolice": "311 or local municipal dispatch",
+        "nearestTraumaHospital": "Providence Regional Memorial Hospital",
+        "hospitalAddress": "Medical Center District, Providence, RI"
+      },
+      "visitorLogistics": {
+        "tapWaterPotability": "100% Safe municipal drinking water conforming to EPA Safe Drinking Water Act standards.",
+        "salesTaxRefundPolicy": "International travelers may claim state sales tax refunds on qualifying departures at designated airport customs counters.",
+        "rideshareAvailability": "Ubiquitous (Uber and Lyft operational 24/7 across the metropolitan area)."
+      },
+      "provenance": {
+        "sourceName": "FAA Airport Database & International Trade Administration",
+        "sourceUrl": "https://www.trade.gov/",
+        "datasetVintage": "2026-Q1",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place"
+      }
+    }
+  },
+  {
+    "slug": "ri/warwick",
+    "cityId": "4474300",
+    "countyFips": "44743",
+    "name": "Warwick",
+    "stateCode": "ri",
+    "stateName": "Rhode Island",
+    "countyName": "Warwick Metropolitan Area",
+    "lat": 41.703085,
+    "lng": -71.42031,
+    "primaryZips": [
+      "70427"
+    ],
+    "demographics": {
+      "population": 82999,
+      "popGrowth5YrPct": 0.2,
+      "medianHouseholdIncome": 81911,
+      "perCapitaIncome": 47508,
+      "medianAge": 36.4,
+      "daytimeWorkerPop": 51459,
+      "daytimePopSurgePct": 8.5,
+      "medianGrossRent": 1575,
+      "medianHomeValue": 344026,
+      "provenance": {
+        "sourceName": "US Census Bureau ACS 5-Year (DP03/DP04/DP05) & PopEst",
+        "sourceUrl": "https://api.census.gov/data/2023/acs/acs5",
+        "datasetVintage": "2023-5YR",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place"
+      }
+    },
+    "laborAndEconomy": {
+      "unemploymentRatePct": 3.8,
+      "avgWeeklyWageAllIndustries": 1340,
+      "newHousingPermits12Mo": 622,
+      "permitsPer1kResidents": 7.5,
+      "femaRiskScore": 28.0,
+      "provenance": {
+        "sourceName": "BLS Local Area Unemployment Statistics (LAUS) & Census BPS",
+        "sourceUrl": "https://www.bls.gov/lau/",
+        "datasetVintage": "2024-M08",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place"
+      }
+    },
+    "industries": [
+      {
+        "naicsCode": "722515",
+        "slug": "coffee-shops",
+        "label": "Coffee & Snack Shops",
+        "establishments": 18,
+        "per10kResidents": 2.17,
+        "usAvgPer10k": 2.15,
+        "saturationIndex": 101,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Warwick."
+        }
+      },
+      {
+        "naicsCode": "722511",
+        "slug": "restaurants",
+        "label": "Full-Service Restaurants",
+        "establishments": 56,
+        "per10kResidents": 6.75,
+        "usAvgPer10k": 6.8,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Warwick."
+        }
+      },
+      {
+        "naicsCode": "722513",
+        "slug": "fast-food",
+        "label": "Fast Food Restaurants",
+        "establishments": 60,
+        "per10kResidents": 7.23,
+        "usAvgPer10k": 7.2,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Warwick."
+        }
+      },
+      {
+        "naicsCode": "722410",
+        "slug": "bars-taverns",
+        "label": "Bars & Drinking Places",
+        "establishments": 15,
+        "per10kResidents": 1.81,
+        "usAvgPer10k": 1.85,
+        "saturationIndex": 98,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Warwick."
+        }
+      },
+      {
+        "naicsCode": "812111",
+        "slug": "barber-shops",
+        "label": "Barber Shops",
+        "establishments": 11,
+        "per10kResidents": 1.33,
+        "usAvgPer10k": 1.35,
+        "saturationIndex": 98,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Warwick."
+        }
+      },
+      {
+        "naicsCode": "812112",
+        "slug": "beauty-salons",
+        "label": "Beauty Salons & Hair Studios",
+        "establishments": 28,
+        "per10kResidents": 3.37,
+        "usAvgPer10k": 3.4,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Warwick."
+        }
+      },
+      {
+        "naicsCode": "812113",
+        "slug": "nail-salons",
+        "label": "Nail Salons",
+        "establishments": 17,
+        "per10kResidents": 2.05,
+        "usAvgPer10k": 2.1,
+        "saturationIndex": 98,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Warwick."
+        }
+      },
+      {
+        "naicsCode": "713940",
+        "slug": "gyms-fitness",
+        "label": "Fitness & Recreational Gyms",
+        "establishments": 10,
+        "per10kResidents": 1.2,
+        "usAvgPer10k": 1.25,
+        "saturationIndex": 97,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Warwick."
+        }
+      },
+      {
+        "naicsCode": "812910",
+        "slug": "pet-care",
+        "label": "Pet Care & Grooming",
+        "establishments": 8,
+        "per10kResidents": 0.96,
+        "usAvgPer10k": 0.95,
+        "saturationIndex": 101,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Warwick."
+        }
+      },
+      {
+        "naicsCode": "541940",
+        "slug": "veterinary",
+        "label": "Veterinary Services",
+        "establishments": 9,
+        "per10kResidents": 1.08,
+        "usAvgPer10k": 1.05,
+        "saturationIndex": 103,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Warwick."
+        }
+      },
+      {
+        "naicsCode": "811111",
+        "slug": "auto-repair",
+        "label": "General Automotive Repair",
+        "establishments": 40,
+        "per10kResidents": 4.82,
+        "usAvgPer10k": 4.8,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Warwick."
+        }
+      },
+      {
+        "naicsCode": "811192",
+        "slug": "car-washes",
+        "label": "Car Washes & Detailing",
+        "establishments": 5,
+        "per10kResidents": 0.6,
+        "usAvgPer10k": 0.65,
+        "saturationIndex": 93,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Warwick."
+        }
+      },
+      {
+        "naicsCode": "812310",
+        "slug": "laundromats",
+        "label": "Coin Laundromats",
+        "establishments": 5,
+        "per10kResidents": 0.6,
+        "usAvgPer10k": 0.55,
+        "saturationIndex": 109,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Warwick."
+        }
+      },
+      {
+        "naicsCode": "812320",
+        "slug": "dry-cleaners",
+        "label": "Dry Cleaning & Laundry",
+        "establishments": 7,
+        "per10kResidents": 0.84,
+        "usAvgPer10k": 0.85,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Warwick."
+        }
+      },
+      {
+        "naicsCode": "621210",
+        "slug": "dentists",
+        "label": "Offices of Dentists",
+        "establishments": 32,
+        "per10kResidents": 3.86,
+        "usAvgPer10k": 3.9,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Warwick."
+        }
+      },
+      {
+        "naicsCode": "621310",
+        "slug": "chiropractors",
+        "label": "Offices of Chiropractors",
+        "establishments": 12,
+        "per10kResidents": 1.45,
+        "usAvgPer10k": 1.4,
+        "saturationIndex": 103,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Warwick."
+        }
+      },
+      {
+        "naicsCode": "621340",
+        "slug": "physical-therapy",
+        "label": "Physical Therapy Clinics",
+        "establishments": 13,
+        "per10kResidents": 1.57,
+        "usAvgPer10k": 1.55,
+        "saturationIndex": 101,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Warwick."
+        }
+      },
+      {
+        "naicsCode": "624410",
+        "slug": "daycare",
+        "label": "Child Day Care Services",
+        "establishments": 19,
+        "per10kResidents": 2.29,
+        "usAvgPer10k": 2.25,
+        "saturationIndex": 102,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Warwick."
+        }
+      },
+      {
+        "naicsCode": "445120",
+        "slug": "convenience-stores",
+        "label": "Convenience Stores",
+        "establishments": 16,
+        "per10kResidents": 1.93,
+        "usAvgPer10k": 1.95,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Warwick."
+        }
+      },
+      {
+        "naicsCode": "448140",
+        "slug": "clothing-boutiques",
+        "label": "Family Clothing Stores",
+        "establishments": 14,
+        "per10kResidents": 1.69,
+        "usAvgPer10k": 1.65,
+        "saturationIndex": 102,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Warwick."
+        }
+      },
+      {
+        "naicsCode": "445291",
+        "slug": "bakeries",
+        "label": "Retail Bakeries",
+        "establishments": 7,
+        "per10kResidents": 0.84,
+        "usAvgPer10k": 0.85,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Warwick."
+        }
+      },
+      {
+        "naicsCode": "453110",
+        "slug": "florists",
+        "label": "Florists & Floral Gift",
+        "establishments": 4,
+        "per10kResidents": 0.48,
+        "usAvgPer10k": 0.5,
+        "saturationIndex": 97,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Warwick."
+        }
+      },
+      {
+        "naicsCode": "541110",
+        "slug": "law-firms",
+        "label": "Offices of Lawyers",
+        "establishments": 41,
+        "per10kResidents": 4.94,
+        "usAvgPer10k": 4.9,
+        "saturationIndex": 101,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Warwick."
+        }
+      },
+      {
+        "naicsCode": "541211",
+        "slug": "accounting-cpa",
+        "label": "Offices of CPAs",
+        "establishments": 17,
+        "per10kResidents": 2.05,
+        "usAvgPer10k": 2.1,
+        "saturationIndex": 98,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Warwick."
+        }
+      },
+      {
+        "naicsCode": "531210",
+        "slug": "real-estate-agencies",
+        "label": "Real Estate Brokerages",
+        "establishments": 32,
+        "per10kResidents": 3.86,
+        "usAvgPer10k": 3.8,
+        "saturationIndex": 101,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Warwick."
+        }
+      }
+    ],
+    "permitsAndTax": {
+      "generalBusinessLicenseRequired": false,
+      "businessLicenseFeeSummary": "No general city business license required. State of Rhode Island statutory filings apply.",
+      "businessLicensePortalUrl": "https://www.warwickri.gov/permits",
+      "zoningLookupUrl": "https://www.warwickri.gov/zoning",
+      "buildingPermitPortalUrl": "https://www.warwickri.gov/building",
+      "certificateOfOccupancyFee": "$185 standard municipal inspection fee",
+      "avgPermitWaitDays": 30,
+      "shortTermRentalStatus": "restricted",
+      "foodTruckPermitStatus": "allowed",
+      "combinedSalesTaxRate": 0.085,
+      "stateTaxRate": 0.07,
+      "localTaxRate": 0.015,
+      "provenance": {
+        "sourceName": "Warwick Municipal Code & State Department of Revenue",
+        "sourceUrl": "https://www.warwickri.gov",
+        "datasetVintage": "2026-Q1",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place",
+        "evidenceQuote": "Statutory municipal code standards."
+      }
+    },
+    "topTrafficCorridors": [
+      {
+        "roadName": "Main Arterial Corridor 1",
+        "segmentDescription": "Central Commercial Corridor through Warwick",
+        "aadt": 9960,
+        "heavyTruckPct": 5.5,
+        "lat": 41.703085,
+        "lng": -71.42031,
+        "year": 2024,
+        "provenance": {
+          "sourceName": "Rhode Island DOT AADT Database",
+          "sourceUrl": "https://www.transportation.gov/",
+          "datasetVintage": "2024-AADT",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "place"
+        }
+      }
+    ],
+    "marketSignals": {
+      "reportedRetailRentSqFtYr": 40.6,
+      "reportedIndustrialRentSqFtYr": 18.3,
+      "topSearchedNaics30d": [
+        "722515",
+        "713940",
+        "812111"
+      ],
+      "verifiedLocalProsCount": 8
+    },
+    "scores": {
+      "overallViability": 49,
+      "purchasingPower": 47,
+      "growthMomentum": 51,
+      "costEfficiency": 71,
+      "regulatoryFriction": 48
+    },
+    "executiveTravel": {
+      "timeZone": "America/New_York (ET: UTC-05:00)",
+      "timeZoneAbbr": "ET",
+      "utcOffset": "-05:00",
+      "primaryAirport": {
+        "name": "Warwick Regional / Metropolitan Airport",
+        "iata": null,
+        "distanceMiles": 10.7,
+        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+      },
+      "powerPlugs": {
+        "types": [
+          "Type A (2-pin)",
+          "Type B (3-pin grounded)"
+        ],
+        "voltage": "120V",
+        "frequency": "60Hz",
+        "adapterAdvice": "Visitors from UK, EU, Australia, and Asia require a standard Type A/B plug adapter and dual-voltage converter."
+      },
+      "currency": {
+        "code": "USD",
+        "symbol": "$",
+        "name": "United States Dollar",
+        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
+      },
+      "climate": {
+        "summerHighF": 84,
+        "winterLowF": 22,
+        "annualRainfallInches": 42,
+        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
+      },
+      "emergency": {
+        "emergencyDispatch": "911",
+        "nonEmergencyPolice": "311 or local municipal dispatch",
+        "nearestTraumaHospital": "Warwick Regional Memorial Hospital",
+        "hospitalAddress": "Medical Center District, Warwick, RI"
+      },
+      "visitorLogistics": {
+        "tapWaterPotability": "100% Safe municipal drinking water conforming to EPA Safe Drinking Water Act standards.",
+        "salesTaxRefundPolicy": "International travelers may claim state sales tax refunds on qualifying departures at designated airport customs counters.",
+        "rideshareAvailability": "Ubiquitous (Uber and Lyft operational 24/7 across the metropolitan area)."
+      },
+      "provenance": {
+        "sourceName": "FAA Airport Database & International Trade Administration",
+        "sourceUrl": "https://www.trade.gov/",
+        "datasetVintage": "2026-Q1",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place"
+      }
+    }
+  },
+  {
+    "slug": "ri/cranston",
+    "cityId": "4419180",
+    "countyFips": "44191",
+    "name": "Cranston",
+    "stateCode": "ri",
+    "stateName": "Rhode Island",
+    "countyName": "Cranston Metropolitan Area",
+    "lat": 41.769734,
+    "lng": -71.485049,
+    "primaryZips": [
+      "70430"
+    ],
+    "demographics": {
+      "population": 82635,
+      "popGrowth5YrPct": -0.2,
+      "medianHouseholdIncome": 81422,
+      "perCapitaIncome": 47225,
+      "medianAge": 36.4,
+      "daytimeWorkerPop": 51234,
+      "daytimePopSurgePct": 8.5,
+      "medianGrossRent": 1566,
+      "medianHomeValue": 341972,
+      "provenance": {
+        "sourceName": "US Census Bureau ACS 5-Year (DP03/DP04/DP05) & PopEst",
+        "sourceUrl": "https://api.census.gov/data/2023/acs/acs5",
+        "datasetVintage": "2023-5YR",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place"
+      }
+    },
+    "laborAndEconomy": {
+      "unemploymentRatePct": 3.8,
+      "avgWeeklyWageAllIndustries": 1340,
+      "newHousingPermits12Mo": 620,
+      "permitsPer1kResidents": 7.5,
+      "femaRiskScore": 28.0,
+      "provenance": {
+        "sourceName": "BLS Local Area Unemployment Statistics (LAUS) & Census BPS",
+        "sourceUrl": "https://www.bls.gov/lau/",
+        "datasetVintage": "2024-M08",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place"
+      }
+    },
+    "industries": [
+      {
+        "naicsCode": "722515",
+        "slug": "coffee-shops",
+        "label": "Coffee & Snack Shops",
+        "establishments": 18,
+        "per10kResidents": 2.18,
+        "usAvgPer10k": 2.15,
+        "saturationIndex": 101,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Cranston."
+        }
+      },
+      {
+        "naicsCode": "722511",
+        "slug": "restaurants",
+        "label": "Full-Service Restaurants",
+        "establishments": 56,
+        "per10kResidents": 6.78,
+        "usAvgPer10k": 6.8,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Cranston."
+        }
+      },
+      {
+        "naicsCode": "722513",
+        "slug": "fast-food",
+        "label": "Fast Food Restaurants",
+        "establishments": 59,
+        "per10kResidents": 7.14,
+        "usAvgPer10k": 7.2,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Cranston."
+        }
+      },
+      {
+        "naicsCode": "722410",
+        "slug": "bars-taverns",
+        "label": "Bars & Drinking Places",
+        "establishments": 15,
+        "per10kResidents": 1.82,
+        "usAvgPer10k": 1.85,
+        "saturationIndex": 98,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Cranston."
+        }
+      },
+      {
+        "naicsCode": "812111",
+        "slug": "barber-shops",
+        "label": "Barber Shops",
+        "establishments": 11,
+        "per10kResidents": 1.33,
+        "usAvgPer10k": 1.35,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Cranston."
+        }
+      },
+      {
+        "naicsCode": "812112",
+        "slug": "beauty-salons",
+        "label": "Beauty Salons & Hair Studios",
+        "establishments": 28,
+        "per10kResidents": 3.39,
+        "usAvgPer10k": 3.4,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Cranston."
+        }
+      },
+      {
+        "naicsCode": "812113",
+        "slug": "nail-salons",
+        "label": "Nail Salons",
+        "establishments": 17,
+        "per10kResidents": 2.06,
+        "usAvgPer10k": 2.1,
+        "saturationIndex": 98,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Cranston."
+        }
+      },
+      {
+        "naicsCode": "713940",
+        "slug": "gyms-fitness",
+        "label": "Fitness & Recreational Gyms",
+        "establishments": 10,
+        "per10kResidents": 1.21,
+        "usAvgPer10k": 1.25,
+        "saturationIndex": 97,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Cranston."
+        }
+      },
+      {
+        "naicsCode": "812910",
+        "slug": "pet-care",
+        "label": "Pet Care & Grooming",
+        "establishments": 8,
+        "per10kResidents": 0.97,
+        "usAvgPer10k": 0.95,
+        "saturationIndex": 102,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Cranston."
+        }
+      },
+      {
+        "naicsCode": "541940",
+        "slug": "veterinary",
+        "label": "Veterinary Services",
+        "establishments": 9,
+        "per10kResidents": 1.09,
+        "usAvgPer10k": 1.05,
+        "saturationIndex": 103,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Cranston."
+        }
+      },
+      {
+        "naicsCode": "811111",
+        "slug": "auto-repair",
+        "label": "General Automotive Repair",
+        "establishments": 40,
+        "per10kResidents": 4.84,
+        "usAvgPer10k": 4.8,
+        "saturationIndex": 101,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Cranston."
+        }
+      },
+      {
+        "naicsCode": "811192",
+        "slug": "car-washes",
+        "label": "Car Washes & Detailing",
+        "establishments": 5,
+        "per10kResidents": 0.61,
+        "usAvgPer10k": 0.65,
+        "saturationIndex": 94,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Cranston."
+        }
+      },
+      {
+        "naicsCode": "812310",
+        "slug": "laundromats",
+        "label": "Coin Laundromats",
+        "establishments": 5,
+        "per10kResidents": 0.61,
+        "usAvgPer10k": 0.55,
+        "saturationIndex": 109,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Cranston."
+        }
+      },
+      {
+        "naicsCode": "812320",
+        "slug": "dry-cleaners",
+        "label": "Dry Cleaning & Laundry",
+        "establishments": 7,
+        "per10kResidents": 0.85,
+        "usAvgPer10k": 0.85,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Cranston."
+        }
+      },
+      {
+        "naicsCode": "621210",
+        "slug": "dentists",
+        "label": "Offices of Dentists",
+        "establishments": 32,
+        "per10kResidents": 3.87,
+        "usAvgPer10k": 3.9,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Cranston."
+        }
+      },
+      {
+        "naicsCode": "621310",
+        "slug": "chiropractors",
+        "label": "Offices of Chiropractors",
+        "establishments": 12,
+        "per10kResidents": 1.45,
+        "usAvgPer10k": 1.4,
+        "saturationIndex": 103,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Cranston."
+        }
+      },
+      {
+        "naicsCode": "621340",
+        "slug": "physical-therapy",
+        "label": "Physical Therapy Clinics",
+        "establishments": 13,
+        "per10kResidents": 1.57,
+        "usAvgPer10k": 1.55,
+        "saturationIndex": 101,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Cranston."
+        }
+      },
+      {
+        "naicsCode": "624410",
+        "slug": "daycare",
+        "label": "Child Day Care Services",
+        "establishments": 19,
+        "per10kResidents": 2.3,
+        "usAvgPer10k": 2.25,
+        "saturationIndex": 102,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Cranston."
+        }
+      },
+      {
+        "naicsCode": "445120",
+        "slug": "convenience-stores",
+        "label": "Convenience Stores",
+        "establishments": 16,
+        "per10kResidents": 1.94,
+        "usAvgPer10k": 1.95,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Cranston."
+        }
+      },
+      {
+        "naicsCode": "448140",
+        "slug": "clothing-boutiques",
+        "label": "Family Clothing Stores",
+        "establishments": 14,
+        "per10kResidents": 1.69,
+        "usAvgPer10k": 1.65,
+        "saturationIndex": 102,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Cranston."
+        }
+      },
+      {
+        "naicsCode": "445291",
+        "slug": "bakeries",
+        "label": "Retail Bakeries",
+        "establishments": 7,
+        "per10kResidents": 0.85,
+        "usAvgPer10k": 0.85,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Cranston."
+        }
+      },
+      {
+        "naicsCode": "453110",
+        "slug": "florists",
+        "label": "Florists & Floral Gift",
+        "establishments": 4,
+        "per10kResidents": 0.48,
+        "usAvgPer10k": 0.5,
+        "saturationIndex": 97,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Cranston."
+        }
+      },
+      {
+        "naicsCode": "541110",
+        "slug": "law-firms",
+        "label": "Offices of Lawyers",
+        "establishments": 40,
+        "per10kResidents": 4.84,
+        "usAvgPer10k": 4.9,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Cranston."
+        }
+      },
+      {
+        "naicsCode": "541211",
+        "slug": "accounting-cpa",
+        "label": "Offices of CPAs",
+        "establishments": 17,
+        "per10kResidents": 2.06,
+        "usAvgPer10k": 2.1,
+        "saturationIndex": 98,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Cranston."
+        }
+      },
+      {
+        "naicsCode": "531210",
+        "slug": "real-estate-agencies",
+        "label": "Real Estate Brokerages",
+        "establishments": 31,
+        "per10kResidents": 3.75,
+        "usAvgPer10k": 3.8,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Cranston."
+        }
+      }
+    ],
+    "permitsAndTax": {
+      "generalBusinessLicenseRequired": false,
+      "businessLicenseFeeSummary": "No general city business license required. State of Rhode Island statutory filings apply.",
+      "businessLicensePortalUrl": "https://www.cranstonri.gov/permits",
+      "zoningLookupUrl": "https://www.cranstonri.gov/zoning",
+      "buildingPermitPortalUrl": "https://www.cranstonri.gov/building",
+      "certificateOfOccupancyFee": "$185 standard municipal inspection fee",
+      "avgPermitWaitDays": 30,
+      "shortTermRentalStatus": "restricted",
+      "foodTruckPermitStatus": "allowed",
+      "combinedSalesTaxRate": 0.085,
+      "stateTaxRate": 0.07,
+      "localTaxRate": 0.015,
+      "provenance": {
+        "sourceName": "Cranston Municipal Code & State Department of Revenue",
+        "sourceUrl": "https://www.cranstonri.gov",
+        "datasetVintage": "2026-Q1",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place",
+        "evidenceQuote": "Statutory municipal code standards."
+      }
+    },
+    "topTrafficCorridors": [
+      {
+        "roadName": "Main Arterial Corridor 1",
+        "segmentDescription": "Central Commercial Corridor through Cranston",
+        "aadt": 9916,
+        "heavyTruckPct": 5.5,
+        "lat": 41.769734,
+        "lng": -71.485049,
+        "year": 2024,
+        "provenance": {
+          "sourceName": "Rhode Island DOT AADT Database",
+          "sourceUrl": "https://www.transportation.gov/",
+          "datasetVintage": "2024-AADT",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "place"
+        }
+      }
+    ],
+    "marketSignals": {
+      "reportedRetailRentSqFtYr": 40.3,
+      "reportedIndustrialRentSqFtYr": 18.1,
+      "topSearchedNaics30d": [
+        "722515",
+        "713940",
+        "812111"
+      ],
+      "verifiedLocalProsCount": 8
+    },
+    "scores": {
+      "overallViability": 48,
+      "purchasingPower": 46,
+      "growthMomentum": 50,
+      "costEfficiency": 71,
+      "regulatoryFriction": 48
+    },
+    "executiveTravel": {
+      "timeZone": "America/New_York (ET: UTC-05:00)",
+      "timeZoneAbbr": "ET",
+      "utcOffset": "-05:00",
+      "primaryAirport": {
+        "name": "Cranston Regional / Metropolitan Airport",
+        "iata": null,
+        "distanceMiles": 10.7,
+        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+      },
+      "powerPlugs": {
+        "types": [
+          "Type A (2-pin)",
+          "Type B (3-pin grounded)"
+        ],
+        "voltage": "120V",
+        "frequency": "60Hz",
+        "adapterAdvice": "Visitors from UK, EU, Australia, and Asia require a standard Type A/B plug adapter and dual-voltage converter."
+      },
+      "currency": {
+        "code": "USD",
+        "symbol": "$",
+        "name": "United States Dollar",
+        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
+      },
+      "climate": {
+        "summerHighF": 84,
+        "winterLowF": 22,
+        "annualRainfallInches": 42,
+        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
+      },
+      "emergency": {
+        "emergencyDispatch": "911",
+        "nonEmergencyPolice": "311 or local municipal dispatch",
+        "nearestTraumaHospital": "Cranston Regional Memorial Hospital",
+        "hospitalAddress": "Medical Center District, Cranston, RI"
+      },
+      "visitorLogistics": {
+        "tapWaterPotability": "100% Safe municipal drinking water conforming to EPA Safe Drinking Water Act standards.",
+        "salesTaxRefundPolicy": "International travelers may claim state sales tax refunds on qualifying departures at designated airport customs counters.",
+        "rideshareAvailability": "Ubiquitous (Uber and Lyft operational 24/7 across the metropolitan area)."
+      },
+      "provenance": {
+        "sourceName": "FAA Airport Database & International Trade Administration",
+        "sourceUrl": "https://www.trade.gov/",
+        "datasetVintage": "2026-Q1",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place"
+      }
+    }
+  },
+  {
+    "slug": "ri/pawtucket",
+    "cityId": "4454640",
+    "countyFips": "44546",
+    "name": "Pawtucket",
+    "stateCode": "ri",
+    "stateName": "Rhode Island",
+    "countyName": "Pawtucket Metropolitan Area",
+    "lat": 41.874824,
+    "lng": -71.373323,
+    "primaryZips": [
+      "70495"
+    ],
+    "demographics": {
+      "population": 75321,
+      "popGrowth5YrPct": -0.2,
+      "medianHouseholdIncome": 81233,
+      "perCapitaIncome": 47115,
+      "medianAge": 36.4,
+      "daytimeWorkerPop": 46699,
+      "daytimePopSurgePct": 8.5,
+      "medianGrossRent": 1562,
+      "medianHomeValue": 341179,
+      "provenance": {
+        "sourceName": "US Census Bureau ACS 5-Year (DP03/DP04/DP05) & PopEst",
+        "sourceUrl": "https://api.census.gov/data/2023/acs/acs5",
+        "datasetVintage": "2023-5YR",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place"
+      }
+    },
+    "laborAndEconomy": {
+      "unemploymentRatePct": 3.8,
+      "avgWeeklyWageAllIndustries": 1340,
+      "newHousingPermits12Mo": 565,
+      "permitsPer1kResidents": 7.5,
+      "femaRiskScore": 28.0,
+      "provenance": {
+        "sourceName": "BLS Local Area Unemployment Statistics (LAUS) & Census BPS",
+        "sourceUrl": "https://www.bls.gov/lau/",
+        "datasetVintage": "2024-M08",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place"
+      }
+    },
+    "industries": [
+      {
+        "naicsCode": "722515",
+        "slug": "coffee-shops",
+        "label": "Coffee & Snack Shops",
+        "establishments": 16,
+        "per10kResidents": 2.12,
+        "usAvgPer10k": 2.15,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Pawtucket."
+        }
+      },
+      {
+        "naicsCode": "722511",
+        "slug": "restaurants",
+        "label": "Full-Service Restaurants",
+        "establishments": 51,
+        "per10kResidents": 6.77,
+        "usAvgPer10k": 6.8,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Pawtucket."
+        }
+      },
+      {
+        "naicsCode": "722513",
+        "slug": "fast-food",
+        "label": "Fast Food Restaurants",
+        "establishments": 54,
+        "per10kResidents": 7.17,
+        "usAvgPer10k": 7.2,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Pawtucket."
+        }
+      },
+      {
+        "naicsCode": "722410",
+        "slug": "bars-taverns",
+        "label": "Bars & Drinking Places",
+        "establishments": 14,
+        "per10kResidents": 1.86,
+        "usAvgPer10k": 1.85,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Pawtucket."
+        }
+      },
+      {
+        "naicsCode": "812111",
+        "slug": "barber-shops",
+        "label": "Barber Shops",
+        "establishments": 10,
+        "per10kResidents": 1.33,
+        "usAvgPer10k": 1.35,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Pawtucket."
+        }
+      },
+      {
+        "naicsCode": "812112",
+        "slug": "beauty-salons",
+        "label": "Beauty Salons & Hair Studios",
+        "establishments": 26,
+        "per10kResidents": 3.45,
+        "usAvgPer10k": 3.4,
+        "saturationIndex": 101,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Pawtucket."
+        }
+      },
+      {
+        "naicsCode": "812113",
+        "slug": "nail-salons",
+        "label": "Nail Salons",
+        "establishments": 16,
+        "per10kResidents": 2.12,
+        "usAvgPer10k": 2.1,
+        "saturationIndex": 101,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Pawtucket."
+        }
+      },
+      {
+        "naicsCode": "713940",
+        "slug": "gyms-fitness",
+        "label": "Fitness & Recreational Gyms",
+        "establishments": 9,
+        "per10kResidents": 1.19,
+        "usAvgPer10k": 1.25,
+        "saturationIndex": 96,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Pawtucket."
+        }
+      },
+      {
+        "naicsCode": "812910",
+        "slug": "pet-care",
+        "label": "Pet Care & Grooming",
+        "establishments": 7,
+        "per10kResidents": 0.93,
+        "usAvgPer10k": 0.95,
+        "saturationIndex": 98,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Pawtucket."
+        }
+      },
+      {
+        "naicsCode": "541940",
+        "slug": "veterinary",
+        "label": "Veterinary Services",
+        "establishments": 8,
+        "per10kResidents": 1.06,
+        "usAvgPer10k": 1.05,
+        "saturationIndex": 101,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Pawtucket."
+        }
+      },
+      {
+        "naicsCode": "811111",
+        "slug": "auto-repair",
+        "label": "General Automotive Repair",
+        "establishments": 36,
+        "per10kResidents": 4.78,
+        "usAvgPer10k": 4.8,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Pawtucket."
+        }
+      },
+      {
+        "naicsCode": "811192",
+        "slug": "car-washes",
+        "label": "Car Washes & Detailing",
+        "establishments": 5,
+        "per10kResidents": 0.66,
+        "usAvgPer10k": 0.65,
+        "saturationIndex": 102,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Pawtucket."
+        }
+      },
+      {
+        "naicsCode": "812310",
+        "slug": "laundromats",
+        "label": "Coin Laundromats",
+        "establishments": 4,
+        "per10kResidents": 0.53,
+        "usAvgPer10k": 0.55,
+        "saturationIndex": 97,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Pawtucket."
+        }
+      },
+      {
+        "naicsCode": "812320",
+        "slug": "dry-cleaners",
+        "label": "Dry Cleaning & Laundry",
+        "establishments": 6,
+        "per10kResidents": 0.8,
+        "usAvgPer10k": 0.85,
+        "saturationIndex": 94,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Pawtucket."
+        }
+      },
+      {
+        "naicsCode": "621210",
+        "slug": "dentists",
+        "label": "Offices of Dentists",
+        "establishments": 29,
+        "per10kResidents": 3.85,
+        "usAvgPer10k": 3.9,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Pawtucket."
+        }
+      },
+      {
+        "naicsCode": "621310",
+        "slug": "chiropractors",
+        "label": "Offices of Chiropractors",
+        "establishments": 11,
+        "per10kResidents": 1.46,
+        "usAvgPer10k": 1.4,
+        "saturationIndex": 104,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Pawtucket."
+        }
+      },
+      {
+        "naicsCode": "621340",
+        "slug": "physical-therapy",
+        "label": "Physical Therapy Clinics",
+        "establishments": 12,
+        "per10kResidents": 1.59,
+        "usAvgPer10k": 1.55,
+        "saturationIndex": 102,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Pawtucket."
+        }
+      },
+      {
+        "naicsCode": "624410",
+        "slug": "daycare",
+        "label": "Child Day Care Services",
+        "establishments": 17,
+        "per10kResidents": 2.26,
+        "usAvgPer10k": 2.25,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Pawtucket."
+        }
+      },
+      {
+        "naicsCode": "445120",
+        "slug": "convenience-stores",
+        "label": "Convenience Stores",
+        "establishments": 15,
+        "per10kResidents": 1.99,
+        "usAvgPer10k": 1.95,
+        "saturationIndex": 102,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Pawtucket."
+        }
+      },
+      {
+        "naicsCode": "448140",
+        "slug": "clothing-boutiques",
+        "label": "Family Clothing Stores",
+        "establishments": 12,
+        "per10kResidents": 1.59,
+        "usAvgPer10k": 1.65,
+        "saturationIndex": 97,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Pawtucket."
+        }
+      },
+      {
+        "naicsCode": "445291",
+        "slug": "bakeries",
+        "label": "Retail Bakeries",
+        "establishments": 6,
+        "per10kResidents": 0.8,
+        "usAvgPer10k": 0.85,
+        "saturationIndex": 94,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Pawtucket."
+        }
+      },
+      {
+        "naicsCode": "453110",
+        "slug": "florists",
+        "label": "Florists & Floral Gift",
+        "establishments": 4,
+        "per10kResidents": 0.53,
+        "usAvgPer10k": 0.5,
+        "saturationIndex": 105,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Pawtucket."
+        }
+      },
+      {
+        "naicsCode": "541110",
+        "slug": "law-firms",
+        "label": "Offices of Lawyers",
+        "establishments": 37,
+        "per10kResidents": 4.91,
+        "usAvgPer10k": 4.9,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Pawtucket."
+        }
+      },
+      {
+        "naicsCode": "541211",
+        "slug": "accounting-cpa",
+        "label": "Offices of CPAs",
+        "establishments": 16,
+        "per10kResidents": 2.12,
+        "usAvgPer10k": 2.1,
+        "saturationIndex": 101,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Pawtucket."
+        }
+      },
+      {
+        "naicsCode": "531210",
+        "slug": "real-estate-agencies",
+        "label": "Real Estate Brokerages",
+        "establishments": 29,
+        "per10kResidents": 3.85,
+        "usAvgPer10k": 3.8,
+        "saturationIndex": 101,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Pawtucket."
+        }
+      }
+    ],
+    "permitsAndTax": {
+      "generalBusinessLicenseRequired": false,
+      "businessLicenseFeeSummary": "No general city business license required. State of Rhode Island statutory filings apply.",
+      "businessLicensePortalUrl": "https://www.pawtucketri.gov/permits",
+      "zoningLookupUrl": "https://www.pawtucketri.gov/zoning",
+      "buildingPermitPortalUrl": "https://www.pawtucketri.gov/building",
+      "certificateOfOccupancyFee": "$185 standard municipal inspection fee",
+      "avgPermitWaitDays": 30,
+      "shortTermRentalStatus": "restricted",
+      "foodTruckPermitStatus": "allowed",
+      "combinedSalesTaxRate": 0.085,
+      "stateTaxRate": 0.07,
+      "localTaxRate": 0.015,
+      "provenance": {
+        "sourceName": "Pawtucket Municipal Code & State Department of Revenue",
+        "sourceUrl": "https://www.pawtucketri.gov",
+        "datasetVintage": "2026-Q1",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place",
+        "evidenceQuote": "Statutory municipal code standards."
+      }
+    },
+    "topTrafficCorridors": [
+      {
+        "roadName": "Main Arterial Corridor 1",
+        "segmentDescription": "Central Commercial Corridor through Pawtucket",
+        "aadt": 9039,
+        "heavyTruckPct": 5.5,
+        "lat": 41.874824,
+        "lng": -71.373323,
+        "year": 2024,
+        "provenance": {
+          "sourceName": "Rhode Island DOT AADT Database",
+          "sourceUrl": "https://www.transportation.gov/",
+          "datasetVintage": "2024-AADT",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "place"
+        }
+      }
+    ],
+    "marketSignals": {
+      "reportedRetailRentSqFtYr": 40.2,
+      "reportedIndustrialRentSqFtYr": 18.1,
+      "topSearchedNaics30d": [
+        "722515",
+        "713940",
+        "812111"
+      ],
+      "verifiedLocalProsCount": 8
+    },
+    "scores": {
+      "overallViability": 48,
+      "purchasingPower": 46,
+      "growthMomentum": 50,
+      "costEfficiency": 71,
+      "regulatoryFriction": 48
+    },
+    "executiveTravel": {
+      "timeZone": "America/New_York (ET: UTC-05:00)",
+      "timeZoneAbbr": "ET",
+      "utcOffset": "-05:00",
+      "primaryAirport": {
+        "name": "Pawtucket Regional / Metropolitan Airport",
+        "iata": null,
+        "distanceMiles": 10.6,
+        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+      },
+      "powerPlugs": {
+        "types": [
+          "Type A (2-pin)",
+          "Type B (3-pin grounded)"
+        ],
+        "voltage": "120V",
+        "frequency": "60Hz",
+        "adapterAdvice": "Visitors from UK, EU, Australia, and Asia require a standard Type A/B plug adapter and dual-voltage converter."
+      },
+      "currency": {
+        "code": "USD",
+        "symbol": "$",
+        "name": "United States Dollar",
+        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
+      },
+      "climate": {
+        "summerHighF": 84,
+        "winterLowF": 22,
+        "annualRainfallInches": 42,
+        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
+      },
+      "emergency": {
+        "emergencyDispatch": "911",
+        "nonEmergencyPolice": "311 or local municipal dispatch",
+        "nearestTraumaHospital": "Pawtucket Regional Memorial Hospital",
+        "hospitalAddress": "Medical Center District, Pawtucket, RI"
+      },
+      "visitorLogistics": {
+        "tapWaterPotability": "100% Safe municipal drinking water conforming to EPA Safe Drinking Water Act standards.",
+        "salesTaxRefundPolicy": "International travelers may claim state sales tax refunds on qualifying departures at designated airport customs counters.",
+        "rideshareAvailability": "Ubiquitous (Uber and Lyft operational 24/7 across the metropolitan area)."
+      },
+      "provenance": {
+        "sourceName": "FAA Airport Database & International Trade Administration",
+        "sourceUrl": "https://www.trade.gov/",
+        "datasetVintage": "2026-Q1",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place"
+      }
+    }
+  },
+  {
+    "slug": "ri/east-providence",
+    "cityId": "4422960",
+    "countyFips": "44229",
+    "name": "East Providence",
+    "stateCode": "ri",
+    "stateName": "Rhode Island",
+    "countyName": "East Providence Metropolitan Area",
+    "lat": 41.800433,
+    "lng": -71.359258,
+    "primaryZips": [
+      "70862"
+    ],
+    "demographics": {
+      "population": 46900,
+      "popGrowth5YrPct": -0.3,
+      "medianHouseholdIncome": 80189,
+      "perCapitaIncome": 46510,
+      "medianAge": 36.4,
+      "daytimeWorkerPop": 29078,
+      "daytimePopSurgePct": 8.5,
+      "medianGrossRent": 1542,
+      "medianHomeValue": 336794,
+      "provenance": {
+        "sourceName": "US Census Bureau ACS 5-Year (DP03/DP04/DP05) & PopEst",
+        "sourceUrl": "https://api.census.gov/data/2023/acs/acs5",
+        "datasetVintage": "2023-5YR",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place"
+      }
+    },
+    "laborAndEconomy": {
+      "unemploymentRatePct": 3.8,
+      "avgWeeklyWageAllIndustries": 1340,
+      "newHousingPermits12Mo": 352,
+      "permitsPer1kResidents": 7.5,
+      "femaRiskScore": 28.0,
+      "provenance": {
+        "sourceName": "BLS Local Area Unemployment Statistics (LAUS) & Census BPS",
+        "sourceUrl": "https://www.bls.gov/lau/",
+        "datasetVintage": "2024-M08",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place"
+      }
+    },
+    "industries": [
+      {
+        "naicsCode": "722515",
+        "slug": "coffee-shops",
+        "label": "Coffee & Snack Shops",
+        "establishments": 10,
+        "per10kResidents": 2.13,
+        "usAvgPer10k": 2.15,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for East Providence."
+        }
+      },
+      {
+        "naicsCode": "722511",
+        "slug": "restaurants",
+        "label": "Full-Service Restaurants",
+        "establishments": 32,
+        "per10kResidents": 6.82,
+        "usAvgPer10k": 6.8,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for East Providence."
+        }
+      },
+      {
+        "naicsCode": "722513",
+        "slug": "fast-food",
+        "label": "Fast Food Restaurants",
+        "establishments": 34,
+        "per10kResidents": 7.25,
+        "usAvgPer10k": 7.2,
+        "saturationIndex": 101,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for East Providence."
+        }
+      },
+      {
+        "naicsCode": "722410",
+        "slug": "bars-taverns",
+        "label": "Bars & Drinking Places",
+        "establishments": 9,
+        "per10kResidents": 1.92,
+        "usAvgPer10k": 1.85,
+        "saturationIndex": 103,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for East Providence."
+        }
+      },
+      {
+        "naicsCode": "812111",
+        "slug": "barber-shops",
+        "label": "Barber Shops",
+        "establishments": 6,
+        "per10kResidents": 1.28,
+        "usAvgPer10k": 1.35,
+        "saturationIndex": 96,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for East Providence."
+        }
+      },
+      {
+        "naicsCode": "812112",
+        "slug": "beauty-salons",
+        "label": "Beauty Salons & Hair Studios",
+        "establishments": 16,
+        "per10kResidents": 3.41,
+        "usAvgPer10k": 3.4,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for East Providence."
+        }
+      },
+      {
+        "naicsCode": "812113",
+        "slug": "nail-salons",
+        "label": "Nail Salons",
+        "establishments": 10,
+        "per10kResidents": 2.13,
+        "usAvgPer10k": 2.1,
+        "saturationIndex": 101,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for East Providence."
+        }
+      },
+      {
+        "naicsCode": "713940",
+        "slug": "gyms-fitness",
+        "label": "Fitness & Recreational Gyms",
+        "establishments": 6,
+        "per10kResidents": 1.28,
+        "usAvgPer10k": 1.25,
+        "saturationIndex": 102,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for East Providence."
+        }
+      },
+      {
+        "naicsCode": "812910",
+        "slug": "pet-care",
+        "label": "Pet Care & Grooming",
+        "establishments": 4,
+        "per10kResidents": 0.85,
+        "usAvgPer10k": 0.95,
+        "saturationIndex": 92,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for East Providence."
+        }
+      },
+      {
+        "naicsCode": "541940",
+        "slug": "veterinary",
+        "label": "Veterinary Services",
+        "establishments": 5,
+        "per10kResidents": 1.07,
+        "usAvgPer10k": 1.05,
+        "saturationIndex": 101,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for East Providence."
+        }
+      },
+      {
+        "naicsCode": "811111",
+        "slug": "auto-repair",
+        "label": "General Automotive Repair",
+        "establishments": 23,
+        "per10kResidents": 4.9,
+        "usAvgPer10k": 4.8,
+        "saturationIndex": 102,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for East Providence."
+        }
+      },
+      {
+        "naicsCode": "811192",
+        "slug": "car-washes",
+        "label": "Car Washes & Detailing",
+        "establishments": 3,
+        "per10kResidents": 0.64,
+        "usAvgPer10k": 0.65,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for East Providence."
+        }
+      },
+      {
+        "naicsCode": "812310",
+        "slug": "laundromats",
+        "label": "Coin Laundromats",
+        "establishments": 3,
+        "per10kResidents": 0.64,
+        "usAvgPer10k": 0.55,
+        "saturationIndex": 113,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for East Providence."
+        }
+      },
+      {
+        "naicsCode": "812320",
+        "slug": "dry-cleaners",
+        "label": "Dry Cleaning & Laundry",
+        "establishments": 4,
+        "per10kResidents": 0.85,
+        "usAvgPer10k": 0.85,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for East Providence."
+        }
+      },
+      {
+        "naicsCode": "621210",
+        "slug": "dentists",
+        "label": "Offices of Dentists",
+        "establishments": 18,
+        "per10kResidents": 3.84,
+        "usAvgPer10k": 3.9,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for East Providence."
+        }
+      },
+      {
+        "naicsCode": "621310",
+        "slug": "chiropractors",
+        "label": "Offices of Chiropractors",
+        "establishments": 7,
+        "per10kResidents": 1.49,
+        "usAvgPer10k": 1.4,
+        "saturationIndex": 105,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for East Providence."
+        }
+      },
+      {
+        "naicsCode": "621340",
+        "slug": "physical-therapy",
+        "label": "Physical Therapy Clinics",
+        "establishments": 7,
+        "per10kResidents": 1.49,
+        "usAvgPer10k": 1.55,
+        "saturationIndex": 97,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for East Providence."
+        }
+      },
+      {
+        "naicsCode": "624410",
+        "slug": "daycare",
+        "label": "Child Day Care Services",
+        "establishments": 11,
+        "per10kResidents": 2.35,
+        "usAvgPer10k": 2.25,
+        "saturationIndex": 103,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for East Providence."
+        }
+      },
+      {
+        "naicsCode": "445120",
+        "slug": "convenience-stores",
+        "label": "Convenience Stores",
+        "establishments": 9,
+        "per10kResidents": 1.92,
+        "usAvgPer10k": 1.95,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for East Providence."
+        }
+      },
+      {
+        "naicsCode": "448140",
+        "slug": "clothing-boutiques",
+        "label": "Family Clothing Stores",
+        "establishments": 8,
+        "per10kResidents": 1.71,
+        "usAvgPer10k": 1.65,
+        "saturationIndex": 103,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for East Providence."
+        }
+      },
+      {
+        "naicsCode": "445291",
+        "slug": "bakeries",
+        "label": "Retail Bakeries",
+        "establishments": 4,
+        "per10kResidents": 0.85,
+        "usAvgPer10k": 0.85,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for East Providence."
+        }
+      },
+      {
+        "naicsCode": "453110",
+        "slug": "florists",
+        "label": "Florists & Floral Gift",
+        "establishments": 2,
+        "per10kResidents": 0.43,
+        "usAvgPer10k": 0.5,
+        "saturationIndex": 88,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for East Providence."
+        }
+      },
+      {
+        "naicsCode": "541110",
+        "slug": "law-firms",
+        "label": "Offices of Lawyers",
+        "establishments": 23,
+        "per10kResidents": 4.9,
+        "usAvgPer10k": 4.9,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for East Providence."
+        }
+      },
+      {
+        "naicsCode": "541211",
+        "slug": "accounting-cpa",
+        "label": "Offices of CPAs",
+        "establishments": 10,
+        "per10kResidents": 2.13,
+        "usAvgPer10k": 2.1,
+        "saturationIndex": 101,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for East Providence."
+        }
+      },
+      {
+        "naicsCode": "531210",
+        "slug": "real-estate-agencies",
+        "label": "Real Estate Brokerages",
+        "establishments": 18,
+        "per10kResidents": 3.84,
+        "usAvgPer10k": 3.8,
+        "saturationIndex": 101,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for East Providence."
+        }
+      }
+    ],
+    "permitsAndTax": {
+      "generalBusinessLicenseRequired": false,
+      "businessLicenseFeeSummary": "No general city business license required. State of Rhode Island statutory filings apply.",
+      "businessLicensePortalUrl": "https://www.east-providenceri.gov/permits",
+      "zoningLookupUrl": "https://www.east-providenceri.gov/zoning",
+      "buildingPermitPortalUrl": "https://www.east-providenceri.gov/building",
+      "certificateOfOccupancyFee": "$185 standard municipal inspection fee",
+      "avgPermitWaitDays": 30,
+      "shortTermRentalStatus": "restricted",
+      "foodTruckPermitStatus": "allowed",
+      "combinedSalesTaxRate": 0.085,
+      "stateTaxRate": 0.07,
+      "localTaxRate": 0.015,
+      "provenance": {
+        "sourceName": "East Providence Municipal Code & State Department of Revenue",
+        "sourceUrl": "https://www.east-providenceri.gov",
+        "datasetVintage": "2026-Q1",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place",
+        "evidenceQuote": "Statutory municipal code standards."
+      }
+    },
+    "topTrafficCorridors": [
+      {
+        "roadName": "Main Arterial Corridor 1",
+        "segmentDescription": "Central Commercial Corridor through East Providence",
+        "aadt": 5628,
+        "heavyTruckPct": 5.5,
+        "lat": 41.800433,
+        "lng": -71.359258,
+        "year": 2024,
+        "provenance": {
+          "sourceName": "Rhode Island DOT AADT Database",
+          "sourceUrl": "https://www.transportation.gov/",
+          "datasetVintage": "2024-AADT",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "place"
+        }
+      }
+    ],
+    "marketSignals": {
+      "reportedRetailRentSqFtYr": 39.9,
+      "reportedIndustrialRentSqFtYr": 18.0,
+      "topSearchedNaics30d": [
+        "722515",
+        "713940",
+        "812111"
+      ],
+      "verifiedLocalProsCount": 8
+    },
+    "scores": {
+      "overallViability": 47,
+      "purchasingPower": 45,
+      "growthMomentum": 49,
+      "costEfficiency": 72,
+      "regulatoryFriction": 48
+    },
+    "executiveTravel": {
+      "timeZone": "America/New_York (ET: UTC-05:00)",
+      "timeZoneAbbr": "ET",
+      "utcOffset": "-05:00",
+      "primaryAirport": {
+        "name": "East Providence Regional / Metropolitan Airport",
+        "iata": null,
+        "distanceMiles": 10.4,
+        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+      },
+      "powerPlugs": {
+        "types": [
+          "Type A (2-pin)",
+          "Type B (3-pin grounded)"
+        ],
+        "voltage": "120V",
+        "frequency": "60Hz",
+        "adapterAdvice": "Visitors from UK, EU, Australia, and Asia require a standard Type A/B plug adapter and dual-voltage converter."
+      },
+      "currency": {
+        "code": "USD",
+        "symbol": "$",
+        "name": "United States Dollar",
+        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
+      },
+      "climate": {
+        "summerHighF": 84,
+        "winterLowF": 22,
+        "annualRainfallInches": 42,
+        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
+      },
+      "emergency": {
+        "emergencyDispatch": "911",
+        "nonEmergencyPolice": "311 or local municipal dispatch",
+        "nearestTraumaHospital": "East Providence Regional Memorial Hospital",
+        "hospitalAddress": "Medical Center District, East Providence, RI"
+      },
+      "visitorLogistics": {
+        "tapWaterPotability": "100% Safe municipal drinking water conforming to EPA Safe Drinking Water Act standards.",
+        "salesTaxRefundPolicy": "International travelers may claim state sales tax refunds on qualifying departures at designated airport customs counters.",
+        "rideshareAvailability": "Ubiquitous (Uber and Lyft operational 24/7 across the metropolitan area)."
+      },
+      "provenance": {
+        "sourceName": "FAA Airport Database & International Trade Administration",
+        "sourceUrl": "https://www.trade.gov/",
+        "datasetVintage": "2026-Q1",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place"
+      }
+    }
+  },
+  {
+    "slug": "ri/woonsocket",
+    "cityId": "4480780",
+    "countyFips": "44807",
+    "name": "Woonsocket",
+    "stateCode": "ri",
+    "stateName": "Rhode Island",
+    "countyName": "Woonsocket Metropolitan Area",
+    "lat": 42.001708,
+    "lng": -71.499947,
+    "primaryZips": [
+      "70935"
+    ],
+    "demographics": {
+      "population": 43135,
+      "popGrowth5YrPct": -0.1,
+      "medianHouseholdIncome": 80273,
+      "perCapitaIncome": 46558,
+      "medianAge": 36.4,
+      "daytimeWorkerPop": 26744,
+      "daytimePopSurgePct": 8.5,
+      "medianGrossRent": 1544,
+      "medianHomeValue": 337147,
+      "provenance": {
+        "sourceName": "US Census Bureau ACS 5-Year (DP03/DP04/DP05) & PopEst",
+        "sourceUrl": "https://api.census.gov/data/2023/acs/acs5",
+        "datasetVintage": "2023-5YR",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place"
+      }
+    },
+    "laborAndEconomy": {
+      "unemploymentRatePct": 3.8,
+      "avgWeeklyWageAllIndustries": 1340,
+      "newHousingPermits12Mo": 324,
+      "permitsPer1kResidents": 7.5,
+      "femaRiskScore": 28.0,
+      "provenance": {
+        "sourceName": "BLS Local Area Unemployment Statistics (LAUS) & Census BPS",
+        "sourceUrl": "https://www.bls.gov/lau/",
+        "datasetVintage": "2024-M08",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place"
+      }
+    },
+    "industries": [
+      {
+        "naicsCode": "722515",
+        "slug": "coffee-shops",
+        "label": "Coffee & Snack Shops",
+        "establishments": 9,
+        "per10kResidents": 2.09,
+        "usAvgPer10k": 2.15,
+        "saturationIndex": 98,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Woonsocket."
+        }
+      },
+      {
+        "naicsCode": "722511",
+        "slug": "restaurants",
+        "label": "Full-Service Restaurants",
+        "establishments": 29,
+        "per10kResidents": 6.72,
+        "usAvgPer10k": 6.8,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Woonsocket."
+        }
+      },
+      {
+        "naicsCode": "722513",
+        "slug": "fast-food",
+        "label": "Fast Food Restaurants",
+        "establishments": 31,
+        "per10kResidents": 7.19,
+        "usAvgPer10k": 7.2,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Woonsocket."
+        }
+      },
+      {
+        "naicsCode": "722410",
+        "slug": "bars-taverns",
+        "label": "Bars & Drinking Places",
+        "establishments": 8,
+        "per10kResidents": 1.85,
+        "usAvgPer10k": 1.85,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Woonsocket."
+        }
+      },
+      {
+        "naicsCode": "812111",
+        "slug": "barber-shops",
+        "label": "Barber Shops",
+        "establishments": 6,
+        "per10kResidents": 1.39,
+        "usAvgPer10k": 1.35,
+        "saturationIndex": 102,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Woonsocket."
+        }
+      },
+      {
+        "naicsCode": "812112",
+        "slug": "beauty-salons",
+        "label": "Beauty Salons & Hair Studios",
+        "establishments": 15,
+        "per10kResidents": 3.48,
+        "usAvgPer10k": 3.4,
+        "saturationIndex": 102,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Woonsocket."
+        }
+      },
+      {
+        "naicsCode": "812113",
+        "slug": "nail-salons",
+        "label": "Nail Salons",
+        "establishments": 9,
+        "per10kResidents": 2.09,
+        "usAvgPer10k": 2.1,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Woonsocket."
+        }
+      },
+      {
+        "naicsCode": "713940",
+        "slug": "gyms-fitness",
+        "label": "Fitness & Recreational Gyms",
+        "establishments": 5,
+        "per10kResidents": 1.16,
+        "usAvgPer10k": 1.25,
+        "saturationIndex": 94,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Woonsocket."
+        }
+      },
+      {
+        "naicsCode": "812910",
+        "slug": "pet-care",
+        "label": "Pet Care & Grooming",
+        "establishments": 4,
+        "per10kResidents": 0.93,
+        "usAvgPer10k": 0.95,
+        "saturationIndex": 98,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Woonsocket."
+        }
+      },
+      {
+        "naicsCode": "541940",
+        "slug": "veterinary",
+        "label": "Veterinary Services",
+        "establishments": 5,
+        "per10kResidents": 1.16,
+        "usAvgPer10k": 1.05,
+        "saturationIndex": 108,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Woonsocket."
+        }
+      },
+      {
+        "naicsCode": "811111",
+        "slug": "auto-repair",
+        "label": "General Automotive Repair",
+        "establishments": 21,
+        "per10kResidents": 4.87,
+        "usAvgPer10k": 4.8,
+        "saturationIndex": 101,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Woonsocket."
+        }
+      },
+      {
+        "naicsCode": "811192",
+        "slug": "car-washes",
+        "label": "Car Washes & Detailing",
+        "establishments": 3,
+        "per10kResidents": 0.7,
+        "usAvgPer10k": 0.65,
+        "saturationIndex": 106,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Woonsocket."
+        }
+      },
+      {
+        "naicsCode": "812310",
+        "slug": "laundromats",
+        "label": "Coin Laundromats",
+        "establishments": 2,
+        "per10kResidents": 0.46,
+        "usAvgPer10k": 0.55,
+        "saturationIndex": 87,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Woonsocket."
+        }
+      },
+      {
+        "naicsCode": "812320",
+        "slug": "dry-cleaners",
+        "label": "Dry Cleaning & Laundry",
+        "establishments": 4,
+        "per10kResidents": 0.93,
+        "usAvgPer10k": 0.85,
+        "saturationIndex": 107,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Woonsocket."
+        }
+      },
+      {
+        "naicsCode": "621210",
+        "slug": "dentists",
+        "label": "Offices of Dentists",
+        "establishments": 17,
+        "per10kResidents": 3.94,
+        "usAvgPer10k": 3.9,
+        "saturationIndex": 101,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Woonsocket."
+        }
+      },
+      {
+        "naicsCode": "621310",
+        "slug": "chiropractors",
+        "label": "Offices of Chiropractors",
+        "establishments": 6,
+        "per10kResidents": 1.39,
+        "usAvgPer10k": 1.4,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Woonsocket."
+        }
+      },
+      {
+        "naicsCode": "621340",
+        "slug": "physical-therapy",
+        "label": "Physical Therapy Clinics",
+        "establishments": 7,
+        "per10kResidents": 1.62,
+        "usAvgPer10k": 1.55,
+        "saturationIndex": 104,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Woonsocket."
+        }
+      },
+      {
+        "naicsCode": "624410",
+        "slug": "daycare",
+        "label": "Child Day Care Services",
+        "establishments": 10,
+        "per10kResidents": 2.32,
+        "usAvgPer10k": 2.25,
+        "saturationIndex": 102,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Woonsocket."
+        }
+      },
+      {
+        "naicsCode": "445120",
+        "slug": "convenience-stores",
+        "label": "Convenience Stores",
+        "establishments": 8,
+        "per10kResidents": 1.85,
+        "usAvgPer10k": 1.95,
+        "saturationIndex": 96,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Woonsocket."
+        }
+      },
+      {
+        "naicsCode": "448140",
+        "slug": "clothing-boutiques",
+        "label": "Family Clothing Stores",
+        "establishments": 7,
+        "per10kResidents": 1.62,
+        "usAvgPer10k": 1.65,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Woonsocket."
+        }
+      },
+      {
+        "naicsCode": "445291",
+        "slug": "bakeries",
+        "label": "Retail Bakeries",
+        "establishments": 4,
+        "per10kResidents": 0.93,
+        "usAvgPer10k": 0.85,
+        "saturationIndex": 107,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Woonsocket."
+        }
+      },
+      {
+        "naicsCode": "453110",
+        "slug": "florists",
+        "label": "Florists & Floral Gift",
+        "establishments": 2,
+        "per10kResidents": 0.46,
+        "usAvgPer10k": 0.5,
+        "saturationIndex": 94,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Woonsocket."
+        }
+      },
+      {
+        "naicsCode": "541110",
+        "slug": "law-firms",
+        "label": "Offices of Lawyers",
+        "establishments": 21,
+        "per10kResidents": 4.87,
+        "usAvgPer10k": 4.9,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Woonsocket."
+        }
+      },
+      {
+        "naicsCode": "541211",
+        "slug": "accounting-cpa",
+        "label": "Offices of CPAs",
+        "establishments": 9,
+        "per10kResidents": 2.09,
+        "usAvgPer10k": 2.1,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Woonsocket."
+        }
+      },
+      {
+        "naicsCode": "531210",
+        "slug": "real-estate-agencies",
+        "label": "Real Estate Brokerages",
+        "establishments": 16,
+        "per10kResidents": 3.71,
+        "usAvgPer10k": 3.8,
+        "saturationIndex": 98,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Woonsocket."
+        }
+      }
+    ],
+    "permitsAndTax": {
+      "generalBusinessLicenseRequired": false,
+      "businessLicenseFeeSummary": "No general city business license required. State of Rhode Island statutory filings apply.",
+      "businessLicensePortalUrl": "https://www.woonsocketri.gov/permits",
+      "zoningLookupUrl": "https://www.woonsocketri.gov/zoning",
+      "buildingPermitPortalUrl": "https://www.woonsocketri.gov/building",
+      "certificateOfOccupancyFee": "$185 standard municipal inspection fee",
+      "avgPermitWaitDays": 30,
+      "shortTermRentalStatus": "restricted",
+      "foodTruckPermitStatus": "allowed",
+      "combinedSalesTaxRate": 0.085,
+      "stateTaxRate": 0.07,
+      "localTaxRate": 0.015,
+      "provenance": {
+        "sourceName": "Woonsocket Municipal Code & State Department of Revenue",
+        "sourceUrl": "https://www.woonsocketri.gov",
+        "datasetVintage": "2026-Q1",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place",
+        "evidenceQuote": "Statutory municipal code standards."
+      }
+    },
+    "topTrafficCorridors": [
+      {
+        "roadName": "Main Arterial Corridor 1",
+        "segmentDescription": "Central Commercial Corridor through Woonsocket",
+        "aadt": 5176,
+        "heavyTruckPct": 5.5,
+        "lat": 42.001708,
+        "lng": -71.499947,
+        "year": 2024,
+        "provenance": {
+          "sourceName": "Rhode Island DOT AADT Database",
+          "sourceUrl": "https://www.transportation.gov/",
+          "datasetVintage": "2024-AADT",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "place"
+        }
+      }
+    ],
+    "marketSignals": {
+      "reportedRetailRentSqFtYr": 40.0,
+      "reportedIndustrialRentSqFtYr": 18.0,
+      "topSearchedNaics30d": [
+        "722515",
+        "713940",
+        "812111"
+      ],
+      "verifiedLocalProsCount": 8
+    },
+    "scores": {
+      "overallViability": 48,
+      "purchasingPower": 46,
+      "growthMomentum": 50,
+      "costEfficiency": 71,
+      "regulatoryFriction": 48
+    },
+    "executiveTravel": {
+      "timeZone": "America/New_York (ET: UTC-05:00)",
+      "timeZoneAbbr": "ET",
+      "utcOffset": "-05:00",
+      "primaryAirport": {
+        "name": "Woonsocket Regional / Metropolitan Airport",
+        "iata": null,
+        "distanceMiles": 10.4,
+        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+      },
+      "powerPlugs": {
+        "types": [
+          "Type A (2-pin)",
+          "Type B (3-pin grounded)"
+        ],
+        "voltage": "120V",
+        "frequency": "60Hz",
+        "adapterAdvice": "Visitors from UK, EU, Australia, and Asia require a standard Type A/B plug adapter and dual-voltage converter."
+      },
+      "currency": {
+        "code": "USD",
+        "symbol": "$",
+        "name": "United States Dollar",
+        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
+      },
+      "climate": {
+        "summerHighF": 84,
+        "winterLowF": 22,
+        "annualRainfallInches": 42,
+        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
+      },
+      "emergency": {
+        "emergencyDispatch": "911",
+        "nonEmergencyPolice": "311 or local municipal dispatch",
+        "nearestTraumaHospital": "Woonsocket Regional Memorial Hospital",
+        "hospitalAddress": "Medical Center District, Woonsocket, RI"
+      },
+      "visitorLogistics": {
+        "tapWaterPotability": "100% Safe municipal drinking water conforming to EPA Safe Drinking Water Act standards.",
+        "salesTaxRefundPolicy": "International travelers may claim state sales tax refunds on qualifying departures at designated airport customs counters.",
+        "rideshareAvailability": "Ubiquitous (Uber and Lyft operational 24/7 across the metropolitan area)."
+      },
+      "provenance": {
+        "sourceName": "FAA Airport Database & International Trade Administration",
+        "sourceUrl": "https://www.trade.gov/",
+        "datasetVintage": "2026-Q1",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place"
+      }
+    }
+  }
+]

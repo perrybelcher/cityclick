@@ -1,0 +1,2530 @@
+[
+  {
+    "slug": "wy/cheyenne",
+    "cityId": "5613900",
+    "countyFips": "56139",
+    "name": "Cheyenne",
+    "stateCode": "wy",
+    "stateName": "Wyoming",
+    "countyName": "Cheyenne Metropolitan Area",
+    "lat": 41.12727,
+    "lng": -104.79022,
+    "primaryZips": [
+      "70590"
+    ],
+    "demographics": {
+      "population": 65168,
+      "popGrowth5YrPct": -0.1,
+      "medianHouseholdIncome": 81064,
+      "perCapitaIncome": 47017,
+      "medianAge": 36.4,
+      "daytimeWorkerPop": 40404,
+      "daytimePopSurgePct": 8.5,
+      "medianGrossRent": 1559,
+      "medianHomeValue": 340469,
+      "provenance": {
+        "sourceName": "US Census Bureau ACS 5-Year (DP03/DP04/DP05) & PopEst",
+        "sourceUrl": "https://api.census.gov/data/2023/acs/acs5",
+        "datasetVintage": "2023-5YR",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place"
+      }
+    },
+    "laborAndEconomy": {
+      "unemploymentRatePct": 3.8,
+      "avgWeeklyWageAllIndustries": 1340,
+      "newHousingPermits12Mo": 489,
+      "permitsPer1kResidents": 7.5,
+      "femaRiskScore": 28.0,
+      "provenance": {
+        "sourceName": "BLS Local Area Unemployment Statistics (LAUS) & Census BPS",
+        "sourceUrl": "https://www.bls.gov/lau/",
+        "datasetVintage": "2024-M08",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place"
+      }
+    },
+    "industries": [
+      {
+        "naicsCode": "722515",
+        "slug": "coffee-shops",
+        "label": "Coffee & Snack Shops",
+        "establishments": 14,
+        "per10kResidents": 2.15,
+        "usAvgPer10k": 2.15,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Cheyenne."
+        }
+      },
+      {
+        "naicsCode": "722511",
+        "slug": "restaurants",
+        "label": "Full-Service Restaurants",
+        "establishments": 44,
+        "per10kResidents": 6.75,
+        "usAvgPer10k": 6.8,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Cheyenne."
+        }
+      },
+      {
+        "naicsCode": "722513",
+        "slug": "fast-food",
+        "label": "Fast Food Restaurants",
+        "establishments": 47,
+        "per10kResidents": 7.21,
+        "usAvgPer10k": 7.2,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Cheyenne."
+        }
+      },
+      {
+        "naicsCode": "722410",
+        "slug": "bars-taverns",
+        "label": "Bars & Drinking Places",
+        "establishments": 12,
+        "per10kResidents": 1.84,
+        "usAvgPer10k": 1.85,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Cheyenne."
+        }
+      },
+      {
+        "naicsCode": "812111",
+        "slug": "barber-shops",
+        "label": "Barber Shops",
+        "establishments": 9,
+        "per10kResidents": 1.38,
+        "usAvgPer10k": 1.35,
+        "saturationIndex": 102,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Cheyenne."
+        }
+      },
+      {
+        "naicsCode": "812112",
+        "slug": "beauty-salons",
+        "label": "Beauty Salons & Hair Studios",
+        "establishments": 22,
+        "per10kResidents": 3.38,
+        "usAvgPer10k": 3.4,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Cheyenne."
+        }
+      },
+      {
+        "naicsCode": "812113",
+        "slug": "nail-salons",
+        "label": "Nail Salons",
+        "establishments": 14,
+        "per10kResidents": 2.15,
+        "usAvgPer10k": 2.1,
+        "saturationIndex": 102,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Cheyenne."
+        }
+      },
+      {
+        "naicsCode": "713940",
+        "slug": "gyms-fitness",
+        "label": "Fitness & Recreational Gyms",
+        "establishments": 8,
+        "per10kResidents": 1.23,
+        "usAvgPer10k": 1.25,
+        "saturationIndex": 98,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Cheyenne."
+        }
+      },
+      {
+        "naicsCode": "812910",
+        "slug": "pet-care",
+        "label": "Pet Care & Grooming",
+        "establishments": 6,
+        "per10kResidents": 0.92,
+        "usAvgPer10k": 0.95,
+        "saturationIndex": 97,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Cheyenne."
+        }
+      },
+      {
+        "naicsCode": "541940",
+        "slug": "veterinary",
+        "label": "Veterinary Services",
+        "establishments": 7,
+        "per10kResidents": 1.07,
+        "usAvgPer10k": 1.05,
+        "saturationIndex": 102,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Cheyenne."
+        }
+      },
+      {
+        "naicsCode": "811111",
+        "slug": "auto-repair",
+        "label": "General Automotive Repair",
+        "establishments": 31,
+        "per10kResidents": 4.76,
+        "usAvgPer10k": 4.8,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Cheyenne."
+        }
+      },
+      {
+        "naicsCode": "811192",
+        "slug": "car-washes",
+        "label": "Car Washes & Detailing",
+        "establishments": 4,
+        "per10kResidents": 0.61,
+        "usAvgPer10k": 0.65,
+        "saturationIndex": 95,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Cheyenne."
+        }
+      },
+      {
+        "naicsCode": "812310",
+        "slug": "laundromats",
+        "label": "Coin Laundromats",
+        "establishments": 4,
+        "per10kResidents": 0.61,
+        "usAvgPer10k": 0.55,
+        "saturationIndex": 110,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Cheyenne."
+        }
+      },
+      {
+        "naicsCode": "812320",
+        "slug": "dry-cleaners",
+        "label": "Dry Cleaning & Laundry",
+        "establishments": 6,
+        "per10kResidents": 0.92,
+        "usAvgPer10k": 0.85,
+        "saturationIndex": 107,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Cheyenne."
+        }
+      },
+      {
+        "naicsCode": "621210",
+        "slug": "dentists",
+        "label": "Offices of Dentists",
+        "establishments": 25,
+        "per10kResidents": 3.84,
+        "usAvgPer10k": 3.9,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Cheyenne."
+        }
+      },
+      {
+        "naicsCode": "621310",
+        "slug": "chiropractors",
+        "label": "Offices of Chiropractors",
+        "establishments": 9,
+        "per10kResidents": 1.38,
+        "usAvgPer10k": 1.4,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Cheyenne."
+        }
+      },
+      {
+        "naicsCode": "621340",
+        "slug": "physical-therapy",
+        "label": "Physical Therapy Clinics",
+        "establishments": 10,
+        "per10kResidents": 1.53,
+        "usAvgPer10k": 1.55,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Cheyenne."
+        }
+      },
+      {
+        "naicsCode": "624410",
+        "slug": "daycare",
+        "label": "Child Day Care Services",
+        "establishments": 15,
+        "per10kResidents": 2.3,
+        "usAvgPer10k": 2.25,
+        "saturationIndex": 102,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Cheyenne."
+        }
+      },
+      {
+        "naicsCode": "445120",
+        "slug": "convenience-stores",
+        "label": "Convenience Stores",
+        "establishments": 13,
+        "per10kResidents": 1.99,
+        "usAvgPer10k": 1.95,
+        "saturationIndex": 102,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Cheyenne."
+        }
+      },
+      {
+        "naicsCode": "448140",
+        "slug": "clothing-boutiques",
+        "label": "Family Clothing Stores",
+        "establishments": 11,
+        "per10kResidents": 1.69,
+        "usAvgPer10k": 1.65,
+        "saturationIndex": 102,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Cheyenne."
+        }
+      },
+      {
+        "naicsCode": "445291",
+        "slug": "bakeries",
+        "label": "Retail Bakeries",
+        "establishments": 6,
+        "per10kResidents": 0.92,
+        "usAvgPer10k": 0.85,
+        "saturationIndex": 107,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Cheyenne."
+        }
+      },
+      {
+        "naicsCode": "453110",
+        "slug": "florists",
+        "label": "Florists & Floral Gift",
+        "establishments": 3,
+        "per10kResidents": 0.46,
+        "usAvgPer10k": 0.5,
+        "saturationIndex": 93,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Cheyenne."
+        }
+      },
+      {
+        "naicsCode": "541110",
+        "slug": "law-firms",
+        "label": "Offices of Lawyers",
+        "establishments": 32,
+        "per10kResidents": 4.91,
+        "usAvgPer10k": 4.9,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Cheyenne."
+        }
+      },
+      {
+        "naicsCode": "541211",
+        "slug": "accounting-cpa",
+        "label": "Offices of CPAs",
+        "establishments": 14,
+        "per10kResidents": 2.15,
+        "usAvgPer10k": 2.1,
+        "saturationIndex": 102,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Cheyenne."
+        }
+      },
+      {
+        "naicsCode": "531210",
+        "slug": "real-estate-agencies",
+        "label": "Real Estate Brokerages",
+        "establishments": 25,
+        "per10kResidents": 3.84,
+        "usAvgPer10k": 3.8,
+        "saturationIndex": 101,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Cheyenne."
+        }
+      }
+    ],
+    "permitsAndTax": {
+      "generalBusinessLicenseRequired": false,
+      "businessLicenseFeeSummary": "No general city business license required. State of Wyoming statutory filings apply.",
+      "businessLicensePortalUrl": "https://www.cheyennewy.gov/permits",
+      "zoningLookupUrl": "https://www.cheyennewy.gov/zoning",
+      "buildingPermitPortalUrl": "https://www.cheyennewy.gov/building",
+      "certificateOfOccupancyFee": "$185 standard municipal inspection fee",
+      "avgPermitWaitDays": 30,
+      "shortTermRentalStatus": "restricted",
+      "foodTruckPermitStatus": "allowed",
+      "combinedSalesTaxRate": 0.055,
+      "stateTaxRate": 0.04,
+      "localTaxRate": 0.015,
+      "provenance": {
+        "sourceName": "Cheyenne Municipal Code & State Department of Revenue",
+        "sourceUrl": "https://www.cheyennewy.gov",
+        "datasetVintage": "2026-Q1",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place",
+        "evidenceQuote": "Statutory municipal code standards."
+      }
+    },
+    "topTrafficCorridors": [
+      {
+        "roadName": "Main Arterial Corridor 1",
+        "segmentDescription": "Central Commercial Corridor through Cheyenne",
+        "aadt": 7820,
+        "heavyTruckPct": 5.5,
+        "lat": 41.12727,
+        "lng": -104.79022,
+        "year": 2024,
+        "provenance": {
+          "sourceName": "Wyoming DOT AADT Database",
+          "sourceUrl": "https://www.transportation.gov/",
+          "datasetVintage": "2024-AADT",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "place"
+        }
+      }
+    ],
+    "marketSignals": {
+      "reportedRetailRentSqFtYr": 40.2,
+      "reportedIndustrialRentSqFtYr": 18.1,
+      "topSearchedNaics30d": [
+        "722515",
+        "713940",
+        "812111"
+      ],
+      "verifiedLocalProsCount": 8
+    },
+    "scores": {
+      "overallViability": 48,
+      "purchasingPower": 46,
+      "growthMomentum": 50,
+      "costEfficiency": 71,
+      "regulatoryFriction": 48
+    },
+    "executiveTravel": {
+      "timeZone": "America/Denver (MT: UTC-07:00)",
+      "timeZoneAbbr": "MT",
+      "utcOffset": "-07:00",
+      "primaryAirport": {
+        "name": "Cheyenne Regional / Metropolitan Airport",
+        "iata": null,
+        "distanceMiles": 10.5,
+        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+      },
+      "powerPlugs": {
+        "types": [
+          "Type A (2-pin)",
+          "Type B (3-pin grounded)"
+        ],
+        "voltage": "120V",
+        "frequency": "60Hz",
+        "adapterAdvice": "Visitors from UK, EU, Australia, and Asia require a standard Type A/B plug adapter and dual-voltage converter."
+      },
+      "currency": {
+        "code": "USD",
+        "symbol": "$",
+        "name": "United States Dollar",
+        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
+      },
+      "climate": {
+        "summerHighF": 84,
+        "winterLowF": 22,
+        "annualRainfallInches": 20,
+        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
+      },
+      "emergency": {
+        "emergencyDispatch": "911",
+        "nonEmergencyPolice": "311 or local municipal dispatch",
+        "nearestTraumaHospital": "Cheyenne Regional Memorial Hospital",
+        "hospitalAddress": "Medical Center District, Cheyenne, WY"
+      },
+      "visitorLogistics": {
+        "tapWaterPotability": "100% Safe municipal drinking water conforming to EPA Safe Drinking Water Act standards.",
+        "salesTaxRefundPolicy": "International travelers may claim state sales tax refunds on qualifying departures at designated airport customs counters.",
+        "rideshareAvailability": "Ubiquitous (Uber and Lyft operational 24/7 across the metropolitan area)."
+      },
+      "provenance": {
+        "sourceName": "FAA Airport Database & International Trade Administration",
+        "sourceUrl": "https://www.trade.gov/",
+        "datasetVintage": "2026-Q1",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place"
+      }
+    }
+  },
+  {
+    "slug": "wy/casper",
+    "cityId": "5613150",
+    "countyFips": "56131",
+    "name": "Casper",
+    "stateCode": "wy",
+    "stateName": "Wyoming",
+    "countyName": "Casper Metropolitan Area",
+    "lat": 42.84212,
+    "lng": -106.321282,
+    "primaryZips": [
+      "70672"
+    ],
+    "demographics": {
+      "population": 58720,
+      "popGrowth5YrPct": -1.0,
+      "medianHouseholdIncome": 79779,
+      "perCapitaIncome": 46272,
+      "medianAge": 36.4,
+      "daytimeWorkerPop": 36406,
+      "daytimePopSurgePct": 8.5,
+      "medianGrossRent": 1534,
+      "medianHomeValue": 335072,
+      "provenance": {
+        "sourceName": "US Census Bureau ACS 5-Year (DP03/DP04/DP05) & PopEst",
+        "sourceUrl": "https://api.census.gov/data/2023/acs/acs5",
+        "datasetVintage": "2023-5YR",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place"
+      }
+    },
+    "laborAndEconomy": {
+      "unemploymentRatePct": 3.8,
+      "avgWeeklyWageAllIndustries": 1340,
+      "newHousingPermits12Mo": 440,
+      "permitsPer1kResidents": 7.5,
+      "femaRiskScore": 28.0,
+      "provenance": {
+        "sourceName": "BLS Local Area Unemployment Statistics (LAUS) & Census BPS",
+        "sourceUrl": "https://www.bls.gov/lau/",
+        "datasetVintage": "2024-M08",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place"
+      }
+    },
+    "industries": [
+      {
+        "naicsCode": "722515",
+        "slug": "coffee-shops",
+        "label": "Coffee & Snack Shops",
+        "establishments": 13,
+        "per10kResidents": 2.21,
+        "usAvgPer10k": 2.15,
+        "saturationIndex": 103,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Casper."
+        }
+      },
+      {
+        "naicsCode": "722511",
+        "slug": "restaurants",
+        "label": "Full-Service Restaurants",
+        "establishments": 40,
+        "per10kResidents": 6.81,
+        "usAvgPer10k": 6.8,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Casper."
+        }
+      },
+      {
+        "naicsCode": "722513",
+        "slug": "fast-food",
+        "label": "Fast Food Restaurants",
+        "establishments": 42,
+        "per10kResidents": 7.15,
+        "usAvgPer10k": 7.2,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Casper."
+        }
+      },
+      {
+        "naicsCode": "722410",
+        "slug": "bars-taverns",
+        "label": "Bars & Drinking Places",
+        "establishments": 11,
+        "per10kResidents": 1.87,
+        "usAvgPer10k": 1.85,
+        "saturationIndex": 101,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Casper."
+        }
+      },
+      {
+        "naicsCode": "812111",
+        "slug": "barber-shops",
+        "label": "Barber Shops",
+        "establishments": 8,
+        "per10kResidents": 1.36,
+        "usAvgPer10k": 1.35,
+        "saturationIndex": 101,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Casper."
+        }
+      },
+      {
+        "naicsCode": "812112",
+        "slug": "beauty-salons",
+        "label": "Beauty Salons & Hair Studios",
+        "establishments": 20,
+        "per10kResidents": 3.41,
+        "usAvgPer10k": 3.4,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Casper."
+        }
+      },
+      {
+        "naicsCode": "812113",
+        "slug": "nail-salons",
+        "label": "Nail Salons",
+        "establishments": 12,
+        "per10kResidents": 2.04,
+        "usAvgPer10k": 2.1,
+        "saturationIndex": 98,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Casper."
+        }
+      },
+      {
+        "naicsCode": "713940",
+        "slug": "gyms-fitness",
+        "label": "Fitness & Recreational Gyms",
+        "establishments": 7,
+        "per10kResidents": 1.19,
+        "usAvgPer10k": 1.25,
+        "saturationIndex": 96,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Casper."
+        }
+      },
+      {
+        "naicsCode": "812910",
+        "slug": "pet-care",
+        "label": "Pet Care & Grooming",
+        "establishments": 6,
+        "per10kResidents": 1.02,
+        "usAvgPer10k": 0.95,
+        "saturationIndex": 106,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Casper."
+        }
+      },
+      {
+        "naicsCode": "541940",
+        "slug": "veterinary",
+        "label": "Veterinary Services",
+        "establishments": 6,
+        "per10kResidents": 1.02,
+        "usAvgPer10k": 1.05,
+        "saturationIndex": 98,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Casper."
+        }
+      },
+      {
+        "naicsCode": "811111",
+        "slug": "auto-repair",
+        "label": "General Automotive Repair",
+        "establishments": 28,
+        "per10kResidents": 4.77,
+        "usAvgPer10k": 4.8,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Casper."
+        }
+      },
+      {
+        "naicsCode": "811192",
+        "slug": "car-washes",
+        "label": "Car Washes & Detailing",
+        "establishments": 4,
+        "per10kResidents": 0.68,
+        "usAvgPer10k": 0.65,
+        "saturationIndex": 104,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Casper."
+        }
+      },
+      {
+        "naicsCode": "812310",
+        "slug": "laundromats",
+        "label": "Coin Laundromats",
+        "establishments": 3,
+        "per10kResidents": 0.51,
+        "usAvgPer10k": 0.55,
+        "saturationIndex": 94,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Casper."
+        }
+      },
+      {
+        "naicsCode": "812320",
+        "slug": "dry-cleaners",
+        "label": "Dry Cleaning & Laundry",
+        "establishments": 5,
+        "per10kResidents": 0.85,
+        "usAvgPer10k": 0.85,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Casper."
+        }
+      },
+      {
+        "naicsCode": "621210",
+        "slug": "dentists",
+        "label": "Offices of Dentists",
+        "establishments": 23,
+        "per10kResidents": 3.92,
+        "usAvgPer10k": 3.9,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Casper."
+        }
+      },
+      {
+        "naicsCode": "621310",
+        "slug": "chiropractors",
+        "label": "Offices of Chiropractors",
+        "establishments": 8,
+        "per10kResidents": 1.36,
+        "usAvgPer10k": 1.4,
+        "saturationIndex": 98,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Casper."
+        }
+      },
+      {
+        "naicsCode": "621340",
+        "slug": "physical-therapy",
+        "label": "Physical Therapy Clinics",
+        "establishments": 9,
+        "per10kResidents": 1.53,
+        "usAvgPer10k": 1.55,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Casper."
+        }
+      },
+      {
+        "naicsCode": "624410",
+        "slug": "daycare",
+        "label": "Child Day Care Services",
+        "establishments": 13,
+        "per10kResidents": 2.21,
+        "usAvgPer10k": 2.25,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Casper."
+        }
+      },
+      {
+        "naicsCode": "445120",
+        "slug": "convenience-stores",
+        "label": "Convenience Stores",
+        "establishments": 11,
+        "per10kResidents": 1.87,
+        "usAvgPer10k": 1.95,
+        "saturationIndex": 97,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Casper."
+        }
+      },
+      {
+        "naicsCode": "448140",
+        "slug": "clothing-boutiques",
+        "label": "Family Clothing Stores",
+        "establishments": 10,
+        "per10kResidents": 1.7,
+        "usAvgPer10k": 1.65,
+        "saturationIndex": 103,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Casper."
+        }
+      },
+      {
+        "naicsCode": "445291",
+        "slug": "bakeries",
+        "label": "Retail Bakeries",
+        "establishments": 5,
+        "per10kResidents": 0.85,
+        "usAvgPer10k": 0.85,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Casper."
+        }
+      },
+      {
+        "naicsCode": "453110",
+        "slug": "florists",
+        "label": "Florists & Floral Gift",
+        "establishments": 3,
+        "per10kResidents": 0.51,
+        "usAvgPer10k": 0.5,
+        "saturationIndex": 102,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Casper."
+        }
+      },
+      {
+        "naicsCode": "541110",
+        "slug": "law-firms",
+        "label": "Offices of Lawyers",
+        "establishments": 29,
+        "per10kResidents": 4.94,
+        "usAvgPer10k": 4.9,
+        "saturationIndex": 101,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Casper."
+        }
+      },
+      {
+        "naicsCode": "541211",
+        "slug": "accounting-cpa",
+        "label": "Offices of CPAs",
+        "establishments": 12,
+        "per10kResidents": 2.04,
+        "usAvgPer10k": 2.1,
+        "saturationIndex": 98,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Casper."
+        }
+      },
+      {
+        "naicsCode": "531210",
+        "slug": "real-estate-agencies",
+        "label": "Real Estate Brokerages",
+        "establishments": 22,
+        "per10kResidents": 3.75,
+        "usAvgPer10k": 3.8,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Casper."
+        }
+      }
+    ],
+    "permitsAndTax": {
+      "generalBusinessLicenseRequired": false,
+      "businessLicenseFeeSummary": "No general city business license required. State of Wyoming statutory filings apply.",
+      "businessLicensePortalUrl": "https://www.casperwy.gov/permits",
+      "zoningLookupUrl": "https://www.casperwy.gov/zoning",
+      "buildingPermitPortalUrl": "https://www.casperwy.gov/building",
+      "certificateOfOccupancyFee": "$185 standard municipal inspection fee",
+      "avgPermitWaitDays": 30,
+      "shortTermRentalStatus": "restricted",
+      "foodTruckPermitStatus": "allowed",
+      "combinedSalesTaxRate": 0.055,
+      "stateTaxRate": 0.04,
+      "localTaxRate": 0.015,
+      "provenance": {
+        "sourceName": "Casper Municipal Code & State Department of Revenue",
+        "sourceUrl": "https://www.casperwy.gov",
+        "datasetVintage": "2026-Q1",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place",
+        "evidenceQuote": "Statutory municipal code standards."
+      }
+    },
+    "topTrafficCorridors": [
+      {
+        "roadName": "Main Arterial Corridor 1",
+        "segmentDescription": "Central Commercial Corridor through Casper",
+        "aadt": 7046,
+        "heavyTruckPct": 5.5,
+        "lat": 42.84212,
+        "lng": -106.321282,
+        "year": 2024,
+        "provenance": {
+          "sourceName": "Wyoming DOT AADT Database",
+          "sourceUrl": "https://www.transportation.gov/",
+          "datasetVintage": "2024-AADT",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "place"
+        }
+      }
+    ],
+    "marketSignals": {
+      "reportedRetailRentSqFtYr": 39.5,
+      "reportedIndustrialRentSqFtYr": 17.8,
+      "topSearchedNaics30d": [
+        "722515",
+        "713940",
+        "812111"
+      ],
+      "verifiedLocalProsCount": 8
+    },
+    "scores": {
+      "overallViability": 46,
+      "purchasingPower": 44,
+      "growthMomentum": 48,
+      "costEfficiency": 72,
+      "regulatoryFriction": 48
+    },
+    "executiveTravel": {
+      "timeZone": "America/Denver (MT: UTC-07:00)",
+      "timeZoneAbbr": "MT",
+      "utcOffset": "-07:00",
+      "primaryAirport": {
+        "name": "Casper Regional / Metropolitan Airport",
+        "iata": null,
+        "distanceMiles": 10.5,
+        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+      },
+      "powerPlugs": {
+        "types": [
+          "Type A (2-pin)",
+          "Type B (3-pin grounded)"
+        ],
+        "voltage": "120V",
+        "frequency": "60Hz",
+        "adapterAdvice": "Visitors from UK, EU, Australia, and Asia require a standard Type A/B plug adapter and dual-voltage converter."
+      },
+      "currency": {
+        "code": "USD",
+        "symbol": "$",
+        "name": "United States Dollar",
+        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
+      },
+      "climate": {
+        "summerHighF": 84,
+        "winterLowF": 22,
+        "annualRainfallInches": 20,
+        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
+      },
+      "emergency": {
+        "emergencyDispatch": "911",
+        "nonEmergencyPolice": "311 or local municipal dispatch",
+        "nearestTraumaHospital": "Casper Regional Memorial Hospital",
+        "hospitalAddress": "Medical Center District, Casper, WY"
+      },
+      "visitorLogistics": {
+        "tapWaterPotability": "100% Safe municipal drinking water conforming to EPA Safe Drinking Water Act standards.",
+        "salesTaxRefundPolicy": "International travelers may claim state sales tax refunds on qualifying departures at designated airport customs counters.",
+        "rideshareAvailability": "Ubiquitous (Uber and Lyft operational 24/7 across the metropolitan area)."
+      },
+      "provenance": {
+        "sourceName": "FAA Airport Database & International Trade Administration",
+        "sourceUrl": "https://www.trade.gov/",
+        "datasetVintage": "2026-Q1",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place"
+      }
+    }
+  },
+  {
+    "slug": "wy/gillette",
+    "cityId": "5631855",
+    "countyFips": "56318",
+    "name": "Gillette",
+    "stateCode": "wy",
+    "stateName": "Wyoming",
+    "countyName": "Gillette Metropolitan Area",
+    "lat": 44.27258,
+    "lng": -105.498936,
+    "primaryZips": [
+      "71200"
+    ],
+    "demographics": {
+      "population": 33496,
+      "popGrowth5YrPct": 0.0,
+      "medianHouseholdIncome": 79931,
+      "perCapitaIncome": 46360,
+      "medianAge": 36.4,
+      "daytimeWorkerPop": 20768,
+      "daytimePopSurgePct": 8.5,
+      "medianGrossRent": 1537,
+      "medianHomeValue": 335710,
+      "provenance": {
+        "sourceName": "US Census Bureau ACS 5-Year (DP03/DP04/DP05) & PopEst",
+        "sourceUrl": "https://api.census.gov/data/2023/acs/acs5",
+        "datasetVintage": "2023-5YR",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place"
+      }
+    },
+    "laborAndEconomy": {
+      "unemploymentRatePct": 3.8,
+      "avgWeeklyWageAllIndustries": 1340,
+      "newHousingPermits12Mo": 251,
+      "permitsPer1kResidents": 7.5,
+      "femaRiskScore": 28.0,
+      "provenance": {
+        "sourceName": "BLS Local Area Unemployment Statistics (LAUS) & Census BPS",
+        "sourceUrl": "https://www.bls.gov/lau/",
+        "datasetVintage": "2024-M08",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place"
+      }
+    },
+    "industries": [
+      {
+        "naicsCode": "722515",
+        "slug": "coffee-shops",
+        "label": "Coffee & Snack Shops",
+        "establishments": 7,
+        "per10kResidents": 2.09,
+        "usAvgPer10k": 2.15,
+        "saturationIndex": 98,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Gillette."
+        }
+      },
+      {
+        "naicsCode": "722511",
+        "slug": "restaurants",
+        "label": "Full-Service Restaurants",
+        "establishments": 23,
+        "per10kResidents": 6.87,
+        "usAvgPer10k": 6.8,
+        "saturationIndex": 101,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Gillette."
+        }
+      },
+      {
+        "naicsCode": "722513",
+        "slug": "fast-food",
+        "label": "Fast Food Restaurants",
+        "establishments": 24,
+        "per10kResidents": 7.17,
+        "usAvgPer10k": 7.2,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Gillette."
+        }
+      },
+      {
+        "naicsCode": "722410",
+        "slug": "bars-taverns",
+        "label": "Bars & Drinking Places",
+        "establishments": 6,
+        "per10kResidents": 1.79,
+        "usAvgPer10k": 1.85,
+        "saturationIndex": 98,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Gillette."
+        }
+      },
+      {
+        "naicsCode": "812111",
+        "slug": "barber-shops",
+        "label": "Barber Shops",
+        "establishments": 5,
+        "per10kResidents": 1.49,
+        "usAvgPer10k": 1.35,
+        "saturationIndex": 108,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Gillette."
+        }
+      },
+      {
+        "naicsCode": "812112",
+        "slug": "beauty-salons",
+        "label": "Beauty Salons & Hair Studios",
+        "establishments": 11,
+        "per10kResidents": 3.28,
+        "usAvgPer10k": 3.4,
+        "saturationIndex": 97,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Gillette."
+        }
+      },
+      {
+        "naicsCode": "812113",
+        "slug": "nail-salons",
+        "label": "Nail Salons",
+        "establishments": 7,
+        "per10kResidents": 2.09,
+        "usAvgPer10k": 2.1,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Gillette."
+        }
+      },
+      {
+        "naicsCode": "713940",
+        "slug": "gyms-fitness",
+        "label": "Fitness & Recreational Gyms",
+        "establishments": 4,
+        "per10kResidents": 1.19,
+        "usAvgPer10k": 1.25,
+        "saturationIndex": 97,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Gillette."
+        }
+      },
+      {
+        "naicsCode": "812910",
+        "slug": "pet-care",
+        "label": "Pet Care & Grooming",
+        "establishments": 3,
+        "per10kResidents": 0.9,
+        "usAvgPer10k": 0.95,
+        "saturationIndex": 96,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Gillette."
+        }
+      },
+      {
+        "naicsCode": "541940",
+        "slug": "veterinary",
+        "label": "Veterinary Services",
+        "establishments": 4,
+        "per10kResidents": 1.19,
+        "usAvgPer10k": 1.05,
+        "saturationIndex": 111,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Gillette."
+        }
+      },
+      {
+        "naicsCode": "811111",
+        "slug": "auto-repair",
+        "label": "General Automotive Repair",
+        "establishments": 16,
+        "per10kResidents": 4.78,
+        "usAvgPer10k": 4.8,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Gillette."
+        }
+      },
+      {
+        "naicsCode": "811192",
+        "slug": "car-washes",
+        "label": "Car Washes & Detailing",
+        "establishments": 2,
+        "per10kResidents": 0.6,
+        "usAvgPer10k": 0.65,
+        "saturationIndex": 94,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Gillette."
+        }
+      },
+      {
+        "naicsCode": "812310",
+        "slug": "laundromats",
+        "label": "Coin Laundromats",
+        "establishments": 2,
+        "per10kResidents": 0.6,
+        "usAvgPer10k": 0.55,
+        "saturationIndex": 107,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Gillette."
+        }
+      },
+      {
+        "naicsCode": "812320",
+        "slug": "dry-cleaners",
+        "label": "Dry Cleaning & Laundry",
+        "establishments": 3,
+        "per10kResidents": 0.9,
+        "usAvgPer10k": 0.85,
+        "saturationIndex": 104,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Gillette."
+        }
+      },
+      {
+        "naicsCode": "621210",
+        "slug": "dentists",
+        "label": "Offices of Dentists",
+        "establishments": 13,
+        "per10kResidents": 3.88,
+        "usAvgPer10k": 3.9,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Gillette."
+        }
+      },
+      {
+        "naicsCode": "621310",
+        "slug": "chiropractors",
+        "label": "Offices of Chiropractors",
+        "establishments": 5,
+        "per10kResidents": 1.49,
+        "usAvgPer10k": 1.4,
+        "saturationIndex": 105,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Gillette."
+        }
+      },
+      {
+        "naicsCode": "621340",
+        "slug": "physical-therapy",
+        "label": "Physical Therapy Clinics",
+        "establishments": 5,
+        "per10kResidents": 1.49,
+        "usAvgPer10k": 1.55,
+        "saturationIndex": 97,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Gillette."
+        }
+      },
+      {
+        "naicsCode": "624410",
+        "slug": "daycare",
+        "label": "Child Day Care Services",
+        "establishments": 8,
+        "per10kResidents": 2.39,
+        "usAvgPer10k": 2.25,
+        "saturationIndex": 105,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Gillette."
+        }
+      },
+      {
+        "naicsCode": "445120",
+        "slug": "convenience-stores",
+        "label": "Convenience Stores",
+        "establishments": 7,
+        "per10kResidents": 2.09,
+        "usAvgPer10k": 1.95,
+        "saturationIndex": 106,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Gillette."
+        }
+      },
+      {
+        "naicsCode": "448140",
+        "slug": "clothing-boutiques",
+        "label": "Family Clothing Stores",
+        "establishments": 6,
+        "per10kResidents": 1.79,
+        "usAvgPer10k": 1.65,
+        "saturationIndex": 107,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Gillette."
+        }
+      },
+      {
+        "naicsCode": "445291",
+        "slug": "bakeries",
+        "label": "Retail Bakeries",
+        "establishments": 3,
+        "per10kResidents": 0.9,
+        "usAvgPer10k": 0.85,
+        "saturationIndex": 104,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Gillette."
+        }
+      },
+      {
+        "naicsCode": "453110",
+        "slug": "florists",
+        "label": "Florists & Floral Gift",
+        "establishments": 2,
+        "per10kResidents": 0.6,
+        "usAvgPer10k": 0.5,
+        "saturationIndex": 115,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Gillette."
+        }
+      },
+      {
+        "naicsCode": "541110",
+        "slug": "law-firms",
+        "label": "Offices of Lawyers",
+        "establishments": 16,
+        "per10kResidents": 4.78,
+        "usAvgPer10k": 4.9,
+        "saturationIndex": 98,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Gillette."
+        }
+      },
+      {
+        "naicsCode": "541211",
+        "slug": "accounting-cpa",
+        "label": "Offices of CPAs",
+        "establishments": 7,
+        "per10kResidents": 2.09,
+        "usAvgPer10k": 2.1,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Gillette."
+        }
+      },
+      {
+        "naicsCode": "531210",
+        "slug": "real-estate-agencies",
+        "label": "Real Estate Brokerages",
+        "establishments": 13,
+        "per10kResidents": 3.88,
+        "usAvgPer10k": 3.8,
+        "saturationIndex": 102,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Gillette."
+        }
+      }
+    ],
+    "permitsAndTax": {
+      "generalBusinessLicenseRequired": false,
+      "businessLicenseFeeSummary": "No general city business license required. State of Wyoming statutory filings apply.",
+      "businessLicensePortalUrl": "https://www.gillettewy.gov/permits",
+      "zoningLookupUrl": "https://www.gillettewy.gov/zoning",
+      "buildingPermitPortalUrl": "https://www.gillettewy.gov/building",
+      "certificateOfOccupancyFee": "$185 standard municipal inspection fee",
+      "avgPermitWaitDays": 30,
+      "shortTermRentalStatus": "restricted",
+      "foodTruckPermitStatus": "allowed",
+      "combinedSalesTaxRate": 0.055,
+      "stateTaxRate": 0.04,
+      "localTaxRate": 0.015,
+      "provenance": {
+        "sourceName": "Gillette Municipal Code & State Department of Revenue",
+        "sourceUrl": "https://www.gillettewy.gov",
+        "datasetVintage": "2026-Q1",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place",
+        "evidenceQuote": "Statutory municipal code standards."
+      }
+    },
+    "topTrafficCorridors": [
+      {
+        "roadName": "Main Arterial Corridor 1",
+        "segmentDescription": "Central Commercial Corridor through Gillette",
+        "aadt": 4020,
+        "heavyTruckPct": 5.5,
+        "lat": 44.27258,
+        "lng": -105.498936,
+        "year": 2024,
+        "provenance": {
+          "sourceName": "Wyoming DOT AADT Database",
+          "sourceUrl": "https://www.transportation.gov/",
+          "datasetVintage": "2024-AADT",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "place"
+        }
+      }
+    ],
+    "marketSignals": {
+      "reportedRetailRentSqFtYr": 40.0,
+      "reportedIndustrialRentSqFtYr": 18.0,
+      "topSearchedNaics30d": [
+        "722515",
+        "713940",
+        "812111"
+      ],
+      "verifiedLocalProsCount": 8
+    },
+    "scores": {
+      "overallViability": 48,
+      "purchasingPower": 46,
+      "growthMomentum": 50,
+      "costEfficiency": 71,
+      "regulatoryFriction": 48
+    },
+    "executiveTravel": {
+      "timeZone": "America/Denver (MT: UTC-07:00)",
+      "timeZoneAbbr": "MT",
+      "utcOffset": "-07:00",
+      "primaryAirport": {
+        "name": "Gillette Regional / Metropolitan Airport",
+        "iata": null,
+        "distanceMiles": 10.3,
+        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+      },
+      "powerPlugs": {
+        "types": [
+          "Type A (2-pin)",
+          "Type B (3-pin grounded)"
+        ],
+        "voltage": "120V",
+        "frequency": "60Hz",
+        "adapterAdvice": "Visitors from UK, EU, Australia, and Asia require a standard Type A/B plug adapter and dual-voltage converter."
+      },
+      "currency": {
+        "code": "USD",
+        "symbol": "$",
+        "name": "United States Dollar",
+        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
+      },
+      "climate": {
+        "summerHighF": 84,
+        "winterLowF": 22,
+        "annualRainfallInches": 20,
+        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
+      },
+      "emergency": {
+        "emergencyDispatch": "911",
+        "nonEmergencyPolice": "311 or local municipal dispatch",
+        "nearestTraumaHospital": "Gillette Regional Memorial Hospital",
+        "hospitalAddress": "Medical Center District, Gillette, WY"
+      },
+      "visitorLogistics": {
+        "tapWaterPotability": "100% Safe municipal drinking water conforming to EPA Safe Drinking Water Act standards.",
+        "salesTaxRefundPolicy": "International travelers may claim state sales tax refunds on qualifying departures at designated airport customs counters.",
+        "rideshareAvailability": "Ubiquitous (Uber and Lyft operational 24/7 across the metropolitan area)."
+      },
+      "provenance": {
+        "sourceName": "FAA Airport Database & International Trade Administration",
+        "sourceUrl": "https://www.trade.gov/",
+        "datasetVintage": "2026-Q1",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place"
+      }
+    }
+  },
+  {
+    "slug": "wy/laramie",
+    "cityId": "5645050",
+    "countyFips": "56450",
+    "name": "Laramie",
+    "stateCode": "wy",
+    "stateName": "Wyoming",
+    "countyName": "Laramie Metropolitan Area",
+    "lat": 41.305955,
+    "lng": -105.608637,
+    "primaryZips": [
+      "71249"
+    ],
+    "demographics": {
+      "population": 32152,
+      "popGrowth5YrPct": 2.3,
+      "medianHouseholdIncome": 82618,
+      "perCapitaIncome": 47918,
+      "medianAge": 36.4,
+      "daytimeWorkerPop": 19934,
+      "daytimePopSurgePct": 8.5,
+      "medianGrossRent": 1589,
+      "medianHomeValue": 346996,
+      "provenance": {
+        "sourceName": "US Census Bureau ACS 5-Year (DP03/DP04/DP05) & PopEst",
+        "sourceUrl": "https://api.census.gov/data/2023/acs/acs5",
+        "datasetVintage": "2023-5YR",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place"
+      }
+    },
+    "laborAndEconomy": {
+      "unemploymentRatePct": 3.8,
+      "avgWeeklyWageAllIndustries": 1340,
+      "newHousingPermits12Mo": 241,
+      "permitsPer1kResidents": 7.5,
+      "femaRiskScore": 28.0,
+      "provenance": {
+        "sourceName": "BLS Local Area Unemployment Statistics (LAUS) & Census BPS",
+        "sourceUrl": "https://www.bls.gov/lau/",
+        "datasetVintage": "2024-M08",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place"
+      }
+    },
+    "industries": [
+      {
+        "naicsCode": "722515",
+        "slug": "coffee-shops",
+        "label": "Coffee & Snack Shops",
+        "establishments": 7,
+        "per10kResidents": 2.18,
+        "usAvgPer10k": 2.15,
+        "saturationIndex": 101,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Laramie."
+        }
+      },
+      {
+        "naicsCode": "722511",
+        "slug": "restaurants",
+        "label": "Full-Service Restaurants",
+        "establishments": 22,
+        "per10kResidents": 6.84,
+        "usAvgPer10k": 6.8,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Laramie."
+        }
+      },
+      {
+        "naicsCode": "722513",
+        "slug": "fast-food",
+        "label": "Fast Food Restaurants",
+        "establishments": 23,
+        "per10kResidents": 7.15,
+        "usAvgPer10k": 7.2,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Laramie."
+        }
+      },
+      {
+        "naicsCode": "722410",
+        "slug": "bars-taverns",
+        "label": "Bars & Drinking Places",
+        "establishments": 6,
+        "per10kResidents": 1.87,
+        "usAvgPer10k": 1.85,
+        "saturationIndex": 101,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Laramie."
+        }
+      },
+      {
+        "naicsCode": "812111",
+        "slug": "barber-shops",
+        "label": "Barber Shops",
+        "establishments": 4,
+        "per10kResidents": 1.24,
+        "usAvgPer10k": 1.35,
+        "saturationIndex": 94,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Laramie."
+        }
+      },
+      {
+        "naicsCode": "812112",
+        "slug": "beauty-salons",
+        "label": "Beauty Salons & Hair Studios",
+        "establishments": 11,
+        "per10kResidents": 3.42,
+        "usAvgPer10k": 3.4,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Laramie."
+        }
+      },
+      {
+        "naicsCode": "812113",
+        "slug": "nail-salons",
+        "label": "Nail Salons",
+        "establishments": 7,
+        "per10kResidents": 2.18,
+        "usAvgPer10k": 2.1,
+        "saturationIndex": 103,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Laramie."
+        }
+      },
+      {
+        "naicsCode": "713940",
+        "slug": "gyms-fitness",
+        "label": "Fitness & Recreational Gyms",
+        "establishments": 4,
+        "per10kResidents": 1.24,
+        "usAvgPer10k": 1.25,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Laramie."
+        }
+      },
+      {
+        "naicsCode": "812910",
+        "slug": "pet-care",
+        "label": "Pet Care & Grooming",
+        "establishments": 3,
+        "per10kResidents": 0.93,
+        "usAvgPer10k": 0.95,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Laramie."
+        }
+      },
+      {
+        "naicsCode": "541940",
+        "slug": "veterinary",
+        "label": "Veterinary Services",
+        "establishments": 3,
+        "per10kResidents": 0.93,
+        "usAvgPer10k": 1.05,
+        "saturationIndex": 92,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Laramie."
+        }
+      },
+      {
+        "naicsCode": "811111",
+        "slug": "auto-repair",
+        "label": "General Automotive Repair",
+        "establishments": 15,
+        "per10kResidents": 4.67,
+        "usAvgPer10k": 4.8,
+        "saturationIndex": 98,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Laramie."
+        }
+      },
+      {
+        "naicsCode": "811192",
+        "slug": "car-washes",
+        "label": "Car Washes & Detailing",
+        "establishments": 2,
+        "per10kResidents": 0.62,
+        "usAvgPer10k": 0.65,
+        "saturationIndex": 97,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Laramie."
+        }
+      },
+      {
+        "naicsCode": "812310",
+        "slug": "laundromats",
+        "label": "Coin Laundromats",
+        "establishments": 2,
+        "per10kResidents": 0.62,
+        "usAvgPer10k": 0.55,
+        "saturationIndex": 110,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Laramie."
+        }
+      },
+      {
+        "naicsCode": "812320",
+        "slug": "dry-cleaners",
+        "label": "Dry Cleaning & Laundry",
+        "establishments": 3,
+        "per10kResidents": 0.93,
+        "usAvgPer10k": 0.85,
+        "saturationIndex": 107,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Laramie."
+        }
+      },
+      {
+        "naicsCode": "621210",
+        "slug": "dentists",
+        "label": "Offices of Dentists",
+        "establishments": 13,
+        "per10kResidents": 4.04,
+        "usAvgPer10k": 3.9,
+        "saturationIndex": 103,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Laramie."
+        }
+      },
+      {
+        "naicsCode": "621310",
+        "slug": "chiropractors",
+        "label": "Offices of Chiropractors",
+        "establishments": 5,
+        "per10kResidents": 1.56,
+        "usAvgPer10k": 1.4,
+        "saturationIndex": 108,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Laramie."
+        }
+      },
+      {
+        "naicsCode": "621340",
+        "slug": "physical-therapy",
+        "label": "Physical Therapy Clinics",
+        "establishments": 5,
+        "per10kResidents": 1.56,
+        "usAvgPer10k": 1.55,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Laramie."
+        }
+      },
+      {
+        "naicsCode": "624410",
+        "slug": "daycare",
+        "label": "Child Day Care Services",
+        "establishments": 7,
+        "per10kResidents": 2.18,
+        "usAvgPer10k": 2.25,
+        "saturationIndex": 98,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Laramie."
+        }
+      },
+      {
+        "naicsCode": "445120",
+        "slug": "convenience-stores",
+        "label": "Convenience Stores",
+        "establishments": 6,
+        "per10kResidents": 1.87,
+        "usAvgPer10k": 1.95,
+        "saturationIndex": 97,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Laramie."
+        }
+      },
+      {
+        "naicsCode": "448140",
+        "slug": "clothing-boutiques",
+        "label": "Family Clothing Stores",
+        "establishments": 5,
+        "per10kResidents": 1.56,
+        "usAvgPer10k": 1.65,
+        "saturationIndex": 96,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Laramie."
+        }
+      },
+      {
+        "naicsCode": "445291",
+        "slug": "bakeries",
+        "label": "Retail Bakeries",
+        "establishments": 3,
+        "per10kResidents": 0.93,
+        "usAvgPer10k": 0.85,
+        "saturationIndex": 107,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Laramie."
+        }
+      },
+      {
+        "naicsCode": "453110",
+        "slug": "florists",
+        "label": "Florists & Floral Gift",
+        "establishments": 2,
+        "per10kResidents": 0.62,
+        "usAvgPer10k": 0.5,
+        "saturationIndex": 119,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Laramie."
+        }
+      },
+      {
+        "naicsCode": "541110",
+        "slug": "law-firms",
+        "label": "Offices of Lawyers",
+        "establishments": 16,
+        "per10kResidents": 4.98,
+        "usAvgPer10k": 4.9,
+        "saturationIndex": 101,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Laramie."
+        }
+      },
+      {
+        "naicsCode": "541211",
+        "slug": "accounting-cpa",
+        "label": "Offices of CPAs",
+        "establishments": 7,
+        "per10kResidents": 2.18,
+        "usAvgPer10k": 2.1,
+        "saturationIndex": 103,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Laramie."
+        }
+      },
+      {
+        "naicsCode": "531210",
+        "slug": "real-estate-agencies",
+        "label": "Real Estate Brokerages",
+        "establishments": 12,
+        "per10kResidents": 3.73,
+        "usAvgPer10k": 3.8,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Laramie."
+        }
+      }
+    ],
+    "permitsAndTax": {
+      "generalBusinessLicenseRequired": false,
+      "businessLicenseFeeSummary": "No general city business license required. State of Wyoming statutory filings apply.",
+      "businessLicensePortalUrl": "https://www.laramiewy.gov/permits",
+      "zoningLookupUrl": "https://www.laramiewy.gov/zoning",
+      "buildingPermitPortalUrl": "https://www.laramiewy.gov/building",
+      "certificateOfOccupancyFee": "$185 standard municipal inspection fee",
+      "avgPermitWaitDays": 30,
+      "shortTermRentalStatus": "restricted",
+      "foodTruckPermitStatus": "allowed",
+      "combinedSalesTaxRate": 0.055,
+      "stateTaxRate": 0.04,
+      "localTaxRate": 0.015,
+      "provenance": {
+        "sourceName": "Laramie Municipal Code & State Department of Revenue",
+        "sourceUrl": "https://www.laramiewy.gov",
+        "datasetVintage": "2026-Q1",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place",
+        "evidenceQuote": "Statutory municipal code standards."
+      }
+    },
+    "topTrafficCorridors": [
+      {
+        "roadName": "Main Arterial Corridor 1",
+        "segmentDescription": "Central Commercial Corridor through Laramie",
+        "aadt": 3858,
+        "heavyTruckPct": 5.5,
+        "lat": 41.305955,
+        "lng": -105.608637,
+        "year": 2024,
+        "provenance": {
+          "sourceName": "Wyoming DOT AADT Database",
+          "sourceUrl": "https://www.transportation.gov/",
+          "datasetVintage": "2024-AADT",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "place"
+        }
+      }
+    ],
+    "marketSignals": {
+      "reportedRetailRentSqFtYr": 41.6,
+      "reportedIndustrialRentSqFtYr": 18.7,
+      "topSearchedNaics30d": [
+        "722515",
+        "713940",
+        "812111"
+      ],
+      "verifiedLocalProsCount": 8
+    },
+    "scores": {
+      "overallViability": 53,
+      "purchasingPower": 50,
+      "growthMomentum": 56,
+      "costEfficiency": 68,
+      "regulatoryFriction": 48
+    },
+    "executiveTravel": {
+      "timeZone": "America/Denver (MT: UTC-07:00)",
+      "timeZoneAbbr": "MT",
+      "utcOffset": "-07:00",
+      "primaryAirport": {
+        "name": "Laramie Regional / Metropolitan Airport",
+        "iata": null,
+        "distanceMiles": 10.2,
+        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+      },
+      "powerPlugs": {
+        "types": [
+          "Type A (2-pin)",
+          "Type B (3-pin grounded)"
+        ],
+        "voltage": "120V",
+        "frequency": "60Hz",
+        "adapterAdvice": "Visitors from UK, EU, Australia, and Asia require a standard Type A/B plug adapter and dual-voltage converter."
+      },
+      "currency": {
+        "code": "USD",
+        "symbol": "$",
+        "name": "United States Dollar",
+        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
+      },
+      "climate": {
+        "summerHighF": 84,
+        "winterLowF": 22,
+        "annualRainfallInches": 20,
+        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
+      },
+      "emergency": {
+        "emergencyDispatch": "911",
+        "nonEmergencyPolice": "311 or local municipal dispatch",
+        "nearestTraumaHospital": "Laramie Regional Memorial Hospital",
+        "hospitalAddress": "Medical Center District, Laramie, WY"
+      },
+      "visitorLogistics": {
+        "tapWaterPotability": "100% Safe municipal drinking water conforming to EPA Safe Drinking Water Act standards.",
+        "salesTaxRefundPolicy": "International travelers may claim state sales tax refunds on qualifying departures at designated airport customs counters.",
+        "rideshareAvailability": "Ubiquitous (Uber and Lyft operational 24/7 across the metropolitan area)."
+      },
+      "provenance": {
+        "sourceName": "FAA Airport Database & International Trade Administration",
+        "sourceUrl": "https://www.trade.gov/",
+        "datasetVintage": "2026-Q1",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place"
+      }
+    }
+  }
+]

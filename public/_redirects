@@ -1,0 +1,15 @@
+# Cloudflare Pages 301 Redirect Rules (Normalized Census Names)
+/ok/oklahoma/ /ok/oklahoma-city/ 301
+/ok/oklahoma /ok/oklahoma-city/ 301
+/ok/midwest/ /ok/midwest-city/ 301
+/ok/midwest /ok/midwest-city/ 301
+/tn/nashville-davidson-metropolitan-government-balance/ /tn/nashville/ 301
+/tn/nashville-davidson-metropolitan-government-balance /tn/nashville/ 301
+/ga/athens-clarke-county-unified-government-balance/ /ga/athens/ 301
+/ga/athens-clarke-county-unified-government-balance /ga/athens/ 301
+/ga/augusta-richmond-county-balance/ /ga/augusta/ 301
+/ga/augusta-richmond-county-balance /ga/augusta/ 301
+/in/indianapolis-city-balance/ /in/indianapolis/ 301
+/in/indianapolis-city-balance /in/indianapolis/ 301
+/ky/louisville-jefferson-county-metro-government-balance/ /ky/louisville/ 301
+/ky/louisville-jefferson-county-metro-government-balance /ky/louisville/ 301

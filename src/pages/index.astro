@@ -1,278 +1,795 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import manifest from '../data/index-manifest.json';
+
+// Curated 6 Premier Hubs with High-Quality Photography & Discovery Focus
+const FEATURED_CITIES = [
+  {
+    slug: 'tx/austin',
+    name: 'Austin',
+    state: 'Texas',
+    stateCode: 'TX',
+    image: '/images/austin-skyline.jpg',
+    appeal: 'Live music capital, booming tech corridors, Lady Bird Lake recreation, and zero state income tax.',
+    tagline: 'Urban Innovation & Culture'
+  },
+  {
+    slug: 'ar/hot-springs-village',
+    name: 'Hot Springs Village',
+    state: 'Arkansas',
+    stateCode: 'AR',
+    image: '/images/hsv-hero.jpg',
+    appeal: 'America’s largest gated community with 11 recreational lakes, 9 championship golf courses, and 0.62% property tax.',
+    tagline: 'Scenic Lakeside Living'
+  },
+  {
+    slug: 'id/boise',
+    name: 'Boise',
+    state: 'Idaho',
+    stateCode: 'ID',
+    image: '/images/boise-hero.jpg',
+    appeal: 'High-growth Treasure Valley hub featuring the 25-mile Boise River Greenbelt and 2,704 ft mountain foothills.',
+    tagline: 'Mountain West Boomtown'
+  },
+  {
+    slug: 'fl/tampa',
+    name: 'Tampa',
+    state: 'Florida',
+    stateCode: 'FL',
+    image: '/images/tampa-hero.jpg',
+    appeal: 'Gulf Coast waterfront metro with historic brick Ybor City, modern Water Street district, and 0% personal income tax.',
+    tagline: 'Waterfront Gulf Metropolis'
+  },
+  {
+    slug: 'az/scottsdale',
+    name: 'Scottsdale',
+    state: 'Arizona',
+    stateCode: 'AZ',
+    image: '/images/scottsdale-hero.jpg',
+    appeal: 'Sonoran Desert luxury enclave renowned for world-class resorts, championship golf, and high purchasing power.',
+    tagline: 'Desert Resort Corridor'
+  },
+  {
+    slug: 'tn/nashville',
+    name: 'Nashville',
+    state: 'Tennessee',
+    stateCode: 'TN',
+    image: '/images/nashville-hero.jpg',
+    appeal: 'Music City destination with legendary live entertainment, major healthcare systems, and 0% state income tax.',
+    tagline: 'Music Capital & Healthcare'
+  }
+];
+
+// Lightweight search index for all 1,501 cities (fast, client-side, zero lag)
+const searchIndex = manifest.map(c => ({
+  n: c.name,
+  s: c.stateCode.toUpperCase(),
+  u: c.slug
+}));
+
+// Group all 1,501 cities by state for the directory
+const stateCounts: Record<string, { code: string; name: string; count: number }> = {};
+manifest.forEach(c => {
+  const code = c.stateCode.toLowerCase();
+  if (!stateCounts[code]) {
+    stateCounts[code] = { code, name: c.stateName, count: 0 };
+  }
+  stateCounts[code].count++;
+});
+const statesList = Object.values(stateCounts).sort((a, b) => a.name.localeCompare(b.name));
 ---
 
-<Layout title="CityClick — Your next business. The right city.">
+<Layout
+  title="CityClick — Get to know your next city"
+  description="Plan a visit, find a place to live, or research your next business location. Verified local guides across 1,501 American cities."
+  image="https://cityclick.com/images/og-cityclick.jpg"
+>
   <!-- Hero Section -->
-  <section class="bg-gradient-to-b from-[#EDF4FC] to-white pt-16 pb-20 border-b border-slate-200">
+  <section class="bg-gradient-to-b from-[#EDF4FC] via-[#F8FAFC] to-white pt-14 pb-20 border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-        <!-- Left Column: Copy & Search -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <!-- Left Column: Simple Human Hero Copy & Powerful Search -->
         <div class="lg:col-span-7 space-y-6">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-xs font-semibold text-[#1D68F2]">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-xs font-bold text-[#1D68F2]">
             <span class="w-2 h-2 rounded-full bg-[#1D68F2] animate-pulse"></span>
-            Verified Municipal & Census Data
+            1,501 city guides available · More local information added every week
           </div>
 
-          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#152438] tracking-tight leading-[1.1]">
-            Your next business.<br />
-            <span class="text-[#1D68F2]">The right city.</span>
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-[#152438] tracking-tight leading-[1.12]">
+            Get to know your next city.
           </h1>
 
-          <p class="text-lg text-slate-600 max-w-2xl leading-relaxed">
-            Local intelligence on demographics, permits, commercial asking rents, and NAICS competition to pick winning retail and service locations.
+          <p class="text-base sm:text-lg text-slate-600 max-w-xl leading-relaxed">
+            Plan a visit, find a place to live, or research your next business location. Start with a city.
           </p>
 
-          <!-- Search Box -->
-          <div class="bg-white p-2 sm:p-3 rounded-2xl shadow-xl border border-slate-200 max-w-xl">
-            <div class="flex items-center gap-3">
-              <div class="pl-3 text-slate-400">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                </svg>
-              </div>
-              <input
-                id="city-search"
-                type="text"
-                placeholder="Search city, state, or ZIP (e.g. Austin, Tampa, 78701)..."
-                class="flex-1 border-0 focus:ring-0 text-slate-800 placeholder-slate-400 text-sm sm:text-base outline-none bg-transparent"
-              />
-              <a
-                href="/tx/austin"
-                class="px-5 py-3 rounded-xl bg-[#1D68F2] hover:bg-[#1555C7] text-white text-sm font-semibold transition flex items-center gap-1 shrink-0"
-              >
-                Explore City
-              </a>
+          <!-- Search Interface with Persistent Visible Label -->
+          <div class="space-y-2 max-w-xl">
+            <label for="city-search-input" class="block text-xs font-black uppercase tracking-wider text-slate-700">
+              Which city are you exploring?
+            </label>
+
+            <div class="relative">
+              <form id="hero-search-form" class="bg-white p-2 sm:p-2.5 rounded-2xl shadow-xl border border-slate-200 flex items-center gap-3">
+                <div class="pl-3 text-slate-400">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
+                </div>
+                <input
+                  id="city-search-input"
+                  type="text"
+                  autocomplete="off"
+                  placeholder="Enter a city and state (e.g. Boston, Austin, Boise)..."
+                  class="flex-1 border-0 focus:ring-0 text-slate-800 placeholder-slate-400 text-sm sm:text-base outline-none bg-transparent"
+                />
+                <button
+                  type="submit"
+                  id="hero-search-btn"
+                  class="px-5 py-3 rounded-xl bg-[#1D68F2] hover:bg-[#1555C7] text-white text-sm font-bold transition flex items-center gap-1 shrink-0 cursor-pointer shadow-md"
+                >
+                  Explore city
+                </button>
+              </form>
+
+              <!-- Live Autocomplete & Search Results Dropdown -->
+              <div
+                id="search-results-dropdown"
+                class="absolute left-0 right-0 top-full mt-2 bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden z-50 hidden divide-y divide-slate-100 max-h-72 overflow-y-auto"
+              ></div>
             </div>
+
+            <!-- In-Page Search Results Container (When landing via ?search=...) -->
+            <div id="search-url-results" class="hidden p-4 rounded-2xl bg-blue-50 border border-blue-200 text-xs"></div>
           </div>
 
-          <!-- Quick Jump Tags -->
-          <div class="flex items-center gap-2 text-xs text-slate-500 pt-1">
-            <span class="font-medium text-slate-400">Popular hubs:</span>
-            <a href="/tx/austin" class="px-2.5 py-1 rounded-md bg-white border border-slate-200 hover:border-blue-400 hover:text-[#1D68F2] transition">Austin, TX</a>
-            <a href="/fl/tampa" class="px-2.5 py-1 rounded-md bg-white border border-slate-200 hover:border-blue-400 hover:text-[#1D68F2] transition">Tampa, FL</a>
-            <a href="/id/boise" class="px-2.5 py-1 rounded-md bg-white border border-slate-200 hover:border-blue-400 hover:text-[#1D68F2] transition">Boise, ID</a>
+          <!-- Featured Cities Quick Links -->
+          <div class="flex items-center gap-2 text-xs text-slate-500 pt-1 flex-wrap">
+            <span class="font-bold text-slate-400 uppercase tracking-wider text-[10px]">Featured cities:</span>
+            <a href="/tx/austin" class="px-2.5 py-1 rounded-lg bg-white border border-slate-200 hover:border-blue-400 hover:text-[#1D68F2] transition font-semibold">Austin, TX</a>
+            <a href="/ar/hot-springs-village" class="px-2.5 py-1 rounded-lg bg-white border border-slate-200 hover:border-blue-400 hover:text-[#1D68F2] transition font-semibold">Hot Springs Village, AR</a>
+            <a href="/id/boise" class="px-2.5 py-1 rounded-lg bg-white border border-slate-200 hover:border-blue-400 hover:text-[#1D68F2] transition font-semibold">Boise, ID</a>
+            <a href="/fl/tampa" class="px-2.5 py-1 rounded-lg bg-white border border-slate-200 hover:border-blue-400 hover:text-[#1D68F2] transition font-semibold">Tampa, FL</a>
+            <a href="/ma/boston" class="px-2.5 py-1 rounded-lg bg-white border border-slate-200 hover:border-blue-400 hover:text-[#1D68F2] transition font-semibold">Boston, MA</a>
           </div>
         </div>
 
-        <!-- Right Column: Interactive Visual Map Preview Card -->
+        <!-- Right Column: 3-Photo Authentic City Showcase Composition -->
         <div class="lg:col-span-5">
-          <div class="relative bg-white rounded-3xl p-6 shadow-2xl border border-slate-200 overflow-hidden">
-            <div class="flex items-center justify-between mb-4 pb-3 border-b border-slate-100">
-              <div class="flex items-center gap-2">
-                <span class="w-3 h-3 rounded-full bg-emerald-500"></span>
-                <span class="text-xs font-bold uppercase tracking-wider text-slate-500">Live Feasibility Signal</span>
+          <div class="grid grid-cols-2 gap-3.5 sm:gap-4">
+            <!-- 1. Austin (Large Span) -->
+            <a href="/tx/austin" class="col-span-2 group relative rounded-3xl overflow-hidden shadow-xl border border-slate-200 h-48 block">
+              <img
+                src="/images/austin-skyline.jpg"
+                alt="Austin, Texas Downtown Skyline"
+                class="w-full h-full object-cover group-hover:scale-105 transition duration-700 filter brightness-[0.75]"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent flex flex-col justify-end p-5 text-white">
+                <span class="text-[10px] font-black uppercase tracking-wider text-blue-300">Featured Urban Guide</span>
+                <div class="text-xl font-black text-white group-hover:text-blue-200 transition">Austin, Texas</div>
+                <div class="text-xs text-slate-300">Live music capital · Tech corridors · Hill Country</div>
               </div>
-              <span class="text-xs font-semibold px-2 py-0.5 rounded bg-blue-50 text-[#1D68F2] border border-blue-200">
-                Austin Metro
-              </span>
-            </div>
+            </a>
 
-            <!-- Stylized Austin Geographic Card -->
-            <div class="bg-gradient-to-br from-slate-900 to-[#152438] rounded-2xl p-6 text-white space-y-4 shadow-inner">
-              <div class="flex justify-between items-start">
-                <div>
-                  <h3 class="text-2xl font-bold">Austin, Texas</h3>
-                  <p class="text-xs text-slate-300">Travis County · FIPS 4805000</p>
-                </div>
-                <div class="text-right">
-                  <div class="text-xs text-slate-300 uppercase">Viability Score</div>
-                  <div class="text-3xl font-extrabold text-blue-400">82<span class="text-xs text-slate-400 font-normal">/100</span></div>
-                </div>
+            <!-- 2. Hot Springs Village (Lakeside) -->
+            <a href="/ar/hot-springs-village" class="group relative rounded-3xl overflow-hidden shadow-lg border border-slate-200 h-44 block">
+              <img
+                src="/images/hsv-hero.jpg"
+                alt="Hot Springs Village, Arkansas Lake & Mountains"
+                class="w-full h-full object-cover group-hover:scale-105 transition duration-700 filter brightness-[0.80]"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent flex flex-col justify-end p-4 text-white">
+                <span class="text-[9px] font-black uppercase tracking-wider text-emerald-300">Lakeside Enclave</span>
+                <div class="text-sm font-black text-white group-hover:text-emerald-200 transition">Hot Springs Village, AR</div>
+                <div class="text-[11px] text-slate-300">11 Lakes · 9 Golf Courses</div>
               </div>
+            </a>
 
-              <div class="grid grid-cols-2 gap-3 pt-2">
-                <div class="bg-white/10 rounded-xl p-3 backdrop-blur-sm">
-                  <div class="text-[11px] text-slate-300">Population</div>
-                  <div class="text-lg font-bold">980K</div>
-                  <div class="text-[10px] text-emerald-400 font-medium">+8.4% 5-Yr Growth</div>
-                </div>
-                <div class="bg-white/10 rounded-xl p-3 backdrop-blur-sm">
-                  <div class="text-[11px] text-slate-300">Median Income</div>
-                  <div class="text-lg font-bold">$92.2K</div>
-                  <div class="text-[10px] text-slate-300 font-medium">US Top 15%</div>
-                </div>
-                <div class="bg-white/10 rounded-xl p-3 backdrop-blur-sm">
-                  <div class="text-[11px] text-slate-300">Retail Asking Rent</div>
-                  <div class="text-lg font-bold">$32.00 <span class="text-xs font-normal">/sqft</span></div>
-                  <div class="text-[10px] text-slate-300 font-medium">NNN +$6.50 CAM</div>
-                </div>
-                <div class="bg-white/10 rounded-xl p-3 backdrop-blur-sm">
-                  <div class="text-[11px] text-slate-300">Sales Tax Rate</div>
-                  <div class="text-lg font-bold">8.25%</div>
-                  <div class="text-[10px] text-slate-300 font-medium">6.25% State + 2.0% Local</div>
-                </div>
+            <!-- 3. Boise (Mountain West) -->
+            <a href="/id/boise" class="group relative rounded-3xl overflow-hidden shadow-lg border border-slate-200 h-44 block">
+              <img
+                src="/images/boise-hero.jpg"
+                alt="Boise, Idaho River Greenbelt & Skyline"
+                class="w-full h-full object-cover group-hover:scale-105 transition duration-700 filter brightness-[0.80]"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent flex flex-col justify-end p-4 text-white">
+                <span class="text-[9px] font-black uppercase tracking-wider text-purple-300">Mountain West</span>
+                <div class="text-sm font-black text-white group-hover:text-purple-200 transition">Boise, Idaho</div>
+                <div class="text-[11px] text-slate-300">River Greenbelt · 2,704 ft</div>
               </div>
-
-              <a
-                href="/tx/austin"
-                class="block w-full text-center py-2.5 rounded-xl bg-[#1D68F2] hover:bg-blue-600 font-semibold text-sm transition"
-              >
-                Inspect Austin Full Dossier →
-              </a>
-            </div>
+            </a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Put Your Next Location On The Shortlist -->
-  <section class="py-16 bg-white border-b border-slate-200">
+  <!-- Featured Cities (Curated Discovery Cards) -->
+  <section id="featured" class="py-16 bg-white border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col md:flex-row md:items-end justify-between mb-10">
         <div>
-          <h2 class="text-2xl sm:text-3xl font-extrabold text-[#152438] tracking-tight">
-            Put your next location on the shortlist
+          <h2 class="text-2xl sm:text-3xl font-black text-[#152438] tracking-tight">
+            Featured Cities
           </h2>
           <p class="text-sm text-slate-500 mt-1">
-            Compare demographic fundamentals, tax burdens, and underserved NAICS categories side by side.
+            Explore complete guides covering places to visit, neighborhood living, and commercial intelligence.
           </p>
+        </div>
+        <div class="mt-4 md:mt-0 text-xs font-bold text-slate-400">
+          Curated Discovery
         </div>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {manifest.map((city) => (
-          <div class="bg-[#F8FAFC] rounded-2xl p-6 border border-slate-200 hover:border-[#1D68F2] hover:shadow-lg transition flex flex-col justify-between">
-            <div>
-              <div class="flex justify-between items-start mb-4">
-                <div>
-                  <h3 class="text-xl font-bold text-[#152438]">{city.name}, {city.stateCode.toUpperCase()}</h3>
-                  <span class="text-xs text-slate-500">{city.stateName}</span>
-                </div>
-                <div class="text-right">
-                  <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-bold bg-blue-100 text-[#1D68F2]">
-                    Score: {city.overallViability}
-                  </span>
-                </div>
+      <!-- 6 Attractive Featured City Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {FEATURED_CITIES.map((city) => (
+          <div class="bg-white rounded-3xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-blue-400 transition duration-300 overflow-hidden flex flex-col justify-between group">
+            <!-- Card Image Layer -->
+            <a href={`/${city.slug}`} class="relative h-48 overflow-hidden block">
+              <img
+                src={city.image}
+                alt={`${city.name}, ${city.state} Overview`}
+                class="w-full h-full object-cover group-hover:scale-105 transition duration-700 filter brightness-[0.85]"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent flex items-end p-4 text-white">
+                <span class="px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md text-[10px] font-extrabold uppercase tracking-wider text-blue-200 border border-white/20">
+                  {city.tagline}
+                </span>
               </div>
-
-              <div class="space-y-3 text-sm py-3 border-y border-slate-200 mb-4">
-                <div class="flex justify-between">
-                  <span class="text-slate-500">Population</span>
-                  <span class="font-semibold text-slate-800">{(city.population / 1000).toFixed(0)}K</span>
-                </div>
-                <div class="flex justify-between">
-                  <span class="text-slate-500">5-Yr Growth</span>
-                  <span class="font-semibold text-emerald-600">+{city.popGrowth5YrPct}%</span>
-                </div>
-                <div class="flex justify-between">
-                  <span class="text-slate-500">Median Household Income</span>
-                  <span class="font-semibold text-slate-800">${(city.medianHouseholdIncome / 1000).toFixed(1)}K</span>
-                </div>
-                <div class="flex justify-between">
-                  <span class="text-slate-500">Retail Asking Rent</span>
-                  <span class="font-semibold text-slate-800">${city.reportedRetailRentSqFtYr ? `${city.reportedRetailRentSqFtYr.toFixed(2)}/sqft` : 'N/A'}</span>
-                </div>
-                <div class="flex justify-between">
-                  <span class="text-slate-500">Combined Sales Tax</span>
-                  <span class="font-semibold text-slate-800">{(city.combinedSalesTaxRate * 100).toFixed(2)}%</span>
-                </div>
-              </div>
-
-              <div class="mb-4">
-                <div class="text-xs font-medium text-slate-400 uppercase tracking-wider mb-1.5">Top Underserved Trades:</div>
-                <div class="flex flex-wrap gap-1.5">
-                  {city.topUnderservedNaics.map((trade: string) => (
-                    <span class="px-2 py-0.5 rounded text-xs bg-emerald-50 text-emerald-700 border border-emerald-200">
-                      {trade}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            <a
-              href={`/${city.slug}`}
-              class="w-full text-center py-2.5 rounded-xl bg-white border border-slate-300 hover:border-[#1D68F2] hover:bg-[#1D68F2] hover:text-white text-slate-800 font-semibold text-sm transition"
-            >
-              Analyze {city.name} Market →
             </a>
+
+            <!-- Card Body -->
+            <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+              <div class="space-y-2">
+                <div class="flex justify-between items-start">
+                  <div>
+                    <h3 class="text-xl font-black text-[#152438] tracking-tight group-hover:text-[#1D68F2] transition">
+                      {city.name}, {city.state}
+                    </h3>
+                  </div>
+                </div>
+
+                <p class="text-xs text-slate-600 leading-relaxed">
+                  {city.appeal}
+                </p>
+              </div>
+
+              <!-- 3 Interactive Direct Action Portals -->
+              <div class="pt-3 border-t border-slate-100 flex items-center gap-1.5 flex-wrap">
+                <a
+                  href={`/${city.slug}?tab=travel`}
+                  class="px-2.5 py-1.5 rounded-xl bg-blue-50 hover:bg-blue-100 text-[#1D68F2] font-black text-[11px] transition flex items-center gap-1 border border-blue-200/60"
+                  title={`View ${city.name} Visitor Guide`}
+                >
+                  <span>✈️</span> Visit
+                </a>
+                <a
+                  href={`/${city.slug}?tab=moving`}
+                  class="px-2.5 py-1.5 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-700 font-black text-[11px] transition flex items-center gap-1 border border-emerald-200/60"
+                  title={`View ${city.name} Relocation Checklist & Schools`}
+                >
+                  <span>🏡</span> Live
+                </a>
+                <a
+                  href={`/${city.slug}?tab=business`}
+                  class="px-2.5 py-1.5 rounded-xl bg-purple-50 hover:bg-purple-100 text-purple-700 font-black text-[11px] transition flex items-center gap-1 border border-purple-200/60"
+                  title={`Underwrite ${city.name} Commercial Trades & Rents`}
+                >
+                  <span>💼</span> Business
+                </a>
+              </div>
+
+              <!-- Button -->
+              <a
+                href={`/${city.slug}`}
+                class="w-full text-center py-3 rounded-2xl bg-[#152438] hover:bg-[#1D68F2] text-white font-bold text-xs transition duration-200 shadow-md block"
+              >
+                Explore {city.name} Guide →
+              </a>
+            </div>
           </div>
         ))}
       </div>
     </div>
   </section>
 
-  <!-- Interactive Calculators Feature -->
-  <section class="py-16 bg-[#EDF4FC]/50 border-b border-slate-200">
+  <!-- Section 3: Head-to-Head City Comparison Module -->
+  <section id="compare" class="py-14 bg-gradient-to-b from-white to-[#F8FAFC] border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-gradient-to-br from-[#152438] via-slate-900 to-[#0F172A] rounded-3xl p-8 sm:p-12 text-white shadow-xl">
+        <div class="max-w-2xl space-y-3 mb-8">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 border border-blue-400/30 text-xs font-bold uppercase tracking-wider">
+            <span>⚖️</span> Head-to-Head Comparison
+          </div>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black text-white tracking-tight">
+            Compare Any Two Cities
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            Side-by-side analysis of cost of living, effective tax burdens, median home prices, commercial asking rents, and climate normals.
+          </p>
+        </div>
+
+        <!-- 3 Curated Comparison Presets -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <a
+            href="/compare/tx-austin-vs-fl-tampa"
+            class="p-5 rounded-2xl bg-white/10 hover:bg-white/15 border border-white/15 transition flex items-center justify-between group"
+          >
+            <div>
+              <div class="text-[10px] uppercase font-bold text-blue-300 mb-1">0% State Income Tax Showdown</div>
+              <div class="text-sm font-black text-white group-hover:text-blue-200 transition">Austin, TX vs. Tampa, FL</div>
+              <div class="text-[11px] text-slate-400 mt-0.5">Inland tech capital vs. Gulf Coast waterfront</div>
+            </div>
+            <span class="text-xl font-bold text-blue-400 group-hover:translate-x-1 transition">→</span>
+          </a>
+
+          <a
+            href="/compare/id-boise-vs-az-scottsdale"
+            class="p-5 rounded-2xl bg-white/10 hover:bg-white/15 border border-white/15 transition flex items-center justify-between group"
+          >
+            <div>
+              <div class="text-[10px] uppercase font-bold text-emerald-300 mb-1">Western Boomtown Comparison</div>
+              <div class="text-sm font-black text-white group-hover:text-emerald-200 transition">Boise, ID vs. Scottsdale, AZ</div>
+              <div class="text-[11px] text-slate-400 mt-0.5">Pacific Northwest greenbelt vs. Sonoran resort</div>
+            </div>
+            <span class="text-xl font-bold text-emerald-400 group-hover:translate-x-1 transition">→</span>
+          </a>
+
+          <a
+            href="/compare/tx-austin-vs-ar-hot-springs-village"
+            class="p-5 rounded-2xl bg-white/10 hover:bg-white/15 border border-white/15 transition flex items-center justify-between group"
+          >
+            <div>
+              <div class="text-[10px] uppercase font-bold text-purple-300 mb-1">Urban Hub vs. Gated Enclave</div>
+              <div class="text-sm font-black text-white group-hover:text-purple-200 transition">Austin vs. Hot Springs Village</div>
+              <div class="text-[11px] text-slate-400 mt-0.5">Metro density vs. 11 lakes and 9 golf courses</div>
+            </div>
+            <span class="text-xl font-bold text-purple-400 group-hover:translate-x-1 transition">→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- See a Place Before You Choose It (Experience Previews) -->
+  <section id="experience" class="py-16 bg-[#F8FAFC] border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="max-w-3xl mb-10">
-        <h2 class="text-2xl sm:text-3xl font-extrabold text-[#152438] tracking-tight">
-          Tools to underwrite your next lease
+        <h2 class="text-2xl sm:text-3xl font-black text-[#152438] tracking-tight">
+          See a place before you choose it
         </h2>
-        <p class="text-sm text-slate-600 mt-2">
-          Calculate retail breakeven customer traffic, NNN lease pass-throughs, and labor burdens using live local data.
+        <p class="text-sm text-slate-600 mt-1">
+          Every city guide connects authentic visual orientation with practical data to help you decide and act.
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm space-y-4">
-          <div class="w-10 h-10 rounded-xl bg-blue-100 text-[#1D68F2] flex items-center justify-center font-bold">
-            $
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- 1. Walk a Neighborhood / Relocate -->
+        <div id="relocate" class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm space-y-3 scroll-mt-24">
+          <div class="w-10 h-10 rounded-2xl bg-blue-100 text-[#1D68F2] flex items-center justify-center font-bold text-lg">
+            🚶
           </div>
-          <h3 class="text-xl font-bold text-[#152438]">Commercial Lease & Breakeven Engine</h3>
-          <p class="text-sm text-slate-600 leading-relaxed">
-            Plug in square footage, asking base rent, CAM NNN rates, and target ticket size to know the exact daily customer volume needed to break even.
+          <h3 class="text-base font-black text-[#152438]">Walk a Neighborhood</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            4K aerial drone tours and street-level footage let you see housing styles, parks, and retail corridors before traveling.
           </p>
-          <a href="/tools/lease-calculator" class="inline-flex items-center text-sm font-semibold text-[#1D68F2] hover:text-blue-700">
+          <a href="/ar/hot-springs-village/" class="inline-flex items-center text-xs font-bold text-[#1D68F2] hover:text-blue-700">
+            Preview Video Experience →
+          </a>
+        </div>
+
+        <!-- 2. Plan a Visit -->
+        <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm space-y-3">
+          <div class="w-10 h-10 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-lg">
+            📋
+          </div>
+          <h3 class="text-base font-black text-[#152438]">Plan a Visit</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Airport distance, highway transit corridors, drinking water potability, emergency trauma centers, and curated stays by district.
+          </p>
+          <a href="/id/boise/" class="inline-flex items-center text-xs font-bold text-emerald-700 hover:text-emerald-900">
+            Preview Visitor Guide →
+          </a>
+        </div>
+
+        <!-- 3. See What is Changing -->
+        <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm space-y-3">
+          <div class="w-10 h-10 rounded-2xl bg-purple-100 text-purple-700 flex items-center justify-center font-bold text-lg">
+            🏗️
+          </div>
+          <h3 class="text-base font-black text-[#152438]">See the Business Numbers</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Commercial rent benchmarks, permit timelines, sales-tax rates, and SBA lender data for each city guide.
+          </p>
+          <a href="/tx/austin/" class="inline-flex items-center text-xs font-bold text-purple-700 hover:text-purple-900">
+            Preview Austin Guide →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: Recently Verified Updates (Visible Continuous Research) -->
+  <section id="recent-updates" class="py-16 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-8">
+        <div>
+          <div class="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-emerald-50 text-[11px] font-bold text-emerald-700 mb-2 uppercase tracking-wider border border-emerald-200">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+            Continuous Research Wire
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-black text-[#152438] tracking-tight">
+            Recently verified updates
+          </h2>
+          <p class="text-sm text-slate-500 mt-1">
+            Evidence of ongoing local research, public notices, and municipal record maintenance across our published guides.
+          </p>
+        </div>
+        <div class="mt-3 md:mt-0 text-xs font-semibold text-slate-400">
+          Source audits updated daily
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Update 1: Hot Springs Village -->
+        <a href="/ar/hot-springs-village" class="p-5 rounded-3xl bg-[#F8FAFC] border border-slate-200/80 hover:border-emerald-400 hover:shadow-md transition flex flex-col justify-between group space-y-3">
+          <div class="space-y-2">
+            <div class="flex items-center justify-between text-[11px]">
+              <span class="font-extrabold text-[#152438] group-hover:text-emerald-700 transition">Hot Springs Village, AR</span>
+              <span class="text-slate-400 font-medium">Updated yesterday</span>
+            </div>
+            <div class="text-xs font-bold text-slate-800">Water Compliance & Gated Access Protocols</div>
+            <p class="text-[11px] text-slate-600 leading-relaxed">
+              Verified 100% EPA Safe Drinking Water Act compliance (PWSID AR0000208) and added 24/7 guarded gate access rules for East and West visitor checkpoints.
+            </p>
+          </div>
+          <span class="text-[11px] font-bold text-emerald-700 flex items-center gap-1 group-hover:underline">
+            View Verified Record →
+          </span>
+        </a>
+
+        <!-- Update 2: Austin -->
+        <a href="/tx/austin" class="p-5 rounded-3xl bg-[#F8FAFC] border border-slate-200/80 hover:border-blue-400 hover:shadow-md transition flex flex-col justify-between group space-y-3">
+          <div class="space-y-2">
+            <div class="flex items-center justify-between text-[11px]">
+              <span class="font-extrabold text-[#152438] group-hover:text-[#1D68F2] transition">Austin, Texas</span>
+              <span class="text-slate-400 font-medium">Updated 2 days ago</span>
+            </div>
+            <div class="text-xs font-bold text-slate-800">Airport Rideshare & Pool Maintenance Schedule</div>
+            <p class="text-[11px] text-slate-600 leading-relaxed">
+              Updated Austin-Bergstrom (AUS) rideshare pickup protocol (Level 1 Rental Car Garage) and confirmed Barton Springs Pool Thursday cleaning hours (closed 9am–7pm).
+            </p>
+          </div>
+          <span class="text-[11px] font-bold text-[#1D68F2] flex items-center gap-1 group-hover:underline">
+            View Verified Record →
+          </span>
+        </a>
+
+        <!-- Update 3: Boise -->
+        <a href="/id/boise" class="p-5 rounded-3xl bg-[#F8FAFC] border border-slate-200/80 hover:border-purple-400 hover:shadow-md transition flex flex-col justify-between group space-y-3">
+          <div class="space-y-2">
+            <div class="flex items-center justify-between text-[11px]">
+              <span class="font-extrabold text-[#152438] group-hover:text-purple-700 transition">Boise, Idaho</span>
+              <span class="text-slate-400 font-medium">Updated 3 days ago</span>
+            </div>
+            <div class="text-xs font-bold text-slate-800">Transit Corridor & Small-Business Lending</div>
+            <p class="text-[11px] text-slate-600 leading-relaxed">
+              Confirmed Valley Regional Transit Route 3 airport-to-downtown connection and verified $18.4M Ada County SBA 7(a) small-business lending volume.
+            </p>
+          </div>
+          <span class="text-[11px] font-bold text-purple-700 flex items-center gap-1 group-hover:underline">
+            View Verified Record →
+          </span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 6: Tools by Audience (Visit · Live · Business) -->
+  <section id="tools" class="py-16 bg-[#F8FAFC] border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mb-10">
+        <h2 class="text-2xl sm:text-3xl font-black text-[#152438] tracking-tight">
+          Tools to help you decide and plan
+        </h2>
+        <p class="text-sm text-slate-600 mt-1">
+          Practical financial, relocation, and commercial calculators tailored to each audience.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- 1. For Visitors -->
+        <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-4">
+          <div class="space-y-3">
+            <div class="w-10 h-10 rounded-2xl bg-blue-100 text-[#1D68F2] flex items-center justify-center font-bold text-lg">
+              ✈️
+            </div>
+            <span class="text-[10px] font-black uppercase tracking-wider text-blue-600 bg-blue-50 px-2 py-0.5 rounded-full">
+              For Visitors
+            </span>
+            <h3 class="text-base font-black text-[#152438]">City Shortlist & Trip Scouting</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Save cities you are evaluating, compare airport commute times, and review seasonal weather reality before booking travel.
+            </p>
+          </div>
+          <a href="/#featured" class="inline-flex items-center text-xs font-bold text-[#1D68F2] hover:text-blue-700 pt-2">
+            Explore Featured Guides →
+          </a>
+        </div>
+
+        <!-- 2. For Movers -->
+        <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-4">
+          <div class="space-y-3">
+            <div class="w-10 h-10 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-lg">
+              🏡
+            </div>
+            <span class="text-[10px] font-black uppercase tracking-wider text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full">
+              For Movers
+            </span>
+            <h3 class="text-base font-black text-[#152438]">State Tax & Housing Comparison</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Compare effective property tax friction, 0% state income tax states (TX, FL, TN), median home prices, and public school systems.
+            </p>
+          </div>
+          <a href="/tx/austin" class="inline-flex items-center text-xs font-bold text-emerald-700 hover:text-emerald-900 pt-2">
+            Compare Austin Living Metrics →
+          </a>
+        </div>
+
+        <!-- 3. For Business Owners -->
+        <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-4">
+          <div class="space-y-3">
+            <div class="w-10 h-10 rounded-2xl bg-purple-100 text-purple-700 flex items-center justify-center font-bold text-lg">
+              💼
+            </div>
+            <span class="text-[10px] font-black uppercase tracking-wider text-purple-700 bg-purple-50 px-2 py-0.5 rounded-full">
+              For Business
+            </span>
+            <h3 class="text-base font-black text-[#152438]">Commercial Lease & Breakeven</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Calculate daily customer velocity needed to cover commercial retail leases, NNN CAM fees, and payroll across 25 NAICS trades.
+            </p>
+          </div>
+          <a href="/tools/lease-calculator" class="inline-flex items-center text-xs font-bold text-purple-700 hover:text-purple-900 pt-2">
             Open Lease Calculator →
           </a>
         </div>
-
-        <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm space-y-4">
-          <div class="w-10 h-10 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center font-bold">
-            %
-          </div>
-          <h3 class="text-xl font-bold text-[#152438]">NAICS Saturation & Gap Analysis</h3>
-          <p class="text-sm text-slate-600 leading-relaxed">
-            Scan 25 small-business categories across any US city. We use Bayesian shrinkage against national baselines so you never enter an oversaturated market.
-          </p>
-          <a href="/tx/austin#market" class="inline-flex items-center text-sm font-semibold text-indigo-600 hover:text-indigo-800">
-            View Austin Market Density →
-          </a>
-        </div>
       </div>
     </div>
   </section>
 
-  <!-- Developer API Teaser -->
-  <section class="py-16 bg-[#152438] text-white">
+  <!-- Browse Cities by State (Full Directory Access) -->
+  <section id="states" class="py-16 bg-[#F8FAFC] border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-        <div class="lg:col-span-6 space-y-4">
-          <span class="text-xs uppercase font-bold tracking-wider text-blue-400">Developer Platform</span>
-          <h2 class="text-3xl font-extrabold tracking-tight">Access City Data via REST API</h2>
-          <p class="text-sm text-slate-300 leading-relaxed">
-            Integrate live municipal demographics, sales tax rates, and NAICS establishment densities directly into your franchise underwriting software or commercial CRM.
+      <div class="max-w-3xl mb-8">
+        <h2 class="text-2xl sm:text-3xl font-black text-[#152438] tracking-tight">
+          Browse cities by state
+        </h2>
+        <p class="text-sm text-slate-500 mt-1">
+          Find city guides, local information, and places to explore across the United States.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
+        {statesList.map((st) => (
+          <a
+            href={`/${st.code}`}
+            class="p-3.5 rounded-2xl bg-white border border-slate-200/80 hover:border-[#1D68F2] hover:bg-blue-50/50 hover:shadow-xs transition flex justify-between items-center text-xs"
+          >
+            <span class="font-bold text-slate-800 truncate">{st.name}</span>
+            <span class="text-[10px] font-extrabold text-blue-600 bg-blue-50 px-2 py-0.5 rounded-full shrink-0">
+              {st.count}
+            </span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 8: Follow a City & Contributor Network -->
+  <section id="contribute" class="py-16 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0B1120] rounded-3xl p-8 sm:p-12 text-white shadow-xl">
+        <div class="space-y-4">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 border border-blue-400/30 text-xs font-bold">
+            Stay Connected
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-black text-white tracking-tight">
+            Follow a city or contribute local knowledge
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            Get notified when new zoning, transit changes, or tax adjustments occur in communities you care about. If you are a business owner, civic official, or resident, help maintain ground truth by submitting verified corrections.
           </p>
-          <div class="pt-2">
-            <a href="/developers" class="inline-flex items-center px-5 py-2.5 rounded-xl bg-[#1D68F2] hover:bg-blue-600 font-semibold text-sm transition text-white">
-              Request API Keys
+        </div>
+
+        <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/15 space-y-4">
+          <div class="text-xs font-bold text-white">Receive verified updates for your city:</div>
+          <form class="flex flex-col sm:flex-row gap-2" id="follow-city-form">
+            <input
+              type="email"
+              id="follow-email-input"
+              placeholder="Enter your email address"
+              required
+              class="flex-1 px-4 py-3 rounded-xl bg-white text-slate-800 text-xs outline-none font-medium placeholder-slate-400"
+            />
+            <button
+              type="submit"
+              class="px-5 py-3 rounded-xl bg-[#1D68F2] hover:bg-blue-600 text-white font-bold text-xs transition shrink-0 cursor-pointer shadow-md"
+            >
+              Follow Updates
+            </button>
+          </form>
+          <div class="flex items-center justify-between text-[11px] text-slate-400 pt-2 border-t border-white/10">
+            <span>Verified public records only. Zero spam.</span>
+            <a href="mailto:contribute@cityclick.com" class="text-blue-300 hover:underline font-semibold">
+              Submit a correction →
             </a>
           </div>
         </div>
-
-        <div class="lg:col-span-6">
-          <div class="bg-slate-900 rounded-2xl p-5 border border-slate-800 font-mono text-xs text-slate-300 shadow-2xl">
-            <div class="flex items-center justify-between pb-3 mb-3 border-b border-slate-800 text-slate-500">
-              <span>GET /api/v1/cities/tx/austin</span>
-              <span class="text-emerald-400">200 OK</span>
-            </div>
-            <pre class="overflow-x-auto text-[11px] leading-relaxed text-blue-300">
-&#123;
-  "slug": "tx/austin",
-  "name": "Austin",
-  "population": 979882,
-  "medianHouseholdIncome": 92248,
-  "viabilityScore": 82,
-  "askingRentSqFtYr": 32.00,
-  "permitAvgWaitDays": 32
-&#125;</pre>
-          </div>
-        </div>
       </div>
     </div>
   </section>
+
+  <!-- Interactive Search Autocomplete Script (1,501 Cities, Live Query Handling) -->
+  <script define:vars={{ searchIndex }}>
+    document.addEventListener('DOMContentLoaded', () => {
+      const input = document.getElementById('city-search-input');
+      const form = document.getElementById('hero-search-form');
+      const dropdown = document.getElementById('search-results-dropdown');
+      const urlResultsBox = document.getElementById('search-url-results');
+
+      function normalize(str) {
+        return (str || '').toLowerCase().trim().replace(/[^a-z0-9]/g, '');
+      }
+
+      function searchCities(query) {
+        const q = normalize(query);
+        if (!q) return [];
+
+        return searchIndex.filter(c => {
+          const nameNorm = normalize(c.n);
+          const stateNorm = normalize(c.s);
+          const fullNorm = normalize(c.n + c.s);
+          const slugNorm = normalize(c.u);
+
+          return nameNorm.startsWith(q) || 
+                 fullNorm.includes(q) || 
+                 slugNorm.includes(q) || 
+                 nameNorm.includes(q);
+        }).sort((a, b) => {
+          // Exact name match first
+          if (normalize(a.n) === q) return -1;
+          if (normalize(b.n) === q) return 1;
+          return a.n.localeCompare(b.n);
+        });
+      }
+
+      function renderDropdown(matches) {
+        if (!dropdown) return;
+        if (matches.length === 0) {
+          dropdown.innerHTML = `
+            <div class="px-4 py-3 text-xs text-slate-500">
+              No matching published guide found. Try another city name or explore by state below.
+            </div>
+          `;
+          dropdown.classList.remove('hidden');
+          return;
+        }
+
+        dropdown.innerHTML = matches.slice(0, 7).map(c => `
+          <a href="/${c.u}" class="block px-4 py-3 hover:bg-blue-50/60 text-xs font-bold text-slate-800 flex justify-between items-center transition">
+            <span class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+              <span>${c.n}, ${c.s}</span>
+            </span>
+            <span class="text-[10px] text-blue-600 font-extrabold uppercase bg-blue-50 px-2 py-0.5 rounded border border-blue-100">Explore Guide →</span>
+          </a>
+        `).join('');
+        dropdown.classList.remove('hidden');
+      }
+
+      function renderPopular() {
+        if (!dropdown) return;
+        dropdown.innerHTML = `
+          <div class="px-4 py-2.5 bg-slate-50 border-b border-slate-100 flex items-center justify-between text-[11px] font-black uppercase tracking-wider text-slate-500">
+            <span>🔥 Popular Destinations</span>
+            <span class="text-blue-600 font-bold">1,501 Guides Live</span>
+          </div>
+          <div class="divide-y divide-slate-100">
+            <a href="/tx/austin" class="px-4 py-3 hover:bg-blue-50/60 text-xs font-bold text-slate-800 flex justify-between items-center transition">
+              <span class="flex items-center gap-2"><span>⭐</span> Austin, TX</span>
+              <span class="text-[10px] text-blue-600 font-extrabold uppercase bg-blue-50 px-2 py-0.5 rounded">Featured →</span>
+            </a>
+            <a href="/ar/hot-springs-village" class="px-4 py-3 hover:bg-blue-50/60 text-xs font-bold text-slate-800 flex justify-between items-center transition">
+              <span class="flex items-center gap-2"><span>⭐</span> Hot Springs Village, AR</span>
+              <span class="text-[10px] text-emerald-600 font-extrabold uppercase bg-emerald-50 px-2 py-0.5 rounded">Lakeside →</span>
+            </a>
+            <a href="/fl/tampa" class="px-4 py-3 hover:bg-blue-50/60 text-xs font-bold text-slate-800 flex justify-between items-center transition">
+              <span class="flex items-center gap-2"><span>⭐</span> Tampa, FL</span>
+              <span class="text-[10px] text-indigo-600 font-extrabold uppercase bg-indigo-50 px-2 py-0.5 rounded">Gulf Coast →</span>
+            </a>
+            <a href="/id/boise" class="px-4 py-3 hover:bg-blue-50/60 text-xs font-bold text-slate-800 flex justify-between items-center transition">
+              <span class="flex items-center gap-2"><span>⭐</span> Boise, ID</span>
+              <span class="text-[10px] text-purple-600 font-extrabold uppercase bg-purple-50 px-2 py-0.5 rounded">Mountain West →</span>
+            </a>
+            <a href="/az/scottsdale" class="px-4 py-3 hover:bg-blue-50/60 text-xs font-bold text-slate-800 flex justify-between items-center transition">
+              <span class="flex items-center gap-2"><span>⭐</span> Scottsdale, AZ</span>
+              <span class="text-[10px] text-amber-600 font-extrabold uppercase bg-amber-50 px-2 py-0.5 rounded">Desert Resort →</span>
+            </a>
+            <a href="/ma/boston" class="px-4 py-3 hover:bg-blue-50/60 text-xs font-bold text-slate-800 flex justify-between items-center transition">
+              <span class="flex items-center gap-2"><span>⭐</span> Boston, MA</span>
+              <span class="text-[10px] text-blue-600 font-extrabold uppercase bg-blue-50 px-2 py-0.5 rounded">New England →</span>
+            </a>
+          </div>
+        `;
+        dropdown.classList.remove('hidden');
+      }
+
+      if (input) {
+        input.addEventListener('focus', () => {
+          if (!input.value.trim()) {
+            renderPopular();
+          }
+        });
+
+        input.addEventListener('input', () => {
+          const val = input.value.trim();
+          if (val.length < 1) {
+            renderPopular();
+            return;
+          }
+          const matches = searchCities(val);
+          renderDropdown(matches);
+        });
+
+        // Hide dropdown on outside click
+        document.addEventListener('click', (e) => {
+          if (!form.contains(e.target)) {
+            dropdown.classList.add('hidden');
+          }
+        });
+      }
+
+      if (form) {
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const query = input.value.trim();
+          if (!query) return;
+
+          const matches = searchCities(query);
+          if (matches.length > 0) {
+            // Instant redirect to top match (e.g. Boston, MA -> /ma/boston)
+            window.location.href = `/${matches[0].u}`;
+          } else {
+            renderDropdown([]);
+          }
+        });
+      }
+
+      // Check URL query parameters (e.g. /?search=Boston or /?q=Boston)
+      const urlParams = new URLSearchParams(window.location.search);
+      const searchParam = urlParams.get('search') || urlParams.get('q');
+      if (searchParam && input) {
+        input.value = searchParam;
+        const matches = searchCities(searchParam);
+        if (matches.length > 0) {
+          if (urlResultsBox) {
+            urlResultsBox.innerHTML = `
+              <div class="font-bold text-slate-800 mb-2">Search results for "${searchParam}":</div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                ${matches.slice(0, 6).map(c => `
+                  <a href="/${c.u}" class="p-2.5 rounded-xl bg-white border border-blue-200 hover:border-blue-500 font-bold text-slate-800 flex justify-between items-center">
+                    <span>${c.n}, ${c.s}</span>
+                    <span class="text-[10px] text-blue-600 uppercase font-extrabold">Open Guide →</span>
+                  </a>
+                `).join('')}
+              </div>
+            `;
+            urlResultsBox.classList.remove('hidden');
+          }
+        }
+      }
+    });
+  </script>
 </Layout>

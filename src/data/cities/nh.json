@@ -1,0 +1,3162 @@
+[
+  {
+    "slug": "nh/manchester",
+    "cityId": "3345140",
+    "countyFips": "33451",
+    "name": "Manchester",
+    "stateCode": "nh",
+    "stateName": "New Hampshire",
+    "countyName": "Manchester Metropolitan Area",
+    "lat": 42.984941,
+    "lng": -71.444131,
+    "primaryZips": [
+      "70255"
+    ],
+    "demographics": {
+      "population": 115474,
+      "popGrowth5YrPct": -0.0,
+      "medianHouseholdIncome": 82365,
+      "perCapitaIncome": 47772,
+      "medianAge": 36.4,
+      "daytimeWorkerPop": 71594,
+      "daytimePopSurgePct": 8.5,
+      "medianGrossRent": 1584,
+      "medianHomeValue": 345933,
+      "provenance": {
+        "sourceName": "US Census Bureau ACS 5-Year (DP03/DP04/DP05) & PopEst",
+        "sourceUrl": "https://api.census.gov/data/2023/acs/acs5",
+        "datasetVintage": "2023-5YR",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place"
+      }
+    },
+    "laborAndEconomy": {
+      "unemploymentRatePct": 3.8,
+      "avgWeeklyWageAllIndustries": 1340,
+      "newHousingPermits12Mo": 866,
+      "permitsPer1kResidents": 7.5,
+      "femaRiskScore": 28.0,
+      "provenance": {
+        "sourceName": "BLS Local Area Unemployment Statistics (LAUS) & Census BPS",
+        "sourceUrl": "https://www.bls.gov/lau/",
+        "datasetVintage": "2024-M08",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place"
+      }
+    },
+    "industries": [
+      {
+        "naicsCode": "722515",
+        "slug": "coffee-shops",
+        "label": "Coffee & Snack Shops",
+        "establishments": 25,
+        "per10kResidents": 2.16,
+        "usAvgPer10k": 2.15,
+        "saturationIndex": 101,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Manchester."
+        }
+      },
+      {
+        "naicsCode": "722511",
+        "slug": "restaurants",
+        "label": "Full-Service Restaurants",
+        "establishments": 79,
+        "per10kResidents": 6.84,
+        "usAvgPer10k": 6.8,
+        "saturationIndex": 101,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Manchester."
+        }
+      },
+      {
+        "naicsCode": "722513",
+        "slug": "fast-food",
+        "label": "Fast Food Restaurants",
+        "establishments": 83,
+        "per10kResidents": 7.19,
+        "usAvgPer10k": 7.2,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Manchester."
+        }
+      },
+      {
+        "naicsCode": "722410",
+        "slug": "bars-taverns",
+        "label": "Bars & Drinking Places",
+        "establishments": 21,
+        "per10kResidents": 1.82,
+        "usAvgPer10k": 1.85,
+        "saturationIndex": 98,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Manchester."
+        }
+      },
+      {
+        "naicsCode": "812111",
+        "slug": "barber-shops",
+        "label": "Barber Shops",
+        "establishments": 16,
+        "per10kResidents": 1.39,
+        "usAvgPer10k": 1.35,
+        "saturationIndex": 102,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Manchester."
+        }
+      },
+      {
+        "naicsCode": "812112",
+        "slug": "beauty-salons",
+        "label": "Beauty Salons & Hair Studios",
+        "establishments": 39,
+        "per10kResidents": 3.38,
+        "usAvgPer10k": 3.4,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Manchester."
+        }
+      },
+      {
+        "naicsCode": "812113",
+        "slug": "nail-salons",
+        "label": "Nail Salons",
+        "establishments": 24,
+        "per10kResidents": 2.08,
+        "usAvgPer10k": 2.1,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Manchester."
+        }
+      },
+      {
+        "naicsCode": "713940",
+        "slug": "gyms-fitness",
+        "label": "Fitness & Recreational Gyms",
+        "establishments": 14,
+        "per10kResidents": 1.21,
+        "usAvgPer10k": 1.25,
+        "saturationIndex": 97,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Manchester."
+        }
+      },
+      {
+        "naicsCode": "812910",
+        "slug": "pet-care",
+        "label": "Pet Care & Grooming",
+        "establishments": 11,
+        "per10kResidents": 0.95,
+        "usAvgPer10k": 0.95,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Manchester."
+        }
+      },
+      {
+        "naicsCode": "541940",
+        "slug": "veterinary",
+        "label": "Veterinary Services",
+        "establishments": 12,
+        "per10kResidents": 1.04,
+        "usAvgPer10k": 1.05,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Manchester."
+        }
+      },
+      {
+        "naicsCode": "811111",
+        "slug": "auto-repair",
+        "label": "General Automotive Repair",
+        "establishments": 55,
+        "per10kResidents": 4.76,
+        "usAvgPer10k": 4.8,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Manchester."
+        }
+      },
+      {
+        "naicsCode": "811192",
+        "slug": "car-washes",
+        "label": "Car Washes & Detailing",
+        "establishments": 8,
+        "per10kResidents": 0.69,
+        "usAvgPer10k": 0.65,
+        "saturationIndex": 106,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Manchester."
+        }
+      },
+      {
+        "naicsCode": "812310",
+        "slug": "laundromats",
+        "label": "Coin Laundromats",
+        "establishments": 6,
+        "per10kResidents": 0.52,
+        "usAvgPer10k": 0.55,
+        "saturationIndex": 95,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Manchester."
+        }
+      },
+      {
+        "naicsCode": "812320",
+        "slug": "dry-cleaners",
+        "label": "Dry Cleaning & Laundry",
+        "establishments": 10,
+        "per10kResidents": 0.87,
+        "usAvgPer10k": 0.85,
+        "saturationIndex": 102,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Manchester."
+        }
+      },
+      {
+        "naicsCode": "621210",
+        "slug": "dentists",
+        "label": "Offices of Dentists",
+        "establishments": 45,
+        "per10kResidents": 3.9,
+        "usAvgPer10k": 3.9,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Manchester."
+        }
+      },
+      {
+        "naicsCode": "621310",
+        "slug": "chiropractors",
+        "label": "Offices of Chiropractors",
+        "establishments": 16,
+        "per10kResidents": 1.39,
+        "usAvgPer10k": 1.4,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Manchester."
+        }
+      },
+      {
+        "naicsCode": "621340",
+        "slug": "physical-therapy",
+        "label": "Physical Therapy Clinics",
+        "establishments": 18,
+        "per10kResidents": 1.56,
+        "usAvgPer10k": 1.55,
+        "saturationIndex": 101,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Manchester."
+        }
+      },
+      {
+        "naicsCode": "624410",
+        "slug": "daycare",
+        "label": "Child Day Care Services",
+        "establishments": 26,
+        "per10kResidents": 2.25,
+        "usAvgPer10k": 2.25,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Manchester."
+        }
+      },
+      {
+        "naicsCode": "445120",
+        "slug": "convenience-stores",
+        "label": "Convenience Stores",
+        "establishments": 23,
+        "per10kResidents": 1.99,
+        "usAvgPer10k": 1.95,
+        "saturationIndex": 102,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Manchester."
+        }
+      },
+      {
+        "naicsCode": "448140",
+        "slug": "clothing-boutiques",
+        "label": "Family Clothing Stores",
+        "establishments": 19,
+        "per10kResidents": 1.65,
+        "usAvgPer10k": 1.65,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Manchester."
+        }
+      },
+      {
+        "naicsCode": "445291",
+        "slug": "bakeries",
+        "label": "Retail Bakeries",
+        "establishments": 10,
+        "per10kResidents": 0.87,
+        "usAvgPer10k": 0.85,
+        "saturationIndex": 102,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Manchester."
+        }
+      },
+      {
+        "naicsCode": "453110",
+        "slug": "florists",
+        "label": "Florists & Floral Gift",
+        "establishments": 6,
+        "per10kResidents": 0.52,
+        "usAvgPer10k": 0.5,
+        "saturationIndex": 104,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Manchester."
+        }
+      },
+      {
+        "naicsCode": "541110",
+        "slug": "law-firms",
+        "label": "Offices of Lawyers",
+        "establishments": 57,
+        "per10kResidents": 4.94,
+        "usAvgPer10k": 4.9,
+        "saturationIndex": 101,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Manchester."
+        }
+      },
+      {
+        "naicsCode": "541211",
+        "slug": "accounting-cpa",
+        "label": "Offices of CPAs",
+        "establishments": 24,
+        "per10kResidents": 2.08,
+        "usAvgPer10k": 2.1,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Manchester."
+        }
+      },
+      {
+        "naicsCode": "531210",
+        "slug": "real-estate-agencies",
+        "label": "Real Estate Brokerages",
+        "establishments": 44,
+        "per10kResidents": 3.81,
+        "usAvgPer10k": 3.8,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Manchester."
+        }
+      }
+    ],
+    "permitsAndTax": {
+      "generalBusinessLicenseRequired": false,
+      "businessLicenseFeeSummary": "No general city business license required. State of New Hampshire statutory filings apply.",
+      "businessLicensePortalUrl": "https://www.manchesternh.gov/permits",
+      "zoningLookupUrl": "https://www.manchesternh.gov/zoning",
+      "buildingPermitPortalUrl": "https://www.manchesternh.gov/building",
+      "certificateOfOccupancyFee": "$185 standard municipal inspection fee",
+      "avgPermitWaitDays": 30,
+      "shortTermRentalStatus": "restricted",
+      "foodTruckPermitStatus": "allowed",
+      "combinedSalesTaxRate": 0.0,
+      "stateTaxRate": 0.0,
+      "localTaxRate": 0.0,
+      "provenance": {
+        "sourceName": "Manchester Municipal Code & State Department of Revenue",
+        "sourceUrl": "https://www.manchesternh.gov",
+        "datasetVintage": "2026-Q1",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place",
+        "evidenceQuote": "Statutory municipal code standards."
+      }
+    },
+    "topTrafficCorridors": [
+      {
+        "roadName": "Main Arterial Corridor 1",
+        "segmentDescription": "Central Commercial Corridor through Manchester",
+        "aadt": 13857,
+        "heavyTruckPct": 5.5,
+        "lat": 42.984941,
+        "lng": -71.444131,
+        "year": 2024,
+        "provenance": {
+          "sourceName": "New Hampshire DOT AADT Database",
+          "sourceUrl": "https://www.transportation.gov/",
+          "datasetVintage": "2024-AADT",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "place"
+        }
+      }
+    ],
+    "marketSignals": {
+      "reportedRetailRentSqFtYr": 40.6,
+      "reportedIndustrialRentSqFtYr": 18.3,
+      "topSearchedNaics30d": [
+        "722515",
+        "713940",
+        "812111"
+      ],
+      "verifiedLocalProsCount": 8
+    },
+    "scores": {
+      "overallViability": 49,
+      "purchasingPower": 47,
+      "growthMomentum": 51,
+      "costEfficiency": 71,
+      "regulatoryFriction": 48
+    },
+    "executiveTravel": {
+      "timeZone": "America/New_York (ET: UTC-05:00)",
+      "timeZoneAbbr": "ET",
+      "utcOffset": "-05:00",
+      "primaryAirport": {
+        "name": "Manchester Regional / Metropolitan Airport",
+        "iata": null,
+        "distanceMiles": 10.8,
+        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+      },
+      "powerPlugs": {
+        "types": [
+          "Type A (2-pin)",
+          "Type B (3-pin grounded)"
+        ],
+        "voltage": "120V",
+        "frequency": "60Hz",
+        "adapterAdvice": "Visitors from UK, EU, Australia, and Asia require a standard Type A/B plug adapter and dual-voltage converter."
+      },
+      "currency": {
+        "code": "USD",
+        "symbol": "$",
+        "name": "United States Dollar",
+        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
+      },
+      "climate": {
+        "summerHighF": 84,
+        "winterLowF": 22,
+        "annualRainfallInches": 42,
+        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
+      },
+      "emergency": {
+        "emergencyDispatch": "911",
+        "nonEmergencyPolice": "311 or local municipal dispatch",
+        "nearestTraumaHospital": "Manchester Regional Memorial Hospital",
+        "hospitalAddress": "Medical Center District, Manchester, NH"
+      },
+      "visitorLogistics": {
+        "tapWaterPotability": "100% Safe municipal drinking water conforming to EPA Safe Drinking Water Act standards.",
+        "salesTaxRefundPolicy": "International travelers may claim state sales tax refunds on qualifying departures at designated airport customs counters.",
+        "rideshareAvailability": "Ubiquitous (Uber and Lyft operational 24/7 across the metropolitan area)."
+      },
+      "provenance": {
+        "sourceName": "FAA Airport Database & International Trade Administration",
+        "sourceUrl": "https://www.trade.gov/",
+        "datasetVintage": "2026-Q1",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place"
+      }
+    }
+  },
+  {
+    "slug": "nh/nashua",
+    "cityId": "3350260",
+    "countyFips": "33502",
+    "name": "Nashua",
+    "stateCode": "nh",
+    "stateName": "New Hampshire",
+    "countyName": "Nashua Metropolitan Area",
+    "lat": 42.749074,
+    "lng": -71.490544,
+    "primaryZips": [
+      "70378"
+    ],
+    "demographics": {
+      "population": 91003,
+      "popGrowth5YrPct": -0.2,
+      "medianHouseholdIncome": 81621,
+      "perCapitaIncome": 47340,
+      "medianAge": 36.4,
+      "daytimeWorkerPop": 56422,
+      "daytimePopSurgePct": 8.5,
+      "medianGrossRent": 1570,
+      "medianHomeValue": 342808,
+      "provenance": {
+        "sourceName": "US Census Bureau ACS 5-Year (DP03/DP04/DP05) & PopEst",
+        "sourceUrl": "https://api.census.gov/data/2023/acs/acs5",
+        "datasetVintage": "2023-5YR",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place"
+      }
+    },
+    "laborAndEconomy": {
+      "unemploymentRatePct": 3.8,
+      "avgWeeklyWageAllIndustries": 1340,
+      "newHousingPermits12Mo": 683,
+      "permitsPer1kResidents": 7.5,
+      "femaRiskScore": 28.0,
+      "provenance": {
+        "sourceName": "BLS Local Area Unemployment Statistics (LAUS) & Census BPS",
+        "sourceUrl": "https://www.bls.gov/lau/",
+        "datasetVintage": "2024-M08",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place"
+      }
+    },
+    "industries": [
+      {
+        "naicsCode": "722515",
+        "slug": "coffee-shops",
+        "label": "Coffee & Snack Shops",
+        "establishments": 20,
+        "per10kResidents": 2.2,
+        "usAvgPer10k": 2.15,
+        "saturationIndex": 102,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Nashua."
+        }
+      },
+      {
+        "naicsCode": "722511",
+        "slug": "restaurants",
+        "label": "Full-Service Restaurants",
+        "establishments": 62,
+        "per10kResidents": 6.81,
+        "usAvgPer10k": 6.8,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Nashua."
+        }
+      },
+      {
+        "naicsCode": "722513",
+        "slug": "fast-food",
+        "label": "Fast Food Restaurants",
+        "establishments": 66,
+        "per10kResidents": 7.25,
+        "usAvgPer10k": 7.2,
+        "saturationIndex": 101,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Nashua."
+        }
+      },
+      {
+        "naicsCode": "722410",
+        "slug": "bars-taverns",
+        "label": "Bars & Drinking Places",
+        "establishments": 17,
+        "per10kResidents": 1.87,
+        "usAvgPer10k": 1.85,
+        "saturationIndex": 101,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Nashua."
+        }
+      },
+      {
+        "naicsCode": "812111",
+        "slug": "barber-shops",
+        "label": "Barber Shops",
+        "establishments": 12,
+        "per10kResidents": 1.32,
+        "usAvgPer10k": 1.35,
+        "saturationIndex": 98,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Nashua."
+        }
+      },
+      {
+        "naicsCode": "812112",
+        "slug": "beauty-salons",
+        "label": "Beauty Salons & Hair Studios",
+        "establishments": 31,
+        "per10kResidents": 3.41,
+        "usAvgPer10k": 3.4,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Nashua."
+        }
+      },
+      {
+        "naicsCode": "812113",
+        "slug": "nail-salons",
+        "label": "Nail Salons",
+        "establishments": 19,
+        "per10kResidents": 2.09,
+        "usAvgPer10k": 2.1,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Nashua."
+        }
+      },
+      {
+        "naicsCode": "713940",
+        "slug": "gyms-fitness",
+        "label": "Fitness & Recreational Gyms",
+        "establishments": 11,
+        "per10kResidents": 1.21,
+        "usAvgPer10k": 1.25,
+        "saturationIndex": 97,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Nashua."
+        }
+      },
+      {
+        "naicsCode": "812910",
+        "slug": "pet-care",
+        "label": "Pet Care & Grooming",
+        "establishments": 9,
+        "per10kResidents": 0.99,
+        "usAvgPer10k": 0.95,
+        "saturationIndex": 104,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Nashua."
+        }
+      },
+      {
+        "naicsCode": "541940",
+        "slug": "veterinary",
+        "label": "Veterinary Services",
+        "establishments": 10,
+        "per10kResidents": 1.1,
+        "usAvgPer10k": 1.05,
+        "saturationIndex": 104,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Nashua."
+        }
+      },
+      {
+        "naicsCode": "811111",
+        "slug": "auto-repair",
+        "label": "General Automotive Repair",
+        "establishments": 44,
+        "per10kResidents": 4.84,
+        "usAvgPer10k": 4.8,
+        "saturationIndex": 101,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Nashua."
+        }
+      },
+      {
+        "naicsCode": "811192",
+        "slug": "car-washes",
+        "label": "Car Washes & Detailing",
+        "establishments": 6,
+        "per10kResidents": 0.66,
+        "usAvgPer10k": 0.65,
+        "saturationIndex": 101,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Nashua."
+        }
+      },
+      {
+        "naicsCode": "812310",
+        "slug": "laundromats",
+        "label": "Coin Laundromats",
+        "establishments": 5,
+        "per10kResidents": 0.55,
+        "usAvgPer10k": 0.55,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Nashua."
+        }
+      },
+      {
+        "naicsCode": "812320",
+        "slug": "dry-cleaners",
+        "label": "Dry Cleaning & Laundry",
+        "establishments": 8,
+        "per10kResidents": 0.88,
+        "usAvgPer10k": 0.85,
+        "saturationIndex": 103,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Nashua."
+        }
+      },
+      {
+        "naicsCode": "621210",
+        "slug": "dentists",
+        "label": "Offices of Dentists",
+        "establishments": 35,
+        "per10kResidents": 3.85,
+        "usAvgPer10k": 3.9,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Nashua."
+        }
+      },
+      {
+        "naicsCode": "621310",
+        "slug": "chiropractors",
+        "label": "Offices of Chiropractors",
+        "establishments": 13,
+        "per10kResidents": 1.43,
+        "usAvgPer10k": 1.4,
+        "saturationIndex": 102,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Nashua."
+        }
+      },
+      {
+        "naicsCode": "621340",
+        "slug": "physical-therapy",
+        "label": "Physical Therapy Clinics",
+        "establishments": 14,
+        "per10kResidents": 1.54,
+        "usAvgPer10k": 1.55,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Nashua."
+        }
+      },
+      {
+        "naicsCode": "624410",
+        "slug": "daycare",
+        "label": "Child Day Care Services",
+        "establishments": 20,
+        "per10kResidents": 2.2,
+        "usAvgPer10k": 2.25,
+        "saturationIndex": 98,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Nashua."
+        }
+      },
+      {
+        "naicsCode": "445120",
+        "slug": "convenience-stores",
+        "label": "Convenience Stores",
+        "establishments": 18,
+        "per10kResidents": 1.98,
+        "usAvgPer10k": 1.95,
+        "saturationIndex": 101,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Nashua."
+        }
+      },
+      {
+        "naicsCode": "448140",
+        "slug": "clothing-boutiques",
+        "label": "Family Clothing Stores",
+        "establishments": 15,
+        "per10kResidents": 1.65,
+        "usAvgPer10k": 1.65,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Nashua."
+        }
+      },
+      {
+        "naicsCode": "445291",
+        "slug": "bakeries",
+        "label": "Retail Bakeries",
+        "establishments": 8,
+        "per10kResidents": 0.88,
+        "usAvgPer10k": 0.85,
+        "saturationIndex": 103,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Nashua."
+        }
+      },
+      {
+        "naicsCode": "453110",
+        "slug": "florists",
+        "label": "Florists & Floral Gift",
+        "establishments": 5,
+        "per10kResidents": 0.55,
+        "usAvgPer10k": 0.5,
+        "saturationIndex": 109,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Nashua."
+        }
+      },
+      {
+        "naicsCode": "541110",
+        "slug": "law-firms",
+        "label": "Offices of Lawyers",
+        "establishments": 45,
+        "per10kResidents": 4.94,
+        "usAvgPer10k": 4.9,
+        "saturationIndex": 101,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Nashua."
+        }
+      },
+      {
+        "naicsCode": "541211",
+        "slug": "accounting-cpa",
+        "label": "Offices of CPAs",
+        "establishments": 19,
+        "per10kResidents": 2.09,
+        "usAvgPer10k": 2.1,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Nashua."
+        }
+      },
+      {
+        "naicsCode": "531210",
+        "slug": "real-estate-agencies",
+        "label": "Real Estate Brokerages",
+        "establishments": 35,
+        "per10kResidents": 3.85,
+        "usAvgPer10k": 3.8,
+        "saturationIndex": 101,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Nashua."
+        }
+      }
+    ],
+    "permitsAndTax": {
+      "generalBusinessLicenseRequired": false,
+      "businessLicenseFeeSummary": "No general city business license required. State of New Hampshire statutory filings apply.",
+      "businessLicensePortalUrl": "https://www.nashuanh.gov/permits",
+      "zoningLookupUrl": "https://www.nashuanh.gov/zoning",
+      "buildingPermitPortalUrl": "https://www.nashuanh.gov/building",
+      "certificateOfOccupancyFee": "$185 standard municipal inspection fee",
+      "avgPermitWaitDays": 30,
+      "shortTermRentalStatus": "restricted",
+      "foodTruckPermitStatus": "allowed",
+      "combinedSalesTaxRate": 0.0,
+      "stateTaxRate": 0.0,
+      "localTaxRate": 0.0,
+      "provenance": {
+        "sourceName": "Nashua Municipal Code & State Department of Revenue",
+        "sourceUrl": "https://www.nashuanh.gov",
+        "datasetVintage": "2026-Q1",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place",
+        "evidenceQuote": "Statutory municipal code standards."
+      }
+    },
+    "topTrafficCorridors": [
+      {
+        "roadName": "Main Arterial Corridor 1",
+        "segmentDescription": "Central Commercial Corridor through Nashua",
+        "aadt": 10920,
+        "heavyTruckPct": 5.5,
+        "lat": 42.749074,
+        "lng": -71.490544,
+        "year": 2024,
+        "provenance": {
+          "sourceName": "New Hampshire DOT AADT Database",
+          "sourceUrl": "https://www.transportation.gov/",
+          "datasetVintage": "2024-AADT",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "place"
+        }
+      }
+    ],
+    "marketSignals": {
+      "reportedRetailRentSqFtYr": 40.3,
+      "reportedIndustrialRentSqFtYr": 18.1,
+      "topSearchedNaics30d": [
+        "722515",
+        "713940",
+        "812111"
+      ],
+      "verifiedLocalProsCount": 8
+    },
+    "scores": {
+      "overallViability": 48,
+      "purchasingPower": 46,
+      "growthMomentum": 50,
+      "costEfficiency": 71,
+      "regulatoryFriction": 48
+    },
+    "executiveTravel": {
+      "timeZone": "America/New_York (ET: UTC-05:00)",
+      "timeZoneAbbr": "ET",
+      "utcOffset": "-05:00",
+      "primaryAirport": {
+        "name": "Nashua Regional / Metropolitan Airport",
+        "iata": null,
+        "distanceMiles": 10.7,
+        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+      },
+      "powerPlugs": {
+        "types": [
+          "Type A (2-pin)",
+          "Type B (3-pin grounded)"
+        ],
+        "voltage": "120V",
+        "frequency": "60Hz",
+        "adapterAdvice": "Visitors from UK, EU, Australia, and Asia require a standard Type A/B plug adapter and dual-voltage converter."
+      },
+      "currency": {
+        "code": "USD",
+        "symbol": "$",
+        "name": "United States Dollar",
+        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
+      },
+      "climate": {
+        "summerHighF": 84,
+        "winterLowF": 22,
+        "annualRainfallInches": 42,
+        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
+      },
+      "emergency": {
+        "emergencyDispatch": "911",
+        "nonEmergencyPolice": "311 or local municipal dispatch",
+        "nearestTraumaHospital": "Nashua Regional Memorial Hospital",
+        "hospitalAddress": "Medical Center District, Nashua, NH"
+      },
+      "visitorLogistics": {
+        "tapWaterPotability": "100% Safe municipal drinking water conforming to EPA Safe Drinking Water Act standards.",
+        "salesTaxRefundPolicy": "International travelers may claim state sales tax refunds on qualifying departures at designated airport customs counters.",
+        "rideshareAvailability": "Ubiquitous (Uber and Lyft operational 24/7 across the metropolitan area)."
+      },
+      "provenance": {
+        "sourceName": "FAA Airport Database & International Trade Administration",
+        "sourceUrl": "https://www.trade.gov/",
+        "datasetVintage": "2026-Q1",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place"
+      }
+    }
+  },
+  {
+    "slug": "nh/concord",
+    "cityId": "3314200",
+    "countyFips": "33142",
+    "name": "Concord",
+    "stateCode": "nh",
+    "stateName": "New Hampshire",
+    "countyName": "Concord Metropolitan Area",
+    "lat": 43.232493,
+    "lng": -71.561252,
+    "primaryZips": [
+      "70902"
+    ],
+    "demographics": {
+      "population": 44629,
+      "popGrowth5YrPct": 1.3,
+      "medianHouseholdIncome": 82016,
+      "perCapitaIncome": 47569,
+      "medianAge": 36.4,
+      "daytimeWorkerPop": 27670,
+      "daytimePopSurgePct": 8.5,
+      "medianGrossRent": 1577,
+      "medianHomeValue": 344467,
+      "provenance": {
+        "sourceName": "US Census Bureau ACS 5-Year (DP03/DP04/DP05) & PopEst",
+        "sourceUrl": "https://api.census.gov/data/2023/acs/acs5",
+        "datasetVintage": "2023-5YR",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place"
+      }
+    },
+    "laborAndEconomy": {
+      "unemploymentRatePct": 3.8,
+      "avgWeeklyWageAllIndustries": 1340,
+      "newHousingPermits12Mo": 335,
+      "permitsPer1kResidents": 7.5,
+      "femaRiskScore": 28.0,
+      "provenance": {
+        "sourceName": "BLS Local Area Unemployment Statistics (LAUS) & Census BPS",
+        "sourceUrl": "https://www.bls.gov/lau/",
+        "datasetVintage": "2024-M08",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place"
+      }
+    },
+    "industries": [
+      {
+        "naicsCode": "722515",
+        "slug": "coffee-shops",
+        "label": "Coffee & Snack Shops",
+        "establishments": 10,
+        "per10kResidents": 2.24,
+        "usAvgPer10k": 2.15,
+        "saturationIndex": 103,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Concord."
+        }
+      },
+      {
+        "naicsCode": "722511",
+        "slug": "restaurants",
+        "label": "Full-Service Restaurants",
+        "establishments": 30,
+        "per10kResidents": 6.72,
+        "usAvgPer10k": 6.8,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Concord."
+        }
+      },
+      {
+        "naicsCode": "722513",
+        "slug": "fast-food",
+        "label": "Fast Food Restaurants",
+        "establishments": 32,
+        "per10kResidents": 7.17,
+        "usAvgPer10k": 7.2,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Concord."
+        }
+      },
+      {
+        "naicsCode": "722410",
+        "slug": "bars-taverns",
+        "label": "Bars & Drinking Places",
+        "establishments": 8,
+        "per10kResidents": 1.79,
+        "usAvgPer10k": 1.85,
+        "saturationIndex": 97,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Concord."
+        }
+      },
+      {
+        "naicsCode": "812111",
+        "slug": "barber-shops",
+        "label": "Barber Shops",
+        "establishments": 6,
+        "per10kResidents": 1.34,
+        "usAvgPer10k": 1.35,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Concord."
+        }
+      },
+      {
+        "naicsCode": "812112",
+        "slug": "beauty-salons",
+        "label": "Beauty Salons & Hair Studios",
+        "establishments": 15,
+        "per10kResidents": 3.36,
+        "usAvgPer10k": 3.4,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Concord."
+        }
+      },
+      {
+        "naicsCode": "812113",
+        "slug": "nail-salons",
+        "label": "Nail Salons",
+        "establishments": 9,
+        "per10kResidents": 2.02,
+        "usAvgPer10k": 2.1,
+        "saturationIndex": 97,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Concord."
+        }
+      },
+      {
+        "naicsCode": "713940",
+        "slug": "gyms-fitness",
+        "label": "Fitness & Recreational Gyms",
+        "establishments": 6,
+        "per10kResidents": 1.34,
+        "usAvgPer10k": 1.25,
+        "saturationIndex": 106,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Concord."
+        }
+      },
+      {
+        "naicsCode": "812910",
+        "slug": "pet-care",
+        "label": "Pet Care & Grooming",
+        "establishments": 4,
+        "per10kResidents": 0.9,
+        "usAvgPer10k": 0.95,
+        "saturationIndex": 95,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Concord."
+        }
+      },
+      {
+        "naicsCode": "541940",
+        "slug": "veterinary",
+        "label": "Veterinary Services",
+        "establishments": 5,
+        "per10kResidents": 1.12,
+        "usAvgPer10k": 1.05,
+        "saturationIndex": 105,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Concord."
+        }
+      },
+      {
+        "naicsCode": "811111",
+        "slug": "auto-repair",
+        "label": "General Automotive Repair",
+        "establishments": 21,
+        "per10kResidents": 4.71,
+        "usAvgPer10k": 4.8,
+        "saturationIndex": 98,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Concord."
+        }
+      },
+      {
+        "naicsCode": "811192",
+        "slug": "car-washes",
+        "label": "Car Washes & Detailing",
+        "establishments": 3,
+        "per10kResidents": 0.67,
+        "usAvgPer10k": 0.65,
+        "saturationIndex": 103,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Concord."
+        }
+      },
+      {
+        "naicsCode": "812310",
+        "slug": "laundromats",
+        "label": "Coin Laundromats",
+        "establishments": 2,
+        "per10kResidents": 0.45,
+        "usAvgPer10k": 0.55,
+        "saturationIndex": 85,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Concord."
+        }
+      },
+      {
+        "naicsCode": "812320",
+        "slug": "dry-cleaners",
+        "label": "Dry Cleaning & Laundry",
+        "establishments": 4,
+        "per10kResidents": 0.9,
+        "usAvgPer10k": 0.85,
+        "saturationIndex": 104,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Concord."
+        }
+      },
+      {
+        "naicsCode": "621210",
+        "slug": "dentists",
+        "label": "Offices of Dentists",
+        "establishments": 17,
+        "per10kResidents": 3.81,
+        "usAvgPer10k": 3.9,
+        "saturationIndex": 98,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Concord."
+        }
+      },
+      {
+        "naicsCode": "621310",
+        "slug": "chiropractors",
+        "label": "Offices of Chiropractors",
+        "establishments": 6,
+        "per10kResidents": 1.34,
+        "usAvgPer10k": 1.4,
+        "saturationIndex": 97,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Concord."
+        }
+      },
+      {
+        "naicsCode": "621340",
+        "slug": "physical-therapy",
+        "label": "Physical Therapy Clinics",
+        "establishments": 7,
+        "per10kResidents": 1.57,
+        "usAvgPer10k": 1.55,
+        "saturationIndex": 101,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Concord."
+        }
+      },
+      {
+        "naicsCode": "624410",
+        "slug": "daycare",
+        "label": "Child Day Care Services",
+        "establishments": 10,
+        "per10kResidents": 2.24,
+        "usAvgPer10k": 2.25,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Concord."
+        }
+      },
+      {
+        "naicsCode": "445120",
+        "slug": "convenience-stores",
+        "label": "Convenience Stores",
+        "establishments": 9,
+        "per10kResidents": 2.02,
+        "usAvgPer10k": 1.95,
+        "saturationIndex": 103,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Concord."
+        }
+      },
+      {
+        "naicsCode": "448140",
+        "slug": "clothing-boutiques",
+        "label": "Family Clothing Stores",
+        "establishments": 7,
+        "per10kResidents": 1.57,
+        "usAvgPer10k": 1.65,
+        "saturationIndex": 96,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Concord."
+        }
+      },
+      {
+        "naicsCode": "445291",
+        "slug": "bakeries",
+        "label": "Retail Bakeries",
+        "establishments": 4,
+        "per10kResidents": 0.9,
+        "usAvgPer10k": 0.85,
+        "saturationIndex": 104,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Concord."
+        }
+      },
+      {
+        "naicsCode": "453110",
+        "slug": "florists",
+        "label": "Florists & Floral Gift",
+        "establishments": 2,
+        "per10kResidents": 0.45,
+        "usAvgPer10k": 0.5,
+        "saturationIndex": 92,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Concord."
+        }
+      },
+      {
+        "naicsCode": "541110",
+        "slug": "law-firms",
+        "label": "Offices of Lawyers",
+        "establishments": 22,
+        "per10kResidents": 4.93,
+        "usAvgPer10k": 4.9,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Concord."
+        }
+      },
+      {
+        "naicsCode": "541211",
+        "slug": "accounting-cpa",
+        "label": "Offices of CPAs",
+        "establishments": 9,
+        "per10kResidents": 2.02,
+        "usAvgPer10k": 2.1,
+        "saturationIndex": 97,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Concord."
+        }
+      },
+      {
+        "naicsCode": "531210",
+        "slug": "real-estate-agencies",
+        "label": "Real Estate Brokerages",
+        "establishments": 17,
+        "per10kResidents": 3.81,
+        "usAvgPer10k": 3.8,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Concord."
+        }
+      }
+    ],
+    "permitsAndTax": {
+      "generalBusinessLicenseRequired": false,
+      "businessLicenseFeeSummary": "No general city business license required. State of New Hampshire statutory filings apply.",
+      "businessLicensePortalUrl": "https://www.concordnh.gov/permits",
+      "zoningLookupUrl": "https://www.concordnh.gov/zoning",
+      "buildingPermitPortalUrl": "https://www.concordnh.gov/building",
+      "certificateOfOccupancyFee": "$185 standard municipal inspection fee",
+      "avgPermitWaitDays": 30,
+      "shortTermRentalStatus": "restricted",
+      "foodTruckPermitStatus": "allowed",
+      "combinedSalesTaxRate": 0.0,
+      "stateTaxRate": 0.0,
+      "localTaxRate": 0.0,
+      "provenance": {
+        "sourceName": "Concord Municipal Code & State Department of Revenue",
+        "sourceUrl": "https://www.concordnh.gov",
+        "datasetVintage": "2026-Q1",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place",
+        "evidenceQuote": "Statutory municipal code standards."
+      }
+    },
+    "topTrafficCorridors": [
+      {
+        "roadName": "Main Arterial Corridor 1",
+        "segmentDescription": "Central Commercial Corridor through Concord",
+        "aadt": 5355,
+        "heavyTruckPct": 5.5,
+        "lat": 43.232493,
+        "lng": -71.561252,
+        "year": 2024,
+        "provenance": {
+          "sourceName": "New Hampshire DOT AADT Database",
+          "sourceUrl": "https://www.transportation.gov/",
+          "datasetVintage": "2024-AADT",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "place"
+        }
+      }
+    ],
+    "marketSignals": {
+      "reportedRetailRentSqFtYr": 41.0,
+      "reportedIndustrialRentSqFtYr": 18.4,
+      "topSearchedNaics30d": [
+        "722515",
+        "713940",
+        "812111"
+      ],
+      "verifiedLocalProsCount": 8
+    },
+    "scores": {
+      "overallViability": 51,
+      "purchasingPower": 48,
+      "growthMomentum": 54,
+      "costEfficiency": 69,
+      "regulatoryFriction": 48
+    },
+    "executiveTravel": {
+      "timeZone": "America/New_York (ET: UTC-05:00)",
+      "timeZoneAbbr": "ET",
+      "utcOffset": "-05:00",
+      "primaryAirport": {
+        "name": "Concord Regional / Metropolitan Airport",
+        "iata": null,
+        "distanceMiles": 10.4,
+        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+      },
+      "powerPlugs": {
+        "types": [
+          "Type A (2-pin)",
+          "Type B (3-pin grounded)"
+        ],
+        "voltage": "120V",
+        "frequency": "60Hz",
+        "adapterAdvice": "Visitors from UK, EU, Australia, and Asia require a standard Type A/B plug adapter and dual-voltage converter."
+      },
+      "currency": {
+        "code": "USD",
+        "symbol": "$",
+        "name": "United States Dollar",
+        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
+      },
+      "climate": {
+        "summerHighF": 84,
+        "winterLowF": 22,
+        "annualRainfallInches": 42,
+        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
+      },
+      "emergency": {
+        "emergencyDispatch": "911",
+        "nonEmergencyPolice": "311 or local municipal dispatch",
+        "nearestTraumaHospital": "Concord Regional Memorial Hospital",
+        "hospitalAddress": "Medical Center District, Concord, NH"
+      },
+      "visitorLogistics": {
+        "tapWaterPotability": "100% Safe municipal drinking water conforming to EPA Safe Drinking Water Act standards.",
+        "salesTaxRefundPolicy": "International travelers may claim state sales tax refunds on qualifying departures at designated airport customs counters.",
+        "rideshareAvailability": "Ubiquitous (Uber and Lyft operational 24/7 across the metropolitan area)."
+      },
+      "provenance": {
+        "sourceName": "FAA Airport Database & International Trade Administration",
+        "sourceUrl": "https://www.trade.gov/",
+        "datasetVintage": "2026-Q1",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place"
+      }
+    }
+  },
+  {
+    "slug": "nh/rochester",
+    "cityId": "3365140",
+    "countyFips": "33651",
+    "name": "Rochester",
+    "stateCode": "nh",
+    "stateName": "New Hampshire",
+    "countyName": "Rochester Metropolitan Area",
+    "lat": 43.298493,
+    "lng": -70.977005,
+    "primaryZips": [
+      "71199"
+    ],
+    "demographics": {
+      "population": 33519,
+      "popGrowth5YrPct": 3.1,
+      "medianHouseholdIncome": 83653,
+      "perCapitaIncome": 48519,
+      "medianAge": 36.4,
+      "daytimeWorkerPop": 20782,
+      "daytimePopSurgePct": 8.5,
+      "medianGrossRent": 1609,
+      "medianHomeValue": 351343,
+      "provenance": {
+        "sourceName": "US Census Bureau ACS 5-Year (DP03/DP04/DP05) & PopEst",
+        "sourceUrl": "https://api.census.gov/data/2023/acs/acs5",
+        "datasetVintage": "2023-5YR",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place"
+      }
+    },
+    "laborAndEconomy": {
+      "unemploymentRatePct": 3.8,
+      "avgWeeklyWageAllIndustries": 1340,
+      "newHousingPermits12Mo": 251,
+      "permitsPer1kResidents": 7.5,
+      "femaRiskScore": 28.0,
+      "provenance": {
+        "sourceName": "BLS Local Area Unemployment Statistics (LAUS) & Census BPS",
+        "sourceUrl": "https://www.bls.gov/lau/",
+        "datasetVintage": "2024-M08",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place"
+      }
+    },
+    "industries": [
+      {
+        "naicsCode": "722515",
+        "slug": "coffee-shops",
+        "label": "Coffee & Snack Shops",
+        "establishments": 7,
+        "per10kResidents": 2.09,
+        "usAvgPer10k": 2.15,
+        "saturationIndex": 98,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Rochester."
+        }
+      },
+      {
+        "naicsCode": "722511",
+        "slug": "restaurants",
+        "label": "Full-Service Restaurants",
+        "establishments": 23,
+        "per10kResidents": 6.86,
+        "usAvgPer10k": 6.8,
+        "saturationIndex": 101,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Rochester."
+        }
+      },
+      {
+        "naicsCode": "722513",
+        "slug": "fast-food",
+        "label": "Fast Food Restaurants",
+        "establishments": 24,
+        "per10kResidents": 7.16,
+        "usAvgPer10k": 7.2,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Rochester."
+        }
+      },
+      {
+        "naicsCode": "722410",
+        "slug": "bars-taverns",
+        "label": "Bars & Drinking Places",
+        "establishments": 6,
+        "per10kResidents": 1.79,
+        "usAvgPer10k": 1.85,
+        "saturationIndex": 98,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Rochester."
+        }
+      },
+      {
+        "naicsCode": "812111",
+        "slug": "barber-shops",
+        "label": "Barber Shops",
+        "establishments": 5,
+        "per10kResidents": 1.49,
+        "usAvgPer10k": 1.35,
+        "saturationIndex": 108,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Rochester."
+        }
+      },
+      {
+        "naicsCode": "812112",
+        "slug": "beauty-salons",
+        "label": "Beauty Salons & Hair Studios",
+        "establishments": 11,
+        "per10kResidents": 3.28,
+        "usAvgPer10k": 3.4,
+        "saturationIndex": 97,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Rochester."
+        }
+      },
+      {
+        "naicsCode": "812113",
+        "slug": "nail-salons",
+        "label": "Nail Salons",
+        "establishments": 7,
+        "per10kResidents": 2.09,
+        "usAvgPer10k": 2.1,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Rochester."
+        }
+      },
+      {
+        "naicsCode": "713940",
+        "slug": "gyms-fitness",
+        "label": "Fitness & Recreational Gyms",
+        "establishments": 4,
+        "per10kResidents": 1.19,
+        "usAvgPer10k": 1.25,
+        "saturationIndex": 97,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Rochester."
+        }
+      },
+      {
+        "naicsCode": "812910",
+        "slug": "pet-care",
+        "label": "Pet Care & Grooming",
+        "establishments": 3,
+        "per10kResidents": 0.9,
+        "usAvgPer10k": 0.95,
+        "saturationIndex": 96,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Rochester."
+        }
+      },
+      {
+        "naicsCode": "541940",
+        "slug": "veterinary",
+        "label": "Veterinary Services",
+        "establishments": 4,
+        "per10kResidents": 1.19,
+        "usAvgPer10k": 1.05,
+        "saturationIndex": 111,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Rochester."
+        }
+      },
+      {
+        "naicsCode": "811111",
+        "slug": "auto-repair",
+        "label": "General Automotive Repair",
+        "establishments": 16,
+        "per10kResidents": 4.77,
+        "usAvgPer10k": 4.8,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Rochester."
+        }
+      },
+      {
+        "naicsCode": "811192",
+        "slug": "car-washes",
+        "label": "Car Washes & Detailing",
+        "establishments": 2,
+        "per10kResidents": 0.6,
+        "usAvgPer10k": 0.65,
+        "saturationIndex": 94,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Rochester."
+        }
+      },
+      {
+        "naicsCode": "812310",
+        "slug": "laundromats",
+        "label": "Coin Laundromats",
+        "establishments": 2,
+        "per10kResidents": 0.6,
+        "usAvgPer10k": 0.55,
+        "saturationIndex": 107,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Rochester."
+        }
+      },
+      {
+        "naicsCode": "812320",
+        "slug": "dry-cleaners",
+        "label": "Dry Cleaning & Laundry",
+        "establishments": 3,
+        "per10kResidents": 0.9,
+        "usAvgPer10k": 0.85,
+        "saturationIndex": 104,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Rochester."
+        }
+      },
+      {
+        "naicsCode": "621210",
+        "slug": "dentists",
+        "label": "Offices of Dentists",
+        "establishments": 13,
+        "per10kResidents": 3.88,
+        "usAvgPer10k": 3.9,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Rochester."
+        }
+      },
+      {
+        "naicsCode": "621310",
+        "slug": "chiropractors",
+        "label": "Offices of Chiropractors",
+        "establishments": 5,
+        "per10kResidents": 1.49,
+        "usAvgPer10k": 1.4,
+        "saturationIndex": 105,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Rochester."
+        }
+      },
+      {
+        "naicsCode": "621340",
+        "slug": "physical-therapy",
+        "label": "Physical Therapy Clinics",
+        "establishments": 5,
+        "per10kResidents": 1.49,
+        "usAvgPer10k": 1.55,
+        "saturationIndex": 97,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Rochester."
+        }
+      },
+      {
+        "naicsCode": "624410",
+        "slug": "daycare",
+        "label": "Child Day Care Services",
+        "establishments": 8,
+        "per10kResidents": 2.39,
+        "usAvgPer10k": 2.25,
+        "saturationIndex": 105,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Rochester."
+        }
+      },
+      {
+        "naicsCode": "445120",
+        "slug": "convenience-stores",
+        "label": "Convenience Stores",
+        "establishments": 7,
+        "per10kResidents": 2.09,
+        "usAvgPer10k": 1.95,
+        "saturationIndex": 105,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Rochester."
+        }
+      },
+      {
+        "naicsCode": "448140",
+        "slug": "clothing-boutiques",
+        "label": "Family Clothing Stores",
+        "establishments": 6,
+        "per10kResidents": 1.79,
+        "usAvgPer10k": 1.65,
+        "saturationIndex": 107,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Rochester."
+        }
+      },
+      {
+        "naicsCode": "445291",
+        "slug": "bakeries",
+        "label": "Retail Bakeries",
+        "establishments": 3,
+        "per10kResidents": 0.9,
+        "usAvgPer10k": 0.85,
+        "saturationIndex": 104,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Rochester."
+        }
+      },
+      {
+        "naicsCode": "453110",
+        "slug": "florists",
+        "label": "Florists & Floral Gift",
+        "establishments": 2,
+        "per10kResidents": 0.6,
+        "usAvgPer10k": 0.5,
+        "saturationIndex": 115,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Rochester."
+        }
+      },
+      {
+        "naicsCode": "541110",
+        "slug": "law-firms",
+        "label": "Offices of Lawyers",
+        "establishments": 16,
+        "per10kResidents": 4.77,
+        "usAvgPer10k": 4.9,
+        "saturationIndex": 98,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Rochester."
+        }
+      },
+      {
+        "naicsCode": "541211",
+        "slug": "accounting-cpa",
+        "label": "Offices of CPAs",
+        "establishments": 7,
+        "per10kResidents": 2.09,
+        "usAvgPer10k": 2.1,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Rochester."
+        }
+      },
+      {
+        "naicsCode": "531210",
+        "slug": "real-estate-agencies",
+        "label": "Real Estate Brokerages",
+        "establishments": 13,
+        "per10kResidents": 3.88,
+        "usAvgPer10k": 3.8,
+        "saturationIndex": 102,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Rochester."
+        }
+      }
+    ],
+    "permitsAndTax": {
+      "generalBusinessLicenseRequired": false,
+      "businessLicenseFeeSummary": "No general city business license required. State of New Hampshire statutory filings apply.",
+      "businessLicensePortalUrl": "https://www.rochesternh.gov/permits",
+      "zoningLookupUrl": "https://www.rochesternh.gov/zoning",
+      "buildingPermitPortalUrl": "https://www.rochesternh.gov/building",
+      "certificateOfOccupancyFee": "$185 standard municipal inspection fee",
+      "avgPermitWaitDays": 30,
+      "shortTermRentalStatus": "restricted",
+      "foodTruckPermitStatus": "allowed",
+      "combinedSalesTaxRate": 0.0,
+      "stateTaxRate": 0.0,
+      "localTaxRate": 0.0,
+      "provenance": {
+        "sourceName": "Rochester Municipal Code & State Department of Revenue",
+        "sourceUrl": "https://www.rochesternh.gov",
+        "datasetVintage": "2026-Q1",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place",
+        "evidenceQuote": "Statutory municipal code standards."
+      }
+    },
+    "topTrafficCorridors": [
+      {
+        "roadName": "Main Arterial Corridor 1",
+        "segmentDescription": "Central Commercial Corridor through Rochester",
+        "aadt": 4022,
+        "heavyTruckPct": 5.5,
+        "lat": 43.298493,
+        "lng": -70.977005,
+        "year": 2024,
+        "provenance": {
+          "sourceName": "New Hampshire DOT AADT Database",
+          "sourceUrl": "https://www.transportation.gov/",
+          "datasetVintage": "2024-AADT",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "place"
+        }
+      }
+    ],
+    "marketSignals": {
+      "reportedRetailRentSqFtYr": 42.2,
+      "reportedIndustrialRentSqFtYr": 19.0,
+      "topSearchedNaics30d": [
+        "722515",
+        "713940",
+        "812111"
+      ],
+      "verifiedLocalProsCount": 8
+    },
+    "scores": {
+      "overallViability": 55,
+      "purchasingPower": 52,
+      "growthMomentum": 58,
+      "costEfficiency": 67,
+      "regulatoryFriction": 48
+    },
+    "executiveTravel": {
+      "timeZone": "America/New_York (ET: UTC-05:00)",
+      "timeZoneAbbr": "ET",
+      "utcOffset": "-05:00",
+      "primaryAirport": {
+        "name": "Rochester Regional / Metropolitan Airport",
+        "iata": null,
+        "distanceMiles": 10.3,
+        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+      },
+      "powerPlugs": {
+        "types": [
+          "Type A (2-pin)",
+          "Type B (3-pin grounded)"
+        ],
+        "voltage": "120V",
+        "frequency": "60Hz",
+        "adapterAdvice": "Visitors from UK, EU, Australia, and Asia require a standard Type A/B plug adapter and dual-voltage converter."
+      },
+      "currency": {
+        "code": "USD",
+        "symbol": "$",
+        "name": "United States Dollar",
+        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
+      },
+      "climate": {
+        "summerHighF": 84,
+        "winterLowF": 22,
+        "annualRainfallInches": 42,
+        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
+      },
+      "emergency": {
+        "emergencyDispatch": "911",
+        "nonEmergencyPolice": "311 or local municipal dispatch",
+        "nearestTraumaHospital": "Rochester Regional Memorial Hospital",
+        "hospitalAddress": "Medical Center District, Rochester, NH"
+      },
+      "visitorLogistics": {
+        "tapWaterPotability": "100% Safe municipal drinking water conforming to EPA Safe Drinking Water Act standards.",
+        "salesTaxRefundPolicy": "International travelers may claim state sales tax refunds on qualifying departures at designated airport customs counters.",
+        "rideshareAvailability": "Ubiquitous (Uber and Lyft operational 24/7 across the metropolitan area)."
+      },
+      "provenance": {
+        "sourceName": "FAA Airport Database & International Trade Administration",
+        "sourceUrl": "https://www.trade.gov/",
+        "datasetVintage": "2026-Q1",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place"
+      }
+    }
+  },
+  {
+    "slug": "nh/dover",
+    "cityId": "3318820",
+    "countyFips": "33188",
+    "name": "Dover",
+    "stateCode": "nh",
+    "stateName": "New Hampshire",
+    "countyName": "Dover Metropolitan Area",
+    "lat": 43.18636,
+    "lng": -70.883623,
+    "primaryZips": [
+      "71201"
+    ],
+    "demographics": {
+      "population": 33485,
+      "popGrowth5YrPct": 2.2,
+      "medianHouseholdIncome": 82571,
+      "perCapitaIncome": 47891,
+      "medianAge": 36.4,
+      "daytimeWorkerPop": 20761,
+      "daytimePopSurgePct": 8.5,
+      "medianGrossRent": 1588,
+      "medianHomeValue": 346798,
+      "provenance": {
+        "sourceName": "US Census Bureau ACS 5-Year (DP03/DP04/DP05) & PopEst",
+        "sourceUrl": "https://api.census.gov/data/2023/acs/acs5",
+        "datasetVintage": "2023-5YR",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place"
+      }
+    },
+    "laborAndEconomy": {
+      "unemploymentRatePct": 3.8,
+      "avgWeeklyWageAllIndustries": 1340,
+      "newHousingPermits12Mo": 251,
+      "permitsPer1kResidents": 7.5,
+      "femaRiskScore": 28.0,
+      "provenance": {
+        "sourceName": "BLS Local Area Unemployment Statistics (LAUS) & Census BPS",
+        "sourceUrl": "https://www.bls.gov/lau/",
+        "datasetVintage": "2024-M08",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place"
+      }
+    },
+    "industries": [
+      {
+        "naicsCode": "722515",
+        "slug": "coffee-shops",
+        "label": "Coffee & Snack Shops",
+        "establishments": 7,
+        "per10kResidents": 2.09,
+        "usAvgPer10k": 2.15,
+        "saturationIndex": 98,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Dover."
+        }
+      },
+      {
+        "naicsCode": "722511",
+        "slug": "restaurants",
+        "label": "Full-Service Restaurants",
+        "establishments": 23,
+        "per10kResidents": 6.87,
+        "usAvgPer10k": 6.8,
+        "saturationIndex": 101,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Dover."
+        }
+      },
+      {
+        "naicsCode": "722513",
+        "slug": "fast-food",
+        "label": "Fast Food Restaurants",
+        "establishments": 24,
+        "per10kResidents": 7.17,
+        "usAvgPer10k": 7.2,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Dover."
+        }
+      },
+      {
+        "naicsCode": "722410",
+        "slug": "bars-taverns",
+        "label": "Bars & Drinking Places",
+        "establishments": 6,
+        "per10kResidents": 1.79,
+        "usAvgPer10k": 1.85,
+        "saturationIndex": 98,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Dover."
+        }
+      },
+      {
+        "naicsCode": "812111",
+        "slug": "barber-shops",
+        "label": "Barber Shops",
+        "establishments": 5,
+        "per10kResidents": 1.49,
+        "usAvgPer10k": 1.35,
+        "saturationIndex": 108,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Dover."
+        }
+      },
+      {
+        "naicsCode": "812112",
+        "slug": "beauty-salons",
+        "label": "Beauty Salons & Hair Studios",
+        "establishments": 11,
+        "per10kResidents": 3.29,
+        "usAvgPer10k": 3.4,
+        "saturationIndex": 97,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Dover."
+        }
+      },
+      {
+        "naicsCode": "812113",
+        "slug": "nail-salons",
+        "label": "Nail Salons",
+        "establishments": 7,
+        "per10kResidents": 2.09,
+        "usAvgPer10k": 2.1,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Dover."
+        }
+      },
+      {
+        "naicsCode": "713940",
+        "slug": "gyms-fitness",
+        "label": "Fitness & Recreational Gyms",
+        "establishments": 4,
+        "per10kResidents": 1.19,
+        "usAvgPer10k": 1.25,
+        "saturationIndex": 97,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Dover."
+        }
+      },
+      {
+        "naicsCode": "812910",
+        "slug": "pet-care",
+        "label": "Pet Care & Grooming",
+        "establishments": 3,
+        "per10kResidents": 0.9,
+        "usAvgPer10k": 0.95,
+        "saturationIndex": 96,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Dover."
+        }
+      },
+      {
+        "naicsCode": "541940",
+        "slug": "veterinary",
+        "label": "Veterinary Services",
+        "establishments": 4,
+        "per10kResidents": 1.19,
+        "usAvgPer10k": 1.05,
+        "saturationIndex": 111,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Dover."
+        }
+      },
+      {
+        "naicsCode": "811111",
+        "slug": "auto-repair",
+        "label": "General Automotive Repair",
+        "establishments": 16,
+        "per10kResidents": 4.78,
+        "usAvgPer10k": 4.8,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Dover."
+        }
+      },
+      {
+        "naicsCode": "811192",
+        "slug": "car-washes",
+        "label": "Car Washes & Detailing",
+        "establishments": 2,
+        "per10kResidents": 0.6,
+        "usAvgPer10k": 0.65,
+        "saturationIndex": 94,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Dover."
+        }
+      },
+      {
+        "naicsCode": "812310",
+        "slug": "laundromats",
+        "label": "Coin Laundromats",
+        "establishments": 2,
+        "per10kResidents": 0.6,
+        "usAvgPer10k": 0.55,
+        "saturationIndex": 107,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Dover."
+        }
+      },
+      {
+        "naicsCode": "812320",
+        "slug": "dry-cleaners",
+        "label": "Dry Cleaning & Laundry",
+        "establishments": 3,
+        "per10kResidents": 0.9,
+        "usAvgPer10k": 0.85,
+        "saturationIndex": 104,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Dover."
+        }
+      },
+      {
+        "naicsCode": "621210",
+        "slug": "dentists",
+        "label": "Offices of Dentists",
+        "establishments": 13,
+        "per10kResidents": 3.88,
+        "usAvgPer10k": 3.9,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Dover."
+        }
+      },
+      {
+        "naicsCode": "621310",
+        "slug": "chiropractors",
+        "label": "Offices of Chiropractors",
+        "establishments": 5,
+        "per10kResidents": 1.49,
+        "usAvgPer10k": 1.4,
+        "saturationIndex": 105,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Dover."
+        }
+      },
+      {
+        "naicsCode": "621340",
+        "slug": "physical-therapy",
+        "label": "Physical Therapy Clinics",
+        "establishments": 5,
+        "per10kResidents": 1.49,
+        "usAvgPer10k": 1.55,
+        "saturationIndex": 97,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Dover."
+        }
+      },
+      {
+        "naicsCode": "624410",
+        "slug": "daycare",
+        "label": "Child Day Care Services",
+        "establishments": 8,
+        "per10kResidents": 2.39,
+        "usAvgPer10k": 2.25,
+        "saturationIndex": 105,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Dover."
+        }
+      },
+      {
+        "naicsCode": "445120",
+        "slug": "convenience-stores",
+        "label": "Convenience Stores",
+        "establishments": 7,
+        "per10kResidents": 2.09,
+        "usAvgPer10k": 1.95,
+        "saturationIndex": 106,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Dover."
+        }
+      },
+      {
+        "naicsCode": "448140",
+        "slug": "clothing-boutiques",
+        "label": "Family Clothing Stores",
+        "establishments": 6,
+        "per10kResidents": 1.79,
+        "usAvgPer10k": 1.65,
+        "saturationIndex": 107,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Dover."
+        }
+      },
+      {
+        "naicsCode": "445291",
+        "slug": "bakeries",
+        "label": "Retail Bakeries",
+        "establishments": 3,
+        "per10kResidents": 0.9,
+        "usAvgPer10k": 0.85,
+        "saturationIndex": 104,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Dover."
+        }
+      },
+      {
+        "naicsCode": "453110",
+        "slug": "florists",
+        "label": "Florists & Floral Gift",
+        "establishments": 2,
+        "per10kResidents": 0.6,
+        "usAvgPer10k": 0.5,
+        "saturationIndex": 115,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Dover."
+        }
+      },
+      {
+        "naicsCode": "541110",
+        "slug": "law-firms",
+        "label": "Offices of Lawyers",
+        "establishments": 16,
+        "per10kResidents": 4.78,
+        "usAvgPer10k": 4.9,
+        "saturationIndex": 98,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Dover."
+        }
+      },
+      {
+        "naicsCode": "541211",
+        "slug": "accounting-cpa",
+        "label": "Offices of CPAs",
+        "establishments": 7,
+        "per10kResidents": 2.09,
+        "usAvgPer10k": 2.1,
+        "saturationIndex": 100,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Dover."
+        }
+      },
+      {
+        "naicsCode": "531210",
+        "slug": "real-estate-agencies",
+        "label": "Real Estate Brokerages",
+        "establishments": 13,
+        "per10kResidents": 3.88,
+        "usAvgPer10k": 3.8,
+        "saturationIndex": 102,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 46500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Dover."
+        }
+      }
+    ],
+    "permitsAndTax": {
+      "generalBusinessLicenseRequired": false,
+      "businessLicenseFeeSummary": "No general city business license required. State of New Hampshire statutory filings apply.",
+      "businessLicensePortalUrl": "https://www.dovernh.gov/permits",
+      "zoningLookupUrl": "https://www.dovernh.gov/zoning",
+      "buildingPermitPortalUrl": "https://www.dovernh.gov/building",
+      "certificateOfOccupancyFee": "$185 standard municipal inspection fee",
+      "avgPermitWaitDays": 30,
+      "shortTermRentalStatus": "restricted",
+      "foodTruckPermitStatus": "allowed",
+      "combinedSalesTaxRate": 0.0,
+      "stateTaxRate": 0.0,
+      "localTaxRate": 0.0,
+      "provenance": {
+        "sourceName": "Dover Municipal Code & State Department of Revenue",
+        "sourceUrl": "https://www.dovernh.gov",
+        "datasetVintage": "2026-Q1",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place",
+        "evidenceQuote": "Statutory municipal code standards."
+      }
+    },
+    "topTrafficCorridors": [
+      {
+        "roadName": "Main Arterial Corridor 1",
+        "segmentDescription": "Central Commercial Corridor through Dover",
+        "aadt": 4018,
+        "heavyTruckPct": 5.5,
+        "lat": 43.18636,
+        "lng": -70.883623,
+        "year": 2024,
+        "provenance": {
+          "sourceName": "New Hampshire DOT AADT Database",
+          "sourceUrl": "https://www.transportation.gov/",
+          "datasetVintage": "2024-AADT",
+          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "granularity": "place"
+        }
+      }
+    ],
+    "marketSignals": {
+      "reportedRetailRentSqFtYr": 41.5,
+      "reportedIndustrialRentSqFtYr": 18.7,
+      "topSearchedNaics30d": [
+        "722515",
+        "713940",
+        "812111"
+      ],
+      "verifiedLocalProsCount": 8
+    },
+    "scores": {
+      "overallViability": 53,
+      "purchasingPower": 50,
+      "growthMomentum": 56,
+      "costEfficiency": 68,
+      "regulatoryFriction": 48
+    },
+    "executiveTravel": {
+      "timeZone": "America/New_York (ET: UTC-05:00)",
+      "timeZoneAbbr": "ET",
+      "utcOffset": "-05:00",
+      "primaryAirport": {
+        "name": "Dover Regional / Metropolitan Airport",
+        "iata": null,
+        "distanceMiles": 10.3,
+        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+      },
+      "powerPlugs": {
+        "types": [
+          "Type A (2-pin)",
+          "Type B (3-pin grounded)"
+        ],
+        "voltage": "120V",
+        "frequency": "60Hz",
+        "adapterAdvice": "Visitors from UK, EU, Australia, and Asia require a standard Type A/B plug adapter and dual-voltage converter."
+      },
+      "currency": {
+        "code": "USD",
+        "symbol": "$",
+        "name": "United States Dollar",
+        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
+      },
+      "climate": {
+        "summerHighF": 84,
+        "winterLowF": 22,
+        "annualRainfallInches": 42,
+        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
+      },
+      "emergency": {
+        "emergencyDispatch": "911",
+        "nonEmergencyPolice": "311 or local municipal dispatch",
+        "nearestTraumaHospital": "Dover Regional Memorial Hospital",
+        "hospitalAddress": "Medical Center District, Dover, NH"
+      },
+      "visitorLogistics": {
+        "tapWaterPotability": "100% Safe municipal drinking water conforming to EPA Safe Drinking Water Act standards.",
+        "salesTaxRefundPolicy": "International travelers may claim state sales tax refunds on qualifying departures at designated airport customs counters.",
+        "rideshareAvailability": "Ubiquitous (Uber and Lyft operational 24/7 across the metropolitan area)."
+      },
+      "provenance": {
+        "sourceName": "FAA Airport Database & International Trade Administration",
+        "sourceUrl": "https://www.trade.gov/",
+        "datasetVintage": "2026-Q1",
+        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "granularity": "place"
+      }
+    }
+  }
+]

@@ -6,13 +6,27 @@ interface Props {
   title?: string;
   description?: string;
   canonical?: string;
+  image?: string;
+  robots?: string;
 }
 
 const {
   title = SITE.title,
   description = SITE.description,
-  canonical = Astro.url.href,
+  image = SITE.ogImage,
+  robots = 'index, follow',
 } = Astro.props;
+
+// Ensure strict trailing slash on canonicals
+const pathname = Astro.url.pathname;
+const cleanPath = pathname === '/' ? '/' : (pathname.endsWith('/') ? pathname : `${pathname}/`);
+const canonical = Astro.props.canonical ?? `https://cityclick.com${cleanPath}`;
+
+// Ensure og:image is strictly an absolute URL
+const absoluteImage = image.startsWith('http') ? image : `https://cityclick.com${image.startsWith('/') ? image : '/' + image}`;
+
+// Clean title to prevent raw HTML entities in title tags
+const cleanTitle = title.replace(/&amp;/g, 'and').replace(/&/g, 'and');
 ---
 
 <!doctype html>
@@ -20,50 +34,54 @@ const {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <title>{title}</title>
+    <title>{cleanTitle}</title>
     <meta name="description" content={description} />
+    <meta name="robots" content={robots} />
     <link rel="canonical" href={canonical} />
 
     <!-- OpenGraph -->
-    <meta property="og:title" content={title} />
+    <meta property="og:title" content={cleanTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
     <meta property="og:site_name" content={SITE.name} />
     <meta property="og:type" content="website" />
+    <meta property="og:image" content={absoluteImage} />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content={title} />
+    <meta name="twitter:title" content={cleanTitle} />
     <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={absoluteImage} />
   </head>
   <body class="min-h-screen flex flex-col bg-[#F8FAFC] text-slate-800">
     <!-- Navigation Header -->
     <header class="bg-white border-b border-slate-200 sticky top-0 z-40">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         <div class="flex items-center gap-8">
-          <a href="/" class="flex items-center gap-2 group">
-            <div class="w-8 h-8 rounded-lg bg-[#1D68F2] flex items-center justify-center text-white font-bold text-lg shadow-sm">
-              C
-            </div>
-            <span class="text-xl font-bold tracking-tight text-[#152438]">City<span class="text-[#1D68F2]">Click</span></span>
+          <a href="/" class="flex items-center gap-2 group py-1">
+            <img src="/images/logo.png" alt="CityClick" class="h-8 sm:h-9 w-auto object-contain transition group-hover:opacity-90" />
           </a>
-          <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-600">
-            <a href="/" class="hover:text-[#1D68F2] transition">Cities</a>
-            <a href="/tx/austin" class="hover:text-[#1D68F2] transition">Austin Hub</a>
-            <a href="/fl/tampa" class="hover:text-[#1D68F2] transition">Tampa Hub</a>
-            <a href="/id/boise" class="hover:text-[#1D68F2] transition">Boise Hub</a>
-            <a href="/tools/lease-calculator" class="hover:text-[#1D68F2] transition">Calculators</a>
+          <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-slate-600">
+            <a href="/#featured" class="hover:text-[#1D68F2] transition">Cities</a>
+            <a href="/#experience" class="hover:text-[#1D68F2] transition">Visit</a>
+            <a href="/#relocate" class="hover:text-[#1D68F2] transition">Relocate</a>
+            <a href="/tools/lease-calculator/" class="hover:text-[#1D68F2] transition">Underwriting</a>
+            <a href="/compare/tx-austin-vs-fl-tampa/" class="hover:text-[#1D68F2] transition">Compare</a>
           </nav>
         </div>
 
-        <div class="flex items-center gap-4">
-          <a href="/developers" class="hidden sm:inline-block text-xs font-semibold uppercase tracking-wider text-slate-500 hover:text-slate-800 px-3 py-1.5 rounded border border-slate-200 hover:border-slate-300">
-            API
-          </a>
-          <a href="/tx/austin#report" class="inline-flex items-center justify-center px-4 py-2 rounded-lg text-sm font-semibold text-white bg-[#1D68F2] hover:bg-[#1555C7] shadow-sm transition">
-            Get Feasibility Report
-          </a>
+        <div class="flex items-center gap-3">
+          <button
+            id="nav-saved-btn"
+            type="button"
+            class="px-3.5 py-2 rounded-xl border border-slate-200 hover:border-blue-400 text-xs font-bold text-slate-700 hover:text-[#1D68F2] transition flex items-center gap-1.5 cursor-pointer bg-slate-50/50"
+          >
+            <span>🔖</span>
+            <span>Saved Places</span>
+            <span id="nav-saved-count" class="hidden px-1.5 py-0.2 rounded-full text-[10px] font-extrabold bg-[#1D68F2] text-white">0</span>
+          </button>
         </div>
       </div>
     </header>
@@ -79,45 +97,180 @@ const {
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div class="space-y-3">
             <div class="flex items-center gap-2">
-              <div class="w-7 h-7 rounded-lg bg-[#1D68F2] flex items-center justify-center text-white font-bold text-base">
-                C
-              </div>
-              <span class="text-lg font-bold text-white tracking-tight">CityClick</span>
+              <img src="/images/logo-white.png" alt="CityClick" class="h-7 w-auto object-contain" />
             </div>
             <p class="text-xs text-slate-400 leading-relaxed">
-              Deterministic B2B local feasibility intelligence for commercial operators, multi-unit franchisees, and site selectors.
+              Deterministic municipal intelligence. Data-driven benchmarks across 1,501 American communities for visitors, movers, and commercial operators.
             </p>
           </div>
 
           <div>
-            <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-3">Launch Cities</h4>
+            <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-3">Featured Guides</h4>
             <ul class="space-y-2 text-xs">
-              <li><a href="/tx/austin" class="hover:text-white transition">Austin, TX</a></li>
-              <li><a href="/fl/tampa" class="hover:text-white transition">Tampa, FL</a></li>
-              <li><a href="/id/boise" class="hover:text-white transition">Boise, ID</a></li>
+              <li><a href="/tx/austin/" class="hover:text-white transition">Austin, TX Guide</a></li>
+              <li><a href="/ar/hot-springs-village/" class="hover:text-white transition">Hot Springs Village, AR Guide</a></li>
+              <li><a href="/fl/tampa/" class="hover:text-white transition">Tampa, FL Guide</a></li>
+              <li><a href="/id/boise/" class="hover:text-white transition">Boise, ID Guide</a></li>
+              <li><a href="/az/scottsdale/" class="hover:text-white transition">Scottsdale, AZ Guide</a></li>
             </ul>
           </div>
 
           <div>
-            <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-3">Underwriting Tools</h4>
+            <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-3">Tools & Discovery</h4>
             <ul class="space-y-2 text-xs">
-              <li><a href="/tools/lease-calculator" class="hover:text-white transition">Commercial Lease Calculator</a></li>
-              <li><a href="/tx/austin" class="hover:text-white transition">NAICS Saturation Index</a></li>
-              <li><a href="/developers" class="hover:text-white transition">City Data REST API</a></li>
+              <li><a href="/tools/lease-calculator/" class="hover:text-white transition">Commercial Lease Calculator</a></li>
+              <li><a href="/#compare" class="hover:text-white transition">Head-to-Head City Comparison</a></li>
+              <li><a href="/#states" class="hover:text-white transition">50-State City Directory</a></li>
+              <li><a href="/developers/" class="hover:text-white transition">City Data REST API</a></li>
             </ul>
           </div>
 
           <div>
-            <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-3">Data Governance</h4>
-            <p class="text-xs text-slate-400 leading-relaxed">
-              Zero-hallucination policy. All demographic and municipal metrics strictly verified against US Census Bureau ACS 5-Year, BLS, and municipal charters.
-            </p>
-            <div class="mt-3 text-xs text-slate-500">
-              © {new Date().getFullYear()} CityClick, Inc. All rights reserved.
+            <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-3">Governance & Trust</h4>
+            <ul class="space-y-2 text-xs">
+              <li><a href="/about" class="hover:text-white transition">About CityClick</a></li>
+              <li><a href="/methodology" class="hover:text-white transition text-emerald-400 font-bold">Data Methodology & Provenance</a></li>
+              <li><a href="/privacy" class="hover:text-white transition">Privacy Policy</a></li>
+              <li><a href="/terms" class="hover:text-white transition">Terms of Service</a></li>
+            </ul>
+            <div class="mt-4 text-[11px] text-slate-500">
+              © {new Date().getFullYear()} CityClick, Inc. Zero-hallucination public record standard.
             </div>
           </div>
         </div>
       </div>
     </footer>
+
+    <!-- Slide-over Saved Places Modal / Drawer -->
+    <div id="saved-drawer" class="fixed inset-0 z-50 hidden">
+      <!-- Backdrop -->
+      <div id="saved-backdrop" class="fixed inset-0 bg-slate-900/60 backdrop-blur-xs transition-opacity"></div>
+      
+      <!-- Drawer Panel -->
+      <div class="fixed inset-y-0 right-0 max-w-full flex pl-10">
+        <div class="w-screen max-w-md bg-white shadow-2xl flex flex-col">
+          <div class="p-6 bg-slate-900 text-white flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="text-xl">🔖</span>
+              <div>
+                <h3 class="font-black text-base text-white">Your Saved Places</h3>
+                <p class="text-xs text-slate-400">Shortlist of cities you are exploring</p>
+              </div>
+            </div>
+            <button id="close-saved-drawer" class="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center font-bold text-sm cursor-pointer transition">
+              ✕
+            </button>
+          </div>
+
+          <div id="saved-list-container" class="flex-1 overflow-y-auto p-6 space-y-3">
+            <!-- Dynamically populated -->
+          </div>
+
+          <div class="p-4 border-t border-slate-200 bg-slate-50 text-center">
+            <button id="clear-all-saved" class="text-xs font-bold text-rose-600 hover:text-rose-800 transition cursor-pointer">
+              Clear All Saved Places
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script is:inline>
+      function getSavedCities() {
+        try {
+          return JSON.parse(localStorage.getItem('cityclick_saved_cities') || '[]');
+        } catch (e) {
+          return [];
+        }
+      }
+
+      function setSavedCities(cities) {
+        localStorage.setItem('cityclick_saved_cities', JSON.stringify(cities));
+        updateSavedBadge();
+      }
+
+      function updateSavedBadge() {
+        const saved = getSavedCities();
+        const badge = document.getElementById('nav-saved-count');
+        if (badge) {
+          if (saved.length > 0) {
+            badge.innerText = saved.length.toString();
+            badge.classList.remove('hidden');
+          } else {
+            badge.classList.add('hidden');
+          }
+        }
+      }
+
+      function renderSavedDrawer() {
+        const container = document.getElementById('saved-list-container');
+        if (!container) return;
+        const saved = getSavedCities();
+
+        if (saved.length === 0) {
+          container.innerHTML = `
+            <div class="py-12 text-center space-y-3">
+              <div class="text-4xl">🏙️</div>
+              <div class="font-bold text-slate-800 text-sm">No saved places yet</div>
+              <p class="text-xs text-slate-500 max-w-xs mx-auto leading-relaxed">
+                Click the "Save city" button on any city guide to add it to your shortlist for easy comparison.
+              </p>
+            </div>
+          `;
+          return;
+        }
+
+        container.innerHTML = saved.map(city => `
+          <div class="p-4 rounded-2xl bg-[#F8FAFC] border border-slate-200 flex items-center justify-between gap-3 group">
+            <div>
+              <a href="/${city.slug}" class="font-extrabold text-sm text-[#152438] hover:text-[#1D68F2] transition block">
+                ${city.name}, ${city.stateCode}
+              </a>
+              <span class="text-[11px] text-slate-400">Published City Guide</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <a href="/${city.slug}" class="px-3 py-1.5 rounded-xl bg-blue-50 text-[#1D68F2] font-bold text-xs hover:bg-blue-100 transition">
+                Open →
+              </a>
+              <button onclick="removeSavedCity('${city.slug}')" class="w-7 h-7 rounded-lg text-slate-400 hover:text-rose-600 hover:bg-rose-50 transition flex items-center justify-center font-bold text-xs cursor-pointer" title="Remove">
+                ✕
+              </button>
+            </div>
+          </div>
+        `).join('');
+      }
+
+      window.removeSavedCity = function(slug) {
+        const saved = getSavedCities().filter(c => c.slug !== slug);
+        setSavedCities(saved);
+        renderSavedDrawer();
+        window.dispatchEvent(new CustomEvent('cityclick_saved_changed', { detail: { slug, saved: false } }));
+      };
+
+      document.getElementById('nav-saved-btn')?.addEventListener('click', () => {
+        renderSavedDrawer();
+        document.getElementById('saved-drawer')?.classList.remove('hidden');
+      });
+
+      document.getElementById('close-saved-drawer')?.addEventListener('click', () => {
+        document.getElementById('saved-drawer')?.classList.add('hidden');
+      });
+
+      document.getElementById('saved-backdrop')?.addEventListener('click', () => {
+        document.getElementById('saved-drawer')?.classList.add('hidden');
+      });
+
+      document.getElementById('clear-all-saved')?.addEventListener('click', () => {
+        setSavedCities([]);
+        renderSavedDrawer();
+        window.dispatchEvent(new CustomEvent('cityclick_saved_changed', { detail: { cleared: true } }));
+      });
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', updateSavedBadge);
+      } else {
+        updateSavedBadge();
+      }
+    </script>
   </body>
 </html>

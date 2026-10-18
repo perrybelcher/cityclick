@@ -56,6 +56,50 @@ export const MunicipalPermitIntelSchema = z.object({
   provenance: ProvenanceSchema
 });
 
+export const ExecutiveTravelIntelSchema = z.object({
+  timeZone: z.string(),                     // e.g., "America/Chicago (Central Time: UTC-6 / CDT UTC-5)"
+  timeZoneAbbr: z.string(),                 // e.g., "CT"
+  utcOffset: z.string(),                    // e.g., "-06:00"
+  primaryAirport: z.object({
+    name: z.string(),                       // e.g., "Austin-Bergstrom International Airport"
+    iata: z.string().length(3),             // e.g., "AUS"
+    distanceMiles: z.number().positive(),
+    transitToDowntown: z.string()           // e.g., "20 min via Rideshare / CapMetro Route 20 ($1.25)"
+  }),
+  powerPlugs: z.object({
+    types: z.array(z.string()),             // ['Type A (2-pin)', 'Type B (3-pin standard grounded)']
+    voltage: z.string(),                    // "120V"
+    frequency: z.string(),                  // "60Hz"
+    adapterAdvice: z.string()               // e.g., "Visitors from UK, EU, AU, and Asia require a step-up voltage adapter or Type A/B plug converter."
+  }),
+  currency: z.object({
+    code: z.string(),                       // "USD"
+    symbol: z.string(),                     // "$"
+    name: z.string(),                       // "United States Dollar"
+    tippingCustoms: z.string(),             // e.g., "18–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15–20% for taxis/rideshares."
+    paymentMethods: z.string()              // e.g., "Apple Pay, Google Pay, and contactless chip cards universally accepted. Cashless venues common."
+  }),
+  climate: z.object({
+    summerHighF: z.number(),                // e.g., 97
+    winterLowF: z.number(),                 // e.g., 42
+    annualRainfallInches: z.number(),       // e.g., 35.5
+    bestVisitMonths: z.string(),            // e.g., "October–November and March–May for mild outdoor scouting temperatures"
+    weatherSummary: z.string()
+  }),
+  emergency: z.object({
+    emergencyDispatch: z.string(),          // "911"
+    nonEmergencyPolice: z.string(),         // "311 or (512) 974-2000"
+    nearestTraumaHospital: z.string(),      // "Dell Seton Medical Center at UT (Level 1 Trauma Center)"
+    hospitalAddress: z.string()
+  }),
+  visitorLogistics: z.object({
+    tapWaterPotability: z.string(),         // "100% Safe municipal drinking water conforming to EPA standards."
+    salesTaxRefundPolicy: z.string(),       // e.g., "Texas TaxFree Shopping allows foreign visitors to claim sales tax refunds at AUS airport booths for qualifying purchases."
+    rideshareAvailability: z.string()       // "Ubiquitous (Uber, Lyft, and local taxi fleets operational 24/7)"
+  }),
+  provenance: ProvenanceSchema
+});
+
 export const CityRecordSchema = z.object({
   slug: z.string().regex(/^[a-z]{2}\/[a-z0-9-]+$/), // e.g., "tx/austin"
   cityId: z.string().regex(/^\d{7}$/),              // 7-digit State+Place FIPS e.g., "4805000"
@@ -74,7 +118,7 @@ export const CityRecordSchema = z.object({
     perCapitaIncome: z.number().int().positive(),
     medianAge: z.number().min(15).max(85),
     daytimeWorkerPop: z.number().int().nonnegative(),
-    daytimePopSurgePct: z.number().min(-80).max(500), // ((daytimeWorkerPop - residentWorkers) / pop) * 100
+    daytimePopSurgePct: z.number().min(-80).max(500),
     medianGrossRent: z.number().int().positive(),
     medianHomeValue: z.number().int().positive(),
     provenance: ProvenanceSchema
@@ -102,7 +146,8 @@ export const CityRecordSchema = z.object({
     growthMomentum: z.number().int().min(0).max(100),
     costEfficiency: z.number().int().min(0).max(100),
     regulatoryFriction: z.number().int().min(0).max(100)
-  })
+  }),
+  executiveTravel: ExecutiveTravelIntelSchema.optional()
 });
 
 export const BreakevenInputSchema = z.object({
@@ -136,6 +181,7 @@ export type Provenance = z.infer<typeof ProvenanceSchema>;
 export type NaicsSaturation = z.infer<typeof NaicsSaturationSchema>;
 export type TrafficCorridor = z.infer<typeof TrafficCorridorSchema>;
 export type MunicipalPermitIntel = z.infer<typeof MunicipalPermitIntelSchema>;
+export type ExecutiveTravelIntel = z.infer<typeof ExecutiveTravelIntelSchema>;
 export type CityRecord = z.infer<typeof CityRecordSchema>;
 export type BreakevenInput = z.infer<typeof BreakevenInputSchema>;
 export type BreakevenOutput = z.infer<typeof BreakevenOutputSchema>;

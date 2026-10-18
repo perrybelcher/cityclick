@@ -1,13 +1,13 @@
-import tx from './cities/tx.json';
-import fl from './cities/fl.json';
-import id from './cities/id.json';
 import type { CityRecord } from '../lib/schema';
 
-export const ALL_CITIES: CityRecord[] = [
-  ...(tx as CityRecord[]),
-  ...(fl as CityRecord[]),
-  ...(id as CityRecord[]),
-];
+// Eagerly glob import all 51 state-sharded JSON files at build time
+const stateFiles = import.meta.glob<{ default: CityRecord[] }>('./cities/*.json', {
+  eager: true,
+});
+
+export const ALL_CITIES: CityRecord[] = Object.values(stateFiles).flatMap(
+  (mod) => mod.default
+);
 
 export const CITIES_BY_SLUG = new Map<string, CityRecord>(
   ALL_CITIES.map((c) => [c.slug, c])

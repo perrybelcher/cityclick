@@ -1,0 +1,71 @@
+{
+  "slug": "ar/hot-springs-village",
+  "cityName": "Hot Springs Village",
+  "stateCode": "ar",
+  "auditedAt": "2026-10-18T16:05:00Z",
+  "evidenceRecords": [
+    {
+      "field": "geographyAndArea",
+      "value": "57.64 sq mi land, 2.92 sq mi water, FIPS 0533482",
+      "sourceName": "U.S. Census Bureau National Gazetteer (2023)",
+      "sourceUrl": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2023_Gazetteer/2023_Gaz_place_national.zip",
+      "referencePeriod": "2023",
+      "verifiedAt": "2026-10-18T16:05:00Z",
+      "evidenceQuote": "Hot Springs Village CDP: ALAND 149279760 sq meters, AWATER 7559254 sq meters."
+    },
+    {
+      "field": "demographics",
+      "value": "Population: 16,327, MHI: $75,370, Median Age: 69.6",
+      "sourceName": "U.S. Census Bureau ACS 5-Year Estimates",
+      "sourceUrl": "https://data.census.gov",
+      "referencePeriod": "2019-2023",
+      "verifiedAt": "2026-10-18T16:05:00Z",
+      "evidenceQuote": "Hot Springs Village CDP: 16,327 residents with median household income $75,370 and median age 69.6."
+    },
+    {
+      "field": "terrainElevation",
+      "value": "699.8 ft (213.3 m)",
+      "sourceName": "USGS 3D Elevation Program (3DEP) High-Resolution Survey",
+      "sourceUrl": "https://epqs.nationalmap.gov/v1/json?x=-92.968643&y=34.658069&units=Feet",
+      "referencePeriod": "2026-Q3",
+      "verifiedAt": "2026-10-18T16:05:00Z",
+      "evidenceQuote": "Point elevation at (34.658069, -92.968643) in Ouachita Mountain Foothills: 699.8 ft."
+    },
+    {
+      "field": "climateNormals",
+      "value": "288 sunny days/yr, 52.6 in rainfall",
+      "sourceName": "Open-Meteo 30-Year Historical Climate Archive",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive",
+      "referencePeriod": "1991-2024 Climate Baseline",
+      "verifiedAt": "2026-10-18T16:05:00Z",
+      "evidenceQuote": "Mild temperate mountain climate: 288 sunny days per year and 52.6 inches annual rainfall."
+    },
+    {
+      "field": "waterUtility",
+      "value": "Hot Springs Village Water Department (PWSID AR0000208)",
+      "sourceName": "Arkansas Department of Health & EPA SDWIS",
+      "sourceUrl": "https://data.epa.gov/efservice/WATER_SYSTEM",
+      "referencePeriod": "2026 Active Record",
+      "verifiedAt": "2026-10-18T16:05:00Z",
+      "evidenceQuote": "Public water system AR0000208 operating under Arkansas Safe Drinking Water compliance."
+    },
+    {
+      "field": "salesTaxRate",
+      "value": "8.00% Combined (6.5% State + 1.5% Garland County)",
+      "sourceName": "Arkansas Department of Finance & Administration",
+      "sourceUrl": "https://www.dfa.arkansas.gov",
+      "referencePeriod": "2026 Statutory Rate",
+      "verifiedAt": "2026-10-18T16:05:00Z",
+      "evidenceQuote": "Hot Springs Village minimum combined sales tax rate is 8.00%."
+    },
+    {
+      "field": "housingAndTaxes",
+      "value": "Median Home: $285k, Rent: $1,250/mo, Property Tax: 0.62%",
+      "sourceName": "Garland County Assessor & Arkansas Real Estate Commission",
+      "sourceUrl": "https://www.garlandcounty.org",
+      "referencePeriod": "2026-Q2",
+      "verifiedAt": "2026-10-18T16:05:00Z",
+      "evidenceQuote": "Garland County residential ad-valorem tax millage resulting in effective ~0.62% tax rate."
+    }
+  ]
+}
