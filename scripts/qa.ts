@@ -120,7 +120,7 @@ export function runQA(): boolean {
     if (!fs.existsSync(fp)) continue;
     const h = fs.readFileSync(fp, 'utf-8');
     for (const b of BANNED_PHRASES) {
-      if (h.includes(b)) { console.error(`FAIL [BANNED-PHRASE] in ${f.name}: '${b}'`); errors++; }
+      if (h.toLowerCase().includes(b.toLowerCase())) { console.error(`FAIL [BANNED-PHRASE] in ${f.name}: '${b}'`); errors++; }
     }
     // news links must be article-level (path deeper than one segment), never a section homepage
     const hubs = ['austinchronicle.com/events/','austinchronicle.com/food/','austinchronicle.com/music/','austinchronicle.com/screens/','bizjournals.com/austin/','statesman.com/business/'];
