@@ -1705,7 +1705,7 @@
         "name": "Tampa International Airport",
         "iata": "TPA",
         "distanceMiles": 8.0,
-        "transitToDowntown": "HART Route 30 / Rideshare ($2.00)"
+        "transitToDowntown": null
       },
       "powerPlugs": {
         "types": [
@@ -1771,23 +1771,14 @@
       "source": "ACS 2023 5-yr: B25077 median home value, B25064 median gross rent, B25103 median real estate taxes paid. Effective rate = B25103 / B25077.",
       "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/"
     },
-    "capitalAndSbaLending": {
-      "annualSbaDisbursementMillion": 118.5,
-      "activeCountyLoanCount": 142,
-      "topLenders": [
-        {
-          "name": "Synovus Bank",
-          "tier": "Top Florida Commercial Lender"
-        },
-        {
-          "name": "Live Oak Bank",
-          "tier": "#1 SBA 7(a) Volume"
-        },
-        {
-          "name": "Bank of America",
-          "tier": "Metro Commercial Anchor"
-        }
-      ]
+    "waterUtility": {
+      "pwsid": "FL6290327",
+      "providerName": "City of Tampa Water Department",
+      "populationServed": 733886,
+      "sourceType": "surface water",
+      "source": "U.S. EPA Safe Drinking Water Information System (SDWIS)",
+      "sourceUrl": "https://data.epa.gov/efservice/WATER_SYSTEM/PWSID/FL6290327/JSON",
+      "retrieved": "2026-10-18"
     }
   },
   {

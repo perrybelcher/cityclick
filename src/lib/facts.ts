@@ -61,6 +61,10 @@ export function buildFacts(city: CityRecord): Fact[] {
   if (tr?.emergency?.nearestTraumaHospital) {
     out.push({ q: `What is the main hospital near ${n}?`, a: `${tr.emergency.nearestTraumaHospital}${tr.emergency.hospitalAddress ? `, ${tr.emergency.hospitalAddress}` : ''}. In an emergency, call 911.`, source: tr.emergency.source ?? 'Google Places API', asOf: 'October 2026' });
   }
+  const w: any = (city as any).waterUtility;
+  if (w?.pwsid) {
+    out.push({ q: `Who provides tap water in ${n}?`, a: `${w.providerName} (EPA water system ID ${w.pwsid}) supplies ${n} and serves about ${Number(w.populationServed).toLocaleString('en-US')} people from ${w.sourceType}. Ask the utility for its annual water quality report.`, source: w.source, asOf: 'Retrieved October 2026' });
+  }
   const ind = city.industries ?? [];
   if (ind.length) {
     const und = ind.filter((i: any) => i.status === 'underserved').sort((a: any, b: any) => a.saturationIndex - b.saturationIndex).slice(0, 3);

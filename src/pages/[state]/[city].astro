@@ -206,65 +206,57 @@ const centerLng = city.lng ?? -97.7431;
 
 const cityMapPins = {
   visiting: isAustin ? [
-    { name: "Austin-Bergstrom Int'l Airport (AUS)", category: "Primary Commercial Airport", address: "3600 Presidential Blvd", lat: 30.1975, lng: -97.6664, badge: "Arrival Gateway", note: "Uber/Lyft Level 1 Garage" },
-    { name: "The Driskill Hotel", category: "Historic Luxury Lodging", address: "604 Brazos St", lat: 30.2682, lng: -97.7415, badge: "Downtown Historic 6th", note: "Opened 1886 Landmark" },
-    { name: "South Congress Hotel & Strip", category: "Iconic Boutique Lodging", address: "1603 S Congress Ave", lat: 30.2504, lng: -97.7497, badge: "SoCo Pedestrian Hub", note: "Premier Music & Dining" },
-    { name: "The LINE Austin & Lady Bird Lake", category: "Lakeside Accommodations", address: "111 E Cesar Chavez St", lat: 30.2632, lng: -97.7441, badge: "Lady Bird Trail", note: "Bat Watching Bridge" },
-    { name: "Barton Springs Pool & Zilker Park", category: "Natural Spring-Fed Landmark", address: "2201 Barton Springs Rd", lat: 30.2639, lng: -97.7712, badge: "68°F Year-Round", note: "Open 5am–10pm daily ($9)" }
+    { name: "Austin-Bergstrom Int'l Airport (AUS)", category: "Primary Commercial Airport", address: "3600 Presidential Blvd", lat: 30.194085, lng: -97.671089, badge: "", note: "" },
+    { name: "The Driskill Hotel", category: "Historic Luxury Lodging", address: "604 Brazos St", lat: 30.268150, lng: -97.741755, badge: "", note: "" },
+    { name: "South Congress Hotel & Strip", category: "Iconic Boutique Lodging", address: "1603 S Congress Ave", lat: 30.247296, lng: -97.750338, badge: "", note: "" },
+    { name: "The LINE Austin & Lady Bird Lake", category: "Lakeside Accommodations", address: "111 E Cesar Chavez St", lat: 30.262912, lng: -97.744194, badge: "", note: "" },
+    { name: "Barton Springs Pool & Zilker Park", category: "Natural Spring-Fed Landmark", address: "2201 Barton Springs Rd", lat: 30.263726, lng: -97.771400, badge: "", note: "" }
   ] : isHSV ? [
-    { name: "West Gate Visitor Security Checkpoint", category: "Guarded Community Entrance", address: "Highway 7 North", lat: 34.6420, lng: -93.0315, badge: "Main Visitor Entrance", note: "Visitor Pass Checkpoint" },
-    { name: "East Gate Security Checkpoint", category: "Eastern Community Entrance", address: "Highway 5 Entrance", lat: 34.6645, lng: -92.8985, badge: "Saline County Gate", note: "Card & Guest Access" },
-    { name: "Lake Balboa Marina & Sandy Beach", category: "Premier Recreational Lake", address: "476 Ponce de Leon Dr", lat: 34.6515, lng: -92.9231, badge: "944-Acre Lake", note: "Boat Slips, Rentals & Beach" },
-    { name: "Diamante Country Club", category: "Championship Private Golf Course", address: "2000 Country Club Dr", lat: 34.6812, lng: -92.9354, badge: "#1 Ranked Private Course", note: "Championship Fairways" },
-    { name: "Ponce de Leon Cultural Center", category: "Woodlands Arts Auditorium", address: "1101 DeSoto Blvd", lat: 34.6585, lng: -92.9654, badge: "650-Seat Civic Venue", note: "Concerts, Library & Arts" }
+    { name: "Balboa Marina", category: "Premier Recreational Lake", address: "480 Ponce De Leon Dr", lat: 34.624098, lng: -92.898893, badge: "", note: "" },
+    { name: "Diamante Country Club", category: "Championship Private Golf Course", address: "2000 Country Club Dr", lat: 34.643716, lng: -92.866994, badge: "", note: "" },
+    { name: "Ponce De Leon Center", category: "Woodlands Arts Auditorium", address: "1101 DeSoto Blvd", lat: 34.663072, lng: -92.928632, badge: "", note: "" },
   ] : isBoise ? [
-    { name: "Boise Airport (BOI)", category: "Commercial Airport Hub", address: "3201 W Airport Way", lat: 43.5644, lng: -116.2228, badge: "Arrival Gateway", note: "4.5 mi to Downtown Core" },
-    { name: "The Grove Hotel & 8th Street", category: "Downtown Boutique Lodging", address: "245 S Capitol Blvd", lat: 43.6145, lng: -116.2045, badge: "Downtown Core", note: "Adjacent to Boise Centre" },
-    { name: "Idaho State Capitol Building", category: "Civic & Cultural Landmark", address: "700 W Jefferson St", lat: 43.6177, lng: -116.1996, badge: "State Capitol", note: "Historic Rotunda & Grounds" },
-    { name: "Boise River Greenbelt Trailhead", category: "Recreational River Corridor", address: "Julia Davis Park", lat: 43.6085, lng: -116.2065, badge: "25-Mile Trail", note: "Paved Riverside Path" }
+    { name: "Boise River Greenbelt", category: "Recreational River Corridor", address: "Julia Davis Park", lat: 43.601970, lng: -116.180784, badge: "", note: "" },
+    { name: "Boise Airport (BOI)", category: "Commercial Airport Hub", address: "3201 W Airport Way", lat: 43.560949, lng: -116.217449, badge: "", note: "" },
+    { name: "The Grove Hotel & 8th Street", category: "Downtown Boutique Lodging", address: "245 S Capitol Blvd", lat: 43.613980, lng: -116.203779, badge: "", note: "" },
+    { name: "Idaho State Capitol Building", category: "Civic & Cultural Landmark", address: "700 W Jefferson St", lat: 43.617749, lng: -116.199599, badge: "", note: "" }
   ] : isTampa ? [
-    { name: "Tampa International Airport (TPA)", category: "Primary Commercial Airport", address: "4100 George J Bean Pkwy", lat: 27.9772, lng: -82.5311, badge: "Arrival Gateway", note: "Top-Rated US Airport Terminal" },
-    { name: "Tampa Riverwalk & Armature Works", category: "Waterfront Pedestrian Hub", address: "1910 N Ola Ave", lat: 27.9612, lng: -82.4605, badge: "Riverwalk Core", note: "2.6-Mile Paved Riverwalk" },
-    { name: "Historic Ybor City & 7th Avenue", category: "Historic Cultural District", address: "1600 E 7th Ave", lat: 27.9602, lng: -82.4412, badge: "Historic Cigar City", note: "Dining, Culture & Streetcars" }
+    { name: "Tampa International Airport (TPA)", category: "Primary Commercial Airport", address: "4100 George J Bean Pkwy", lat: 27.976865, lng: -82.530280, badge: "", note: "" },
+    { name: "Tampa Riverwalk & Armature Works", category: "Waterfront Pedestrian Hub", address: "1910 N Ola Ave", lat: 27.960934, lng: -82.464272, badge: "", note: "" },
+    { name: "Historic Ybor City & 7th Avenue", category: "Historic Cultural District", address: "1600 E 7th Ave", lat: 27.960268, lng: -82.438624, badge: "", note: "" }
   ] : isScottsdale ? [
-    { name: "Old Town Scottsdale Pedestrian Core", category: "Historic Arts & Dining", address: "Scottsdale & Main St", lat: 33.4942, lng: -111.9261, badge: "Old Town Core", note: "Galleries, Dining & Nightlife" },
-    { name: "McDowell Sonoran Preserve Gateway", category: "Natural Sonoran Desert Preserve", address: "18333 N Thompson Peak Pkwy", lat: 33.6492, lng: -111.8512, badge: "30,000-Acre Desert", note: "Hiking & Biking Trails" },
-    { name: "Scottsdale Fashion Square", category: "Luxury Commercial Mall", address: "7014 E Camelback Rd", lat: 33.5032, lng: -111.9285, badge: "Premier Retail Hub", note: "Flagship Luxury Retail" }
+    { name: "Old Town Scottsdale Pedestrian Core", category: "Historic Arts & Dining", address: "Scottsdale & Main St", lat: 33.494590, lng: -111.924811, badge: "", note: "" },
+    { name: "McDowell Sonoran Preserve Gateway", category: "Natural Sonoran Desert Preserve", address: "18333 N Thompson Peak Pkwy", lat: 33.649428, lng: -111.858467, badge: "", note: "" },
+    { name: "Scottsdale Fashion Square", category: "Luxury Commercial Mall", address: "7014 E Camelback Rd", lat: 33.502748, lng: -111.929341, badge: "", note: "" }
   ] : isNashville ? [
-    { name: "Nashville International Airport (BNA)", category: "Primary Commercial Airport", address: "One Terminal Dr", lat: 36.1263, lng: -86.6774, badge: "Arrival Gateway", note: "Commercial Flight Hub" },
-    { name: "Lower Broadway Historic Music Strip", category: "World-Famous Live Music", address: "Broadway & 4th Ave", lat: 36.1612, lng: -86.7775, badge: "Honky Tonk Highway", note: "Live Music 365 Days" },
-    { name: "The Parthenon at Centennial Park", category: "Full-Scale Greek Replica", address: "2500 West End Ave", lat: 36.1497, lng: -86.8133, badge: "Centennial Landmark", note: "Museum & Athena Statue" }
+    { name: "Nashville International Airport (BNA)", category: "Primary Commercial Airport", address: "One Terminal Dr", lat: 36.124885, lng: -86.676218, badge: "", note: "" },
+    { name: "Lower Broadway Historic Music Strip", category: "World-Famous Live Music", address: "Broadway & 4th Ave", lat: 36.160393, lng: -86.778432, badge: "", note: "" },
+    { name: "The Parthenon at Centennial Park", category: "Full-Scale Greek Replica", address: "2500 West End Ave", lat: 36.149674, lng: -86.813347, badge: "", note: "" }
   ] : [
     { name: `${city.name} Civic Center`, category: "Municipal Landmark", address: "City Center", lat: centerLat, lng: centerLng, badge: "Civic Core", note: "Official Municipal Location" }
   ],
   living: isAustin ? [
-    { name: "Dell Seton Medical Center at UT", category: "Level 1 Adult Trauma Center", address: "1500 Red River St", lat: 30.2762, lng: -97.7348, badge: "Primary Trauma Hub", note: "24/7 Acute Life Safety" },
-    { name: "St. David's South Austin Medical Center", category: "Comprehensive Emergency Care", address: "901 W Ben White Blvd", lat: 30.2241, lng: -97.7854, badge: "Cardiac & Surgical Care", note: "24/7 Regional Emergency" },
-    { name: "Austin Central Public Library", category: "Civic & Co-Working Landmark", address: "710 W Cesar Chavez St", lat: 30.2662, lng: -97.7491, badge: "Downtown Civic Center", note: "6-Story Rooftop & Events" },
-    { name: "Eanes ISD Public School Campus", category: "Top Texas Public School District", address: "601 Camp Craft Rd", lat: 30.2785, lng: -97.8184, badge: "#1 Ranked District", note: "Westlake High School Cluster" }
+    { name: "Dell Seton Medical Center at UT", category: "Level 1 Adult Trauma Center", address: "1500 Red River St", lat: 30.276510, lng: -97.733835, badge: "", note: "" },
+    { name: "St. David's South Austin Medical Center", category: "Comprehensive Emergency Care", address: "901 W Ben White Blvd", lat: 30.226039, lng: -97.774569, badge: "", note: "" },
+    { name: "Austin Central Public Library", category: "Civic & Co-Working Landmark", address: "710 W Cesar Chavez St", lat: 30.265779, lng: -97.751933, badge: "", note: "" },
+    { name: "Eanes ISD Public School Campus", category: "Top Texas Public School District", address: "601 Camp Craft Rd", lat: 30.278784, lng: -97.812915, badge: "", note: "" }
   ] : isHSV ? [
-    { name: "HSV Police & Emergency Dispatch HQ", category: "Dedicated Gated Security", address: "1100 DeSoto Blvd", lat: 34.6625, lng: -92.9725, badge: "24/7 Dedicated 911", note: "Inside Village Gates (501-922-0011)" },
-    { name: "CHI St. Vincent Hot Springs", category: "Level 2 Acute Hospital", address: "300 Werner Ave, Hot Springs", lat: 34.5215, lng: -93.0585, badge: "Primary Trauma Center", note: "280 Beds · 16 mi south" },
-    { name: "Jessieville Public School Campus", category: "K-12 Public School System", address: "7900 N Hwy 7, Jessieville", lat: 34.6985, lng: -93.0612, badge: "Western Village Campus", note: "Comprehensive K-12 STEM" },
-    { name: "HSV POA Administration Center", category: "Governance & Permitting", address: "895 DeSoto Blvd", lat: 34.6615, lng: -92.9685, badge: "Community Permitting", note: "Property Owners Association HQ" }
+    { name: "Jessieville Public School Campus", category: "K-12 Public School System", address: "7900 N Hwy 7, Jessieville", lat: 34.700920, lng: -93.061493, badge: "", note: "" },
+    { name: "HSV POA Administration Center", category: "Governance & Permitting", address: "895 DeSoto Blvd", lat: 34.670920, lng: -92.970495, badge: "", note: "" }
   ] : isBoise ? [
-    { name: "St. Luke's Boise Medical Center", category: "Level 2 Adult & Pediatric Trauma", address: "190 E Bannock St", lat: 43.6148, lng: -116.1942, badge: "Primary Hospital Hub", note: "24/7 Emergency & Life Safety" },
-    { name: "Boise High School Campus", category: "Top Idaho Public School", address: "1010 W Washington St", lat: 43.6212, lng: -116.2015, badge: "Boise School District #1", note: "Historic 1908 Campus" },
-    { name: "Boise Public Library & Co-Working", category: "Civic Learning Center", address: "715 S Capitol Blvd", lat: 43.6115, lng: -116.2085, badge: "Downtown Library", note: "Overlooking Boise River" }
+    { name: "St. Luke's Boise Medical Center", category: "Level 2 Adult & Pediatric Trauma", address: "190 E Bannock St", lat: 43.612767, lng: -116.192492, badge: "", note: "" },
+    { name: "Boise High School Campus", category: "Top Idaho Public School", address: "1010 W Washington St", lat: 43.621178, lng: -116.202529, badge: "", note: "" },
+    { name: "Boise Public Library & Co-Working", category: "Civic Learning Center", address: "715 S Capitol Blvd", lat: 43.610800, lng: -116.207915, badge: "", note: "" }
   ] : [
     { name: `${city.name} Civic & Community Center`, category: "Community Core", address: "City Center", lat: centerLat, lng: centerLng, badge: "Civic Zone", note: "Municipal Geographic Center" }
   ],
   business: isAustin ? [
-    { name: "2nd Street Commercial Retail District", category: "Flagship Urban Retail", address: "2nd St & Colorado", lat: 30.2652, lng: -97.7468, badge: "$34/sqft NNN", note: "High Foot Traffic Retail" },
-    { name: "East 6th Creative & Beverage Corridor", category: "Creative Commercial Mix", address: "1600 E 6th St", lat: 30.2638, lng: -97.7158, badge: "$28/sqft NNN", note: "Breweries & Tech Studios" },
-    { name: "South Congress Commercial Strip", category: "Flagship Pedestrian Shopping", address: "1400 S Congress Ave", lat: 30.2504, lng: -97.7497, badge: "$38/sqft NNN", note: "Highest Retail Foot Traffic" }
+    { name: "2nd Street Commercial Retail District", category: "Flagship Urban Retail", address: "2nd St & Colorado", lat: 30.265712, lng: -97.748524, badge: "", note: "" },
+    { name: "South Congress Commercial Strip", category: "Flagship Pedestrian Shopping", address: "1400 S Congress Ave", lat: 30.237426, lng: -97.753006, badge: "", note: "" }
   ] : isHSV ? [
-    { name: "DeSoto Commercial Center", category: "Commercial Trade Hub", address: "DeSoto Center Dr", lat: 34.6642, lng: -92.9712, badge: "$18/sqft NNN", note: "Village Services, Cafe & Banking" },
-    { name: "Hwy 7 Commercial Corridor", category: "Medical & Trade Services", address: "N Highway 7 West Gate", lat: 34.6420, lng: -93.0315, badge: "$17/sqft NNN", note: "Outpatient Clinic & Auto Services" },
-    { name: "Balboa Club Commercial Pavilion", category: "Lakeside Commercial Space", address: "Ponce de Leon Dr", lat: 34.6515, lng: -92.9231, badge: "$20/sqft NNN", note: "Restaurant & Event Pavilion" }
   ] : isBoise ? [
-    { name: "8th Street Commercial Pedestrian Mall", category: "Flagship Retail & Dining", address: "8th & Main St", lat: 43.6152, lng: -116.2038, badge: "$28/sqft NNN", note: "High-Footfall Pedestrian Core" },
-    { name: "Boise Linen District Creative Suites", category: "Boutique Commercial Corridor", address: "Grove & 14th St", lat: 43.6192, lng: -116.2125, badge: "$24/sqft NNN", note: "Design, Cafes & Studios" }
+    { name: "8th Street Commercial Pedestrian Mall", category: "Flagship Retail & Dining", address: "8th & Main St", lat: 43.614905, lng: -116.202984, badge: "", note: "" },
+    { name: "Boise Linen District Creative Suites", category: "Boutique Commercial Corridor", address: "Grove & 14th St", lat: 43.618708, lng: -116.211338, badge: "", note: "" }
   ] : [
     { name: `${city.name} Commercial Corridor`, category: "Commercial District", address: "Main Street", lat: centerLat, lng: centerLng, badge: "Commercial Core", note: "Primary Business Corridor" }
   ]
@@ -755,8 +747,8 @@ const cityMapPins = {
               </div>
               <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 text-xs">
                 <div class="bg-white/10 p-3 rounded-xl border border-white/10">
-                  <span class="text-slate-400 block text-[11px]">Downtown Rideshare</span>
-                  <span class="font-bold text-slate-100">{isAustin ? '15–25 mins · Uber/Lyft pickup at Rental Car Garage' : `${travel.primaryAirport.distanceMiles} mi straight-line to downtown`}</span>
+                  <span class="text-slate-400 block text-[11px]">Distance to Downtown</span>
+                  <span class="font-bold text-slate-100">{`${travel.primaryAirport.distanceMiles} mi straight-line to downtown`}</span>
                 </div>
                 {travel.primaryAirport.transitToDowntown && (<div class="bg-white/10 p-3 rounded-xl border border-white/10">
                   <span class="text-slate-400 block text-[11px]">Direct Transit</span>
@@ -764,7 +756,7 @@ const cityMapPins = {
                 </div>)}
                 <div class="bg-white/10 p-3 rounded-xl border border-white/10">
                   <span class="text-slate-400 block text-[11px]">Arrival Protocol</span>
-                  <span class="font-bold text-slate-100">{isHSV ? 'East Gate (Hwy 5) or West Gate (Hwy 7)' : isAustin ? 'Austin-Bergstrom International Terminal' : isBoise ? 'Boise Airport (BOI) Terminal' : isTampa ? "Tampa Int'l Airport (TPA)" : isScottsdale ? 'Phoenix Sky Harbor (PHX)' : travel.primaryAirport.name}</span>
+                  <span class="font-bold text-slate-100">{travel.primaryAirport.name}</span>
                 </div>
               </div>
             </div>
@@ -793,14 +785,10 @@ const cityMapPins = {
                   </div>
                   <div class="text-slate-600 leading-relaxed">
                     {isHSV && (
-                      <span><strong>100% Gated Private Community:</strong> Non-resident visitors must enter via <strong>East Gate (Hwy 5)</strong> or <strong>West Gate (Hwy 7)</strong> with a valid POA guest pass, member invitation, or confirmed golf tee-time booking.</span>
+                      <span><strong>Gated community:</strong> Visitors and guests without a member card must enter through the <strong>West Gate</strong> (111 DeSoto Blvd, staffed 24/7). The East Gate is staffed 6 AM–10 PM. <em>Source: Hot Springs Village POA, explorethevillage.com/contact.</em></span>
                     )}
-                    {isAustin && (
-                      <span><strong>Airport Rideshare Protocol:</strong> Uber/Lyft pickup at Austin-Bergstrom (AUS) is located on <strong>Level 1 of the Rental Car Garage</strong> across the pedestrian bridge. CapMetro Route 20 bus leaves every 15 min for Downtown ($1.25).</span>
-                    )}
-                    {!isHSV && !isAustin && (
-                      <span>Commercial flights arrive via <strong>{travel.primaryAirport?.name ?? 'Regional Airport'}</strong>. Rideshare and rental vehicles available 24/7 at terminal.</span>
-                    )}
+                    
+                    {(<span>Commercial flights arrive via <strong>{travel.primaryAirport?.name}</strong>.</span>)}
                   </div>
                 </div>
 
@@ -849,15 +837,7 @@ const cityMapPins = {
                     <span>Water Safety & Emergency 911</span>
                   </div>
                   <div class="text-slate-600 leading-relaxed">
-                    {isHSV && (
-                      <span><strong>100% Potable Tap Water:</strong> Hot Springs Village Water Dept (PWSID AR0000208). <strong>Emergency:</strong> 911 inside gates routes directly to dedicated HSV Police & Fire. Non-emergency: 501-922-0011.</span>
-                    )}
-                    {isAustin && (
-                      <span><strong>100% Potable Tap Water:</strong> City of Austin Water (PWSID TX2270001). <strong>Emergency:</strong> 911 for life safety; 311 for civic services and parking. Level 1 Trauma at Dell Seton UT.</span>
-                    )}
-                    {!isHSV && !isAustin && (
-                      <span>Municipal tap water conforms to EPA Safe Drinking Water Act standards. Dial 911 for emergency response.</span>
-                    )}
+                    {(city as any).waterUtility && (<span><strong>Tap water:</strong> Served by {(city as any).waterUtility.providerName} (PWSID {(city as any).waterUtility.pwsid}), a {(city as any).waterUtility.sourceType} system serving about {(city as any).waterUtility.populationServed.toLocaleString('en-US')} people. <em>Source: EPA SDWIS, retrieved Oct 2026.</em> In an emergency, dial 911.</span>)}
                   </div>
                 </div>
               </div>
@@ -1095,42 +1075,7 @@ const cityMapPins = {
                   </div>
                 </div>
 
-                <div class="p-5 rounded-2xl bg-[#F8FAFC] border border-slate-200 space-y-2">
-                  <h4 class="font-bold text-sm text-[#152438]">Local School Systems & Education</h4>
-                  <div class="space-y-1 text-slate-600">
-                    {isAustin ? (
-                      <>
-                        <p>• <strong>Eanes ISD (Westlake):</strong> Consistently ranked #1 public school district in Texas</p>
-                        <p>• <strong>Austin ISD:</strong> 74,000 students across flagship STEM and magnet programs</p>
-                        <p>• <strong>Round Rock & Leander ISD:</strong> High-growth northern tech corridor campuses</p>
-                      </>
-                    ) : isHSV ? (
-                      <>
-                        <p>• <strong>Jessieville School District:</strong> K-12 campus serving western village sector</p>
-                        <p>• <strong>Fountain Lake School District:</strong> East Gate community school system</p>
-                        <p>• <strong>National Park College:</strong> Regional higher education partner in Hot Springs</p>
-                      </>
-                    ) : isBoise ? (
-                      <>
-                        <p>• <strong>Boise Independent School District #1:</strong> Flagship Ada County district</p>
-                        <p>• <strong>West Ada School District:</strong> Largest public school district in Idaho</p>
-                        <p>• <strong>Boise State University:</strong> Downtown public research university</p>
-                      </>
-                    ) : isTampa ? (
-                      <>
-                        <p>• <strong>Hillsborough County Public Schools:</strong> 7th largest school district in the US</p>
-                        <p>• <strong>Plant High School Corridor:</strong> Top-rated South Tampa academic zone</p>
-                        <p>• <strong>University of South Florida (USF):</strong> Preeminent research campus</p>
-                      </>
-                    ) : (
-                      <>
-                        <p>• <strong>{city.name} Municipal Schools:</strong> Primary district serving {city.name} residents</p>
-                        <p>• <strong>{city.countyName} Regional Education:</strong> County public school system</p>
-                        <p>• <strong>State Accreditation:</strong> Governed by {city.stateName} Department of Education</p>
-                      </>
-                    )}
-                  </div>
-                </div>
+                
               </div>
             </div>
 
@@ -1337,33 +1282,6 @@ const cityMapPins = {
               </div>
             </div>
 
-            <!-- Capital Access & SBA Lending Inflow -->
-            {city.capitalAndSbaLending && (
-              <div class="pt-6 border-t border-slate-200/80 space-y-3">
-                <div class="flex justify-between items-center">
-                  <h3 class="font-bold text-base text-[#152438]">Capital Access & Active SBA Lending Inflow</h3>
-                  <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-50 text-emerald-700 border border-emerald-200">U.S. SBA FOIA Reported</span>
-                </div>
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
-                  <div class="bg-[#F8FAFC] p-4 rounded-2xl border border-slate-200">
-                    <span class="text-xs font-semibold text-slate-500">Annual SBA Loan Volume</span>
-                    <div class="text-2xl font-black text-[#152438] mt-1">${city.capitalAndSbaLending.annualSbaDisbursementMillion}M</div>
-                    <span class="text-[11px] text-slate-400">{city.capitalAndSbaLending.activeCountyLoanCount} Active 7(a) & 504 Loans</span>
-                  </div>
-                  <div class="bg-[#F8FAFC] p-4 rounded-2xl border border-slate-200 col-span-2">
-                    <span class="text-xs font-semibold text-slate-500">Top Active Regional SBA Lenders ({city.countyName})</span>
-                    <div class="grid grid-cols-3 gap-2 mt-2">
-                      {city.capitalAndSbaLending.topLenders.map((l: any) => (
-                        <div class="p-2.5 rounded-xl bg-white border border-slate-200 shadow-2xs">
-                          <div class="font-bold text-slate-800 text-xs truncate">{l.name}</div>
-                          <div class="text-[10px] text-blue-600 font-semibold mt-0.5 truncate">{l.tier}</div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            )}
           </section>
 
           <!-- 25-Industry NAICS Saturation Table -->
@@ -1686,7 +1604,7 @@ const cityMapPins = {
           <div id="report" class="bg-white rounded-3xl p-6 sm:p-7 border border-slate-200/80 shadow-[0_4px_25px_-2px_rgba(0,0,0,0.08)] space-y-5">
             <div class="bg-gradient-to-br from-[#152438] to-slate-900 rounded-2xl p-4 text-white shadow-md border border-slate-700">
               <div class="flex items-center justify-between text-[10px] font-bold uppercase tracking-wider text-emerald-400 mb-1">
-                <span>SBA 504 / 7(A) LENDER COMPLIANT</span>
+                <span>CITYCLICK CITY DOSSIER</span>
                 <span class="bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded border border-emerald-400/30">100% FREE</span>
               </div>
               <div class="font-black text-sm text-white">{city.name} Institutional Dossier</div>
@@ -1996,8 +1914,8 @@ const cityMapPins = {
                   '<div style="font-weight: 800; font-size: 13px; color: #152438; margin-top: 2px;">' + place.name + '</div>' +
                   '<div style="font-size: 11px; color: #64748B; margin-top: 2px;">' + place.address + '</div>' +
                   '<div style="display: flex; gap: 6px; margin-top: 6px;">' +
-                    '<span style="font-size: 10px; font-weight: 700; background: #EDF4FC; color: #1D68F2; padding: 2px 6px; border-radius: 4px;">' + place.badge + '</span>' +
-                    '<span style="font-size: 10px; font-weight: 600; background: #F1F5F9; color: #334155; padding: 2px 6px; border-radius: 4px;">' + place.note + '</span>' +
+                    (place.badge ? '<span style="font-size: 10px; font-weight: 700; background: #EDF4FC; color: #1D68F2; padding: 2px 6px; border-radius: 4px;">' + place.badge + '</span>' : '') +
+                    (place.note ? '<span style="font-size: 10px; font-weight: 600; background: #F1F5F9; color: #334155; padding: 2px 6px; border-radius: 4px;">' + place.note + '</span>' : '') +
                   '</div>' +
                 '</div>'
               )

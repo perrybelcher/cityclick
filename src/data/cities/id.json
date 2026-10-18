@@ -448,8 +448,7 @@
       },
       "emergency": {
         "emergencyDispatch": "911",
-        "nonEmergencyPolice": "208-377-6790 (Boise Police non-emergency)",
-        "nearestTraumaHospital": "St. Luke's Boise Medical Center (Level 2 Adult & Pediatric Trauma)",
+        "nearestTraumaHospital": "St. Luke's Boise Medical Center",
         "hospitalAddress": "190 E Bannock St, Downtown Boise, ID 83712",
         "source": "Google Places API (New), retrieved 2026-10-18"
       },
@@ -487,23 +486,14 @@
       "source": "ACS 2023 5-yr: B25077 median home value, B25064 median gross rent, B25103 median real estate taxes paid. Effective rate = B25103 / B25077.",
       "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/"
     },
-    "capitalAndSbaLending": {
-      "annualSbaDisbursementMillion": 62.4,
-      "activeCountyLoanCount": 84,
-      "topLenders": [
-        {
-          "name": "Zions Bank",
-          "tier": "Top Mountain West Commercial"
-        },
-        {
-          "name": "Idaho Central Credit Union",
-          "tier": "#1 Regional SBA Lender"
-        },
-        {
-          "name": "First Interstate Bank",
-          "tier": "Regional Business Partner"
-        }
-      ]
+    "waterUtility": {
+      "pwsid": "ID4010016",
+      "providerName": "Veolia Water Idaho",
+      "populationServed": 264978,
+      "sourceType": "surface water",
+      "source": "U.S. EPA Safe Drinking Water Information System (SDWIS)",
+      "sourceUrl": "https://data.epa.gov/efservice/WATER_SYSTEM/PWSID/ID4010016/JSON",
+      "retrieved": "2026-10-18"
     }
   },
   {

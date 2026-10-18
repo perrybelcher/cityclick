@@ -12056,7 +12056,7 @@
         "name": "Bill and Hillary Clinton National Airport",
         "iata": "LIT",
         "distanceMiles": 53.0,
-        "transitToDowntown": "50\u201355 min via Hwy 5 / I-30 Expressway"
+        "transitToDowntown": null
       },
       "powerPlugs": {
         "types": [
@@ -12084,8 +12084,7 @@
       },
       "emergency": {
         "emergencyDispatch": "911 (Dedicated 24/7 Hot Springs Village Police & Fire Inside Gates)",
-        "nonEmergencyPolice": "501-922-0011 (HSV Police Dispatch)",
-        "nearestTraumaHospital": "CHI St. Vincent Hot Springs (280-Bed Acute Care & Level 2 Trauma Center)",
+        "nearestTraumaHospital": "CHI St. Vincent Hot Springs",
         "hospitalAddress": "300 Werner St, Hot Springs, AR 71913 (approx. 16 mi south)",
         "source": "Google Places API (New), retrieved 2026-10-18"
       },
@@ -12123,46 +12122,6 @@
       "source": "ACS 2023 5-yr: B25077 median home value, B25064 median gross rent, B25103 median real estate taxes paid. Effective rate = B25103 / B25077.",
       "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/"
     },
-    "capitalAndSbaLending": {
-      "annualSbaDisbursementMillion": 14.2,
-      "activeCountyLoanCount": 28,
-      "topLenders": [
-        {
-          "name": "First Security Bank",
-          "tier": "Top Arkansas Regional Commercial Lender"
-        },
-        {
-          "name": "Simmons Bank",
-          "tier": "Top Garland County SBA Lender"
-        },
-        {
-          "name": "Regions Bank",
-          "tier": "Major Southeastern Commercial Partner"
-        }
-      ]
-    },
-    "curatedIconicStays": [
-      {
-        "name": "Lake Balboa Waterfront Villas",
-        "district": "Balboa Beach & Marina",
-        "profile": "Private lakefront rental villas with boat slip access and lakeside clubhouse dining."
-      },
-      {
-        "name": "Diamante Country Club Casitas",
-        "district": "Diamante Championship Course",
-        "profile": "Luxury fairway accommodations beside Arkansas's top-rated private golf course."
-      },
-      {
-        "name": "Los Lagos Resort Lodges",
-        "district": "Lake DeSoto / West Gate",
-        "profile": "Spacious multi-bedroom resort townhomes near DeSoto Golf Course and clubhouse."
-      },
-      {
-        "name": "The Waters Hotel (Hot Springs)",
-        "district": "Historic Bathhouse Row (Nearby)",
-        "profile": "Ascend Hotel Collection boutique luxury property in downtown Hot Springs historic district (18 min south)."
-      }
-    ],
     "industries": [
       {
         "naicsCode": "722511",
@@ -12203,6 +12162,15 @@
     ],
     "primaryZips": [
       "71909"
-    ]
+    ],
+    "waterUtility": {
+      "pwsid": "AR0000208",
+      "providerName": "Hot Springs Village Waterworks",
+      "populationServed": 15985,
+      "sourceType": "surface water",
+      "source": "U.S. EPA Safe Drinking Water Information System (SDWIS)",
+      "sourceUrl": "https://data.epa.gov/efservice/WATER_SYSTEM/PWSID/AR0000208/JSON",
+      "retrieved": "2026-10-18"
+    }
   }
 ]

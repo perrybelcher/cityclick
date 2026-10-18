@@ -482,7 +482,7 @@
         "name": "Austin-Bergstrom International Airport",
         "iata": "AUS",
         "distanceMiles": 8.5,
-        "transitToDowntown": "CapMetro Route 20 Express ($1.25) / 15\u201325 min Rideshare"
+        "transitToDowntown": null
       },
       "climate": {
         "summerHighF": 95,
@@ -494,7 +494,7 @@
       },
       "emergency": {
         "emergencyDispatch": "911",
-        "nearestTraumaHospital": "Dell Seton Medical Center at The University of Texas (Level I Trauma)",
+        "nearestTraumaHospital": "Dell Seton Medical Center at The University of Texas",
         "hospitalAddress": "1500 Red River St, Austin, TX 78701",
         "source": "Google Places API (New), retrieved 2026-10-18"
       }
@@ -502,9 +502,11 @@
     "waterUtility": {
       "pwsid": "TX2270001",
       "providerName": "City of Austin Water & Wastewater",
-      "source": "Surface Water (Colorado River / Lake Austin Basin)",
-      "epaStatus": "100% Safe Drinking Water Act Compliant",
-      "sourceUrl": "https://data.epa.gov/efservice/WATER_SYSTEM/PWSID/TX2270001/JSON"
+      "populationServed": 1115323,
+      "sourceType": "surface water",
+      "source": "U.S. EPA Safe Drinking Water Information System (SDWIS)",
+      "sourceUrl": "https://data.epa.gov/efservice/WATER_SYSTEM/PWSID/TX2270001/JSON",
+      "retrieved": "2026-10-18"
     },
     "housingAndTaxes": {
       "medianHomeValue": 512700,
@@ -514,47 +516,7 @@
       "countyName": "Travis County",
       "source": "ACS 2023 5-yr: B25077 median home value, B25064 median gross rent, B25103 median real estate taxes paid. Effective rate = B25103 / B25077.",
       "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/"
-    },
-    "capitalAndSbaLending": {
-      "annualSbaDisbursementMillion": 285.0,
-      "activeCountyLoanCount": 342,
-      "topLenders": [
-        {
-          "name": "Live Oak Bank",
-          "tier": "Top SBA 7(a) Small Business Lender"
-        },
-        {
-          "name": "JPMorgan Chase Bank",
-          "tier": "Top Metropolitan Commercial Lender"
-        },
-        {
-          "name": "PlainsCapital Bank",
-          "tier": "Top Regional Texas Commercial Partner"
-        }
-      ]
-    },
-    "curatedIconicStays": [
-      {
-        "name": "The Driskill",
-        "district": "Downtown / 6th Street",
-        "profile": "Historic Romanesque luxury hotel opened in 1886; walking distance to State Capitol."
-      },
-      {
-        "name": "South Congress Hotel",
-        "district": "South Congress (SoCo)",
-        "profile": "Boutique hotel anchoring SoCo's premier pedestrian retail and dining strip."
-      },
-      {
-        "name": "The LINE Austin",
-        "district": "Downtown / Lady Bird Lake",
-        "profile": "Lakeside property with direct hike-and-bike access and rooftop skyline dining."
-      },
-      {
-        "name": "Commodore Perry Estate",
-        "district": "Hyde Park / Central",
-        "profile": "Auberge Resorts Collection landmark 10-acre luxury historic estate."
-      }
-    ]
+    }
   },
   {
     "slug": "tx/houston",

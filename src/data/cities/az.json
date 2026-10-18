@@ -4293,6 +4293,15 @@
       "countyName": "Scottsdale Metropolitan Area",
       "source": "ACS 2023 5-yr: B25077 median home value, B25064 median gross rent, B25103 median real estate taxes paid. Effective rate = B25103 / B25077.",
       "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/"
+    },
+    "waterUtility": {
+      "pwsid": "AZ0407098",
+      "providerName": "Scottsdale City Of",
+      "populationServed": 241361,
+      "sourceType": "surface water",
+      "source": "U.S. EPA Safe Drinking Water Information System (SDWIS)",
+      "sourceUrl": "https://data.epa.gov/efservice/WATER_SYSTEM/PWSID/AZ0407098/JSON",
+      "retrieved": "2026-10-18"
     }
   },
   {
