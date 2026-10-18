@@ -1,0 +1,123 @@
+---
+import '../styles/global.css';
+import { SITE } from '../config/site';
+
+interface Props {
+  title?: string;
+  description?: string;
+  canonical?: string;
+}
+
+const {
+  title = SITE.title,
+  description = SITE.description,
+  canonical = Astro.url.href,
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+
+    <!-- OpenGraph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:site_name" content={SITE.name} />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+  </head>
+  <body class="min-h-screen flex flex-col bg-[#F8FAFC] text-slate-800">
+    <!-- Navigation Header -->
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-40">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+        <div class="flex items-center gap-8">
+          <a href="/" class="flex items-center gap-2 group">
+            <div class="w-8 h-8 rounded-lg bg-[#1D68F2] flex items-center justify-center text-white font-bold text-lg shadow-sm">
+              C
+            </div>
+            <span class="text-xl font-bold tracking-tight text-[#152438]">City<span class="text-[#1D68F2]">Click</span></span>
+          </a>
+          <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-600">
+            <a href="/" class="hover:text-[#1D68F2] transition">Cities</a>
+            <a href="/tx/austin" class="hover:text-[#1D68F2] transition">Austin Hub</a>
+            <a href="/fl/tampa" class="hover:text-[#1D68F2] transition">Tampa Hub</a>
+            <a href="/id/boise" class="hover:text-[#1D68F2] transition">Boise Hub</a>
+            <a href="/tools/lease-calculator" class="hover:text-[#1D68F2] transition">Calculators</a>
+          </nav>
+        </div>
+
+        <div class="flex items-center gap-4">
+          <a href="/developers" class="hidden sm:inline-block text-xs font-semibold uppercase tracking-wider text-slate-500 hover:text-slate-800 px-3 py-1.5 rounded border border-slate-200 hover:border-slate-300">
+            API
+          </a>
+          <a href="/tx/austin#report" class="inline-flex items-center justify-center px-4 py-2 rounded-lg text-sm font-semibold text-white bg-[#1D68F2] hover:bg-[#1555C7] shadow-sm transition">
+            Get Feasibility Report
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-1">
+      <slot />
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#152438] text-slate-300 py-12 border-t border-slate-800 text-sm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+          <div class="space-y-3">
+            <div class="flex items-center gap-2">
+              <div class="w-7 h-7 rounded-lg bg-[#1D68F2] flex items-center justify-center text-white font-bold text-base">
+                C
+              </div>
+              <span class="text-lg font-bold text-white tracking-tight">CityClick</span>
+            </div>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Deterministic B2B local feasibility intelligence for commercial operators, multi-unit franchisees, and site selectors.
+            </p>
+          </div>
+
+          <div>
+            <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-3">Launch Cities</h4>
+            <ul class="space-y-2 text-xs">
+              <li><a href="/tx/austin" class="hover:text-white transition">Austin, TX</a></li>
+              <li><a href="/fl/tampa" class="hover:text-white transition">Tampa, FL</a></li>
+              <li><a href="/id/boise" class="hover:text-white transition">Boise, ID</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-3">Underwriting Tools</h4>
+            <ul class="space-y-2 text-xs">
+              <li><a href="/tools/lease-calculator" class="hover:text-white transition">Commercial Lease Calculator</a></li>
+              <li><a href="/tx/austin" class="hover:text-white transition">NAICS Saturation Index</a></li>
+              <li><a href="/developers" class="hover:text-white transition">City Data REST API</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-3">Data Governance</h4>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Zero-hallucination policy. All demographic and municipal metrics strictly verified against US Census Bureau ACS 5-Year, BLS, and municipal charters.
+            </p>
+            <div class="mt-3 text-xs text-slate-500">
+              © {new Date().getFullYear()} CityClick, Inc. All rights reserved.
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

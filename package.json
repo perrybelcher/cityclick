@@ -1,0 +1,30 @@
+{
+  "name": "cityclick",
+  "type": "module",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "wrangler dev",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "check": "astro check",
+    "qa": "tsx scripts/qa.ts",
+    "audit:provenance": "tsx scripts/audit-provenance.ts"
+  },
+  "dependencies": {
+    "@astrojs/cloudflare": "^12.2.0",
+    "astro": "^5.4.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@tailwindcss/vite": "^4.0.9",
+    "@types/node": "^22.13.5",
+    "tailwindcss": "^4.0.9",
+    "tsx": "^4.19.3",
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.6",
+    "wrangler": "^4.151.1"
+  }
+}

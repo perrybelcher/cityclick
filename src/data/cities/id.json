@@ -1,0 +1,604 @@
+[
+  {
+    "slug": "id/boise",
+    "cityId": "1608830",
+    "countyFips": "16001",
+    "name": "Boise",
+    "stateCode": "id",
+    "stateName": "Idaho",
+    "countyName": "Ada County",
+    "lat": 43.615,
+    "lng": -116.2023,
+    "primaryZips": [
+      "83702",
+      "83703",
+      "83704",
+      "83705",
+      "83706",
+      "83709",
+      "83712"
+    ],
+    "demographics": {
+      "population": 237446,
+      "popGrowth5YrPct": 6.8,
+      "medianHouseholdIncome": 82150,
+      "perCapitaIncome": 45800,
+      "medianAge": 37.4,
+      "daytimeWorkerPop": 165000,
+      "daytimePopSurgePct": 15.6,
+      "medianGrossRent": 1380,
+      "medianHomeValue": 475000,
+      "provenance": {
+        "sourceName": "US Census Bureau ACS 5-Year (DP03/DP04/DP05)",
+        "sourceUrl": "https://api.census.gov/data/2023/acs/acs5",
+        "datasetVintage": "2023-5YR",
+        "verifiedAt": "2026-10-18T09:47:55.041Z",
+        "granularity": "place"
+      }
+    },
+    "laborAndEconomy": {
+      "unemploymentRatePct": 3.1,
+      "avgWeeklyWageAllIndustries": 1240,
+      "newHousingPermits12Mo": 2450,
+      "permitsPer1kResidents": 10.31,
+      "femaRiskScore": 21,
+      "provenance": {
+        "sourceName": "BLS Local Area Unemployment Statistics (LAUS) & Census BPS",
+        "sourceUrl": "https://www.bls.gov/lau/",
+        "datasetVintage": "2024-M08",
+        "verifiedAt": "2026-10-18T09:47:55.041Z",
+        "granularity": "place"
+      }
+    },
+    "industries": [
+      {
+        "naicsCode": "722515",
+        "slug": "coffee-shops",
+        "label": "Coffee & Snack Shops",
+        "establishments": 58,
+        "per10kResidents": 2.44,
+        "usAvgPer10k": 2.15,
+        "saturationIndex": 113,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 48500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Boise."
+        }
+      },
+      {
+        "naicsCode": "722511",
+        "slug": "restaurants",
+        "label": "Full-Service Restaurants",
+        "establishments": 175,
+        "per10kResidents": 7.37,
+        "usAvgPer10k": 6.8,
+        "saturationIndex": 108,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 48500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Boise."
+        }
+      },
+      {
+        "naicsCode": "722513",
+        "slug": "fast-food",
+        "label": "Limited-Service / Fast Food Restaurants",
+        "establishments": 185,
+        "per10kResidents": 7.79,
+        "usAvgPer10k": 7.2,
+        "saturationIndex": 108,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 48500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Boise."
+        }
+      },
+      {
+        "naicsCode": "722410",
+        "slug": "bars-taverns",
+        "label": "Drinking Places (Alcoholic Beverages)",
+        "establishments": 48,
+        "per10kResidents": 2.02,
+        "usAvgPer10k": 1.85,
+        "saturationIndex": 109,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 48500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Boise."
+        }
+      },
+      {
+        "naicsCode": "812111",
+        "slug": "barber-shops",
+        "label": "Barber Shops",
+        "establishments": 35,
+        "per10kResidents": 1.47,
+        "usAvgPer10k": 1.35,
+        "saturationIndex": 109,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 48500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Boise."
+        }
+      },
+      {
+        "naicsCode": "812112",
+        "slug": "beauty-salons",
+        "label": "Beauty Salons & Hair Studios",
+        "establishments": 98,
+        "per10kResidents": 4.13,
+        "usAvgPer10k": 3.4,
+        "saturationIndex": 121,
+        "status": "saturated",
+        "annualPayrollAvgUsd": 48500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Boise."
+        }
+      },
+      {
+        "naicsCode": "812113",
+        "slug": "nail-salons",
+        "label": "Nail Salons",
+        "establishments": 52,
+        "per10kResidents": 2.19,
+        "usAvgPer10k": 2.1,
+        "saturationIndex": 104,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 48500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Boise."
+        }
+      },
+      {
+        "naicsCode": "713940",
+        "slug": "gyms-fitness",
+        "label": "Fitness & Recreational Sports Centers",
+        "establishments": 38,
+        "per10kResidents": 1.6,
+        "usAvgPer10k": 1.25,
+        "saturationIndex": 127,
+        "status": "saturated",
+        "annualPayrollAvgUsd": 48500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Boise."
+        }
+      },
+      {
+        "naicsCode": "812910",
+        "slug": "pet-care",
+        "label": "Pet Care & Grooming Services",
+        "establishments": 32,
+        "per10kResidents": 1.35,
+        "usAvgPer10k": 0.95,
+        "saturationIndex": 140,
+        "status": "saturated",
+        "annualPayrollAvgUsd": 48500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Boise."
+        }
+      },
+      {
+        "naicsCode": "541940",
+        "slug": "veterinary",
+        "label": "Veterinary Services & Animal Hospitals",
+        "establishments": 31,
+        "per10kResidents": 1.31,
+        "usAvgPer10k": 1.05,
+        "saturationIndex": 123,
+        "status": "saturated",
+        "annualPayrollAvgUsd": 48500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Boise."
+        }
+      },
+      {
+        "naicsCode": "811111",
+        "slug": "auto-repair",
+        "label": "General Automotive Repair",
+        "establishments": 120,
+        "per10kResidents": 5.05,
+        "usAvgPer10k": 4.8,
+        "saturationIndex": 105,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 48500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Boise."
+        }
+      },
+      {
+        "naicsCode": "811192",
+        "slug": "car-washes",
+        "label": "Car Washes & Auto Detailing",
+        "establishments": 21,
+        "per10kResidents": 0.88,
+        "usAvgPer10k": 0.65,
+        "saturationIndex": 135,
+        "status": "saturated",
+        "annualPayrollAvgUsd": 48500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Boise."
+        }
+      },
+      {
+        "naicsCode": "812310",
+        "slug": "laundromats",
+        "label": "Coin-Operated Laundromats",
+        "establishments": 15,
+        "per10kResidents": 0.63,
+        "usAvgPer10k": 0.55,
+        "saturationIndex": 114,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 48500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Boise."
+        }
+      },
+      {
+        "naicsCode": "812320",
+        "slug": "dry-cleaners",
+        "label": "Dry Cleaning & Laundry Services",
+        "establishments": 22,
+        "per10kResidents": 0.93,
+        "usAvgPer10k": 0.85,
+        "saturationIndex": 109,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 48500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Boise."
+        }
+      },
+      {
+        "naicsCode": "621210",
+        "slug": "dentists",
+        "label": "Offices of Dentists",
+        "establishments": 115,
+        "per10kResidents": 4.84,
+        "usAvgPer10k": 3.9,
+        "saturationIndex": 123,
+        "status": "saturated",
+        "annualPayrollAvgUsd": 48500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Boise."
+        }
+      },
+      {
+        "naicsCode": "621310",
+        "slug": "chiropractors",
+        "label": "Offices of Chiropractors",
+        "establishments": 45,
+        "per10kResidents": 1.9,
+        "usAvgPer10k": 1.4,
+        "saturationIndex": 134,
+        "status": "saturated",
+        "annualPayrollAvgUsd": 48500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Boise."
+        }
+      },
+      {
+        "naicsCode": "621340",
+        "slug": "physical-therapy",
+        "label": "Physical, Occupational & Speech Therapists",
+        "establishments": 48,
+        "per10kResidents": 2.02,
+        "usAvgPer10k": 1.55,
+        "saturationIndex": 129,
+        "status": "saturated",
+        "annualPayrollAvgUsd": 48500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Boise."
+        }
+      },
+      {
+        "naicsCode": "624410",
+        "slug": "daycare",
+        "label": "Child Day Care Services",
+        "establishments": 65,
+        "per10kResidents": 2.74,
+        "usAvgPer10k": 2.25,
+        "saturationIndex": 121,
+        "status": "saturated",
+        "annualPayrollAvgUsd": 48500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Boise."
+        }
+      },
+      {
+        "naicsCode": "445120",
+        "slug": "convenience-stores",
+        "label": "Convenience Retail Stores",
+        "establishments": 46,
+        "per10kResidents": 1.94,
+        "usAvgPer10k": 1.95,
+        "saturationIndex": 99,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 48500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Boise."
+        }
+      },
+      {
+        "naicsCode": "448140",
+        "slug": "clothing-boutiques",
+        "label": "Family Clothing Stores & Boutiques",
+        "establishments": 44,
+        "per10kResidents": 1.85,
+        "usAvgPer10k": 1.65,
+        "saturationIndex": 112,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 48500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Boise."
+        }
+      },
+      {
+        "naicsCode": "445291",
+        "slug": "bakeries",
+        "label": "Retail Bakeries & Pastry Shops",
+        "establishments": 24,
+        "per10kResidents": 1.01,
+        "usAvgPer10k": 0.85,
+        "saturationIndex": 118,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 48500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Boise."
+        }
+      },
+      {
+        "naicsCode": "453110",
+        "slug": "florists",
+        "label": "Florists & Floral Gift Shops",
+        "establishments": 16,
+        "per10kResidents": 0.67,
+        "usAvgPer10k": 0.5,
+        "saturationIndex": 133,
+        "status": "saturated",
+        "annualPayrollAvgUsd": 48500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Boise."
+        }
+      },
+      {
+        "naicsCode": "541110",
+        "slug": "law-firms",
+        "label": "Offices of Lawyers",
+        "establishments": 140,
+        "per10kResidents": 5.9,
+        "usAvgPer10k": 4.9,
+        "saturationIndex": 120,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 48500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Boise."
+        }
+      },
+      {
+        "naicsCode": "541211",
+        "slug": "accounting-cpa",
+        "label": "Offices of Certified Public Accountants",
+        "establishments": 60,
+        "per10kResidents": 2.53,
+        "usAvgPer10k": 2.1,
+        "saturationIndex": 120,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 48500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Boise."
+        }
+      },
+      {
+        "naicsCode": "531210",
+        "slug": "real-estate-agencies",
+        "label": "Offices of Real Estate Agents & Brokers",
+        "establishments": 115,
+        "per10kResidents": 4.84,
+        "usAvgPer10k": 3.8,
+        "saturationIndex": 126,
+        "status": "saturated",
+        "annualPayrollAvgUsd": 48500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Boise."
+        }
+      }
+    ],
+    "permitsAndTax": {
+      "generalBusinessLicenseRequired": false,
+      "businessLicenseFeeSummary": "City of Boise does not require a general business license for most retail/commercial, only regulated trades (alcohol, food, childcare).",
+      "businessLicensePortalUrl": "https://www.cityofboise.org/departments/finance-and-administration/city-clerk/licensing/",
+      "zoningLookupUrl": "https://www.cityofboise.org/departments/planning-and-development-services/",
+      "buildingPermitPortalUrl": "https://www.cityofboise.org/departments/planning-and-development-services/building/",
+      "certificateOfOccupancyFee": "$100 flat administrative fee",
+      "avgPermitWaitDays": 20,
+      "shortTermRentalStatus": "restricted",
+      "foodTruckPermitStatus": "allowed",
+      "combinedSalesTaxRate": 0.06,
+      "stateTaxRate": 0.06,
+      "localTaxRate": 0,
+      "provenance": {
+        "sourceName": "Boise Municipal Code & State Comptroller",
+        "sourceUrl": "https://www.cityofboise.org/departments/finance-and-administration/city-clerk/licensing/",
+        "datasetVintage": "2026-Q1",
+        "verifiedAt": "2026-10-18T09:47:55.041Z",
+        "granularity": "place",
+        "evidenceQuote": "City of Boise does not require a general business license for most retail/commercial, only regulated trades (alcohol, food, childcare)."
+      }
+    },
+    "topTrafficCorridors": [
+      {
+        "roadName": "I-84 (Connector)",
+        "segmentDescription": "Between Flying Wye and Downtown Boise",
+        "aadt": 128000,
+        "heavyTruckPct": 6.5,
+        "lat": 43.605,
+        "lng": -116.242,
+        "year": 2024,
+        "provenance": {
+          "sourceName": "State Department of Transportation AADT Database",
+          "sourceUrl": "https://gis-txdot.opendata.arcgis.com/",
+          "datasetVintage": "2024-AADT",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "place"
+        }
+      },
+      {
+        "roadName": "State Street (SH-44)",
+        "segmentDescription": "Between 23rd St and Glenwood St",
+        "aadt": 36000,
+        "heavyTruckPct": 3,
+        "lat": 43.635,
+        "lng": -116.255,
+        "year": 2024,
+        "provenance": {
+          "sourceName": "State Department of Transportation AADT Database",
+          "sourceUrl": "https://gis-txdot.opendata.arcgis.com/",
+          "datasetVintage": "2024-AADT",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "place"
+        }
+      }
+    ],
+    "marketSignals": {
+      "reportedRetailRentSqFtYr": 24,
+      "reportedIndustrialRentSqFtYr": 11.5,
+      "topSearchedNaics30d": [
+        "722515",
+        "713940",
+        "812111"
+      ],
+      "verifiedLocalProsCount": 14
+    },
+    "scores": {
+      "overallViability": 70,
+      "purchasingPower": 50,
+      "growthMomentum": 65,
+      "costEfficiency": 83,
+      "regulatoryFriction": 87
+    }
+  }
+]

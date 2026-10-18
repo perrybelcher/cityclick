@@ -1,0 +1,278 @@
+---
+import Layout from '../layouts/Layout.astro';
+import manifest from '../data/index-manifest.json';
+---
+
+<Layout title="CityClick — Your next business. The right city.">
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-b from-[#EDF4FC] to-white pt-16 pb-20 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <!-- Left Column: Copy & Search -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-xs font-semibold text-[#1D68F2]">
+            <span class="w-2 h-2 rounded-full bg-[#1D68F2] animate-pulse"></span>
+            Verified Municipal & Census Data
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#152438] tracking-tight leading-[1.1]">
+            Your next business.<br />
+            <span class="text-[#1D68F2]">The right city.</span>
+          </h1>
+
+          <p class="text-lg text-slate-600 max-w-2xl leading-relaxed">
+            Local intelligence on demographics, permits, commercial asking rents, and NAICS competition to pick winning retail and service locations.
+          </p>
+
+          <!-- Search Box -->
+          <div class="bg-white p-2 sm:p-3 rounded-2xl shadow-xl border border-slate-200 max-w-xl">
+            <div class="flex items-center gap-3">
+              <div class="pl-3 text-slate-400">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+              </div>
+              <input
+                id="city-search"
+                type="text"
+                placeholder="Search city, state, or ZIP (e.g. Austin, Tampa, 78701)..."
+                class="flex-1 border-0 focus:ring-0 text-slate-800 placeholder-slate-400 text-sm sm:text-base outline-none bg-transparent"
+              />
+              <a
+                href="/tx/austin"
+                class="px-5 py-3 rounded-xl bg-[#1D68F2] hover:bg-[#1555C7] text-white text-sm font-semibold transition flex items-center gap-1 shrink-0"
+              >
+                Explore City
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Jump Tags -->
+          <div class="flex items-center gap-2 text-xs text-slate-500 pt-1">
+            <span class="font-medium text-slate-400">Popular hubs:</span>
+            <a href="/tx/austin" class="px-2.5 py-1 rounded-md bg-white border border-slate-200 hover:border-blue-400 hover:text-[#1D68F2] transition">Austin, TX</a>
+            <a href="/fl/tampa" class="px-2.5 py-1 rounded-md bg-white border border-slate-200 hover:border-blue-400 hover:text-[#1D68F2] transition">Tampa, FL</a>
+            <a href="/id/boise" class="px-2.5 py-1 rounded-md bg-white border border-slate-200 hover:border-blue-400 hover:text-[#1D68F2] transition">Boise, ID</a>
+          </div>
+        </div>
+
+        <!-- Right Column: Interactive Visual Map Preview Card -->
+        <div class="lg:col-span-5">
+          <div class="relative bg-white rounded-3xl p-6 shadow-2xl border border-slate-200 overflow-hidden">
+            <div class="flex items-center justify-between mb-4 pb-3 border-b border-slate-100">
+              <div class="flex items-center gap-2">
+                <span class="w-3 h-3 rounded-full bg-emerald-500"></span>
+                <span class="text-xs font-bold uppercase tracking-wider text-slate-500">Live Feasibility Signal</span>
+              </div>
+              <span class="text-xs font-semibold px-2 py-0.5 rounded bg-blue-50 text-[#1D68F2] border border-blue-200">
+                Austin Metro
+              </span>
+            </div>
+
+            <!-- Stylized Austin Geographic Card -->
+            <div class="bg-gradient-to-br from-slate-900 to-[#152438] rounded-2xl p-6 text-white space-y-4 shadow-inner">
+              <div class="flex justify-between items-start">
+                <div>
+                  <h3 class="text-2xl font-bold">Austin, Texas</h3>
+                  <p class="text-xs text-slate-300">Travis County · FIPS 4805000</p>
+                </div>
+                <div class="text-right">
+                  <div class="text-xs text-slate-300 uppercase">Viability Score</div>
+                  <div class="text-3xl font-extrabold text-blue-400">82<span class="text-xs text-slate-400 font-normal">/100</span></div>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-2 gap-3 pt-2">
+                <div class="bg-white/10 rounded-xl p-3 backdrop-blur-sm">
+                  <div class="text-[11px] text-slate-300">Population</div>
+                  <div class="text-lg font-bold">980K</div>
+                  <div class="text-[10px] text-emerald-400 font-medium">+8.4% 5-Yr Growth</div>
+                </div>
+                <div class="bg-white/10 rounded-xl p-3 backdrop-blur-sm">
+                  <div class="text-[11px] text-slate-300">Median Income</div>
+                  <div class="text-lg font-bold">$92.2K</div>
+                  <div class="text-[10px] text-slate-300 font-medium">US Top 15%</div>
+                </div>
+                <div class="bg-white/10 rounded-xl p-3 backdrop-blur-sm">
+                  <div class="text-[11px] text-slate-300">Retail Asking Rent</div>
+                  <div class="text-lg font-bold">$32.00 <span class="text-xs font-normal">/sqft</span></div>
+                  <div class="text-[10px] text-slate-300 font-medium">NNN +$6.50 CAM</div>
+                </div>
+                <div class="bg-white/10 rounded-xl p-3 backdrop-blur-sm">
+                  <div class="text-[11px] text-slate-300">Sales Tax Rate</div>
+                  <div class="text-lg font-bold">8.25%</div>
+                  <div class="text-[10px] text-slate-300 font-medium">6.25% State + 2.0% Local</div>
+                </div>
+              </div>
+
+              <a
+                href="/tx/austin"
+                class="block w-full text-center py-2.5 rounded-xl bg-[#1D68F2] hover:bg-blue-600 font-semibold text-sm transition"
+              >
+                Inspect Austin Full Dossier →
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Put Your Next Location On The Shortlist -->
+  <section class="py-16 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-10">
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-[#152438] tracking-tight">
+            Put your next location on the shortlist
+          </h2>
+          <p class="text-sm text-slate-500 mt-1">
+            Compare demographic fundamentals, tax burdens, and underserved NAICS categories side by side.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {manifest.map((city) => (
+          <div class="bg-[#F8FAFC] rounded-2xl p-6 border border-slate-200 hover:border-[#1D68F2] hover:shadow-lg transition flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-start mb-4">
+                <div>
+                  <h3 class="text-xl font-bold text-[#152438]">{city.name}, {city.stateCode.toUpperCase()}</h3>
+                  <span class="text-xs text-slate-500">{city.stateName}</span>
+                </div>
+                <div class="text-right">
+                  <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-bold bg-blue-100 text-[#1D68F2]">
+                    Score: {city.overallViability}
+                  </span>
+                </div>
+              </div>
+
+              <div class="space-y-3 text-sm py-3 border-y border-slate-200 mb-4">
+                <div class="flex justify-between">
+                  <span class="text-slate-500">Population</span>
+                  <span class="font-semibold text-slate-800">{(city.population / 1000).toFixed(0)}K</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-slate-500">5-Yr Growth</span>
+                  <span class="font-semibold text-emerald-600">+{city.popGrowth5YrPct}%</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-slate-500">Median Household Income</span>
+                  <span class="font-semibold text-slate-800">${(city.medianHouseholdIncome / 1000).toFixed(1)}K</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-slate-500">Retail Asking Rent</span>
+                  <span class="font-semibold text-slate-800">${city.reportedRetailRentSqFtYr ? `${city.reportedRetailRentSqFtYr.toFixed(2)}/sqft` : 'N/A'}</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-slate-500">Combined Sales Tax</span>
+                  <span class="font-semibold text-slate-800">{(city.combinedSalesTaxRate * 100).toFixed(2)}%</span>
+                </div>
+              </div>
+
+              <div class="mb-4">
+                <div class="text-xs font-medium text-slate-400 uppercase tracking-wider mb-1.5">Top Underserved Trades:</div>
+                <div class="flex flex-wrap gap-1.5">
+                  {city.topUnderservedNaics.map((trade: string) => (
+                    <span class="px-2 py-0.5 rounded text-xs bg-emerald-50 text-emerald-700 border border-emerald-200">
+                      {trade}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <a
+              href={`/${city.slug}`}
+              class="w-full text-center py-2.5 rounded-xl bg-white border border-slate-300 hover:border-[#1D68F2] hover:bg-[#1D68F2] hover:text-white text-slate-800 font-semibold text-sm transition"
+            >
+              Analyze {city.name} Market →
+            </a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Calculators Feature -->
+  <section class="py-16 bg-[#EDF4FC]/50 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mb-10">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-[#152438] tracking-tight">
+          Tools to underwrite your next lease
+        </h2>
+        <p class="text-sm text-slate-600 mt-2">
+          Calculate retail breakeven customer traffic, NNN lease pass-throughs, and labor burdens using live local data.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+          <div class="w-10 h-10 rounded-xl bg-blue-100 text-[#1D68F2] flex items-center justify-center font-bold">
+            $
+          </div>
+          <h3 class="text-xl font-bold text-[#152438]">Commercial Lease & Breakeven Engine</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Plug in square footage, asking base rent, CAM NNN rates, and target ticket size to know the exact daily customer volume needed to break even.
+          </p>
+          <a href="/tools/lease-calculator" class="inline-flex items-center text-sm font-semibold text-[#1D68F2] hover:text-blue-700">
+            Open Lease Calculator →
+          </a>
+        </div>
+
+        <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+          <div class="w-10 h-10 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center font-bold">
+            %
+          </div>
+          <h3 class="text-xl font-bold text-[#152438]">NAICS Saturation & Gap Analysis</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Scan 25 small-business categories across any US city. We use Bayesian shrinkage against national baselines so you never enter an oversaturated market.
+          </p>
+          <a href="/tx/austin#market" class="inline-flex items-center text-sm font-semibold text-indigo-600 hover:text-indigo-800">
+            View Austin Market Density →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Developer API Teaser -->
+  <section class="py-16 bg-[#152438] text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-6 space-y-4">
+          <span class="text-xs uppercase font-bold tracking-wider text-blue-400">Developer Platform</span>
+          <h2 class="text-3xl font-extrabold tracking-tight">Access City Data via REST API</h2>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Integrate live municipal demographics, sales tax rates, and NAICS establishment densities directly into your franchise underwriting software or commercial CRM.
+          </p>
+          <div class="pt-2">
+            <a href="/developers" class="inline-flex items-center px-5 py-2.5 rounded-xl bg-[#1D68F2] hover:bg-blue-600 font-semibold text-sm transition text-white">
+              Request API Keys
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6">
+          <div class="bg-slate-900 rounded-2xl p-5 border border-slate-800 font-mono text-xs text-slate-300 shadow-2xl">
+            <div class="flex items-center justify-between pb-3 mb-3 border-b border-slate-800 text-slate-500">
+              <span>GET /api/v1/cities/tx/austin</span>
+              <span class="text-emerald-400">200 OK</span>
+            </div>
+            <pre class="overflow-x-auto text-[11px] leading-relaxed text-blue-300">
+&#123;
+  "slug": "tx/austin",
+  "name": "Austin",
+  "population": 979882,
+  "medianHouseholdIncome": 92248,
+  "viabilityScore": 82,
+  "askingRentSqFtYr": 32.00,
+  "permitAvgWaitDays": 32
+&#125;</pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

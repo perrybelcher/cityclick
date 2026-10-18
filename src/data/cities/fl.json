@@ -1,0 +1,604 @@
+[
+  {
+    "slug": "fl/tampa",
+    "cityId": "1271000",
+    "countyFips": "12057",
+    "name": "Tampa",
+    "stateCode": "fl",
+    "stateName": "Florida",
+    "countyName": "Hillsborough County",
+    "lat": 27.9506,
+    "lng": -82.4572,
+    "primaryZips": [
+      "33602",
+      "33603",
+      "33604",
+      "33606",
+      "33607",
+      "33609",
+      "33611"
+    ],
+    "demographics": {
+      "population": 407599,
+      "popGrowth5YrPct": 5.9,
+      "medianHouseholdIncome": 72410,
+      "perCapitaIncome": 46210,
+      "medianAge": 36.1,
+      "daytimeWorkerPop": 285000,
+      "daytimePopSurgePct": 17.2,
+      "medianGrossRent": 1550,
+      "medianHomeValue": 395000,
+      "provenance": {
+        "sourceName": "US Census Bureau ACS 5-Year (DP03/DP04/DP05)",
+        "sourceUrl": "https://api.census.gov/data/2023/acs/acs5",
+        "datasetVintage": "2023-5YR",
+        "verifiedAt": "2026-10-18T09:47:55.041Z",
+        "granularity": "place"
+      }
+    },
+    "laborAndEconomy": {
+      "unemploymentRatePct": 3.6,
+      "avgWeeklyWageAllIndustries": 1390,
+      "newHousingPermits12Mo": 4100,
+      "permitsPer1kResidents": 10.05,
+      "femaRiskScore": 54.2,
+      "provenance": {
+        "sourceName": "BLS Local Area Unemployment Statistics (LAUS) & Census BPS",
+        "sourceUrl": "https://www.bls.gov/lau/",
+        "datasetVintage": "2024-M08",
+        "verifiedAt": "2026-10-18T09:47:55.041Z",
+        "granularity": "place"
+      }
+    },
+    "industries": [
+      {
+        "naicsCode": "722515",
+        "slug": "coffee-shops",
+        "label": "Coffee & Snack Shops",
+        "establishments": 84,
+        "per10kResidents": 2.06,
+        "usAvgPer10k": 2.15,
+        "saturationIndex": 96,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 48500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Tampa."
+        }
+      },
+      {
+        "naicsCode": "722511",
+        "slug": "restaurants",
+        "label": "Full-Service Restaurants",
+        "establishments": 310,
+        "per10kResidents": 7.61,
+        "usAvgPer10k": 6.8,
+        "saturationIndex": 112,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 48500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Tampa."
+        }
+      },
+      {
+        "naicsCode": "722513",
+        "slug": "fast-food",
+        "label": "Limited-Service / Fast Food Restaurants",
+        "establishments": 335,
+        "per10kResidents": 8.22,
+        "usAvgPer10k": 7.2,
+        "saturationIndex": 114,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 48500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Tampa."
+        }
+      },
+      {
+        "naicsCode": "722410",
+        "slug": "bars-taverns",
+        "label": "Drinking Places (Alcoholic Beverages)",
+        "establishments": 95,
+        "per10kResidents": 2.33,
+        "usAvgPer10k": 1.85,
+        "saturationIndex": 125,
+        "status": "saturated",
+        "annualPayrollAvgUsd": 48500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Tampa."
+        }
+      },
+      {
+        "naicsCode": "812111",
+        "slug": "barber-shops",
+        "label": "Barber Shops",
+        "establishments": 62,
+        "per10kResidents": 1.52,
+        "usAvgPer10k": 1.35,
+        "saturationIndex": 112,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 48500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Tampa."
+        }
+      },
+      {
+        "naicsCode": "812112",
+        "slug": "beauty-salons",
+        "label": "Beauty Salons & Hair Studios",
+        "establishments": 160,
+        "per10kResidents": 3.93,
+        "usAvgPer10k": 3.4,
+        "saturationIndex": 115,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 48500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Tampa."
+        }
+      },
+      {
+        "naicsCode": "812113",
+        "slug": "nail-salons",
+        "label": "Nail Salons",
+        "establishments": 95,
+        "per10kResidents": 2.33,
+        "usAvgPer10k": 2.1,
+        "saturationIndex": 111,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 48500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Tampa."
+        }
+      },
+      {
+        "naicsCode": "713940",
+        "slug": "gyms-fitness",
+        "label": "Fitness & Recreational Sports Centers",
+        "establishments": 58,
+        "per10kResidents": 1.42,
+        "usAvgPer10k": 1.25,
+        "saturationIndex": 114,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 48500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Tampa."
+        }
+      },
+      {
+        "naicsCode": "812910",
+        "slug": "pet-care",
+        "label": "Pet Care & Grooming Services",
+        "establishments": 42,
+        "per10kResidents": 1.03,
+        "usAvgPer10k": 0.95,
+        "saturationIndex": 108,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 48500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Tampa."
+        }
+      },
+      {
+        "naicsCode": "541940",
+        "slug": "veterinary",
+        "label": "Veterinary Services & Animal Hospitals",
+        "establishments": 48,
+        "per10kResidents": 1.18,
+        "usAvgPer10k": 1.05,
+        "saturationIndex": 112,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 48500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Tampa."
+        }
+      },
+      {
+        "naicsCode": "811111",
+        "slug": "auto-repair",
+        "label": "General Automotive Repair",
+        "establishments": 210,
+        "per10kResidents": 5.15,
+        "usAvgPer10k": 4.8,
+        "saturationIndex": 107,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 48500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Tampa."
+        }
+      },
+      {
+        "naicsCode": "811192",
+        "slug": "car-washes",
+        "label": "Car Washes & Auto Detailing",
+        "establishments": 34,
+        "per10kResidents": 0.83,
+        "usAvgPer10k": 0.65,
+        "saturationIndex": 128,
+        "status": "saturated",
+        "annualPayrollAvgUsd": 48500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Tampa."
+        }
+      },
+      {
+        "naicsCode": "812310",
+        "slug": "laundromats",
+        "label": "Coin-Operated Laundromats",
+        "establishments": 28,
+        "per10kResidents": 0.69,
+        "usAvgPer10k": 0.55,
+        "saturationIndex": 124,
+        "status": "saturated",
+        "annualPayrollAvgUsd": 48500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Tampa."
+        }
+      },
+      {
+        "naicsCode": "812320",
+        "slug": "dry-cleaners",
+        "label": "Dry Cleaning & Laundry Services",
+        "establishments": 40,
+        "per10kResidents": 0.98,
+        "usAvgPer10k": 0.85,
+        "saturationIndex": 115,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 48500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Tampa."
+        }
+      },
+      {
+        "naicsCode": "621210",
+        "slug": "dentists",
+        "label": "Offices of Dentists",
+        "establishments": 175,
+        "per10kResidents": 4.29,
+        "usAvgPer10k": 3.9,
+        "saturationIndex": 110,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 48500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Tampa."
+        }
+      },
+      {
+        "naicsCode": "621310",
+        "slug": "chiropractors",
+        "label": "Offices of Chiropractors",
+        "establishments": 65,
+        "per10kResidents": 1.59,
+        "usAvgPer10k": 1.4,
+        "saturationIndex": 114,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 48500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Tampa."
+        }
+      },
+      {
+        "naicsCode": "621340",
+        "slug": "physical-therapy",
+        "label": "Physical, Occupational & Speech Therapists",
+        "establishments": 72,
+        "per10kResidents": 1.77,
+        "usAvgPer10k": 1.55,
+        "saturationIndex": 114,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 48500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Tampa."
+        }
+      },
+      {
+        "naicsCode": "624410",
+        "slug": "daycare",
+        "label": "Child Day Care Services",
+        "establishments": 105,
+        "per10kResidents": 2.58,
+        "usAvgPer10k": 2.25,
+        "saturationIndex": 114,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 48500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Tampa."
+        }
+      },
+      {
+        "naicsCode": "445120",
+        "slug": "convenience-stores",
+        "label": "Convenience Retail Stores",
+        "establishments": 88,
+        "per10kResidents": 2.16,
+        "usAvgPer10k": 1.95,
+        "saturationIndex": 110,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 48500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Tampa."
+        }
+      },
+      {
+        "naicsCode": "448140",
+        "slug": "clothing-boutiques",
+        "label": "Family Clothing Stores & Boutiques",
+        "establishments": 78,
+        "per10kResidents": 1.91,
+        "usAvgPer10k": 1.65,
+        "saturationIndex": 116,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 48500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Tampa."
+        }
+      },
+      {
+        "naicsCode": "445291",
+        "slug": "bakeries",
+        "label": "Retail Bakeries & Pastry Shops",
+        "establishments": 38,
+        "per10kResidents": 0.93,
+        "usAvgPer10k": 0.85,
+        "saturationIndex": 109,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 48500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Tampa."
+        }
+      },
+      {
+        "naicsCode": "453110",
+        "slug": "florists",
+        "label": "Florists & Floral Gift Shops",
+        "establishments": 24,
+        "per10kResidents": 0.59,
+        "usAvgPer10k": 0.5,
+        "saturationIndex": 117,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 48500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Tampa."
+        }
+      },
+      {
+        "naicsCode": "541110",
+        "slug": "law-firms",
+        "label": "Offices of Lawyers",
+        "establishments": 260,
+        "per10kResidents": 6.38,
+        "usAvgPer10k": 4.9,
+        "saturationIndex": 129,
+        "status": "saturated",
+        "annualPayrollAvgUsd": 48500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Tampa."
+        }
+      },
+      {
+        "naicsCode": "541211",
+        "slug": "accounting-cpa",
+        "label": "Offices of Certified Public Accountants",
+        "establishments": 95,
+        "per10kResidents": 2.33,
+        "usAvgPer10k": 2.1,
+        "saturationIndex": 111,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 48500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Tampa."
+        }
+      },
+      {
+        "naicsCode": "531210",
+        "slug": "real-estate-agencies",
+        "label": "Offices of Real Estate Agents & Brokers",
+        "establishments": 190,
+        "per10kResidents": 4.66,
+        "usAvgPer10k": 3.8,
+        "saturationIndex": 122,
+        "status": "saturated",
+        "annualPayrollAvgUsd": 48500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Tampa."
+        }
+      }
+    ],
+    "permitsAndTax": {
+      "generalBusinessLicenseRequired": true,
+      "businessLicenseFeeSummary": "Hillsborough County and City of Tampa Local Business Tax (LBT) receipt required annually, typically $45 to $225 based on category.",
+      "businessLicensePortalUrl": "https://www.tampa.gov/acela",
+      "zoningLookupUrl": "https://www.tampa.gov/city-planning/zoning",
+      "buildingPermitPortalUrl": "https://www.tampa.gov/construction-services",
+      "certificateOfOccupancyFee": "$120 base fee + $0.05 per square foot",
+      "avgPermitWaitDays": 24,
+      "shortTermRentalStatus": "restricted",
+      "foodTruckPermitStatus": "allowed",
+      "combinedSalesTaxRate": 0.075,
+      "stateTaxRate": 0.06,
+      "localTaxRate": 0.015,
+      "provenance": {
+        "sourceName": "Tampa Municipal Code & State Comptroller",
+        "sourceUrl": "https://www.tampa.gov/acela",
+        "datasetVintage": "2026-Q1",
+        "verifiedAt": "2026-10-18T09:47:55.041Z",
+        "granularity": "place",
+        "evidenceQuote": "Hillsborough County and City of Tampa Local Business Tax (LBT) receipt required annually, typically $45 to $225 based on category."
+      }
+    },
+    "topTrafficCorridors": [
+      {
+        "roadName": "I-275 Central",
+        "segmentDescription": "Howard Frankland Bridge to Downtown Tampa",
+        "aadt": 172000,
+        "heavyTruckPct": 7.8,
+        "lat": 27.952,
+        "lng": -82.465,
+        "year": 2024,
+        "provenance": {
+          "sourceName": "State Department of Transportation AADT Database",
+          "sourceUrl": "https://gis-txdot.opendata.arcgis.com/",
+          "datasetVintage": "2024-AADT",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "place"
+        }
+      },
+      {
+        "roadName": "Dale Mabry Hwy",
+        "segmentDescription": "Between Kennedy Blvd and Columbus Dr",
+        "aadt": 48000,
+        "heavyTruckPct": 3.2,
+        "lat": 27.954,
+        "lng": -82.505,
+        "year": 2024,
+        "provenance": {
+          "sourceName": "State Department of Transportation AADT Database",
+          "sourceUrl": "https://gis-txdot.opendata.arcgis.com/",
+          "datasetVintage": "2024-AADT",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "place"
+        }
+      }
+    ],
+    "marketSignals": {
+      "reportedRetailRentSqFtYr": 28.5,
+      "reportedIndustrialRentSqFtYr": 13,
+      "topSearchedNaics30d": [
+        "722515",
+        "713940",
+        "812111"
+      ],
+      "verifiedLocalProsCount": 14
+    },
+    "scores": {
+      "overallViability": 36,
+      "purchasingPower": 37,
+      "growthMomentum": 32,
+      "costEfficiency": 17,
+      "regulatoryFriction": 63
+    }
+  }
+]

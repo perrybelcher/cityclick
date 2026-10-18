@@ -1,0 +1,622 @@
+[
+  {
+    "slug": "tx/austin",
+    "cityId": "4805000",
+    "countyFips": "48453",
+    "name": "Austin",
+    "stateCode": "tx",
+    "stateName": "Texas",
+    "countyName": "Travis County",
+    "lat": 30.2672,
+    "lng": -97.7431,
+    "primaryZips": [
+      "78701",
+      "78702",
+      "78703",
+      "78704",
+      "78705",
+      "78741",
+      "78745",
+      "78751",
+      "78758"
+    ],
+    "demographics": {
+      "population": 979882,
+      "popGrowth5YrPct": 8.4,
+      "medianHouseholdIncome": 92248,
+      "perCapitaIncome": 56140,
+      "medianAge": 34.2,
+      "daytimeWorkerPop": 620400,
+      "daytimePopSurgePct": 8.2,
+      "medianGrossRent": 1680,
+      "medianHomeValue": 545000,
+      "provenance": {
+        "sourceName": "US Census Bureau ACS 5-Year (DP03/DP04/DP05)",
+        "sourceUrl": "https://api.census.gov/data/2023/acs/acs5",
+        "datasetVintage": "2023-5YR",
+        "verifiedAt": "2026-10-18T09:47:55.041Z",
+        "granularity": "place"
+      }
+    },
+    "laborAndEconomy": {
+      "unemploymentRatePct": 3.4,
+      "avgWeeklyWageAllIndustries": 1640,
+      "newHousingPermits12Mo": 8850,
+      "permitsPer1kResidents": 9.03,
+      "femaRiskScore": 28.4,
+      "provenance": {
+        "sourceName": "BLS Local Area Unemployment Statistics (LAUS) & Census BPS",
+        "sourceUrl": "https://www.bls.gov/lau/",
+        "datasetVintage": "2024-M08",
+        "verifiedAt": "2026-10-18T09:47:55.041Z",
+        "granularity": "place"
+      }
+    },
+    "industries": [
+      {
+        "naicsCode": "722515",
+        "slug": "coffee-shops",
+        "label": "Coffee & Snack Shops",
+        "establishments": 218,
+        "per10kResidents": 2.22,
+        "usAvgPer10k": 2.15,
+        "saturationIndex": 103,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 48500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Austin."
+        }
+      },
+      {
+        "naicsCode": "722511",
+        "slug": "restaurants",
+        "label": "Full-Service Restaurants",
+        "establishments": 740,
+        "per10kResidents": 7.55,
+        "usAvgPer10k": 6.8,
+        "saturationIndex": 111,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 48500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Austin."
+        }
+      },
+      {
+        "naicsCode": "722513",
+        "slug": "fast-food",
+        "label": "Limited-Service / Fast Food Restaurants",
+        "establishments": 790,
+        "per10kResidents": 8.06,
+        "usAvgPer10k": 7.2,
+        "saturationIndex": 112,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 48500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Austin."
+        }
+      },
+      {
+        "naicsCode": "722410",
+        "slug": "bars-taverns",
+        "label": "Drinking Places (Alcoholic Beverages)",
+        "establishments": 260,
+        "per10kResidents": 2.65,
+        "usAvgPer10k": 1.85,
+        "saturationIndex": 143,
+        "status": "saturated",
+        "annualPayrollAvgUsd": 48500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Austin."
+        }
+      },
+      {
+        "naicsCode": "812111",
+        "slug": "barber-shops",
+        "label": "Barber Shops",
+        "establishments": 110,
+        "per10kResidents": 1.12,
+        "usAvgPer10k": 1.35,
+        "saturationIndex": 83,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 48500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Austin."
+        }
+      },
+      {
+        "naicsCode": "812112",
+        "slug": "beauty-salons",
+        "label": "Beauty Salons & Hair Studios",
+        "establishments": 380,
+        "per10kResidents": 3.88,
+        "usAvgPer10k": 3.4,
+        "saturationIndex": 114,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 48500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Austin."
+        }
+      },
+      {
+        "naicsCode": "812113",
+        "slug": "nail-salons",
+        "label": "Nail Salons",
+        "establishments": 210,
+        "per10kResidents": 2.14,
+        "usAvgPer10k": 2.1,
+        "saturationIndex": 102,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 48500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Austin."
+        }
+      },
+      {
+        "naicsCode": "713940",
+        "slug": "gyms-fitness",
+        "label": "Fitness & Recreational Sports Centers",
+        "establishments": 155,
+        "per10kResidents": 1.58,
+        "usAvgPer10k": 1.25,
+        "saturationIndex": 126,
+        "status": "saturated",
+        "annualPayrollAvgUsd": 48500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Austin."
+        }
+      },
+      {
+        "naicsCode": "812910",
+        "slug": "pet-care",
+        "label": "Pet Care & Grooming Services",
+        "establishments": 115,
+        "per10kResidents": 1.17,
+        "usAvgPer10k": 0.95,
+        "saturationIndex": 123,
+        "status": "saturated",
+        "annualPayrollAvgUsd": 48500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Austin."
+        }
+      },
+      {
+        "naicsCode": "541940",
+        "slug": "veterinary",
+        "label": "Veterinary Services & Animal Hospitals",
+        "establishments": 120,
+        "per10kResidents": 1.22,
+        "usAvgPer10k": 1.05,
+        "saturationIndex": 116,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 48500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Austin."
+        }
+      },
+      {
+        "naicsCode": "811111",
+        "slug": "auto-repair",
+        "label": "General Automotive Repair",
+        "establishments": 390,
+        "per10kResidents": 3.98,
+        "usAvgPer10k": 4.8,
+        "saturationIndex": 83,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 48500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Austin."
+        }
+      },
+      {
+        "naicsCode": "811192",
+        "slug": "car-washes",
+        "label": "Car Washes & Auto Detailing",
+        "establishments": 75,
+        "per10kResidents": 0.77,
+        "usAvgPer10k": 0.65,
+        "saturationIndex": 118,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 48500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Austin."
+        }
+      },
+      {
+        "naicsCode": "812310",
+        "slug": "laundromats",
+        "label": "Coin-Operated Laundromats",
+        "establishments": 48,
+        "per10kResidents": 0.49,
+        "usAvgPer10k": 0.55,
+        "saturationIndex": 89,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 48500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Austin."
+        }
+      },
+      {
+        "naicsCode": "812320",
+        "slug": "dry-cleaners",
+        "label": "Dry Cleaning & Laundry Services",
+        "establishments": 85,
+        "per10kResidents": 0.87,
+        "usAvgPer10k": 0.85,
+        "saturationIndex": 102,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 48500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Austin."
+        }
+      },
+      {
+        "naicsCode": "621210",
+        "slug": "dentists",
+        "label": "Offices of Dentists",
+        "establishments": 410,
+        "per10kResidents": 4.18,
+        "usAvgPer10k": 3.9,
+        "saturationIndex": 107,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 48500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Austin."
+        }
+      },
+      {
+        "naicsCode": "621310",
+        "slug": "chiropractors",
+        "label": "Offices of Chiropractors",
+        "establishments": 160,
+        "per10kResidents": 1.63,
+        "usAvgPer10k": 1.4,
+        "saturationIndex": 116,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 48500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Austin."
+        }
+      },
+      {
+        "naicsCode": "621340",
+        "slug": "physical-therapy",
+        "label": "Physical, Occupational & Speech Therapists",
+        "establishments": 175,
+        "per10kResidents": 1.79,
+        "usAvgPer10k": 1.55,
+        "saturationIndex": 115,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 48500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Austin."
+        }
+      },
+      {
+        "naicsCode": "624410",
+        "slug": "daycare",
+        "label": "Child Day Care Services",
+        "establishments": 230,
+        "per10kResidents": 2.35,
+        "usAvgPer10k": 2.25,
+        "saturationIndex": 104,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 48500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Austin."
+        }
+      },
+      {
+        "naicsCode": "445120",
+        "slug": "convenience-stores",
+        "label": "Convenience Retail Stores",
+        "establishments": 180,
+        "per10kResidents": 1.84,
+        "usAvgPer10k": 1.95,
+        "saturationIndex": 94,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 48500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Austin."
+        }
+      },
+      {
+        "naicsCode": "448140",
+        "slug": "clothing-boutiques",
+        "label": "Family Clothing Stores & Boutiques",
+        "establishments": 195,
+        "per10kResidents": 1.99,
+        "usAvgPer10k": 1.65,
+        "saturationIndex": 120,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 48500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Austin."
+        }
+      },
+      {
+        "naicsCode": "445291",
+        "slug": "bakeries",
+        "label": "Retail Bakeries & Pastry Shops",
+        "establishments": 95,
+        "per10kResidents": 0.97,
+        "usAvgPer10k": 0.85,
+        "saturationIndex": 114,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 48500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Austin."
+        }
+      },
+      {
+        "naicsCode": "453110",
+        "slug": "florists",
+        "label": "Florists & Floral Gift Shops",
+        "establishments": 52,
+        "per10kResidents": 0.53,
+        "usAvgPer10k": 0.5,
+        "saturationIndex": 106,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 48500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Austin."
+        }
+      },
+      {
+        "naicsCode": "541110",
+        "slug": "law-firms",
+        "label": "Offices of Lawyers",
+        "establishments": 610,
+        "per10kResidents": 6.23,
+        "usAvgPer10k": 4.9,
+        "saturationIndex": 127,
+        "status": "saturated",
+        "annualPayrollAvgUsd": 48500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Austin."
+        }
+      },
+      {
+        "naicsCode": "541211",
+        "slug": "accounting-cpa",
+        "label": "Offices of Certified Public Accountants",
+        "establishments": 240,
+        "per10kResidents": 2.45,
+        "usAvgPer10k": 2.1,
+        "saturationIndex": 116,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 48500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Austin."
+        }
+      },
+      {
+        "naicsCode": "531210",
+        "slug": "real-estate-agencies",
+        "label": "Offices of Real Estate Agents & Brokers",
+        "establishments": 440,
+        "per10kResidents": 4.49,
+        "usAvgPer10k": 3.8,
+        "saturationIndex": 118,
+        "status": "balanced",
+        "annualPayrollAvgUsd": 48500,
+        "provenance": {
+          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
+          "sourceUrl": "https://api.census.gov/data/zbp",
+          "datasetVintage": "2022-ZBP",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Austin."
+        }
+      }
+    ],
+    "permitsAndTax": {
+      "generalBusinessLicenseRequired": false,
+      "businessLicenseFeeSummary": "No general city business license required. State of Texas franchise tax registration and local health/zoning certificates apply.",
+      "businessLicensePortalUrl": "https://www.austintexas.gov/department/development-services",
+      "zoningLookupUrl": "https://www.austintexas.gov/page/property-profile",
+      "buildingPermitPortalUrl": "https://www.austintexas.gov/department/permitting",
+      "certificateOfOccupancyFee": "$195 standard application fee + inspection fees based on square footage",
+      "avgPermitWaitDays": 32,
+      "shortTermRentalStatus": "restricted",
+      "foodTruckPermitStatus": "allowed",
+      "combinedSalesTaxRate": 0.0825,
+      "stateTaxRate": 0.0625,
+      "localTaxRate": 0.02,
+      "provenance": {
+        "sourceName": "Austin Municipal Code & State Comptroller",
+        "sourceUrl": "https://www.austintexas.gov/department/development-services",
+        "datasetVintage": "2026-Q1",
+        "verifiedAt": "2026-10-18T09:47:55.041Z",
+        "granularity": "place",
+        "evidenceQuote": "No general city business license required. State of Texas franchise tax registration and local health/zoning certificates apply."
+      }
+    },
+    "topTrafficCorridors": [
+      {
+        "roadName": "IH-35 Central",
+        "segmentDescription": "Between US-290 and SH-71 / Ben White",
+        "aadt": 215000,
+        "heavyTruckPct": 9.2,
+        "lat": 30.272,
+        "lng": -97.734,
+        "year": 2024,
+        "provenance": {
+          "sourceName": "State Department of Transportation AADT Database",
+          "sourceUrl": "https://gis-txdot.opendata.arcgis.com/",
+          "datasetVintage": "2024-AADT",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "place"
+        }
+      },
+      {
+        "roadName": "Loop 1 (Mopac)",
+        "segmentDescription": "Between Enfield Rd and US-183",
+        "aadt": 168000,
+        "heavyTruckPct": 4.1,
+        "lat": 30.298,
+        "lng": -97.761,
+        "year": 2024,
+        "provenance": {
+          "sourceName": "State Department of Transportation AADT Database",
+          "sourceUrl": "https://gis-txdot.opendata.arcgis.com/",
+          "datasetVintage": "2024-AADT",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "place"
+        }
+      },
+      {
+        "roadName": "South Congress Ave",
+        "segmentDescription": "Between Riverside Dr and Ben White Blvd",
+        "aadt": 34500,
+        "heavyTruckPct": 2.5,
+        "lat": 30.245,
+        "lng": -97.751,
+        "year": 2024,
+        "provenance": {
+          "sourceName": "State Department of Transportation AADT Database",
+          "sourceUrl": "https://gis-txdot.opendata.arcgis.com/",
+          "datasetVintage": "2024-AADT",
+          "verifiedAt": "2026-10-18T09:47:55.041Z",
+          "granularity": "place"
+        }
+      }
+    ],
+    "marketSignals": {
+      "reportedRetailRentSqFtYr": 32,
+      "reportedIndustrialRentSqFtYr": 15.5,
+      "topSearchedNaics30d": [
+        "722515",
+        "713940",
+        "812111"
+      ],
+      "verifiedLocalProsCount": 14
+    },
+    "scores": {
+      "overallViability": 52,
+      "purchasingPower": 63,
+      "growthMomentum": 53,
+      "costEfficiency": 50,
+      "regulatoryFriction": 38
+    }
+  }
+]

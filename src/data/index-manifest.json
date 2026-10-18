@@ -1,0 +1,56 @@
+[
+  {
+    "slug": "tx/austin",
+    "name": "Austin",
+    "stateCode": "tx",
+    "stateName": "Texas",
+    "population": 979882,
+    "popGrowth5YrPct": 8.4,
+    "medianHouseholdIncome": 92248,
+    "combinedSalesTaxRate": 0.0825,
+    "reportedRetailRentSqFtYr": 32,
+    "overallViability": 52,
+    "purchasingPower": 63,
+    "growthMomentum": 53,
+    "topUnderservedNaics": [
+      "Pet Care",
+      "Daycare"
+    ]
+  },
+  {
+    "slug": "fl/tampa",
+    "name": "Tampa",
+    "stateCode": "fl",
+    "stateName": "Florida",
+    "population": 407599,
+    "popGrowth5YrPct": 5.9,
+    "medianHouseholdIncome": 72410,
+    "combinedSalesTaxRate": 0.075,
+    "reportedRetailRentSqFtYr": 28.5,
+    "overallViability": 36,
+    "purchasingPower": 37,
+    "growthMomentum": 32,
+    "topUnderservedNaics": [
+      "Pet Care",
+      "Daycare"
+    ]
+  },
+  {
+    "slug": "id/boise",
+    "name": "Boise",
+    "stateCode": "id",
+    "stateName": "Idaho",
+    "population": 237446,
+    "popGrowth5YrPct": 6.8,
+    "medianHouseholdIncome": 82150,
+    "combinedSalesTaxRate": 0.06,
+    "reportedRetailRentSqFtYr": 24,
+    "overallViability": 70,
+    "purchasingPower": 50,
+    "growthMomentum": 65,
+    "topUnderservedNaics": [
+      "Pet Care",
+      "Daycare"
+    ]
+  }
+]
