@@ -5,7 +5,7 @@
 CityClick is the authority engine for US municipal demographics, commercial asking rents, NAICS retail saturation indices, and municipal permit requirements. Built for multi-unit franchisees, commercial tenant brokers, and SBA lenders.
 
 ## Core Methodologies & Provenance
-- Zero-Hallucination Policy: All metrics are anchored to primary authoritative federal and municipal records:
+- Sourcing Policy: All metrics are anchored to primary authoritative federal and municipal records:
   - Demographics: US Census Bureau ACS 5-Year (DP03/DP04/DP05)
   - Business Establishment Counts: US Census Bureau Zip Codes Business Patterns (ZBP)
   - Labor & Unemployment: Bureau of Labor Statistics LAUS

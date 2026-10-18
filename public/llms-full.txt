@@ -1,7 +1,7 @@
 # CityClick (cityclick.com) — Full Methodology & Commercial Underwriting Knowledge Base
 
 ## 1. Architectural Mission
-CityClick provides deterministic, zero-hallucination commercial real estate and municipal intelligence for 1,500+ US cities.
+CityClick provides deterministic, source-cited commercial real estate and municipal intelligence for 1,500+ US cities.
 
 ## 2. Mathematical Formulations
 
