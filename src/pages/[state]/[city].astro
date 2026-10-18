@@ -450,7 +450,7 @@ const cityMapPins = {
             <span>Local Sales Tax</span>
             <span class="text-slate-600 font-extrabold">Combined</span>
           </div>
-          <div class="text-xl sm:text-2xl font-black text-[#152438] mt-1">{(city.permitsAndTax.combinedSalesTaxRate * 100).toFixed(2)}%</div>
+          <div class="text-xl sm:text-2xl font-black text-[#152438] mt-1">{Number((city.permitsAndTax.combinedSalesTaxRate * 100).toFixed(3)).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:3})}%</div>
           <div class="text-[10px] text-slate-500">State + Municipal Tax</div>
         </div>
       </div>
@@ -1330,7 +1330,7 @@ const cityMapPins = {
                   </div>
                 </div>
                 <div class="text-[11px] text-slate-500 pt-3 border-t border-blue-200">
-                  Stripping {(city.permitsAndTax.combinedSalesTaxRate * 100).toFixed(2)}% sales tax and applying 18% payroll burden load. Assumes $6.50/sqft NNN, $16.50/hr labor and 120 staff-hours/week as illustrative defaults.
+                  Stripping {Number((city.permitsAndTax.combinedSalesTaxRate * 100).toFixed(3)).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:3})}% sales tax and applying 18% payroll burden load. Assumes $6.50/sqft NNN, $16.50/hr labor and 120 staff-hours/week as illustrative defaults.
                 </div>
               </div>
             </div>
@@ -1432,7 +1432,7 @@ const cityMapPins = {
                     <td class="py-4 pr-4 font-bold text-slate-800">Combined Sales Tax Rate</td>
                     <td class="py-4 px-4">
                       <span class="px-2.5 py-1 rounded-full font-bold text-[11px] bg-slate-100 text-slate-700">
-                        {(city.permitsAndTax.combinedSalesTaxRate * 100).toFixed(2)}% Combined
+                        {Number((city.permitsAndTax.combinedSalesTaxRate * 100).toFixed(3)).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:3})}% Combined
                       </span>
                     </td>
                     <td class="py-4 pl-4 text-slate-600">{(city.permitsAndTax.stateTaxRate * 100).toFixed(2)}% State + {(city.permitsAndTax.localTaxRate * 100).toFixed(2)}% Local</td>

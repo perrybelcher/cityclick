@@ -528,10 +528,11 @@
       "timeZoneAbbr": "CT",
       "utcOffset": "-06:00",
       "primaryAirport": {
-        "name": "Oklahoma Regional / Metropolitan Airport",
-        "iata": null,
-        "distanceMiles": 11.8,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "name": "Will Rogers International Airport",
+        "iata": "OKC",
+        "distanceMiles": 7.3,
+        "transitToDowntown": null,
+        "source": "Google Places API (New), retrieved 2026-10-18; straight-line distance to city anchor"
       },
       "powerPlugs": {
         "types": [
@@ -558,9 +559,9 @@
       },
       "emergency": {
         "emergencyDispatch": "911",
-        "nonEmergencyPolice": "311 or local municipal dispatch",
-        "nearestTraumaHospital": "Oklahoma Regional Memorial Hospital",
-        "hospitalAddress": "Medical Center District, Oklahoma, OK"
+        "nearestTraumaHospital": "OU Health University of Oklahoma Medical Center",
+        "hospitalAddress": "700 NE 13th St, Oklahoma City, OK 73104",
+        "source": "Google Places API (New), retrieved 2026-10-18"
       },
       "visitorLogistics": {
         "tapWaterPotability": "100% Safe municipal drinking water conforming to EPA Safe Drinking Water Act standards.",
