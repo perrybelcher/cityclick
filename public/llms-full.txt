@@ -1,0 +1,93 @@
+# CityClick (cityclick.com) — Full Methodology & Commercial Underwriting Knowledge Base
+
+## 1. Architectural Mission
+CityClick provides deterministic, zero-hallucination commercial real estate and municipal intelligence for 1,500+ US cities.
+
+## 2. Mathematical Formulations
+
+### 2.1 ECDF Mid-Rank Percentile
+PercentileRank(x_i, X) = round(100 * (count(x < x_i) + 0.5 * count(x == x_i)) / N)
+
+### 2.2 Viability Score Components (0–100)
+1. Purchasing Power (25% Weight):
+   PP = round(0.70 * PercentileRank(MedianHouseholdIncome) + 0.30 * PercentileRank(DaytimePopSurgePct))
+
+2. Growth Momentum (30% Weight):
+   GM = round(0.55 * PercentileRank(PopGrowth5YrPct) + 0.45 * PercentileRank(PermitsPer1kResidents))
+
+3. Cost Efficiency (25% Weight):
+   IRR = MedianHouseholdIncome / (MedianGrossRent * 12)
+   CE = round(0.50 * PercentileRank(IRR) + 0.30 * (100 - PercentileRank(UnemploymentRatePct)) + 0.20 * (100 - PercentileRank(FemaRiskIndex)))
+
+4. Regulatory Friction (20% Weight):
+   TaxScore = 100 - PercentileRank(CombinedSalesTaxRate)
+   WaitScore = max(0, min(100, round(100 - (AvgPermitWaitDays - 14) * 1.2))) [Defaults to 50 if null]
+   RF = round(0.65 * TaxScore + 0.35 * WaitScore)
+
+Overall Viability Score = round(0.25 * PP + 0.30 * GM + 0.25 * CE + 0.20 * RF)
+
+### 2.3 Bayesian-Shrunk NAICS Saturation Index
+For establishments E and population P:
+per10kResidents = (E / P) * 10000
+smoothedPer10k = (P * per10kResidents + m * usAvgPer10k) / (P + m) [where m = 10,000 residents prior]
+saturationIndex = round((smoothedPer10k / usAvgPer10k) * 100)
+
+## 3. The 25 Small-Business NAICS Benchmarks (US Baselines)
+- 722515 | Coffee & Snack Shops: 2.15 per 10k
+- 722511 | Full-Service Restaurants: 6.80 per 10k
+- 722513 | Fast Food Restaurants: 7.20 per 10k
+- 722410 | Bars & Drinking Places: 1.85 per 10k
+- 812111 | Barber Shops: 1.35 per 10k
+- 812112 | Beauty Salons: 3.40 per 10k
+- 812113 | Nail Salons: 2.10 per 10k
+- 713940 | Fitness & Gyms: 1.25 per 10k
+- 812910 | Pet Care & Grooming: 0.95 per 10k
+- 541940 | Veterinary Services: 1.05 per 10k
+- 811111 | General Auto Repair: 4.80 per 10k
+- 811192 | Car Washes: 0.65 per 10k
+- 812310 | Laundromats: 0.55 per 10k
+- 812320 | Dry Cleaners: 0.85 per 10k
+- 621210 | Dentists: 3.90 per 10k
+- 621310 | Chiropractors: 1.40 per 10k
+- 621340 | Physical Therapy: 1.55 per 10k
+- 624410 | Child Daycare: 2.25 per 10k
+- 445120 | Convenience Stores: 1.95 per 10k
+- 448140 | Clothing Boutiques: 1.65 per 10k
+- 445291 | Retail Bakeries: 0.85 per 10k
+- 453110 | Florists: 0.50 per 10k
+- 541110 | Law Firms: 4.90 per 10k
+- 541211 | CPAs & Accounting: 2.10 per 10k
+- 531210 | Real Estate Agencies: 3.80 per 10k
+
+## 4. Retail Breakeven Formulas
+- Monthly Occupancy Cost = (SqFt * (BaseRentSqFtYr + NnnCamSqFtYr)) / 12
+- Monthly Labor Cost = HourlyWage * StaffHoursPerWeek * 4.3482 * (1 + PayrollTaxAndBenefitsLoadPct [0.18])
+- Net Ticket Ex-Tax = AvgGrossTicket / (1 + CombinedSalesTaxRate)
+- Contribution Margin Per Customer = NetTicketExTax * (1 - CogsPct)
+- Monthly Customers Needed = ceil(MonthlyFixedCost / ContributionMarginPerCustomer)
+- Daily Customers Needed = ceil(MonthlyCustomersNeeded / 30.4375)
+
+## 5. API Example Response
+```json
+{
+  "status": "success",
+  "data": {
+    "slug": "tx/austin",
+    "name": "Austin",
+    "state": "Texas",
+    "population": 979882,
+    "popGrowth5YrPct": 8.4,
+    "medianHouseholdIncome": 92248,
+    "reportedRetailRentSqFtYr": 32.0,
+    "avgPermitWaitDays": 32,
+    "combinedSalesTax": 0.0825,
+    "viabilityScores": {
+      "overallViability": 52,
+      "purchasingPower": 85,
+      "growthMomentum": 88,
+      "costEfficiency": 45,
+      "regulatoryFriction": 42
+    }
+  }
+}
+```

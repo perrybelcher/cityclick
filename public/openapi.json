@@ -1,0 +1,71 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "CityClick B2B City Intelligence API",
+    "version": "1.0.0",
+    "description": "Deterministic municipal demographics, retail rent benchmarks, and NAICS competition saturation feeds."
+  },
+  "servers": [
+    {
+      "url": "https://cityclick.com"
+    }
+  ],
+  "paths": {
+    "/api/v1/cities/{state}/{city}": {
+      "get": {
+        "summary": "Get City Dossier",
+        "description": "Returns verified demographic indicators, viability scores, municipal permit turnaround times, and NAICS industry saturation metrics.",
+        "parameters": [
+          {
+            "name": "state",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "tx"
+            }
+          },
+          {
+            "name": "city",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "austin"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Verified city dossier payload",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": { "type": "string", "example": "success" },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "slug": { "type": "string" },
+                        "name": { "type": "string" },
+                        "population": { "type": "integer" },
+                        "medianHouseholdIncome": { "type": "integer" },
+                        "askingRentSqFtYr": { "type": "number" },
+                        "permitAvgWaitDays": { "type": "integer" },
+                        "combinedSalesTax": { "type": "number" }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "City not found"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,78 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout
+  title="Join the Local B2B Partner Directory — CityClick"
+  description="Connect with qualified multi-unit operators, franchisees, and commercial tenants actively looking for permit expeditors, brokers, and zoning attorneys in your city."
+>
+  <section class="bg-gradient-to-b from-[#EDF4FC] to-white py-16 border-b border-slate-200">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-[#1D68F2] text-xs font-bold mb-4">
+        Commercial Service Provider Network
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-black text-[#152438] tracking-tight">
+        Connect with incoming business owners before they sign a lease
+      </h1>
+      <p class="text-base text-slate-600 mt-3 leading-relaxed">
+        CityClick sends verified tenant leads directly to approved local commercial brokers, municipal permit expeditors, and zoning attorneys.
+      </p>
+    </div>
+  </section>
+
+  <section class="max-w-2xl mx-auto px-4 sm:px-6 py-12">
+    <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm space-y-6">
+      <h2 class="text-xl font-bold text-[#152438]">Apply for Verified Local Partner Listing</h2>
+      
+      <form class="space-y-4 text-xs font-semibold" onsubmit="event.preventDefault(); alert('Application submitted! Our underwriting team reviews applications within 24 business hours.');">
+        <div>
+          <label class="block text-slate-700 mb-1">Company / Firm Name</label>
+          <input type="text" placeholder="Austin Commercial Tenant Advisors" required class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm font-normal" />
+        </div>
+
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <label class="block text-slate-700 mb-1">Target Market / City</label>
+            <input type="text" placeholder="Austin, TX" required class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm font-normal" />
+          </div>
+          <div>
+            <label class="block text-slate-700 mb-1">Category</label>
+            <select class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm font-normal bg-white">
+              <option>Commercial Tenant Broker</option>
+              <option>Permit Expeditor</option>
+              <option>Zoning / Land Use Attorney</option>
+              <option>CPA / Small Business Accounting</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <label class="block text-slate-700 mb-1">Direct Contact Email</label>
+            <input type="email" placeholder="partner@firm.com" required class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm font-normal" />
+          </div>
+          <div>
+            <label class="block text-slate-700 mb-1">Phone Number</label>
+            <input type="tel" placeholder="(512) 555-0199" required class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm font-normal" />
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-slate-700 mb-1">Firm Website URL</label>
+          <input type="url" placeholder="https://www.austinbrokerage.com" required class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm font-normal" />
+        </div>
+
+        <div>
+          <label class="block text-slate-700 mb-1">Credentials / License Number</label>
+          <input type="text" placeholder="Texas Real Estate Commission TREC #900123" required class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm font-normal" />
+        </div>
+
+        <div class="pt-4">
+          <button type="submit" class="w-full py-3.5 rounded-2xl bg-[#1D68F2] hover:bg-blue-600 text-white font-extrabold text-sm transition shadow-md">
+            Submit Partner Application →
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+</Layout>

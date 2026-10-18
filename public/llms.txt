@@ -1,0 +1,43 @@
+# CityClick (cityclick.com)
+> The Deterministic B2B City & Commercial Location Intelligence Platform
+
+## Project Overview
+CityClick is the authority engine for US municipal demographics, commercial asking rents, NAICS retail saturation indices, and municipal permit requirements. Built for multi-unit franchisees, commercial tenant brokers, and SBA lenders.
+
+## Core Methodologies & Provenance
+- Zero-Hallucination Policy: All metrics are anchored to primary authoritative federal and municipal records:
+  - Demographics: US Census Bureau ACS 5-Year (DP03/DP04/DP05)
+  - Business Establishment Counts: US Census Bureau Zip Codes Business Patterns (ZBP)
+  - Labor & Unemployment: Bureau of Labor Statistics LAUS
+  - Building Permits: US Census Bureau Building Permits Survey (BPS)
+  - Hazard Vulnerability: FEMA National Risk Index
+- CityClick Business Viability Score™ (0–100):
+  - ECDF mid-rank percentile aggregation across 4 core dimensions:
+    - Purchasing Power (25%): 70% Median Household Income + 30% Daytime Worker Surge
+    - Growth Momentum (30%): 55% 5-Yr Population Growth + 45% Permits per 1k Residents
+    - Cost Efficiency (25%): 50% Income-to-Rent Ratio + 30% Low Unemployment + 20% FEMA Resilience
+    - Regulatory Friction (20%): 65% Low Sales Tax + 35% Short Permit Review Turnaround
+- Empirical Bayes NAICS Saturation Index (100 = US Benchmark):
+  - Uses empirical Bayes shrinkage (m = 10,000 prior) against 25 small-business NAICS codes.
+  - Classification:
+    - Underserved: < 80
+    - Balanced: 80 - 120
+    - Saturated: > 120
+
+## Key URLs & Resource Structure
+- Homepage & Screener: https://cityclick.com/
+- City Feasibility Dossiers: https://cityclick.com/{stateCode}/{citySlug}
+  - Austin, TX: https://cityclick.com/tx/austin
+  - Tampa, FL: https://cityclick.com/fl/tampa
+  - Boise, ID: https://cityclick.com/id/boise
+- Comparative Underwriting: https://cityclick.com/compare/{stateA}-{cityA}-vs-{stateB}-{cityB}
+  - Austin vs Tampa: https://cityclick.com/compare/tx-austin-vs-fl-tampa
+- Commercial Lease Calculator: https://cityclick.com/tools/lease-calculator
+- Full Methodology & Benchmarks: https://cityclick.com/llms-full.txt
+- OpenAPI 3.1 Specification: https://cityclick.com/openapi.json
+
+## Public Edge API Endpoints
+- GET /api/v1/cities/{stateCode}/{citySlug}
+  Returns full verified JSON dossier with provenance metadata.
+- GET /api/v1/screen?minPopulation=200000&maxRent=35
+  Filter US cities by feasibility score, retail rent, and saturation.
