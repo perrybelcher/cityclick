@@ -511,13 +511,13 @@
         "erHospitals": [
           {
             "name": "Ascension Seton Southwest",
-            "address": "7900 Fm 1826, Austin, TX 78737",
+            "address": "7900 FM 1826, Austin, TX 78737",
             "type": "Acute Care Hospitals",
             "cmsFacilityId": "450865"
           },
           {
             "name": "Ascension Seton Medical Center Austin",
-            "address": "1201 W 38Th St, Austin, TX 78705",
+            "address": "1201 W 38th St, Austin, TX 78705",
             "type": "Acute Care Hospitals",
             "cmsFacilityId": "450056"
           },
@@ -530,37 +530,37 @@
           {
             "name": "Dell Children's Medical Center",
             "address": "4900 Mueller Blvd, Austin, TX 78723",
-            "type": "Childrens",
+            "type": "Children's",
             "cmsFacilityId": "453310"
           },
           {
             "name": "North Austin Medical Center",
-            "address": "12221 Mopac Expressway North, Austin, TX 78758",
+            "address": "12221 MoPac Expressway North, Austin, TX 78758",
             "type": "Acute Care Hospitals",
             "cmsFacilityId": "450809"
           },
           {
             "name": "Northwest Hills Surgical Hospital",
-            "address": "6818 Austin Ctr Blvd Suite 100, Austin, TX 78731",
+            "address": "6818 Austin Center Blvd Suite 100, Austin, TX 78731",
             "type": "Acute Care Hospitals",
             "cmsFacilityId": "450808"
           },
           {
-            "name": "St David's Medical Center",
-            "address": "919 E 32Nd St, Austin, TX 78705",
+            "name": "St. David's Medical Center",
+            "address": "919 E 32nd St, Austin, TX 78705",
             "type": "Acute Care Hospitals",
             "cmsFacilityId": "450431"
           },
           {
-            "name": "St David's South Austin Medical Center",
+            "name": "St. David's South Austin Medical Center",
             "address": "901 West Ben White Blvd, Austin, TX 78704",
             "type": "Acute Care Hospitals",
             "cmsFacilityId": "450713"
           },
           {
-            "name": "Texas Childrens Hospital North Austin Campus",
+            "name": "Texas Children's Hospital North Austin Campus",
             "address": "9835 North Lake Creek Parkway Bldg A, Austin, TX 78717",
-            "type": "Childrens",
+            "type": "Children's",
             "cmsFacilityId": "453319"
           },
           {
