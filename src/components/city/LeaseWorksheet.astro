@@ -1,0 +1,68 @@
+---
+import SourceNote from './SourceNote.astro';
+import { percent, type CityView } from '../../lib/city-v2';
+interface Props { tax: NonNullable<CityView['tax']>; }
+const { tax } = Astro.props;
+const groups = [
+  { title: 'Your quoted premises', fields: [['area', 'Rentable area (square feet)', '0.01', 'any'], ['rent', 'Quoted annual base rent ($ / square foot)', '0', 'any'], ['nnn', 'Quoted annual NNN / additional charges ($ / square foot)', '0', 'any']] },
+  { title: 'Your operating assumptions', fields: [['wage', 'Hourly wage ($)', '0', 'any'], ['hours', 'Total staff hours per week', '0', 'any'], ['burden', 'Payroll burden (%)', '0', 'any'], ['overhead', 'Other monthly fixed expenses ($)', '0', 'any'], ['ticket', 'Average tax-inclusive ticket ($)', '0.01', 'any'], ['cogs', 'Variable costs / cost of goods (%)', '0', 'any'], ['days', 'Open days per month', '1', '1']] },
+];
+---
+<section class="section" id="lease-worksheet" aria-labelledby="lease-title">
+  <div class="section-heading"><p class="eyebrow">Your quote. Your assumptions.</p><h2 id="lease-title">Test your lease quote</h2><p>No rent estimate is supplied. Every financial input starts blank. Enter the actual quote and your own operating assumptions, including an explicit zero where appropriate.</p></div>
+  <form class="worksheet" id="lease-form" data-tax={tax.combinedSalesTaxRate} novalidate>
+    {groups.map(group => <fieldset><legend>{group.title}</legend><div class="form-grid">{group.fields.map(([id, label, min, step]) => <label for={`quote-${id}`}>{label}<input id={`quote-${id}`} name={id} type="number" inputmode="decimal" min={min} max={id === 'days' ? '31' : id === 'burden' ? '100' : undefined} step={step} required autocomplete="off" aria-describedby="lease-help" /></label>)}</div></fieldset>)}
+    <p id="lease-help" class="small">Include owner pay, insurance, utilities, debt and fees in your costs where applicable. NNN and additional occupancy charges must come from your quote; they are not inferred.</p>
+    <label class="check-label" for="confirm-tax"><input id="confirm-tax" name="confirmTax" type="checkbox" required /><span>I confirm that the sourced <strong data-value-path="permitsAndTax.combinedSalesTaxRate" data-format="fraction-percent">{percent(tax.combinedSalesTaxRate)}</strong> tax scenario applies to my modeled taxable transaction and that my ticket includes that tax. If it does not, do not use this worksheet.</span></label>
+    <SourceNote source={tax.sourceNote} />
+    <p class="small">Calculations stay in this browser. No quote is submitted or saved.</p>
+    <button type="submit">Calculate my scenario</button><button type="reset">Clear all inputs</button>
+    <p id="lease-message" class="form-message" role="status" aria-live="polite">Enter all assumptions and confirm the tax scenario to calculate.</p>
+    <div id="lease-result" class="results" hidden aria-live="polite" aria-atomic="true">
+      <h3>Your scenario, not a market forecast</h3><p>Required to cover the costs you entered. This does not predict demand or whether the business can achieve these sales.</p>
+      <dl><div><dt>Transactions per open day</dt><dd id="result-daily"></dd></div><div><dt>Monthly net revenue needed</dt><dd id="result-revenue"></dd></div><div><dt>Monthly fixed costs</dt><dd id="result-fixed"></dd></div></dl>
+    </div>
+    <details class="formula"><summary>How the worksheet works</summary><p>Monthly occupancy is rentable area times the sum of quoted annual base rent and quoted annual NNN, divided into calendar months. Monthly labor annualizes your weekly staff hours over a year, then applies your payroll burden. Other fixed costs are added.</p><p>The tax-inclusive ticket is divided by one plus the sourced tax fraction. Contribution per transaction is the resulting net ticket after your variable-cost percentage. Monthly transactions round up from fixed costs divided by contribution; daily transactions round up again using your open days. Net revenue excludes collected sales tax. Dollar outputs round only for display.</p><p>The annualization convention is fifty-two weeks divided by twelve months. No seasonal demand, financing feasibility or tax advice is modeled.</p></details>
+    <noscript><p class="small">Enable scripts to calculate a private scenario. The formula, source data and all guides remain readable without scripts.</p></noscript>
+  </form>
+</section>
+<script>
+  import { calculateLeaseQuote, quoteFields, type QuoteInputs } from '../../lib/lease-quote';
+  const form = document.querySelector<HTMLFormElement>('#lease-form');
+  if (form) {
+    const output = document.querySelector<HTMLDivElement>('#lease-result')!;
+    const message = document.querySelector<HTMLParagraphElement>('#lease-message')!;
+    const clear = () => {
+      output.hidden = true;
+      output.querySelectorAll('dd').forEach(d => { d.textContent = ''; });
+      message.classList.remove('error');
+      message.textContent = 'Enter all assumptions and confirm the tax scenario to calculate.';
+      form.querySelectorAll('[aria-invalid]').forEach(el => el.removeAttribute('aria-invalid'));
+    };
+    form.addEventListener('input', clear);
+    form.addEventListener('change', clear);
+    form.addEventListener('reset', clear);
+    form.addEventListener('submit', event => {
+      event.preventDefault(); clear();
+      try {
+        const fields = new FormData(form);
+        const input = Object.fromEntries(quoteFields.map(k => [k, String(fields.get(k) ?? '').trim()])) as QuoteInputs;
+        if (!form.checkValidity()) {
+          const invalid = form.querySelector<HTMLInputElement>(':invalid');
+          invalid?.setAttribute('aria-invalid', 'true'); invalid?.focus();
+          throw new Error('Complete every field with a valid value and confirm the tax scenario.');
+        }
+        const result = calculateLeaseQuote(input, form.dataset.tax!, fields.has('confirmTax'));
+        const dollars = (n: string) => '$' + n.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+        document.querySelector('#result-daily')!.textContent = result.dailyTransactions;
+        document.querySelector('#result-revenue')!.textContent = dollars(result.revenue);
+        document.querySelector('#result-fixed')!.textContent = dollars(result.fixed);
+        output.hidden = false;
+        message.textContent = 'Scenario calculated from your inputs. Changing an input clears this result.';
+      } catch (error) {
+        message.classList.add('error');
+        message.textContent = error instanceof Error ? error.message : 'The scenario could not be calculated. Check your inputs.';
+      }
+    });
+  }
+</script>

@@ -1,0 +1,24 @@
+---
+import { cityRoute } from '../../lib/city-v2';
+interface Props { slug: string; }
+const { slug } = Astro.props;
+const routes = { business: cityRoute(slug, 'business'), biz: cityRoute(slug, 'business'), moving: cityRoute(slug, 'moving-to'), live: cityRoute(slug, 'moving-to'), visit: cityRoute(slug, 'visit'), visiting: cityRoute(slug, 'visit'), travel: cityRoute(slug, 'visit') };
+---
+<!-- Static hosting cannot issue query-aware HTTP redirects from this HTML.
+     Deployment must add a server/edge handler BEFORE the static-asset handler:
+     on the overview, map ?tab= aliases below to the corresponding route, remove
+     tab, preserve unrelated query parameters, and return HTTP 301 + Location.
+     A path-only _redirects rule cannot implement this. This client migration is
+     progressive enhancement, NOT an HTTP 301. Hashes are client-only. -->
+<script is:inline define:vars={{ routes }}>
+  const current = new URL(window.location.href);
+  const queryTab = current.searchParams.get('tab');
+  const alias = (queryTab || current.hash.slice(1)).toLowerCase();
+  if (Object.prototype.hasOwnProperty.call(routes, alias)) {
+    const destination = new URL(routes[alias], current.origin);
+    current.searchParams.delete('tab');
+    destination.search = current.searchParams.toString();
+    if (queryTab && !Object.prototype.hasOwnProperty.call(routes, current.hash.slice(1).toLowerCase())) destination.hash = current.hash;
+    window.location.replace(destination.href);
+  }
+</script>

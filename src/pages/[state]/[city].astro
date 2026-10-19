@@ -5,11 +5,13 @@ import type { CityRecord } from '../../lib/schema';
 import { ALL_CITIES } from '../../data/catalog';
 import { generateSeoGraph } from '../../lib/seo';
 import { buildFacts } from '../../lib/facts';
+import { CITY_V2_SLUGS } from '../../data/city-v2';
 import austinDispatches from '../../data/dispatches/tx-austin.json';
 import hsvDispatches from '../../data/dispatches/ar-hot-springs-village.json';
 
 export function getStaticPaths() {
-  return ALL_CITIES.map((c) => {
+  // The pilot overview has a concrete route override; all other cities keep this template.
+  return ALL_CITIES.filter(c => !CITY_V2_SLUGS.some(slug => slug === c.slug)).map((c) => {
     const [stateCode, citySlug] = c.slug.split('/');
     return {
       params: { state: stateCode, city: citySlug },

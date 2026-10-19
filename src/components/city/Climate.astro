@@ -1,0 +1,10 @@
+---
+import Stat from './Stat.astro';
+import type { Metric } from '../../lib/city-v2';
+interface Props { metrics: Metric[]; }
+const { metrics } = Astro.props;
+---
+{metrics.length > 0 && <section class="section" id="climate" aria-labelledby="climate-title">
+  <div class="section-heading"><p class="eyebrow">Seasonal context</p><h2 id="climate-title">Climate, not a forecast</h2><p>Historical reanalysis averages. These are not station normals or a prediction for your travel dates.</p></div>
+  <div class="stats-grid three">{metrics.map(m => <Stat metric={m} />)}</div>
+</section>}

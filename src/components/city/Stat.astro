@@ -1,0 +1,12 @@
+---
+import SourceNote from './SourceNote.astro';
+import { formatMetric, type Metric } from '../../lib/city-v2';
+interface Props { metric: Metric; }
+const { metric } = Astro.props;
+---
+<article class="stat" data-fact-path={metric.path}>
+  <h3>{metric.label}</h3>
+  <p class="stat-value" data-value-path={metric.path} data-format={metric.format}>{formatMetric(metric)}</p>
+  <p class="stat-detail">{metric.detail}</p>
+  <SourceNote source={metric.source} />
+</article>

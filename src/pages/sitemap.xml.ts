@@ -8,7 +8,7 @@ export const GET: APIRoute = async () => {
     { loc: 'https://cityclick.com/', priority: '1.0', changefreq: 'daily', lastmod: '2026-10-18' },
     
     // Top 6 Verified Benchmark City Guides
-    { loc: 'https://cityclick.com/tx/austin/', priority: '0.9', changefreq: 'weekly', lastmod: '2026-10-18' },
+    // The V2 pilot is noindexed until its evidence/release gaps are closed.
     { loc: 'https://cityclick.com/ar/hot-springs-village/', priority: '0.9', changefreq: 'weekly', lastmod: '2026-10-18' },
     { loc: 'https://cityclick.com/id/boise/', priority: '0.9', changefreq: 'weekly', lastmod: '2026-10-18' },
     { loc: 'https://cityclick.com/fl/tampa/', priority: '0.9', changefreq: 'weekly', lastmod: '2026-10-18' },

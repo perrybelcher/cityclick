@@ -1,0 +1,7 @@
+---
+import CityPage from '../../../components/city/CityPage.astro';
+import { buildCityView } from '../../../lib/city-v2';
+import records from '../../../data/cities/tx.json';
+const city = buildCityView(records.find(c => c.slug === 'tx/austin'));
+---
+<CityPage city={city} intent="overview" />

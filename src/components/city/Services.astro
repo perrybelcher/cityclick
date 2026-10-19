@@ -1,0 +1,30 @@
+---
+import Card from './Card.astro';
+import SourceNote from './SourceNote.astro';
+import { number, type CityView } from '../../lib/city-v2';
+interface Props { city: CityView; includeWater?: boolean; }
+const { city, includeWater = false } = Astro.props;
+const water = includeWater ? city.water : undefined;
+const hospital = city.hospital;
+---
+{(water || hospital) && <section class="section" id="services" aria-labelledby="services-title">
+  <div class="section-heading"><p class="eyebrow">Practical context</p><h2 id="services-title">Services to check</h2></div>
+  <div class="service-grid">
+    {water && <Card title="Water-system record">
+      <p class="entity-name">{water.providerName}</p>
+      <dl class="detail-list">
+        <div><dt>System ID</dt><dd data-value-path="waterUtility.pwsid" data-format="text">{water.pwsid}</dd></div>
+        <div><dt>Water source</dt><dd>{water.sourceType}</dd></div>
+        <div><dt>System population served</dt><dd data-value-path="waterUtility.populationServed" data-format="number">{number(water.populationServed)}</dd></div>
+      </dl>
+      <p class="small">A utility-system population, not the city population. Confirm service at your address. This record does not establish current water quality.</p>
+      <SourceNote source={water.sourceNote} />
+    </Card>}
+    {hospital && <Card title="Hospital directory listing">
+      <p class="entity-name">{hospital.nearestTraumaHospital}</p>
+      <p data-value-path="executiveTravel.emergency.hospitalAddress" data-format="text">{hospital.hospitalAddress}</p>
+      <p class="small">Identity and address only. The listing does not establish trauma designation, clinical suitability or which hospital is nearest to you.</p>
+      <SourceNote source={hospital.sourceNote} />
+    </Card>}
+  </div>
+</section>}

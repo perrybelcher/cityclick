@@ -1,13 +1,21 @@
 // Builds plain-sentence, sourced facts from a city record. Only fields that exist are emitted.
 // The same list feeds the visible "Key facts" section AND the FAQPage JSON-LD, so they always match.
-import type { CityRecord } from './schema';
+export interface FactsInput {
+  name: string; stateName: string; stateCode: string;
+  demographics?: { population?: number; popChange2020to2023Pct?: number; medianHouseholdIncome?: number; perCapitaIncome?: number };
+  housingAndTaxes?: { medianHomeValue?: number; medianGrossRent?: number; medianRealEstateTaxPaid?: number; effectivePropertyTaxRatePct?: number };
+  permitsAndTax?: { combinedSalesTaxRate?: number; stateTaxRate?: number; localTaxRate?: number; provenance?: { sourceName: string; datasetVintage: string } };
+  climateNormals?: { peakSummerHighF?: number; winterLowF?: number; annualRainfallInches?: number; sourceName?: string };
+  executiveTravel?: { primaryAirport?: { name?: string; iata?: string; distanceMiles?: number }; emergency?: { nearestTraumaHospital?: string; hospitalAddress?: string; source?: string } };
+  industries?: { status: string; saturationIndex: number; label: string; per10kResidents: number; usAvgPer10k: number }[];
+}
 
 export interface Fact { q: string; a: string; source: string; asOf: string; }
 
 const pct = (n: number, d = 2) => `${Number((n * 100).toFixed(3)).toLocaleString('en-US', { minimumFractionDigits: d, maximumFractionDigits: 3 })}%`;
 const usd = (n: number) => `$${Math.round(n).toLocaleString('en-US')}`;
 
-export function buildFacts(city: CityRecord): Fact[] {
+export function buildFacts(city: FactsInput): Fact[] {
   const out: Fact[] = [];
   const d: any = city.demographics ?? {};
   const h: any = (city as any).housingAndTaxes ?? {};

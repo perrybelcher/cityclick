@@ -1,0 +1,31 @@
+---
+import SourceNote from './SourceNote.astro';
+import { number, type CityView } from '../../lib/city-v2';
+interface Props { city: CityView; }
+const { city } = Astro.props;
+const rows = city.industries;
+---
+{rows.length > 0 && <section class="section" id="trade-density" aria-labelledby="trade-title">
+  <div class="section-heading"><p class="eyebrow">Employer establishments · postal-area context</p><h2 id="trade-title">ZIP-area density, not city competition</h2><p>Counts cover employer establishments in the source’s postal ZIP set. The resident denominator uses corresponding statistical ZIP areas. Neither boundary is the city limit.</p></div>
+  <div class="scope-note"><strong>Read the boundary before the number.</strong> Density is a descriptive ratio, not evidence of unmet demand, available capacity or profitability. Nonemployer businesses are outside this count.</div>
+  <div class="table-scroll" role="region" aria-label="ZIP-area trade density" tabindex="0">
+    <table class="trade-table">
+      <caption>ZIP-area employer density per ten thousand residents</caption>
+      <thead><tr><th scope="col">Industry / classification</th><th scope="col">Employer establishments</th><th scope="col">ZIP-area density</th><th scope="col">National reference</th></tr></thead>
+      <tbody>{rows.map(r => <tr data-fact-path={`industries.${r.index}`}>
+        <th scope="row">{r.label}<span class="classification" data-value-path={`industries.${r.index}.naicsCode`} data-format="text">{r.naicsCode}</span>
+          <details class="row-source"><summary>Source & denominator</summary>
+            <p data-evidence-path={`industries.${r.index}.provenance.evidenceQuote`}>{r.provenance.evidenceQuote}</p>
+            <p class="small">Numerator: employer establishments in the linked business-patterns dataset. Denominator: statistical ZIP-area population identified in the evidence quote, not city population.</p>
+            {city.stats[0] && <p class="small"><a href={city.stats[0].source.url}>Population denominator dataset</a></p>}
+            <SourceNote source={r.sourceNote} />
+          </details>
+        </th>
+        <td data-value-path={`industries.${r.index}.establishments`} data-format="number">{number(r.establishments)}</td>
+        <td data-value-path={`industries.${r.index}.per10kResidents`} data-format="number">{number(r.per10kResidents)}</td>
+        <td data-value-path={`industries.${r.index}.usAvgPer10k`} data-format="number">{number(r.usAvgPer10k)}</td>
+      </tr>)}</tbody>
+    </table>
+  </div>
+  {rows[0] && <SourceNote source={rows[0].sourceNote} />}
+</section>}
