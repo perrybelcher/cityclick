@@ -2,7 +2,7 @@
 """Independent recompute #2: re-query EXTERNAL sources (EPA SDWIS, Open-Meteo, Google Places) and a separately
 typed sales-tax table, then check the LIVE page shows the same values. Does not read src/data.
 Usage: python3 audit/recompute_extra.py [--base https://cityclick.com]  (exit 1 on any mismatch)"""
-import sys, re, json, urllib.request, statistics, collections
+import sys, re, json, time, urllib.request, urllib.error, statistics, collections
 base=sys.argv[sys.argv.index('--base')+1] if '--base' in sys.argv else 'https://cityclick.com'
 env={}
 for l in open('/opt/data/secrets/google-maps.env'):
@@ -16,10 +16,17 @@ C={'tx/austin':(30.2672,-97.7431,'AUSTIN','TX','Dell Seton Medical Center at the
  'tn/nashville':(36.1718,-86.785002,'NASHVILLE','TN','Vanderbilt University Medical Center','Nashville International Airport','BNA',9.75),                  # tn.gov Notice 24-11, 7% + 2.75%
  'ok/oklahoma-city':(35.4676,-97.5164,'OKLAHOMA CITY','OK','OU Health University of Oklahoma Medical Center','Will Rogers International Airport','OKC',8.625),   # okc.gov taxes 4.5 + 4.125
  'ar/hot-springs-village':(34.658069,-92.968643,'HOT SPRINGS VILLAGE','AR','CHI St. Vincent Hot Springs','Bill and Hillary Clinton National Airport','LIT',8.00)}  # avalara/garland county
-J=lambda u,t=60: json.load(urllib.request.urlopen(urllib.request.Request(u,headers={'User-Agent':'Mozilla/5.0'}),timeout=t))
+def retry(fn,n=5):
+    for i in range(n):
+        try: return fn()
+        except urllib.error.HTTPError as e:
+            if e.code not in (429,500,502,503) or i==n-1: raise
+            time.sleep(8*(i+1))
+J=lambda u,t=60: retry(lambda: json.load(urllib.request.urlopen(urllib.request.Request(u,headers={'User-Agent':'Mozilla/5.0'}),timeout=t)))
 def place(q):
     r=urllib.request.Request('https://places.googleapis.com/v1/places:searchText',data=json.dumps({'textQuery':q}).encode(),headers={'Content-Type':'application/json','X-Goog-Api-Key':GK,'X-Goog-FieldMask':'places.displayName,places.formattedAddress'})
-    return json.load(urllib.request.urlopen(r,timeout=30))['places'][0]
+    time.sleep(1.5)
+    return retry(lambda: json.load(urllib.request.urlopen(r,timeout=30)))['places'][0]
 page=lambda s: re.sub(r'\s+',' ',re.sub(r'<[^>]+>',' ',re.sub(r'<script.*?</script>|<style.*?</style>',' ',urllib.request.urlopen(urllib.request.Request(base+'/'+s+'/',headers={'User-Agent':'Mozilla/5.0'}),timeout=30).read().decode('utf-8','ignore'),flags=re.S))).replace('&#39;',"'").replace('&amp;','&')
 fails=0; total=0
 for s,(lat,lng,cn,st,hq,aq,iata,tax) in C.items():
