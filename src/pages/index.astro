@@ -10,8 +10,8 @@ const FEATURED_CITIES = [
     state: 'Texas',
     stateCode: 'TX',
     image: '/images/austin-skyline.jpg',
-    appeal: 'Live music capital, booming tech corridors, Lady Bird Lake recreation, and zero state income tax.',
-    tagline: 'Urban Innovation & Culture'
+    appeal: 'Census-sourced population, income, climate, and sales-tax figures for Austin, Texas.',
+    tagline: 'Texas'
   },
   {
     slug: 'ar/hot-springs-village',
@@ -19,8 +19,8 @@ const FEATURED_CITIES = [
     state: 'Arkansas',
     stateCode: 'AR',
     image: '/images/hsv-hero.jpg',
-    appeal: 'America’s largest gated community with 11 recreational lakes, 9 championship golf courses, and a 0.51% effective property tax rate.',
-    tagline: 'Scenic Lakeside Living'
+    appeal: 'City guide for Hot Springs Village, Arkansas.',
+    tagline: 'Arkansas'
   },
   {
     slug: 'id/boise',
@@ -28,8 +28,8 @@ const FEATURED_CITIES = [
     state: 'Idaho',
     stateCode: 'ID',
     image: '/images/boise-hero.jpg',
-    appeal: 'High-growth Treasure Valley hub featuring the 25-mile Boise River Greenbelt and 2,704 ft mountain foothills.',
-    tagline: 'Mountain West Boomtown'
+    appeal: 'City guide for Boise, Idaho.',
+    tagline: 'Idaho'
   },
   {
     slug: 'fl/tampa',
@@ -37,8 +37,8 @@ const FEATURED_CITIES = [
     state: 'Florida',
     stateCode: 'FL',
     image: '/images/tampa-hero.jpg',
-    appeal: 'Gulf Coast waterfront metro with historic brick Ybor City, modern Water Street district, and 0% personal income tax.',
-    tagline: 'Waterfront Gulf Metropolis'
+    appeal: 'City guide for Tampa, Florida.',
+    tagline: 'Florida'
   },
   {
     slug: 'az/scottsdale',
@@ -46,8 +46,8 @@ const FEATURED_CITIES = [
     state: 'Arizona',
     stateCode: 'AZ',
     image: '/images/scottsdale-hero.jpg',
-    appeal: 'Sonoran Desert luxury enclave renowned for world-class resorts, championship golf, and high purchasing power.',
-    tagline: 'Desert Resort Corridor'
+    appeal: 'City guide for Scottsdale, Arizona.',
+    tagline: 'Arizona'
   },
   {
     slug: 'tn/nashville',
@@ -55,8 +55,8 @@ const FEATURED_CITIES = [
     state: 'Tennessee',
     stateCode: 'TN',
     image: '/images/nashville-hero.jpg',
-    appeal: 'Music City destination with legendary live entertainment, major healthcare systems, and 0% state income tax.',
-    tagline: 'Music Capital & Healthcare'
+    appeal: 'City guide for Nashville, Tennessee.',
+    tagline: 'Tennessee'
   }
 ];
 
@@ -167,7 +167,7 @@ const statesList = Object.values(stateCounts).sort((a, b) => a.name.localeCompar
               <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent flex flex-col justify-end p-5 text-white">
                 <span class="text-[10px] font-black uppercase tracking-wider text-blue-300">Featured Urban Guide</span>
                 <div class="text-xl font-black text-white group-hover:text-blue-200 transition">Austin, Texas</div>
-                <div class="text-xs text-slate-300">Live music capital · Tech corridors · Hill Country</div>
+                <div class="text-xs text-slate-300">Texas city guide</div>
               </div>
             </a>
 
@@ -181,7 +181,7 @@ const statesList = Object.values(stateCounts).sort((a, b) => a.name.localeCompar
               <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent flex flex-col justify-end p-4 text-white">
                 <span class="text-[9px] font-black uppercase tracking-wider text-emerald-300">Lakeside Enclave</span>
                 <div class="text-sm font-black text-white group-hover:text-emerald-200 transition">Hot Springs Village, AR</div>
-                <div class="text-[11px] text-slate-300">11 Lakes · 9 Golf Courses</div>
+                <div class="text-[11px] text-slate-300">Arkansas city guide</div>
               </div>
             </a>
 
@@ -195,7 +195,7 @@ const statesList = Object.values(stateCounts).sort((a, b) => a.name.localeCompar
               <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent flex flex-col justify-end p-4 text-white">
                 <span class="text-[9px] font-black uppercase tracking-wider text-purple-300">Mountain West</span>
                 <div class="text-sm font-black text-white group-hover:text-purple-200 transition">Boise, Idaho</div>
-                <div class="text-[11px] text-slate-300">River Greenbelt · 2,704 ft</div>
+                <div class="text-[11px] text-slate-300">Idaho city guide</div>
               </div>
             </a>
           </div>
@@ -217,7 +217,7 @@ const statesList = Object.values(stateCounts).sort((a, b) => a.name.localeCompar
           </p>
         </div>
         <div class="mt-4 md:mt-0 text-xs font-bold text-slate-400">
-          Curated Discovery
+          Featured cities
         </div>
       </div>
 
@@ -267,7 +267,7 @@ const statesList = Object.values(stateCounts).sort((a, b) => a.name.localeCompar
                 <a
                   href={`/${city.slug}?tab=moving`}
                   class="px-2.5 py-1.5 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-700 font-black text-[11px] transition flex items-center gap-1 border border-emerald-200/60"
-                  title={`View ${city.name} Relocation Checklist & Schools`}
+                  title={`View ${city.name} city guide`}
                 >
                   <span>🏡</span> Live
                 </a>
@@ -306,7 +306,7 @@ const statesList = Object.values(stateCounts).sort((a, b) => a.name.localeCompar
             Compare Any Two Cities
           </h2>
           <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
-            Side-by-side analysis of cost of living, effective tax burdens, median home prices, commercial asking rents, and climate normals.
+            Side-by-side city pages. Only figures on each city record are shown.
           </p>
         </div>
 
@@ -317,9 +317,9 @@ const statesList = Object.values(stateCounts).sort((a, b) => a.name.localeCompar
             class="p-5 rounded-2xl bg-white/10 hover:bg-white/15 border border-white/15 transition flex items-center justify-between group"
           >
             <div>
-              <div class="text-[10px] uppercase font-bold text-blue-300 mb-1">0% State Income Tax Showdown</div>
+              <div class="text-[10px] uppercase font-bold text-blue-300 mb-1">City comparison</div>
               <div class="text-sm font-black text-white group-hover:text-blue-200 transition">Austin, TX vs. Tampa, FL</div>
-              <div class="text-[11px] text-slate-400 mt-0.5">Inland tech capital vs. Gulf Coast waterfront</div>
+              <div class="text-[11px] text-slate-400 mt-0.5">Open both city guides</div>
             </div>
             <span class="text-xl font-bold text-blue-400 group-hover:translate-x-1 transition">→</span>
           </a>
@@ -329,9 +329,9 @@ const statesList = Object.values(stateCounts).sort((a, b) => a.name.localeCompar
             class="p-5 rounded-2xl bg-white/10 hover:bg-white/15 border border-white/15 transition flex items-center justify-between group"
           >
             <div>
-              <div class="text-[10px] uppercase font-bold text-emerald-300 mb-1">Western Boomtown Comparison</div>
+              <div class="text-[10px] uppercase font-bold text-emerald-300 mb-1">City comparison</div>
               <div class="text-sm font-black text-white group-hover:text-emerald-200 transition">Boise, ID vs. Scottsdale, AZ</div>
-              <div class="text-[11px] text-slate-400 mt-0.5">Pacific Northwest greenbelt vs. Sonoran resort</div>
+              <div class="text-[11px] text-slate-400 mt-0.5">Open both city guides</div>
             </div>
             <span class="text-xl font-bold text-emerald-400 group-hover:translate-x-1 transition">→</span>
           </a>
@@ -341,9 +341,9 @@ const statesList = Object.values(stateCounts).sort((a, b) => a.name.localeCompar
             class="p-5 rounded-2xl bg-white/10 hover:bg-white/15 border border-white/15 transition flex items-center justify-between group"
           >
             <div>
-              <div class="text-[10px] uppercase font-bold text-purple-300 mb-1">Urban Hub vs. Gated Enclave</div>
+              <div class="text-[10px] uppercase font-bold text-purple-300 mb-1">City comparison</div>
               <div class="text-sm font-black text-white group-hover:text-purple-200 transition">Austin vs. Hot Springs Village</div>
-              <div class="text-[11px] text-slate-400 mt-0.5">Metro density vs. 11 lakes and 9 golf courses</div>
+              <div class="text-[11px] text-slate-400 mt-0.5">Open both city guides</div>
             </div>
             <span class="text-xl font-bold text-purple-400 group-hover:translate-x-1 transition">→</span>
           </a>
@@ -372,7 +372,7 @@ const statesList = Object.values(stateCounts).sort((a, b) => a.name.localeCompar
           </div>
           <h3 class="text-base font-black text-[#152438]">Walk a Neighborhood</h3>
           <p class="text-xs text-slate-600 leading-relaxed">
-            Photo galleries and video tours show housing styles, parks, and retail corridors before you travel.
+            Photo galleries and video tours of the city.
           </p>
           <a href="/ar/hot-springs-village/" class="inline-flex items-center text-xs font-bold text-[#1D68F2] hover:text-blue-700">
             Preview Video Experience →
@@ -386,7 +386,7 @@ const statesList = Object.values(stateCounts).sort((a, b) => a.name.localeCompar
           </div>
           <h3 class="text-base font-black text-[#152438]">Plan a Visit</h3>
           <p class="text-xs text-slate-600 leading-relaxed">
-            Airport distance, highway transit corridors, drinking water potability, emergency trauma centers, and curated stays by district.
+            Airport distance, climate, and water-system facts where those fields are on the city record.
           </p>
           <a href="/id/boise/" class="inline-flex items-center text-xs font-bold text-emerald-700 hover:text-emerald-900">
             Preview Visitor Guide →
@@ -400,7 +400,7 @@ const statesList = Object.values(stateCounts).sort((a, b) => a.name.localeCompar
           </div>
           <h3 class="text-base font-black text-[#152438]">See the Business Numbers</h3>
           <p class="text-xs text-slate-600 leading-relaxed">
-            Commercial rent benchmarks, permit timelines, sales-tax rates, and SBA lender data for each city guide.
+            Sales-tax rate and Census establishment counts where those fields are on the city record.
           </p>
           <a href="/tx/austin/" class="inline-flex items-center text-xs font-bold text-purple-700 hover:text-purple-900">
             Preview Austin Guide →
@@ -434,7 +434,7 @@ const statesList = Object.values(stateCounts).sort((a, b) => a.name.localeCompar
             </span>
             <h3 class="text-base font-black text-[#152438]">City Shortlist & Trip Scouting</h3>
             <p class="text-xs text-slate-600 leading-relaxed">
-              Save cities you are evaluating, compare airport commute times, and review seasonal weather reality before booking travel.
+              Save cities and open their guides.
             </p>
           </div>
           <a href="/#featured" class="inline-flex items-center text-xs font-bold text-[#1D68F2] hover:text-blue-700 pt-2">
@@ -453,7 +453,7 @@ const statesList = Object.values(stateCounts).sort((a, b) => a.name.localeCompar
             </span>
             <h3 class="text-base font-black text-[#152438]">State Tax & Housing Comparison</h3>
             <p class="text-xs text-slate-600 leading-relaxed">
-              Compare effective property tax, state income tax, median home values, and sales tax side by side.
+              Compare housing and tax figures on the city page.
             </p>
           </div>
           <a href="/tx/austin" class="inline-flex items-center text-xs font-bold text-emerald-700 hover:text-emerald-900 pt-2">

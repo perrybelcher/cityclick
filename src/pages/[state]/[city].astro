@@ -129,63 +129,16 @@ const cityGallery = VERIFIED_GALLERIES[city.slug] ?? null;
 const hasVerifiedDispatches = false; // re-enable only when every item has an article-level URL
 const dispatches = isAustin ? austinDispatches : null;
 
-// Travel logistics
-const travel = city.executiveTravel ?? {
-  timeZone: city.stateCode === 'tx' ? 'America/Chicago (Central Time: UTC-6 / CDT UTC-5)' :
-            city.stateCode === 'fl' ? 'America/New_York (Eastern Time: UTC-5 / EDT UTC-4)' :
-            city.stateCode === 'id' ? 'America/Boise (Mountain Time: UTC-7 / MDT UTC-6)' :
-            'America/Chicago (Central Time: UTC-6 / CDT UTC-5)',
-  timeZoneAbbr: city.stateCode === 'tx' ? 'CT' : city.stateCode === 'fl' ? 'ET' : 'MT',
-  utcOffset: city.stateCode === 'tx' ? '-06:00' : city.stateCode === 'fl' ? '-05:00' : '-07:00',
-  primaryAirport: {
-    name: `${city.name} Airport`,
-    iata: isAustin ? 'AUS' : isHSV ? 'LIT' : isBoise ? 'BOI' : isTampa ? 'TPA' : null,
-    distanceMiles: 12.0,
-    transitToDowntown: null,
-  },
-  powerPlugs: {
-    types: ['Type A (2-pin standard)', 'Type B (3-pin grounded)'],
-    voltage: '120V',
-    frequency: '60Hz',
-    adapterAdvice: 'Visitors from UK, EU, Australia, and Asia require a standard Type A/B plug adapter and dual-voltage (110–240V) or step-down converter.',
-  },
-  currency: {
-    code: 'USD',
-    symbol: '$',
-    name: 'United States Dollar',
-    tippingCustoms: '18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares/taxis.',
-    paymentMethods: 'Contactless chip cards, Apple Pay, and Google Pay accepted universally. Many urban locations operate cashless.',
-  },
-  climate: {
-    summerHighF: city.stateCode === 'tx' ? 97 : city.stateCode === 'fl' ? 91 : 92,
-    winterLowF: city.stateCode === 'tx' ? 42 : city.stateCode === 'fl' ? 52 : 24,
-    annualRainfallInches: city.stateCode === 'tx' ? 35.5 : city.stateCode === 'fl' ? 49.5 : 12.0,
-    bestVisitMonths: 'October–November and March–May for optimal outdoor scouting weather',
-    weatherSummary: 'Warm temperate climate with high sunny days per year. Ideal for commercial site evaluation in spring and autumn.',
-  },
-  emergency: {
-    emergencyDispatch: '911 (Police, Fire, Emergency Medical)',
-    nonEmergencyPolice: '311 (Municipal Inquiries) or local dispatch',
-    nearestTraumaHospital: null,
-    hospitalAddress: null,
-  },
-  visitorLogistics: {
-    tapWaterPotability: '100% Safe municipal drinking water conforming to EPA Safe Drinking Water Act standards.',
-    salesTaxRefundPolicy: 'Foreign visitors may claim sales tax refunds at designated international airport departure booths for qualifying retail purchases.',
-    rideshareAvailability: 'Ubiquitous (Uber and Lyft operational 24/7 across the metropolitan area).',
-  },
-  provenance: {
-    sourceName: 'Federal Aviation Administration & International Trade Administration',
-    sourceUrl: 'https://www.trade.gov/',
-    datasetVintage: '2026-Q1',
-    verifiedAt: new Date().toISOString(),
-    granularity: 'place' as const,
-  },
-};
+// Travel fields used below must come from the city record. No invented fallback numbers.
+const travel = city.executiveTravel;
+const sourcedAirport = travel?.primaryAirport?.source ? travel.primaryAirport : null;
+const erHospitals: Array<{ name: string; address: string; type: string }> =
+  (travel as any)?.emergency?.erHospitals ?? [];
+const erHospitalsSource: string | null = (travel as any)?.emergency?.erHospitalsSource ?? null;
 
 const keyFacts = buildFacts(city);
 const seoGraph = generateSeoGraph({
-  city: { ...city, executiveTravel: travel },
+  city,
   canonicalUrl: Astro.url.href,
 });
 
@@ -200,72 +153,27 @@ const TOP_6_VERIFIED_SLUGS = [
 const isVerifiedCity = TOP_6_VERIFIED_SLUGS.includes(city.slug);
 const robotsDirective = isVerifiedCity ? 'index, follow' : 'noindex, follow';
 
-// Construct per-city verified map pins server-side so zero foreign proper nouns leak into HTML
-const centerLat = city.lat ?? 30.2672;
-const centerLng = city.lng ?? -97.7431;
-
+// Map pins: airport only, and only when the record has coordinates. No claim badges or notes.
+const airportLat = (sourcedAirport as any)?.lat ?? (sourcedAirport as any)?.coordinates?.lat ?? null;
+const airportLng = (sourcedAirport as any)?.lng ?? (sourcedAirport as any)?.coordinates?.lng ?? null;
 const cityMapPins = {
-  visiting: isAustin ? [
-    { name: "Austin-Bergstrom Int'l Airport (AUS)", category: "Primary Commercial Airport", address: "3600 Presidential Blvd", lat: 30.194085, lng: -97.671089, badge: "", note: "" },
-    { name: "The Driskill Hotel", category: "Historic Luxury Lodging", address: "604 Brazos St", lat: 30.268150, lng: -97.741755, badge: "", note: "" },
-    { name: "South Congress Hotel & Strip", category: "Iconic Boutique Lodging", address: "1603 S Congress Ave", lat: 30.247296, lng: -97.750338, badge: "", note: "" },
-    { name: "The LINE Austin & Lady Bird Lake", category: "Lakeside Accommodations", address: "111 E Cesar Chavez St", lat: 30.262912, lng: -97.744194, badge: "", note: "" },
-    { name: "Barton Springs Pool & Zilker Park", category: "Natural Spring-Fed Landmark", address: "2201 Barton Springs Rd", lat: 30.263726, lng: -97.771400, badge: "", note: "" }
-  ] : isHSV ? [
-    { name: "Balboa Marina", category: "Premier Recreational Lake", address: "480 Ponce De Leon Dr", lat: 34.624098, lng: -92.898893, badge: "", note: "" },
-    { name: "Diamante Country Club", category: "Championship Private Golf Course", address: "2000 Country Club Dr", lat: 34.643716, lng: -92.866994, badge: "", note: "" },
-    { name: "Ponce De Leon Center", category: "Woodlands Arts Auditorium", address: "1101 DeSoto Blvd", lat: 34.663072, lng: -92.928632, badge: "", note: "" },
-  ] : isBoise ? [
-    { name: "Boise River Greenbelt", category: "Recreational River Corridor", address: "Julia Davis Park", lat: 43.601970, lng: -116.180784, badge: "", note: "" },
-    { name: "Boise Airport (BOI)", category: "Commercial Airport Hub", address: "3201 W Airport Way", lat: 43.560949, lng: -116.217449, badge: "", note: "" },
-    { name: "The Grove Hotel & 8th Street", category: "Downtown Boutique Lodging", address: "245 S Capitol Blvd", lat: 43.613980, lng: -116.203779, badge: "", note: "" },
-    { name: "Idaho State Capitol Building", category: "Civic & Cultural Landmark", address: "700 W Jefferson St", lat: 43.617749, lng: -116.199599, badge: "", note: "" }
-  ] : isTampa ? [
-    { name: "Tampa International Airport (TPA)", category: "Primary Commercial Airport", address: "4100 George J Bean Pkwy", lat: 27.976865, lng: -82.530280, badge: "", note: "" },
-    { name: "Tampa Riverwalk & Armature Works", category: "Waterfront Pedestrian Hub", address: "1910 N Ola Ave", lat: 27.960934, lng: -82.464272, badge: "", note: "" },
-    { name: "Historic Ybor City & 7th Avenue", category: "Historic Cultural District", address: "1600 E 7th Ave", lat: 27.960268, lng: -82.438624, badge: "", note: "" }
-  ] : isScottsdale ? [
-    { name: "Old Town Scottsdale Pedestrian Core", category: "Historic Arts & Dining", address: "Scottsdale & Main St", lat: 33.494590, lng: -111.924811, badge: "", note: "" },
-    { name: "McDowell Sonoran Preserve Gateway", category: "Natural Sonoran Desert Preserve", address: "18333 N Thompson Peak Pkwy", lat: 33.649428, lng: -111.858467, badge: "", note: "" },
-    { name: "Scottsdale Fashion Square", category: "Luxury Commercial Mall", address: "7014 E Camelback Rd", lat: 33.502748, lng: -111.929341, badge: "", note: "" }
-  ] : isNashville ? [
-    { name: "Nashville International Airport (BNA)", category: "Primary Commercial Airport", address: "One Terminal Dr", lat: 36.124885, lng: -86.676218, badge: "", note: "" },
-    { name: "Lower Broadway Historic Music Strip", category: "World-Famous Live Music", address: "Broadway & 4th Ave", lat: 36.160393, lng: -86.778432, badge: "", note: "" },
-    { name: "The Parthenon at Centennial Park", category: "Full-Scale Greek Replica", address: "2500 West End Ave", lat: 36.149674, lng: -86.813347, badge: "", note: "" }
-  ] : [
-    { name: `${city.name} Civic Center`, category: "Municipal Landmark", address: "City Center", lat: centerLat, lng: centerLng, badge: "Civic Core", note: "Official Municipal Location" }
-  ],
-  living: isAustin ? [
-    { name: "Dell Seton Medical Center at UT", category: "Level 1 Adult Trauma Center", address: "1500 Red River St", lat: 30.276510, lng: -97.733835, badge: "", note: "" },
-    { name: "St. David's South Austin Medical Center", category: "Comprehensive Emergency Care", address: "901 W Ben White Blvd", lat: 30.226039, lng: -97.774569, badge: "", note: "" },
-    { name: "Austin Central Public Library", category: "Civic & Co-Working Landmark", address: "710 W Cesar Chavez St", lat: 30.265779, lng: -97.751933, badge: "", note: "" },
-    { name: "Eanes ISD Public School Campus", category: "Top Texas Public School District", address: "601 Camp Craft Rd", lat: 30.278784, lng: -97.812915, badge: "", note: "" }
-  ] : isHSV ? [
-    { name: "Jessieville Public School Campus", category: "K-12 Public School System", address: "7900 N Hwy 7, Jessieville", lat: 34.700920, lng: -93.061493, badge: "", note: "" },
-    { name: "HSV POA Administration Center", category: "Governance & Permitting", address: "895 DeSoto Blvd", lat: 34.670920, lng: -92.970495, badge: "", note: "" }
-  ] : isBoise ? [
-    { name: "St. Luke's Boise Medical Center", category: "Level 2 Adult & Pediatric Trauma", address: "190 E Bannock St", lat: 43.612767, lng: -116.192492, badge: "", note: "" },
-    { name: "Boise High School Campus", category: "Top Idaho Public School", address: "1010 W Washington St", lat: 43.621178, lng: -116.202529, badge: "", note: "" },
-    { name: "Boise Public Library & Co-Working", category: "Civic Learning Center", address: "715 S Capitol Blvd", lat: 43.610800, lng: -116.207915, badge: "", note: "" }
-  ] : [
-    { name: `${city.name} Civic & Community Center`, category: "Community Core", address: "City Center", lat: centerLat, lng: centerLng, badge: "Civic Zone", note: "Municipal Geographic Center" }
-  ],
-  business: isAustin ? [
-    { name: "2nd Street Commercial Retail District", category: "Flagship Urban Retail", address: "2nd St & Colorado", lat: 30.265712, lng: -97.748524, badge: "", note: "" },
-    { name: "South Congress Commercial Strip", category: "Flagship Pedestrian Shopping", address: "1400 S Congress Ave", lat: 30.237426, lng: -97.753006, badge: "", note: "" }
-  ] : isHSV ? [
-  ] : isBoise ? [
-    { name: "8th Street Commercial Pedestrian Mall", category: "Flagship Retail & Dining", address: "8th & Main St", lat: 43.614905, lng: -116.202984, badge: "", note: "" },
-    { name: "Boise Linen District Creative Suites", category: "Boutique Commercial Corridor", address: "Grove & 14th St", lat: 43.618708, lng: -116.211338, badge: "", note: "" }
-  ] : [
-    { name: `${city.name} Commercial Corridor`, category: "Commercial District", address: "Main Street", lat: centerLat, lng: centerLng, badge: "Commercial Core", note: "Primary Business Corridor" }
-  ]
+  visiting: sourcedAirport && airportLat != null && airportLng != null ? [
+    {
+      name: sourcedAirport.name,
+      category: 'Airport',
+      address: sourcedAirport.iata ?? '',
+      lat: airportLat,
+      lng: airportLng,
+    }
+  ] : [],
+  living: [],
+  business: [],
 };
 ---
 
 <Layout
   title={`${city.name}, ${city.stateCode.toUpperCase()}: Cost of Living, Taxes and Business Data — CityClick`}
-  description={`Explore ${city.name}, ${city.stateName}. Municipal guide covering cost of living, property taxes, schools, retail lease benchmarks, and neighborhood demographics.`}
+  description={`Explore ${city.name}, ${city.stateName}. Municipal guide covering cost of living, property taxes, and neighborhood demographics.`}
   image={heroImage || 'https://cityclick.com/images/og-cityclick.jpg'}
   robots={robotsDirective}
 >
@@ -371,7 +279,7 @@ const cityMapPins = {
               <span class="text-2xl sm:text-3xl p-2.5 rounded-xl bg-white shadow-xs border border-blue-100">✈️</span>
               <div>
                 <div class="font-black text-sm sm:text-base text-[#152438]">Visiting {city.name}</div>
-                <div class="text-[11px] text-slate-500">Attractions, culture, hotels & logistics</div>
+                <div class="text-[11px] text-slate-500">Airport distance, climate, and water system</div>
               </div>
             </div>
             <span class="pillar-arrow text-sm font-black text-[#1D68F2]">→</span>
@@ -386,7 +294,7 @@ const cityMapPins = {
               <span class="text-2xl sm:text-3xl p-2.5 rounded-xl bg-slate-50 shadow-xs border border-slate-200">🏡</span>
               <div>
                 <div class="font-black text-sm sm:text-base text-[#152438]">Moving to {city.name}</div>
-                <div class="text-[11px] text-slate-500">Living costs, schools, neighborhoods & taxes</div>
+                <div class="text-[11px] text-slate-500">Living costs, housing, and taxes</div>
               </div>
             </div>
             <span class="pillar-arrow text-sm font-black text-slate-300 hidden">→</span>
@@ -412,33 +320,40 @@ const cityMapPins = {
       <!-- AUDIENCE-ADAPTIVE 4-FACT STRIPS (Clean Fact Bar) -->
       <!-- Strip 1: Visiting (Active by Default) -->
       <div id="stats-strip-travel" class="stats-strip grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+        {city.climateNormals?.peakSummerHighF != null && (
         <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
           <div class="flex justify-between items-start text-slate-400 text-[10px] uppercase font-bold tracking-wider">
-            <span>Climate Reality</span>
+            <span>Climate</span>
             <span class="text-amber-600 font-extrabold">Open-Meteo</span>
           </div>
-          <div class="text-xl sm:text-2xl font-black text-[#152438] mt-1">{city.climateNormals?.peakSummerHighF != null ? `${city.climateNormals.peakSummerHighF}°F` : '—'}</div>
-          <div class=\"text-[10px] text-slate-500\">Avg July High</div>
+          <div class="text-xl sm:text-2xl font-black text-[#152438] mt-1">{city.climateNormals.peakSummerHighF}°F</div>
+          <div class="text-[10px] text-slate-500">Avg July High</div>
         </div>
+        )}
 
+        {sourcedAirport?.distanceMiles != null && (
         <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
           <div class="flex justify-between items-start text-slate-400 text-[10px] uppercase font-bold tracking-wider">
             <span>Airport Transit</span>
-            <span class="text-blue-600 font-extrabold">{travel.primaryAirport?.iata ?? 'Airport'}</span>
+            <span class="text-blue-600 font-extrabold">{sourcedAirport.iata ?? 'Airport'}</span>
           </div>
-          <div class="text-xl sm:text-2xl font-black text-[#152438] mt-1">{travel.primaryAirport?.distanceMiles != null ? `${travel.primaryAirport.distanceMiles} Miles` : '—'}</div>
-          <div class="text-[10px] text-slate-500">Straight line from city center</div>
+          <div class="text-xl sm:text-2xl font-black text-[#152438] mt-1">{sourcedAirport.distanceMiles} Miles</div>
+          <div class="text-[10px] text-slate-500">straight line from city center</div>
         </div>
+        )}
 
+        {city.terrainElevation?.elevationFeet != null && (
         <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
           <div class="flex justify-between items-start text-slate-400 text-[10px] uppercase font-bold tracking-wider">
             <span>Topography</span>
             <span class="text-emerald-700 font-extrabold">USGS 3DEP</span>
           </div>
-          <div class="text-xl sm:text-2xl font-black text-[#152438] mt-1">{Math.round(city.terrainElevation?.elevationFeet ?? 500)} ft</div>
-          <div class="text-[10px] text-slate-500">{city.terrainElevation?.topographyClass ?? 'Regional Terrain'}</div>
+          <div class="text-xl sm:text-2xl font-black text-[#152438] mt-1">{Math.round(city.terrainElevation.elevationFeet)} ft</div>
+          <div class="text-[10px] text-slate-500">{city.terrainElevation.topographyClass}</div>
         </div>
+        )}
 
+        {city.permitsAndTax?.combinedSalesTaxRate != null && city.permitsAndTax?.provenance && (
         <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
           <div class="flex justify-between items-start text-slate-400 text-[10px] uppercase font-bold tracking-wider">
             <span>Local Sales Tax</span>
@@ -447,6 +362,7 @@ const cityMapPins = {
           <div class="text-xl sm:text-2xl font-black text-[#152438] mt-1">{Number((city.permitsAndTax.combinedSalesTaxRate * 100).toFixed(3)).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:3})}%</div>
           <div class="text-[10px] text-slate-500">State + Municipal Tax</div>
         </div>
+        )}
       </div>
 
       <!-- Strip 2: Moving (Active when Moving is chosen) -->
@@ -463,10 +379,10 @@ const cityMapPins = {
         <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
           <div class="flex justify-between items-start text-slate-400 text-[10px] uppercase font-bold tracking-wider">
             <span>Typical Rent</span>
-            <span class="text-emerald-700 font-extrabold">2-Bed Mkt</span>
+            <span class="text-emerald-700 font-extrabold">ACS</span>
           </div>
           <div class="text-xl sm:text-2xl font-black text-[#152438] mt-1">{city.housingAndTaxes?.medianGrossRent != null ? `$${city.housingAndTaxes.medianGrossRent.toLocaleString()}/mo` : '—'}</div>
-          <div class="text-[10px] text-slate-500">Market Asking Rent</div>
+          <div class="text-[10px] text-slate-500">Median gross rent (ACS)</div>
         </div>
 
         <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
@@ -613,7 +529,7 @@ const cityMapPins = {
             <div class="flex justify-between items-center pb-3 border-b border-slate-100">
               <div>
                 <h2 class="text-2xl font-black text-[#152438]">Traveling to {city.name}</h2>
-                <p class="text-xs text-slate-500 mt-1">Flight logistics, cultural calendar, entertainment corridors, and executive visitor protocols</p>
+                <p class="text-xs text-slate-500 mt-1">Airport distance, climate, and water-system facts on the record</p>
               </div>
               <span class="px-3 py-1 rounded-full text-xs font-bold bg-blue-100 text-[#1D68F2]">Visitor Guide</span>
             </div>
@@ -687,81 +603,31 @@ const cityMapPins = {
               </div>
             )}
 
-            <!-- 3. DISTRICTS TO EXPLORE -->
-            {isAustin ? (
-              <div class="space-y-3 pt-2">
-                <h3 class="font-black text-xl text-[#152438]">Districts to Explore</h3>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
-                  <div class="p-4 rounded-2xl border border-slate-200 bg-white shadow-2xs">
-                    <div class="font-bold text-slate-800 text-sm">South Congress (SoCo)</div>
-                    <p class="text-slate-500 mt-1 leading-relaxed">Flagship boutique retail, historic live music (Continental Club), iconic dining, high pedestrian foot traffic.</p>
-                  </div>
-                  <div class="p-4 rounded-2xl border border-slate-200 bg-white shadow-2xs">
-                    <div class="font-bold text-slate-800 text-sm">East Austin (Cesar Chavez & 6th)</div>
-                    <p class="text-slate-500 mt-1 leading-relaxed">Creative culinary hub, craft breweries, specialty third-wave coffee purveyors, art collectives.</p>
-                  </div>
-                  <div class="p-4 rounded-2xl border border-slate-200 bg-white shadow-2xs">
-                    <div class="font-bold text-slate-800 text-sm">Downtown 2nd Street District</div>
-                    <p class="text-slate-500 mt-1 leading-relaxed">High-end retail, Austin City Limits (ACL Live at Moody Theater), Lady Bird Lake hike-and-bike trail access.</p>
-                  </div>
-                  <div class="p-4 rounded-2xl border border-slate-200 bg-white shadow-2xs">
-                    <div class="font-bold text-slate-800 text-sm">Rainey Street Historic District</div>
-                    <p class="text-slate-500 mt-1 leading-relaxed">Historic bungalow bars, outdoor food truck courts, transitioning to luxury hotel & residential mix.</p>
-                  </div>
-                </div>
-              </div>
-            ) : isHSV ? (
-              <div class="space-y-3 pt-2">
-                <h3 class="font-black text-xl text-[#152438]">Districts to Explore</h3>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
-                  <div class="p-4 rounded-2xl border border-slate-200 bg-white shadow-2xs">
-                    <div class="font-bold text-slate-800 text-sm">Lake Balboa & Marina Corridor</div>
-                    <p class="text-slate-500 mt-1 leading-relaxed">Largest village lake (944 acres), sandy beach, private marina with boat slips, waterfront clubhouse dining.</p>
-                  </div>
-                  <div class="p-4 rounded-2xl border border-slate-200 bg-white shadow-2xs">
-                    <div class="font-bold text-slate-800 text-sm">Diamante Country Club & Fairways</div>
-                    <p class="text-slate-500 mt-1 leading-relaxed">Private championship golf club, luxury fairway enclaves, tennis & pool pavilion.</p>
-                  </div>
-                  <div class="p-4 rounded-2xl border border-slate-200 bg-white shadow-2xs">
-                    <div class="font-bold text-slate-800 text-sm">Ponce de Leon Cultural Center</div>
-                    <p class="text-slate-500 mt-1 leading-relaxed">Woodlands Auditorium (650 seats), Ouachita Arts Council events, public library, and central civic hub.</p>
-                  </div>
-                  <div class="p-4 rounded-2xl border border-slate-200 bg-white shadow-2xs">
-                    <div class="font-bold text-slate-800 text-sm">DeSoto Club & West Gate Corridor</div>
-                    <p class="text-slate-500 mt-1 leading-relaxed">Original village enclave, Lake DeSoto dining, 14-court pickleball complex, commercial service hub along Hwy 7.</p>
-                  </div>
-                </div>
-              </div>
-            ) : null}
-
-            <!-- 4. GETTING HERE & GETTING AROUND -->
+            {sourcedAirport && (
             <div class="bg-gradient-to-br from-[#152438] to-slate-900 rounded-3xl p-6 text-white space-y-4">
               <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                 <div class="flex items-center gap-3">
                   <span class="text-3xl">🛫</span>
                   <div>
-                    <h3 class="font-black text-lg text-white">Getting Here: {travel.primaryAirport.name}{travel.primaryAirport.iata ? ` (${travel.primaryAirport.iata})` : ''}</h3>
-                    <p class="text-xs text-slate-300">Primary commercial airport · {travel.primaryAirport.distanceMiles} miles from the city center (straight line)</p>
+                    <h3 class="font-black text-lg text-white">Getting Here: {sourcedAirport.name}{sourcedAirport.iata ? ` (${sourcedAirport.iata})` : ''}</h3>
+                    <p class="text-xs text-slate-300">{sourcedAirport.distanceMiles} miles from the city center (straight line)</p>
                   </div>
                 </div>
               </div>
               <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 text-xs">
                 <div class="bg-white/10 p-3 rounded-xl border border-white/10">
                   <span class="text-slate-400 block text-[11px]">Distance from city center</span>
-                  <span class="font-bold text-slate-100">{`${travel.primaryAirport.distanceMiles} mi straight line`}</span>
+                  <span class="font-bold text-slate-100">{`${sourcedAirport.distanceMiles} mi straight line`}</span>
                 </div>
-                {travel.primaryAirport.transitToDowntown && (<div class="bg-white/10 p-3 rounded-xl border border-white/10">
-                  <span class="text-slate-400 block text-[11px]">Direct Transit</span>
-                  <span class="font-bold text-slate-100">{travel.primaryAirport.transitToDowntown}</span>
-                </div>)}
                 <div class="bg-white/10 p-3 rounded-xl border border-white/10">
                   <span class="text-slate-400 block text-[11px]">Airport</span>
-                  <span class="font-bold text-slate-100">{travel.primaryAirport.name}</span>
+                  <span class="font-bold text-slate-100">{sourcedAirport.name}</span>
                 </div>
               </div>
             </div>
+            )}
 
-            <!-- 5. KNOW BEFORE YOU GO (Practical Logistics) -->
+            {(city as any).waterUtility && (
             <div class="rounded-3xl p-6 sm:p-7 bg-[#F8FAFC] border-2 border-blue-200/80 shadow-xs space-y-5">
               <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3 border-b border-slate-200">
                 <div class="flex items-center gap-2.5">
@@ -777,157 +643,18 @@ const cityMapPins = {
               </div>
 
               <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
-<!-- Card 4: Water Safety & Emergency Contact -->
                 <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-2xs space-y-1.5">
                   <div class="flex items-center gap-2 font-bold text-slate-800">
                     <span class="text-base">🚰</span>
-                    <span>Water Safety & Emergency 911</span>
+                    <span>Water system</span>
                   </div>
                   <div class="text-slate-600 leading-relaxed">
-                    {(city as any).waterUtility && (<span><strong>Tap water:</strong> Served by {(city as any).waterUtility.providerName} (PWSID {(city as any).waterUtility.pwsid}), a {(city as any).waterUtility.sourceType} system serving about {(city as any).waterUtility.populationServed.toLocaleString('en-US')} people. <em>Source: EPA SDWIS, retrieved Oct 2026.</em> In an emergency, dial 911.</span>)}
+                    <span><strong>Tap water:</strong> Served by {(city as any).waterUtility.providerName} (PWSID {(city as any).waterUtility.pwsid}), a {(city as any).waterUtility.sourceType} system serving about {(city as any).waterUtility.populationServed.toLocaleString('en-US')} people. <em>Source: EPA SDWIS, retrieved Oct 2026.</em> In an emergency, dial 911.</span>
                   </div>
                 </div>
               </div>
             </div>
-
-            <!-- Top Entertainment & Cultural Corridors -->
-            {false /* duplicate of Districts to Explore; Austin/HSV render once above */ ? (
-              <div class="space-y-3 pt-2">
-                <h3 class="font-bold text-base text-[#152438]">Top Cultural & Culinary Scouting Districts</h3>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
-                  <div class="p-4 rounded-xl border border-slate-200 bg-white shadow-xs">
-                    <div class="font-bold text-slate-800 text-sm">South Congress (SoCo)</div>
-                    <p class="text-slate-500 mt-1">Flagship boutique retail, historic live music (Continental Club), iconic dining, high pedestrian density.</p>
-                  </div>
-                  <div class="p-4 rounded-xl border border-slate-200 bg-white shadow-xs">
-                    <div class="font-bold text-slate-800 text-sm">East Austin (Cesar Chavez & 6th)</div>
-                    <p class="text-slate-500 mt-1">Creative culinary hub, craft breweries, specialty third-wave coffee purveyors, art collectives.</p>
-                  </div>
-                  <div class="p-4 rounded-xl border border-slate-200 bg-white shadow-xs">
-                    <div class="font-bold text-slate-800 text-sm">Downtown 2nd Street District</div>
-                    <p class="text-slate-500 mt-1">High-end retail, Austin City Limits (ACL Live at Moody Theater), Lady Bird Lake hike-and-bike access.</p>
-                  </div>
-                  <div class="p-4 rounded-xl border border-slate-200 bg-white shadow-xs">
-                    <div class="font-bold text-slate-800 text-sm">Rainey Street Historic District</div>
-                    <p class="text-slate-500 mt-1">Renovated bungalow bars, outdoor food truck courts, transitioning to luxury high-rise commercial mix.</p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Curated Iconic Stays by District -->
-              <div class="space-y-3 pt-2">
-                <h3 class="font-bold text-base text-[#152438]">Curated Iconic Stays by District</h3>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
-                  <div class="p-4 rounded-xl border border-slate-200 bg-white shadow-xs">
-                    <div class="flex justify-between items-start">
-                      <span class="font-bold text-slate-800 text-sm">The Driskill</span>
-                      <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-blue-50 text-[#1D68F2]">Downtown / 6th</span>
-                    </div>
-                    <p class="text-slate-500 mt-1">Historic Romanesque landmark opened in 1886. Walking distance to the Texas State Capitol and 2nd Street District.</p>
-                  </div>
-                  <div class="p-4 rounded-xl border border-slate-200 bg-white shadow-xs">
-                    <div class="flex justify-between items-start">
-                      <span class="font-bold text-slate-800 text-sm">South Congress Hotel</span>
-                      <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-blue-50 text-[#1D68F2]">South Congress (SoCo)</span>
-                    </div>
-                    <p class="text-slate-500 mt-1">Boutique luxury hub anchoring SoCo's premier pedestrian retail, live music, and dining strip.</p>
-                  </div>
-                  <div class="p-4 rounded-xl border border-slate-200 bg-white shadow-xs">
-                    <div class="flex justify-between items-start">
-                      <span class="font-bold text-slate-800 text-sm">The LINE Austin</span>
-                      <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-blue-50 text-[#1D68F2]">Lady Bird Lake</span>
-                    </div>
-                    <p class="text-slate-500 mt-1">Lakeside design property with direct hike-and-bike trail access, Congress Avenue Bridge bat watching, and rooftop dining.</p>
-                  </div>
-                  <div class="p-4 rounded-xl border border-slate-200 bg-white shadow-xs">
-                    <div class="flex justify-between items-start">
-                      <span class="font-bold text-slate-800 text-sm">Commodore Perry Estate</span>
-                      <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-blue-50 text-[#1D68F2]">Hyde Park / Central</span>
-                    </div>
-                    <p class="text-slate-500 mt-1">Auberge Resorts Collection landmark 10-acre estate featuring walled European gardens and architectural heritage.</p>
-                  </div>
-                </div>
-              </div>
-            ) : false ? (
-              <div class="space-y-3 pt-2">
-                <h3 class="font-bold text-base text-[#152438]">Top Recreational & Village Scouting Districts</h3>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
-                  <div class="p-4 rounded-xl border border-slate-200 bg-white shadow-xs">
-                    <div class="font-bold text-slate-800 text-sm">Lake Balboa & Marina Corridor</div>
-                    <p class="text-slate-500 mt-1">Largest village lake (944 acres), sandy beach, private marina with boat slips, waterfront clubhouse dining.</p>
-                  </div>
-                  <div class="p-4 rounded-xl border border-slate-200 bg-white shadow-xs">
-                    <div class="font-bold text-slate-800 text-sm">Diamante Country Club & Fairways</div>
-                    <p class="text-slate-500 mt-1">Private championship golf club, luxury fairway enclaves, tennis & pool pavilion.</p>
-                  </div>
-                  <div class="p-4 rounded-xl border border-slate-200 bg-white shadow-xs">
-                    <div class="font-bold text-slate-800 text-sm">Ponce de Leon Cultural Center</div>
-                    <p class="text-slate-500 mt-1">Woodlands Auditorium (650 seats), Ouachita Arts Council events, public library, and central civic hub.</p>
-                  </div>
-                  <div class="p-4 rounded-xl border border-slate-200 bg-white shadow-xs">
-                    <div class="font-bold text-slate-800 text-sm">DeSoto Club & West Gate Corridor</div>
-                    <p class="text-slate-500 mt-1">Original village enclave, Lake DeSoto dining, 14-court pickleball complex, commercial service hub along Hwy 7.</p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Curated Iconic Stays by District -->
-              <div class="space-y-3 pt-2">
-                <h3 class="font-bold text-base text-[#152438]">Curated Iconic Stays by District</h3>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
-                  <div class="p-4 rounded-xl border border-slate-200 bg-white shadow-xs">
-                    <div class="flex justify-between items-start">
-                      <span class="font-bold text-slate-800 text-sm">Lake Balboa Waterfront Villas</span>
-                      <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-blue-50 text-[#1D68F2]">Balboa Marina</span>
-                    </div>
-                    <p class="text-slate-500 mt-1">Private lakefront rental villas with boat slip access and lakeside clubhouse dining.</p>
-                  </div>
-                  <div class="p-4 rounded-xl border border-slate-200 bg-white shadow-xs">
-                    <div class="flex justify-between items-start">
-                      <span class="font-bold text-slate-800 text-sm">Diamante Country Club Casitas</span>
-                      <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-blue-50 text-[#1D68F2]">Diamante Course</span>
-                    </div>
-                    <p class="text-slate-500 mt-1">Luxury fairway accommodations beside Arkansas's top-rated private golf course.</p>
-                  </div>
-                  <div class="p-4 rounded-xl border border-slate-200 bg-white shadow-xs">
-                    <div class="flex justify-between items-start">
-                      <span class="font-bold text-slate-800 text-sm">Los Lagos Resort Lodges</span>
-                      <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-blue-50 text-[#1D68F2]">Lake DeSoto</span>
-                    </div>
-                    <p class="text-slate-500 mt-1">Spacious multi-bedroom resort townhomes near DeSoto Golf Course and clubhouse.</p>
-                  </div>
-                  <div class="p-4 rounded-xl border border-slate-200 bg-white shadow-xs">
-                    <div class="flex justify-between items-start">
-                      <span class="font-bold text-slate-800 text-sm">The Waters Hotel</span>
-                      <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-blue-50 text-[#1D68F2]">Historic Bathhouse Row</span>
-                    </div>
-                    <p class="text-slate-500 mt-1">Ascend Hotel Collection boutique luxury property in downtown Hot Springs historic district (18 min south).</p>
-                  </div>
-                </div>
-              </div>
-            ) : city.slug === 'fl/tampa' ? (
-              <div class="space-y-3 pt-2">
-                <h3 class="font-bold text-base text-[#152438]">Top Cultural & Culinary Scouting Districts</h3>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
-                  <div class="p-4 rounded-xl border border-slate-200 bg-white shadow-xs">
-                    <div class="font-bold text-slate-800 text-sm">Ybor City Historic District</div>
-                    <p class="text-slate-500 mt-1">Historic brick cigar factory district, vibrant Cuban culinary hub, nightlife, TECO Line Streetcar connection.</p>
-                  </div>
-                  <div class="p-4 rounded-xl border border-slate-200 bg-white shadow-xs">
-                    <div class="font-bold text-slate-800 text-sm">Hyde Park Village & SoHo</div>
-                    <p class="text-slate-500 mt-1">Upscale open-air retail village, high-income pedestrian traffic, boutique dining corridors along South Howard Ave.</p>
-                  </div>
-                  <div class="p-4 rounded-xl border border-slate-200 bg-white shadow-xs">
-                    <div class="font-bold text-slate-800 text-sm">Downtown Riverwalk & Heights</div>
-                    <p class="text-slate-500 mt-1">2.6-mile pedestrian riverfront trail connecting Armature Works food hall, museums, and convention hotels.</p>
-                  </div>
-                  <div class="p-4 rounded-xl border border-slate-200 bg-white shadow-xs">
-                    <div class="font-bold text-slate-800 text-sm">Water Street Tampa & Channelside</div>
-                    <p class="text-slate-500 mt-1">$3B WELL-certified wellness mixed-use district, luxury hospitality, Amalie Arena sports corridor.</p>
-                  </div>
-                </div>
-              </div>
-            ) : null}
+            )}
           </section>
         </div>
 
@@ -959,15 +686,15 @@ const cityMapPins = {
               <div class="bg-[#F8FAFC] p-4 rounded-2xl border border-slate-200">
                 <span class="text-xs font-semibold text-slate-500">Median Resident Age</span>
                 <div class="text-2xl font-black text-[#152438] mt-1">{city.demographics.medianAge} Years</div>
-                <span class="text-[11px] text-slate-500">Census ACS 2023 · U.S. median is about 39</span>
+                <span class="text-[11px] text-slate-500">Census ACS 2023</span>
               </div>
             </div>
 
-            <!-- Geography, Elevation & Climate Normals (USGS & Open-Meteo) -->
+            {(city.terrainElevation || city.climateNormals) && (
             <div class="space-y-3 pt-2">
               <h3 class="font-bold text-base text-[#152438]">Elevation, Terrain & Climate Normals</h3>
               <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
-                <!-- USGS Elevation -->
+                {city.terrainElevation && (
                 <div class="p-5 rounded-2xl bg-[#F8FAFC] border border-slate-200 space-y-2">
                   <div class="flex items-center gap-2">
                     <span class="text-lg">⛰️</span>
@@ -976,20 +703,17 @@ const cityMapPins = {
                   <div class="space-y-1.5 text-slate-600">
                     <div class="flex justify-between">
                       <span class="text-slate-400">Exact Elevation:</span>
-                      <span class="font-bold text-slate-800">{city.terrainElevation ? `${city.terrainElevation.elevationFeet.toFixed(1)} ft (${city.terrainElevation.elevationMeters.toFixed(1)} m)` : (city.coordinates?.lat ? 'USGS 3DEP Survey Active' : 'Federal Topo Survey')}</span>
+                      <span class="font-bold text-slate-800">{`${city.terrainElevation.elevationFeet.toFixed(1)} ft (${city.terrainElevation.elevationMeters.toFixed(1)} m)`}</span>
                     </div>
                     <div class="flex justify-between">
                       <span class="text-slate-400">Topography Class:</span>
-                      <span class="font-bold text-slate-800">{city.terrainElevation?.topographyClass ?? `${city.stateName} Regional Basin`}</span>
-                    </div>
-                    <div class="flex justify-between">
-                      <span class="text-slate-400">Drainage Basin:</span>
-                      <span class="font-bold text-slate-800">{isAustin ? 'Colorado River / Lady Bird Lake Basin' : isHSV ? 'Lake Ouachita / Saline River Basin' : isBoise ? 'Boise River / Snake River Basin' : `${city.name} Regional Watershed`}</span>
+                      <span class="font-bold text-slate-800">{city.terrainElevation.topographyClass}</span>
                     </div>
                   </div>
                 </div>
+                )}
 
-                <!-- Climate Normals -->
+                {city.climateNormals?.peakSummerHighF != null && (
                 <div class="p-5 rounded-2xl bg-[#F8FAFC] border border-slate-200 space-y-2">
                   <div class="flex items-center gap-2">
                     <span class="text-lg">☀️</span>
@@ -998,33 +722,34 @@ const cityMapPins = {
                   <div class="space-y-1.5 text-slate-600">
                     <div class="flex justify-between">
                       <span class="text-slate-400">Annual Precipitation:</span>
-                      <span class="font-bold text-slate-800">{city.climateNormals?.annualRainfallInches != null ? `${city.climateNormals.annualRainfallInches} Inches` : '—'}</span>
+                      <span class="font-bold text-slate-800">{`${city.climateNormals.annualRainfallInches} Inches`}</span>
                     </div>
                     <div class="flex justify-between">
                       <span class="text-slate-400">Summer High / Winter Low:</span>
-                      <span class="font-bold text-slate-800">{city.climateNormals?.peakSummerHighF != null ? `${city.climateNormals.peakSummerHighF}°F Avg July High / ${city.climateNormals.winterLowF}°F Avg Jan Low` : '—'}</span>
+                      <span class="font-bold text-slate-800">{`${city.climateNormals.peakSummerHighF}°F Avg July High / ${city.climateNormals.winterLowF}°F Avg Jan Low`}</span>
                     </div>
                   </div>
                 </div>
+                )}
               </div>
             </div>
+            )}
 
-            <!-- Healthcare, Emergency & Schools -->
+            {erHospitals.length > 0 && (
             <div class="space-y-3 pt-2">
-              <h3 class="font-bold text-base text-[#152438]">Healthcare, Safety & School Systems</h3>
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
-                <div class="p-5 rounded-2xl bg-slate-900 text-white space-y-2">
-                  <h4 class="font-bold text-sm text-emerald-400">Emergency & Acute Healthcare</h4>
-                  <div class="space-y-1 text-slate-300">
-                    <p>• <strong>Primary Trauma Facility:</strong> {travel.emergency?.nearestTraumaHospital ?? 'Not yet verified'}</p>
-                    <p>• <strong>Hospital Location:</strong> {travel.emergency?.hospitalAddress ?? `${city.countyName}, ${city.stateCode.toUpperCase()}`}</p>
-                    <p>• <strong>Emergency Dispatch:</strong> {travel.emergency?.emergencyDispatch ?? '911 Emergency · 24/7 Coordinated Services'}</p>
-                  </div>
+              <h3 class="font-bold text-base text-[#152438]">Hospitals with emergency departments in {city.name} (CMS)</h3>
+              <div class="p-5 rounded-2xl bg-slate-900 text-white space-y-3">
+                <div class="space-y-2 text-slate-300">
+                  {erHospitals.map((h) => (
+                    <p><strong>{h.name}</strong> — {h.address} — {h.type}</p>
+                  ))}
                 </div>
-
-                
+                {erHospitalsSource && (
+                  <p class="text-[11px] text-slate-400 leading-relaxed">{erHospitalsSource}</p>
+                )}
               </div>
             </div>
+            )}
 
             <!-- Housing & Property Tax Friction -->
             <div class="space-y-3 pt-2">
@@ -1046,9 +771,11 @@ const cityMapPins = {
                   <span class="text-[11px] text-amber-700 font-semibold">Census ACS 2023 · B25103 ÷ B25077</span>
                 </div>
               </div>
+              {city.housingAndTaxes?.homesteadExemptionNote && (
               <p class="text-[11px] text-slate-500">
-                {city.housingAndTaxes?.homesteadExemptionNote ?? (isAustin ? 'Texas levies 0% state personal income tax, compensated by municipal and school district ad-valorem property tax rates.' : isBoise ? 'Idaho homestead exemption covers 50% of home value up to state cap; low effective ad-valorem rate.' : isTampa ? 'Florida levies 0% personal income tax with Save Our Homes 3% assessment growth cap.' : `Statutory residential ad-valorem tax rates administered by ${city.countyName}.`)}
+                {city.housingAndTaxes.homesteadExemptionNote}
               </p>
+              )}
             </div>
           </section>
         </div>
@@ -1061,29 +788,21 @@ const cityMapPins = {
           <div class="bg-gradient-to-r from-blue-900 to-slate-900 p-6 sm:p-7 rounded-3xl text-white shadow-xl flex flex-col md:flex-row md:items-center justify-between gap-5 border border-slate-800">
             <div class="space-y-1">
               <span class="text-[10px] font-black uppercase tracking-wider text-blue-400 bg-blue-500/20 px-2.5 py-1 rounded-full border border-blue-400/30">
-                Interactive Trade Underwriting Engine
+                Census trade counts
               </span>
-              <h2 class="text-xl sm:text-2xl font-black text-white">Underwrite Any Commercial Enterprise</h2>
+              <h2 class="text-xl sm:text-2xl font-black text-white">Establishment counts on the record</h2>
               <p class="text-xs text-slate-300 max-w-xl">
-                Choose from the standard NAICS trades or enter your own custom business concept to underwrite establishment density, commercial lease rates, and daily transaction breakeven for {city.name}.
+                Choose a NAICS trade to see the Census establishment count for {city.name}. Lease rates and breakeven are not on the record.
               </p>
             </div>
             <div class="shrink-0 w-full md:w-96 space-y-2">
               <div class="flex items-center justify-between">
-                <label for="trade-select" class="block text-[11px] font-bold text-slate-300 uppercase tracking-wider">Select Trade or Custom:</label>
-                <button
-                  type="button"
-                  id="toggle-custom-btn"
-                  class="text-[10px] font-bold text-blue-300 hover:text-white underline cursor-pointer"
-                >
-                  ✏️ Custom Concept
-                </button>
+                <label for="trade-select" class="block text-[11px] font-bold text-slate-300 uppercase tracking-wider">Select trade:</label>
               </div>
               <select
                 id="trade-select"
                 class="w-full px-4 py-3 rounded-2xl bg-white text-slate-900 font-extrabold text-xs shadow-xl border-2 border-blue-400 focus:ring-2 focus:ring-blue-300 outline-none cursor-pointer"
               >
-                <option value="custom" class="font-black text-blue-600">✨ Custom Enterprise (Enter your own concept)...</option>
                 <optgroup label="Standard NAICS Benchmarks">
                   {industriesWithDefaults.map((ind) => (
                     <option value={ind.naicsCode} selected={ind.naicsCode === '722515'}>
@@ -1092,26 +811,6 @@ const cityMapPins = {
                   ))}
                 </optgroup>
               </select>
-
-              <!-- Custom Business Input Box -->
-              <div id="custom-trade-box" class="hidden pt-2 space-y-1.5">
-                <label for="custom-business-name" class="block text-[10px] font-bold text-blue-300 uppercase tracking-wider">Your Enterprise Name / Concept:</label>
-                <div class="flex gap-2">
-                  <input
-                    type="text"
-                    id="custom-business-name"
-                    placeholder="e.g. Metal Laser Printing, Specialty Bakery, Day Spa..."
-                    class="flex-1 px-3.5 py-2.5 rounded-xl bg-slate-800 text-white placeholder-slate-400 text-xs font-bold border border-blue-400/60 outline-none focus:border-blue-300"
-                  />
-                  <button
-                    type="button"
-                    id="apply-custom-name-btn"
-                    class="px-4 py-2.5 rounded-xl bg-[#1D68F2] hover:bg-blue-600 text-white font-bold text-xs shrink-0 cursor-pointer transition shadow-md"
-                  >
-                    Underwrite
-                  </button>
-                </div>
-              </div>
             </div>
           </div>
 
@@ -1145,91 +844,12 @@ const cityMapPins = {
               <div class="bg-[#F8FAFC] p-4 rounded-2xl border border-slate-200 col-span-2 sm:col-span-1">
                 <span class="text-xs font-semibold text-slate-500">Saturation Index</span>
                 <div id="active-trade-saturation" class="text-2xl font-black text-[#152438] mt-1">{defaultTrade.saturationIndex} <span class="text-xs font-normal text-slate-400">/ 100</span></div>
-                <span class="text-[11px] text-emerald-600 font-semibold">Bayes Smoothed (m=10k)</span>
+                <span class="text-[11px] text-emerald-600 font-semibold">Census ZBP vs national density</span>
               </div>
             </div>
           </section>
 
-          <!-- Interactive Lease Breakeven Underwriting Calculator -->
-          <section class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-[0_4px_20px_-2px_rgba(0,0,0,0.06)] space-y-6">
-            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-              <div>
-                <h2 class="text-xl font-black text-[#152438]">Retail Lease Breakeven Underwriting</h2>
-                <p id="calc-subtitle" class="text-xs text-slate-500 mt-0.5">Determine required customer transaction velocity to cover {city.name} retail leases for {defaultTrade.label}</p>
-              </div>
-              <span class="text-xs font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-lg border border-blue-200">
-                Dynamic 25-Trade Model
-              </span>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
-              <div class="space-y-4 text-xs font-semibold">
-                <div>
-                  <div class="flex justify-between mb-1">
-                    <label class="text-slate-700">Premises Size (Usable Sq Ft)</label>
-                    <span id="label-sqft" class="text-blue-600 font-bold">{defaultTrade.defaultBreakeven.typicalSqFt.toLocaleString()} sqft</span>
-                  </div>
-                  <input id="slider-sqft" type="range" min="400" max="8000" step="50" value={defaultTrade.defaultBreakeven.typicalSqFt} class="w-full accent-[#1D68F2] cursor-pointer" />
-                </div>
-                <div>
-                  <div class="flex justify-between mb-1">
-                    <label class="text-slate-700">Base Asking Rent ($/sqft/yr)</label>
-                    <span id="label-rent" class="text-blue-600 font-bold">enter your quote</span>
-                  </div>
-                  <input id="slider-rent" type="number" min="1" max="500" step="0.5" placeholder="Enter quoted $/sqft/yr" data-tax={city.permitsAndTax.combinedSalesTaxRate} class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm text-[#152438]" />
-                  <p class="text-[11px] text-slate-400 mt-1">No verified free source exists for commercial asking rents. Enter the rate from a broker quote or listing.</p>
-                </div>
-                <div>
-                  <div class="flex justify-between mb-1">
-                    <label class="text-slate-700">Average Customer Ticket / Order ($)</label>
-                    <span id="label-ticket" class="text-blue-600 font-bold">${defaultTrade.defaultBreakeven.typicalTicket.toFixed(2)}</span>
-                  </div>
-                  <input id="slider-ticket" type="range" min="3" max="500" step="0.5" value={defaultTrade.defaultBreakeven.typicalTicket} class="w-full accent-[#1D68F2] cursor-pointer" />
-                </div>
-                <div>
-                  <div class="flex justify-between mb-1">
-                    <label class="text-slate-700">Cost of Goods Sold (COGS %)</label>
-                    <span id="label-cogs" class="text-blue-600 font-bold">{Math.round(defaultTrade.defaultBreakeven.typicalCogsPct * 100)}%</span>
-                  </div>
-                  <input id="slider-cogs" type="range" min="5" max="75" step="1" value={Math.round(defaultTrade.defaultBreakeven.typicalCogsPct * 100)} class="w-full accent-[#1D68F2] cursor-pointer" />
-                </div>
-                <div>
-                  <div class="flex justify-between mb-1">
-                    <label class="text-slate-700">Monthly Operating Overhead ($)</label>
-                    <span id="label-overhead" class="text-blue-600 font-bold">$1,200</span>
-                  </div>
-                  <input id="slider-overhead" type="range" min="0" max="5000" step="50" value="1200" class="w-full accent-[#1D68F2] cursor-pointer" />
-                  <span class="text-[10px] text-slate-400">Utilities, commercial insurance, POS software baseline</span>
-                </div>
-              </div>
-
-              <!-- Live Output Card -->
-              <div class="bg-[#EDF4FC] p-6 rounded-2xl border border-blue-200/80 flex flex-col justify-between">
-                <div>
-                  <div class="text-xs font-bold uppercase tracking-wider text-[#1D68F2] mb-3">Operating Velocity Required</div>
-                  <div class="space-y-3">
-                    <div>
-                      <span class="text-xs text-slate-600">Daily Customers Required</span>
-                      <div id="output-daily-customers" class="text-4xl font-black text-[#152438]">—</div>
-                      <div class="text-[11px] text-slate-500">transactions per operating day</div>
-                    </div>
-                    <div>
-                      <span class="text-xs text-slate-600">Monthly Net Revenue Needed</span>
-                      <div id="output-monthly-revenue" class="text-xl font-bold text-slate-800">—</div>
-                    </div>
-                    <div>
-                      <span class="text-xs text-slate-600">Monthly Fixed Cost (Lease + Labor + Overhead)</span>
-                      <div id="output-monthly-fixed" class="text-base font-semibold text-slate-700">—</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="text-[11px] text-slate-500 pt-3 border-t border-blue-200">
-                  Stripping {Number((city.permitsAndTax.combinedSalesTaxRate * 100).toFixed(3)).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:3})}% sales tax and applying 18% payroll burden load. Assumes $6.50/sqft NNN, $16.50/hr labor and 120 staff-hours/week as illustrative defaults.
-                </div>
-              </div>
-            </div>
-
-          </section>
+          <!-- Trade density is on the record. Lease math is not: no verified rent, ticket, or labor fields. -->
 
           <!-- 25-Industry NAICS Saturation Table -->
           <section class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-[0_4px_20px_-2px_rgba(0,0,0,0.06)] space-y-6">
@@ -1282,7 +902,7 @@ const cityMapPins = {
           <section class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-[0_4px_20px_-2px_rgba(0,0,0,0.06)] space-y-6">
             <div>
               <h2 class="text-xl font-black text-[#152438]">Permits, Taxes & Municipal Friction</h2>
-              <p class="text-xs text-slate-500 mt-0.5">Statutory approvals required to open a commercial space in {city.name}</p>
+              <p class="text-xs text-slate-500 mt-0.5">Sales tax rate on the record for {city.name}</p>
             </div>
 
             <div class="overflow-x-auto">
@@ -1389,7 +1009,7 @@ const cityMapPins = {
             </div>
             <div class="absolute bottom-3 left-3 z-10 bg-slate-900/85 backdrop-blur-md px-3 py-1.5 rounded-xl text-[11px] font-semibold text-white shadow-lg flex items-center gap-2">
               <span id="map-layer-legend-dot" class="w-2.5 h-2.5 rounded-full bg-[#1D68F2]"></span>
-              <span id="map-layer-legend-text">Visiting: Attractions, Airport & Accommodations</span>
+              <span id="map-layer-legend-text">Airport pin when coordinates are on the record</span>
             </div>
           </div>
         </section>
@@ -1409,29 +1029,41 @@ const cityMapPins = {
                 <span class="bg-blue-500/20 text-blue-200 px-2 py-0.5 rounded border border-blue-400/30">1-Page Cheat Sheet</span>
               </div>
               <div class="font-black text-sm text-white">{city.name} Visitor Pocket Guide</div>
-              <div class="text-[11px] text-slate-300 mt-1">Arrival transit, key districts, safety & top stays · 2026 Edition</div>
+              <div class="text-[11px] text-slate-300 mt-1">Airport distance, climate, emergency-department list, and water system</div>
             </div>
 
             <div>
               <h3 class="text-xl font-black text-[#152438]">Download {city.name} Guide</h3>
               <p class="text-xs text-slate-500 mt-1 leading-relaxed">
-                Essential 1-page summary covering airport transit, top districts to explore, curated stays, and local tips for {city.name}.
+                Print the facts on this page: airport distance, climate, emergency-department list, and water system, where those fields exist for {city.name}.
               </p>
             </div>
 
             <div class="space-y-2.5 py-3 border-y border-slate-100 text-xs text-slate-700 font-medium">
+              {sourcedAirport?.distanceMiles != null && (
               <div class="flex items-start gap-2.5">
                 <span class="w-4 h-4 rounded-full bg-blue-100 text-[#1D68F2] flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">✓</span>
-                <span><strong>Airport & Ground Transit:</strong> Terminal to downtown rideshare level</span>
+                <span><strong>Airport distance:</strong> {sourcedAirport.distanceMiles} miles, straight line from city center</span>
               </div>
+              )}
+              {city.climateNormals?.peakSummerHighF != null && (
               <div class="flex items-start gap-2.5">
                 <span class="w-4 h-4 rounded-full bg-blue-100 text-[#1D68F2] flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">✓</span>
-                <span><strong>Curated Stays:</strong> Boutique lodging by entertainment district</span>
+                <span><strong>Climate:</strong> {city.climateNormals.peakSummerHighF}°F average July high</span>
               </div>
+              )}
+              {erHospitals.length > 0 && (
               <div class="flex items-start gap-2.5">
                 <span class="w-4 h-4 rounded-full bg-blue-100 text-[#1D68F2] flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">✓</span>
-                <span><strong>Practical Logistics:</strong> Hours, fees, drinking water & 911 dispatch</span>
+                <span><strong>Emergency departments:</strong> CMS hospital list for {city.name}</span>
               </div>
+              )}
+              {(city as any).waterUtility && (
+              <div class="flex items-start gap-2.5">
+                <span class="w-4 h-4 rounded-full bg-blue-100 text-[#1D68F2] flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">✓</span>
+                <span><strong>Water system:</strong> {(city as any).waterUtility.providerName}</span>
+              </div>
+              )}
             </div>
 
             <button
@@ -1468,7 +1100,7 @@ const cityMapPins = {
           <div class="bg-gradient-to-br from-[#0F172A] to-[#1E293B] rounded-3xl p-6 text-white shadow-lg space-y-3">
             <div class="text-xs font-bold uppercase tracking-wider text-blue-300">Follow {city.name} Events</div>
             <p class="text-xs text-slate-300 leading-relaxed">
-              Get notified of major live music festivals, community gatherings, and seasonal visitor advisories for {city.name}.
+              Get notified when this page is updated.
             </p>
             <form onsubmit="event.preventDefault(); alert('Subscribed to event updates for ' + this.getAttribute('data-city'));" data-city={city.name} class="space-y-2">
               <input type="email" placeholder="Enter your email" required class="w-full px-3 py-2 rounded-xl bg-white text-slate-800 text-xs outline-none" />
@@ -1488,30 +1120,36 @@ const cityMapPins = {
                 <span>Relocation Resource</span>
                 <span class="bg-emerald-500/20 text-emerald-200 px-2 py-0.5 rounded border border-emerald-400/30">Step-by-Step</span>
               </div>
-              <div class="font-black text-sm text-white">{city.name} Relocation Checklist</div>
-              <div class="text-[11px] text-slate-300 mt-1">Schools, utilities, voter registration & tax setup</div>
+              <div class="font-black text-sm text-white">{city.name} Housing Facts</div>
+              <div class="text-[11px] text-slate-300 mt-1">Home value, rent, and property tax on the record</div>
             </div>
 
             <div>
-              <h3 class="text-xl font-black text-[#152438]">New Resident Checklist</h3>
+              <h3 class="text-xl font-black text-[#152438]">Housing facts on this page</h3>
               <p class="text-xs text-slate-500 mt-1 leading-relaxed">
-                Everything you need to set up life in {city.name}: public school registration, municipal water, electric grid hookup, and ad-valorem exemptions.
+                Print the housing and tax figures shown for {city.name}. Only fields on the city record are included.
               </p>
             </div>
 
             <div class="space-y-2.5 py-3 border-y border-slate-100 text-xs text-slate-700 font-medium">
+              {city.housingAndTaxes?.medianHomeValue != null && (
               <div class="flex items-start gap-2.5">
                 <span class="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">✓</span>
-                <span><strong>Public School Districts:</strong> Campus zones & enrollment portals</span>
+                <span><strong>Median home value:</strong> ${city.housingAndTaxes.medianHomeValue.toLocaleString()}</span>
               </div>
+              )}
+              {city.housingAndTaxes?.medianGrossRent != null && (
               <div class="flex items-start gap-2.5">
                 <span class="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">✓</span>
-                <span><strong>Utilities Setup:</strong> Municipal water, electric provider & trash schedule</span>
+                <span><strong>Median gross rent:</strong> ${city.housingAndTaxes.medianGrossRent.toLocaleString()}/mo</span>
               </div>
+              )}
+              {(city as any).waterUtility && (
               <div class="flex items-start gap-2.5">
                 <span class="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">✓</span>
-                <span><strong>Homestead Exemption:</strong> County appraisal district filing deadlines</span>
+                <span><strong>Water system:</strong> {(city as any).waterUtility.providerName}</span>
               </div>
+              )}
             </div>
 
             <button
@@ -1555,29 +1193,27 @@ const cityMapPins = {
                 <span class="bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded border border-emerald-400/30">100% FREE</span>
               </div>
               <div class="font-black text-sm text-white">{city.name} Institutional Dossier</div>
-              <div class="text-[11px] text-slate-300 mt-1">Official Site Selection & Relocation Packet · 2026 Edition</div>
+              <div class="text-[11px] text-slate-300 mt-1">Print the figures on this page</div>
             </div>
 
             <div>
               <h3 class="text-xl font-black text-[#152438]">Get Complete City Dossier (Free)</h3>
               <p class="text-xs text-slate-500 mt-1 leading-relaxed">
-                Export the full 6-page institutional feasibility and commercial dossier for {city.name}. Zero cost. No credit card required.
+                Print the business figures shown on this page for {city.name}.
               </p>
             </div>
 
             <div class="space-y-2.5 py-3 border-y border-slate-100 text-xs text-slate-700 font-medium">
               <div class="flex items-start gap-2.5">
                 <span class="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">✓</span>
-                <span><strong>ZCTA Micro-Saturation Heatmap:</strong> NAICS trade counts</span>
+                <span><strong>Trade counts:</strong> Census establishment counts on this page</span>
               </div>
+              {city.permitsAndTax?.combinedSalesTaxRate != null && (
               <div class="flex items-start gap-2.5">
                 <span class="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">✓</span>
-                <span><strong>Executive Travel & Relocation Index:</strong> Power, tax refunds, airport transit</span>
+                <span><strong>Sales tax:</strong> {Number((city.permitsAndTax.combinedSalesTaxRate * 100).toFixed(3)).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:3})}% combined</span>
               </div>
-              <div class="flex items-start gap-2.5">
-                <span class="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">✓</span>
-                <span><strong>Triple Net (NNN) CAM Model:</strong> 5-year lease escalation & breakeven audit</span>
-              </div>
+              )}
             </div>
 
             <!-- Lead Magnet Gate for Full Institutional Dossier -->
@@ -1626,45 +1262,9 @@ const cityMapPins = {
                 )}
               </div>
               <div class="mt-2.5 text-center text-[11px] text-slate-500 font-medium">
-                Audited Institutional Underwriting · Instant Access
+                Print the figures on this page
               </div>
             </div>
-          </div>
-
-          <!-- Local Partners Directory -->
-          <div class="bg-white rounded-3xl p-6 sm:p-7 border border-slate-200/80 shadow-[0_4px_25px_-2px_rgba(0,0,0,0.06)] space-y-4">
-            <div class="flex justify-between items-center">
-              <h3 class="text-base font-bold text-[#152438]">Local Partners</h3>
-              <span class="text-xs text-slate-400">{city.name}, {city.stateCode.toUpperCase()}</span>
-            </div>
-
-            <div class="space-y-3">
-              <div class="p-3.5 rounded-2xl bg-[#F8FAFC] border border-slate-200/80 flex items-start gap-3">
-                <div class="w-9 h-9 rounded-xl bg-blue-100 text-[#1D68F2] font-black text-xs flex items-center justify-center shrink-0">
-                  AP
-                </div>
-                <div class="flex-1 min-w-0">
-                  <div class="text-xs font-bold text-slate-800 truncate">{city.name} Permit Expeditors</div>
-                  <div class="text-[11px] text-slate-500">Commercial Permitting & DSD Expediting</div>
-                  <a href={`mailto:consult@cityclick.com?subject=Permit%20Consultation%20Request%20-%20${encodeURIComponent(city.name)}`} class="text-[11px] font-bold text-[#1D68F2] hover:underline mt-1 block">Request Consult →</a>
-                </div>
-              </div>
-
-              <div class="p-3.5 rounded-2xl bg-[#F8FAFC] border border-slate-200/80 flex items-start gap-3">
-                <div class="w-9 h-9 rounded-xl bg-indigo-100 text-indigo-700 font-black text-xs flex items-center justify-center shrink-0">
-                  TR
-                </div>
-                <div class="flex-1 min-w-0">
-                  <div class="text-xs font-bold text-slate-800 truncate">{city.countyName} Tenant Advisors</div>
-                  <div class="text-[11px] text-slate-500">Retail Lease & Site Selection Broker</div>
-                  <a href="#city-leaflet-map" onclick="window.switchCityMapLayer && window.switchCityMapLayer('business');" class="text-[11px] font-bold text-[#1D68F2] hover:underline mt-1 block">View Commercial Corridors →</a>
-                </div>
-              </div>
-            </div>
-
-            <a href="/partners/join" class="block text-center text-xs font-semibold text-slate-500 hover:text-slate-800 pt-2 border-t border-slate-100">
-              List your commercial advisory firm →
-            </a>
           </div>
         </div>
 
@@ -1826,15 +1426,15 @@ const cityMapPins = {
 
           let places = cityData[layer] || cityData.visiting;
           let color = '#1D68F2';
-          let label = 'Visiting: Attractions, Airport & Accommodations';
+          let label = 'Airport';
 
           if (layer === 'living') {
             color = '#059669';
-            label = 'Living: Hospitals, Schools & Civic Infrastructure';
+            label = 'Hospitals with emergency departments';
             if (btnLiving) btnLiving.className = 'map-layer-btn px-3.5 py-1.5 rounded-xl transition cursor-pointer bg-emerald-600 text-white shadow-xs';
           } else if (layer === 'business') {
             color = '#7C3AED';
-            label = 'Business: Commercial Corridors & Retail Rents';
+            label = 'Commercial corridors';
             if (btnBusiness) btnBusiness.className = 'map-layer-btn px-3.5 py-1.5 rounded-xl transition cursor-pointer bg-purple-600 text-white shadow-xs';
           } else {
             if (btnVisiting) btnVisiting.className = 'map-layer-btn px-3.5 py-1.5 rounded-xl transition cursor-pointer bg-[#1D68F2] text-white shadow-xs';
@@ -1859,11 +1459,7 @@ const cityMapPins = {
                 '<div style="font-family: inherit; padding: 4px; min-width: 180px;">' +
                   '<div style="font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: ' + color + ';">' + place.category + '</div>' +
                   '<div style="font-weight: 800; font-size: 13px; color: #152438; margin-top: 2px;">' + place.name + '</div>' +
-                  '<div style="font-size: 11px; color: #64748B; margin-top: 2px;">' + place.address + '</div>' +
-                  '<div style="display: flex; gap: 6px; margin-top: 6px;">' +
-                    (place.badge ? '<span style="font-size: 10px; font-weight: 700; background: #EDF4FC; color: #1D68F2; padding: 2px 6px; border-radius: 4px;">' + place.badge + '</span>' : '') +
-                    (place.note ? '<span style="font-size: 10px; font-weight: 600; background: #F1F5F9; color: #334155; padding: 2px 6px; border-radius: 4px;">' + place.note + '</span>' : '') +
-                  '</div>' +
+                  (place.address ? '<div style="font-size: 11px; color: #64748B; margin-top: 2px;">' + place.address + '</div>' : '') +
                 '</div>'
               )
               .addTo(markerLayer);
@@ -1995,7 +1591,6 @@ const cityMapPins = {
             tradeSelect.value = 'custom';
           }
 
-          recalculate();
           return;
         }
 
@@ -2031,21 +1626,13 @@ const cityMapPins = {
           badge.innerHTML = '<span class="w-2 h-2 rounded-full bg-current animate-pulse"></span>' + trade.status;
         }
 
-        if (sSqft) sSqft.value = (trade.typicalSqFt || 1500).toString();
-        if (sTicket) sTicket.value = (trade.avgTicket || 12.00).toString();
-        if (sCogs) sCogs.value = (trade.cogsPct || 30).toString();
-        if (sOverhead) sOverhead.value = (trade.monthlyOverheadBaseline || 1400).toString();
-
         const heroTradeLabel = document.getElementById('hero-trade-label');
         if (heroTradeLabel) heroTradeLabel.innerText = trade.label;
 
         if (tradeSelect && tradeSelect.value !== naicsCode) {
           tradeSelect.value = naicsCode;
         }
-
-        recalculate();
       }
-
       if (toggleCustomBtn) {
         toggleCustomBtn.addEventListener('click', () => {
           applyTrade('custom');

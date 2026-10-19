@@ -53,13 +53,19 @@ export function buildFacts(city: CityRecord): Fact[] {
     });
   }
   const tr: any = city.executiveTravel;
-  if (tr?.primaryAirport?.name) {
+  if (tr?.primaryAirport?.name && tr.primaryAirport.source) {
     let a = `The primary commercial airport for ${n} is ${tr.primaryAirport.name}${tr.primaryAirport.iata ? ` (${tr.primaryAirport.iata})` : ''}`;
     if (tr.primaryAirport.distanceMiles != null) a += `, about ${tr.primaryAirport.distanceMiles} miles in a straight line from the city center`;
     out.push({ q: `Which airport serves ${n}?`, a: a + '.', source: 'Google Places API; straight-line distance computed from coordinates', asOf: 'October 2026' });
   }
-  if (tr?.emergency?.nearestTraumaHospital) {
-    out.push({ q: `What is the main hospital near ${n}?`, a: `${tr.emergency.nearestTraumaHospital}${tr.emergency.hospitalAddress ? `, ${tr.emergency.hospitalAddress}` : ''}. In an emergency, call 911.`, source: tr.emergency.source ?? 'Google Places API', asOf: 'October 2026' });
+  const erList: Array<{ name: string; address: string; type: string }> = tr?.emergency?.erHospitals ?? [];
+  if (erList.length) {
+    out.push({
+      q: `Which hospitals in ${n} list emergency services?`,
+      a: `${erList.map((h) => `${h.name}, ${h.address} (${h.type})`).join('; ')}. This is a CMS listing of hospitals with emergency services. It is not a trauma ranking and not a nearest-facility claim.`,
+      source: tr.emergency.erHospitalsSource ?? 'CMS Care Compare',
+      asOf: 'Retrieved 2026-10-19',
+    });
   }
   const w: any = (city as any).waterUtility;
   if (w?.pwsid) {
