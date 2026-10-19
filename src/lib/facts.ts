@@ -56,7 +56,7 @@ export function buildFacts(city: CityRecord): Fact[] {
   if (tr?.primaryAirport?.name && tr.primaryAirport.source) {
     let a = `The primary commercial airport for ${n} is ${tr.primaryAirport.name}${tr.primaryAirport.iata ? ` (${tr.primaryAirport.iata})` : ''}`;
     if (tr.primaryAirport.distanceMiles != null) a += `, about ${tr.primaryAirport.distanceMiles} miles in a straight line from the city center`;
-    out.push({ q: `Which airport serves ${n}?`, a: a + '.', source: 'Google Places API; straight-line distance computed from coordinates', asOf: 'October 2026' });
+    out.push({ q: `Which airport serves ${n}?`, a: a + '.', source: tr.primaryAirport.source, asOf: tr.primaryAirport.retrieved ? `Retrieved ${tr.primaryAirport.retrieved}` : '' });
   }
   const erList: Array<{ name: string; address: string; type: string }> = tr?.emergency?.erHospitals ?? [];
   if (erList.length) {

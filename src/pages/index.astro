@@ -120,7 +120,7 @@ const statesList = Object.values(stateCounts).sort((a, b) => a.name.localeCompar
                   id="city-search-input"
                   type="text"
                   autocomplete="off"
-                  placeholder="Enter a city and state (e.g. Boston, Austin, Boise)..."
+                  placeholder="Enter a city and state (e.g. Austin, Boise, Tampa)..."
                   class="flex-1 border-0 focus:ring-0 text-slate-800 placeholder-slate-400 text-sm sm:text-base outline-none bg-transparent"
                 />
                 <button
@@ -150,7 +150,6 @@ const statesList = Object.values(stateCounts).sort((a, b) => a.name.localeCompar
             <a href="/ar/hot-springs-village" class="px-2.5 py-1 rounded-lg bg-white border border-slate-200 hover:border-blue-400 hover:text-[#1D68F2] transition font-semibold">Hot Springs Village, AR</a>
             <a href="/id/boise" class="px-2.5 py-1 rounded-lg bg-white border border-slate-200 hover:border-blue-400 hover:text-[#1D68F2] transition font-semibold">Boise, ID</a>
             <a href="/fl/tampa" class="px-2.5 py-1 rounded-lg bg-white border border-slate-200 hover:border-blue-400 hover:text-[#1D68F2] transition font-semibold">Tampa, FL</a>
-            <a href="/ma/boston" class="px-2.5 py-1 rounded-lg bg-white border border-slate-200 hover:border-blue-400 hover:text-[#1D68F2] transition font-semibold">Boston, MA</a>
           </div>
         </div>
 
@@ -641,10 +640,6 @@ const statesList = Object.values(stateCounts).sort((a, b) => a.name.localeCompar
               <span class="flex items-center gap-2"><span>⭐</span> Scottsdale, AZ</span>
               <span class="text-[10px] text-amber-600 font-extrabold uppercase bg-amber-50 px-2 py-0.5 rounded">Desert Resort →</span>
             </a>
-            <a href="/ma/boston" class="px-4 py-3 hover:bg-blue-50/60 text-xs font-bold text-slate-800 flex justify-between items-center transition">
-              <span class="flex items-center gap-2"><span>⭐</span> Boston, MA</span>
-              <span class="text-[10px] text-blue-600 font-extrabold uppercase bg-blue-50 px-2 py-0.5 rounded">New England →</span>
-            </a>
           </div>
         `;
         dropdown.classList.remove('hidden');
@@ -683,7 +678,7 @@ const statesList = Object.values(stateCounts).sort((a, b) => a.name.localeCompar
 
           const matches = searchCities(query);
           if (matches.length > 0) {
-            // Instant redirect to top match (e.g. Boston, MA -> /ma/boston)
+            // Instant redirect to top match
             window.location.href = `/${matches[0].u}`;
           } else {
             renderDropdown([]);
@@ -691,7 +686,7 @@ const statesList = Object.values(stateCounts).sort((a, b) => a.name.localeCompar
         });
       }
 
-      // Check URL query parameters (e.g. /?search=Boston or /?q=Boston)
+      // Check URL query parameters (e.g. /?search=Austin)
       const urlParams = new URLSearchParams(window.location.search);
       const searchParam = urlParams.get('search') || urlParams.get('q');
       if (searchParam && input) {
