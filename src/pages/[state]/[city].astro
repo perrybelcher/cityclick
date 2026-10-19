@@ -426,8 +426,8 @@ const cityMapPins = {
             <span>Airport Transit</span>
             <span class="text-blue-600 font-extrabold">{travel.primaryAirport?.iata ?? 'Airport'}</span>
           </div>
-          <div class="text-xl sm:text-2xl font-black text-[#152438] mt-1">{travel.primaryAirport?.distanceMiles ?? 11} Miles</div>
-          <div class="text-[10px] text-slate-500">To Downtown Corridor</div>
+          <div class="text-xl sm:text-2xl font-black text-[#152438] mt-1">{travel.primaryAirport?.distanceMiles != null ? `${travel.primaryAirport.distanceMiles} Miles` : '—'}</div>
+          <div class="text-[10px] text-slate-500">Straight line from city center</div>
         </div>
 
         <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
@@ -741,21 +741,21 @@ const cityMapPins = {
                   <span class="text-3xl">🛫</span>
                   <div>
                     <h3 class="font-black text-lg text-white">Getting Here: {travel.primaryAirport.name}{travel.primaryAirport.iata ? ` (${travel.primaryAirport.iata})` : ''}</h3>
-                    <p class="text-xs text-slate-300">Primary Commercial Hub · {travel.primaryAirport.distanceMiles} Miles to Downtown</p>
+                    <p class="text-xs text-slate-300">Primary commercial airport · {travel.primaryAirport.distanceMiles} miles from the city center (straight line)</p>
                   </div>
                 </div>
               </div>
               <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 text-xs">
                 <div class="bg-white/10 p-3 rounded-xl border border-white/10">
-                  <span class="text-slate-400 block text-[11px]">Distance to Downtown</span>
-                  <span class="font-bold text-slate-100">{`${travel.primaryAirport.distanceMiles} mi straight-line to downtown`}</span>
+                  <span class="text-slate-400 block text-[11px]">Distance from city center</span>
+                  <span class="font-bold text-slate-100">{`${travel.primaryAirport.distanceMiles} mi straight line`}</span>
                 </div>
                 {travel.primaryAirport.transitToDowntown && (<div class="bg-white/10 p-3 rounded-xl border border-white/10">
                   <span class="text-slate-400 block text-[11px]">Direct Transit</span>
                   <span class="font-bold text-slate-100">{travel.primaryAirport.transitToDowntown}</span>
                 </div>)}
                 <div class="bg-white/10 p-3 rounded-xl border border-white/10">
-                  <span class="text-slate-400 block text-[11px]">Arrival Protocol</span>
+                  <span class="text-slate-400 block text-[11px]">Airport</span>
                   <span class="font-bold text-slate-100">{travel.primaryAirport.name}</span>
                 </div>
               </div>
@@ -767,70 +767,17 @@ const cityMapPins = {
                 <div class="flex items-center gap-2.5">
                   <span class="text-xl">⚠️</span>
                   <div>
-                    <h3 class="text-base font-black text-[#152438]">Know Before You Go: Practical Logistics</h3>
-                    <p class="text-xs text-slate-500">Essential arrival protocols, seasonal warnings, and access rules for {city.name}</p>
+                    <h3 class="text-base font-black text-[#152438]">Before You Go: Water & Climate</h3>
+                    <p class="text-xs text-slate-500">Sourced climate and water-system facts for {city.name}</p>
                   </div>
                 </div>
                 <span class="px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-wider bg-blue-100 text-[#1D68F2] border border-blue-200 shrink-0">
-                  Local Advisory
+                  Sourced
                 </span>
               </div>
 
               <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
-                <!-- Card 1: Gate & Access Protocol -->
-                <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-2xs space-y-1.5">
-                  <div class="flex items-center gap-2 font-bold text-slate-800">
-                    <span class="text-base">🚪</span>
-                    <span>Access & Arrival Protocols</span>
-                  </div>
-                  <div class="text-slate-600 leading-relaxed">
-                    {isHSV && (
-                      <span><strong>Gated community:</strong> Visitors and guests without a member card must enter through the <strong>West Gate</strong> (111 DeSoto Blvd, staffed 24/7). The East Gate is staffed 6 AM–10 PM. <em>Source: Hot Springs Village POA, explorethevillage.com/contact.</em></span>
-                    )}
-                    
-                    {(<span>Commercial flights arrive via <strong>{travel.primaryAirport?.name}</strong>.</span>)}
-                  </div>
-                </div>
-
-                <!-- Card 2: Seasonal Weather & Scouting Window -->
-                <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-2xs space-y-1.5">
-                  <div class="flex items-center gap-2 font-bold text-slate-800">
-                    <span class="text-base">☀️</span>
-                    <span>Seasonal Weather Reality</span>
-                  </div>
-                  <div class="text-slate-600 leading-relaxed">
-                    {isAustin && (
-                      <span><strong>Optimal Window:</strong> March–May and Oct–Nov (72°–84°F). <em>Warning:</em> Avoid outdoor pedestrian site surveys in July–August when sustained heat exceeds 104°F.</span>
-                    )}
-                    {isHSV && (
-                      <span><strong>Optimal Window:</strong> April–May and Sept–Oct for 70°F outdoor recreation.</span>
-                    )}
-                    {!isHSV && !isAustin && (
-                      <span>Spring and autumn provide optimal temperature envelopes for commercial site visits and neighborhood touring.</span>
-                    )}
-                  </div>
-                </div>
-
-                <!-- Card 3: Permits, Reservations & Fees -->
-                <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-2xs space-y-1.5">
-                  <div class="flex items-center gap-2 font-bold text-slate-800">
-                    <span class="text-base">🎟️</span>
-                    <span>Reservations, Permits & Fees</span>
-                  </div>
-                  <div class="text-slate-600 leading-relaxed">
-                    {isHSV && (
-                      <span><strong>Golf & Lakes:</strong> Tee times on the 9 championship courses book up to 7 days ahead. Boating on 11 private lakes requires annual or temporary HSV POA watercraft decals.</span>
-                    )}
-                    {isAustin && (
-                      <span><strong>Barton Springs Pool:</strong> Open 5am–10pm daily ($5 resident / $9 visitor). Closed Thursdays 9am–7pm for cleaning. Lady Bird Lake allows kayaks/SUPs; motorized boats restricted.</span>
-                    )}
-                    {!isHSV && !isAustin && (
-                      <span>State parks and local civic facilities require standard daily user fees. Universal chip and contactless payment accepted.</span>
-                    )}
-                  </div>
-                </div>
-
-                <!-- Card 4: Water Safety & Emergency Contact -->
+<!-- Card 4: Water Safety & Emergency Contact -->
                 <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-2xs space-y-1.5">
                   <div class="flex items-center gap-2 font-bold text-slate-800">
                     <span class="text-base">🚰</span>
