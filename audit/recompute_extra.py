@@ -44,6 +44,6 @@ for s,(lat,lng,cn,st,hq,aq,iata,tax) in C.items():
     yr=collections.defaultdict(float)
     for dt,p in zip(d['time'],d['precipitation_sum']):
         if p is not None: yr[dt[:4]]+=p
-    chk('July high',f'{round(jul)}°F'); chk('Jan low',f'{round(jan)}°F'); chk('rain',f'{round(statistics.mean(yr.values()),1)} Inches')
+    chk('July high',f'{round(jul)}°F'); chk('Jan low',f'{round(jan)}°F'); rv=round(statistics.mean(yr.values()),1); chk('rain',f'{rv:g} Inches')
     print(f'{"FAIL" if miss else "ok  "} {s:24}', ('| '+'; '.join(miss)) if miss else '')
 print(f'\nRECOMPUTE-EXTRA: {total-fails}/{total} matched on {base}'); sys.exit(1 if fails else 0)
