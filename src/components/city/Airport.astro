@@ -1,0 +1,15 @@
+---
+import Sources from './Sources.astro';
+import { number, type CityView } from '../../lib/city-v2';
+interface Props { airport?: CityView['airport']; }
+const { airport } = Astro.props;
+---
+{airport && <section class="section airport-section" id="airport" aria-labelledby="airport-title">
+  <div class="section-heading"><p class="eyebrow">Arrival context</p><h2 id="airport-title">The airport, with the distance defined</h2></div>
+  <div class="airport-card">
+    <div class="airport-code" data-value-path="executiveTravel.primaryAirport.iata" data-format="text">{airport.iata}</div>
+    <div><h3 data-value-path="executiveTravel.primaryAirport.name" data-format="text">{airport.name}</h3><p>City center → airport · straight line</p><p class="airport-distance"><strong data-value-path="executiveTravel.primaryAirport.distanceMiles" data-format="number">{number(airport.distanceMiles)}</strong> miles</p></div>
+    <div class="airport-method"><p><strong>Method</strong><br /><span data-value-path="executiveTravel.primaryAirport.cityCenterMethod" data-format="text">{airport.cityCenterMethod}</span></p><p class="small">Not a driving distance, transit estimate or travel time.</p></div>
+  </div>
+  <Sources sources={[airport.sourceNote]} />
+</section>}

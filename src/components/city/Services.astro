@@ -1,30 +1,32 @@
 ---
 import Card from './Card.astro';
-import SourceNote from './SourceNote.astro';
+import Sources from './Sources.astro';
 import { number, type CityView } from '../../lib/city-v2';
 interface Props { city: CityView; includeWater?: boolean; }
 const { city, includeWater = false } = Astro.props;
 const water = includeWater ? city.water : undefined;
-const hospital = city.hospital;
+const hospitals = city.hospitals;
 ---
-{(water || hospital) && <section class="section" id="services" aria-labelledby="services-title">
-  <div class="section-heading"><p class="eyebrow">Practical context</p><h2 id="services-title">Services to check</h2></div>
-  <div class="service-grid">
-    {water && <Card title="Water-system record">
-      <p class="entity-name">{water.providerName}</p>
-      <dl class="detail-list">
-        <div><dt>System ID</dt><dd data-value-path="waterUtility.pwsid" data-format="text">{water.pwsid}</dd></div>
-        <div><dt>Water source</dt><dd>{water.sourceType}</dd></div>
-        <div><dt>System population served</dt><dd data-value-path="waterUtility.populationServed" data-format="number">{number(water.populationServed)}</dd></div>
-      </dl>
-      <p class="small">A utility-system population, not the city population. Confirm service at your address. This record does not establish current water quality.</p>
-      <SourceNote source={water.sourceNote} />
-    </Card>}
-    {hospital && <Card title="Hospital directory listing">
-      <p class="entity-name">{hospital.nearestTraumaHospital}</p>
-      <p data-value-path="executiveTravel.emergency.hospitalAddress" data-format="text">{hospital.hospitalAddress}</p>
-      <p class="small">Identity and address only. The listing does not establish trauma designation, clinical suitability or which hospital is nearest to you.</p>
-      <SourceNote source={hospital.sourceNote} />
-    </Card>}
-  </div>
+{(water || hospitals) && <section class="section" id="services" aria-labelledby="services-title">
+  <div class="section-heading"><p class="eyebrow">Practical context</p><h2 id="services-title">Services to check</h2><p>Directory records are a starting point. Confirm current services directly with the provider.</p></div>
+  {water && <Card title="Water-system record" class="water-card">
+    <p class="entity-name">{water.providerName}</p>
+    <dl class="detail-list">
+      <div><dt>System ID</dt><dd data-value-path="waterUtility.pwsid" data-format="text">{water.pwsid}</dd></div>
+      <div><dt>Water source</dt><dd>{water.sourceType}</dd></div>
+      <div><dt>System population served</dt><dd data-value-path="waterUtility.populationServed" data-format="number">{number(water.populationServed)}</dd></div>
+    </dl>
+    <p class="small">A utility-system population, not the city population. Confirm service at your address. This record does not establish current water quality.</p>
+  </Card>}
+  {hospitals && <div class="hospital-directory" data-hospital-list>
+    <h3>Hospitals with emergency departments in {city.name} (CMS)</h3>
+    <p class="small">Listed in record order, without a recommendation. This directory is not medical routing advice or a live availability check.</p>
+    <p class="as-of">{hospitals.sourceNote.asOf}</p>
+    <ul class="hospital-list">{hospitals.rows.map(h => <li data-fact-path={`executiveTravel.emergency.erHospitals.${h.index}`}>
+      <h4 data-value-path={`executiveTravel.emergency.erHospitals.${h.index}.name`} data-format="text">{h.name}</h4>
+      <p data-value-path={`executiveTravel.emergency.erHospitals.${h.index}.address`} data-format="text">{h.address}</p>
+      <p class="hospital-meta"><span data-value-path={`executiveTravel.emergency.erHospitals.${h.index}.type`} data-format="text">{h.type}</span><br />CMS facility ID: <span data-value-path={`executiveTravel.emergency.erHospitals.${h.index}.cmsFacilityId`} data-format="text">{h.cmsFacilityId}</span></p>
+    </li>)}</ul>
+  </div>}
+  <Sources sources={[...(water ? [water.sourceNote] : []), ...(hospitals ? [hospitals.sourceNote] : [])]} />
 </section>}

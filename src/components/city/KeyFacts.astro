@@ -1,12 +1,17 @@
 ---
-import SourceNote from './SourceNote.astro';
+import Sources from './Sources.astro';
 import type { SourcedQuestion } from '../../lib/city-v2';
+import { factGroups } from '../../lib/city-charts';
 interface Props { questions: SourcedQuestion[]; }
 const { questions } = Astro.props;
+const groups = factGroups.map(g => ({ ...g, questions: questions.filter(f => f.paths.some(p => g.prefixes.some(prefix => p.startsWith(prefix)))) })).filter(g => g.questions.length);
 ---
-{questions.length > 0 && <section class="section" id="key-facts" aria-labelledby="facts-title">
-  <div class="section-heading"><p class="eyebrow">The evidence, in plain English</p><h2 id="facts-title">Key facts & questions</h2></div>
-  <div class="faq-grid">{questions.map(f => <article class="faq" data-fact-paths={f.paths.join(' ')}>
-    <h3>{f.q}</h3><p data-answer>{f.a}</p><SourceNote source={f.source} />
-  </article>)}</div>
+{groups.length > 0 && <section class="section" id="key-facts" aria-labelledby="facts-title">
+  <div class="section-heading"><p class="eyebrow">The evidence, in plain English</p><h2 id="facts-title">Key facts & questions</h2><p>Open the topic that matters to your decision.</p></div>
+  <div class="faq-groups">{groups.map((g, i) => <details class="faq-group" open={i === 0}>
+    <summary>{g.title}</summary><div class="faq-grid">{g.questions.map(f => <article class="faq" data-fact-paths={f.paths.join(' ')}>
+      <h3>{f.q}</h3><p data-answer>{f.a}</p><p class="as-of">As of: {f.source.asOf}</p>
+    </article>)}</div>
+  </details>)}</div>
+  <Sources sources={questions.map(f => f.source)} />
 </section>}

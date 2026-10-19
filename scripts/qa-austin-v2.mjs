@@ -4,7 +4,11 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import { gzipSync } from 'node:zlib';
-import { chromium } from '../.qa-tools/node_modules/playwright/index.mjs';
+// Keep browser binaries and scratch files inside this worktree.
+process.env.PLAYWRIGHT_BROWSERS_PATH = path.resolve('.qa-tools/browsers');
+process.env.TMPDIR = path.resolve('.qa-tools/tmp');
+fs.mkdirSync(process.env.TMPDIR, {recursive:true});
+const { chromium } = await import('../.qa-tools/node_modules/playwright/index.mjs');
 
 const base = process.env.PREVIEW_URL || 'http://127.0.0.1:4387';
 const out = path.resolve('qa-artifacts');
@@ -13,23 +17,27 @@ const c = JSON.parse(fs.readFileSync('src/data/cities/tx.json', 'utf8')).find(c 
 const get = p => p.split('.').reduce((v, k) => v?.[k], c);
 const num = n => n.toLocaleString('en-US', { maximumFractionDigits: 3 });
 const format = (n, f) => f === 'text' ? n : f === 'money' ? '$' + num(n) : f === 'percent' ? n.toFixed(2) + '%' : f === 'fraction-percent' ? (n * 100).toFixed(2) + '%' : f === 'temperature' ? num(n) + '°F' : f === 'inches' ? num(n) + ' in' : num(n);
-const sourceFor = p => p.startsWith('industries.') ? `industries.${p.split('.')[1]}.provenance` : p.startsWith('demographics.') ? 'demographics.provenance' : p.startsWith('housingAndTaxes.') ? 'housingAndTaxes.source' : p.startsWith('climateNormals.') ? 'climateNormals.sourceName' : p.startsWith('waterUtility.') ? 'waterUtility.source' : p.startsWith('permitsAndTax.') ? 'permitsAndTax.provenance' : p.startsWith('executiveTravel.emergency.') ? 'executiveTravel.emergency.source' : null;
+const sourceFor = p => ['demographics.population','demographics.popChange2020to2023Pct'].includes(p) ? 'demographics.populationProvenance' : p.startsWith('executiveTravel.primaryAirport.') ? 'executiveTravel.primaryAirport.source' : p.startsWith('industries.') ? `industries.${p.split('.')[1]}.provenance` : p.startsWith('demographics.') ? 'demographics.provenance' : p.startsWith('housingAndTaxes.') ? 'housingAndTaxes.source' : p.startsWith('climateNormals.') ? 'climateNormals.sourceName' : p.startsWith('waterUtility.') ? 'waterUtility.source' : p.startsWith('permitsAndTax.') ? 'permitsAndTax.provenance' : p.startsWith('executiveTravel.emergency.erHospitals.') ? 'executiveTravel.emergency.erHospitalsSource' : null;
 const numericTokens = s => String(s).match(/\d[\d,]*(?:\.\d+)?/g) || [];
 // Independent numeric inventory: explicit source-covered fields only. The raw
-// record's unsourced airport/population/elevation are deliberately excluded.
+// record's newly sourced population, airport and CMS fields are explicitly bound.
+// Elevation, traffic and obsolete single-hospital claims remain excluded.
 const fields = [
   ...['medianHouseholdIncome','perCapitaIncome','medianAge'].map(k => `demographics.${k}`),
   ...['medianHomeValue','medianGrossRent','medianRealEstateTaxPaid','effectivePropertyTaxRatePct'].map(k => `housingAndTaxes.${k}`),
   ...['peakSummerHighF','winterLowF','annualRainfallInches'].map(k => `climateNormals.${k}`),
   ...['pwsid','populationServed'].map(k => `waterUtility.${k}`),
-  'executiveTravel.emergency.hospitalAddress',
+  'demographics.population', 'demographics.popChange2020to2023Pct',
+  ...['name','iata','distanceMiles','cityCenterMethod'].map(k => `executiveTravel.primaryAirport.${k}`),
+  ...c.executiveTravel.emergency.erHospitals.flatMap((_,i) => ['name','address','type','cmsFacilityId'].map(k => `executiveTravel.emergency.erHospitals.${i}.${k}`)),
   ...c.industries.flatMap((_,i) => ['naicsCode','establishments','per10kResidents','usAvgPer10k'].map(k => `industries.${i}.${k}`)),
 ];
 const inventory = new Map();
 function inventoryAdd(text, field) { for (const token of numericTokens(text)) { const key = token.replaceAll(',', ''); if (!inventory.has(key)) inventory.set(key, new Set()); inventory.get(key).add(field); } }
 for (const field of fields) { assert.ok(sourceFor(field) && get(sourceFor(field)), field); inventoryAdd(get(field), field); }
 for (const field of ['stateTaxRate','localTaxRate','combinedSalesTaxRate']) inventoryAdd(format(get('permitsAndTax.'+field), 'fraction-percent'), 'permitsAndTax.'+field);
-for (const field of ['demographics.provenance','housingAndTaxes.source','climateNormals.sourceName','waterUtility.source','waterUtility.retrieved','executiveTravel.emergency.source','permitsAndTax.provenance', ...c.industries.map((_,i) => `industries.${i}.provenance`)]) inventoryAdd(JSON.stringify(get(field)), field);
+inventoryAdd(format(get('demographics.popChange2020to2023Pct'), 'percent'), 'demographics.popChange2020to2023Pct');
+for (const field of ['demographics.populationProvenance','executiveTravel.primaryAirport.source','executiveTravel.primaryAirport.retrieved','executiveTravel.emergency.erHospitalsSource','demographics.provenance','housingAndTaxes.source','climateNormals.sourceName','waterUtility.source','waterUtility.retrieved','permitsAndTax.provenance', ...c.industries.map((_,i) => `industries.${i}.provenance`)]) inventoryAdd(JSON.stringify(get(field)), field);
 const routes = [
   { path: '/tx/austin/', title: 'Austin, TX: Moving and Business Guide', h1: 'Austin, Texas: a guide to your next move' },
   { path: '/tx/austin/business/', title: 'Starting a Business in Austin, TX', h1: 'Starting or expanding a business in Austin' },
@@ -65,7 +73,69 @@ try {
     }
     const fullText = await page.locator('body').evaluate(el => { const copy = el.cloneNode(true); copy.querySelectorAll('script,style').forEach(n => n.remove()); const walk = document.createTreeWalker(copy, NodeFilter.SHOW_TEXT); const texts = []; while (walk.nextNode()) texts.push(walk.currentNode.textContent); return texts.join(' '); });
     for (const token of numericTokens(fullText)) assert.ok(inventory.has(token.replaceAll(',', '')), `Unbound rendered number ${token} on ${r.path}`);
-    for (const bad of ['979,882', '8.5 miles', 'Austin-Bergstrom', 'Barton Springs', 'The Driskill', 'undefined', 'NaN', 'TBD', 'saturated', 'underserved']) assert.ok(!fullText.includes(bad), `Unsupported text: ${bad}`);
+    for (const bad of ['8.5 miles', c.executiveTravel.emergency.nearestTraumaHospital, 'Hospital directory listing', 'Barton Springs', 'The Driskill', 'undefined', 'NaN', 'TBD', 'saturated', 'underserved']) assert.ok(!fullText.includes(bad), `Unsupported text: ${bad}`);
+    const hasAirport = r.path === '/tx/austin/' || r.path.endsWith('/visit/');
+    assert.equal(await page.locator('#airport').count(), hasAirport ? 1 : 0);
+    if (hasAirport) {
+      assert.ok((await page.locator('#airport').innerText()).includes(c.executiveTravel.primaryAirport.cityCenterMethod));
+      assert.ok((await page.locator('#airport').innerText()).includes('straight line'));
+    }
+    const hasHospitals = /\/(visit|moving-to)\/$/.test(r.path);
+    assert.equal(await page.locator('[data-hospital-list]').count(), hasHospitals ? 1 : 0);
+    if (hasHospitals) {
+      assert.equal(await page.locator('.hospital-list li').count(), c.executiveTravel.emergency.erHospitals.length);
+      assert.equal(await page.locator('[data-hospital-list] h3').innerText(), `Hospitals with emergency departments in ${c.name} (CMS)`);
+      assert.ok(await page.locator('[data-source-path="executiveTravel.emergency.erHospitalsSource"]').count());
+      assert.ok((await page.locator('[data-hospital-list]').innerText()).includes('2026-10-19'));
+    }
+    if (r.path === '/tx/austin/') {
+      assert.equal(await page.locator('.stat-strip .stat').count(), 4);
+      assert.ok(fullText.includes(c.demographics.populationProvenance.sourceName));
+    }
+    if (r.path.endsWith('/business/')) {
+      const order = await page.locator('[data-chart-index]').evaluateAll(els => els.map(el => Number(el.dataset.chartIndex)));
+      const expected = c.industries.map((r,i) => ({...r,i})).filter(r => r.usAvgPer10k > 0).sort((a,b) => (b.per10kResidents/b.usAvgPer10k) - (a.per10kResidents/a.usAvgPer10k) || a.label.localeCompare(b.label)).map(r => r.i);
+      assert.deepEqual(order, expected, 'Chart sort by relative difference');
+      const extent = Math.max(...expected.map(i => Math.abs(c.industries[i].per10kResidents/c.industries[i].usAvgPer10k - 1)));
+      for (const i of order) {
+        const row = page.locator(`[data-chart-index="${i}"]`);
+        const delta = c.industries[i].per10kResidents/c.industries[i].usAvgPer10k - 1;
+        // CSSOM rounds serialized percentages; audit the authored precision, then pixels.
+        const bar = await row.locator('.density-bar').evaluate(el => ({ left:parseFloat(el.getAttribute('style').match(/left:([^%]+)/)[1]), width:parseFloat(el.getAttribute('style').match(/width:([^%]+)/)[1]) }));
+        const trackBox = await row.locator('.bar-track').boundingBox();
+        const barBox = await row.locator('.density-bar').boundingBox();
+        assert.ok(Math.abs(barBox.width - trackBox.width * bar.width / 100) < .5, 'Rendered chart width matches authored value');
+        assert.ok(Math.abs(bar.width - Math.abs(delta)/extent*46) < .00001);
+        assert.ok(Math.abs(bar.left - (50 + Math.min(0,delta/extent*46))) < .00001);
+        assert.equal(await row.locator('.national-line').count(), 1);
+        assert.ok((await row.innerText()).includes(delta < 0 ? 'Below reference' : delta > 0 ? 'Above reference' : 'At reference'));
+      }
+      assert.equal(await page.locator('.table-disclosure').getAttribute('open'), null);
+      await page.locator('.table-disclosure>summary').click();
+      assert.equal(await page.locator('.trade-table tbody tr').count(), c.industries.length);
+      assert.equal(await page.locator('.trade-table thead th').first().evaluate(el => getComputedStyle(el).position), 'sticky');
+      await page.locator('.table-disclosure>summary').click();
+      assert.deepEqual(await page.locator('#lease-form legend').allTextContents(), ['Premises','Staffing','Pricing & costs']);
+    }
+    if (hasHospitals) {
+      assert.equal(await page.locator('[data-climate-chart] svg').count(), 2);
+      const graphic = page.locator('.temperature-range svg');
+      const floor = Math.min(0,c.climateNormals.winterLowF,c.climateNormals.peakSummerHighF);
+      const ceiling = Math.max(0,c.climateNormals.winterLowF,c.climateNormals.peakSummerHighF);
+      for (const key of ['winterLowF','peakSummerHighF']) {
+        assert.ok((await graphic.getAttribute('aria-label')).includes(format(c.climateNormals[key],'temperature')));
+        const dot = graphic.locator(`[data-temperature-path="climateNormals.${key}"]`);
+        assert.ok(Math.abs(Number(await dot.getAttribute('cx')) - (24 + (c.climateNormals[key]-floor)/(ceiling-floor || 1)*552)) < .00001);
+      }
+      assert.ok((await page.locator('[data-climate-chart]').innerText()).includes('rain icon is not scaled'));
+    }
+    assert.equal(await page.locator('.faq-group').count(), 3);
+    assert.equal(await page.locator('.faq-group').first().getAttribute('open'), '');
+    assert.equal(await page.locator('.faq-group[open]').count(), 1);
+    await page.locator('.faq-group').nth(1).locator(':scope>summary').focus();
+    await page.keyboard.press('Enter');
+    assert.equal(await page.locator('.faq-group').nth(1).getAttribute('open'), '');
+    await page.keyboard.press('Enter');
     const graph = JSON.parse(await page.locator('script[type="application/ld+json"]').textContent())['@graph'];
     assert.ok(graph.some(g => g['@type'] === 'WebPage' && g.url === 'https://cityclick.com' + r.path));
     assert.ok(graph.some(g => g['@type'] === 'BreadcrumbList'));
@@ -90,8 +160,27 @@ try {
       await page.setViewportSize({ width, height: 950 });
       const dimensions = await page.evaluate(() => ({ body: document.documentElement.scrollWidth, viewport: innerWidth }));
       assert.ok(dimensions.body <= dimensions.viewport, `Horizontal page overflow: ${r.path} @ ${width}`);
+      if (width === 390) {
+        for (const control of await page.locator('a,button,summary,input[type=number],.check-label').all()) {
+          if (!await control.isVisible()) continue;
+          if (await control.evaluate(el => el.classList.contains('skip-link'))) continue;
+          const rect = await control.boundingBox();
+          assert.ok(rect.height >= 44, `Short tap target (${rect.height}): ${await control.textContent()}`);
+        }
+      }
+      if (width === 1440) {
+        const nav = page.locator('.sticky-intent');
+        assert.equal(await nav.evaluate(el => getComputedStyle(el).position), 'sticky');
+        await page.evaluate(() => scrollTo(0, 1200));
+        assert.ok(Math.abs((await nav.boundingBox()).y - 12) < 1);
+        await page.evaluate(() => scrollTo(0,0));
+      }
       await page.screenshot({ path: path.join(out, `${name}-${width}.png`), fullPage: true });
     }
+    // Exercise disclosures as visible content too; a closed panel cannot mask QA.
+    await page.locator('.sources-disclosure, .faq-group, .table-disclosure').evaluateAll(els => els.forEach(el => el.open = true));
+    for (const source of await page.locator('.source-note,.as-of').all()) assert.ok(await source.evaluate(el => parseFloat(getComputedStyle(el).fontSize) >= 12));
+    if (r.path.endsWith('/business/')) await page.screenshot({path:path.join(out,'business-1440-expanded.png'),fullPage:true});
     await page.addScriptTag({ path: '.qa-tools/node_modules/axe-core/axe.min.js' });
     const axe = await page.evaluate(async () => window.axe.run(document, { runOnly: { type: 'tag', values: ['wcag2a','wcag2aa','wcag21aa'] } }));
     accessibility.push({ route: r.path, violations: axe.violations.map(v => ({ id: v.id, impact: v.impact, nodes: v.nodes.map(n => n.target) })) });
@@ -107,18 +196,28 @@ try {
   assert.equal(await page.locator('#confirm-tax').isChecked(), false);
   await page.getByRole('button', { name: 'Calculate my scenario' }).click();
   assert.ok(await page.locator('#lease-result').isHidden());
+  assert.ok(await page.locator('#error-area').isVisible());
+  assert.equal(await page.locator('#quote-area').getAttribute('aria-invalid'), 'true');
   const fixture = { area:'1200',rent:'24',nnn:'6',wage:'20',hours:'100',burden:'15',overhead:'1000',ticket:'20',cogs:'30',days:'26' };
   for (const [field,value] of Object.entries(fixture)) await page.locator(`#quote-${field}`).fill(value);
+  await page.getByRole('button', {name:'Calculate my scenario'}).click();
+  assert.ok(await page.locator('#lease-result').isHidden());
+  assert.ok(await page.locator('#error-confirm-tax').isVisible());
   await page.locator('#confirm-tax').check();
   await page.getByRole('button', { name: 'Calculate my scenario' }).click();
   assert.equal(await page.locator('#result-daily').innerText(), '42');
   assert.equal(await page.locator('#result-fixed').innerText(), '$13,966.67');
   assert.equal(await page.locator('#result-revenue').innerText(), '$19,952.38');
+  await page.screenshot({path:path.join(out,'business-1440-calculated.png'),fullPage:true});
+  await page.setViewportSize({width:390,height:950});
+  await page.screenshot({path:path.join(out,'business-390-calculated.png'),fullPage:true});
+  assert.ok(await page.locator('#result-explanation').innerText());
   await page.locator('#quote-rent').fill('36'); assert.ok(await page.locator('#lease-result').isHidden());
   await page.getByRole('button', { name: 'Calculate my scenario' }).click();
   assert.equal(await page.locator('#result-daily').innerText(), '46');
   await page.locator('#quote-cogs').fill('100'); assert.ok(await page.locator('#lease-result').isHidden());
   await page.getByRole('button', { name: 'Calculate my scenario' }).click(); assert.ok(await page.locator('#lease-result').isHidden());
+  assert.ok(await page.locator('#error-cogs').isVisible());
   await page.getByRole('button', { name: 'Clear all inputs' }).click();
   for (const input of await page.locator('#lease-form input[type=number]').all()) assert.equal(await input.inputValue(), '');
   console.log('PASS calculator: blank start, missing input, golden fixture, changed rent, invalid margin, reset; no stale outputs');

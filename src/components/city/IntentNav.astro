@@ -1,6 +1,6 @@
 ---
 import { intents, intentLabels, cityRoute, type Intent } from '../../lib/city-v2';
-interface Props { slug: string; intent: Intent; }
-const { slug, intent } = Astro.props;
+interface Props { slug: string; intent: Intent; sticky?: boolean; }
+const { slug, intent, sticky = false } = Astro.props;
 ---
-<nav class="intent-nav" aria-label="City guides">{intents.map(i => <a href={cityRoute(slug, i)} aria-current={i === intent ? 'page' : undefined}>{intentLabels[i]}<span aria-hidden="true">↗</span></a>)}</nav>
+<nav class:list={["intent-nav", { "sticky-intent": sticky }]} aria-label="City guides">{intents.map(i => <a href={cityRoute(slug, i)} aria-current={i === intent ? 'page' : undefined}>{intentLabels[i]}<span aria-hidden="true">↗</span></a>)}</nav>

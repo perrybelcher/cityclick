@@ -1,10 +1,34 @@
 ---
-import Stat from './Stat.astro';
-import type { Metric } from '../../lib/city-v2';
+import Sources from './Sources.astro';
+import { formatMetric, type Metric } from '../../lib/city-v2';
 interface Props { metrics: Metric[]; }
 const { metrics } = Astro.props;
+const high = metrics.find(m => m.path === 'climateNormals.peakSummerHighF');
+const low = metrics.find(m => m.path === 'climateNormals.winterLowF');
+const rain = metrics.find(m => m.path === 'climateNormals.annualRainfallInches');
+// Shared degree scale; zero is geometric origin only, not a new city fact.
+const floor = Math.min(0, low?.value ?? 0, high?.value ?? 0);
+const ceiling = Math.max(0, low?.value ?? 0, high?.value ?? 0);
+const position = (v: number) => 24 + (v - floor) / (ceiling - floor || 1) * 552;
+// Missing metrics still hide the entire graphic; geometry never supplies a value.
 ---
-{metrics.length > 0 && <section class="section" id="climate" aria-labelledby="climate-title">
+{high && low && rain && <section class="section climate-section" id="climate" aria-labelledby="climate-title">
   <div class="section-heading"><p class="eyebrow">Seasonal context</p><h2 id="climate-title">Climate, not a forecast</h2><p>Historical reanalysis averages. These are not station normals or a prediction for your travel dates.</p></div>
-  <div class="stats-grid three">{metrics.map(m => <Stat metric={m} />)}</div>
+  <div class="climate-graphic" data-climate-chart>
+    <div class="temperature-range">
+      <div class="climate-endpoints">{[low, high].map(m => <div><h3>{m.label}</h3><p data-value-path={m.path} data-format={m.format}>{formatMetric(m)}</p></div>)}</div>
+      <svg viewBox="0 0 600 64" role="img" aria-label={`Temperature endpoints: ${low.label} ${formatMetric(low)}; ${high.label} ${formatMetric(high)}.`}>
+        <line x1="24" y1="32" x2="576" y2="32" stroke="var(--line)" stroke-width="12" />
+        <line x1={position(low.value)} y1="32" x2={position(high.value)} y2="32" stroke="var(--viz-above)" stroke-width="3" />
+        <circle data-temperature-path={low.path} cx={position(low.value)} cy="32" r="14" fill="var(--viz-below)" />
+        <circle data-temperature-path={high.path} cx={position(high.value)} cy="32" r="14" fill="var(--accent)" />
+      </svg>
+      <p class="small">Dots use a shared temperature scale from zero or the lower recorded value. They show different months, not a daily temperature range. The rain icon is not scaled.</p>
+    </div>
+    <div class="rain-total">
+      <svg viewBox="0 0 64 80" aria-hidden="true"><path d="M32 4C23 20 8 35 8 49a24 24 0 0 0 48 0C56 35 41 20 32 4Z" fill="var(--viz-below)"/><path d="M20 48q0 15 14 15" fill="none" stroke="white" stroke-width="3" stroke-linecap="round"/></svg>
+      <h3>{rain.label}</h3><p class="rain-value" data-value-path={rain.path} data-format={rain.format}>{formatMetric(rain)}</p><p class="small">Annual total · separate measure</p>
+    </div>
+  </div>
+  <Sources sources={metrics.map(m => m.source)} />
 </section>}

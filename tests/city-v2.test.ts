@@ -12,8 +12,12 @@ describe('sourced pilot projection', () => {
     expect(view.housing[0]!.value).toBe(record.housingAndTaxes.medianHomeValue);
     expect(view.climate[0]!.value).toBe(record.climateNormals.peakSummerHighF);
     expect(view.keyFacts.length).toBeGreaterThanOrEqual(6);
-    expect(JSON.stringify(view)).not.toContain('979882'); // conflicted population provenance
-    expect(JSON.stringify(view)).not.toContain('Austin-Bergstrom'); // no airport provenance
+    expect(view.population[0]!.value).toBe(record.demographics.population);
+    expect(view.population[0]!.source.name).toBe(record.demographics.populationProvenance.sourceName);
+    expect(view.airport!.name).toBe(record.executiveTravel.primaryAirport.name);
+    expect(view.hospitals!.rows).toHaveLength(record.executiveTravel.emergency.erHospitals.length);
+    expect(JSON.stringify(view)).not.toContain('nearestTraumaHospital');
+    expect(JSON.stringify(view)).not.toContain(record.executiveTravel.emergency.nearestTraumaHospital);
   });
   it('has self-canonical routes, unique descriptions and short decoded titles', () => {
     const v = buildCityView(record);
@@ -25,15 +29,17 @@ describe('sourced pilot projection', () => {
   it('omits blocks when their source or required numeric field is missing', () => {
     const c = structuredClone(record);
     delete c.demographics.provenance;
+    delete c.demographics.populationProvenance;
+    delete c.executiveTravel.primaryAirport.source;
     delete c.housingAndTaxes.source;
     delete c.climateNormals.sourceName;
     delete c.waterUtility.sourceUrl;
-    delete c.executiveTravel.emergency.source;
+    delete c.executiveTravel.emergency.erHospitalsSource;
     delete c.permitsAndTax.localTaxRate;
     c.industries.forEach((i: { provenance?: unknown }) => delete i.provenance);
     const v = buildCityView(c);
     expect(v.stats).toEqual([]); expect(v.housing).toEqual([]); expect(v.climate).toEqual([]);
-    expect(v.water).toBeUndefined(); expect(v.hospital).toBeUndefined(); expect(v.tax).toBeUndefined();
+    expect(v.water).toBeUndefined(); expect(v.hospitals).toBeUndefined(); expect(v.airport).toBeUndefined(); expect(v.population).toEqual([]); expect(v.tax).toBeUndefined();
     expect(v.industries).toEqual([]); expect(v.keyFacts).toEqual([]);
   });
   it('blocks non-finite values and mismatched tax components', () => {

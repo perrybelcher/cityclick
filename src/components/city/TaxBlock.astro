@@ -1,5 +1,5 @@
 ---
-import SourceNote from './SourceNote.astro';
+import Sources from './Sources.astro';
 import { percent, type CityView } from '../../lib/city-v2';
 interface Props { city: CityView; }
 const { city } = Astro.props;
@@ -10,6 +10,6 @@ const tax = city.tax;
   <div class="tax-grid">
     {[['Combined rate', 'combinedSalesTaxRate'], ['State component', 'stateTaxRate'], ['Local component', 'localTaxRate']].map(([label, field]) => <div class="tax-stat"><p>{label}</p><strong data-value-path={`permitsAndTax.${field}`} data-format="fraction-percent">{percent(tax[field as 'combinedSalesTaxRate' | 'stateTaxRate' | 'localTaxRate'])}</strong></div>)}
   </div>
-  <SourceNote source={tax.sourceNote} />
+  <Sources sources={[tax.sourceNote]} />
   <p class="small">Confirm the applicable jurisdiction, transaction type and current rate before using it in a business decision.</p>
 </section>}

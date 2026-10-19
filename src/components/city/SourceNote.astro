@@ -3,8 +3,8 @@ import type { SourceNote } from '../../lib/city-v2';
 interface Props { source: SourceNote; }
 const { source } = Astro.props;
 ---
-<p class="source-note" data-source-path={source.path}>
+{source?.name && source.asOf && source.path && <p class="source-note" data-source-path={source.path}>
   <span>{`Source: ${source.name} · As of: ${source.asOf}`}</span>
   {source.checked && <span> · Checked: {source.checked}</span>}
   {source.url && <a href={source.url} rel="noopener noreferrer">Open source ↗</a>}
-</p>
+</p>}

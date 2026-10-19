@@ -1,16 +1,17 @@
 ---
-import SourceNote from './SourceNote.astro';
+import Sources from './Sources.astro';
 import { formatMetric, type Metric } from '../../lib/city-v2';
 interface Props { metrics: Metric[]; caption: string; }
 const { metrics, caption } = Astro.props;
 ---
-{metrics.length > 0 && <div class="table-scroll" role="region" aria-label={caption} tabindex="0">
-  <table class="fact-table">
-    <caption>{caption}</caption>
+{metrics.length > 0 && <>
+<div class="table-scroll" role="region" aria-label={caption} tabindex="0">
+  <table class="fact-table"><caption>{caption}</caption>
     <thead><tr><th scope="col">Measure</th><th scope="col">Recorded estimate</th></tr></thead>
     <tbody>{metrics.map(m => <tr data-fact-path={m.path}>
-      <th scope="row">{m.label}<span class="table-detail">{m.detail}</span><SourceNote source={m.source} /></th>
+      <th scope="row">{m.label}<span class="table-detail">{m.detail}</span><span class="as-of">As of: {m.source.asOf}</span></th>
       <td class="table-value" data-value-path={m.path} data-format={m.format}>{formatMetric(m)}</td>
     </tr>)}</tbody>
   </table>
-</div>}
+</div><Sources sources={metrics.map(m => m.source)} />
+</>}

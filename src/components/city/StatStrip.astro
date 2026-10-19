@@ -1,0 +1,11 @@
+---
+import Stat from './Stat.astro';
+import Sources from './Sources.astro';
+import type { Metric } from '../../lib/city-v2';
+interface Props { metrics: Metric[]; strip?: boolean; }
+const { metrics, strip = false } = Astro.props;
+---
+{metrics.length > 0 && <div class:list={['stat-group', { 'stat-strip': strip }]}>
+  <div class="stats-grid">{metrics.map(metric => <Stat metric={metric} />)}</div>
+  <Sources sources={metrics.map(m => m.source)} />
+</div>}
