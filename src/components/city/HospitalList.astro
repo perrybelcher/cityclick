@@ -1,0 +1,10 @@
+---
+import type { CityView } from '../../lib/city-v2';
+interface Props { rows: NonNullable<CityView['hospitals']>['rows']; }
+const { rows } = Astro.props;
+---
+<ul class="hospital-list">{rows.map(h => <li data-fact-path={`executiveTravel.emergency.erHospitals.${h.index}`}>
+  <h4 data-value-path={`executiveTravel.emergency.erHospitals.${h.index}.name`} data-format="text">{h.name}</h4>
+  <p data-value-path={`executiveTravel.emergency.erHospitals.${h.index}.address`} data-format="text">{h.address}</p>
+  <p class="hospital-meta"><span data-value-path={`executiveTravel.emergency.erHospitals.${h.index}.type`} data-format="text">{h.type}</span><span>CMS ID: <span data-value-path={`executiveTravel.emergency.erHospitals.${h.index}.cmsFacilityId`} data-format="text">{h.cmsFacilityId}</span></span></p>
+</li>)}</ul>

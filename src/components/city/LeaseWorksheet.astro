@@ -22,7 +22,8 @@ const groups = [
     <p id="lease-message" class="form-message" role="status" aria-live="polite">Enter all assumptions and confirm the tax scenario to calculate.</p>
     <div id="lease-result" class="results" hidden aria-live="polite" aria-atomic="true">
       <h3>Your scenario, not a market forecast</h3><p>Required to cover the costs you entered. This does not predict demand or whether the business can achieve these sales.</p>
-      <dl><div><dt>Transactions per open day</dt><dd id="result-daily"></dd></div><div><dt>Monthly net revenue needed</dt><dd id="result-revenue"></dd></div><div><dt>Monthly fixed costs</dt><dd id="result-fixed"></dd></div></dl>
+      <dl><div><dt>Transactions per open day</dt><dd id="result-daily"></dd></div><div><dt>Monthly net revenue needed (before sales tax)</dt><dd id="result-revenue"></dd></div><div><dt>Monthly fixed costs</dt><dd id="result-fixed"></dd></div></dl>
+      <div class="input-recap"><h4>Your inputs · cross-check this scenario</h4><dl>{groups.flatMap(g => g.fields).map(([id,label]) => <div><dt>{label}</dt><dd data-input-echo={id}></dd></div>)}<div><dt>Confirmed sales-tax rate</dt><dd data-tax-echo></dd></div></dl></div>
       <p id="result-explanation" class="result-explanation"></p>
     </div>
     <details class="formula"><summary>How the worksheet works</summary><p>Monthly occupancy is rentable area times the sum of quoted annual base rent and quoted annual NNN, divided into calendar months. Monthly labor annualizes your weekly staff hours over a year, then applies your payroll burden. Other fixed costs are added.</p><p>The tax-inclusive ticket is divided by one plus the sourced tax fraction. Contribution per transaction is the resulting net ticket after your variable-cost percentage. Monthly transactions round up from fixed costs divided by contribution; daily transactions round up again using your open days. Net revenue excludes collected sales tax. Dollar outputs round only for display.</p><p>The annualization convention is fifty-two weeks divided by twelve months. No seasonal demand, financing feasibility or tax advice is modeled.</p></details>
@@ -75,6 +76,8 @@ const groups = [
         document.querySelector('#result-revenue')!.textContent = dollars(result.revenue);
         document.querySelector('#result-fixed')!.textContent = dollars(result.fixed);
         document.querySelector('#result-explanation')!.textContent = `You would need at least ${result.dailyTransactions} transactions per open day at your entered ticket to cover your modeled costs. Monthly net revenue excludes collected sales tax. This is a break-even requirement, not a demand forecast.`;
+        for (const field of quoteFields) output.querySelector(`[data-input-echo="${field}"]`)!.textContent = input[field];
+        output.querySelector('[data-tax-echo]')!.textContent = form.querySelector('[data-value-path="permitsAndTax.combinedSalesTaxRate"]')!.textContent;
         output.hidden = false;
         message.textContent = 'Scenario calculated from your inputs. Changing an input clears this result.';
       } catch (error) {

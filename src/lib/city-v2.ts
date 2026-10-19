@@ -72,7 +72,7 @@ export function buildCityView(input: unknown) {
   const climatePeriod = cl?.sourceName.match(/(\d{4}-\d{4}) average/);
   const climateDate = cl && datedSource(cl.sourceName);
   const climateSource = cl && climatePeriod && climateDate ? { name: cl.sourceName, url: cl.sourceUrl, asOf: `${climatePeriod[1]} average`, checked: climateDate, path: 'climateNormals.sourceName' } satisfies SourceNote : undefined;
-  const water = w ? { ...w, sourceNote: { name: w.source, url: w.sourceUrl, asOf: `Retrieved ${w.retrieved}; reporting period not supplied`, path: 'waterUtility.source' } satisfies SourceNote } : undefined;
+  const water = w ? { ...w, sourceNote: { name: w.source, url: w.sourceUrl, asOf: `Retrieved ${w.retrieved}`, path: 'waterUtility.source' } satisfies SourceNote } : undefined;
   const stats: Metric[] = [];
   if (d) {
     const s = source(d.provenance, 'demographics.provenance');
@@ -115,6 +115,8 @@ export function buildCityView(input: unknown) {
   if (pop) keyFacts.unshift({ q: 'What population estimate is on record?', a: `${number(pop.population)} people as of ${pop.populationProvenance.referenceDate}; ${pop.popChange2020to2023Pct.toFixed(2)}% change from ${pop.populationProvenance.changeBasis}. This is the Population Estimates Program, not the ACS survey or a postal-area count.`, source: population[0]!.source, paths: ['demographics.population', 'demographics.popChange2020to2023Pct'] });
   if (airport) keyFacts.push({ q: 'What does the airport distance measure?', a: `${airport.name} (${airport.iata}) is ${number(airport.distanceMiles)} miles in a straight line from the city center. Method: ${airport.cityCenterMethod}. This is not a road distance or travel time.`, source: airport.sourceNote, paths: ['executiveTravel.primaryAirport.distanceMiles'] });
   if (water) keyFacts.push({ q: 'Which water system is listed?', a: `${water.providerName}, system ID ${water.pwsid}, is listed as a ${water.sourceType} system serving ${number(water.populationServed)} people. The service population is not the city population. Confirm service for your address; this listing is not a water-quality assessment.`, source: water.sourceNote, paths: ['waterUtility.pwsid', 'waterUtility.populationServed'] });
+  if (hospitals) keyFacts.push({ q: 'What does the emergency-department directory cover?', a: 'CMS lists these hospitals with emergency services. The directory preserves record order; it does not establish current availability or suitability. Confirm services directly with the provider.', source: hospitals.sourceNote, paths: ['executiveTravel.emergency.erHospitals'] });
+  if (industries.length) keyFacts.push({ q: 'How should I read trade density?', a: 'ZIP-area employer establishments are compared with each trade’s national density. The postal-area boundary is not the city limit. This comparison does not establish demand, capacity or profitability.', source: industries[0]!.sourceNote, paths: ['industries.'] });
   return { ...identity.parse(raw), stats, population, housing, climate, hospitals, airport, water, tax, industries, keyFacts };
 }
 export type CityView = ReturnType<typeof buildCityView>;

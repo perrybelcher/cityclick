@@ -1,14 +1,16 @@
 ---
 import SourceNote from './SourceNote.astro';
+import { formatSource } from '../../lib/city-sources';
 import type { SourceNote as Source } from '../../lib/city-v2';
 interface Props { sources: Source[]; }
 const { sources } = Astro.props;
-const unique = [...new Map(sources.filter(s => s?.name && s.asOf && s.path).map(s => [s.path, s])).values()];
-const dates = [...new Set(unique.map(s => s.asOf))];
+const unique = [...new Map(sources.filter(s => s?.name && s.asOf && s.path).map(s => {
+  const display = formatSource(s);
+  return [JSON.stringify([display.name, display.dates, display.url]), s];
+})).values()];
 ---
 {unique.length > 0 && <div class="section-sources">
-  <p class="as-of">As of: {dates.join(' · ')}</p>
-  <details class="sources-disclosure"><summary>Sources</summary>
+  <details class="sources-disclosure"><summary>Sources &amp; dates</summary>
     {unique.map(source => <SourceNote source={source} />)}<slot />
   </details>
 </div>}

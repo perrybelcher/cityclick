@@ -4,7 +4,7 @@ import LegacyIntent from './LegacyIntent.astro';
 import KeyFacts from './KeyFacts.astro';
 import StatStrip from './StatStrip.astro';
 import Airport from './Airport.astro';
-import { factGroups } from '../../lib/city-charts';
+import { factGroups, intentQuestions } from '../../lib/city-charts';
 import FactTable from './FactTable.astro';
 import Climate from './Climate.astro';
 import Services from './Services.astro';
@@ -25,7 +25,7 @@ const image = media ? new URL(media.src, CITY_V2_SITE.origin).href : undefined;
 const breadcrumbs = [{ name: 'Cities', url: '/' }, { name: city.stateName, url: `/${city.stateCode}/` }, { name: city.name, url: cityRoute(city.slug) }];
 if (intent !== 'overview') breadcrumbs.push({ name: intentLabels[intent], url: cityRoute(city.slug, intent) });
 // Keep FAQ schema order identical to the themed, visible disclosure groups.
-const questions = factGroups.flatMap(g => city.keyFacts.filter(f => f.paths.some(p => g.prefixes.some(prefix => p.startsWith(prefix)))));
+const questions = factGroups.flatMap(g => intentQuestions(city.keyFacts, intent).filter(f => f.paths.some(p => g.prefixes.some(prefix => p.startsWith(prefix)))));
 const graph = { '@context': 'https://schema.org', '@graph': [
   { '@type': 'WebPage', '@id': `${canonical}#webpage`, url: canonical, name: copy.title, description: copy.description, ...(image ? { primaryImageOfPage: { '@type': 'ImageObject', url: image } } : {}), about: { '@type': 'City', '@id': `${new URL(cityRoute(city.slug), CITY_V2_SITE.origin).href}#place`, name: city.name }, breadcrumb: { '@id': `${canonical}#breadcrumbs` } },
   { '@type': 'BreadcrumbList', '@id': `${canonical}#breadcrumbs`, itemListElement: breadcrumbs.map((b, i) => ({ '@type': 'ListItem', position: i + 1, name: b.name, item: new URL(b.url, CITY_V2_SITE.origin).href })) },
@@ -57,7 +57,8 @@ const overviewStats = [...city.population, city.stats[0], city.housing[1]].filte
       <div class="pilot-note">Research preview · Not for indexing</div>
       <section class:list={["hero", { "hero-text-only": !media }]} aria-labelledby="page-title">
         <div class="hero-copy"><p class="eyebrow">{intentLabels[intent]} / {city.stateCode.toUpperCase()}</p><h1 id="page-title">{copy.h1}</h1><p class="lead">{copy.lead}</p><p class="byline">{CITY_V2_SITE.imprint}</p></div>
-        {media && <figure class="hero-photo"><img src={media.heroSrc} srcset={media.srcset} sizes="(max-width: 700px) calc(100vw - 32px), (max-width: 1248px) 46vw, 550px" width={media.width} height={media.height} alt={`${city.name}, ${city.stateName}`} loading="eager" fetchpriority="high" decoding="async" /><figcaption>Photo: project file — license review pending</figcaption></figure>}
+        {media && <figure class="hero-photo"><img src={media.heroSrc} srcset={media.srcset} sizes="(max-width: 700px) calc(100vw - 32px), (max-width: 1248px) 46vw, 550px" width={media.width} height={media.height} alt={`${city.name}, ${city.stateName}`} loading="eager" fetchpriority="high" decoding="async" /></figure>}
+        {media && <p class="hero-credit">Image credit: local project photograph; rights not yet verified.</p>}
       </section>
       <IntentNav slug={city.slug} intent={intent} sticky />
       {intent === 'overview' && <>
@@ -82,10 +83,10 @@ const overviewStats = [...city.population, city.stats[0], city.housing[1]].filte
         {city.stats.length > 0 && <section class="section"><div class="section-heading"><p class="eyebrow">Resident context</p><h2>Income and age</h2></div><StatStrip metrics={city.stats} /></section>}
         <Climate metrics={city.climate} /><Services city={city} includeWater />
       </>}
-      {intent === 'visit' && <><Airport airport={city.airport} /><Climate metrics={city.climate} /><Services city={city} /></>}
+      {intent === 'visit' && <><nav class="on-page" aria-label="In this brief"><span>A practical visit brief</span>{city.airport && <a href="#airport">Arrival</a>}{city.climate.length > 0 && <a href="#climate">Climate</a>}{city.hospitals && <a href="#services">Emergency departments</a>}</nav><Airport airport={city.airport} /><Climate metrics={city.climate} /><Services city={city} /><aside class="coverage-note" aria-labelledby="coverage-title"><h2 id="coverage-title">What we cannot yet verify</h2><p>This brief omits attractions, hotels, restaurants, opening hours, transit schedules, driving times and travel costs. Those topics do not have verified coverage here.</p></aside></>}
       <KeyFacts questions={questions} />
-      <section id="sources" class="source-ledger"><div><p class="eyebrow">Scope & limitations</p><h2>Follow the source. Keep the boundary.</h2></div><div><p>Sources and their recorded dates sit beside each fact. A checked date is not a new data vintage. Statistical estimates, postal areas and service-system populations describe different things.</p><p>This limited research preview omits unsupported facts. Source links are not a claim of independent certification. No city-wide financial recommendation, medical routing or current-price guarantee is made.</p><a href="/methodology/" class="text-link">Read the methodology ↗</a></div></section>
-      <div class="bottom-nav"><p class="eyebrow">Continue your research</p><IntentNav slug={city.slug} intent={intent} /></div>
+      <section id="sources" class="source-ledger"><div><p class="eyebrow">Scope & limitations</p><h2>Follow the source. Keep the boundary.</h2></div><div><p>Each data section groups its evidence in a Sources & dates block. A checked date is not a new data vintage. Statistical estimates, postal areas and service-system populations describe different things.</p><p>This limited research preview omits unsupported facts. Source links are not a claim of independent certification. No city-wide financial recommendation, medical routing or current-price guarantee is made.</p><a href="/methodology/" class="text-link">Read the methodology ↗</a></div></section>
+
     </main>
     <footer class="site-footer"><div class="container"><span>{CITY_V2_SITE.imprint}</span><a href="/">Explore cities ↗</a></div></footer>
     {intent === 'overview' && <LegacyIntent slug={city.slug} />}

@@ -1,5 +1,6 @@
 ---
 import Card from './Card.astro';
+import HospitalList from './HospitalList.astro';
 import Sources from './Sources.astro';
 import { number, type CityView } from '../../lib/city-v2';
 interface Props { city: CityView; includeWater?: boolean; }
@@ -19,14 +20,10 @@ const hospitals = city.hospitals;
     <p class="small">A utility-system population, not the city population. Confirm service at your address. This record does not establish current water quality.</p>
   </Card>}
   {hospitals && <div class="hospital-directory" data-hospital-list>
-    <h3>Hospitals with emergency departments in {city.name} (CMS)</h3>
+    <p class="eyebrow">CMS hospital directory · {city.name}</p><h3>Hospitals with emergency departments</h3>
     <p class="small">Listed in record order, without a recommendation. This directory is not medical routing advice or a live availability check.</p>
-    <p class="as-of">{hospitals.sourceNote.asOf}</p>
-    <ul class="hospital-list">{hospitals.rows.map(h => <li data-fact-path={`executiveTravel.emergency.erHospitals.${h.index}`}>
-      <h4 data-value-path={`executiveTravel.emergency.erHospitals.${h.index}.name`} data-format="text">{h.name}</h4>
-      <p data-value-path={`executiveTravel.emergency.erHospitals.${h.index}.address`} data-format="text">{h.address}</p>
-      <p class="hospital-meta"><span data-value-path={`executiveTravel.emergency.erHospitals.${h.index}.type`} data-format="text">{h.type}</span><br />CMS facility ID: <span data-value-path={`executiveTravel.emergency.erHospitals.${h.index}.cmsFacilityId`} data-format="text">{h.cmsFacilityId}</span></p>
-    </li>)}</ul>
+    <HospitalList rows={hospitals.rows.slice(0, 4)} />
+    {hospitals.rows.length > 4 && <details class="hospital-more"><summary><span class="show-all">Show all {hospitals.rows.length} hospitals</span><span class="show-less">Show fewer hospitals</span></summary><HospitalList rows={hospitals.rows.slice(4)} /></details>}
   </div>}
   <Sources sources={[...(water ? [water.sourceNote] : []), ...(hospitals ? [hospitals.sourceNote] : [])]} />
 </section>}

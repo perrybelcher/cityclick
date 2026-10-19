@@ -9,7 +9,7 @@ const { metrics, caption } = Astro.props;
   <table class="fact-table"><caption>{caption}</caption>
     <thead><tr><th scope="col">Measure</th><th scope="col">Recorded estimate</th></tr></thead>
     <tbody>{metrics.map(m => <tr data-fact-path={m.path}>
-      <th scope="row">{m.label}<span class="table-detail">{m.detail}</span><span class="as-of">As of: {m.source.asOf}</span></th>
+      <th scope="row">{m.label}<span class="table-detail">{m.detail}</span></th>
       <td class="table-value" data-value-path={m.path} data-format={m.format}>{formatMetric(m)}</td>
     </tr>)}</tbody>
   </table>

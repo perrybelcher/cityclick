@@ -1,10 +1,11 @@
 ---
 import type { SourceNote } from '../../lib/city-v2';
+import { formatSource } from '../../lib/city-sources';
 interface Props { source: SourceNote; }
 const { source } = Astro.props;
+const display = formatSource(source);
 ---
 {source?.name && source.asOf && source.path && <p class="source-note" data-source-path={source.path}>
-  <span>{`Source: ${source.name} · As of: ${source.asOf}`}</span>
-  {source.checked && <span> · Checked: {source.checked}</span>}
+  <strong>{display.name}</strong><span class="source-date">{display.dates.join(' · ')}</span>
   {source.url && <a href={source.url} rel="noopener noreferrer">Open source ↗</a>}
 </p>}

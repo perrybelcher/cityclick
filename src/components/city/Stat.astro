@@ -1,11 +1,15 @@
 ---
 import { formatMetric, type Metric } from '../../lib/city-v2';
+import { formatSource } from '../../lib/city-sources';
 interface Props { metric?: Metric; }
 const { metric } = Astro.props;
+const changeMetric = metric?.path === 'demographics.popChange2020to2023Pct' ? metric : undefined;
+const extent = changeMetric ? Math.max(1, Math.ceil(Math.abs(changeMetric.value))) : 1;
 ---
 {metric && <article class="stat" data-fact-path={metric.path}>
   <h3>{metric.label}</h3>
   <p class="stat-value" data-value-path={metric.path} data-format={metric.format}>{formatMetric(metric)}</p>
+  {changeMetric && <div class="change-mini" role="img" aria-label={`Recorded population change ${formatMetric(changeMetric)}. Scale from zero to ${changeMetric.value < 0 ? -extent : extent} percent; not a target.`}><div class="change-track"><span style={`width:${Math.abs(changeMetric.value)/extent*100}%`}></span></div><div class="change-axis" aria-hidden="true"><span>0%</span><span>{changeMetric.value < 0 ? '−' : ''}{extent}%</span></div></div>}
   <p class="stat-detail">{metric.detail}</p>
-  <p class="as-of">As of: {metric.source.asOf}</p>
+  <p class="as-of">{formatSource(metric.source).tag}</p>
 </article>}
