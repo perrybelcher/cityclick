@@ -38,7 +38,14 @@
         "granularity": "place"
       },
       "popChange2020to2023Pct": 1.9,
-      "popChangeBasis": "Census Population Estimates, April 2020 base to July 2023"
+      "popChangeBasis": "Census Population Estimates, April 2020 base to July 2023",
+      "populationProvenance": {
+        "sourceName": "U.S. Census Bureau Population Estimates Program, city and town totals (Vintage 2023)",
+        "sourceUrl": "https://www2.census.gov/programs-surveys/popest/datasets/2020-2023/cities/totals/sub-est2023.csv",
+        "datasetVintage": "PEP-2023",
+        "referenceDate": "July 1, 2023",
+        "changeBasis": "April 1, 2020 estimates base"
+      }
     },
     "industries": [
       {
@@ -479,10 +486,14 @@
     },
     "executiveTravel": {
       "primaryAirport": {
-        "name": "Austin-Bergstrom International Airport",
+        "name": "Austin Bergstrom International Airport",
         "iata": "AUS",
-        "distanceMiles": 8.5,
-        "transitToDowntown": null
+        "distanceMiles": 8.9,
+        "transitToDowntown": null,
+        "source": "OurAirports (public domain) for name, IATA code and coordinates; distance is straight-line from the U.S. Census Gazetteer city center point",
+        "sourceUrl": "https://ourairports.com/data/",
+        "cityCenterMethod": "Census Gazetteer internal point",
+        "retrieved": "2026-10-19"
       },
       "climate": {
         "summerHighF": 95,
@@ -496,7 +507,71 @@
         "emergencyDispatch": "911",
         "nearestTraumaHospital": "Dell Seton Medical Center at The University of Texas",
         "hospitalAddress": "1500 Red River St, Austin, TX 78701",
-        "source": "Google Places API (New), retrieved 2026-10-18"
+        "source": "Google Places API (New), retrieved 2026-10-18",
+        "erHospitals": [
+          {
+            "name": "Ascension Seton Southwest",
+            "address": "7900 Fm 1826, Austin, TX 78737",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "450865"
+          },
+          {
+            "name": "Ascension Seton Medical Center Austin",
+            "address": "1201 W 38Th St, Austin, TX 78705",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "450056"
+          },
+          {
+            "name": "Ascension Seton Northwest",
+            "address": "11113 Research Boulevard, Austin, TX 78759",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "450867"
+          },
+          {
+            "name": "Dell Children's Medical Center",
+            "address": "4900 Mueller Blvd, Austin, TX 78723",
+            "type": "Childrens",
+            "cmsFacilityId": "453310"
+          },
+          {
+            "name": "North Austin Medical Center",
+            "address": "12221 Mopac Expressway North, Austin, TX 78758",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "450809"
+          },
+          {
+            "name": "Northwest Hills Surgical Hospital",
+            "address": "6818 Austin Ctr Blvd Suite 100, Austin, TX 78731",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "450808"
+          },
+          {
+            "name": "St David's Medical Center",
+            "address": "919 E 32Nd St, Austin, TX 78705",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "450431"
+          },
+          {
+            "name": "St David's South Austin Medical Center",
+            "address": "901 West Ben White Blvd, Austin, TX 78704",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "450713"
+          },
+          {
+            "name": "Texas Childrens Hospital North Austin Campus",
+            "address": "9835 North Lake Creek Parkway Bldg A, Austin, TX 78717",
+            "type": "Childrens",
+            "cmsFacilityId": "453319"
+          },
+          {
+            "name": "The Hospital at Westlake Medical Center",
+            "address": "5656 Bee Caves Road, Suite M-302, Austin, TX 78746",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "670006"
+          }
+        ],
+        "erHospitalsSource": "CMS Care Compare hospital general information (federal), retrieved 2026-10-19: acute-care and children's hospitals in this city listed with emergency services. No trauma level, ranking or nearest-facility claim.",
+        "sourceNote": "Dell Seton Medical Center at the University of Texas appears in CMS at 601 E 15th Street with emergency services \"No\"; the earlier single-hospital listing is NOT confirmed by CMS and should not be shown as the primary ER."
       }
     },
     "waterUtility": {

@@ -503,6 +503,13 @@
       "source": "U.S. EPA Safe Drinking Water Information System (SDWIS)",
       "sourceUrl": "https://data.epa.gov/efservice/WATER_SYSTEM/PWSID/OK1020902/JSON",
       "retrieved": "2026-10-18"
+    },
+    "climateNormals": {
+      "peakSummerHighF": 93,
+      "winterLowF": 30,
+      "annualRainfallInches": 36.0,
+      "sourceName": "Open-Meteo Historical Weather API (ERA5 reanalysis), 2015-2024 average, retrieved 2026-10-18",
+      "sourceUrl": "https://open-meteo.com/en/docs/historical-weather-api"
     }
   },
   {
