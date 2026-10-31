@@ -11,11 +11,16 @@ const { cityA, cityB } = Astro.params;
 
 const INDEXABLE_SET = CERTIFIED_FLAGSHIP_SET;
 const certifiedCities = CERTIFIED_FLAGSHIP_SLUGS.map((slug) => manifest.find((c: any) => c.slug === slug)).filter(Boolean) as any[];
+const nonFlagshipCities = manifest
+  .filter((c: any) => !CERTIFIED_FLAGSHIP_SET.has(c.slug))
+  .sort((a: any, b: any) =>
+    `${a.name}, ${a.stateCode.toUpperCase()}`.localeCompare(`${b.name}, ${b.stateCode.toUpperCase()}`)
+  ) as any[];
 
 let recordA: any = null;
 let recordB: any = null;
 
-for (const c of certifiedCities) {
+for (const c of manifest as any[]) {
   const slugKey = c.slug.replace('/', '-');
   if (slugKey === cityA || c.slug === cityA) recordA = c;
   if (slugKey === cityB || c.slug === cityB) recordB = c;
@@ -168,22 +173,40 @@ const compareRobots =
         <div class="flex-1">
           <label for="compare-city-a" class="block text-[11px] font-bold uppercase tracking-wider text-slate-500 mb-1">First City</label>
           <select id="compare-city-a" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 bg-white text-xs sm:text-sm font-bold text-[#152438] outline-none focus:border-[#1D68F2]">
-            {certifiedCities.map((c) => (
-              <option value={c.slug.replace('/', '-')} selected={c.slug === recordA.slug}>
-                {c.name}, {c.stateCode.toUpperCase()}
-              </option>
-            ))}
+            <optgroup label="Featured Flagship Cities">
+              {certifiedCities.map((c) => (
+                <option value={c.slug.replace('/', '-')} selected={c.slug === recordA.slug}>
+                  {c.name}, {c.stateCode.toUpperCase()}
+                </option>
+              ))}
+            </optgroup>
+            <optgroup label="All Primary-Sourced US Cities">
+              {nonFlagshipCities.map((c) => (
+                <option value={c.slug.replace('/', '-')} selected={c.slug === recordA.slug}>
+                  {c.name}, {c.stateCode.toUpperCase()}
+                </option>
+              ))}
+            </optgroup>
           </select>
         </div>
         <div class="hidden sm:flex items-center justify-center pb-2.5 text-xs font-black text-slate-400">VS</div>
         <div class="flex-1">
           <label for="compare-city-b" class="block text-[11px] font-bold uppercase tracking-wider text-slate-500 mb-1">Second City</label>
           <select id="compare-city-b" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 bg-white text-xs sm:text-sm font-bold text-[#152438] outline-none focus:border-[#1D68F2]">
-            {certifiedCities.map((c) => (
-              <option value={c.slug.replace('/', '-')} selected={c.slug === recordB.slug}>
-                {c.name}, {c.stateCode.toUpperCase()}
-              </option>
-            ))}
+            <optgroup label="Featured Flagship Cities">
+              {certifiedCities.map((c) => (
+                <option value={c.slug.replace('/', '-')} selected={c.slug === recordB.slug}>
+                  {c.name}, {c.stateCode.toUpperCase()}
+                </option>
+              ))}
+            </optgroup>
+            <optgroup label="All Primary-Sourced US Cities">
+              {nonFlagshipCities.map((c) => (
+                <option value={c.slug.replace('/', '-')} selected={c.slug === recordB.slug}>
+                  {c.name}, {c.stateCode.toUpperCase()}
+                </option>
+              ))}
+            </optgroup>
           </select>
         </div>
         <button

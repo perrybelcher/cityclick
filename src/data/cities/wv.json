@@ -2,774 +2,1948 @@
   {
     "slug": "wv/charleston",
     "cityId": "5414600",
-    "countyFips": "54146",
+    "countyFips": "54039",
     "name": "Charleston",
     "stateCode": "wv",
     "stateName": "West Virginia",
-    "countyName": "Charleston Metropolitan Area",
+    "countyName": "Kanawha County",
     "lat": 38.348692,
     "lng": -81.632324,
     "primaryZips": [
-      "70863"
+      "25301",
+      "25302",
+      "25304",
+      "25313",
+      "25311",
+      "25314",
+      "25312",
+      "25387",
+      "25306",
+      "25320",
+      "25315"
     ],
     "demographics": {
       "population": 46838,
-      "popGrowth5YrPct": -3.7,
-      "medianHouseholdIncome": 76107,
-      "perCapitaIncome": 44142,
-      "medianAge": 36.4,
-      "daytimeWorkerPop": 29040,
-      "daytimePopSurgePct": 8.5,
-      "medianGrossRent": 1464,
-      "medianHomeValue": 319649,
+      "medianHouseholdIncome": 64512,
+      "perCapitaIncome": 45967,
+      "medianAge": 42.6,
+      "medianGrossRent": 898,
+      "medianHomeValue": 187300,
       "provenance": {
-        "sourceName": "US Census Bureau ACS 5-Year (DP03/DP04/DP05) & PopEst",
-        "sourceUrl": "https://api.census.gov/data/2023/acs/acs5",
-        "datasetVintage": "2023-5YR",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "sourceName": "US Census Bureau ACS 5-Year Estimates 2023 (Table-Based Summary File)",
+        "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/",
+        "datasetVintage": "ACS-2023-5YR",
+        "verifiedAt": "2026-10-31T00:00:00Z",
         "granularity": "place"
-      }
-    },
-    "laborAndEconomy": {
-      "unemploymentRatePct": 3.8,
-      "avgWeeklyWageAllIndustries": 1340,
-      "newHousingPermits12Mo": 351,
-      "permitsPer1kResidents": 7.5,
-      "femaRiskScore": 28.0,
-      "provenance": {
-        "sourceName": "BLS Local Area Unemployment Statistics (LAUS) & Census BPS",
-        "sourceUrl": "https://www.bls.gov/lau/",
-        "datasetVintage": "2024-M08",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
-      }
+      },
+      "popChange2020to2023Pct": -4.0,
+      "popChangeBasis": "Census Population Estimates, April 2020 base to July 2023"
     },
     "industries": [
       {
         "naicsCode": "722515",
         "slug": "coffee-shops",
         "label": "Coffee & Snack Shops",
-        "establishments": 10,
-        "per10kResidents": 2.14,
-        "usAvgPer10k": 2.15,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 13,
+        "per10kResidents": 1.44,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 68,
+        "status": "underserved",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Charleston."
+          "evidenceQuote": "13 employer establishments (NAICS 722515) across 11 ZIP codes whose USPS city is Charleston, WV; density uses ACS 2023 ZCTA population (90,565). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722511",
         "slug": "restaurants",
         "label": "Full-Service Restaurants",
-        "establishments": 32,
-        "per10kResidents": 6.83,
-        "usAvgPer10k": 6.8,
-        "saturationIndex": 100,
+        "establishments": 69,
+        "per10kResidents": 7.62,
+        "usAvgPer10k": 7.44,
+        "saturationIndex": 102,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Charleston."
+          "evidenceQuote": "69 employer establishments (NAICS 722511) across 11 ZIP codes whose USPS city is Charleston, WV; density uses ACS 2023 ZCTA population (90,565). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722513",
         "slug": "fast-food",
-        "label": "Fast Food Restaurants",
-        "establishments": 34,
-        "per10kResidents": 7.26,
-        "usAvgPer10k": 7.2,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Limited-Service / Fast Food Restaurants",
+        "establishments": 95,
+        "per10kResidents": 10.49,
+        "usAvgPer10k": 7.75,
+        "saturationIndex": 135,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Charleston."
+          "evidenceQuote": "95 employer establishments (NAICS 722513) across 11 ZIP codes whose USPS city is Charleston, WV; density uses ACS 2023 ZCTA population (90,565). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722410",
         "slug": "bars-taverns",
-        "label": "Bars & Drinking Places",
-        "establishments": 9,
-        "per10kResidents": 1.92,
-        "usAvgPer10k": 1.85,
-        "saturationIndex": 103,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Drinking Places (Alcoholic Beverages)",
+        "establishments": 17,
+        "per10kResidents": 1.88,
+        "usAvgPer10k": 0.9,
+        "saturationIndex": 208,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Charleston."
-        }
-      },
-      {
-        "naicsCode": "812111",
-        "slug": "barber-shops",
-        "label": "Barber Shops",
-        "establishments": 6,
-        "per10kResidents": 1.28,
-        "usAvgPer10k": 1.35,
-        "saturationIndex": 96,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Charleston."
+          "evidenceQuote": "17 employer establishments (NAICS 722410) across 11 ZIP codes whose USPS city is Charleston, WV; density uses ACS 2023 ZCTA population (90,565). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812112",
         "slug": "beauty-salons",
         "label": "Beauty Salons & Hair Studios",
-        "establishments": 16,
-        "per10kResidents": 3.42,
-        "usAvgPer10k": 3.4,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 4,
+        "per10kResidents": 0.44,
+        "usAvgPer10k": 2.31,
+        "saturationIndex": 19,
+        "status": "underserved",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Charleston."
+          "evidenceQuote": "4 employer establishments (NAICS 812112) across 11 ZIP codes whose USPS city is Charleston, WV; density uses ACS 2023 ZCTA population (90,565). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812113",
         "slug": "nail-salons",
         "label": "Nail Salons",
-        "establishments": 10,
-        "per10kResidents": 2.14,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 4,
+        "per10kResidents": 0.44,
+        "usAvgPer10k": 0.86,
+        "saturationIndex": 51,
+        "status": "underserved",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Charleston."
+          "evidenceQuote": "4 employer establishments (NAICS 812113) across 11 ZIP codes whose USPS city is Charleston, WV; density uses ACS 2023 ZCTA population (90,565). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "713940",
         "slug": "gyms-fitness",
-        "label": "Fitness & Recreational Gyms",
+        "label": "Fitness & Recreational Sports Centers",
         "establishments": 6,
-        "per10kResidents": 1.28,
-        "usAvgPer10k": 1.25,
-        "saturationIndex": 102,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "per10kResidents": 0.66,
+        "usAvgPer10k": 1.0,
+        "saturationIndex": 66,
+        "status": "underserved",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Charleston."
+          "evidenceQuote": "6 employer establishments (NAICS 713940) across 11 ZIP codes whose USPS city is Charleston, WV; density uses ACS 2023 ZCTA population (90,565). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812910",
         "slug": "pet-care",
-        "label": "Pet Care & Grooming",
-        "establishments": 4,
-        "per10kResidents": 0.85,
-        "usAvgPer10k": 0.95,
-        "saturationIndex": 92,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Pet Care & Grooming Services",
+        "establishments": 3,
+        "per10kResidents": 0.33,
+        "usAvgPer10k": 0.46,
+        "saturationIndex": 71,
+        "status": "underserved",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Charleston."
+          "evidenceQuote": "3 employer establishments (NAICS 812910) across 11 ZIP codes whose USPS city is Charleston, WV; density uses ACS 2023 ZCTA population (90,565). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541940",
         "slug": "veterinary",
-        "label": "Veterinary Services",
-        "establishments": 5,
-        "per10kResidents": 1.07,
-        "usAvgPer10k": 1.05,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Veterinary Services & Animal Hospitals",
+        "establishments": 0,
+        "per10kResidents": 0.0,
+        "usAvgPer10k": 0.69,
+        "saturationIndex": 0,
+        "status": "underserved",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Charleston."
+          "evidenceQuote": "0 employer establishments (NAICS 541940) across 11 ZIP codes whose USPS city is Charleston, WV; density uses ACS 2023 ZCTA population (90,565). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "811111",
         "slug": "auto-repair",
         "label": "General Automotive Repair",
-        "establishments": 22,
-        "per10kResidents": 4.7,
-        "usAvgPer10k": 4.8,
-        "saturationIndex": 98,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 11,
+        "per10kResidents": 1.21,
+        "usAvgPer10k": 2.2,
+        "saturationIndex": 55,
+        "status": "underserved",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Charleston."
+          "evidenceQuote": "11 employer establishments (NAICS 811111) across 11 ZIP codes whose USPS city is Charleston, WV; density uses ACS 2023 ZCTA population (90,565). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "811192",
         "slug": "car-washes",
-        "label": "Car Washes & Detailing",
-        "establishments": 3,
-        "per10kResidents": 0.64,
-        "usAvgPer10k": 0.65,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Car Washes & Auto Detailing",
+        "establishments": 0,
+        "per10kResidents": 0.0,
+        "usAvgPer10k": 0.35,
+        "saturationIndex": 0,
+        "status": "underserved",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Charleston."
-        }
-      },
-      {
-        "naicsCode": "812310",
-        "slug": "laundromats",
-        "label": "Coin Laundromats",
-        "establishments": 3,
-        "per10kResidents": 0.64,
-        "usAvgPer10k": 0.55,
-        "saturationIndex": 114,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Charleston."
-        }
-      },
-      {
-        "naicsCode": "812320",
-        "slug": "dry-cleaners",
-        "label": "Dry Cleaning & Laundry",
-        "establishments": 4,
-        "per10kResidents": 0.85,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Charleston."
+          "evidenceQuote": "0 employer establishments (NAICS 811192) across 11 ZIP codes whose USPS city is Charleston, WV; density uses ACS 2023 ZCTA population (90,565). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621210",
         "slug": "dentists",
         "label": "Offices of Dentists",
-        "establishments": 18,
-        "per10kResidents": 3.84,
-        "usAvgPer10k": 3.9,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 45,
+        "per10kResidents": 4.97,
+        "usAvgPer10k": 3.89,
+        "saturationIndex": 128,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Charleston."
+          "evidenceQuote": "45 employer establishments (NAICS 621210) across 11 ZIP codes whose USPS city is Charleston, WV; density uses ACS 2023 ZCTA population (90,565). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621310",
         "slug": "chiropractors",
         "label": "Offices of Chiropractors",
-        "establishments": 7,
-        "per10kResidents": 1.49,
-        "usAvgPer10k": 1.4,
-        "saturationIndex": 106,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 6,
+        "per10kResidents": 0.66,
+        "usAvgPer10k": 0.97,
+        "saturationIndex": 68,
+        "status": "underserved",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Charleston."
+          "evidenceQuote": "6 employer establishments (NAICS 621310) across 11 ZIP codes whose USPS city is Charleston, WV; density uses ACS 2023 ZCTA population (90,565). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621340",
         "slug": "physical-therapy",
-        "label": "Physical Therapy Clinics",
-        "establishments": 7,
-        "per10kResidents": 1.49,
-        "usAvgPer10k": 1.55,
-        "saturationIndex": 97,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Physical, Occupational & Speech Therapists",
+        "establishments": 23,
+        "per10kResidents": 2.54,
+        "usAvgPer10k": 1.3,
+        "saturationIndex": 195,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Charleston."
+          "evidenceQuote": "23 employer establishments (NAICS 621340) across 11 ZIP codes whose USPS city is Charleston, WV; density uses ACS 2023 ZCTA population (90,565). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "624410",
         "slug": "daycare",
         "label": "Child Day Care Services",
-        "establishments": 11,
-        "per10kResidents": 2.35,
-        "usAvgPer10k": 2.25,
-        "saturationIndex": 104,
+        "establishments": 16,
+        "per10kResidents": 1.77,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 83,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Charleston."
+          "evidenceQuote": "16 employer establishments (NAICS 624410) across 11 ZIP codes whose USPS city is Charleston, WV; density uses ACS 2023 ZCTA population (90,565). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "445120",
         "slug": "convenience-stores",
-        "label": "Convenience Stores",
-        "establishments": 9,
-        "per10kResidents": 1.92,
-        "usAvgPer10k": 1.95,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Convenience Retail Stores",
+        "establishments": 0,
+        "per10kResidents": 0.0,
+        "usAvgPer10k": 0.82,
+        "saturationIndex": 0,
+        "status": "underserved",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Charleston."
+          "evidenceQuote": "0 employer establishments (NAICS 445120) across 11 ZIP codes whose USPS city is Charleston, WV; density uses ACS 2023 ZCTA population (90,565). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "448140",
         "slug": "clothing-boutiques",
-        "label": "Family Clothing Stores",
-        "establishments": 8,
-        "per10kResidents": 1.71,
-        "usAvgPer10k": 1.65,
-        "saturationIndex": 103,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Family Clothing Stores & Boutiques",
+        "establishments": 0,
+        "per10kResidents": 0.0,
+        "usAvgPer10k": 0.65,
+        "saturationIndex": 0,
+        "status": "underserved",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Charleston."
-        }
-      },
-      {
-        "naicsCode": "445291",
-        "slug": "bakeries",
-        "label": "Retail Bakeries",
-        "establishments": 4,
-        "per10kResidents": 0.85,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Charleston."
-        }
-      },
-      {
-        "naicsCode": "453110",
-        "slug": "florists",
-        "label": "Florists & Floral Gift",
-        "establishments": 2,
-        "per10kResidents": 0.43,
-        "usAvgPer10k": 0.5,
-        "saturationIndex": 88,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Charleston."
+          "evidenceQuote": "0 employer establishments (NAICS 448140) across 11 ZIP codes whose USPS city is Charleston, WV; density uses ACS 2023 ZCTA population (90,565). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541110",
         "slug": "law-firms",
         "label": "Offices of Lawyers",
-        "establishments": 23,
-        "per10kResidents": 4.91,
-        "usAvgPer10k": 4.9,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 142,
+        "per10kResidents": 15.68,
+        "usAvgPer10k": 4.8,
+        "saturationIndex": 326,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Charleston."
+          "evidenceQuote": "142 employer establishments (NAICS 541110) across 11 ZIP codes whose USPS city is Charleston, WV; density uses ACS 2023 ZCTA population (90,565). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541211",
         "slug": "accounting-cpa",
-        "label": "Offices of CPAs",
-        "establishments": 10,
-        "per10kResidents": 2.14,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Offices of Certified Public Accountants",
+        "establishments": 30,
+        "per10kResidents": 3.31,
+        "usAvgPer10k": 1.44,
+        "saturationIndex": 230,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Charleston."
+          "evidenceQuote": "30 employer establishments (NAICS 541211) across 11 ZIP codes whose USPS city is Charleston, WV; density uses ACS 2023 ZCTA population (90,565). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "531210",
         "slug": "real-estate-agencies",
-        "label": "Real Estate Brokerages",
-        "establishments": 18,
-        "per10kResidents": 3.84,
-        "usAvgPer10k": 3.8,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Offices of Real Estate Agents & Brokers",
+        "establishments": 9,
+        "per10kResidents": 0.99,
+        "usAvgPer10k": 4.74,
+        "saturationIndex": 21,
+        "status": "underserved",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Charleston."
+          "evidenceQuote": "9 employer establishments (NAICS 531210) across 11 ZIP codes whose USPS city is Charleston, WV; density uses ACS 2023 ZCTA population (90,565). National benchmark = all US ZIP rows / US population."
         }
       }
     ],
-    "permitsAndTax": {
-      "generalBusinessLicenseRequired": false,
-      "businessLicenseFeeSummary": "No general city business license required. State of West Virginia statutory filings apply.",
-      "businessLicensePortalUrl": "https://www.charlestonwv.gov/permits",
-      "zoningLookupUrl": "https://www.charlestonwv.gov/zoning",
-      "buildingPermitPortalUrl": "https://www.charlestonwv.gov/building",
-      "certificateOfOccupancyFee": "$185 standard municipal inspection fee",
-      "avgPermitWaitDays": 30,
-      "shortTermRentalStatus": "restricted",
-      "foodTruckPermitStatus": "allowed",
-      "combinedSalesTaxRate": 0.075,
-      "stateTaxRate": 0.06,
-      "localTaxRate": 0.015,
-      "provenance": {
-        "sourceName": "Charleston Municipal Code & State Department of Revenue",
-        "sourceUrl": "https://www.charlestonwv.gov",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place",
-        "evidenceQuote": "Statutory municipal code standards."
-      }
-    },
-    "topTrafficCorridors": [
-      {
-        "roadName": "Main Arterial Corridor 1",
-        "segmentDescription": "Central Commercial Corridor through Charleston",
-        "aadt": 5621,
-        "heavyTruckPct": 5.5,
-        "lat": 38.348692,
-        "lng": -81.632324,
-        "year": 2024,
-        "provenance": {
-          "sourceName": "West Virginia DOT AADT Database",
-          "sourceUrl": "https://www.transportation.gov/",
-          "datasetVintage": "2024-AADT",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "place"
-        }
-      }
-    ],
-    "marketSignals": {
-      "reportedRetailRentSqFtYr": 37.5,
-      "reportedIndustrialRentSqFtYr": 16.9,
-      "topSearchedNaics30d": [
-        "722515",
-        "713940",
-        "812111"
-      ],
-      "verifiedLocalProsCount": 8
-    },
-    "scores": {
-      "overallViability": 40,
-      "purchasingPower": 38,
-      "growthMomentum": 42,
-      "costEfficiency": 76,
-      "regulatoryFriction": 48
-    },
+    "marketSignals": {},
     "executiveTravel": {
-      "timeZone": "America/New_York (ET: UTC-05:00)",
+      "timeZone": "America/New_York",
       "timeZoneAbbr": "ET",
       "utcOffset": "-05:00",
-      "primaryAirport": {
-        "name": "Charleston Regional / Metropolitan Airport",
-        "iata": null,
-        "distanceMiles": 10.4,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
-      },
-      "powerPlugs": {
-        "types": [
-          "Type A (2-pin)",
-          "Type B (3-pin grounded)"
-        ],
-        "voltage": "120V",
-        "frequency": "60Hz",
-        "adapterAdvice": "Visitors from UK, EU, Australia, and Asia require a standard Type A/B plug adapter and dual-voltage converter."
-      },
-      "currency": {
-        "code": "USD",
-        "symbol": "$",
-        "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
-        "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
-      },
-      "climate": {
-        "summerHighF": 84,
-        "winterLowF": 22,
-        "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
-        "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
-      },
       "emergency": {
         "emergencyDispatch": "911",
-        "nonEmergencyPolice": "311 or local municipal dispatch",
-        "nearestTraumaHospital": "Charleston Regional Memorial Hospital",
-        "hospitalAddress": "Medical Center District, Charleston, WV"
+        "nearestTraumaHospital": "Charleston Area Medical Center",
+        "hospitalAddress": "501 Morris Street, Charleston, WV 25301",
+        "cmsFacilityId": "510022",
+        "emergencyServices": true,
+        "source": "CMS Care Compare hospital general information (dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma or nearest claim.",
+        "erHospitals": [
+          {
+            "name": "Charleston Area Medical Center",
+            "address": "501 Morris Street, Charleston, WV 25301",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "510022"
+          }
+        ],
+        "erHospitalsSource": "CMS Care Compare hospital general information (dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma or nearest claim."
       },
-      "visitorLogistics": {
-        "tapWaterPotability": "100% Safe municipal drinking water conforming to EPA Safe Drinking Water Act standards.",
-        "salesTaxRefundPolicy": "International travelers may claim state sales tax refunds on qualifying departures at designated airport customs counters.",
-        "rideshareAvailability": "Ubiquitous (Uber and Lyft operational 24/7 across the metropolitan area)."
-      },
-      "provenance": {
-        "sourceName": "FAA Airport Database & International Trade Administration",
-        "sourceUrl": "https://www.trade.gov/",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
+      "primaryAirport": {
+        "name": "Yeager Airport",
+        "iata": "CRW",
+        "lat": 38.3731,
+        "lng": -81.593201,
+        "distanceMiles": 2.7,
+        "transitToDowntown": null,
+        "source": "OurAirports (public domain) for name, IATA code and coordinates; distance is straight-line from the U.S. Census Gazetteer city center point",
+        "sourceUrl": "https://ourairports.com/data/",
+        "cityCenterMethod": "Census Gazetteer internal point",
+        "retrieved": "2026-10-31"
       }
+    },
+    "housingAndTaxes": {
+      "medianHomeValue": 187300,
+      "medianGrossRent": 898,
+      "medianRealEstateTaxPaid": 1359,
+      "effectivePropertyTaxRatePct": 0.73,
+      "countyName": "Kanawha County",
+      "source": "ACS 2023 5-yr: B25077 median home value, B25064 median gross rent, B25103 median real estate taxes paid. Effective rate = B25103 / B25077.",
+      "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/"
+    },
+    "climateNormals": {
+      "peakSummerHighF": 86,
+      "winterLowF": 26,
+      "annualRainfallInches": 46.2,
+      "sourceName": "NOAA NCEI U.S. Climate Normals 1991-2020 (Station USW00013866, 3.1 mi from Gazetteer center), retrieved 2026-10-31",
+      "sourceUrl": "https://www.ncei.noaa.gov/products/land-based-station/us-climate-normals"
+    },
+    "waterUtility": {
+      "pwsid": "WV3302016",
+      "providerName": "Wvawc-Kanawha Valley Dist",
+      "populationServed": 209283,
+      "sourceType": "surface water",
+      "source": "U.S. EPA Safe Drinking Water Information System (SDWIS)",
+      "sourceUrl": "https://data.epa.gov/efservice/WATER_SYSTEM/PWSID/WV3302016/JSON",
+      "retrieved": "2026-10-31"
+    },
+    "higherEducation": {
+      "institutionCount": 5,
+      "totalEnrollment": 2571,
+      "institutions": [
+        {
+          "id": 237312,
+          "name": "University of Charleston",
+          "studentSize": 2259,
+          "ownership": "Private nonprofit",
+          "schoolUrl": "https://www.ucwv.edu/",
+          "lat": 38.333367,
+          "lng": -81.616244
+        },
+        {
+          "id": 430795,
+          "name": "Carver Career Center",
+          "studentSize": 169,
+          "ownership": "Public",
+          "schoolUrl": "https://www.carvercareercenter.edu/",
+          "lat": 38.289708,
+          "lng": -81.562988
+        },
+        {
+          "id": 481906,
+          "name": "Ross Medical Education Center-Charleston",
+          "studentSize": 65,
+          "ownership": "Private for-profit",
+          "schoolUrl": "https://rosseducation.edu/",
+          "lat": 38.310312,
+          "lng": -81.567573
+        },
+        {
+          "id": 237303,
+          "name": "Charleston School of Beauty Culture",
+          "studentSize": 46,
+          "ownership": "Private for-profit",
+          "schoolUrl": "https://wvcsbc.net/",
+          "lat": 38.317676,
+          "lng": -81.578638
+        },
+        {
+          "id": 448275,
+          "name": "Mountain State School of Massage",
+          "studentSize": 32,
+          "ownership": "Private for-profit",
+          "schoolUrl": "https://www.mtnstmassage.com/",
+          "lat": 38.317659,
+          "lng": -81.579417
+        }
+      ],
+      "sourceName": "U.S. Department of Education College Scorecard",
+      "sourceUrl": "https://collegescorecard.ed.gov/",
+      "retrieved": "2026-10-31"
+    },
+    "evInfrastructure": {
+      "totalStations": 11,
+      "totalChargingPorts": 36,
+      "dcFastPorts": 9,
+      "level2Ports": 27,
+      "sampleStations": [
+        {
+          "name": "Yeager Airport - Long Term Parking Garage",
+          "address": "100 Airport Rd, Charleston, WV 25311",
+          "network": "Non-Networked",
+          "dcFastPorts": 0,
+          "level2Ports": 12,
+          "lat": 38.369643,
+          "lng": -81.595793
+        },
+        {
+          "name": "Charleston, WV - Tesla Supercharger",
+          "address": "2 Kanawha Boulevard E., Charleston, WV 25301",
+          "network": "Tesla",
+          "dcFastPorts": 8,
+          "level2Ports": 0,
+          "lat": 38.354694,
+          "lng": -81.642799
+        },
+        {
+          "name": "901 Lee Street Parking",
+          "address": "901 Lee Street, Charleston, WV 25301",
+          "network": "Blink Network",
+          "dcFastPorts": 0,
+          "level2Ports": 4,
+          "lat": 38.349764,
+          "lng": -81.633074
+        },
+        {
+          "name": "VOLVOCHARLESTON CHARGER",
+          "address": "7 Dudley Farms Ln, Charleston, WV 25309",
+          "network": "ChargePoint Network",
+          "dcFastPorts": 0,
+          "level2Ports": 2,
+          "lat": 38.32606,
+          "lng": -81.71372
+        },
+        {
+          "name": "Roxalana Hills",
+          "address": "700 Roxalana Hills Dr, Charleston, WV 25064",
+          "network": "EV Connect",
+          "dcFastPorts": 0,
+          "level2Ports": 2,
+          "lat": 38.372876,
+          "lng": -81.72434
+        }
+      ],
+      "sourceName": "U.S. Department of Energy / NLR Alternative Fuels Data Center (AFDC)",
+      "sourceUrl": "https://afdc.energy.gov/stations",
+      "retrieved": "2026-10-31"
+    },
+    "nationalParks": {
+      "parks": [
+        {
+          "parkCode": "gari",
+          "fullName": "Gauley River National Recreation Area",
+          "designation": "National Recreation Area",
+          "distanceMiles": 35.5,
+          "description": "The 25 miles of free-flowing Gauley River and the six miles of the Meadow River pass through scenic gorges and valleys containing a wide variety of natural and cultural features. The Gauley River contains several class V+ rapids, making...",
+          "url": "https://www.nps.gov/gari/index.htm",
+          "lat": 38.206149,
+          "lng": -81.004208
+        },
+        {
+          "parkCode": "neri",
+          "fullName": "New River Gorge National Park & Preserve",
+          "designation": "National Park & Preserve",
+          "distanceMiles": 47.8,
+          "description": "A rugged, whitewater river flowing northward through deep canyons, the New River is among the oldest rivers on the continent. The park encompasses over 70,000 acres of land along the New River, is rich in cultural and natural history...",
+          "url": "https://www.nps.gov/neri/index.htm",
+          "lat": 37.868786,
+          "lng": -80.99956
+        }
+      ],
+      "sourceName": "U.S. National Park Service",
+      "sourceUrl": "https://www.nps.gov/",
+      "retrieved": "2026-10-31"
     }
   },
   {
     "slug": "wv/huntington",
     "cityId": "5439460",
-    "countyFips": "54394",
+    "countyFips": "54011",
     "name": "Huntington",
     "stateCode": "wv",
     "stateName": "West Virginia",
-    "countyName": "Huntington Metropolitan Area",
+    "countyName": "Cabell County",
     "lat": 38.410651,
     "lng": -82.434689,
     "primaryZips": [
-      "70886"
+      "25701",
+      "25705",
+      "25704",
+      "25702",
+      "25703",
+      "25755"
     ],
     "demographics": {
       "population": 45325,
-      "popGrowth5YrPct": -3.0,
-      "medianHouseholdIncome": 76885,
-      "perCapitaIncome": 44593,
-      "medianAge": 36.4,
-      "daytimeWorkerPop": 28102,
-      "daytimePopSurgePct": 8.5,
-      "medianGrossRent": 1479,
-      "medianHomeValue": 322917,
+      "medianHouseholdIncome": 43146,
+      "perCapitaIncome": 30024,
+      "medianAge": 34.9,
+      "medianGrossRent": 863,
+      "medianHomeValue": 118800,
       "provenance": {
-        "sourceName": "US Census Bureau ACS 5-Year (DP03/DP04/DP05) & PopEst",
-        "sourceUrl": "https://api.census.gov/data/2023/acs/acs5",
-        "datasetVintage": "2023-5YR",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "sourceName": "US Census Bureau ACS 5-Year Estimates 2023 (Table-Based Summary File)",
+        "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/",
+        "datasetVintage": "ACS-2023-5YR",
+        "verifiedAt": "2026-10-31T00:00:00Z",
         "granularity": "place"
-      }
-    },
-    "laborAndEconomy": {
-      "unemploymentRatePct": 3.8,
-      "avgWeeklyWageAllIndustries": 1340,
-      "newHousingPermits12Mo": 340,
-      "permitsPer1kResidents": 7.5,
-      "femaRiskScore": 28.0,
-      "provenance": {
-        "sourceName": "BLS Local Area Unemployment Statistics (LAUS) & Census BPS",
-        "sourceUrl": "https://www.bls.gov/lau/",
-        "datasetVintage": "2024-M08",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
-      }
+      },
+      "popChange2020to2023Pct": -3.2,
+      "popChangeBasis": "Census Population Estimates, April 2020 base to July 2023"
     },
     "industries": [
       {
         "naicsCode": "722515",
         "slug": "coffee-shops",
         "label": "Coffee & Snack Shops",
-        "establishments": 10,
-        "per10kResidents": 2.21,
-        "usAvgPer10k": 2.15,
-        "saturationIndex": 102,
+        "establishments": 14,
+        "per10kResidents": 1.98,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 93,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Huntington."
+          "evidenceQuote": "14 employer establishments (NAICS 722515) across 6 ZIP codes whose USPS city is Huntington, WV; density uses ACS 2023 ZCTA population (70,628). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722511",
         "slug": "restaurants",
         "label": "Full-Service Restaurants",
-        "establishments": 31,
-        "per10kResidents": 6.84,
-        "usAvgPer10k": 6.8,
-        "saturationIndex": 100,
+        "establishments": 54,
+        "per10kResidents": 7.65,
+        "usAvgPer10k": 7.44,
+        "saturationIndex": 103,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Huntington."
+          "evidenceQuote": "54 employer establishments (NAICS 722511) across 6 ZIP codes whose USPS city is Huntington, WV; density uses ACS 2023 ZCTA population (70,628). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722513",
         "slug": "fast-food",
-        "label": "Fast Food Restaurants",
-        "establishments": 33,
-        "per10kResidents": 7.28,
-        "usAvgPer10k": 7.2,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Limited-Service / Fast Food Restaurants",
+        "establishments": 71,
+        "per10kResidents": 10.05,
+        "usAvgPer10k": 7.75,
+        "saturationIndex": 130,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Huntington."
+          "evidenceQuote": "71 employer establishments (NAICS 722513) across 6 ZIP codes whose USPS city is Huntington, WV; density uses ACS 2023 ZCTA population (70,628). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722410",
         "slug": "bars-taverns",
-        "label": "Bars & Drinking Places",
-        "establishments": 8,
-        "per10kResidents": 1.77,
-        "usAvgPer10k": 1.85,
-        "saturationIndex": 96,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Drinking Places (Alcoholic Beverages)",
+        "establishments": 22,
+        "per10kResidents": 3.11,
+        "usAvgPer10k": 0.9,
+        "saturationIndex": 345,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Huntington."
+          "evidenceQuote": "22 employer establishments (NAICS 722410) across 6 ZIP codes whose USPS city is Huntington, WV; density uses ACS 2023 ZCTA population (70,628). National benchmark = all US ZIP rows / US population."
         }
       },
       {
-        "naicsCode": "812111",
-        "slug": "barber-shops",
-        "label": "Barber Shops",
+        "naicsCode": "812112",
+        "slug": "beauty-salons",
+        "label": "Beauty Salons & Hair Studios",
         "establishments": 6,
-        "per10kResidents": 1.32,
-        "usAvgPer10k": 1.35,
-        "saturationIndex": 98,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "per10kResidents": 0.85,
+        "usAvgPer10k": 2.31,
+        "saturationIndex": 37,
+        "status": "underserved",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Huntington."
+          "evidenceQuote": "6 employer establishments (NAICS 812112) across 6 ZIP codes whose USPS city is Huntington, WV; density uses ACS 2023 ZCTA population (70,628). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "812113",
+        "slug": "nail-salons",
+        "label": "Nail Salons",
+        "establishments": 0,
+        "per10kResidents": 0.0,
+        "usAvgPer10k": 0.86,
+        "saturationIndex": 0,
+        "status": "underserved",
+        "smallSample": true,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "0 employer establishments (NAICS 812113) across 6 ZIP codes whose USPS city is Huntington, WV; density uses ACS 2023 ZCTA population (70,628). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "713940",
+        "slug": "gyms-fitness",
+        "label": "Fitness & Recreational Sports Centers",
+        "establishments": 4,
+        "per10kResidents": 0.57,
+        "usAvgPer10k": 1.0,
+        "saturationIndex": 57,
+        "status": "underserved",
+        "smallSample": true,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "4 employer establishments (NAICS 713940) across 6 ZIP codes whose USPS city is Huntington, WV; density uses ACS 2023 ZCTA population (70,628). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "812910",
+        "slug": "pet-care",
+        "label": "Pet Care & Grooming Services",
+        "establishments": 0,
+        "per10kResidents": 0.0,
+        "usAvgPer10k": 0.46,
+        "saturationIndex": 0,
+        "status": "underserved",
+        "smallSample": true,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "0 employer establishments (NAICS 812910) across 6 ZIP codes whose USPS city is Huntington, WV; density uses ACS 2023 ZCTA population (70,628). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "541940",
+        "slug": "veterinary",
+        "label": "Veterinary Services & Animal Hospitals",
+        "establishments": 3,
+        "per10kResidents": 0.42,
+        "usAvgPer10k": 0.69,
+        "saturationIndex": 62,
+        "status": "underserved",
+        "smallSample": true,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "3 employer establishments (NAICS 541940) across 6 ZIP codes whose USPS city is Huntington, WV; density uses ACS 2023 ZCTA population (70,628). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "811111",
+        "slug": "auto-repair",
+        "label": "General Automotive Repair",
+        "establishments": 7,
+        "per10kResidents": 0.99,
+        "usAvgPer10k": 2.2,
+        "saturationIndex": 45,
+        "status": "underserved",
+        "smallSample": false,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "7 employer establishments (NAICS 811111) across 6 ZIP codes whose USPS city is Huntington, WV; density uses ACS 2023 ZCTA population (70,628). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "811192",
+        "slug": "car-washes",
+        "label": "Car Washes & Auto Detailing",
+        "establishments": 0,
+        "per10kResidents": 0.0,
+        "usAvgPer10k": 0.35,
+        "saturationIndex": 0,
+        "status": "underserved",
+        "smallSample": true,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "0 employer establishments (NAICS 811192) across 6 ZIP codes whose USPS city is Huntington, WV; density uses ACS 2023 ZCTA population (70,628). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "621210",
+        "slug": "dentists",
+        "label": "Offices of Dentists",
+        "establishments": 23,
+        "per10kResidents": 3.26,
+        "usAvgPer10k": 3.89,
+        "saturationIndex": 84,
+        "status": "balanced",
+        "smallSample": false,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "23 employer establishments (NAICS 621210) across 6 ZIP codes whose USPS city is Huntington, WV; density uses ACS 2023 ZCTA population (70,628). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "621310",
+        "slug": "chiropractors",
+        "label": "Offices of Chiropractors",
+        "establishments": 4,
+        "per10kResidents": 0.57,
+        "usAvgPer10k": 0.97,
+        "saturationIndex": 58,
+        "status": "underserved",
+        "smallSample": true,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "4 employer establishments (NAICS 621310) across 6 ZIP codes whose USPS city is Huntington, WV; density uses ACS 2023 ZCTA population (70,628). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "621340",
+        "slug": "physical-therapy",
+        "label": "Physical, Occupational & Speech Therapists",
+        "establishments": 4,
+        "per10kResidents": 0.57,
+        "usAvgPer10k": 1.3,
+        "saturationIndex": 43,
+        "status": "underserved",
+        "smallSample": true,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "4 employer establishments (NAICS 621340) across 6 ZIP codes whose USPS city is Huntington, WV; density uses ACS 2023 ZCTA population (70,628). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "624410",
+        "slug": "daycare",
+        "label": "Child Day Care Services",
+        "establishments": 19,
+        "per10kResidents": 2.69,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 127,
+        "status": "saturated",
+        "smallSample": false,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "19 employer establishments (NAICS 624410) across 6 ZIP codes whose USPS city is Huntington, WV; density uses ACS 2023 ZCTA population (70,628). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "445120",
+        "slug": "convenience-stores",
+        "label": "Convenience Retail Stores",
+        "establishments": 0,
+        "per10kResidents": 0.0,
+        "usAvgPer10k": 0.82,
+        "saturationIndex": 0,
+        "status": "underserved",
+        "smallSample": true,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "0 employer establishments (NAICS 445120) across 6 ZIP codes whose USPS city is Huntington, WV; density uses ACS 2023 ZCTA population (70,628). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "448140",
+        "slug": "clothing-boutiques",
+        "label": "Family Clothing Stores & Boutiques",
+        "establishments": 0,
+        "per10kResidents": 0.0,
+        "usAvgPer10k": 0.65,
+        "saturationIndex": 0,
+        "status": "underserved",
+        "smallSample": true,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "0 employer establishments (NAICS 448140) across 6 ZIP codes whose USPS city is Huntington, WV; density uses ACS 2023 ZCTA population (70,628). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "541110",
+        "slug": "law-firms",
+        "label": "Offices of Lawyers",
+        "establishments": 52,
+        "per10kResidents": 7.36,
+        "usAvgPer10k": 4.8,
+        "saturationIndex": 153,
+        "status": "saturated",
+        "smallSample": false,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "52 employer establishments (NAICS 541110) across 6 ZIP codes whose USPS city is Huntington, WV; density uses ACS 2023 ZCTA population (70,628). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "541211",
+        "slug": "accounting-cpa",
+        "label": "Offices of Certified Public Accountants",
+        "establishments": 16,
+        "per10kResidents": 2.27,
+        "usAvgPer10k": 1.44,
+        "saturationIndex": 157,
+        "status": "saturated",
+        "smallSample": false,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "16 employer establishments (NAICS 541211) across 6 ZIP codes whose USPS city is Huntington, WV; density uses ACS 2023 ZCTA population (70,628). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "531210",
+        "slug": "real-estate-agencies",
+        "label": "Offices of Real Estate Agents & Brokers",
+        "establishments": 9,
+        "per10kResidents": 1.27,
+        "usAvgPer10k": 4.74,
+        "saturationIndex": 27,
+        "status": "underserved",
+        "smallSample": false,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "9 employer establishments (NAICS 531210) across 6 ZIP codes whose USPS city is Huntington, WV; density uses ACS 2023 ZCTA population (70,628). National benchmark = all US ZIP rows / US population."
+        }
+      }
+    ],
+    "marketSignals": {},
+    "executiveTravel": {
+      "timeZone": "America/New_York",
+      "timeZoneAbbr": "ET",
+      "utcOffset": "-05:00",
+      "emergency": {
+        "emergencyDispatch": "911",
+        "nearestTraumaHospital": "Cabell Huntington Hospital, Inc",
+        "hospitalAddress": "1340 Hal Greer Boulevard, Huntington, WV 25701",
+        "cmsFacilityId": "510055",
+        "emergencyServices": true,
+        "source": "CMS Care Compare hospital general information (dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma or nearest claim.",
+        "erHospitals": [
+          {
+            "name": "Cabell Huntington Hospital, Inc",
+            "address": "1340 Hal Greer Boulevard, Huntington, WV 25701",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "510055"
+          },
+          {
+            "name": "Huntington VA Medical Center",
+            "address": "1540 Spring Valley Road, Huntington, WV 25704",
+            "type": "Acute Care - Veterans Administration",
+            "cmsFacilityId": "51004F"
+          },
+          {
+            "name": "St Marys Medical Center",
+            "address": "2900 1st Avenue, Huntington, WV 25702",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "510007"
+          }
+        ],
+        "erHospitalsSource": "CMS Care Compare hospital general information (dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma or nearest claim."
+      },
+      "primaryAirport": {
+        "name": "Tri-State Airport / Milton J. Ferguson Field",
+        "iata": "HTS",
+        "lat": 38.366699,
+        "lng": -82.557999,
+        "distanceMiles": 7.3,
+        "transitToDowntown": null,
+        "source": "OurAirports (public domain) for name, IATA code and coordinates; distance is straight-line from the U.S. Census Gazetteer city center point",
+        "sourceUrl": "https://ourairports.com/data/",
+        "cityCenterMethod": "Census Gazetteer internal point",
+        "retrieved": "2026-10-31"
+      }
+    },
+    "housingAndTaxes": {
+      "medianHomeValue": 118800,
+      "medianGrossRent": 863,
+      "medianRealEstateTaxPaid": 878,
+      "effectivePropertyTaxRatePct": 0.74,
+      "countyName": "Cabell County",
+      "source": "ACS 2023 5-yr: B25077 median home value, B25064 median gross rent, B25103 median real estate taxes paid. Effective rate = B25103 / B25077.",
+      "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/"
+    },
+    "climateNormals": {
+      "peakSummerHighF": 87,
+      "winterLowF": 25,
+      "annualRainfallInches": 45.3,
+      "sourceName": "NOAA NCEI U.S. Climate Normals 1991-2020 (Station USC00464397, 5.0 mi from Gazetteer center), retrieved 2026-10-31",
+      "sourceUrl": "https://www.ncei.noaa.gov/products/land-based-station/us-climate-normals"
+    },
+    "higherEducation": {
+      "institutionCount": 5,
+      "totalEnrollment": 8769,
+      "institutions": [
+        {
+          "id": 237525,
+          "name": "Marshall University",
+          "studentSize": 7266,
+          "ownership": "Public",
+          "schoolUrl": "https://www.marshall.edu/",
+          "lat": 38.422482,
+          "lng": -82.428964
+        },
+        {
+          "id": 444954,
+          "name": "Mountwest Community and Technical College",
+          "studentSize": 1160,
+          "ownership": "Public",
+          "schoolUrl": "https://www.mctc.edu/",
+          "lat": 38.392635,
+          "lng": -82.458186
+        },
+        {
+          "id": 237437,
+          "name": "Ameritas College",
+          "studentSize": 181,
+          "ownership": "Private nonprofit",
+          "schoolUrl": "https://www.ameritas.edu/",
+          "lat": 38.419732,
+          "lng": -82.443234
+        },
+        {
+          "id": 377643,
+          "name": "Huntington School of Beauty Culture",
+          "studentSize": 111,
+          "ownership": "Private for-profit",
+          "schoolUrl": "https://huntingtonschoolofbeauty.com/",
+          "lat": 38.410212,
+          "lng": -82.325688
+        },
+        {
+          "id": 237242,
+          "name": "Cabell County Career Technology Center",
+          "studentSize": 51,
+          "ownership": "Public",
+          "schoolUrl": "https://www.cabellschools.com/Domain/12",
+          "lat": 38.403244,
+          "lng": -82.372418
+        }
+      ],
+      "sourceName": "U.S. Department of Education College Scorecard",
+      "sourceUrl": "https://collegescorecard.ed.gov/",
+      "retrieved": "2026-10-31"
+    },
+    "evInfrastructure": {
+      "totalStations": 8,
+      "totalChargingPorts": 19,
+      "dcFastPorts": 12,
+      "level2Ports": 7,
+      "sampleStations": [
+        {
+          "name": "Huntington, WV - Tesla Supercharger",
+          "address": "432 18th Street West, Huntington, WV 25704",
+          "network": "Tesla",
+          "dcFastPorts": 8,
+          "level2Ports": 0,
+          "lat": 38.410953,
+          "lng": -82.487144
+        },
+        {
+          "name": "IBEW 317",
+          "address": "1848 Madison Ave, Huntington, WV 25704",
+          "network": "AUTEL",
+          "dcFastPorts": 2,
+          "level2Ports": 0,
+          "lat": 38.407716,
+          "lng": -82.48598
+        },
+        {
+          "name": "McDonald's",
+          "address": "116 5th Ave, Huntington, WV 25703",
+          "network": "Non-Networked",
+          "dcFastPorts": 0,
+          "level2Ports": 2,
+          "lat": 38.417603,
+          "lng": -82.456866
+        },
+        {
+          "name": "Marshall University - Corbly Hall",
+          "address": "1 John Marshall Dr, Huntington, WV 25755",
+          "network": "Non-Networked",
+          "dcFastPorts": 0,
+          "level2Ports": 2,
+          "lat": 38.421938,
+          "lng": -82.4302
+        },
+        {
+          "name": "Country Club",
+          "address": "6275 Country Club Dr, Huntington, WV 25705",
+          "network": "EV Connect",
+          "dcFastPorts": 0,
+          "level2Ports": 2,
+          "lat": 38.415415,
+          "lng": -82.339368
+        }
+      ],
+      "sourceName": "U.S. Department of Energy / NLR Alternative Fuels Data Center (AFDC)",
+      "sourceUrl": "https://afdc.energy.gov/stations",
+      "retrieved": "2026-10-31"
+    }
+  },
+  {
+    "slug": "wv/morgantown",
+    "cityId": "5455756",
+    "countyFips": "54061",
+    "name": "Morgantown",
+    "stateCode": "wv",
+    "stateName": "West Virginia",
+    "countyName": "Monongalia County",
+    "lat": 39.637487,
+    "lng": -79.946856,
+    "primaryZips": [
+      "26505",
+      "26508",
+      "26501",
+      "26506"
+    ],
+    "demographics": {
+      "population": 30429,
+      "medianHouseholdIncome": 42245,
+      "perCapitaIncome": 30286,
+      "medianAge": 24.0,
+      "medianGrossRent": 888,
+      "medianHomeValue": 238200,
+      "provenance": {
+        "sourceName": "US Census Bureau ACS 5-Year Estimates 2023 (Table-Based Summary File)",
+        "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/",
+        "datasetVintage": "ACS-2023-5YR",
+        "verifiedAt": "2026-10-31T00:00:00Z",
+        "granularity": "place"
+      },
+      "popChange2020to2023Pct": 0.8,
+      "popChangeBasis": "Census Population Estimates, April 2020 base to July 2023"
+    },
+    "industries": [
+      {
+        "naicsCode": "722515",
+        "slug": "coffee-shops",
+        "label": "Coffee & Snack Shops",
+        "establishments": 26,
+        "per10kResidents": 2.65,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 125,
+        "status": "saturated",
+        "smallSample": false,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "26 employer establishments (NAICS 722515) across 4 ZIP codes whose USPS city is Morgantown, WV; density uses ACS 2023 ZCTA population (98,161). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "722511",
+        "slug": "restaurants",
+        "label": "Full-Service Restaurants",
+        "establishments": 106,
+        "per10kResidents": 10.8,
+        "usAvgPer10k": 7.44,
+        "saturationIndex": 145,
+        "status": "saturated",
+        "smallSample": false,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "106 employer establishments (NAICS 722511) across 4 ZIP codes whose USPS city is Morgantown, WV; density uses ACS 2023 ZCTA population (98,161). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "722513",
+        "slug": "fast-food",
+        "label": "Limited-Service / Fast Food Restaurants",
+        "establishments": 118,
+        "per10kResidents": 12.02,
+        "usAvgPer10k": 7.75,
+        "saturationIndex": 155,
+        "status": "saturated",
+        "smallSample": false,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "118 employer establishments (NAICS 722513) across 4 ZIP codes whose USPS city is Morgantown, WV; density uses ACS 2023 ZCTA population (98,161). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "722410",
+        "slug": "bars-taverns",
+        "label": "Drinking Places (Alcoholic Beverages)",
+        "establishments": 30,
+        "per10kResidents": 3.06,
+        "usAvgPer10k": 0.9,
+        "saturationIndex": 339,
+        "status": "saturated",
+        "smallSample": true,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "30 employer establishments (NAICS 722410) across 4 ZIP codes whose USPS city is Morgantown, WV; density uses ACS 2023 ZCTA population (98,161). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "812112",
+        "slug": "beauty-salons",
+        "label": "Beauty Salons & Hair Studios",
+        "establishments": 27,
+        "per10kResidents": 2.75,
+        "usAvgPer10k": 2.31,
+        "saturationIndex": 119,
+        "status": "balanced",
+        "smallSample": false,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "27 employer establishments (NAICS 812112) across 4 ZIP codes whose USPS city is Morgantown, WV; density uses ACS 2023 ZCTA population (98,161). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "812113",
+        "slug": "nail-salons",
+        "label": "Nail Salons",
+        "establishments": 0,
+        "per10kResidents": 0.0,
+        "usAvgPer10k": 0.86,
+        "saturationIndex": 0,
+        "status": "underserved",
+        "smallSample": true,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "0 employer establishments (NAICS 812113) across 4 ZIP codes whose USPS city is Morgantown, WV; density uses ACS 2023 ZCTA population (98,161). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "713940",
+        "slug": "gyms-fitness",
+        "label": "Fitness & Recreational Sports Centers",
+        "establishments": 19,
+        "per10kResidents": 1.94,
+        "usAvgPer10k": 1.0,
+        "saturationIndex": 194,
+        "status": "saturated",
+        "smallSample": true,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "19 employer establishments (NAICS 713940) across 4 ZIP codes whose USPS city is Morgantown, WV; density uses ACS 2023 ZCTA population (98,161). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "812910",
+        "slug": "pet-care",
+        "label": "Pet Care & Grooming Services",
+        "establishments": 4,
+        "per10kResidents": 0.41,
+        "usAvgPer10k": 0.46,
+        "saturationIndex": 88,
+        "status": "balanced",
+        "smallSample": true,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "4 employer establishments (NAICS 812910) across 4 ZIP codes whose USPS city is Morgantown, WV; density uses ACS 2023 ZCTA population (98,161). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "541940",
+        "slug": "veterinary",
+        "label": "Veterinary Services & Animal Hospitals",
+        "establishments": 5,
+        "per10kResidents": 0.51,
+        "usAvgPer10k": 0.69,
+        "saturationIndex": 74,
+        "status": "underserved",
+        "smallSample": true,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "5 employer establishments (NAICS 541940) across 4 ZIP codes whose USPS city is Morgantown, WV; density uses ACS 2023 ZCTA population (98,161). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "811111",
+        "slug": "auto-repair",
+        "label": "General Automotive Repair",
+        "establishments": 21,
+        "per10kResidents": 2.14,
+        "usAvgPer10k": 2.2,
+        "saturationIndex": 97,
+        "status": "balanced",
+        "smallSample": false,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "21 employer establishments (NAICS 811111) across 4 ZIP codes whose USPS city is Morgantown, WV; density uses ACS 2023 ZCTA population (98,161). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "811192",
+        "slug": "car-washes",
+        "label": "Car Washes & Auto Detailing",
+        "establishments": 0,
+        "per10kResidents": 0.0,
+        "usAvgPer10k": 0.35,
+        "saturationIndex": 0,
+        "status": "underserved",
+        "smallSample": true,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "0 employer establishments (NAICS 811192) across 4 ZIP codes whose USPS city is Morgantown, WV; density uses ACS 2023 ZCTA population (98,161). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "621210",
+        "slug": "dentists",
+        "label": "Offices of Dentists",
+        "establishments": 35,
+        "per10kResidents": 3.57,
+        "usAvgPer10k": 3.89,
+        "saturationIndex": 92,
+        "status": "balanced",
+        "smallSample": false,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "35 employer establishments (NAICS 621210) across 4 ZIP codes whose USPS city is Morgantown, WV; density uses ACS 2023 ZCTA population (98,161). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "621310",
+        "slug": "chiropractors",
+        "label": "Offices of Chiropractors",
+        "establishments": 5,
+        "per10kResidents": 0.51,
+        "usAvgPer10k": 0.97,
+        "saturationIndex": 52,
+        "status": "underserved",
+        "smallSample": true,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "5 employer establishments (NAICS 621310) across 4 ZIP codes whose USPS city is Morgantown, WV; density uses ACS 2023 ZCTA population (98,161). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "621340",
+        "slug": "physical-therapy",
+        "label": "Physical, Occupational & Speech Therapists",
+        "establishments": 19,
+        "per10kResidents": 1.94,
+        "usAvgPer10k": 1.3,
+        "saturationIndex": 149,
+        "status": "saturated",
+        "smallSample": false,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "19 employer establishments (NAICS 621340) across 4 ZIP codes whose USPS city is Morgantown, WV; density uses ACS 2023 ZCTA population (98,161). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "624410",
+        "slug": "daycare",
+        "label": "Child Day Care Services",
+        "establishments": 19,
+        "per10kResidents": 1.94,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 91,
+        "status": "balanced",
+        "smallSample": false,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "19 employer establishments (NAICS 624410) across 4 ZIP codes whose USPS city is Morgantown, WV; density uses ACS 2023 ZCTA population (98,161). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "445120",
+        "slug": "convenience-stores",
+        "label": "Convenience Retail Stores",
+        "establishments": 3,
+        "per10kResidents": 0.31,
+        "usAvgPer10k": 0.82,
+        "saturationIndex": 37,
+        "status": "underserved",
+        "smallSample": true,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "3 employer establishments (NAICS 445120) across 4 ZIP codes whose USPS city is Morgantown, WV; density uses ACS 2023 ZCTA population (98,161). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "448140",
+        "slug": "clothing-boutiques",
+        "label": "Family Clothing Stores & Boutiques",
+        "establishments": 9,
+        "per10kResidents": 0.92,
+        "usAvgPer10k": 0.65,
+        "saturationIndex": 140,
+        "status": "saturated",
+        "smallSample": true,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "9 employer establishments (NAICS 448140) across 4 ZIP codes whose USPS city is Morgantown, WV; density uses ACS 2023 ZCTA population (98,161). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "541110",
+        "slug": "law-firms",
+        "label": "Offices of Lawyers",
+        "establishments": 64,
+        "per10kResidents": 6.52,
+        "usAvgPer10k": 4.8,
+        "saturationIndex": 136,
+        "status": "saturated",
+        "smallSample": false,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "64 employer establishments (NAICS 541110) across 4 ZIP codes whose USPS city is Morgantown, WV; density uses ACS 2023 ZCTA population (98,161). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "541211",
+        "slug": "accounting-cpa",
+        "label": "Offices of Certified Public Accountants",
+        "establishments": 13,
+        "per10kResidents": 1.32,
+        "usAvgPer10k": 1.44,
+        "saturationIndex": 92,
+        "status": "balanced",
+        "smallSample": false,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "13 employer establishments (NAICS 541211) across 4 ZIP codes whose USPS city is Morgantown, WV; density uses ACS 2023 ZCTA population (98,161). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "531210",
+        "slug": "real-estate-agencies",
+        "label": "Offices of Real Estate Agents & Brokers",
+        "establishments": 32,
+        "per10kResidents": 3.26,
+        "usAvgPer10k": 4.74,
+        "saturationIndex": 69,
+        "status": "underserved",
+        "smallSample": false,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "32 employer establishments (NAICS 531210) across 4 ZIP codes whose USPS city is Morgantown, WV; density uses ACS 2023 ZCTA population (98,161). National benchmark = all US ZIP rows / US population."
+        }
+      }
+    ],
+    "marketSignals": {},
+    "executiveTravel": {
+      "timeZone": "America/New_York",
+      "timeZoneAbbr": "ET",
+      "utcOffset": "-05:00",
+      "emergency": {
+        "emergencyDispatch": "911",
+        "nearestTraumaHospital": "Mon Health Medical Center",
+        "hospitalAddress": "1200 Jd Anderson Drive, Morgantown, WV 26505",
+        "cmsFacilityId": "510024",
+        "emergencyServices": true,
+        "source": "CMS Care Compare hospital general information (dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma or nearest claim.",
+        "erHospitals": [
+          {
+            "name": "Mon Health Medical Center",
+            "address": "1200 Jd Anderson Drive, Morgantown, WV 26505",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "510024"
+          },
+          {
+            "name": "West Virginia University Hospitals, Inc",
+            "address": "Medical Center Drive, Morgantown, WV 26506",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "510001"
+          }
+        ],
+        "erHospitalsSource": "CMS Care Compare hospital general information (dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma or nearest claim."
+      },
+      "primaryAirport": {
+        "name": "Morgantown Municipal Airport Walter L. (Bill) Hart Field",
+        "iata": "MGW",
+        "lat": 39.643305,
+        "lng": -79.917598,
+        "distanceMiles": 1.6,
+        "transitToDowntown": null,
+        "source": "OurAirports (public domain) for name, IATA code and coordinates; distance is straight-line from the U.S. Census Gazetteer city center point",
+        "sourceUrl": "https://ourairports.com/data/",
+        "cityCenterMethod": "Census Gazetteer internal point",
+        "retrieved": "2026-10-31"
+      }
+    },
+    "housingAndTaxes": {
+      "medianHomeValue": 238200,
+      "medianGrossRent": 888,
+      "medianRealEstateTaxPaid": 1267,
+      "effectivePropertyTaxRatePct": 0.53,
+      "countyName": "Monongalia County",
+      "source": "ACS 2023 5-yr: B25077 median home value, B25064 median gross rent, B25103 median real estate taxes paid. Effective rate = B25103 / B25077.",
+      "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/"
+    },
+    "climateNormals": {
+      "peakSummerHighF": 84,
+      "winterLowF": 24,
+      "annualRainfallInches": 43.1,
+      "sourceName": "NOAA NCEI U.S. Climate Normals 1991-2020 (Station USW00013736, 1.7 mi from Gazetteer center), retrieved 2026-10-31",
+      "sourceUrl": "https://www.ncei.noaa.gov/products/land-based-station/us-climate-normals"
+    },
+    "waterUtility": {
+      "pwsid": "WV3303111",
+      "providerName": "Morgantown Utility Board",
+      "populationServed": 66851,
+      "sourceType": "surface water",
+      "source": "U.S. EPA Safe Drinking Water Information System (SDWIS)",
+      "sourceUrl": "https://data.epa.gov/efservice/WATER_SYSTEM/PWSID/WV3303111/JSON",
+      "retrieved": "2026-10-31"
+    },
+    "higherEducation": {
+      "institutionCount": 6,
+      "totalEnrollment": 18261,
+      "institutions": [
+        {
+          "id": 238032,
+          "name": "West Virginia University",
+          "studentSize": 17385,
+          "ownership": "Public",
+          "schoolUrl": "https://www.wvu.edu/",
+          "lat": 39.634371,
+          "lng": -79.954391
+        },
+        {
+          "id": 237996,
+          "name": "West Virginia Junior College-Morgantown",
+          "studentSize": 673,
+          "ownership": "Private for-profit",
+          "schoolUrl": "https://www.wvjc.edu/",
+          "lat": 39.63248,
+          "lng": -79.955006
+        },
+        {
+          "id": 237570,
+          "name": "Morgantown Beauty College Inc",
+          "studentSize": 68,
+          "ownership": "Private for-profit",
+          "schoolUrl": "https://www.morgantownbeautycollege.edu/",
+          "lat": 39.628866,
+          "lng": -79.954593
+        },
+        {
+          "id": 237905,
+          "name": "West Virginia University Hospital Departments of Rad Tech and Nutrition",
+          "studentSize": 62,
+          "ownership": "Private nonprofit",
+          "schoolUrl": "https://wvumedicine.org/radtech",
+          "lat": 39.654269,
+          "lng": -79.957959
+        },
+        {
+          "id": 237561,
+          "name": "Monongalia County Technical Education Center",
+          "studentSize": 43,
+          "ownership": "Public",
+          "schoolUrl": "https://mtec.mono.k12.wv.us/",
+          "lat": 39.611165,
+          "lng": -79.957275
+        },
+        {
+          "id": 476230,
+          "name": "Ross College-Morgantown",
+          "studentSize": 30,
+          "ownership": "Private for-profit",
+          "schoolUrl": "https://rosseducation.edu/",
+          "lat": 39.628002,
+          "lng": -79.928764
+        }
+      ],
+      "sourceName": "U.S. Department of Education College Scorecard",
+      "sourceUrl": "https://collegescorecard.ed.gov/",
+      "retrieved": "2026-10-31"
+    },
+    "evInfrastructure": {
+      "totalStations": 14,
+      "totalChargingPorts": 34,
+      "dcFastPorts": 19,
+      "level2Ports": 14,
+      "sampleStations": [
+        {
+          "name": "Morgantown, WV - Tesla Supercharger",
+          "address": "21 Asturias Lane, Morgantown, WV 26508",
+          "network": "Tesla",
+          "dcFastPorts": 8,
+          "level2Ports": 0,
+          "lat": 39.579089,
+          "lng": -79.953396
+        },
+        {
+          "name": "Morgantown, WV - Earl L Core Road - Tesla Supercharger",
+          "address": "1901 Earl L Core Road, Morgantown, WV 26505",
+          "network": "Tesla",
+          "dcFastPorts": 8,
+          "level2Ports": 0,
+          "lat": 39.620116,
+          "lng": -79.923728
+        },
+        {
+          "name": "Hampton Inn & Suites Morgantown / University Town Centre",
+          "address": "325 Granville Square, Morgantown, WV 26501",
+          "network": "Non-Networked",
+          "dcFastPorts": 0,
+          "level2Ports": 2,
+          "lat": 39.639621,
+          "lng": -79.997975
+        },
+        {
+          "name": "Premier Chevrolet Buick GMC",
+          "address": "5392 University Town Centre Dr, Morgantown, WV 26501",
+          "network": "Non-Networked",
+          "dcFastPorts": 0,
+          "level2Ports": 2,
+          "lat": 39.645577,
+          "lng": -80.002624
+        },
+        {
+          "name": "UNIVERSITYMOTOR MB 1",
+          "address": "58 Don Knotts Blvd, Morgantown, WV 26508",
+          "network": "ChargePoint Network",
+          "dcFastPorts": 0,
+          "level2Ports": 2,
+          "lat": 39.606559,
+          "lng": -79.967226
+        }
+      ],
+      "sourceName": "U.S. Department of Energy / NLR Alternative Fuels Data Center (AFDC)",
+      "sourceUrl": "https://afdc.energy.gov/stations",
+      "retrieved": "2026-10-31"
+    },
+    "nationalParks": {
+      "parks": [
+        {
+          "parkCode": "frhi",
+          "fullName": "Friendship Hill National Historic Site",
+          "designation": "National Historic Site",
+          "distanceMiles": 9.6,
+          "description": "Albert Gallatin is best remembered for his thirteen year tenure as Secretary of the Treasury during the Jefferson and Madison administrations. In that time he reduced the national debt, purchased the Louisiana Territory and funded the...",
+          "url": "https://www.nps.gov/frhi/index.htm",
+          "lat": 39.775434,
+          "lng": -79.925042
+        },
+        {
+          "parkCode": "fone",
+          "fullName": "Fort Necessity National Battlefield",
+          "designation": "National Battlefield",
+          "distanceMiles": 22.5,
+          "description": "The battle at Fort Necessity in the summer of 1754 was the opening action of the French and Indian War. This war was a clash of British, French and American Indian cultures. It ended with the removal of French power from North America....",
+          "url": "https://www.nps.gov/fone/index.htm",
+          "lat": 39.81306,
+          "lng": -79.590333
+        }
+      ],
+      "sourceName": "U.S. National Park Service",
+      "sourceUrl": "https://www.nps.gov/",
+      "retrieved": "2026-10-31"
+    }
+  },
+  {
+    "slug": "wv/parkersburg",
+    "cityId": "5462140",
+    "countyFips": "54107",
+    "name": "Parkersburg",
+    "stateCode": "wv",
+    "stateName": "West Virginia",
+    "countyName": "Wood County",
+    "lat": 39.261278,
+    "lng": -81.54335,
+    "primaryZips": [
+      "26101",
+      "26104"
+    ],
+    "demographics": {
+      "population": 29025,
+      "medianHouseholdIncome": 44675,
+      "perCapitaIncome": 28664,
+      "medianAge": 41.9,
+      "medianGrossRent": 746,
+      "medianHomeValue": 113900,
+      "provenance": {
+        "sourceName": "US Census Bureau ACS 5-Year Estimates 2023 (Table-Based Summary File)",
+        "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/",
+        "datasetVintage": "ACS-2023-5YR",
+        "verifiedAt": "2026-10-31T00:00:00Z",
+        "granularity": "place"
+      },
+      "popChange2020to2023Pct": -2.4,
+      "popChangeBasis": "Census Population Estimates, April 2020 base to July 2023"
+    },
+    "industries": [
+      {
+        "naicsCode": "722515",
+        "slug": "coffee-shops",
+        "label": "Coffee & Snack Shops",
+        "establishments": 8,
+        "per10kResidents": 1.77,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 83,
+        "status": "balanced",
+        "smallSample": true,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "8 employer establishments (NAICS 722515) across 2 ZIP codes whose USPS city is Parkersburg, WV; density uses ACS 2023 ZCTA population (45,300). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "722511",
+        "slug": "restaurants",
+        "label": "Full-Service Restaurants",
+        "establishments": 47,
+        "per10kResidents": 10.38,
+        "usAvgPer10k": 7.44,
+        "saturationIndex": 140,
+        "status": "saturated",
+        "smallSample": false,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "47 employer establishments (NAICS 722511) across 2 ZIP codes whose USPS city is Parkersburg, WV; density uses ACS 2023 ZCTA population (45,300). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "722513",
+        "slug": "fast-food",
+        "label": "Limited-Service / Fast Food Restaurants",
+        "establishments": 49,
+        "per10kResidents": 10.82,
+        "usAvgPer10k": 7.75,
+        "saturationIndex": 140,
+        "status": "saturated",
+        "smallSample": false,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "49 employer establishments (NAICS 722513) across 2 ZIP codes whose USPS city is Parkersburg, WV; density uses ACS 2023 ZCTA population (45,300). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "722410",
+        "slug": "bars-taverns",
+        "label": "Drinking Places (Alcoholic Beverages)",
+        "establishments": 15,
+        "per10kResidents": 3.31,
+        "usAvgPer10k": 0.9,
+        "saturationIndex": 367,
+        "status": "saturated",
+        "smallSample": true,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "15 employer establishments (NAICS 722410) across 2 ZIP codes whose USPS city is Parkersburg, WV; density uses ACS 2023 ZCTA population (45,300). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -778,169 +1952,112 @@
         "label": "Beauty Salons & Hair Studios",
         "establishments": 15,
         "per10kResidents": 3.31,
-        "usAvgPer10k": 3.4,
-        "saturationIndex": 98,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "usAvgPer10k": 2.31,
+        "saturationIndex": 143,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Huntington."
+          "evidenceQuote": "15 employer establishments (NAICS 812112) across 2 ZIP codes whose USPS city is Parkersburg, WV; density uses ACS 2023 ZCTA population (45,300). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812113",
         "slug": "nail-salons",
         "label": "Nail Salons",
-        "establishments": 10,
-        "per10kResidents": 2.21,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 104,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 0,
+        "per10kResidents": 0.0,
+        "usAvgPer10k": 0.86,
+        "saturationIndex": 0,
+        "status": "underserved",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Huntington."
+          "evidenceQuote": "0 employer establishments (NAICS 812113) across 2 ZIP codes whose USPS city is Parkersburg, WV; density uses ACS 2023 ZCTA population (45,300). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "713940",
         "slug": "gyms-fitness",
-        "label": "Fitness & Recreational Gyms",
-        "establishments": 6,
-        "per10kResidents": 1.32,
-        "usAvgPer10k": 1.25,
-        "saturationIndex": 105,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Fitness & Recreational Sports Centers",
+        "establishments": 3,
+        "per10kResidents": 0.66,
+        "usAvgPer10k": 1.0,
+        "saturationIndex": 66,
+        "status": "underserved",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Huntington."
+          "evidenceQuote": "3 employer establishments (NAICS 713940) across 2 ZIP codes whose USPS city is Parkersburg, WV; density uses ACS 2023 ZCTA population (45,300). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812910",
         "slug": "pet-care",
-        "label": "Pet Care & Grooming",
-        "establishments": 4,
-        "per10kResidents": 0.88,
-        "usAvgPer10k": 0.95,
-        "saturationIndex": 94,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Pet Care & Grooming Services",
+        "establishments": 3,
+        "per10kResidents": 0.66,
+        "usAvgPer10k": 0.46,
+        "saturationIndex": 143,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Huntington."
+          "evidenceQuote": "3 employer establishments (NAICS 812910) across 2 ZIP codes whose USPS city is Parkersburg, WV; density uses ACS 2023 ZCTA population (45,300). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541940",
         "slug": "veterinary",
-        "label": "Veterinary Services",
-        "establishments": 5,
-        "per10kResidents": 1.1,
-        "usAvgPer10k": 1.05,
-        "saturationIndex": 104,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Veterinary Services & Animal Hospitals",
+        "establishments": 0,
+        "per10kResidents": 0.0,
+        "usAvgPer10k": 0.69,
+        "saturationIndex": 0,
+        "status": "underserved",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Huntington."
+          "evidenceQuote": "0 employer establishments (NAICS 541940) across 2 ZIP codes whose USPS city is Parkersburg, WV; density uses ACS 2023 ZCTA population (45,300). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "811111",
         "slug": "auto-repair",
         "label": "General Automotive Repair",
-        "establishments": 22,
-        "per10kResidents": 4.85,
-        "usAvgPer10k": 4.8,
-        "saturationIndex": 101,
+        "establishments": 11,
+        "per10kResidents": 2.43,
+        "usAvgPer10k": 2.2,
+        "saturationIndex": 110,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Huntington."
-        }
-      },
-      {
-        "naicsCode": "811192",
-        "slug": "car-washes",
-        "label": "Car Washes & Detailing",
-        "establishments": 3,
-        "per10kResidents": 0.66,
-        "usAvgPer10k": 0.65,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Huntington."
-        }
-      },
-      {
-        "naicsCode": "812310",
-        "slug": "laundromats",
-        "label": "Coin Laundromats",
-        "establishments": 2,
-        "per10kResidents": 0.44,
-        "usAvgPer10k": 0.55,
-        "saturationIndex": 84,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Huntington."
-        }
-      },
-      {
-        "naicsCode": "812320",
-        "slug": "dry-cleaners",
-        "label": "Dry Cleaning & Laundry",
-        "establishments": 4,
-        "per10kResidents": 0.88,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 103,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Huntington."
+          "evidenceQuote": "11 employer establishments (NAICS 811111) across 2 ZIP codes whose USPS city is Parkersburg, WV; density uses ACS 2023 ZCTA population (45,300). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -949,1582 +2066,305 @@
         "label": "Offices of Dentists",
         "establishments": 18,
         "per10kResidents": 3.97,
-        "usAvgPer10k": 3.9,
-        "saturationIndex": 101,
+        "usAvgPer10k": 3.89,
+        "saturationIndex": 102,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Huntington."
+          "evidenceQuote": "18 employer establishments (NAICS 621210) across 2 ZIP codes whose USPS city is Parkersburg, WV; density uses ACS 2023 ZCTA population (45,300). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621310",
         "slug": "chiropractors",
         "label": "Offices of Chiropractors",
-        "establishments": 6,
-        "per10kResidents": 1.32,
-        "usAvgPer10k": 1.4,
-        "saturationIndex": 96,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 12,
+        "per10kResidents": 2.65,
+        "usAvgPer10k": 0.97,
+        "saturationIndex": 272,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Huntington."
+          "evidenceQuote": "12 employer establishments (NAICS 621310) across 2 ZIP codes whose USPS city is Parkersburg, WV; density uses ACS 2023 ZCTA population (45,300). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621340",
         "slug": "physical-therapy",
-        "label": "Physical Therapy Clinics",
-        "establishments": 7,
-        "per10kResidents": 1.54,
-        "usAvgPer10k": 1.55,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Physical, Occupational & Speech Therapists",
+        "establishments": 10,
+        "per10kResidents": 2.21,
+        "usAvgPer10k": 1.3,
+        "saturationIndex": 169,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Huntington."
+          "evidenceQuote": "10 employer establishments (NAICS 621340) across 2 ZIP codes whose USPS city is Parkersburg, WV; density uses ACS 2023 ZCTA population (45,300). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "624410",
         "slug": "daycare",
         "label": "Child Day Care Services",
-        "establishments": 10,
-        "per10kResidents": 2.21,
-        "usAvgPer10k": 2.25,
-        "saturationIndex": 98,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Huntington."
-        }
-      },
-      {
-        "naicsCode": "445120",
-        "slug": "convenience-stores",
-        "label": "Convenience Stores",
         "establishments": 9,
         "per10kResidents": 1.99,
-        "usAvgPer10k": 1.95,
-        "saturationIndex": 101,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 94,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Huntington."
-        }
-      },
-      {
-        "naicsCode": "448140",
-        "slug": "clothing-boutiques",
-        "label": "Family Clothing Stores",
-        "establishments": 7,
-        "per10kResidents": 1.54,
-        "usAvgPer10k": 1.65,
-        "saturationIndex": 95,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Huntington."
-        }
-      },
-      {
-        "naicsCode": "445291",
-        "slug": "bakeries",
-        "label": "Retail Bakeries",
-        "establishments": 4,
-        "per10kResidents": 0.88,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 103,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Huntington."
-        }
-      },
-      {
-        "naicsCode": "453110",
-        "slug": "florists",
-        "label": "Florists & Floral Gift",
-        "establishments": 2,
-        "per10kResidents": 0.44,
-        "usAvgPer10k": 0.5,
-        "saturationIndex": 90,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Huntington."
-        }
-      },
-      {
-        "naicsCode": "541110",
-        "slug": "law-firms",
-        "label": "Offices of Lawyers",
-        "establishments": 22,
-        "per10kResidents": 4.85,
-        "usAvgPer10k": 4.9,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Huntington."
-        }
-      },
-      {
-        "naicsCode": "541211",
-        "slug": "accounting-cpa",
-        "label": "Offices of CPAs",
-        "establishments": 10,
-        "per10kResidents": 2.21,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 104,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Huntington."
-        }
-      },
-      {
-        "naicsCode": "531210",
-        "slug": "real-estate-agencies",
-        "label": "Real Estate Brokerages",
-        "establishments": 17,
-        "per10kResidents": 3.75,
-        "usAvgPer10k": 3.8,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Huntington."
-        }
-      }
-    ],
-    "permitsAndTax": {
-      "generalBusinessLicenseRequired": false,
-      "businessLicenseFeeSummary": "No general city business license required. State of West Virginia statutory filings apply.",
-      "businessLicensePortalUrl": "https://www.huntingtonwv.gov/permits",
-      "zoningLookupUrl": "https://www.huntingtonwv.gov/zoning",
-      "buildingPermitPortalUrl": "https://www.huntingtonwv.gov/building",
-      "certificateOfOccupancyFee": "$185 standard municipal inspection fee",
-      "avgPermitWaitDays": 30,
-      "shortTermRentalStatus": "restricted",
-      "foodTruckPermitStatus": "allowed",
-      "combinedSalesTaxRate": 0.075,
-      "stateTaxRate": 0.06,
-      "localTaxRate": 0.015,
-      "provenance": {
-        "sourceName": "Huntington Municipal Code & State Department of Revenue",
-        "sourceUrl": "https://www.huntingtonwv.gov",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place",
-        "evidenceQuote": "Statutory municipal code standards."
-      }
-    },
-    "topTrafficCorridors": [
-      {
-        "roadName": "Main Arterial Corridor 1",
-        "segmentDescription": "Central Commercial Corridor through Huntington",
-        "aadt": 5439,
-        "heavyTruckPct": 5.5,
-        "lat": 38.410651,
-        "lng": -82.434689,
-        "year": 2024,
-        "provenance": {
-          "sourceName": "West Virginia DOT AADT Database",
-          "sourceUrl": "https://www.transportation.gov/",
-          "datasetVintage": "2024-AADT",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "place"
-        }
-      }
-    ],
-    "marketSignals": {
-      "reportedRetailRentSqFtYr": 38.0,
-      "reportedIndustrialRentSqFtYr": 17.1,
-      "topSearchedNaics30d": [
-        "722515",
-        "713940",
-        "812111"
-      ],
-      "verifiedLocalProsCount": 8
-    },
-    "scores": {
-      "overallViability": 41,
-      "purchasingPower": 39,
-      "growthMomentum": 43,
-      "costEfficiency": 75,
-      "regulatoryFriction": 48
-    },
-    "executiveTravel": {
-      "timeZone": "America/New_York (ET: UTC-05:00)",
-      "timeZoneAbbr": "ET",
-      "utcOffset": "-05:00",
-      "primaryAirport": {
-        "name": "Huntington Regional / Metropolitan Airport",
-        "iata": null,
-        "distanceMiles": 10.4,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
-      },
-      "powerPlugs": {
-        "types": [
-          "Type A (2-pin)",
-          "Type B (3-pin grounded)"
-        ],
-        "voltage": "120V",
-        "frequency": "60Hz",
-        "adapterAdvice": "Visitors from UK, EU, Australia, and Asia require a standard Type A/B plug adapter and dual-voltage converter."
-      },
-      "currency": {
-        "code": "USD",
-        "symbol": "$",
-        "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
-        "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
-      },
-      "climate": {
-        "summerHighF": 84,
-        "winterLowF": 22,
-        "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
-        "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
-      },
-      "emergency": {
-        "emergencyDispatch": "911",
-        "nonEmergencyPolice": "311 or local municipal dispatch",
-        "nearestTraumaHospital": "Huntington Regional Memorial Hospital",
-        "hospitalAddress": "Medical Center District, Huntington, WV"
-      },
-      "visitorLogistics": {
-        "tapWaterPotability": "100% Safe municipal drinking water conforming to EPA Safe Drinking Water Act standards.",
-        "salesTaxRefundPolicy": "International travelers may claim state sales tax refunds on qualifying departures at designated airport customs counters.",
-        "rideshareAvailability": "Ubiquitous (Uber and Lyft operational 24/7 across the metropolitan area)."
-      },
-      "provenance": {
-        "sourceName": "FAA Airport Database & International Trade Administration",
-        "sourceUrl": "https://www.trade.gov/",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
-      }
-    }
-  },
-  {
-    "slug": "wv/morgantown",
-    "cityId": "5455756",
-    "countyFips": "54557",
-    "name": "Morgantown",
-    "stateCode": "wv",
-    "stateName": "West Virginia",
-    "countyName": "Morgantown Metropolitan Area",
-    "lat": 39.637487,
-    "lng": -79.946856,
-    "primaryZips": [
-      "71308"
-    ],
-    "demographics": {
-      "population": 30429,
-      "popGrowth5YrPct": 0.8,
-      "medianHouseholdIncome": 80721,
-      "perCapitaIncome": 46818,
-      "medianAge": 36.4,
-      "daytimeWorkerPop": 18866,
-      "daytimePopSurgePct": 8.5,
-      "medianGrossRent": 1552,
-      "medianHomeValue": 339028,
-      "provenance": {
-        "sourceName": "US Census Bureau ACS 5-Year (DP03/DP04/DP05) & PopEst",
-        "sourceUrl": "https://api.census.gov/data/2023/acs/acs5",
-        "datasetVintage": "2023-5YR",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
-      }
-    },
-    "laborAndEconomy": {
-      "unemploymentRatePct": 3.8,
-      "avgWeeklyWageAllIndustries": 1340,
-      "newHousingPermits12Mo": 228,
-      "permitsPer1kResidents": 7.5,
-      "femaRiskScore": 28.0,
-      "provenance": {
-        "sourceName": "BLS Local Area Unemployment Statistics (LAUS) & Census BPS",
-        "sourceUrl": "https://www.bls.gov/lau/",
-        "datasetVintage": "2024-M08",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
-      }
-    },
-    "industries": [
-      {
-        "naicsCode": "722515",
-        "slug": "coffee-shops",
-        "label": "Coffee & Snack Shops",
-        "establishments": 7,
-        "per10kResidents": 2.3,
-        "usAvgPer10k": 2.15,
-        "saturationIndex": 105,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Morgantown."
-        }
-      },
-      {
-        "naicsCode": "722511",
-        "slug": "restaurants",
-        "label": "Full-Service Restaurants",
-        "establishments": 21,
-        "per10kResidents": 6.9,
-        "usAvgPer10k": 6.8,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Morgantown."
-        }
-      },
-      {
-        "naicsCode": "722513",
-        "slug": "fast-food",
-        "label": "Fast Food Restaurants",
-        "establishments": 22,
-        "per10kResidents": 7.23,
-        "usAvgPer10k": 7.2,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Morgantown."
-        }
-      },
-      {
-        "naicsCode": "722410",
-        "slug": "bars-taverns",
-        "label": "Bars & Drinking Places",
-        "establishments": 6,
-        "per10kResidents": 1.97,
-        "usAvgPer10k": 1.85,
-        "saturationIndex": 105,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Morgantown."
-        }
-      },
-      {
-        "naicsCode": "812111",
-        "slug": "barber-shops",
-        "label": "Barber Shops",
-        "establishments": 4,
-        "per10kResidents": 1.31,
-        "usAvgPer10k": 1.35,
-        "saturationIndex": 98,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Morgantown."
-        }
-      },
-      {
-        "naicsCode": "812112",
-        "slug": "beauty-salons",
-        "label": "Beauty Salons & Hair Studios",
-        "establishments": 10,
-        "per10kResidents": 3.29,
-        "usAvgPer10k": 3.4,
-        "saturationIndex": 97,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Morgantown."
-        }
-      },
-      {
-        "naicsCode": "812113",
-        "slug": "nail-salons",
-        "label": "Nail Salons",
-        "establishments": 6,
-        "per10kResidents": 1.97,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 95,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Morgantown."
-        }
-      },
-      {
-        "naicsCode": "713940",
-        "slug": "gyms-fitness",
-        "label": "Fitness & Recreational Gyms",
-        "establishments": 4,
-        "per10kResidents": 1.31,
-        "usAvgPer10k": 1.25,
-        "saturationIndex": 104,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Morgantown."
-        }
-      },
-      {
-        "naicsCode": "812910",
-        "slug": "pet-care",
-        "label": "Pet Care & Grooming",
-        "establishments": 3,
-        "per10kResidents": 0.99,
-        "usAvgPer10k": 0.95,
-        "saturationIndex": 103,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Morgantown."
-        }
-      },
-      {
-        "naicsCode": "541940",
-        "slug": "veterinary",
-        "label": "Veterinary Services",
-        "establishments": 3,
-        "per10kResidents": 0.99,
-        "usAvgPer10k": 1.05,
-        "saturationIndex": 95,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Morgantown."
-        }
-      },
-      {
-        "naicsCode": "811111",
-        "slug": "auto-repair",
-        "label": "General Automotive Repair",
-        "establishments": 15,
-        "per10kResidents": 4.93,
-        "usAvgPer10k": 4.8,
-        "saturationIndex": 102,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Morgantown."
-        }
-      },
-      {
-        "naicsCode": "811192",
-        "slug": "car-washes",
-        "label": "Car Washes & Detailing",
-        "establishments": 2,
-        "per10kResidents": 0.66,
-        "usAvgPer10k": 0.65,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Morgantown."
-        }
-      },
-      {
-        "naicsCode": "812310",
-        "slug": "laundromats",
-        "label": "Coin Laundromats",
-        "establishments": 2,
-        "per10kResidents": 0.66,
-        "usAvgPer10k": 0.55,
-        "saturationIndex": 115,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Morgantown."
-        }
-      },
-      {
-        "naicsCode": "812320",
-        "slug": "dry-cleaners",
-        "label": "Dry Cleaning & Laundry",
-        "establishments": 3,
-        "per10kResidents": 0.99,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 112,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Morgantown."
-        }
-      },
-      {
-        "naicsCode": "621210",
-        "slug": "dentists",
-        "label": "Offices of Dentists",
-        "establishments": 12,
-        "per10kResidents": 3.94,
-        "usAvgPer10k": 3.9,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Morgantown."
-        }
-      },
-      {
-        "naicsCode": "621310",
-        "slug": "chiropractors",
-        "label": "Offices of Chiropractors",
-        "establishments": 4,
-        "per10kResidents": 1.31,
-        "usAvgPer10k": 1.4,
-        "saturationIndex": 95,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Morgantown."
-        }
-      },
-      {
-        "naicsCode": "621340",
-        "slug": "physical-therapy",
-        "label": "Physical Therapy Clinics",
-        "establishments": 5,
-        "per10kResidents": 1.64,
-        "usAvgPer10k": 1.55,
-        "saturationIndex": 105,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Morgantown."
-        }
-      },
-      {
-        "naicsCode": "624410",
-        "slug": "daycare",
-        "label": "Child Day Care Services",
-        "establishments": 7,
-        "per10kResidents": 2.3,
-        "usAvgPer10k": 2.25,
-        "saturationIndex": 102,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Morgantown."
+          "evidenceQuote": "9 employer establishments (NAICS 624410) across 2 ZIP codes whose USPS city is Parkersburg, WV; density uses ACS 2023 ZCTA population (45,300). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "445120",
         "slug": "convenience-stores",
-        "label": "Convenience Stores",
-        "establishments": 6,
-        "per10kResidents": 1.97,
-        "usAvgPer10k": 1.95,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Convenience Retail Stores",
+        "establishments": 0,
+        "per10kResidents": 0.0,
+        "usAvgPer10k": 0.82,
+        "saturationIndex": 0,
+        "status": "underserved",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Morgantown."
+          "evidenceQuote": "0 employer establishments (NAICS 445120) across 2 ZIP codes whose USPS city is Parkersburg, WV; density uses ACS 2023 ZCTA population (45,300). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "448140",
         "slug": "clothing-boutiques",
-        "label": "Family Clothing Stores",
+        "label": "Family Clothing Stores & Boutiques",
         "establishments": 5,
-        "per10kResidents": 1.64,
-        "usAvgPer10k": 1.65,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Morgantown."
-        }
-      },
-      {
-        "naicsCode": "445291",
-        "slug": "bakeries",
-        "label": "Retail Bakeries",
-        "establishments": 3,
-        "per10kResidents": 0.99,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 112,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Morgantown."
-        }
-      },
-      {
-        "naicsCode": "453110",
-        "slug": "florists",
-        "label": "Florists & Floral Gift",
-        "establishments": 2,
-        "per10kResidents": 0.66,
-        "usAvgPer10k": 0.5,
-        "saturationIndex": 124,
+        "per10kResidents": 1.1,
+        "usAvgPer10k": 0.65,
+        "saturationIndex": 169,
         "status": "saturated",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Morgantown."
+          "evidenceQuote": "5 employer establishments (NAICS 448140) across 2 ZIP codes whose USPS city is Parkersburg, WV; density uses ACS 2023 ZCTA population (45,300). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541110",
         "slug": "law-firms",
         "label": "Offices of Lawyers",
-        "establishments": 15,
-        "per10kResidents": 4.93,
-        "usAvgPer10k": 4.9,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 29,
+        "per10kResidents": 6.4,
+        "usAvgPer10k": 4.8,
+        "saturationIndex": 133,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Morgantown."
+          "evidenceQuote": "29 employer establishments (NAICS 541110) across 2 ZIP codes whose USPS city is Parkersburg, WV; density uses ACS 2023 ZCTA population (45,300). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541211",
         "slug": "accounting-cpa",
-        "label": "Offices of CPAs",
-        "establishments": 6,
-        "per10kResidents": 1.97,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 95,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Morgantown."
-        }
-      },
-      {
-        "naicsCode": "531210",
-        "slug": "real-estate-agencies",
-        "label": "Real Estate Brokerages",
-        "establishments": 12,
-        "per10kResidents": 3.94,
-        "usAvgPer10k": 3.8,
-        "saturationIndex": 103,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Morgantown."
-        }
-      }
-    ],
-    "permitsAndTax": {
-      "generalBusinessLicenseRequired": false,
-      "businessLicenseFeeSummary": "No general city business license required. State of West Virginia statutory filings apply.",
-      "businessLicensePortalUrl": "https://www.morgantownwv.gov/permits",
-      "zoningLookupUrl": "https://www.morgantownwv.gov/zoning",
-      "buildingPermitPortalUrl": "https://www.morgantownwv.gov/building",
-      "certificateOfOccupancyFee": "$185 standard municipal inspection fee",
-      "avgPermitWaitDays": 30,
-      "shortTermRentalStatus": "restricted",
-      "foodTruckPermitStatus": "allowed",
-      "combinedSalesTaxRate": 0.075,
-      "stateTaxRate": 0.06,
-      "localTaxRate": 0.015,
-      "provenance": {
-        "sourceName": "Morgantown Municipal Code & State Department of Revenue",
-        "sourceUrl": "https://www.morgantownwv.gov",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place",
-        "evidenceQuote": "Statutory municipal code standards."
-      }
-    },
-    "topTrafficCorridors": [
-      {
-        "roadName": "Main Arterial Corridor 1",
-        "segmentDescription": "Central Commercial Corridor through Morgantown",
-        "aadt": 3651,
-        "heavyTruckPct": 5.5,
-        "lat": 39.637487,
-        "lng": -79.946856,
-        "year": 2024,
-        "provenance": {
-          "sourceName": "West Virginia DOT AADT Database",
-          "sourceUrl": "https://www.transportation.gov/",
-          "datasetVintage": "2024-AADT",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "place"
-        }
-      }
-    ],
-    "marketSignals": {
-      "reportedRetailRentSqFtYr": 40.5,
-      "reportedIndustrialRentSqFtYr": 18.2,
-      "topSearchedNaics30d": [
-        "722515",
-        "713940",
-        "812111"
-      ],
-      "verifiedLocalProsCount": 8
-    },
-    "scores": {
-      "overallViability": 50,
-      "purchasingPower": 48,
-      "growthMomentum": 52,
-      "costEfficiency": 70,
-      "regulatoryFriction": 48
-    },
-    "executiveTravel": {
-      "timeZone": "America/New_York (ET: UTC-05:00)",
-      "timeZoneAbbr": "ET",
-      "utcOffset": "-05:00",
-      "primaryAirport": {
-        "name": "Morgantown Regional / Metropolitan Airport",
-        "iata": null,
-        "distanceMiles": 10.2,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
-      },
-      "powerPlugs": {
-        "types": [
-          "Type A (2-pin)",
-          "Type B (3-pin grounded)"
-        ],
-        "voltage": "120V",
-        "frequency": "60Hz",
-        "adapterAdvice": "Visitors from UK, EU, Australia, and Asia require a standard Type A/B plug adapter and dual-voltage converter."
-      },
-      "currency": {
-        "code": "USD",
-        "symbol": "$",
-        "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
-        "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
-      },
-      "climate": {
-        "summerHighF": 84,
-        "winterLowF": 22,
-        "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
-        "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
-      },
-      "emergency": {
-        "emergencyDispatch": "911",
-        "nonEmergencyPolice": "311 or local municipal dispatch",
-        "nearestTraumaHospital": "Morgantown Regional Memorial Hospital",
-        "hospitalAddress": "Medical Center District, Morgantown, WV"
-      },
-      "visitorLogistics": {
-        "tapWaterPotability": "100% Safe municipal drinking water conforming to EPA Safe Drinking Water Act standards.",
-        "salesTaxRefundPolicy": "International travelers may claim state sales tax refunds on qualifying departures at designated airport customs counters.",
-        "rideshareAvailability": "Ubiquitous (Uber and Lyft operational 24/7 across the metropolitan area)."
-      },
-      "provenance": {
-        "sourceName": "FAA Airport Database & International Trade Administration",
-        "sourceUrl": "https://www.trade.gov/",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
-      }
-    }
-  },
-  {
-    "slug": "wv/parkersburg",
-    "cityId": "5462140",
-    "countyFips": "54621",
-    "name": "Parkersburg",
-    "stateCode": "wv",
-    "stateName": "West Virginia",
-    "countyName": "Parkersburg Metropolitan Area",
-    "lat": 39.261278,
-    "lng": -81.54335,
-    "primaryZips": [
-      "71364"
-    ],
-    "demographics": {
-      "population": 29025,
-      "popGrowth5YrPct": -2.2,
-      "medianHouseholdIncome": 77038,
-      "perCapitaIncome": 44682,
-      "medianAge": 36.4,
-      "daytimeWorkerPop": 17996,
-      "daytimePopSurgePct": 8.5,
-      "medianGrossRent": 1482,
-      "medianHomeValue": 323560,
-      "provenance": {
-        "sourceName": "US Census Bureau ACS 5-Year (DP03/DP04/DP05) & PopEst",
-        "sourceUrl": "https://api.census.gov/data/2023/acs/acs5",
-        "datasetVintage": "2023-5YR",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
-      }
-    },
-    "laborAndEconomy": {
-      "unemploymentRatePct": 3.8,
-      "avgWeeklyWageAllIndustries": 1340,
-      "newHousingPermits12Mo": 218,
-      "permitsPer1kResidents": 7.5,
-      "femaRiskScore": 28.0,
-      "provenance": {
-        "sourceName": "BLS Local Area Unemployment Statistics (LAUS) & Census BPS",
-        "sourceUrl": "https://www.bls.gov/lau/",
-        "datasetVintage": "2024-M08",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
-      }
-    },
-    "industries": [
-      {
-        "naicsCode": "722515",
-        "slug": "coffee-shops",
-        "label": "Coffee & Snack Shops",
-        "establishments": 6,
-        "per10kResidents": 2.07,
-        "usAvgPer10k": 2.15,
-        "saturationIndex": 97,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Parkersburg."
-        }
-      },
-      {
-        "naicsCode": "722511",
-        "slug": "restaurants",
-        "label": "Full-Service Restaurants",
-        "establishments": 20,
-        "per10kResidents": 6.89,
-        "usAvgPer10k": 6.8,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Parkersburg."
-        }
-      },
-      {
-        "naicsCode": "722513",
-        "slug": "fast-food",
-        "label": "Fast Food Restaurants",
-        "establishments": 21,
-        "per10kResidents": 7.24,
-        "usAvgPer10k": 7.2,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Parkersburg."
-        }
-      },
-      {
-        "naicsCode": "722410",
-        "slug": "bars-taverns",
-        "label": "Bars & Drinking Places",
+        "label": "Offices of Certified Public Accountants",
         "establishments": 5,
-        "per10kResidents": 1.72,
-        "usAvgPer10k": 1.85,
-        "saturationIndex": 95,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Parkersburg."
-        }
-      },
-      {
-        "naicsCode": "812111",
-        "slug": "barber-shops",
-        "label": "Barber Shops",
-        "establishments": 4,
-        "per10kResidents": 1.38,
-        "usAvgPer10k": 1.35,
-        "saturationIndex": 102,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Parkersburg."
-        }
-      },
-      {
-        "naicsCode": "812112",
-        "slug": "beauty-salons",
-        "label": "Beauty Salons & Hair Studios",
-        "establishments": 10,
-        "per10kResidents": 3.45,
-        "usAvgPer10k": 3.4,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Parkersburg."
-        }
-      },
-      {
-        "naicsCode": "812113",
-        "slug": "nail-salons",
-        "label": "Nail Salons",
-        "establishments": 6,
-        "per10kResidents": 2.07,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Parkersburg."
-        }
-      },
-      {
-        "naicsCode": "713940",
-        "slug": "gyms-fitness",
-        "label": "Fitness & Recreational Gyms",
-        "establishments": 4,
-        "per10kResidents": 1.38,
-        "usAvgPer10k": 1.25,
-        "saturationIndex": 108,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Parkersburg."
-        }
-      },
-      {
-        "naicsCode": "812910",
-        "slug": "pet-care",
-        "label": "Pet Care & Grooming",
-        "establishments": 3,
-        "per10kResidents": 1.03,
-        "usAvgPer10k": 0.95,
-        "saturationIndex": 107,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Parkersburg."
-        }
-      },
-      {
-        "naicsCode": "541940",
-        "slug": "veterinary",
-        "label": "Veterinary Services",
-        "establishments": 3,
-        "per10kResidents": 1.03,
-        "usAvgPer10k": 1.05,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Parkersburg."
-        }
-      },
-      {
-        "naicsCode": "811111",
-        "slug": "auto-repair",
-        "label": "General Automotive Repair",
-        "establishments": 14,
-        "per10kResidents": 4.82,
-        "usAvgPer10k": 4.8,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Parkersburg."
-        }
-      },
-      {
-        "naicsCode": "811192",
-        "slug": "car-washes",
-        "label": "Car Washes & Detailing",
-        "establishments": 2,
-        "per10kResidents": 0.69,
-        "usAvgPer10k": 0.65,
-        "saturationIndex": 104,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Parkersburg."
-        }
-      },
-      {
-        "naicsCode": "812310",
-        "slug": "laundromats",
-        "label": "Coin Laundromats",
-        "establishments": 2,
-        "per10kResidents": 0.69,
-        "usAvgPer10k": 0.55,
-        "saturationIndex": 119,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Parkersburg."
-        }
-      },
-      {
-        "naicsCode": "812320",
-        "slug": "dry-cleaners",
-        "label": "Dry Cleaning & Laundry",
-        "establishments": 2,
-        "per10kResidents": 0.69,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 86,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Parkersburg."
-        }
-      },
-      {
-        "naicsCode": "621210",
-        "slug": "dentists",
-        "label": "Offices of Dentists",
-        "establishments": 11,
-        "per10kResidents": 3.79,
-        "usAvgPer10k": 3.9,
-        "saturationIndex": 98,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Parkersburg."
-        }
-      },
-      {
-        "naicsCode": "621310",
-        "slug": "chiropractors",
-        "label": "Offices of Chiropractors",
-        "establishments": 4,
-        "per10kResidents": 1.38,
-        "usAvgPer10k": 1.4,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Parkersburg."
-        }
-      },
-      {
-        "naicsCode": "621340",
-        "slug": "physical-therapy",
-        "label": "Physical Therapy Clinics",
-        "establishments": 4,
-        "per10kResidents": 1.38,
-        "usAvgPer10k": 1.55,
-        "saturationIndex": 92,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Parkersburg."
-        }
-      },
-      {
-        "naicsCode": "624410",
-        "slug": "daycare",
-        "label": "Child Day Care Services",
-        "establishments": 7,
-        "per10kResidents": 2.41,
-        "usAvgPer10k": 2.25,
-        "saturationIndex": 105,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Parkersburg."
-        }
-      },
-      {
-        "naicsCode": "445120",
-        "slug": "convenience-stores",
-        "label": "Convenience Stores",
-        "establishments": 6,
-        "per10kResidents": 2.07,
-        "usAvgPer10k": 1.95,
-        "saturationIndex": 104,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Parkersburg."
-        }
-      },
-      {
-        "naicsCode": "448140",
-        "slug": "clothing-boutiques",
-        "label": "Family Clothing Stores",
-        "establishments": 5,
-        "per10kResidents": 1.72,
-        "usAvgPer10k": 1.65,
-        "saturationIndex": 103,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Parkersburg."
-        }
-      },
-      {
-        "naicsCode": "445291",
-        "slug": "bakeries",
-        "label": "Retail Bakeries",
-        "establishments": 2,
-        "per10kResidents": 0.69,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 86,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Parkersburg."
-        }
-      },
-      {
-        "naicsCode": "453110",
-        "slug": "florists",
-        "label": "Florists & Floral Gift",
-        "establishments": 1,
-        "per10kResidents": 0.34,
-        "usAvgPer10k": 0.5,
+        "per10kResidents": 1.1,
+        "usAvgPer10k": 1.44,
         "saturationIndex": 77,
         "status": "underserved",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Parkersburg."
-        }
-      },
-      {
-        "naicsCode": "541110",
-        "slug": "law-firms",
-        "label": "Offices of Lawyers",
-        "establishments": 14,
-        "per10kResidents": 4.82,
-        "usAvgPer10k": 4.9,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Parkersburg."
-        }
-      },
-      {
-        "naicsCode": "541211",
-        "slug": "accounting-cpa",
-        "label": "Offices of CPAs",
-        "establishments": 6,
-        "per10kResidents": 2.07,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Parkersburg."
+          "evidenceQuote": "5 employer establishments (NAICS 541211) across 2 ZIP codes whose USPS city is Parkersburg, WV; density uses ACS 2023 ZCTA population (45,300). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "531210",
         "slug": "real-estate-agencies",
-        "label": "Real Estate Brokerages",
-        "establishments": 11,
-        "per10kResidents": 3.79,
-        "usAvgPer10k": 3.8,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Offices of Real Estate Agents & Brokers",
+        "establishments": 0,
+        "per10kResidents": 0.0,
+        "usAvgPer10k": 4.74,
+        "saturationIndex": 0,
+        "status": "underserved",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Parkersburg."
+          "evidenceQuote": "0 employer establishments (NAICS 531210) across 2 ZIP codes whose USPS city is Parkersburg, WV; density uses ACS 2023 ZCTA population (45,300). National benchmark = all US ZIP rows / US population."
         }
       }
     ],
-    "permitsAndTax": {
-      "generalBusinessLicenseRequired": false,
-      "businessLicenseFeeSummary": "No general city business license required. State of West Virginia statutory filings apply.",
-      "businessLicensePortalUrl": "https://www.parkersburgwv.gov/permits",
-      "zoningLookupUrl": "https://www.parkersburgwv.gov/zoning",
-      "buildingPermitPortalUrl": "https://www.parkersburgwv.gov/building",
-      "certificateOfOccupancyFee": "$185 standard municipal inspection fee",
-      "avgPermitWaitDays": 30,
-      "shortTermRentalStatus": "restricted",
-      "foodTruckPermitStatus": "allowed",
-      "combinedSalesTaxRate": 0.075,
-      "stateTaxRate": 0.06,
-      "localTaxRate": 0.015,
-      "provenance": {
-        "sourceName": "Parkersburg Municipal Code & State Department of Revenue",
-        "sourceUrl": "https://www.parkersburgwv.gov",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place",
-        "evidenceQuote": "Statutory municipal code standards."
-      }
-    },
-    "topTrafficCorridors": [
-      {
-        "roadName": "Main Arterial Corridor 1",
-        "segmentDescription": "Central Commercial Corridor through Parkersburg",
-        "aadt": 3483,
-        "heavyTruckPct": 5.5,
-        "lat": 39.261278,
-        "lng": -81.54335,
-        "year": 2024,
-        "provenance": {
-          "sourceName": "West Virginia DOT AADT Database",
-          "sourceUrl": "https://www.transportation.gov/",
-          "datasetVintage": "2024-AADT",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "place"
-        }
-      }
-    ],
-    "marketSignals": {
-      "reportedRetailRentSqFtYr": 38.4,
-      "reportedIndustrialRentSqFtYr": 17.3,
-      "topSearchedNaics30d": [
-        "722515",
-        "713940",
-        "812111"
-      ],
-      "verifiedLocalProsCount": 8
-    },
-    "scores": {
-      "overallViability": 43,
-      "purchasingPower": 41,
-      "growthMomentum": 45,
-      "costEfficiency": 74,
-      "regulatoryFriction": 48
-    },
+    "marketSignals": {},
     "executiveTravel": {
-      "timeZone": "America/New_York (ET: UTC-05:00)",
+      "timeZone": "America/New_York",
       "timeZoneAbbr": "ET",
       "utcOffset": "-05:00",
-      "primaryAirport": {
-        "name": "Parkersburg Regional / Metropolitan Airport",
-        "iata": null,
-        "distanceMiles": 10.2,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
-      },
-      "powerPlugs": {
-        "types": [
-          "Type A (2-pin)",
-          "Type B (3-pin grounded)"
-        ],
-        "voltage": "120V",
-        "frequency": "60Hz",
-        "adapterAdvice": "Visitors from UK, EU, Australia, and Asia require a standard Type A/B plug adapter and dual-voltage converter."
-      },
-      "currency": {
-        "code": "USD",
-        "symbol": "$",
-        "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
-        "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
-      },
-      "climate": {
-        "summerHighF": 84,
-        "winterLowF": 22,
-        "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
-        "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
-      },
       "emergency": {
         "emergencyDispatch": "911",
-        "nonEmergencyPolice": "311 or local municipal dispatch",
-        "nearestTraumaHospital": "Parkersburg Regional Memorial Hospital",
-        "hospitalAddress": "Medical Center District, Parkersburg, WV"
+        "nearestTraumaHospital": "Camden Clark Medical Center",
+        "hospitalAddress": "800 Garfield Ave, Parkersburg, WV 26101",
+        "cmsFacilityId": "510058",
+        "emergencyServices": true,
+        "source": "CMS Care Compare hospital general information (dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma or nearest claim.",
+        "erHospitals": [
+          {
+            "name": "Camden Clark Medical Center",
+            "address": "800 Garfield Ave, Parkersburg, WV 26101",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "510058"
+          }
+        ],
+        "erHospitalsSource": "CMS Care Compare hospital general information (dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma or nearest claim."
       },
-      "visitorLogistics": {
-        "tapWaterPotability": "100% Safe municipal drinking water conforming to EPA Safe Drinking Water Act standards.",
-        "salesTaxRefundPolicy": "International travelers may claim state sales tax refunds on qualifying departures at designated airport customs counters.",
-        "rideshareAvailability": "Ubiquitous (Uber and Lyft operational 24/7 across the metropolitan area)."
-      },
-      "provenance": {
-        "sourceName": "FAA Airport Database & International Trade Administration",
-        "sourceUrl": "https://www.trade.gov/",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
+      "primaryAirport": {
+        "name": "Mid Ohio Valley Regional Airport",
+        "iata": "PKB",
+        "lat": 39.3451,
+        "lng": -81.439201,
+        "distanceMiles": 8.0,
+        "transitToDowntown": null,
+        "source": "OurAirports (public domain) for name, IATA code and coordinates; distance is straight-line from the U.S. Census Gazetteer city center point",
+        "sourceUrl": "https://ourairports.com/data/",
+        "cityCenterMethod": "Census Gazetteer internal point",
+        "retrieved": "2026-10-31"
       }
+    },
+    "housingAndTaxes": {
+      "medianHomeValue": 113900,
+      "medianGrossRent": 746,
+      "medianRealEstateTaxPaid": 820,
+      "effectivePropertyTaxRatePct": 0.72,
+      "countyName": "Wood County",
+      "source": "ACS 2023 5-yr: B25077 median home value, B25064 median gross rent, B25103 median real estate taxes paid. Effective rate = B25103 / B25077.",
+      "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/"
+    },
+    "climateNormals": {
+      "peakSummerHighF": 87,
+      "winterLowF": 24,
+      "annualRainfallInches": 44.2,
+      "sourceName": "NOAA NCEI U.S. Climate Normals 1991-2020 (Station USW00013867, 1.6 mi from Gazetteer center), retrieved 2026-10-31",
+      "sourceUrl": "https://www.ncei.noaa.gov/products/land-based-station/us-climate-normals"
+    },
+    "higherEducation": {
+      "institutionCount": 2,
+      "totalEnrollment": 1899,
+      "institutions": [
+        {
+          "id": 237686,
+          "name": "West Virginia University at Parkersburg",
+          "studentSize": 1868,
+          "ownership": "Public",
+          "schoolUrl": "https://www.wvup.edu/",
+          "lat": 39.216379,
+          "lng": -81.506192
+        },
+        {
+          "id": 238096,
+          "name": "Wood County Technical Center-Practical Nursing",
+          "studentSize": 31,
+          "ownership": "Public",
+          "schoolUrl": "https://www.woodcountyschoolswv.com/o/wctc/page/practical-nursing",
+          "lat": 39.242596,
+          "lng": -81.54796
+        }
+      ],
+      "sourceName": "U.S. Department of Education College Scorecard",
+      "sourceUrl": "https://collegescorecard.ed.gov/",
+      "retrieved": "2026-10-31"
+    },
+    "evInfrastructure": {
+      "totalStations": 6,
+      "totalChargingPorts": 14,
+      "dcFastPorts": 7,
+      "level2Ports": 7,
+      "sampleStations": [
+        {
+          "name": "Parkersburg, WV - Tesla Supercharger",
+          "address": "1102 7th Street, Parkersburg, WV 26101",
+          "network": "Tesla",
+          "dcFastPorts": 6,
+          "level2Ports": 0,
+          "lat": 39.262801,
+          "lng": -81.544929
+        },
+        {
+          "name": "TownPlace Suites by Marriott",
+          "address": "415 7th St, Parkersburg, WV 26101",
+          "network": "Non-Networked",
+          "dcFastPorts": 0,
+          "level2Ports": 2,
+          "lat": 39.26563,
+          "lng": -81.556229
+        },
+        {
+          "name": "MBPKB 1 MBPKB 1",
+          "address": "2908 7th St, Parkersburg, WV 26101",
+          "network": "ChargePoint Network",
+          "dcFastPorts": 0,
+          "level2Ports": 2,
+          "lat": 39.268388,
+          "lng": -81.519695
+        },
+        {
+          "name": "Greater Parkersburg CVB",
+          "address": "113 Ann St, Parkersburg, WV 26101",
+          "network": "Non-Networked",
+          "dcFastPorts": 0,
+          "level2Ports": 2,
+          "lat": 39.2656,
+          "lng": -81.56665
+        },
+        {
+          "name": "MATHENY GMC 1",
+          "address": "315 Ann St, Parkersburg, WV 26101",
+          "network": "ChargePoint Network",
+          "dcFastPorts": 1,
+          "level2Ports": 0,
+          "lat": 39.267124,
+          "lng": -81.563649
+        }
+      ],
+      "sourceName": "U.S. Department of Energy / NLR Alternative Fuels Data Center (AFDC)",
+      "sourceUrl": "https://afdc.energy.gov/stations",
+      "retrieved": "2026-10-31"
     }
   }
 ]

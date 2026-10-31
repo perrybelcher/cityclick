@@ -1,7 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import { NAICS_25_DEFINITIONS } from '../../config/naics';
-import { CERTIFIED_FLAGSHIP_SET, DEFAULT_COMPARE_BY_SLUG, HERO_IMAGES_BY_SLUG } from '../../config/flagships';
+import { DEFAULT_COMPARE_BY_SLUG, HERO_IMAGES_BY_SLUG } from '../../config/flagships';
 import type { CityRecord } from '../../lib/schema';
 import { ALL_CITIES } from '../../data/catalog';
 import { generateSeoGraph } from '../../lib/seo';
@@ -141,10 +141,12 @@ const seoGraph = generateSeoGraph({
   canonicalUrl: canonicalCityUrl,
 });
 
-const isVerifiedCity = CERTIFIED_FLAGSHIP_SET.has(city.slug);
+const isVerifiedCity = Boolean(city.housingAndTaxes?.source && city.climateNormals?.sourceName);
 const robotsDirective = isVerifiedCity ? 'index, follow' : 'noindex, follow';
 
-const compareTargetSlug = DEFAULT_COMPARE_BY_SLUG[city.slug] ?? (isHSV ? 'ar-hot-springs' : 'tx-austin');
+const compareTargetSlug =
+  DEFAULT_COMPARE_BY_SLUG[city.slug] ??
+  (city.slug === 'tx/austin' ? 'tn-nashville' : isHSV ? 'ar-hot-springs' : 'tx-austin');
 const compareHref = isVerifiedCity
   ? `/compare/${city.slug.replace('/', '-')}-vs-${compareTargetSlug}/`
   : '/compare/tx-austin-vs-tn-nashville/';
@@ -216,6 +218,15 @@ if (higherEd) {
     }
   }
 }
+if (livingPins.length === 0 && city.lat != null && city.lng != null) {
+  livingPins.push({
+    name: `${city.name}, ${city.stateCode.toUpperCase()} Residential Center`,
+    category: 'Census Gazetteer Point',
+    address: city.countyName,
+    lat: city.lat,
+    lng: city.lng,
+  });
+}
 
 const businessPins: MapPin[] = [];
 if (evInfra?.sampleStations) {
@@ -262,7 +273,8 @@ const cityMapPins = {
 
 const taxPct = (r: number) =>
   `${Number((r * 100).toFixed(3)).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 3 })}%`;
-const hasVerifiedTax = city.permitsAndTax?.combinedSalesTaxRate != null && Boolean(city.permitsAndTax?.provenance);
+const verifiedTax =
+  city.permitsAndTax?.combinedSalesTaxRate != null && city.permitsAndTax?.provenance ? city.permitsAndTax : null;
 ---
 
 <Layout
@@ -419,7 +431,9 @@ const hasVerifiedTax = city.permitsAndTax?.combinedSalesTaxRate != null && Boole
           <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
             <div class="flex justify-between items-start text-slate-400 text-[10px] uppercase font-bold tracking-wider">
               <span>Climate</span>
-              <span class="text-amber-600 font-extrabold">Open-Meteo</span>
+              <span class="text-amber-600 font-extrabold">
+                {city.climateNormals.sourceName?.includes('NOAA') ? 'NOAA NCEI' : 'Open-Meteo'}
+              </span>
             </div>
             <div class="text-xl sm:text-2xl font-black text-[#152438] mt-1">{city.climateNormals.peakSummerHighF}°F</div>
             <div class="text-[10px] text-slate-500">Avg July High</div>
@@ -448,13 +462,13 @@ const hasVerifiedTax = city.permitsAndTax?.combinedSalesTaxRate != null && Boole
           </div>
         )}
 
-        {hasVerifiedTax && (
+        {verifiedTax && (
           <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
             <div class="flex justify-between items-start text-slate-400 text-[10px] uppercase font-bold tracking-wider">
               <span>Local Sales Tax</span>
               <span class="text-slate-600 font-extrabold">Combined</span>
             </div>
-            <div class="text-xl sm:text-2xl font-black text-[#152438] mt-1">{taxPct(city.permitsAndTax.combinedSalesTaxRate)}</div>
+            <div class="text-xl sm:text-2xl font-black text-[#152438] mt-1">{taxPct(verifiedTax.combinedSalesTaxRate)}</div>
             <div class="text-[10px] text-slate-500">State + Local Tax</div>
           </div>
         )}
@@ -748,14 +762,22 @@ const hasVerifiedTax = city.permitsAndTax?.combinedSalesTaxRate != null && Boole
               </div>
             )}
 
-            {city.waterUtility && (
+            {(city.waterUtility || city.climateNormals) && (
               <div class="rounded-3xl p-6 sm:p-7 bg-[#F8FAFC] border-2 border-blue-200/80 shadow-xs space-y-5">
                 <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3 border-b border-slate-200">
                   <div class="flex items-center gap-2.5">
                     <span class="text-xl">⚠️</span>
                     <div>
-                      <h3 class="text-base font-black text-[#152438]">Before You Go: Water & Climate</h3>
-                      <p class="text-xs text-slate-500">Sourced climate and water-system facts for {city.name}</p>
+                      <h3 class="text-base font-black text-[#152438]">
+                        {city.waterUtility ? 'Before You Go: Water & Climate' : 'Before You Go: Seasonal Climate'}
+                      </h3>
+                      <p class="text-xs text-slate-500">
+                        {city.waterUtility
+                          ? `Sourced climate and water-system facts for ${city.name}`
+                          : city.climateNormals?.sourceName?.includes('NOAA')
+                            ? `Sourced 1991–2020 NOAA NCEI seasonal climate facts for ${city.name}`
+                            : `Sourced 10-year ERA5 seasonal climate facts for ${city.name}`}
+                      </p>
                     </div>
                   </div>
                   <span class="px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-wider bg-blue-100 text-[#1D68F2] border border-blue-200 shrink-0">
@@ -763,16 +785,18 @@ const hasVerifiedTax = city.permitsAndTax?.combinedSalesTaxRate != null && Boole
                   </span>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
-                  <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-2xs space-y-1.5">
-                    <div class="flex items-center gap-2 font-bold text-slate-800">
-                      <span class="text-base">🚰</span>
-                      <span>Water system</span>
+                <div class:list={['grid grid-cols-1 gap-4 text-xs', city.waterUtility && city.climateNormals ? 'md:grid-cols-2' : '']}>
+                  {city.waterUtility && (
+                    <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-2xs space-y-1.5">
+                      <div class="flex items-center gap-2 font-bold text-slate-800">
+                        <span class="text-base">🚰</span>
+                        <span>Water system</span>
+                      </div>
+                      <div class="text-slate-600 leading-relaxed">
+                        <span><strong>Tap water:</strong> Served by {city.waterUtility.providerName} (PWSID {city.waterUtility.pwsid}), a {city.waterUtility.sourceType} system serving about {city.waterUtility.populationServed.toLocaleString('en-US')} people. <em>Source: EPA SDWIS, retrieved Oct 2026.</em> In an emergency, dial 911.</span>
+                      </div>
                     </div>
-                    <div class="text-slate-600 leading-relaxed">
-                      <span><strong>Tap water:</strong> Served by {city.waterUtility.providerName} (PWSID {city.waterUtility.pwsid}), a {city.waterUtility.sourceType} system serving about {city.waterUtility.populationServed.toLocaleString('en-US')} people. <em>Source: EPA SDWIS, retrieved Oct 2026.</em> In an emergency, dial 911.</span>
-                    </div>
-                  </div>
+                  )}
 
                   {city.climateNormals && (
                     <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-2xs space-y-1.5">
@@ -781,7 +805,11 @@ const hasVerifiedTax = city.permitsAndTax?.combinedSalesTaxRate != null && Boole
                         <span>Seasonal temperatures</span>
                       </div>
                       <div class="text-slate-600 leading-relaxed">
-                        <span><strong>10-year ERA5 average:</strong> {city.climateNormals.peakSummerHighF}°F average July high, {city.climateNormals.winterLowF}°F average January low, and {city.climateNormals.annualRainfallInches} inches of annual precipitation. <em>Source: Open-Meteo (2015–2024).</em></span>
+                        {city.climateNormals.sourceName?.includes('NOAA') ? (
+                          <span><strong>1991–2020 NOAA average:</strong> {city.climateNormals.peakSummerHighF}°F average July high, {city.climateNormals.winterLowF}°F average January low, and {city.climateNormals.annualRainfallInches} inches of annual precipitation. <em>Source: NOAA NCEI (1991–2020).</em></span>
+                        ) : (
+                          <span><strong>10-year ERA5 average:</strong> {city.climateNormals.peakSummerHighF}°F average July high, {city.climateNormals.winterLowF}°F average January low, and {city.climateNormals.annualRainfallInches} inches of annual precipitation. <em>Source: Open-Meteo (2015–2024).</em></span>
+                        )}
                       </div>
                     </div>
                   )}
@@ -856,7 +884,11 @@ const hasVerifiedTax = city.permitsAndTax?.combinedSalesTaxRate != null && Boole
                     <div class="p-5 rounded-2xl bg-[#F8FAFC] border border-slate-200 space-y-2">
                       <div class="flex items-center gap-2">
                         <span class="text-lg">☀️</span>
-                        <h4 class="font-bold text-sm text-[#152438]">Climate Averages (2015–2024)</h4>
+                        <h4 class="font-bold text-sm text-[#152438]">
+                          {city.climateNormals.sourceName?.includes('NOAA')
+                            ? 'Climate Averages (1991–2020 NOAA)'
+                            : 'Climate Averages (2015–2024)'}
+                        </h4>
                       </div>
                       <div class="space-y-1.5 text-slate-600">
                         <div class="flex justify-between">
@@ -1081,7 +1113,7 @@ const hasVerifiedTax = city.permitsAndTax?.combinedSalesTaxRate != null && Boole
           )}
 
           <!-- Permit & Sales Tax Requirements -->
-          {hasVerifiedTax && (
+          {verifiedTax && (
             <section class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-[0_4px_20px_-2px_rgba(0,0,0,0.06)] space-y-6">
               <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                 <div>
@@ -1089,7 +1121,7 @@ const hasVerifiedTax = city.permitsAndTax?.combinedSalesTaxRate != null && Boole
                   <p class="text-xs text-slate-500 mt-0.5">Official state and local sales-tax breakdown on the record for {city.name}</p>
                 </div>
                 <a
-                  href={`/tools/lease-calculator/?tax=${Number((city.permitsAndTax.combinedSalesTaxRate * 100).toFixed(3))}&city=${encodeURIComponent(city.name)}`}
+                  href={`/tools/lease-calculator/?tax=${Number((verifiedTax.combinedSalesTaxRate * 100).toFixed(3))}&city=${encodeURIComponent(city.name)}`}
                   class="px-3.5 py-2 rounded-xl bg-blue-50 hover:bg-blue-100 text-[#1D68F2] font-bold text-xs transition shrink-0 border border-blue-200"
                 >
                   Model Your Lease Quote →
@@ -1108,27 +1140,27 @@ const hasVerifiedTax = city.permitsAndTax?.combinedSalesTaxRate != null && Boole
                   <tbody class="divide-y divide-slate-100">
                     <tr class="hover:bg-slate-50">
                       <td class="py-3.5 pr-4 font-semibold text-slate-700">State Sales Tax</td>
-                      <td class="py-3.5 px-4 font-bold text-slate-800">{taxPct(city.permitsAndTax.stateTaxRate)}</td>
+                      <td class="py-3.5 px-4 font-bold text-slate-800">{taxPct(verifiedTax.stateTaxRate)}</td>
                       <td class="py-3.5 pl-4 text-slate-500">{city.stateName} statutory state rate</td>
                     </tr>
-                    {city.permitsAndTax.countyTaxRate != null && city.permitsAndTax.countyTaxRate > 0 && (
+                    {verifiedTax.countyTaxRate != null && verifiedTax.countyTaxRate > 0 && (
                       <tr class="hover:bg-slate-50">
                         <td class="py-3.5 pr-4 font-semibold text-slate-700">County Sales Tax</td>
-                        <td class="py-3.5 px-4 font-bold text-slate-800">{taxPct(city.permitsAndTax.countyTaxRate)}</td>
+                        <td class="py-3.5 px-4 font-bold text-slate-800">{taxPct(verifiedTax.countyTaxRate)}</td>
                         <td class="py-3.5 pl-4 text-slate-500">{city.countyName} local rate</td>
                       </tr>
                     )}
-                    {city.permitsAndTax.cityTaxRate != null && city.permitsAndTax.cityTaxRate > 0 && (
+                    {verifiedTax.cityTaxRate != null && verifiedTax.cityTaxRate > 0 && (
                       <tr class="hover:bg-slate-50">
                         <td class="py-3.5 pr-4 font-semibold text-slate-700">Municipal Sales Tax</td>
-                        <td class="py-3.5 px-4 font-bold text-slate-800">{taxPct(city.permitsAndTax.cityTaxRate)}</td>
+                        <td class="py-3.5 px-4 font-bold text-slate-800">{taxPct(verifiedTax.cityTaxRate)}</td>
                         <td class="py-3.5 pl-4 text-slate-500">{city.name} municipal rate</td>
                       </tr>
                     )}
-                    {city.permitsAndTax.specialDistrictTaxRate != null && city.permitsAndTax.specialDistrictTaxRate > 0 && (
+                    {verifiedTax.specialDistrictTaxRate != null && verifiedTax.specialDistrictTaxRate > 0 && (
                       <tr class="hover:bg-slate-50">
                         <td class="py-3.5 pr-4 font-semibold text-slate-700">Special District Tax</td>
-                        <td class="py-3.5 px-4 font-bold text-slate-800">{taxPct(city.permitsAndTax.specialDistrictTaxRate)}</td>
+                        <td class="py-3.5 px-4 font-bold text-slate-800">{taxPct(verifiedTax.specialDistrictTaxRate)}</td>
                         <td class="py-3.5 pl-4 text-slate-500">Regional transit / taxing district</td>
                       </tr>
                     )}
@@ -1136,16 +1168,16 @@ const hasVerifiedTax = city.permitsAndTax?.combinedSalesTaxRate != null && Boole
                       <td class="py-4 pr-4 font-black text-slate-900">Combined Retail Sales Tax</td>
                       <td class="py-4 px-4">
                         <span class="px-2.5 py-1 rounded-full font-extrabold text-[11px] bg-blue-100 text-[#1D68F2]">
-                          {taxPct(city.permitsAndTax.combinedSalesTaxRate)} Combined
+                          {taxPct(verifiedTax.combinedSalesTaxRate)} Combined
                         </span>
                       </td>
                       <td class="py-4 pl-4 text-slate-600">
-                        {city.permitsAndTax.provenance?.sourceUrl ? (
-                          <a href={city.permitsAndTax.provenance.sourceUrl} target="_blank" rel="noopener noreferrer" class="hover:text-[#1D68F2] underline">
-                            {city.permitsAndTax.provenance.sourceName} ↗
+                        {verifiedTax.provenance?.sourceUrl ? (
+                          <a href={verifiedTax.provenance.sourceUrl} target="_blank" rel="noopener noreferrer" class="hover:text-[#1D68F2] underline">
+                            {verifiedTax.provenance.sourceName} ↗
                           </a>
                         ) : (
-                          `${taxPct(city.permitsAndTax.stateTaxRate)} State + ${taxPct(city.permitsAndTax.localTaxRate)} Local`
+                          `${taxPct(verifiedTax.stateTaxRate)} State + ${taxPct(verifiedTax.localTaxRate)} Local`
                         )}
                       </td>
                     </tr>
@@ -1283,13 +1315,17 @@ const hasVerifiedTax = city.permitsAndTax?.combinedSalesTaxRate != null && Boole
                 <span class="bg-blue-500/20 text-blue-200 px-2 py-0.5 rounded border border-blue-400/30">1-Page Cheat Sheet</span>
               </div>
               <div class="font-black text-sm text-white">{city.name} Visitor Pocket Guide</div>
-              <div class="text-[11px] text-slate-300 mt-1">Airport distance, climate, emergency-department list, and water system</div>
+              <div class="text-[11px] text-slate-300 mt-1">
+                {city.waterUtility
+                  ? 'Airport distance, climate, emergency-department list, and water system'
+                  : 'Airport distance, climate, parks, and emergency-department list'}
+              </div>
             </div>
 
             <div>
               <h3 class="text-xl font-black text-[#152438]">Download {city.name} Guide</h3>
               <p class="text-xs text-slate-500 mt-1 leading-relaxed">
-                Print the verified facts on this page: airport distance, climate, emergency-department list, and water system for {city.name}.
+                Print the verified facts on this page: airport distance, climate, emergency-department list{city.waterUtility ? ', and water system' : ''} for {city.name}.
               </p>
             </div>
 
@@ -1309,7 +1345,7 @@ const hasVerifiedTax = city.permitsAndTax?.combinedSalesTaxRate != null && Boole
               {erHospitals.length > 0 && (
                 <div class="flex items-start gap-2.5">
                   <span class="w-4 h-4 rounded-full bg-blue-100 text-[#1D68F2] flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">✓</span>
-                  <span><strong>Emergency departments:</strong> {erHospitals.length} CMS-listed facilities</span>
+                  <span><strong>Emergency departments:</strong> {erHospitals.length} CMS-listed {erHospitals.length === 1 ? 'facility' : 'facilities'}</span>
                 </div>
               )}
               {city.waterUtility && (
@@ -1463,10 +1499,10 @@ const hasVerifiedTax = city.permitsAndTax?.combinedSalesTaxRate != null && Boole
                   <span><strong>Trade counts:</strong> {city.industries.length} Census ZBP categories</span>
                 </div>
               )}
-              {hasVerifiedTax && (
+              {verifiedTax && (
                 <div class="flex items-start gap-2.5">
                   <span class="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">✓</span>
-                  <span><strong>Sales tax:</strong> {taxPct(city.permitsAndTax.combinedSalesTaxRate)} combined</span>
+                  <span><strong>Sales tax:</strong> {taxPct(verifiedTax.combinedSalesTaxRate)} combined</span>
                 </div>
               )}
               {evInfra && (
@@ -1499,7 +1535,11 @@ const hasVerifiedTax = city.permitsAndTax?.combinedSalesTaxRate != null && Boole
                 </button>
               )}
               <a
-                href={`/tools/lease-calculator/?tax=${hasVerifiedTax ? Number((city.permitsAndTax.combinedSalesTaxRate * 100).toFixed(3)) : '8.25'}&city=${encodeURIComponent(city.name)}`}
+                href={
+                  verifiedTax
+                    ? `/tools/lease-calculator/?tax=${Number((verifiedTax.combinedSalesTaxRate * 100).toFixed(3))}&city=${encodeURIComponent(city.name)}`
+                    : `/tools/lease-calculator/?city=${encodeURIComponent(city.name)}`
+                }
                 class="block w-full text-center py-3 px-4 rounded-2xl bg-slate-100 hover:bg-blue-50 text-slate-800 hover:text-[#1D68F2] font-bold text-xs transition"
               >
                 Open Lease & Breakeven Calculator →

@@ -4,6 +4,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
   site: 'https://cityclick.com',
+  trailingSlash: 'ignore',
   output: 'static',
   adapter: cloudflare({
     imageService: 'cloudflare',

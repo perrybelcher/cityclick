@@ -2,1311 +2,1299 @@
   {
     "slug": "sd/sioux-falls",
     "cityId": "4659020",
-    "countyFips": "46590",
+    "countyFips": "46099",
     "name": "Sioux Falls",
     "stateCode": "sd",
     "stateName": "South Dakota",
-    "countyName": "Sioux Falls Metropolitan Area",
+    "countyName": "Minnehaha County",
     "lat": 43.540696,
     "lng": -96.731962,
     "primaryZips": [
-      "70118"
+      "57104",
+      "57108",
+      "57106",
+      "57105",
+      "57103",
+      "57110",
+      "57107",
+      "57117",
+      "57197"
     ],
     "demographics": {
       "population": 206410,
-      "popGrowth5YrPct": 6.7,
-      "medianHouseholdIncome": 91713,
-      "perCapitaIncome": 53194,
-      "medianAge": 36.4,
-      "daytimeWorkerPop": 127974,
-      "daytimePopSurgePct": 8.5,
-      "medianGrossRent": 1764,
-      "medianHomeValue": 385195,
+      "medianHouseholdIncome": 74714,
+      "perCapitaIncome": 43231,
+      "medianAge": 35.1,
+      "medianGrossRent": 993,
+      "medianHomeValue": 271400,
       "provenance": {
-        "sourceName": "US Census Bureau ACS 5-Year (DP03/DP04/DP05) & PopEst",
-        "sourceUrl": "https://api.census.gov/data/2023/acs/acs5",
-        "datasetVintage": "2023-5YR",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "sourceName": "US Census Bureau ACS 5-Year Estimates 2023 (Table-Based Summary File)",
+        "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/",
+        "datasetVintage": "ACS-2023-5YR",
+        "verifiedAt": "2026-10-31T00:00:00Z",
         "granularity": "place"
-      }
-    },
-    "laborAndEconomy": {
-      "unemploymentRatePct": 3.8,
-      "avgWeeklyWageAllIndustries": 1340,
-      "newHousingPermits12Mo": 1548,
-      "permitsPer1kResidents": 7.5,
-      "femaRiskScore": 28.0,
-      "provenance": {
-        "sourceName": "BLS Local Area Unemployment Statistics (LAUS) & Census BPS",
-        "sourceUrl": "https://www.bls.gov/lau/",
-        "datasetVintage": "2024-M08",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
-      }
+      },
+      "popChange2020to2023Pct": 7.1,
+      "popChangeBasis": "Census Population Estimates, April 2020 base to July 2023"
     },
     "industries": [
       {
         "naicsCode": "722515",
         "slug": "coffee-shops",
         "label": "Coffee & Snack Shops",
-        "establishments": 44,
-        "per10kResidents": 2.13,
-        "usAvgPer10k": 2.15,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 58,
+        "per10kResidents": 2.84,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 134,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Sioux Falls."
+          "evidenceQuote": "58 employer establishments (NAICS 722515) across 9 ZIP codes whose USPS city is Sioux Falls, SD; density uses ACS 2023 ZCTA population (204,373). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722511",
         "slug": "restaurants",
         "label": "Full-Service Restaurants",
-        "establishments": 140,
-        "per10kResidents": 6.78,
-        "usAvgPer10k": 6.8,
-        "saturationIndex": 100,
+        "establishments": 143,
+        "per10kResidents": 7.0,
+        "usAvgPer10k": 7.44,
+        "saturationIndex": 94,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Sioux Falls."
+          "evidenceQuote": "143 employer establishments (NAICS 722511) across 9 ZIP codes whose USPS city is Sioux Falls, SD; density uses ACS 2023 ZCTA population (204,373). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722513",
         "slug": "fast-food",
-        "label": "Fast Food Restaurants",
-        "establishments": 149,
-        "per10kResidents": 7.22,
-        "usAvgPer10k": 7.2,
-        "saturationIndex": 100,
+        "label": "Limited-Service / Fast Food Restaurants",
+        "establishments": 184,
+        "per10kResidents": 9.0,
+        "usAvgPer10k": 7.75,
+        "saturationIndex": 116,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Sioux Falls."
+          "evidenceQuote": "184 employer establishments (NAICS 722513) across 9 ZIP codes whose USPS city is Sioux Falls, SD; density uses ACS 2023 ZCTA population (204,373). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722410",
         "slug": "bars-taverns",
-        "label": "Bars & Drinking Places",
-        "establishments": 38,
-        "per10kResidents": 1.84,
-        "usAvgPer10k": 1.85,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Drinking Places (Alcoholic Beverages)",
+        "establishments": 51,
+        "per10kResidents": 2.5,
+        "usAvgPer10k": 0.9,
+        "saturationIndex": 277,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Sioux Falls."
-        }
-      },
-      {
-        "naicsCode": "812111",
-        "slug": "barber-shops",
-        "label": "Barber Shops",
-        "establishments": 28,
-        "per10kResidents": 1.36,
-        "usAvgPer10k": 1.35,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Sioux Falls."
+          "evidenceQuote": "51 employer establishments (NAICS 722410) across 9 ZIP codes whose USPS city is Sioux Falls, SD; density uses ACS 2023 ZCTA population (204,373). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812112",
         "slug": "beauty-salons",
         "label": "Beauty Salons & Hair Studios",
-        "establishments": 70,
-        "per10kResidents": 3.39,
-        "usAvgPer10k": 3.4,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 59,
+        "per10kResidents": 2.89,
+        "usAvgPer10k": 2.31,
+        "saturationIndex": 125,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Sioux Falls."
+          "evidenceQuote": "59 employer establishments (NAICS 812112) across 9 ZIP codes whose USPS city is Sioux Falls, SD; density uses ACS 2023 ZCTA population (204,373). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812113",
         "slug": "nail-salons",
         "label": "Nail Salons",
-        "establishments": 43,
-        "per10kResidents": 2.08,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 12,
+        "per10kResidents": 0.59,
+        "usAvgPer10k": 0.86,
+        "saturationIndex": 68,
+        "status": "underserved",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Sioux Falls."
+          "evidenceQuote": "12 employer establishments (NAICS 812113) across 9 ZIP codes whose USPS city is Sioux Falls, SD; density uses ACS 2023 ZCTA population (204,373). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "713940",
         "slug": "gyms-fitness",
-        "label": "Fitness & Recreational Gyms",
-        "establishments": 26,
-        "per10kResidents": 1.26,
-        "usAvgPer10k": 1.25,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Fitness & Recreational Sports Centers",
+        "establishments": 47,
+        "per10kResidents": 2.3,
+        "usAvgPer10k": 1.0,
+        "saturationIndex": 231,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Sioux Falls."
+          "evidenceQuote": "47 employer establishments (NAICS 713940) across 9 ZIP codes whose USPS city is Sioux Falls, SD; density uses ACS 2023 ZCTA population (204,373). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812910",
         "slug": "pet-care",
-        "label": "Pet Care & Grooming",
-        "establishments": 20,
-        "per10kResidents": 0.97,
-        "usAvgPer10k": 0.95,
-        "saturationIndex": 102,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Pet Care & Grooming Services",
+        "establishments": 15,
+        "per10kResidents": 0.73,
+        "usAvgPer10k": 0.46,
+        "saturationIndex": 158,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Sioux Falls."
+          "evidenceQuote": "15 employer establishments (NAICS 812910) across 9 ZIP codes whose USPS city is Sioux Falls, SD; density uses ACS 2023 ZCTA population (204,373). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541940",
         "slug": "veterinary",
-        "label": "Veterinary Services",
-        "establishments": 22,
-        "per10kResidents": 1.07,
-        "usAvgPer10k": 1.05,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Veterinary Services & Animal Hospitals",
+        "establishments": 4,
+        "per10kResidents": 0.2,
+        "usAvgPer10k": 0.69,
+        "saturationIndex": 28,
+        "status": "underserved",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Sioux Falls."
+          "evidenceQuote": "4 employer establishments (NAICS 541940) across 9 ZIP codes whose USPS city is Sioux Falls, SD; density uses ACS 2023 ZCTA population (204,373). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "811111",
         "slug": "auto-repair",
         "label": "General Automotive Repair",
-        "establishments": 99,
+        "establishments": 50,
+        "per10kResidents": 2.45,
+        "usAvgPer10k": 2.2,
+        "saturationIndex": 111,
+        "status": "balanced",
+        "smallSample": false,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "50 employer establishments (NAICS 811111) across 9 ZIP codes whose USPS city is Sioux Falls, SD; density uses ACS 2023 ZCTA population (204,373). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "811192",
+        "slug": "car-washes",
+        "label": "Car Washes & Auto Detailing",
+        "establishments": 8,
+        "per10kResidents": 0.39,
+        "usAvgPer10k": 0.35,
+        "saturationIndex": 112,
+        "status": "balanced",
+        "smallSample": true,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "8 employer establishments (NAICS 811192) across 9 ZIP codes whose USPS city is Sioux Falls, SD; density uses ACS 2023 ZCTA population (204,373). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "621210",
+        "slug": "dentists",
+        "label": "Offices of Dentists",
+        "establishments": 82,
+        "per10kResidents": 4.01,
+        "usAvgPer10k": 3.89,
+        "saturationIndex": 103,
+        "status": "balanced",
+        "smallSample": false,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "82 employer establishments (NAICS 621210) across 9 ZIP codes whose USPS city is Sioux Falls, SD; density uses ACS 2023 ZCTA population (204,373). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "621310",
+        "slug": "chiropractors",
+        "label": "Offices of Chiropractors",
+        "establishments": 74,
+        "per10kResidents": 3.62,
+        "usAvgPer10k": 0.97,
+        "saturationIndex": 372,
+        "status": "saturated",
+        "smallSample": false,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "74 employer establishments (NAICS 621310) across 9 ZIP codes whose USPS city is Sioux Falls, SD; density uses ACS 2023 ZCTA population (204,373). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "621340",
+        "slug": "physical-therapy",
+        "label": "Physical, Occupational & Speech Therapists",
+        "establishments": 27,
+        "per10kResidents": 1.32,
+        "usAvgPer10k": 1.3,
+        "saturationIndex": 101,
+        "status": "balanced",
+        "smallSample": false,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "27 employer establishments (NAICS 621340) across 9 ZIP codes whose USPS city is Sioux Falls, SD; density uses ACS 2023 ZCTA population (204,373). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "624410",
+        "slug": "daycare",
+        "label": "Child Day Care Services",
+        "establishments": 61,
+        "per10kResidents": 2.98,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 141,
+        "status": "saturated",
+        "smallSample": false,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "61 employer establishments (NAICS 624410) across 9 ZIP codes whose USPS city is Sioux Falls, SD; density uses ACS 2023 ZCTA population (204,373). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "445120",
+        "slug": "convenience-stores",
+        "label": "Convenience Retail Stores",
+        "establishments": 3,
+        "per10kResidents": 0.15,
+        "usAvgPer10k": 0.82,
+        "saturationIndex": 18,
+        "status": "underserved",
+        "smallSample": false,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "3 employer establishments (NAICS 445120) across 9 ZIP codes whose USPS city is Sioux Falls, SD; density uses ACS 2023 ZCTA population (204,373). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "448140",
+        "slug": "clothing-boutiques",
+        "label": "Family Clothing Stores & Boutiques",
+        "establishments": 20,
+        "per10kResidents": 0.98,
+        "usAvgPer10k": 0.65,
+        "saturationIndex": 150,
+        "status": "saturated",
+        "smallSample": false,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "20 employer establishments (NAICS 448140) across 9 ZIP codes whose USPS city is Sioux Falls, SD; density uses ACS 2023 ZCTA population (204,373). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "541110",
+        "slug": "law-firms",
+        "label": "Offices of Lawyers",
+        "establishments": 98,
         "per10kResidents": 4.8,
         "usAvgPer10k": 4.8,
         "saturationIndex": 100,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Sioux Falls."
-        }
-      },
-      {
-        "naicsCode": "811192",
-        "slug": "car-washes",
-        "label": "Car Washes & Detailing",
-        "establishments": 13,
-        "per10kResidents": 0.63,
-        "usAvgPer10k": 0.65,
-        "saturationIndex": 97,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Sioux Falls."
-        }
-      },
-      {
-        "naicsCode": "812310",
-        "slug": "laundromats",
-        "label": "Coin Laundromats",
-        "establishments": 11,
-        "per10kResidents": 0.53,
-        "usAvgPer10k": 0.55,
-        "saturationIndex": 97,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Sioux Falls."
-        }
-      },
-      {
-        "naicsCode": "812320",
-        "slug": "dry-cleaners",
-        "label": "Dry Cleaning & Laundry",
-        "establishments": 18,
-        "per10kResidents": 0.87,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 102,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Sioux Falls."
-        }
-      },
-      {
-        "naicsCode": "621210",
-        "slug": "dentists",
-        "label": "Offices of Dentists",
-        "establishments": 80,
-        "per10kResidents": 3.88,
-        "usAvgPer10k": 3.9,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Sioux Falls."
-        }
-      },
-      {
-        "naicsCode": "621310",
-        "slug": "chiropractors",
-        "label": "Offices of Chiropractors",
-        "establishments": 29,
-        "per10kResidents": 1.4,
-        "usAvgPer10k": 1.4,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Sioux Falls."
-        }
-      },
-      {
-        "naicsCode": "621340",
-        "slug": "physical-therapy",
-        "label": "Physical Therapy Clinics",
-        "establishments": 32,
-        "per10kResidents": 1.55,
-        "usAvgPer10k": 1.55,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Sioux Falls."
-        }
-      },
-      {
-        "naicsCode": "624410",
-        "slug": "daycare",
-        "label": "Child Day Care Services",
-        "establishments": 46,
-        "per10kResidents": 2.23,
-        "usAvgPer10k": 2.25,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Sioux Falls."
-        }
-      },
-      {
-        "naicsCode": "445120",
-        "slug": "convenience-stores",
-        "label": "Convenience Stores",
-        "establishments": 40,
-        "per10kResidents": 1.94,
-        "usAvgPer10k": 1.95,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Sioux Falls."
-        }
-      },
-      {
-        "naicsCode": "448140",
-        "slug": "clothing-boutiques",
-        "label": "Family Clothing Stores",
-        "establishments": 34,
-        "per10kResidents": 1.65,
-        "usAvgPer10k": 1.65,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Sioux Falls."
-        }
-      },
-      {
-        "naicsCode": "445291",
-        "slug": "bakeries",
-        "label": "Retail Bakeries",
-        "establishments": 18,
-        "per10kResidents": 0.87,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 102,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Sioux Falls."
-        }
-      },
-      {
-        "naicsCode": "453110",
-        "slug": "florists",
-        "label": "Florists & Floral Gift",
-        "establishments": 10,
-        "per10kResidents": 0.48,
-        "usAvgPer10k": 0.5,
-        "saturationIndex": 97,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Sioux Falls."
-        }
-      },
-      {
-        "naicsCode": "541110",
-        "slug": "law-firms",
-        "label": "Offices of Lawyers",
-        "establishments": 101,
-        "per10kResidents": 4.89,
-        "usAvgPer10k": 4.9,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Sioux Falls."
+          "evidenceQuote": "98 employer establishments (NAICS 541110) across 9 ZIP codes whose USPS city is Sioux Falls, SD; density uses ACS 2023 ZCTA population (204,373). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541211",
         "slug": "accounting-cpa",
-        "label": "Offices of CPAs",
-        "establishments": 43,
-        "per10kResidents": 2.08,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Offices of Certified Public Accountants",
+        "establishments": 40,
+        "per10kResidents": 1.96,
+        "usAvgPer10k": 1.44,
+        "saturationIndex": 136,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Sioux Falls."
+          "evidenceQuote": "40 employer establishments (NAICS 541211) across 9 ZIP codes whose USPS city is Sioux Falls, SD; density uses ACS 2023 ZCTA population (204,373). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "531210",
         "slug": "real-estate-agencies",
-        "label": "Real Estate Brokerages",
-        "establishments": 78,
-        "per10kResidents": 3.78,
-        "usAvgPer10k": 3.8,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Offices of Real Estate Agents & Brokers",
+        "establishments": 140,
+        "per10kResidents": 6.85,
+        "usAvgPer10k": 4.74,
+        "saturationIndex": 144,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Sioux Falls."
+          "evidenceQuote": "140 employer establishments (NAICS 531210) across 9 ZIP codes whose USPS city is Sioux Falls, SD; density uses ACS 2023 ZCTA population (204,373). National benchmark = all US ZIP rows / US population."
         }
       }
     ],
-    "permitsAndTax": {
-      "generalBusinessLicenseRequired": false,
-      "businessLicenseFeeSummary": "No general city business license required. State of South Dakota statutory filings apply.",
-      "businessLicensePortalUrl": "https://www.sioux-fallssd.gov/permits",
-      "zoningLookupUrl": "https://www.sioux-fallssd.gov/zoning",
-      "buildingPermitPortalUrl": "https://www.sioux-fallssd.gov/building",
-      "certificateOfOccupancyFee": "$185 standard municipal inspection fee",
-      "avgPermitWaitDays": 30,
-      "shortTermRentalStatus": "restricted",
-      "foodTruckPermitStatus": "allowed",
-      "combinedSalesTaxRate": 0.057,
-      "stateTaxRate": 0.042,
-      "localTaxRate": 0.015,
-      "provenance": {
-        "sourceName": "Sioux Falls Municipal Code & State Department of Revenue",
-        "sourceUrl": "https://www.sioux-fallssd.gov",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place",
-        "evidenceQuote": "Statutory municipal code standards."
-      }
-    },
-    "topTrafficCorridors": [
-      {
-        "roadName": "Main Arterial Corridor 1",
-        "segmentDescription": "Central Commercial Corridor through Sioux Falls",
-        "aadt": 24769,
-        "heavyTruckPct": 5.5,
-        "lat": 43.540696,
-        "lng": -96.731962,
-        "year": 2024,
-        "provenance": {
-          "sourceName": "South Dakota DOT AADT Database",
-          "sourceUrl": "https://www.transportation.gov/",
-          "datasetVintage": "2024-AADT",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "place"
-        }
-      }
-    ],
-    "marketSignals": {
-      "reportedRetailRentSqFtYr": 45.6,
-      "reportedIndustrialRentSqFtYr": 20.5,
-      "topSearchedNaics30d": [
-        "722515",
-        "713940",
-        "812111"
-      ],
-      "verifiedLocalProsCount": 8
-    },
-    "scores": {
-      "overallViability": 65,
-      "purchasingPower": 62,
-      "growthMomentum": 68,
-      "costEfficiency": 61,
-      "regulatoryFriction": 48
-    },
+    "marketSignals": {},
     "executiveTravel": {
-      "timeZone": "America/Chicago (CT: UTC-06:00)",
+      "timeZone": "America/Chicago",
       "timeZoneAbbr": "CT",
       "utcOffset": "-06:00",
-      "primaryAirport": {
-        "name": "Sioux Falls Regional / Metropolitan Airport",
-        "iata": null,
-        "distanceMiles": 11.1,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
-      },
-      "powerPlugs": {
-        "types": [
-          "Type A (2-pin)",
-          "Type B (3-pin grounded)"
-        ],
-        "voltage": "120V",
-        "frequency": "60Hz",
-        "adapterAdvice": "Visitors from UK, EU, Australia, and Asia require a standard Type A/B plug adapter and dual-voltage converter."
-      },
-      "currency": {
-        "code": "USD",
-        "symbol": "$",
-        "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
-        "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
-      },
-      "climate": {
-        "summerHighF": 84,
-        "winterLowF": 22,
-        "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
-        "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
-      },
       "emergency": {
         "emergencyDispatch": "911",
-        "nonEmergencyPolice": "311 or local municipal dispatch",
-        "nearestTraumaHospital": "Sioux Falls Regional Memorial Hospital",
-        "hospitalAddress": "Medical Center District, Sioux Falls, SD"
+        "nearestTraumaHospital": "Avera Heart Hospital of South Dakota",
+        "hospitalAddress": "4500 W 69th St, Sioux Falls, SD 57108",
+        "cmsFacilityId": "430095",
+        "emergencyServices": true,
+        "source": "CMS Care Compare hospital general information (dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma or nearest claim.",
+        "erHospitals": [
+          {
+            "name": "Avera Heart Hospital of South Dakota",
+            "address": "4500 W 69th St, Sioux Falls, SD 57108",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "430095"
+          },
+          {
+            "name": "Avera Mckennan Hospital & University Health Center",
+            "address": "1325 S Cliff Ave Post Office Box 5045, Sioux Falls, SD 57117",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "430016"
+          },
+          {
+            "name": "Sanford Usd Medical Center",
+            "address": "1305 W 18th St Post Office Box 5039, Sioux Falls, SD 57117",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "430027"
+          },
+          {
+            "name": "Sioux Falls VA Medical Center",
+            "address": "2501 West 22nd Street, Sioux Falls, SD 57117",
+            "type": "Acute Care - Veterans Administration",
+            "cmsFacilityId": "43005F"
+          }
+        ],
+        "erHospitalsSource": "CMS Care Compare hospital general information (dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma or nearest claim."
       },
-      "visitorLogistics": {
-        "tapWaterPotability": "100% Safe municipal drinking water conforming to EPA Safe Drinking Water Act standards.",
-        "salesTaxRefundPolicy": "International travelers may claim state sales tax refunds on qualifying departures at designated airport customs counters.",
-        "rideshareAvailability": "Ubiquitous (Uber and Lyft operational 24/7 across the metropolitan area)."
-      },
-      "provenance": {
-        "sourceName": "FAA Airport Database & International Trade Administration",
-        "sourceUrl": "https://www.trade.gov/",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
+      "primaryAirport": {
+        "name": "Sioux Falls Regional Airport",
+        "iata": "FSD",
+        "lat": 43.585463,
+        "lng": -96.741152,
+        "distanceMiles": 3.1,
+        "transitToDowntown": null,
+        "source": "OurAirports (public domain) for name, IATA code and coordinates; distance is straight-line from the U.S. Census Gazetteer city center point",
+        "sourceUrl": "https://ourairports.com/data/",
+        "cityCenterMethod": "Census Gazetteer internal point",
+        "retrieved": "2026-10-31"
       }
+    },
+    "housingAndTaxes": {
+      "medianHomeValue": 271400,
+      "medianGrossRent": 993,
+      "medianRealEstateTaxPaid": 3201,
+      "effectivePropertyTaxRatePct": 1.18,
+      "countyName": "Minnehaha County",
+      "source": "ACS 2023 5-yr: B25077 median home value, B25064 median gross rent, B25103 median real estate taxes paid. Effective rate = B25103 / B25077.",
+      "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/"
+    },
+    "climateNormals": {
+      "peakSummerHighF": 85,
+      "winterLowF": 7,
+      "annualRainfallInches": 28.3,
+      "sourceName": "NOAA NCEI U.S. Climate Normals 1991-2020 (Station USC00397666, 3.3 mi from Gazetteer center), retrieved 2026-10-31",
+      "sourceUrl": "https://www.ncei.noaa.gov/products/land-based-station/us-climate-normals"
+    },
+    "waterUtility": {
+      "pwsid": "SD4600294",
+      "providerName": "Sioux Falls",
+      "populationServed": 216462,
+      "sourceType": "surface water",
+      "source": "U.S. EPA Safe Drinking Water Information System (SDWIS)",
+      "sourceUrl": "https://data.epa.gov/efservice/WATER_SYSTEM/PWSID/SD4600294/JSON",
+      "retrieved": "2026-10-31"
+    },
+    "higherEducation": {
+      "institutionCount": 7,
+      "totalEnrollment": 5887,
+      "institutions": [
+        {
+          "id": 219426,
+          "name": "Southeast Technical College",
+          "studentSize": 2310,
+          "ownership": "Public",
+          "schoolUrl": "https://www.southeasttech.edu/",
+          "lat": 43.570446,
+          "lng": -96.780241
+        },
+        {
+          "id": 219000,
+          "name": "Augustana University",
+          "studentSize": 1965,
+          "ownership": "Private nonprofit",
+          "schoolUrl": "https://www.augie.edu/",
+          "lat": 43.525148,
+          "lng": -96.736975
+        },
+        {
+          "id": 219383,
+          "name": "University of Sioux Falls",
+          "studentSize": 1218,
+          "ownership": "Private nonprofit",
+          "schoolUrl": "https://www.usiouxfalls.edu/",
+          "lat": 43.531574,
+          "lng": -96.738229
+        },
+        {
+          "id": 485546,
+          "name": "California Intercontinental University",
+          "studentSize": 151,
+          "ownership": "Private for-profit",
+          "schoolUrl": "https://www.caluniversity.edu/",
+          "lat": 43.547576,
+          "lng": -96.723619
+        },
+        {
+          "id": 219453,
+          "name": "Stewart School",
+          "studentSize": 133,
+          "ownership": "Private for-profit",
+          "schoolUrl": "https://www.stewartschool.com/",
+          "lat": 43.554991,
+          "lng": -96.746329
+        },
+        {
+          "id": 219240,
+          "name": "Kairos University",
+          "studentSize": 82,
+          "ownership": "Private nonprofit",
+          "schoolUrl": "https://www.kairos.edu/",
+          "lat": 43.525446,
+          "lng": -96.735896
+        }
+      ],
+      "sourceName": "U.S. Department of Education College Scorecard",
+      "sourceUrl": "https://collegescorecard.ed.gov/",
+      "retrieved": "2026-10-31"
+    },
+    "evInfrastructure": {
+      "totalStations": 30,
+      "totalChargingPorts": 107,
+      "dcFastPorts": 35,
+      "level2Ports": 72,
+      "sampleStations": [
+        {
+          "name": "Sioux Falls Regional Airport (Level 4)",
+          "address": "2801 N Jaycee Lane, Sioux Falls, SD 57104",
+          "network": "SYNERGEV",
+          "dcFastPorts": 0,
+          "level2Ports": 17,
+          "lat": 43.58025,
+          "lng": -96.73139
+        },
+        {
+          "name": "Sioux Falls, SD - Tesla Supercharger",
+          "address": "1900 South Marion Rd, Sioux Falls, SD 57106",
+          "network": "Tesla",
+          "dcFastPorts": 8,
+          "level2Ports": 0,
+          "lat": 43.527665,
+          "lng": -96.790577
+        },
+        {
+          "name": "Sioux Falls Ford",
+          "address": "4901 W 26th St, Sioux Falls, SD 57106",
+          "network": "SYNERGEV",
+          "dcFastPorts": 7,
+          "level2Ports": 0,
+          "lat": 43.527217,
+          "lng": -96.787381
+        },
+        {
+          "name": "Quality Inn Airport North (Sioux Falls, SD)",
+          "address": "5410 N Granite Ln, Sioux Falls, SD 57107",
+          "network": "Electrify America",
+          "dcFastPorts": 6,
+          "level2Ports": 0,
+          "lat": 43.60706,
+          "lng": -96.76754
+        },
+        {
+          "name": "Cadillac Of Sioux Falls",
+          "address": "101 S CAROLYN AVE, SIOUX FALLS, SD 57107",
+          "network": "EV Connect",
+          "dcFastPorts": 3,
+          "level2Ports": 2,
+          "lat": 43.545173,
+          "lng": -96.778556
+        }
+      ],
+      "sourceName": "U.S. Department of Energy / NLR Alternative Fuels Data Center (AFDC)",
+      "sourceUrl": "https://afdc.energy.gov/stations",
+      "retrieved": "2026-10-31"
+    },
+    "nationalParks": {
+      "parks": [
+        {
+          "parkCode": "pipe",
+          "fullName": "Pipestone National Monument",
+          "designation": "National Monument",
+          "distanceMiles": 38.5,
+          "description": "For over 3,000 years, Indigenous people have quarried the red stone at this site to make pipes used in prayer and ceremony - a tradition that continues to this day and makes this site sacred to many people.",
+          "url": "https://www.nps.gov/pipe/index.htm",
+          "lat": 44.01352,
+          "lng": -96.324755
+        }
+      ],
+      "sourceName": "U.S. National Park Service",
+      "sourceUrl": "https://www.nps.gov/",
+      "retrieved": "2026-10-31"
     }
   },
   {
-    "slug": "sd/rapid",
+    "slug": "sd/rapid-city",
     "cityId": "4652980",
-    "countyFips": "46529",
-    "name": "Rapid",
+    "countyFips": "46103",
+    "name": "Rapid City",
     "stateCode": "sd",
     "stateName": "South Dakota",
-    "countyName": "Rapid Metropolitan Area",
+    "countyName": "Pennington County",
     "lat": 44.071071,
     "lng": -103.217924,
     "primaryZips": [
-      "70461"
+      "57701",
+      "57702",
+      "57703"
     ],
     "demographics": {
       "population": 79404,
-      "popGrowth5YrPct": 6.0,
-      "medianHouseholdIncome": 88781,
-      "perCapitaIncome": 51493,
-      "medianAge": 36.4,
-      "daytimeWorkerPop": 49230,
-      "daytimePopSurgePct": 8.5,
-      "medianGrossRent": 1707,
-      "medianHomeValue": 372880,
+      "medianHouseholdIncome": 65712,
+      "perCapitaIncome": 40447,
+      "medianAge": 39.0,
+      "medianGrossRent": 1053,
+      "medianHomeValue": 270000,
       "provenance": {
-        "sourceName": "US Census Bureau ACS 5-Year (DP03/DP04/DP05) & PopEst",
-        "sourceUrl": "https://api.census.gov/data/2023/acs/acs5",
-        "datasetVintage": "2023-5YR",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "sourceName": "US Census Bureau ACS 5-Year Estimates 2023 (Table-Based Summary File)",
+        "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/",
+        "datasetVintage": "ACS-2023-5YR",
+        "verifiedAt": "2026-10-31T00:00:00Z",
         "granularity": "place"
-      }
-    },
-    "laborAndEconomy": {
-      "unemploymentRatePct": 3.8,
-      "avgWeeklyWageAllIndustries": 1340,
-      "newHousingPermits12Mo": 596,
-      "permitsPer1kResidents": 7.5,
-      "femaRiskScore": 28.0,
-      "provenance": {
-        "sourceName": "BLS Local Area Unemployment Statistics (LAUS) & Census BPS",
-        "sourceUrl": "https://www.bls.gov/lau/",
-        "datasetVintage": "2024-M08",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
-      }
+      },
+      "popChange2020to2023Pct": 6.3,
+      "popChangeBasis": "Census Population Estimates, April 2020 base to July 2023"
     },
     "industries": [
       {
         "naicsCode": "722515",
         "slug": "coffee-shops",
         "label": "Coffee & Snack Shops",
-        "establishments": 17,
-        "per10kResidents": 2.14,
-        "usAvgPer10k": 2.15,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 38,
+        "per10kResidents": 3.86,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 182,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Rapid."
+          "evidenceQuote": "38 employer establishments (NAICS 722515) across 3 ZIP codes whose USPS city is Rapid City, SD; density uses ACS 2023 ZCTA population (98,535). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722511",
         "slug": "restaurants",
         "label": "Full-Service Restaurants",
-        "establishments": 54,
-        "per10kResidents": 6.8,
-        "usAvgPer10k": 6.8,
-        "saturationIndex": 100,
+        "establishments": 81,
+        "per10kResidents": 8.22,
+        "usAvgPer10k": 7.44,
+        "saturationIndex": 111,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Rapid."
+          "evidenceQuote": "81 employer establishments (NAICS 722511) across 3 ZIP codes whose USPS city is Rapid City, SD; density uses ACS 2023 ZCTA population (98,535). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722513",
         "slug": "fast-food",
-        "label": "Fast Food Restaurants",
-        "establishments": 57,
-        "per10kResidents": 7.18,
-        "usAvgPer10k": 7.2,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Limited-Service / Fast Food Restaurants",
+        "establishments": 94,
+        "per10kResidents": 9.54,
+        "usAvgPer10k": 7.75,
+        "saturationIndex": 123,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Rapid."
+          "evidenceQuote": "94 employer establishments (NAICS 722513) across 3 ZIP codes whose USPS city is Rapid City, SD; density uses ACS 2023 ZCTA population (98,535). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722410",
         "slug": "bars-taverns",
-        "label": "Bars & Drinking Places",
-        "establishments": 15,
-        "per10kResidents": 1.89,
-        "usAvgPer10k": 1.85,
-        "saturationIndex": 102,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Drinking Places (Alcoholic Beverages)",
+        "establishments": 17,
+        "per10kResidents": 1.73,
+        "usAvgPer10k": 0.9,
+        "saturationIndex": 191,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Rapid."
-        }
-      },
-      {
-        "naicsCode": "812111",
-        "slug": "barber-shops",
-        "label": "Barber Shops",
-        "establishments": 11,
-        "per10kResidents": 1.39,
-        "usAvgPer10k": 1.35,
-        "saturationIndex": 102,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Rapid."
+          "evidenceQuote": "17 employer establishments (NAICS 722410) across 3 ZIP codes whose USPS city is Rapid City, SD; density uses ACS 2023 ZCTA population (98,535). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812112",
         "slug": "beauty-salons",
         "label": "Beauty Salons & Hair Studios",
-        "establishments": 27,
-        "per10kResidents": 3.4,
-        "usAvgPer10k": 3.4,
-        "saturationIndex": 100,
+        "establishments": 23,
+        "per10kResidents": 2.33,
+        "usAvgPer10k": 2.31,
+        "saturationIndex": 101,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Rapid."
+          "evidenceQuote": "23 employer establishments (NAICS 812112) across 3 ZIP codes whose USPS city is Rapid City, SD; density uses ACS 2023 ZCTA population (98,535). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812113",
         "slug": "nail-salons",
         "label": "Nail Salons",
-        "establishments": 17,
-        "per10kResidents": 2.14,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 102,
+        "establishments": 7,
+        "per10kResidents": 0.71,
+        "usAvgPer10k": 0.86,
+        "saturationIndex": 83,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Rapid."
+          "evidenceQuote": "7 employer establishments (NAICS 812113) across 3 ZIP codes whose USPS city is Rapid City, SD; density uses ACS 2023 ZCTA population (98,535). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "713940",
         "slug": "gyms-fitness",
-        "label": "Fitness & Recreational Gyms",
-        "establishments": 10,
-        "per10kResidents": 1.26,
-        "usAvgPer10k": 1.25,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Fitness & Recreational Sports Centers",
+        "establishments": 14,
+        "per10kResidents": 1.42,
+        "usAvgPer10k": 1.0,
+        "saturationIndex": 143,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Rapid."
+          "evidenceQuote": "14 employer establishments (NAICS 713940) across 3 ZIP codes whose USPS city is Rapid City, SD; density uses ACS 2023 ZCTA population (98,535). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812910",
         "slug": "pet-care",
-        "label": "Pet Care & Grooming",
-        "establishments": 8,
-        "per10kResidents": 1.01,
-        "usAvgPer10k": 0.95,
-        "saturationIndex": 105,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Pet Care & Grooming Services",
+        "establishments": 15,
+        "per10kResidents": 1.52,
+        "usAvgPer10k": 0.46,
+        "saturationIndex": 328,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Rapid."
+          "evidenceQuote": "15 employer establishments (NAICS 812910) across 3 ZIP codes whose USPS city is Rapid City, SD; density uses ACS 2023 ZCTA population (98,535). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541940",
         "slug": "veterinary",
-        "label": "Veterinary Services",
-        "establishments": 8,
-        "per10kResidents": 1.01,
-        "usAvgPer10k": 1.05,
-        "saturationIndex": 96,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Veterinary Services & Animal Hospitals",
+        "establishments": 14,
+        "per10kResidents": 1.42,
+        "usAvgPer10k": 0.69,
+        "saturationIndex": 206,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Rapid."
+          "evidenceQuote": "14 employer establishments (NAICS 541940) across 3 ZIP codes whose USPS city is Rapid City, SD; density uses ACS 2023 ZCTA population (98,535). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "811111",
         "slug": "auto-repair",
         "label": "General Automotive Repair",
-        "establishments": 38,
-        "per10kResidents": 4.79,
-        "usAvgPer10k": 4.8,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 41,
+        "per10kResidents": 4.16,
+        "usAvgPer10k": 2.2,
+        "saturationIndex": 189,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Rapid."
+          "evidenceQuote": "41 employer establishments (NAICS 811111) across 3 ZIP codes whose USPS city is Rapid City, SD; density uses ACS 2023 ZCTA population (98,535). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "811192",
         "slug": "car-washes",
-        "label": "Car Washes & Detailing",
-        "establishments": 5,
-        "per10kResidents": 0.63,
-        "usAvgPer10k": 0.65,
-        "saturationIndex": 97,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Car Washes & Auto Detailing",
+        "establishments": 20,
+        "per10kResidents": 2.03,
+        "usAvgPer10k": 0.35,
+        "saturationIndex": 580,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Rapid."
-        }
-      },
-      {
-        "naicsCode": "812310",
-        "slug": "laundromats",
-        "label": "Coin Laundromats",
-        "establishments": 4,
-        "per10kResidents": 0.5,
-        "usAvgPer10k": 0.55,
-        "saturationIndex": 93,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Rapid."
-        }
-      },
-      {
-        "naicsCode": "812320",
-        "slug": "dry-cleaners",
-        "label": "Dry Cleaning & Laundry",
-        "establishments": 7,
-        "per10kResidents": 0.88,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 103,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Rapid."
+          "evidenceQuote": "20 employer establishments (NAICS 811192) across 3 ZIP codes whose USPS city is Rapid City, SD; density uses ACS 2023 ZCTA population (98,535). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621210",
         "slug": "dentists",
         "label": "Offices of Dentists",
-        "establishments": 31,
-        "per10kResidents": 3.9,
-        "usAvgPer10k": 3.9,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 57,
+        "per10kResidents": 5.78,
+        "usAvgPer10k": 3.89,
+        "saturationIndex": 149,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Rapid."
+          "evidenceQuote": "57 employer establishments (NAICS 621210) across 3 ZIP codes whose USPS city is Rapid City, SD; density uses ACS 2023 ZCTA population (98,535). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621310",
         "slug": "chiropractors",
         "label": "Offices of Chiropractors",
-        "establishments": 11,
-        "per10kResidents": 1.39,
-        "usAvgPer10k": 1.4,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 31,
+        "per10kResidents": 3.15,
+        "usAvgPer10k": 0.97,
+        "saturationIndex": 324,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Rapid."
+          "evidenceQuote": "31 employer establishments (NAICS 621310) across 3 ZIP codes whose USPS city is Rapid City, SD; density uses ACS 2023 ZCTA population (98,535). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621340",
         "slug": "physical-therapy",
-        "label": "Physical Therapy Clinics",
-        "establishments": 12,
-        "per10kResidents": 1.51,
-        "usAvgPer10k": 1.55,
-        "saturationIndex": 98,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Physical, Occupational & Speech Therapists",
+        "establishments": 20,
+        "per10kResidents": 2.03,
+        "usAvgPer10k": 1.3,
+        "saturationIndex": 156,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Rapid."
+          "evidenceQuote": "20 employer establishments (NAICS 621340) across 3 ZIP codes whose USPS city is Rapid City, SD; density uses ACS 2023 ZCTA population (98,535). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "624410",
         "slug": "daycare",
         "label": "Child Day Care Services",
-        "establishments": 18,
-        "per10kResidents": 2.27,
-        "usAvgPer10k": 2.25,
-        "saturationIndex": 101,
+        "establishments": 24,
+        "per10kResidents": 2.44,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 115,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Rapid."
+          "evidenceQuote": "24 employer establishments (NAICS 624410) across 3 ZIP codes whose USPS city is Rapid City, SD; density uses ACS 2023 ZCTA population (98,535). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "445120",
         "slug": "convenience-stores",
-        "label": "Convenience Stores",
-        "establishments": 15,
-        "per10kResidents": 1.89,
-        "usAvgPer10k": 1.95,
-        "saturationIndex": 97,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Convenience Retail Stores",
+        "establishments": 0,
+        "per10kResidents": 0.0,
+        "usAvgPer10k": 0.82,
+        "saturationIndex": 0,
+        "status": "underserved",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Rapid."
+          "evidenceQuote": "0 employer establishments (NAICS 445120) across 3 ZIP codes whose USPS city is Rapid City, SD; density uses ACS 2023 ZCTA population (98,535). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "448140",
         "slug": "clothing-boutiques",
-        "label": "Family Clothing Stores",
-        "establishments": 13,
-        "per10kResidents": 1.64,
-        "usAvgPer10k": 1.65,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Family Clothing Stores & Boutiques",
+        "establishments": 12,
+        "per10kResidents": 1.22,
+        "usAvgPer10k": 0.65,
+        "saturationIndex": 187,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Rapid."
-        }
-      },
-      {
-        "naicsCode": "445291",
-        "slug": "bakeries",
-        "label": "Retail Bakeries",
-        "establishments": 7,
-        "per10kResidents": 0.88,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 103,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Rapid."
-        }
-      },
-      {
-        "naicsCode": "453110",
-        "slug": "florists",
-        "label": "Florists & Floral Gift",
-        "establishments": 4,
-        "per10kResidents": 0.5,
-        "usAvgPer10k": 0.5,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Rapid."
+          "evidenceQuote": "12 employer establishments (NAICS 448140) across 3 ZIP codes whose USPS city is Rapid City, SD; density uses ACS 2023 ZCTA population (98,535). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541110",
         "slug": "law-firms",
         "label": "Offices of Lawyers",
-        "establishments": 39,
-        "per10kResidents": 4.91,
-        "usAvgPer10k": 4.9,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 67,
+        "per10kResidents": 6.8,
+        "usAvgPer10k": 4.8,
+        "saturationIndex": 142,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Rapid."
+          "evidenceQuote": "67 employer establishments (NAICS 541110) across 3 ZIP codes whose USPS city is Rapid City, SD; density uses ACS 2023 ZCTA population (98,535). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541211",
         "slug": "accounting-cpa",
-        "label": "Offices of CPAs",
-        "establishments": 17,
-        "per10kResidents": 2.14,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 102,
+        "label": "Offices of Certified Public Accountants",
+        "establishments": 16,
+        "per10kResidents": 1.62,
+        "usAvgPer10k": 1.44,
+        "saturationIndex": 113,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Rapid."
+          "evidenceQuote": "16 employer establishments (NAICS 541211) across 3 ZIP codes whose USPS city is Rapid City, SD; density uses ACS 2023 ZCTA population (98,535). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "531210",
         "slug": "real-estate-agencies",
-        "label": "Real Estate Brokerages",
-        "establishments": 30,
-        "per10kResidents": 3.78,
-        "usAvgPer10k": 3.8,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Offices of Real Estate Agents & Brokers",
+        "establishments": 107,
+        "per10kResidents": 10.86,
+        "usAvgPer10k": 4.74,
+        "saturationIndex": 229,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Rapid."
+          "evidenceQuote": "107 employer establishments (NAICS 531210) across 3 ZIP codes whose USPS city is Rapid City, SD; density uses ACS 2023 ZCTA population (98,535). National benchmark = all US ZIP rows / US population."
         }
       }
     ],
-    "permitsAndTax": {
-      "generalBusinessLicenseRequired": false,
-      "businessLicenseFeeSummary": "No general city business license required. State of South Dakota statutory filings apply.",
-      "businessLicensePortalUrl": "https://www.rapidsd.gov/permits",
-      "zoningLookupUrl": "https://www.rapidsd.gov/zoning",
-      "buildingPermitPortalUrl": "https://www.rapidsd.gov/building",
-      "certificateOfOccupancyFee": "$185 standard municipal inspection fee",
-      "avgPermitWaitDays": 30,
-      "shortTermRentalStatus": "restricted",
-      "foodTruckPermitStatus": "allowed",
-      "combinedSalesTaxRate": 0.057,
-      "stateTaxRate": 0.042,
-      "localTaxRate": 0.015,
-      "provenance": {
-        "sourceName": "Rapid Municipal Code & State Department of Revenue",
-        "sourceUrl": "https://www.rapidsd.gov",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place",
-        "evidenceQuote": "Statutory municipal code standards."
-      }
-    },
-    "topTrafficCorridors": [
-      {
-        "roadName": "Main Arterial Corridor 1",
-        "segmentDescription": "Central Commercial Corridor through Rapid",
-        "aadt": 9528,
-        "heavyTruckPct": 5.5,
-        "lat": 44.071071,
-        "lng": -103.217924,
-        "year": 2024,
-        "provenance": {
-          "sourceName": "South Dakota DOT AADT Database",
-          "sourceUrl": "https://www.transportation.gov/",
-          "datasetVintage": "2024-AADT",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "place"
-        }
-      }
-    ],
-    "marketSignals": {
-      "reportedRetailRentSqFtYr": 44.6,
-      "reportedIndustrialRentSqFtYr": 20.1,
-      "topSearchedNaics30d": [
-        "722515",
-        "713940",
-        "812111"
-      ],
-      "verifiedLocalProsCount": 8
-    },
-    "scores": {
-      "overallViability": 62,
-      "purchasingPower": 59,
-      "growthMomentum": 65,
-      "costEfficiency": 63,
-      "regulatoryFriction": 48
-    },
+    "marketSignals": {},
     "executiveTravel": {
-      "timeZone": "America/Chicago (CT: UTC-06:00)",
-      "timeZoneAbbr": "CT",
-      "utcOffset": "-06:00",
-      "primaryAirport": {
-        "name": "Rapid Regional / Metropolitan Airport",
-        "iata": null,
-        "distanceMiles": 10.6,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
-      },
-      "powerPlugs": {
-        "types": [
-          "Type A (2-pin)",
-          "Type B (3-pin grounded)"
-        ],
-        "voltage": "120V",
-        "frequency": "60Hz",
-        "adapterAdvice": "Visitors from UK, EU, Australia, and Asia require a standard Type A/B plug adapter and dual-voltage converter."
-      },
-      "currency": {
-        "code": "USD",
-        "symbol": "$",
-        "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
-        "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
-      },
-      "climate": {
-        "summerHighF": 84,
-        "winterLowF": 22,
-        "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
-        "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
-      },
+      "timeZone": "America/Denver",
+      "timeZoneAbbr": "MT",
+      "utcOffset": "-07:00",
       "emergency": {
         "emergencyDispatch": "911",
-        "nonEmergencyPolice": "311 or local municipal dispatch",
-        "nearestTraumaHospital": "Rapid Regional Memorial Hospital",
-        "hospitalAddress": "Medical Center District, Rapid, SD"
+        "nearestTraumaHospital": "Monument Health Rapid City Hospital",
+        "hospitalAddress": "353 Fairmont Blvd, Rapid City, SD 57701",
+        "cmsFacilityId": "430077",
+        "emergencyServices": true,
+        "source": "CMS Care Compare hospital general information (dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma or nearest claim.",
+        "erHospitals": [
+          {
+            "name": "Monument Health Rapid City Hospital",
+            "address": "353 Fairmont Blvd, Rapid City, SD 57701",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "430077"
+          }
+        ],
+        "erHospitalsSource": "CMS Care Compare hospital general information (dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma or nearest claim."
       },
-      "visitorLogistics": {
-        "tapWaterPotability": "100% Safe municipal drinking water conforming to EPA Safe Drinking Water Act standards.",
-        "salesTaxRefundPolicy": "International travelers may claim state sales tax refunds on qualifying departures at designated airport customs counters.",
-        "rideshareAvailability": "Ubiquitous (Uber and Lyft operational 24/7 across the metropolitan area)."
-      },
-      "provenance": {
-        "sourceName": "FAA Airport Database & International Trade Administration",
-        "sourceUrl": "https://www.trade.gov/",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
+      "primaryAirport": {
+        "name": "Rapid City Regional Airport",
+        "iata": "RAP",
+        "lat": 44.0453,
+        "lng": -103.056999,
+        "distanceMiles": 8.2,
+        "transitToDowntown": null,
+        "source": "OurAirports (public domain) for name, IATA code and coordinates; distance is straight-line from the U.S. Census Gazetteer city center point",
+        "sourceUrl": "https://ourairports.com/data/",
+        "cityCenterMethod": "Census Gazetteer internal point",
+        "retrieved": "2026-10-31"
       }
+    },
+    "housingAndTaxes": {
+      "medianHomeValue": 270000,
+      "medianGrossRent": 1053,
+      "medianRealEstateTaxPaid": 3058,
+      "effectivePropertyTaxRatePct": 1.13,
+      "countyName": "Pennington County",
+      "source": "ACS 2023 5-yr: B25077 median home value, B25064 median gross rent, B25103 median real estate taxes paid. Effective rate = B25103 / B25077.",
+      "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/"
+    },
+    "climateNormals": {
+      "peakSummerHighF": 84,
+      "winterLowF": 16,
+      "annualRainfallInches": 20.0,
+      "sourceName": "NOAA NCEI U.S. Climate Normals 1991-2020 (Station USC00396948, 0.4 mi from Gazetteer center), retrieved 2026-10-31",
+      "sourceUrl": "https://www.ncei.noaa.gov/products/land-based-station/us-climate-normals"
+    },
+    "waterUtility": {
+      "pwsid": "SD4600406",
+      "providerName": "Rapid City",
+      "populationServed": 72009,
+      "sourceType": "surface water",
+      "source": "U.S. EPA Safe Drinking Water Information System (SDWIS)",
+      "sourceUrl": "https://data.epa.gov/efservice/WATER_SYSTEM/PWSID/SD4600406/JSON",
+      "retrieved": "2026-10-31"
+    },
+    "higherEducation": {
+      "institutionCount": 5,
+      "totalEnrollment": 3734,
+      "institutions": [
+        {
+          "id": 219347,
+          "name": "South Dakota School of Mines and Technology",
+          "studentSize": 2071,
+          "ownership": "Public",
+          "schoolUrl": "https://www.sdsmt.edu/",
+          "lat": 44.075439,
+          "lng": -103.205753
+        },
+        {
+          "id": 219204,
+          "name": "National American University-Rapid City",
+          "studentSize": 764,
+          "ownership": "Private for-profit",
+          "schoolUrl": "https://www.national.edu/locations/campuses/rapid-city/",
+          "lat": 44.061498,
+          "lng": -103.286487
+        },
+        {
+          "id": 219480,
+          "name": "Western Dakota Technical College",
+          "studentSize": 753,
+          "ownership": "Public",
+          "schoolUrl": "https://www.wdt.edu/",
+          "lat": 44.076648,
+          "lng": -103.179501
+        },
+        {
+          "id": 219037,
+          "name": "The Salon Professional Academy",
+          "studentSize": 80,
+          "ownership": "Private for-profit",
+          "schoolUrl": "https://www.tsparapidcity.com/",
+          "lat": 44.086343,
+          "lng": -103.194526
+        },
+        {
+          "id": 219125,
+          "name": "Paul Mitchell the School-Rapid City",
+          "studentSize": 66,
+          "ownership": "Private for-profit",
+          "schoolUrl": "https://paulmitchell.edu/rapidcity",
+          "lat": 44.08202,
+          "lng": -103.222781
+        }
+      ],
+      "sourceName": "U.S. Department of Education College Scorecard",
+      "sourceUrl": "https://collegescorecard.ed.gov/",
+      "retrieved": "2026-10-31"
+    },
+    "evInfrastructure": {
+      "totalStations": 21,
+      "totalChargingPorts": 35,
+      "dcFastPorts": 11,
+      "level2Ports": 24,
+      "sampleStations": [
+        {
+          "name": "Doubletree by Hilton Rapid City Downtown Convention Center - Tesla Destination",
+          "address": "505 North 5th Street, Rapid City, SD 57701",
+          "network": "Tesla Destination",
+          "dcFastPorts": 0,
+          "level2Ports": 6,
+          "lat": 44.087714,
+          "lng": -103.223608
+        },
+        {
+          "name": "Rapid City, SD - Tesla Supercharger",
+          "address": "2200 N. Maple Ave., Rapid City, SD 57701",
+          "network": "Tesla",
+          "dcFastPorts": 4,
+          "level2Ports": 0,
+          "lat": 44.105612,
+          "lng": -103.212517
+        },
+        {
+          "name": "Granite Automotive",
+          "address": "2454 East Mall Drive, Rapid City, SD 57701",
+          "network": "Blink Network",
+          "dcFastPorts": 2,
+          "level2Ports": 0,
+          "lat": 44.103358,
+          "lng": -103.174986
+        },
+        {
+          "name": "Liberty Mitsubishi",
+          "address": "600 Cambell St, Rapid City, SD 57701",
+          "network": "Non-Networked",
+          "dcFastPorts": 0,
+          "level2Ports": 2,
+          "lat": 44.076491,
+          "lng": -103.189869
+        },
+        {
+          "name": "HORIZON POINT HPWESTPARK 1",
+          "address": "7001 Mt Rushmore Rd, Rapid City, SD 57702",
+          "network": "ChargePoint Network",
+          "dcFastPorts": 0,
+          "level2Ports": 2,
+          "lat": 44.018018,
+          "lng": -103.254506
+        }
+      ],
+      "sourceName": "U.S. Department of Energy / NLR Alternative Fuels Data Center (AFDC)",
+      "sourceUrl": "https://afdc.energy.gov/stations",
+      "retrieved": "2026-10-31"
+    },
+    "nationalParks": {
+      "parks": [
+        {
+          "parkCode": "moru",
+          "fullName": "Mount Rushmore National Memorial",
+          "designation": "National Memorial",
+          "distanceMiles": 17.6,
+          "description": "Majestic figures of George Washington, Thomas Jefferson, Theodore Roosevelt and Abraham Lincoln, surrounded by the beauty of the Black Hills of South Dakota, tell the story of the birth, growth, development and preservation of this...",
+          "url": "https://www.nps.gov/moru/index.htm",
+          "lat": 43.88037,
+          "lng": -103.452519
+        },
+        {
+          "parkCode": "wica",
+          "fullName": "Wind Cave National Park",
+          "designation": "National Park",
+          "distanceMiles": 35.7,
+          "description": "Wind Cave National Park protects two very different worlds - one deep within the earth, the other a sunlit world of many resources. Bison, elk, and other wildlife roam the rolling prairie grasslands and forested hillsides of one of...",
+          "url": "https://www.nps.gov/wica/index.htm",
+          "lat": 43.580124,
+          "lng": -103.439471
+        },
+        {
+          "parkCode": "jeca",
+          "fullName": "Jewel Cave National Monument",
+          "designation": "National Monument",
+          "distanceMiles": 38.5,
+          "description": "Immerse yourself in one of the longest caves in the world. With over 220 miles of mapped and surveyed passages, this underground wilderness appeals to human curiosity. Its splendor is revealed through fragile formations and glimpses of...",
+          "url": "https://www.nps.gov/jeca/index.htm",
+          "lat": 43.731029,
+          "lng": -103.829994
+        },
+        {
+          "parkCode": "badl",
+          "fullName": "Badlands National Park",
+          "designation": "National Park",
+          "distanceMiles": 45.3,
+          "description": "The rugged beauty of the Badlands draws visitors from around the world. These striking geologic deposits contain one of the world’s richest fossil beds. Ancient horses and rhinos once roamed here. The park’s 244,000 acres protect an...",
+          "url": "https://www.nps.gov/badl/index.htm",
+          "lat": 43.685848,
+          "lng": -102.482942
+        }
+      ],
+      "sourceName": "U.S. National Park Service",
+      "sourceUrl": "https://www.nps.gov/",
+      "retrieved": "2026-10-31"
     }
   },
   {
     "slug": "sd/aberdeen",
     "cityId": "4600100",
-    "countyFips": "46001",
+    "countyFips": "46013",
     "name": "Aberdeen",
     "stateCode": "sd",
     "stateName": "South Dakota",
-    "countyName": "Aberdeen Metropolitan Area",
+    "countyName": "Brown County",
     "lat": 45.464678,
     "lng": -98.468104,
     "primaryZips": [
-      "71401"
+      "57401"
     ],
     "demographics": {
       "population": 28110,
-      "popGrowth5YrPct": -1.1,
-      "medianHouseholdIncome": 78302,
-      "perCapitaIncome": 45415,
-      "medianAge": 36.4,
-      "daytimeWorkerPop": 17428,
-      "daytimePopSurgePct": 8.5,
-      "medianGrossRent": 1506,
-      "medianHomeValue": 328868,
+      "medianHouseholdIncome": 63715,
+      "perCapitaIncome": 36668,
+      "medianAge": 35.8,
+      "medianGrossRent": 783,
+      "medianHomeValue": 205500,
       "provenance": {
-        "sourceName": "US Census Bureau ACS 5-Year (DP03/DP04/DP05) & PopEst",
-        "sourceUrl": "https://api.census.gov/data/2023/acs/acs5",
-        "datasetVintage": "2023-5YR",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "sourceName": "US Census Bureau ACS 5-Year Estimates 2023 (Table-Based Summary File)",
+        "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/",
+        "datasetVintage": "ACS-2023-5YR",
+        "verifiedAt": "2026-10-31T00:00:00Z",
         "granularity": "place"
-      }
-    },
-    "laborAndEconomy": {
-      "unemploymentRatePct": 3.8,
-      "avgWeeklyWageAllIndustries": 1340,
-      "newHousingPermits12Mo": 211,
-      "permitsPer1kResidents": 7.5,
-      "femaRiskScore": 28.0,
-      "provenance": {
-        "sourceName": "BLS Local Area Unemployment Statistics (LAUS) & Census BPS",
-        "sourceUrl": "https://www.bls.gov/lau/",
-        "datasetVintage": "2024-M08",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
-      }
+      },
+      "popChange2020to2023Pct": -1.3,
+      "popChangeBasis": "Census Population Estimates, April 2020 base to July 2023"
     },
     "industries": [
       {
@@ -1314,322 +1302,227 @@
         "slug": "coffee-shops",
         "label": "Coffee & Snack Shops",
         "establishments": 6,
-        "per10kResidents": 2.13,
-        "usAvgPer10k": 2.15,
-        "saturationIndex": 99,
+        "per10kResidents": 1.87,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 88,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Aberdeen."
+          "evidenceQuote": "6 employer establishments (NAICS 722515) across 1 ZIP codes whose USPS city is Aberdeen, SD; density uses ACS 2023 ZCTA population (32,064). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722511",
         "slug": "restaurants",
         "label": "Full-Service Restaurants",
-        "establishments": 19,
-        "per10kResidents": 6.76,
-        "usAvgPer10k": 6.8,
-        "saturationIndex": 100,
+        "establishments": 23,
+        "per10kResidents": 7.17,
+        "usAvgPer10k": 7.44,
+        "saturationIndex": 96,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Aberdeen."
+          "evidenceQuote": "23 employer establishments (NAICS 722511) across 1 ZIP codes whose USPS city is Aberdeen, SD; density uses ACS 2023 ZCTA population (32,064). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722513",
         "slug": "fast-food",
-        "label": "Fast Food Restaurants",
-        "establishments": 20,
-        "per10kResidents": 7.11,
-        "usAvgPer10k": 7.2,
-        "saturationIndex": 99,
+        "label": "Limited-Service / Fast Food Restaurants",
+        "establishments": 25,
+        "per10kResidents": 7.8,
+        "usAvgPer10k": 7.75,
+        "saturationIndex": 101,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Aberdeen."
+          "evidenceQuote": "25 employer establishments (NAICS 722513) across 1 ZIP codes whose USPS city is Aberdeen, SD; density uses ACS 2023 ZCTA population (32,064). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722410",
         "slug": "bars-taverns",
-        "label": "Bars & Drinking Places",
-        "establishments": 5,
-        "per10kResidents": 1.78,
-        "usAvgPer10k": 1.85,
-        "saturationIndex": 97,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Drinking Places (Alcoholic Beverages)",
+        "establishments": 11,
+        "per10kResidents": 3.43,
+        "usAvgPer10k": 0.9,
+        "saturationIndex": 380,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Aberdeen."
-        }
-      },
-      {
-        "naicsCode": "812111",
-        "slug": "barber-shops",
-        "label": "Barber Shops",
-        "establishments": 4,
-        "per10kResidents": 1.42,
-        "usAvgPer10k": 1.35,
-        "saturationIndex": 104,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Aberdeen."
+          "evidenceQuote": "11 employer establishments (NAICS 722410) across 1 ZIP codes whose USPS city is Aberdeen, SD; density uses ACS 2023 ZCTA population (32,064). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812112",
         "slug": "beauty-salons",
         "label": "Beauty Salons & Hair Studios",
-        "establishments": 10,
-        "per10kResidents": 3.56,
-        "usAvgPer10k": 3.4,
-        "saturationIndex": 103,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 4,
+        "per10kResidents": 1.25,
+        "usAvgPer10k": 2.31,
+        "saturationIndex": 54,
+        "status": "underserved",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Aberdeen."
+          "evidenceQuote": "4 employer establishments (NAICS 812112) across 1 ZIP codes whose USPS city is Aberdeen, SD; density uses ACS 2023 ZCTA population (32,064). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812113",
         "slug": "nail-salons",
         "label": "Nail Salons",
-        "establishments": 6,
-        "per10kResidents": 2.13,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 101,
+        "establishments": 3,
+        "per10kResidents": 0.94,
+        "usAvgPer10k": 0.86,
+        "saturationIndex": 109,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Aberdeen."
+          "evidenceQuote": "3 employer establishments (NAICS 812113) across 1 ZIP codes whose USPS city is Aberdeen, SD; density uses ACS 2023 ZCTA population (32,064). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "713940",
         "slug": "gyms-fitness",
-        "label": "Fitness & Recreational Gyms",
-        "establishments": 4,
-        "per10kResidents": 1.42,
-        "usAvgPer10k": 1.25,
-        "saturationIndex": 110,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Fitness & Recreational Sports Centers",
+        "establishments": 6,
+        "per10kResidents": 1.87,
+        "usAvgPer10k": 1.0,
+        "saturationIndex": 188,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Aberdeen."
-        }
-      },
-      {
-        "naicsCode": "812910",
-        "slug": "pet-care",
-        "label": "Pet Care & Grooming",
-        "establishments": 3,
-        "per10kResidents": 1.07,
-        "usAvgPer10k": 0.95,
-        "saturationIndex": 109,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Aberdeen."
+          "evidenceQuote": "6 employer establishments (NAICS 713940) across 1 ZIP codes whose USPS city is Aberdeen, SD; density uses ACS 2023 ZCTA population (32,064). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541940",
         "slug": "veterinary",
-        "label": "Veterinary Services",
-        "establishments": 3,
-        "per10kResidents": 1.07,
-        "usAvgPer10k": 1.05,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Veterinary Services & Animal Hospitals",
+        "establishments": 5,
+        "per10kResidents": 1.56,
+        "usAvgPer10k": 0.69,
+        "saturationIndex": 226,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Aberdeen."
+          "evidenceQuote": "5 employer establishments (NAICS 541940) across 1 ZIP codes whose USPS city is Aberdeen, SD; density uses ACS 2023 ZCTA population (32,064). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "811111",
         "slug": "auto-repair",
         "label": "General Automotive Repair",
-        "establishments": 13,
-        "per10kResidents": 4.62,
-        "usAvgPer10k": 4.8,
-        "saturationIndex": 97,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Aberdeen."
-        }
-      },
-      {
-        "naicsCode": "811192",
-        "slug": "car-washes",
-        "label": "Car Washes & Detailing",
-        "establishments": 2,
-        "per10kResidents": 0.71,
-        "usAvgPer10k": 0.65,
-        "saturationIndex": 107,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Aberdeen."
-        }
-      },
-      {
-        "naicsCode": "812310",
-        "slug": "laundromats",
-        "label": "Coin Laundromats",
-        "establishments": 2,
-        "per10kResidents": 0.71,
-        "usAvgPer10k": 0.55,
-        "saturationIndex": 122,
+        "establishments": 10,
+        "per10kResidents": 3.12,
+        "usAvgPer10k": 2.2,
+        "saturationIndex": 142,
         "status": "saturated",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Aberdeen."
-        }
-      },
-      {
-        "naicsCode": "812320",
-        "slug": "dry-cleaners",
-        "label": "Dry Cleaning & Laundry",
-        "establishments": 2,
-        "per10kResidents": 0.71,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 88,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Aberdeen."
+          "evidenceQuote": "10 employer establishments (NAICS 811111) across 1 ZIP codes whose USPS city is Aberdeen, SD; density uses ACS 2023 ZCTA population (32,064). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621210",
         "slug": "dentists",
         "label": "Offices of Dentists",
-        "establishments": 11,
-        "per10kResidents": 3.91,
-        "usAvgPer10k": 3.9,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 16,
+        "per10kResidents": 4.99,
+        "usAvgPer10k": 3.89,
+        "saturationIndex": 128,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Aberdeen."
+          "evidenceQuote": "16 employer establishments (NAICS 621210) across 1 ZIP codes whose USPS city is Aberdeen, SD; density uses ACS 2023 ZCTA population (32,064). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621310",
         "slug": "chiropractors",
         "label": "Offices of Chiropractors",
-        "establishments": 4,
-        "per10kResidents": 1.42,
-        "usAvgPer10k": 1.4,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 11,
+        "per10kResidents": 3.43,
+        "usAvgPer10k": 0.97,
+        "saturationIndex": 353,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Aberdeen."
+          "evidenceQuote": "11 employer establishments (NAICS 621310) across 1 ZIP codes whose USPS city is Aberdeen, SD; density uses ACS 2023 ZCTA population (32,064). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621340",
         "slug": "physical-therapy",
-        "label": "Physical Therapy Clinics",
-        "establishments": 4,
-        "per10kResidents": 1.42,
-        "usAvgPer10k": 1.55,
-        "saturationIndex": 94,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Physical, Occupational & Speech Therapists",
+        "establishments": 10,
+        "per10kResidents": 3.12,
+        "usAvgPer10k": 1.3,
+        "saturationIndex": 239,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Aberdeen."
+          "evidenceQuote": "10 employer establishments (NAICS 621340) across 1 ZIP codes whose USPS city is Aberdeen, SD; density uses ACS 2023 ZCTA population (32,064). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -1637,262 +1530,219 @@
         "slug": "daycare",
         "label": "Child Day Care Services",
         "establishments": 6,
-        "per10kResidents": 2.13,
-        "usAvgPer10k": 2.25,
-        "saturationIndex": 96,
+        "per10kResidents": 1.87,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 88,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Aberdeen."
+          "evidenceQuote": "6 employer establishments (NAICS 624410) across 1 ZIP codes whose USPS city is Aberdeen, SD; density uses ACS 2023 ZCTA population (32,064). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "445120",
         "slug": "convenience-stores",
-        "label": "Convenience Stores",
-        "establishments": 5,
-        "per10kResidents": 1.78,
-        "usAvgPer10k": 1.95,
-        "saturationIndex": 94,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Convenience Retail Stores",
+        "establishments": 0,
+        "per10kResidents": 0.0,
+        "usAvgPer10k": 0.82,
+        "saturationIndex": 0,
+        "status": "underserved",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Aberdeen."
+          "evidenceQuote": "0 employer establishments (NAICS 445120) across 1 ZIP codes whose USPS city is Aberdeen, SD; density uses ACS 2023 ZCTA population (32,064). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "448140",
         "slug": "clothing-boutiques",
-        "label": "Family Clothing Stores",
-        "establishments": 5,
-        "per10kResidents": 1.78,
-        "usAvgPer10k": 1.65,
-        "saturationIndex": 106,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Family Clothing Stores & Boutiques",
+        "establishments": 3,
+        "per10kResidents": 0.94,
+        "usAvgPer10k": 0.65,
+        "saturationIndex": 143,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Aberdeen."
-        }
-      },
-      {
-        "naicsCode": "445291",
-        "slug": "bakeries",
-        "label": "Retail Bakeries",
-        "establishments": 2,
-        "per10kResidents": 0.71,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 88,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Aberdeen."
-        }
-      },
-      {
-        "naicsCode": "453110",
-        "slug": "florists",
-        "label": "Florists & Floral Gift",
-        "establishments": 1,
-        "per10kResidents": 0.36,
-        "usAvgPer10k": 0.5,
-        "saturationIndex": 79,
-        "status": "underserved",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Aberdeen."
+          "evidenceQuote": "3 employer establishments (NAICS 448140) across 1 ZIP codes whose USPS city is Aberdeen, SD; density uses ACS 2023 ZCTA population (32,064). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541110",
         "slug": "law-firms",
         "label": "Offices of Lawyers",
-        "establishments": 14,
-        "per10kResidents": 4.98,
-        "usAvgPer10k": 4.9,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 19,
+        "per10kResidents": 5.93,
+        "usAvgPer10k": 4.8,
+        "saturationIndex": 123,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Aberdeen."
+          "evidenceQuote": "19 employer establishments (NAICS 541110) across 1 ZIP codes whose USPS city is Aberdeen, SD; density uses ACS 2023 ZCTA population (32,064). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541211",
         "slug": "accounting-cpa",
-        "label": "Offices of CPAs",
-        "establishments": 6,
-        "per10kResidents": 2.13,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 101,
+        "label": "Offices of Certified Public Accountants",
+        "establishments": 4,
+        "per10kResidents": 1.25,
+        "usAvgPer10k": 1.44,
+        "saturationIndex": 87,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Aberdeen."
+          "evidenceQuote": "4 employer establishments (NAICS 541211) across 1 ZIP codes whose USPS city is Aberdeen, SD; density uses ACS 2023 ZCTA population (32,064). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "531210",
         "slug": "real-estate-agencies",
-        "label": "Real Estate Brokerages",
+        "label": "Offices of Real Estate Agents & Brokers",
         "establishments": 11,
-        "per10kResidents": 3.91,
-        "usAvgPer10k": 3.8,
-        "saturationIndex": 102,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "per10kResidents": 3.43,
+        "usAvgPer10k": 4.74,
+        "saturationIndex": 72,
+        "status": "underserved",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Aberdeen."
+          "evidenceQuote": "11 employer establishments (NAICS 531210) across 1 ZIP codes whose USPS city is Aberdeen, SD; density uses ACS 2023 ZCTA population (32,064). National benchmark = all US ZIP rows / US population."
         }
       }
     ],
-    "permitsAndTax": {
-      "generalBusinessLicenseRequired": false,
-      "businessLicenseFeeSummary": "No general city business license required. State of South Dakota statutory filings apply.",
-      "businessLicensePortalUrl": "https://www.aberdeensd.gov/permits",
-      "zoningLookupUrl": "https://www.aberdeensd.gov/zoning",
-      "buildingPermitPortalUrl": "https://www.aberdeensd.gov/building",
-      "certificateOfOccupancyFee": "$185 standard municipal inspection fee",
-      "avgPermitWaitDays": 30,
-      "shortTermRentalStatus": "restricted",
-      "foodTruckPermitStatus": "allowed",
-      "combinedSalesTaxRate": 0.057,
-      "stateTaxRate": 0.042,
-      "localTaxRate": 0.015,
-      "provenance": {
-        "sourceName": "Aberdeen Municipal Code & State Department of Revenue",
-        "sourceUrl": "https://www.aberdeensd.gov",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place",
-        "evidenceQuote": "Statutory municipal code standards."
-      }
-    },
-    "topTrafficCorridors": [
-      {
-        "roadName": "Main Arterial Corridor 1",
-        "segmentDescription": "Central Commercial Corridor through Aberdeen",
-        "aadt": 3373,
-        "heavyTruckPct": 5.5,
-        "lat": 45.464678,
-        "lng": -98.468104,
-        "year": 2024,
-        "provenance": {
-          "sourceName": "South Dakota DOT AADT Database",
-          "sourceUrl": "https://www.transportation.gov/",
-          "datasetVintage": "2024-AADT",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "place"
-        }
-      }
-    ],
-    "marketSignals": {
-      "reportedRetailRentSqFtYr": 39.1,
-      "reportedIndustrialRentSqFtYr": 17.6,
-      "topSearchedNaics30d": [
-        "722515",
-        "713940",
-        "812111"
-      ],
-      "verifiedLocalProsCount": 8
-    },
-    "scores": {
-      "overallViability": 45,
-      "purchasingPower": 43,
-      "growthMomentum": 47,
-      "costEfficiency": 73,
-      "regulatoryFriction": 48
-    },
+    "marketSignals": {},
     "executiveTravel": {
-      "timeZone": "America/Chicago (CT: UTC-06:00)",
+      "timeZone": "America/Chicago",
       "timeZoneAbbr": "CT",
       "utcOffset": "-06:00",
-      "primaryAirport": {
-        "name": "Aberdeen Regional / Metropolitan Airport",
-        "iata": null,
-        "distanceMiles": 10.2,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
-      },
-      "powerPlugs": {
-        "types": [
-          "Type A (2-pin)",
-          "Type B (3-pin grounded)"
-        ],
-        "voltage": "120V",
-        "frequency": "60Hz",
-        "adapterAdvice": "Visitors from UK, EU, Australia, and Asia require a standard Type A/B plug adapter and dual-voltage converter."
-      },
-      "currency": {
-        "code": "USD",
-        "symbol": "$",
-        "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
-        "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
-      },
-      "climate": {
-        "summerHighF": 84,
-        "winterLowF": 22,
-        "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
-        "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
-      },
       "emergency": {
         "emergencyDispatch": "911",
-        "nonEmergencyPolice": "311 or local municipal dispatch",
-        "nearestTraumaHospital": "Aberdeen Regional Memorial Hospital",
-        "hospitalAddress": "Medical Center District, Aberdeen, SD"
+        "nearestTraumaHospital": "Avera St. Luke's",
+        "hospitalAddress": "305 S State St Post Office Box 4450, Aberdeen, SD 57401",
+        "cmsFacilityId": "430014",
+        "emergencyServices": true,
+        "source": "CMS Care Compare hospital general information (dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma or nearest claim.",
+        "erHospitals": [
+          {
+            "name": "Avera St. Luke's",
+            "address": "305 S State St Post Office Box 4450, Aberdeen, SD 57401",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "430014"
+          },
+          {
+            "name": "Sanford Medical Center Aberdeen",
+            "address": "2905 3rd Ave SE, Aberdeen, SD 57402",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "430097"
+          }
+        ],
+        "erHospitalsSource": "CMS Care Compare hospital general information (dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma or nearest claim."
       },
-      "visitorLogistics": {
-        "tapWaterPotability": "100% Safe municipal drinking water conforming to EPA Safe Drinking Water Act standards.",
-        "salesTaxRefundPolicy": "International travelers may claim state sales tax refunds on qualifying departures at designated airport customs counters.",
-        "rideshareAvailability": "Ubiquitous (Uber and Lyft operational 24/7 across the metropolitan area)."
-      },
-      "provenance": {
-        "sourceName": "FAA Airport Database & International Trade Administration",
-        "sourceUrl": "https://www.trade.gov/",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
+      "primaryAirport": {
+        "name": "Aberdeen Regional Airport",
+        "iata": "ABR",
+        "lat": 45.4491,
+        "lng": -98.421799,
+        "distanceMiles": 2.5,
+        "transitToDowntown": null,
+        "source": "OurAirports (public domain) for name, IATA code and coordinates; distance is straight-line from the U.S. Census Gazetteer city center point",
+        "sourceUrl": "https://ourairports.com/data/",
+        "cityCenterMethod": "Census Gazetteer internal point",
+        "retrieved": "2026-10-31"
       }
+    },
+    "housingAndTaxes": {
+      "medianHomeValue": 205500,
+      "medianGrossRent": 783,
+      "medianRealEstateTaxPaid": 2691,
+      "effectivePropertyTaxRatePct": 1.31,
+      "countyName": "Brown County",
+      "source": "ACS 2023 5-yr: B25077 median home value, B25064 median gross rent, B25103 median real estate taxes paid. Effective rate = B25103 / B25077.",
+      "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/"
+    },
+    "climateNormals": {
+      "peakSummerHighF": 83,
+      "winterLowF": 2,
+      "annualRainfallInches": 22.4,
+      "sourceName": "NOAA NCEI U.S. Climate Normals 1991-2020 (Station USC00390022, 2.7 mi from Gazetteer center), retrieved 2026-10-31",
+      "sourceUrl": "https://www.ncei.noaa.gov/products/land-based-station/us-climate-normals"
+    },
+    "higherEducation": {
+      "institutionCount": 1,
+      "totalEnrollment": 1273,
+      "institutions": [
+        {
+          "id": 219259,
+          "name": "Northern State University",
+          "studentSize": 1273,
+          "ownership": "Public",
+          "schoolUrl": "https://northern.edu/",
+          "lat": 45.450829,
+          "lng": -98.484728
+        }
+      ],
+      "sourceName": "U.S. Department of Education College Scorecard",
+      "sourceUrl": "https://collegescorecard.ed.gov/",
+      "retrieved": "2026-10-31"
+    },
+    "evInfrastructure": {
+      "totalStations": 2,
+      "totalChargingPorts": 4,
+      "dcFastPorts": 1,
+      "level2Ports": 3,
+      "sampleStations": [
+        {
+          "name": "Best Western Ramkota Hotel - Tesla Destination",
+          "address": "1400 8th Ave NW, Aberdeen, SD 57401",
+          "network": "Tesla Destination",
+          "dcFastPorts": 0,
+          "level2Ports": 3,
+          "lat": 45.474748,
+          "lng": -98.509055
+        },
+        {
+          "name": "STEVEN LUST AUT FAST CHARGE",
+          "address": "1314 6th Ave SW, Aberdeen, SD 57401",
+          "network": "ChargePoint Network",
+          "dcFastPorts": 1,
+          "level2Ports": 0,
+          "lat": 45.459619,
+          "lng": -98.507827
+        }
+      ],
+      "sourceName": "U.S. Department of Energy / NLR Alternative Fuels Data Center (AFDC)",
+      "sourceUrl": "https://afdc.energy.gov/stations",
+      "retrieved": "2026-10-31"
     }
   }
 ]

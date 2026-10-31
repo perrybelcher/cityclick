@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import manifest from '../data/index-manifest.json';
-import { CERTIFIED_FLAGSHIPS, CERTIFIED_FLAGSHIP_SET, UNVERIFIED_REVIEW_COUNT } from '../config/flagships';
+import { CERTIFIED_FLAGSHIPS, CERTIFIED_FLAGSHIP_SET } from '../config/flagships';
 
 const FEATURED_CITIES = CERTIFIED_FLAGSHIPS;
 const CERTIFIED_SET = CERTIFIED_FLAGSHIP_SET;
@@ -29,7 +29,7 @@ const statesList = Object.values(stateCounts).sort((a, b) => a.name.localeCompar
 
 <Layout
   title="CityClick — Get to know your next city"
-  description={`Plan a visit, find a place to live, or research your next business location. Primary-sourced guides for ${FEATURED_CITIES.length} verified US cities, with ${UNVERIFIED_REVIEW_COUNT.toLocaleString('en-US')} more in review.`}
+  description={`Plan a visit, find a place to live, or research your next business location. Primary-sourced municipal guides for ${manifest.length.toLocaleString('en-US')} US cities across all 50 states and DC, including ${FEATURED_CITIES.length} featured flagship editions.`}
   image="https://cityclick.com/images/og-cityclick.jpg"
 >
   <!-- Hero Section -->
@@ -40,7 +40,7 @@ const statesList = Object.values(stateCounts).sort((a, b) => a.name.localeCompar
         <div class="lg:col-span-7 space-y-6">
           <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-xs font-bold text-[#1D68F2]">
             <span class="w-2 h-2 rounded-full bg-[#1D68F2] animate-pulse"></span>
-            {FEATURED_CITIES.length} verified city guides · {UNVERIFIED_REVIEW_COUNT.toLocaleString('en-US')} more in review, added as each passes our data checks
+            {manifest.length.toLocaleString('en-US')} primary-sourced US city guides · {FEATURED_CITIES.length} featured flagship editions
           </div>
 
           <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-[#152438] tracking-tight leading-[1.12]">
@@ -586,11 +586,11 @@ const statesList = Object.values(stateCounts).sort((a, b) => a.name.localeCompar
             (c) => `
           <a href="/${c.u}/" class="block px-4 py-3 hover:bg-blue-50/60 text-xs font-bold text-slate-800 flex justify-between items-center transition">
             <span class="flex items-center gap-2">
-              <span class="w-1.5 h-1.5 rounded-full ${c.v ? 'bg-emerald-500' : 'bg-slate-400'}"></span>
+              <span class="w-1.5 h-1.5 rounded-full ${c.v ? 'bg-emerald-500' : 'bg-blue-500'}"></span>
               <span>${c.n}, ${c.s}</span>
             </span>
-            <span class="text-[10px] ${c.v ? 'text-emerald-700 bg-emerald-50 border-emerald-200' : 'text-slate-600 bg-slate-100 border-slate-200'} font-extrabold uppercase px-2 py-0.5 rounded border">
-              ${c.v ? 'Verified Guide →' : 'Preview →'}
+            <span class="text-[10px] ${c.v ? 'text-emerald-700 bg-emerald-50 border-emerald-200' : 'text-[#1D68F2] bg-blue-50 border-blue-200'} font-extrabold uppercase px-2 py-0.5 rounded border">
+              ${c.v ? 'Featured Guide →' : 'Sourced Guide →'}
             </span>
           </a>
         `
@@ -603,8 +603,8 @@ const statesList = Object.values(stateCounts).sort((a, b) => a.name.localeCompar
         if (!dropdown) return;
         dropdown.innerHTML = `
           <div class="px-4 py-2.5 bg-slate-50 border-b border-slate-100 flex items-center justify-between text-[11px] font-black uppercase tracking-wider text-slate-500">
-            <span>⭐ Verified Flagship Guides</span>
-            <span class="text-emerald-700 font-bold">7 Certified Cities</span>
+            <span>⭐ Featured Flagship Guides</span>
+            <span class="text-emerald-700 font-bold">25 Flagships · 1,501 Cities</span>
           </div>
           <div class="divide-y divide-slate-100">
             <a href="/tx/austin/" class="px-4 py-3 hover:bg-blue-50/60 text-xs font-bold text-slate-800 flex justify-between items-center transition">
@@ -694,7 +694,7 @@ const statesList = Object.values(stateCounts).sort((a, b) => a.name.localeCompar
                   (c) => `
                 <a href="/${c.u}/" class="p-2.5 rounded-xl bg-white border border-blue-200 hover:border-blue-500 font-bold text-slate-800 flex justify-between items-center">
                   <span>${c.n}, ${c.s}</span>
-                  <span class="text-[10px] ${c.v ? 'text-emerald-700' : 'text-blue-600'} uppercase font-extrabold">${c.v ? 'Verified →' : 'Preview →'}</span>
+                  <span class="text-[10px] ${c.v ? 'text-emerald-700' : 'text-blue-600'} uppercase font-extrabold">${c.v ? 'Featured →' : 'Guide →'}</span>
                 </a>
               `
                 )

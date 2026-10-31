@@ -178,7 +178,10 @@ import Layout from '../../layouts/Layout.astro';
       if (cityParam && cityParam.trim() !== '') {
         const ctx = document.getElementById('c-city-context');
         if (ctx) {
-          ctx.textContent = `Sales tax pre-filled for ${cityParam.trim()} — enter your own quoted lease rate below.`;
+          const hasTaxParam = taxParam !== null && taxParam.trim() !== '';
+          ctx.textContent = hasTaxParam
+            ? `Sales tax pre-filled for ${cityParam.trim()} — enter your own quoted lease rate below.`
+            : `Modeling worksheet for ${cityParam.trim()} — enter your local sales tax rate and quoted lease terms below.`;
           ctx.classList.remove('hidden');
         }
       }

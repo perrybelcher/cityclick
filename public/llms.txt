@@ -4,8 +4,8 @@
 ## Project Overview
 CityClick publishes primary-sourced municipal guides for visitors, relocating households, and small-business founders. Every quantitative metric rendered on a certified guide is ingested directly from an official federal or state dataset with recorded source provenance and vintage. If a primary record is unavailable for a field, that UI block is omitted rather than estimated or filled with a placeholder.
 
-## Certified Indexable Flagship City Guides
-CityClick maintains 25 primary-source certified flagship guides (while ~1,476 additional US municipal entries remain in review with `noindex, follow`):
+## Primary-Source City Catalog & Featured Flagship Guides
+CityClick publishes 1,501 primary-source verified US municipal guides across all 50 states and DC (indexed at `https://cityclick.com/{state}/{city}/` and `https://cityclick.com/{state}/`), highlighted by 25 featured flagship editions with curated photography, USGS 3DEP elevation, and granular state/local retail sales-tax schedules:
 - Austin, TX: https://cityclick.com/tx/austin/
 - Nashville, TN: https://cityclick.com/tn/nashville/
 - Hot Springs, AR: https://cityclick.com/ar/hot-springs/

@@ -28,6 +28,7 @@ ACS_TABLES = ["b01003", "b19013", "b19301", "b25077", "b25064", "b01002", "b2510
 GAZETTEER_URL = "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2023_Gazetteer/2023_Gaz_place_national.zip"
 POPEST_URL = "https://www2.census.gov/programs-surveys/popest/datasets/2020-2023/cities/totals/sub-est2023.csv"
 ZBP_URL = "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip"
+ZCTA_PLACE_REL_URL = "https://www2.census.gov/geo/docs/maps-data/data/rel2020/zcta520/tab20_zcta520_place20_natl.txt"
 
 
 def get_census_api_key() -> Optional[str]:
@@ -121,9 +122,14 @@ def resolve_census_dir(
     need_popest: bool = False,
     need_gazetteer: bool = False,
     need_zbp: bool = False,
+    need_zcta_rel: bool = False,
 ) -> str:
     """Return trailing-slash path to active Census data directory, hydrating local cache if needed."""
     if SERVER_CENSUS_DIR.is_dir():
+        if need_zcta_rel and not (SERVER_CENSUS_DIR / "tab20_zcta520_place20_natl.txt").is_file():
+            LOCAL_CENSUS_DIR.mkdir(parents=True, exist_ok=True)
+            if not (LOCAL_CENSUS_DIR / "tab20_zcta520_place20_natl.txt").is_file():
+                _download(ZCTA_PLACE_REL_URL, LOCAL_CENSUS_DIR / "tab20_zcta520_place20_natl.txt")
         return str(SERVER_CENSUS_DIR) + "/"
 
     LOCAL_CENSUS_DIR.mkdir(parents=True, exist_ok=True)
@@ -141,6 +147,10 @@ def resolve_census_dir(
     if need_zbp and not (LOCAL_CENSUS_DIR / "zbp22.zip").is_file():
         print("[census_env] Downloading Census 2022 ZIP Code Business Patterns (zbp22detail.zip) ...", file=sys.stderr)
         _download(ZBP_URL, LOCAL_CENSUS_DIR / "zbp22.zip")
+
+    if need_zcta_rel and not (LOCAL_CENSUS_DIR / "tab20_zcta520_place20_natl.txt").is_file():
+        print("[census_env] Downloading Census 2020 ZCTA5-to-Place Relationship File ...", file=sys.stderr)
+        _download(ZCTA_PLACE_REL_URL, LOCAL_CENSUS_DIR / "tab20_zcta520_place20_natl.txt")
 
     return str(LOCAL_CENSUS_DIR) + "/"
 

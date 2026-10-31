@@ -2,1097 +2,1596 @@
   {
     "slug": "de/wilmington",
     "cityId": "1077580",
-    "countyFips": "10775",
+    "countyFips": "10003",
     "name": "Wilmington",
     "stateCode": "de",
     "stateName": "Delaware",
-    "countyName": "Wilmington Metropolitan Area",
+    "countyName": "New Castle County",
     "lat": 39.735651,
     "lng": -75.532104,
     "primaryZips": [
-      "70525"
+      "19801",
+      "19808",
+      "19803",
+      "19805",
+      "19810",
+      "19804",
+      "19809",
+      "19802",
+      "19807",
+      "19806"
     ],
     "demographics": {
       "population": 71675,
-      "popGrowth5YrPct": 1.2,
-      "medianHouseholdIncome": 82814,
-      "perCapitaIncome": 48032,
-      "medianAge": 36.4,
-      "daytimeWorkerPop": 44438,
-      "daytimePopSurgePct": 8.5,
-      "medianGrossRent": 1593,
-      "medianHomeValue": 347819,
+      "medianHouseholdIncome": 55269,
+      "perCapitaIncome": 38786,
+      "medianAge": 37.0,
+      "medianGrossRent": 1187,
+      "medianHomeValue": 224500,
       "provenance": {
-        "sourceName": "US Census Bureau ACS 5-Year (DP03/DP04/DP05) & PopEst",
-        "sourceUrl": "https://api.census.gov/data/2023/acs/acs5",
-        "datasetVintage": "2023-5YR",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "sourceName": "US Census Bureau ACS 5-Year Estimates 2023 (Table-Based Summary File)",
+        "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/",
+        "datasetVintage": "ACS-2023-5YR",
+        "verifiedAt": "2026-10-31T00:00:00Z",
         "granularity": "place"
-      }
-    },
-    "laborAndEconomy": {
-      "unemploymentRatePct": 3.8,
-      "avgWeeklyWageAllIndustries": 1340,
-      "newHousingPermits12Mo": 538,
-      "permitsPer1kResidents": 7.5,
-      "femaRiskScore": 28.0,
-      "provenance": {
-        "sourceName": "BLS Local Area Unemployment Statistics (LAUS) & Census BPS",
-        "sourceUrl": "https://www.bls.gov/lau/",
-        "datasetVintage": "2024-M08",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
-      }
+      },
+      "popChange2020to2023Pct": 1.1,
+      "popChangeBasis": "Census Population Estimates, April 2020 base to July 2023"
     },
     "industries": [
       {
         "naicsCode": "722515",
         "slug": "coffee-shops",
         "label": "Coffee & Snack Shops",
-        "establishments": 15,
-        "per10kResidents": 2.09,
-        "usAvgPer10k": 2.15,
-        "saturationIndex": 98,
+        "establishments": 45,
+        "per10kResidents": 2.05,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 97,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Wilmington."
+          "evidenceQuote": "45 employer establishments (NAICS 722515) across 10 ZIP codes whose USPS city is Wilmington, DE; density uses ACS 2023 ZCTA population (219,376). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722511",
         "slug": "restaurants",
         "label": "Full-Service Restaurants",
-        "establishments": 49,
-        "per10kResidents": 6.84,
-        "usAvgPer10k": 6.8,
-        "saturationIndex": 100,
+        "establishments": 194,
+        "per10kResidents": 8.84,
+        "usAvgPer10k": 7.44,
+        "saturationIndex": 119,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Wilmington."
+          "evidenceQuote": "194 employer establishments (NAICS 722511) across 10 ZIP codes whose USPS city is Wilmington, DE; density uses ACS 2023 ZCTA population (219,376). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722513",
         "slug": "fast-food",
-        "label": "Fast Food Restaurants",
-        "establishments": 52,
-        "per10kResidents": 7.25,
-        "usAvgPer10k": 7.2,
-        "saturationIndex": 101,
+        "label": "Limited-Service / Fast Food Restaurants",
+        "establishments": 200,
+        "per10kResidents": 9.12,
+        "usAvgPer10k": 7.75,
+        "saturationIndex": 118,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Wilmington."
+          "evidenceQuote": "200 employer establishments (NAICS 722513) across 10 ZIP codes whose USPS city is Wilmington, DE; density uses ACS 2023 ZCTA population (219,376). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722410",
         "slug": "bars-taverns",
-        "label": "Bars & Drinking Places",
-        "establishments": 13,
-        "per10kResidents": 1.81,
-        "usAvgPer10k": 1.85,
-        "saturationIndex": 98,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Drinking Places (Alcoholic Beverages)",
+        "establishments": 26,
+        "per10kResidents": 1.19,
+        "usAvgPer10k": 0.9,
+        "saturationIndex": 131,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Wilmington."
-        }
-      },
-      {
-        "naicsCode": "812111",
-        "slug": "barber-shops",
-        "label": "Barber Shops",
-        "establishments": 10,
-        "per10kResidents": 1.4,
-        "usAvgPer10k": 1.35,
-        "saturationIndex": 103,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Wilmington."
+          "evidenceQuote": "26 employer establishments (NAICS 722410) across 10 ZIP codes whose USPS city is Wilmington, DE; density uses ACS 2023 ZCTA population (219,376). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812112",
         "slug": "beauty-salons",
         "label": "Beauty Salons & Hair Studios",
-        "establishments": 24,
-        "per10kResidents": 3.35,
-        "usAvgPer10k": 3.4,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 91,
+        "per10kResidents": 4.15,
+        "usAvgPer10k": 2.31,
+        "saturationIndex": 180,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Wilmington."
+          "evidenceQuote": "91 employer establishments (NAICS 812112) across 10 ZIP codes whose USPS city is Wilmington, DE; density uses ACS 2023 ZCTA population (219,376). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812113",
         "slug": "nail-salons",
         "label": "Nail Salons",
-        "establishments": 15,
-        "per10kResidents": 2.09,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 37,
+        "per10kResidents": 1.69,
+        "usAvgPer10k": 0.86,
+        "saturationIndex": 196,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Wilmington."
+          "evidenceQuote": "37 employer establishments (NAICS 812113) across 10 ZIP codes whose USPS city is Wilmington, DE; density uses ACS 2023 ZCTA population (219,376). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "713940",
         "slug": "gyms-fitness",
-        "label": "Fitness & Recreational Gyms",
-        "establishments": 9,
-        "per10kResidents": 1.26,
-        "usAvgPer10k": 1.25,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Fitness & Recreational Sports Centers",
+        "establishments": 52,
+        "per10kResidents": 2.37,
+        "usAvgPer10k": 1.0,
+        "saturationIndex": 238,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Wilmington."
+          "evidenceQuote": "52 employer establishments (NAICS 713940) across 10 ZIP codes whose USPS city is Wilmington, DE; density uses ACS 2023 ZCTA population (219,376). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812910",
         "slug": "pet-care",
-        "label": "Pet Care & Grooming",
-        "establishments": 7,
-        "per10kResidents": 0.98,
-        "usAvgPer10k": 0.95,
-        "saturationIndex": 102,
+        "label": "Pet Care & Grooming Services",
+        "establishments": 9,
+        "per10kResidents": 0.41,
+        "usAvgPer10k": 0.46,
+        "saturationIndex": 88,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Wilmington."
+          "evidenceQuote": "9 employer establishments (NAICS 812910) across 10 ZIP codes whose USPS city is Wilmington, DE; density uses ACS 2023 ZCTA population (219,376). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541940",
         "slug": "veterinary",
-        "label": "Veterinary Services",
-        "establishments": 8,
-        "per10kResidents": 1.12,
-        "usAvgPer10k": 1.05,
-        "saturationIndex": 106,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Veterinary Services & Animal Hospitals",
+        "establishments": 7,
+        "per10kResidents": 0.32,
+        "usAvgPer10k": 0.69,
+        "saturationIndex": 46,
+        "status": "underserved",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Wilmington."
+          "evidenceQuote": "7 employer establishments (NAICS 541940) across 10 ZIP codes whose USPS city is Wilmington, DE; density uses ACS 2023 ZCTA population (219,376). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "811111",
         "slug": "auto-repair",
         "label": "General Automotive Repair",
-        "establishments": 34,
-        "per10kResidents": 4.74,
-        "usAvgPer10k": 4.8,
-        "saturationIndex": 99,
+        "establishments": 54,
+        "per10kResidents": 2.46,
+        "usAvgPer10k": 2.2,
+        "saturationIndex": 112,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Wilmington."
+          "evidenceQuote": "54 employer establishments (NAICS 811111) across 10 ZIP codes whose USPS city is Wilmington, DE; density uses ACS 2023 ZCTA population (219,376). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "811192",
         "slug": "car-washes",
-        "label": "Car Washes & Detailing",
-        "establishments": 5,
-        "per10kResidents": 0.7,
-        "usAvgPer10k": 0.65,
-        "saturationIndex": 106,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Wilmington."
-        }
-      },
-      {
-        "naicsCode": "812310",
-        "slug": "laundromats",
-        "label": "Coin Laundromats",
+        "label": "Car Washes & Auto Detailing",
         "establishments": 4,
-        "per10kResidents": 0.56,
-        "usAvgPer10k": 0.55,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "per10kResidents": 0.18,
+        "usAvgPer10k": 0.35,
+        "saturationIndex": 52,
+        "status": "underserved",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Wilmington."
-        }
-      },
-      {
-        "naicsCode": "812320",
-        "slug": "dry-cleaners",
-        "label": "Dry Cleaning & Laundry",
-        "establishments": 6,
-        "per10kResidents": 0.84,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Wilmington."
+          "evidenceQuote": "4 employer establishments (NAICS 811192) across 10 ZIP codes whose USPS city is Wilmington, DE; density uses ACS 2023 ZCTA population (219,376). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621210",
         "slug": "dentists",
         "label": "Offices of Dentists",
-        "establishments": 28,
-        "per10kResidents": 3.91,
-        "usAvgPer10k": 3.9,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 115,
+        "per10kResidents": 5.24,
+        "usAvgPer10k": 3.89,
+        "saturationIndex": 135,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Wilmington."
+          "evidenceQuote": "115 employer establishments (NAICS 621210) across 10 ZIP codes whose USPS city is Wilmington, DE; density uses ACS 2023 ZCTA population (219,376). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621310",
         "slug": "chiropractors",
         "label": "Offices of Chiropractors",
-        "establishments": 10,
-        "per10kResidents": 1.4,
-        "usAvgPer10k": 1.4,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 34,
+        "per10kResidents": 1.55,
+        "usAvgPer10k": 0.97,
+        "saturationIndex": 159,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Wilmington."
+          "evidenceQuote": "34 employer establishments (NAICS 621310) across 10 ZIP codes whose USPS city is Wilmington, DE; density uses ACS 2023 ZCTA population (219,376). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621340",
         "slug": "physical-therapy",
-        "label": "Physical Therapy Clinics",
-        "establishments": 11,
-        "per10kResidents": 1.53,
-        "usAvgPer10k": 1.55,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Physical, Occupational & Speech Therapists",
+        "establishments": 54,
+        "per10kResidents": 2.46,
+        "usAvgPer10k": 1.3,
+        "saturationIndex": 189,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Wilmington."
+          "evidenceQuote": "54 employer establishments (NAICS 621340) across 10 ZIP codes whose USPS city is Wilmington, DE; density uses ACS 2023 ZCTA population (219,376). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "624410",
         "slug": "daycare",
         "label": "Child Day Care Services",
-        "establishments": 16,
-        "per10kResidents": 2.23,
-        "usAvgPer10k": 2.25,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 107,
+        "per10kResidents": 4.88,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 230,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Wilmington."
+          "evidenceQuote": "107 employer establishments (NAICS 624410) across 10 ZIP codes whose USPS city is Wilmington, DE; density uses ACS 2023 ZCTA population (219,376). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "445120",
         "slug": "convenience-stores",
-        "label": "Convenience Stores",
-        "establishments": 14,
-        "per10kResidents": 1.95,
-        "usAvgPer10k": 1.95,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Convenience Retail Stores",
+        "establishments": 38,
+        "per10kResidents": 1.73,
+        "usAvgPer10k": 0.82,
+        "saturationIndex": 211,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Wilmington."
+          "evidenceQuote": "38 employer establishments (NAICS 445120) across 10 ZIP codes whose USPS city is Wilmington, DE; density uses ACS 2023 ZCTA population (219,376). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "448140",
         "slug": "clothing-boutiques",
-        "label": "Family Clothing Stores",
-        "establishments": 12,
-        "per10kResidents": 1.67,
-        "usAvgPer10k": 1.65,
-        "saturationIndex": 101,
+        "label": "Family Clothing Stores & Boutiques",
+        "establishments": 13,
+        "per10kResidents": 0.59,
+        "usAvgPer10k": 0.65,
+        "saturationIndex": 91,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Wilmington."
-        }
-      },
-      {
-        "naicsCode": "445291",
-        "slug": "bakeries",
-        "label": "Retail Bakeries",
-        "establishments": 6,
-        "per10kResidents": 0.84,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Wilmington."
-        }
-      },
-      {
-        "naicsCode": "453110",
-        "slug": "florists",
-        "label": "Florists & Floral Gift",
-        "establishments": 4,
-        "per10kResidents": 0.56,
-        "usAvgPer10k": 0.5,
-        "saturationIndex": 110,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Wilmington."
+          "evidenceQuote": "13 employer establishments (NAICS 448140) across 10 ZIP codes whose USPS city is Wilmington, DE; density uses ACS 2023 ZCTA population (219,376). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541110",
         "slug": "law-firms",
         "label": "Offices of Lawyers",
-        "establishments": 35,
-        "per10kResidents": 4.88,
-        "usAvgPer10k": 4.9,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 280,
+        "per10kResidents": 12.76,
+        "usAvgPer10k": 4.8,
+        "saturationIndex": 266,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Wilmington."
+          "evidenceQuote": "280 employer establishments (NAICS 541110) across 10 ZIP codes whose USPS city is Wilmington, DE; density uses ACS 2023 ZCTA population (219,376). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541211",
         "slug": "accounting-cpa",
-        "label": "Offices of CPAs",
-        "establishments": 15,
-        "per10kResidents": 2.09,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Offices of Certified Public Accountants",
+        "establishments": 60,
+        "per10kResidents": 2.74,
+        "usAvgPer10k": 1.44,
+        "saturationIndex": 190,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Wilmington."
+          "evidenceQuote": "60 employer establishments (NAICS 541211) across 10 ZIP codes whose USPS city is Wilmington, DE; density uses ACS 2023 ZCTA population (219,376). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "531210",
         "slug": "real-estate-agencies",
-        "label": "Real Estate Brokerages",
-        "establishments": 27,
-        "per10kResidents": 3.77,
-        "usAvgPer10k": 3.8,
-        "saturationIndex": 99,
+        "label": "Offices of Real Estate Agents & Brokers",
+        "establishments": 110,
+        "per10kResidents": 5.01,
+        "usAvgPer10k": 4.74,
+        "saturationIndex": 106,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Wilmington."
+          "evidenceQuote": "110 employer establishments (NAICS 531210) across 10 ZIP codes whose USPS city is Wilmington, DE; density uses ACS 2023 ZCTA population (219,376). National benchmark = all US ZIP rows / US population."
         }
       }
     ],
-    "permitsAndTax": {
-      "generalBusinessLicenseRequired": false,
-      "businessLicenseFeeSummary": "No general city business license required. State of Delaware statutory filings apply.",
-      "businessLicensePortalUrl": "https://www.wilmingtonde.gov/permits",
-      "zoningLookupUrl": "https://www.wilmingtonde.gov/zoning",
-      "buildingPermitPortalUrl": "https://www.wilmingtonde.gov/building",
-      "certificateOfOccupancyFee": "$185 standard municipal inspection fee",
-      "avgPermitWaitDays": 30,
-      "shortTermRentalStatus": "restricted",
-      "foodTruckPermitStatus": "allowed",
-      "combinedSalesTaxRate": 0.0,
-      "stateTaxRate": 0.0,
-      "localTaxRate": 0.0,
-      "provenance": {
-        "sourceName": "Wilmington Municipal Code & State Department of Revenue",
-        "sourceUrl": "https://www.wilmingtonde.gov",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place",
-        "evidenceQuote": "Statutory municipal code standards."
-      }
-    },
-    "topTrafficCorridors": [
-      {
-        "roadName": "Main Arterial Corridor 1",
-        "segmentDescription": "Central Commercial Corridor through Wilmington",
-        "aadt": 8601,
-        "heavyTruckPct": 5.5,
-        "lat": 39.735651,
-        "lng": -75.532104,
-        "year": 2024,
-        "provenance": {
-          "sourceName": "Delaware DOT AADT Database",
-          "sourceUrl": "https://www.transportation.gov/",
-          "datasetVintage": "2024-AADT",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "place"
-        }
-      }
-    ],
-    "marketSignals": {
-      "reportedRetailRentSqFtYr": 41.2,
-      "reportedIndustrialRentSqFtYr": 18.5,
-      "topSearchedNaics30d": [
-        "722515",
-        "713940",
-        "812111"
-      ],
-      "verifiedLocalProsCount": 8
-    },
-    "scores": {
-      "overallViability": 51,
-      "purchasingPower": 48,
-      "growthMomentum": 54,
-      "costEfficiency": 69,
-      "regulatoryFriction": 48
-    },
+    "marketSignals": {},
     "executiveTravel": {
-      "timeZone": "America/New_York (ET: UTC-05:00)",
+      "timeZone": "America/New_York",
       "timeZoneAbbr": "ET",
       "utcOffset": "-05:00",
-      "primaryAirport": {
-        "name": "Wilmington Regional / Metropolitan Airport",
-        "iata": null,
-        "distanceMiles": 10.6,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
-      },
-      "powerPlugs": {
-        "types": [
-          "Type A (2-pin)",
-          "Type B (3-pin grounded)"
-        ],
-        "voltage": "120V",
-        "frequency": "60Hz",
-        "adapterAdvice": "Visitors from UK, EU, Australia, and Asia require a standard Type A/B plug adapter and dual-voltage converter."
-      },
-      "currency": {
-        "code": "USD",
-        "symbol": "$",
-        "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
-        "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
-      },
-      "climate": {
-        "summerHighF": 84,
-        "winterLowF": 22,
-        "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
-        "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
-      },
       "emergency": {
         "emergencyDispatch": "911",
-        "nonEmergencyPolice": "311 or local municipal dispatch",
-        "nearestTraumaHospital": "Wilmington Regional Memorial Hospital",
-        "hospitalAddress": "Medical Center District, Wilmington, DE"
+        "nearestTraumaHospital": "Nemours Children's Hospital, Delaware",
+        "hospitalAddress": "1600 Rockland Rd PO Box 269, Wilmington, DE 19899",
+        "cmsFacilityId": "083300",
+        "emergencyServices": true,
+        "source": "CMS Care Compare hospital general information (dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma or nearest claim.",
+        "erHospitals": [
+          {
+            "name": "Nemours Children's Hospital, Delaware",
+            "address": "1600 Rockland Rd PO Box 269, Wilmington, DE 19899",
+            "type": "Children's",
+            "cmsFacilityId": "083300"
+          },
+          {
+            "name": "St Francis Hospital",
+            "address": "7th And Clayton Sts, Wilmington, DE 19805",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "080003"
+          },
+          {
+            "name": "Wilmington VA Medical Center",
+            "address": "1601 Kirkwood Highway, Wilmington, DE 19805",
+            "type": "Acute Care - Veterans Administration",
+            "cmsFacilityId": "08002F"
+          }
+        ],
+        "erHospitalsSource": "CMS Care Compare hospital general information (dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma or nearest claim."
       },
-      "visitorLogistics": {
-        "tapWaterPotability": "100% Safe municipal drinking water conforming to EPA Safe Drinking Water Act standards.",
-        "salesTaxRefundPolicy": "International travelers may claim state sales tax refunds on qualifying departures at designated airport customs counters.",
-        "rideshareAvailability": "Ubiquitous (Uber and Lyft operational 24/7 across the metropolitan area)."
-      },
-      "provenance": {
-        "sourceName": "FAA Airport Database & International Trade Administration",
-        "sourceUrl": "https://www.trade.gov/",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
+      "primaryAirport": {
+        "name": "Philadelphia International Airport",
+        "iata": "PHL",
+        "lat": 39.871899,
+        "lng": -75.241096,
+        "distanceMiles": 18.1,
+        "transitToDowntown": null,
+        "source": "OurAirports (public domain) for name, IATA code and coordinates; distance is straight-line from the U.S. Census Gazetteer city center point",
+        "sourceUrl": "https://ourairports.com/data/",
+        "cityCenterMethod": "Census Gazetteer internal point",
+        "retrieved": "2026-10-31"
       }
+    },
+    "housingAndTaxes": {
+      "medianHomeValue": 224500,
+      "medianGrossRent": 1187,
+      "medianRealEstateTaxPaid": 1905,
+      "effectivePropertyTaxRatePct": 0.85,
+      "countyName": "New Castle County",
+      "source": "ACS 2023 5-yr: B25077 median home value, B25064 median gross rent, B25103 median real estate taxes paid. Effective rate = B25103 / B25077.",
+      "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/"
+    },
+    "climateNormals": {
+      "peakSummerHighF": 84,
+      "winterLowF": 24,
+      "annualRainfallInches": 50.3,
+      "sourceName": "NOAA NCEI U.S. Climate Normals 1991-2020 (Station USC00079605, 2.7 mi from Gazetteer center), retrieved 2026-10-31",
+      "sourceUrl": "https://www.ncei.noaa.gov/products/land-based-station/us-climate-normals"
+    },
+    "higherEducation": {
+      "institutionCount": 4,
+      "totalEnrollment": 852,
+      "institutions": [
+        {
+          "id": 130989,
+          "name": "Goldey-Beacom College",
+          "studentSize": 691,
+          "ownership": "Private nonprofit",
+          "schoolUrl": "https://www.gbc.edu/",
+          "lat": 39.741501,
+          "lng": -75.689624
+        },
+        {
+          "id": 450298,
+          "name": "Strayer University-Delaware",
+          "studentSize": 161,
+          "ownership": "Private for-profit",
+          "schoolUrl": "https://www.strayer.edu/campus-locations/delaware/wilmington",
+          "lat": 39.743357,
+          "lng": -75.547914
+        },
+        {
+          "id": 13090702,
+          "name": "Delaware Technical Community College-Stanton/Wilmington",
+          "studentSize": null,
+          "ownership": "Public",
+          "schoolUrl": "https://www.dtcc.edu/our-campuses/wilmington",
+          "lat": null,
+          "lng": null
+        },
+        {
+          "id": 47503303,
+          "name": "Relay Graduate School of Education - Delaware",
+          "studentSize": null,
+          "ownership": "Private nonprofit",
+          "schoolUrl": "https://relay.edu/location/relay-delaware",
+          "lat": null,
+          "lng": null
+        }
+      ],
+      "sourceName": "U.S. Department of Education College Scorecard",
+      "sourceUrl": "https://collegescorecard.ed.gov/",
+      "retrieved": "2026-10-31"
+    },
+    "evInfrastructure": {
+      "totalStations": 35,
+      "totalChargingPorts": 105,
+      "dcFastPorts": 22,
+      "level2Ports": 83,
+      "sampleStations": [
+        {
+          "name": "Wilmington, DE - Limestone Road - Tesla Supercharger",
+          "address": "2030 Limestone Rd, Wilmington, DE 19808",
+          "network": "Tesla",
+          "dcFastPorts": 12,
+          "level2Ports": 0,
+          "lat": 39.721143,
+          "lng": -75.657151
+        },
+        {
+          "name": "Wilmington Hospital Visitor Parking Garage",
+          "address": "501 West 14th Street, Wilmington, DE 19801",
+          "network": "Blink Network",
+          "dcFastPorts": 0,
+          "level2Ports": 10,
+          "lat": 39.750242,
+          "lng": -75.550429
+        },
+        {
+          "name": "PNC Bank Center Garage",
+          "address": "914 N. Tatnall St., Wilmington, DE 19801",
+          "network": "FLASH",
+          "dcFastPorts": 0,
+          "level2Ports": 6,
+          "lat": 39.745936,
+          "lng": -75.550345
+        },
+        {
+          "name": "801 Shipyard Dr, Wilmington",
+          "address": "801 Shipyard Dr, Wilmington, DE 19801",
+          "network": "FLO",
+          "dcFastPorts": 0,
+          "level2Ports": 6,
+          "lat": 39.733298,
+          "lng": -75.563652
+        },
+        {
+          "name": "Kirkwood Library",
+          "address": "6000 Kirkwood Highway, Wilmington, DE 19808",
+          "network": "Blink Network",
+          "dcFastPorts": 0,
+          "level2Ports": 6,
+          "lat": 39.711065,
+          "lng": -75.678775
+        }
+      ],
+      "sourceName": "U.S. Department of Energy / NLR Alternative Fuels Data Center (AFDC)",
+      "sourceUrl": "https://afdc.energy.gov/stations",
+      "retrieved": "2026-10-31"
+    },
+    "nationalParks": {
+      "parks": [
+        {
+          "parkCode": "frst",
+          "fullName": "First State National Historical Park",
+          "designation": "National Historical Park",
+          "distanceMiles": 6.8,
+          "description": "Famous as the First State to ratify the Constitution, Delaware was born out of a conflict among three world powers for dominance of the Delaware Valley. From this beginning, the region developed a distinct character that tolerated...",
+          "url": "https://www.nps.gov/frst/index.htm",
+          "lat": 39.830769,
+          "lng": -75.563539
+        },
+        {
+          "parkCode": "glde",
+          "fullName": "Gloria Dei Church National Historic Site",
+          "designation": "National Historic Site",
+          "distanceMiles": 24.7,
+          "description": "Before Pennsylvania there was New Sweden. Discover this last historic link to a forgotten past. Visit the church's pastoral surroundings and its burial ground of patriots and ordinary citizens alike.",
+          "url": "https://www.nps.gov/glde/index.htm",
+          "lat": 39.93435,
+          "lng": -75.143989
+        },
+        {
+          "parkCode": "thko",
+          "fullName": "Thaddeus Kosciuszko National Memorial",
+          "designation": "National Memorial",
+          "distanceMiles": 25.0,
+          "description": "Visit the house where wounded Polish freedom fighter Thaddeus Kosciuszko lived and hear how this brilliant military engineer designed successful fortifications during the American Revolution. See the room where he received notable...",
+          "url": "https://www.nps.gov/thko/index.htm",
+          "lat": 39.943453,
+          "lng": -75.14732
+        },
+        {
+          "parkCode": "inde",
+          "fullName": "Independence National Historical Park",
+          "designation": "National Historical Park",
+          "distanceMiles": 25.1,
+          "description": "The park represents the founding ideals of the nation, and preserves national and international symbols of freedom and democracy, including Independence Hall and the Liberty Bell. The Declaration of Independence and US Constitution were...",
+          "url": "https://www.nps.gov/inde/index.htm",
+          "lat": 39.947461,
+          "lng": -75.147942
+        },
+        {
+          "parkCode": "edal",
+          "fullName": "Edgar Allan Poe National Historic Site",
+          "designation": "National Historic Site",
+          "distanceMiles": 25.6,
+          "description": "Described as horrifying, mystifying, and brilliant, Poe’s writing has engaged readers all over the world. The six years Edgar Allan Poe lived in Philadelphia were his happiest and most productive. Yet Poe also struggled with bad luck...",
+          "url": "https://www.nps.gov/edal/index.htm",
+          "lat": 39.961955,
+          "lng": -75.150006
+        }
+      ],
+      "sourceName": "U.S. National Park Service",
+      "sourceUrl": "https://www.nps.gov/",
+      "retrieved": "2026-10-31"
     }
   },
   {
     "slug": "de/dover",
     "cityId": "1021200",
-    "countyFips": "10212",
+    "countyFips": "10001",
     "name": "Dover",
     "stateCode": "de",
     "stateName": "Delaware",
-    "countyName": "Dover Metropolitan Area",
+    "countyName": "Kent County",
     "lat": 39.160602,
     "lng": -75.521659,
     "primaryZips": [
-      "71011"
+      "19901",
+      "19904"
     ],
     "demographics": {
       "population": 39894,
-      "popGrowth5YrPct": 1.5,
-      "medianHouseholdIncome": 82048,
-      "perCapitaIncome": 47588,
-      "medianAge": 36.4,
-      "daytimeWorkerPop": 24734,
-      "daytimePopSurgePct": 8.5,
-      "medianGrossRent": 1578,
-      "medianHomeValue": 344602,
+      "medianHouseholdIncome": 58336,
+      "perCapitaIncome": 30801,
+      "medianAge": 35.1,
+      "medianGrossRent": 1252,
+      "medianHomeValue": 248500,
       "provenance": {
-        "sourceName": "US Census Bureau ACS 5-Year (DP03/DP04/DP05) & PopEst",
-        "sourceUrl": "https://api.census.gov/data/2023/acs/acs5",
-        "datasetVintage": "2023-5YR",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "sourceName": "US Census Bureau ACS 5-Year Estimates 2023 (Table-Based Summary File)",
+        "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/",
+        "datasetVintage": "ACS-2023-5YR",
+        "verifiedAt": "2026-10-31T00:00:00Z",
         "granularity": "place"
-      }
-    },
-    "laborAndEconomy": {
-      "unemploymentRatePct": 3.8,
-      "avgWeeklyWageAllIndustries": 1340,
-      "newHousingPermits12Mo": 299,
-      "permitsPer1kResidents": 7.5,
-      "femaRiskScore": 28.0,
-      "provenance": {
-        "sourceName": "BLS Local Area Unemployment Statistics (LAUS) & Census BPS",
-        "sourceUrl": "https://www.bls.gov/lau/",
-        "datasetVintage": "2024-M08",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
-      }
+      },
+      "popChange2020to2023Pct": 1.2,
+      "popChangeBasis": "Census Population Estimates, April 2020 base to July 2023"
     },
     "industries": [
       {
         "naicsCode": "722515",
         "slug": "coffee-shops",
         "label": "Coffee & Snack Shops",
-        "establishments": 9,
-        "per10kResidents": 2.26,
-        "usAvgPer10k": 2.15,
-        "saturationIndex": 104,
+        "establishments": 15,
+        "per10kResidents": 1.94,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 91,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Dover."
+          "evidenceQuote": "15 employer establishments (NAICS 722515) across 2 ZIP codes whose USPS city is Dover, DE; density uses ACS 2023 ZCTA population (77,274). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722511",
         "slug": "restaurants",
         "label": "Full-Service Restaurants",
-        "establishments": 27,
-        "per10kResidents": 6.77,
-        "usAvgPer10k": 6.8,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 75,
+        "per10kResidents": 9.71,
+        "usAvgPer10k": 7.44,
+        "saturationIndex": 131,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Dover."
+          "evidenceQuote": "75 employer establishments (NAICS 722511) across 2 ZIP codes whose USPS city is Dover, DE; density uses ACS 2023 ZCTA population (77,274). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722513",
         "slug": "fast-food",
-        "label": "Fast Food Restaurants",
-        "establishments": 29,
-        "per10kResidents": 7.27,
-        "usAvgPer10k": 7.2,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Limited-Service / Fast Food Restaurants",
+        "establishments": 82,
+        "per10kResidents": 10.61,
+        "usAvgPer10k": 7.75,
+        "saturationIndex": 137,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Dover."
+          "evidenceQuote": "82 employer establishments (NAICS 722513) across 2 ZIP codes whose USPS city is Dover, DE; density uses ACS 2023 ZCTA population (77,274). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722410",
         "slug": "bars-taverns",
-        "label": "Bars & Drinking Places",
-        "establishments": 7,
-        "per10kResidents": 1.75,
-        "usAvgPer10k": 1.85,
-        "saturationIndex": 96,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Drinking Places (Alcoholic Beverages)",
+        "establishments": 3,
+        "per10kResidents": 0.39,
+        "usAvgPer10k": 0.9,
+        "saturationIndex": 43,
+        "status": "underserved",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Dover."
-        }
-      },
-      {
-        "naicsCode": "812111",
-        "slug": "barber-shops",
-        "label": "Barber Shops",
-        "establishments": 5,
-        "per10kResidents": 1.25,
-        "usAvgPer10k": 1.35,
-        "saturationIndex": 94,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Dover."
+          "evidenceQuote": "3 employer establishments (NAICS 722410) across 2 ZIP codes whose USPS city is Dover, DE; density uses ACS 2023 ZCTA population (77,274). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812112",
         "slug": "beauty-salons",
         "label": "Beauty Salons & Hair Studios",
-        "establishments": 14,
-        "per10kResidents": 3.51,
-        "usAvgPer10k": 3.4,
-        "saturationIndex": 103,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 29,
+        "per10kResidents": 3.75,
+        "usAvgPer10k": 2.31,
+        "saturationIndex": 163,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Dover."
+          "evidenceQuote": "29 employer establishments (NAICS 812112) across 2 ZIP codes whose USPS city is Dover, DE; density uses ACS 2023 ZCTA population (77,274). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812113",
         "slug": "nail-salons",
         "label": "Nail Salons",
-        "establishments": 8,
-        "per10kResidents": 2.01,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 96,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 10,
+        "per10kResidents": 1.29,
+        "usAvgPer10k": 0.86,
+        "saturationIndex": 151,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Dover."
+          "evidenceQuote": "10 employer establishments (NAICS 812113) across 2 ZIP codes whose USPS city is Dover, DE; density uses ACS 2023 ZCTA population (77,274). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "713940",
         "slug": "gyms-fitness",
-        "label": "Fitness & Recreational Gyms",
-        "establishments": 5,
-        "per10kResidents": 1.25,
-        "usAvgPer10k": 1.25,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Fitness & Recreational Sports Centers",
+        "establishments": 18,
+        "per10kResidents": 2.33,
+        "usAvgPer10k": 1.0,
+        "saturationIndex": 234,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Dover."
+          "evidenceQuote": "18 employer establishments (NAICS 713940) across 2 ZIP codes whose USPS city is Dover, DE; density uses ACS 2023 ZCTA population (77,274). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812910",
         "slug": "pet-care",
-        "label": "Pet Care & Grooming",
-        "establishments": 4,
-        "per10kResidents": 1.0,
-        "usAvgPer10k": 0.95,
-        "saturationIndex": 104,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Pet Care & Grooming Services",
+        "establishments": 0,
+        "per10kResidents": 0.0,
+        "usAvgPer10k": 0.46,
+        "saturationIndex": 0,
+        "status": "underserved",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Dover."
+          "evidenceQuote": "0 employer establishments (NAICS 812910) across 2 ZIP codes whose USPS city is Dover, DE; density uses ACS 2023 ZCTA population (77,274). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541940",
         "slug": "veterinary",
-        "label": "Veterinary Services",
-        "establishments": 4,
-        "per10kResidents": 1.0,
-        "usAvgPer10k": 1.05,
-        "saturationIndex": 96,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Veterinary Services & Animal Hospitals",
+        "establishments": 7,
+        "per10kResidents": 0.91,
+        "usAvgPer10k": 0.69,
+        "saturationIndex": 131,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Dover."
+          "evidenceQuote": "7 employer establishments (NAICS 541940) across 2 ZIP codes whose USPS city is Dover, DE; density uses ACS 2023 ZCTA population (77,274). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "811111",
         "slug": "auto-repair",
         "label": "General Automotive Repair",
-        "establishments": 19,
-        "per10kResidents": 4.76,
-        "usAvgPer10k": 4.8,
-        "saturationIndex": 99,
+        "establishments": 18,
+        "per10kResidents": 2.33,
+        "usAvgPer10k": 2.2,
+        "saturationIndex": 106,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Dover."
+          "evidenceQuote": "18 employer establishments (NAICS 811111) across 2 ZIP codes whose USPS city is Dover, DE; density uses ACS 2023 ZCTA population (77,274). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "811192",
         "slug": "car-washes",
-        "label": "Car Washes & Detailing",
-        "establishments": 3,
-        "per10kResidents": 0.75,
-        "usAvgPer10k": 0.65,
-        "saturationIndex": 113,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Car Washes & Auto Detailing",
+        "establishments": 4,
+        "per10kResidents": 0.52,
+        "usAvgPer10k": 0.35,
+        "saturationIndex": 148,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Dover."
-        }
-      },
-      {
-        "naicsCode": "812310",
-        "slug": "laundromats",
-        "label": "Coin Laundromats",
-        "establishments": 2,
-        "per10kResidents": 0.5,
-        "usAvgPer10k": 0.55,
-        "saturationIndex": 93,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Dover."
-        }
-      },
-      {
-        "naicsCode": "812320",
-        "slug": "dry-cleaners",
-        "label": "Dry Cleaning & Laundry",
-        "establishments": 3,
-        "per10kResidents": 0.75,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 91,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Dover."
+          "evidenceQuote": "4 employer establishments (NAICS 811192) across 2 ZIP codes whose USPS city is Dover, DE; density uses ACS 2023 ZCTA population (77,274). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621210",
         "slug": "dentists",
         "label": "Offices of Dentists",
-        "establishments": 16,
-        "per10kResidents": 4.01,
-        "usAvgPer10k": 3.9,
-        "saturationIndex": 102,
+        "establishments": 27,
+        "per10kResidents": 3.49,
+        "usAvgPer10k": 3.89,
+        "saturationIndex": 90,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Dover."
+          "evidenceQuote": "27 employer establishments (NAICS 621210) across 2 ZIP codes whose USPS city is Dover, DE; density uses ACS 2023 ZCTA population (77,274). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621310",
         "slug": "chiropractors",
         "label": "Offices of Chiropractors",
-        "establishments": 6,
-        "per10kResidents": 1.5,
-        "usAvgPer10k": 1.4,
+        "establishments": 8,
+        "per10kResidents": 1.04,
+        "usAvgPer10k": 0.97,
         "saturationIndex": 106,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Dover."
+          "evidenceQuote": "8 employer establishments (NAICS 621310) across 2 ZIP codes whose USPS city is Dover, DE; density uses ACS 2023 ZCTA population (77,274). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621340",
         "slug": "physical-therapy",
-        "label": "Physical Therapy Clinics",
-        "establishments": 6,
-        "per10kResidents": 1.5,
-        "usAvgPer10k": 1.55,
-        "saturationIndex": 98,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Physical, Occupational & Speech Therapists",
+        "establishments": 22,
+        "per10kResidents": 2.85,
+        "usAvgPer10k": 1.3,
+        "saturationIndex": 219,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Dover."
+          "evidenceQuote": "22 employer establishments (NAICS 621340) across 2 ZIP codes whose USPS city is Dover, DE; density uses ACS 2023 ZCTA population (77,274). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "624410",
         "slug": "daycare",
         "label": "Child Day Care Services",
-        "establishments": 9,
-        "per10kResidents": 2.26,
-        "usAvgPer10k": 2.25,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 31,
+        "per10kResidents": 4.01,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 189,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Dover."
+          "evidenceQuote": "31 employer establishments (NAICS 624410) across 2 ZIP codes whose USPS city is Dover, DE; density uses ACS 2023 ZCTA population (77,274). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "445120",
         "slug": "convenience-stores",
-        "label": "Convenience Stores",
-        "establishments": 8,
-        "per10kResidents": 2.01,
-        "usAvgPer10k": 1.95,
-        "saturationIndex": 102,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Convenience Retail Stores",
+        "establishments": 5,
+        "per10kResidents": 0.65,
+        "usAvgPer10k": 0.82,
+        "saturationIndex": 79,
+        "status": "underserved",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Dover."
+          "evidenceQuote": "5 employer establishments (NAICS 445120) across 2 ZIP codes whose USPS city is Dover, DE; density uses ACS 2023 ZCTA population (77,274). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "448140",
         "slug": "clothing-boutiques",
-        "label": "Family Clothing Stores",
+        "label": "Family Clothing Stores & Boutiques",
+        "establishments": 10,
+        "per10kResidents": 1.29,
+        "usAvgPer10k": 0.65,
+        "saturationIndex": 198,
+        "status": "saturated",
+        "smallSample": true,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "10 employer establishments (NAICS 448140) across 2 ZIP codes whose USPS city is Dover, DE; density uses ACS 2023 ZCTA population (77,274). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "541110",
+        "slug": "law-firms",
+        "label": "Offices of Lawyers",
+        "establishments": 33,
+        "per10kResidents": 4.27,
+        "usAvgPer10k": 4.8,
+        "saturationIndex": 89,
+        "status": "balanced",
+        "smallSample": false,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "33 employer establishments (NAICS 541110) across 2 ZIP codes whose USPS city is Dover, DE; density uses ACS 2023 ZCTA population (77,274). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "541211",
+        "slug": "accounting-cpa",
+        "label": "Offices of Certified Public Accountants",
+        "establishments": 13,
+        "per10kResidents": 1.68,
+        "usAvgPer10k": 1.44,
+        "saturationIndex": 117,
+        "status": "balanced",
+        "smallSample": false,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "13 employer establishments (NAICS 541211) across 2 ZIP codes whose USPS city is Dover, DE; density uses ACS 2023 ZCTA population (77,274). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "531210",
+        "slug": "real-estate-agencies",
+        "label": "Offices of Real Estate Agents & Brokers",
+        "establishments": 34,
+        "per10kResidents": 4.4,
+        "usAvgPer10k": 4.74,
+        "saturationIndex": 93,
+        "status": "balanced",
+        "smallSample": false,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "34 employer establishments (NAICS 531210) across 2 ZIP codes whose USPS city is Dover, DE; density uses ACS 2023 ZCTA population (77,274). National benchmark = all US ZIP rows / US population."
+        }
+      }
+    ],
+    "marketSignals": {},
+    "executiveTravel": {
+      "timeZone": "America/New_York",
+      "timeZoneAbbr": "ET",
+      "utcOffset": "-05:00",
+      "emergency": {
+        "emergencyDispatch": "911",
+        "nearestTraumaHospital": "Bayhealth Medical Center, Kent Campus",
+        "hospitalAddress": "640 S State Street, Dover, DE 19901",
+        "cmsFacilityId": "080004",
+        "emergencyServices": true,
+        "source": "CMS Care Compare hospital general information (dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma or nearest claim.",
+        "erHospitals": [
+          {
+            "name": "Bayhealth Medical Center, Kent Campus",
+            "address": "640 S State Street, Dover, DE 19901",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "080004"
+          }
+        ],
+        "erHospitalsSource": "CMS Care Compare hospital general information (dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma or nearest claim."
+      },
+      "primaryAirport": {
+        "name": "Dover Civil Air Terminal/Dover Air Force Base",
+        "iata": "DOV",
+        "lat": 39.129501,
+        "lng": -75.466003,
+        "distanceMiles": 3.7,
+        "transitToDowntown": null,
+        "source": "OurAirports (public domain) for name, IATA code and coordinates; distance is straight-line from the U.S. Census Gazetteer city center point",
+        "sourceUrl": "https://ourairports.com/data/",
+        "cityCenterMethod": "Census Gazetteer internal point",
+        "retrieved": "2026-10-31"
+      }
+    },
+    "housingAndTaxes": {
+      "medianHomeValue": 248500,
+      "medianGrossRent": 1252,
+      "medianRealEstateTaxPaid": 1479,
+      "effectivePropertyTaxRatePct": 0.6,
+      "countyName": "Kent County",
+      "source": "ACS 2023 5-yr: B25077 median home value, B25064 median gross rent, B25103 median real estate taxes paid. Effective rate = B25103 / B25077.",
+      "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/"
+    },
+    "climateNormals": {
+      "peakSummerHighF": 87,
+      "winterLowF": 28,
+      "annualRainfallInches": 47.6,
+      "sourceName": "NOAA NCEI U.S. Climate Normals 1991-2020 (Station USC00072730, 1.3 mi from Gazetteer center), retrieved 2026-10-31",
+      "sourceUrl": "https://www.ncei.noaa.gov/products/land-based-station/us-climate-normals"
+    },
+    "higherEducation": {
+      "institutionCount": 2,
+      "totalEnrollment": 15265,
+      "institutions": [
+        {
+          "id": 130907,
+          "name": "Delaware Technical Community College-Terry",
+          "studentSize": 10867,
+          "ownership": "Public",
+          "schoolUrl": "https://www.dtcc.edu/",
+          "lat": 39.198371,
+          "lng": -75.56012
+        },
+        {
+          "id": 130934,
+          "name": "Delaware State University",
+          "studentSize": 4398,
+          "ownership": "Public",
+          "schoolUrl": "https://www.desu.edu/",
+          "lat": 39.187173,
+          "lng": -75.54053
+        }
+      ],
+      "sourceName": "U.S. Department of Education College Scorecard",
+      "sourceUrl": "https://collegescorecard.ed.gov/",
+      "retrieved": "2026-10-31"
+    },
+    "evInfrastructure": {
+      "totalStations": 19,
+      "totalChargingPorts": 64,
+      "dcFastPorts": 29,
+      "level2Ports": 35,
+      "sampleStations": [
+        {
+          "name": "Dover, DE - Tesla Supercharger",
+          "address": "2800 North Dupont Highway, Dover, DE 19901",
+          "network": "Tesla",
+          "dcFastPorts": 8,
+          "level2Ports": 0,
+          "lat": 39.195273,
+          "lng": -75.547197
+        },
+        {
+          "name": "Dover, DE - Forrest Avenue - Tesla Supercharger",
+          "address": "1450 Forrest Ave, Dover, DE 19904",
+          "network": "Tesla",
+          "dcFastPorts": 8,
+          "level2Ports": 0,
+          "lat": 39.158093,
+          "lng": -75.559356
+        },
+        {
+          "name": "Milbrook Dover Downs (Dover, DE)",
+          "address": "1001 N Dupont Highway, Dover, DE 19901",
+          "network": "Electrify America",
+          "dcFastPorts": 6,
+          "level2Ports": 0,
+          "lat": 39.187,
+          "lng": -75.53479
+        },
+        {
+          "name": "City of Dover - City Hall",
+          "address": "15 Loockerman Plaza, Dover, DE 19901",
+          "network": "Blink Network",
+          "dcFastPorts": 0,
+          "level2Ports": 6,
+          "lat": 39.158662,
+          "lng": -75.523576
+        },
+        {
+          "name": "Sunset Village Camden Apartments",
+          "address": "111 Sun Circle, Dover, DE 19904",
+          "network": "Blink Network",
+          "dcFastPorts": 0,
+          "level2Ports": 6,
+          "lat": 39.088844,
+          "lng": -75.555843
+        }
+      ],
+      "sourceName": "U.S. Department of Energy / NLR Alternative Fuels Data Center (AFDC)",
+      "sourceUrl": "https://afdc.energy.gov/stations",
+      "retrieved": "2026-10-31"
+    },
+    "nationalParks": {
+      "parks": [
+        {
+          "parkCode": "frst",
+          "fullName": "First State National Historical Park",
+          "designation": "National Historical Park",
+          "distanceMiles": 46.4,
+          "description": "Famous as the First State to ratify the Constitution, Delaware was born out of a conflict among three world powers for dominance of the Delaware Valley. From this beginning, the region developed a distinct character that tolerated...",
+          "url": "https://www.nps.gov/frst/index.htm",
+          "lat": 39.830769,
+          "lng": -75.563539
+        },
+        {
+          "parkCode": "greg",
+          "fullName": "Great Egg Harbor River",
+          "designation": "National Park System Unit",
+          "distanceMiles": 47.7,
+          "description": "Both the harbor and river were named for the shorebird and waterfowl eggs covering their meadows. During the American Revolution, privateers hid here. Established as a National Park Service site in 1992, Great Egg Harbor National Wild...",
+          "url": "https://www.nps.gov/greg/index.htm",
+          "lat": 39.3042,
+          "lng": -74.6497
+        },
+        {
+          "parkCode": "cajo",
+          "fullName": "Captain John Smith Chesapeake National Historic Trail",
+          "designation": "National Historic Trail",
+          "distanceMiles": 53.2,
+          "description": "People first arrived in the Chesapeake Bay during the last ice age. As glaciers melted, diverse societies learned to thrive in a world of water. When Englishman Captain John Smith explored the Bay in 1608, he documented hundreds of...",
+          "url": "https://www.nps.gov/cajo/index.htm",
+          "lat": 38.971601,
+          "lng": -76.483355
+        },
+        {
+          "parkCode": "cbpo",
+          "fullName": "Chesapeake Bay",
+          "designation": "National Park System Unit",
+          "distanceMiles": 53.2,
+          "description": "Over 41 million acres are connected through the waters that flow to and through Chesapeake Bay. The National Park Service strives to connect people to the opportunities and adventures throughout the watershed. Inspiring stewardship...",
+          "url": "https://www.nps.gov/cbpo/index.htm",
+          "lat": 38.971601,
+          "lng": -76.483355
+        }
+      ],
+      "sourceName": "U.S. National Park Service",
+      "sourceUrl": "https://www.nps.gov/",
+      "retrieved": "2026-10-31"
+    }
+  },
+  {
+    "slug": "de/newark",
+    "cityId": "1050670",
+    "countyFips": "10003",
+    "name": "Newark",
+    "stateCode": "de",
+    "stateName": "Delaware",
+    "countyName": "New Castle County",
+    "lat": 39.677649,
+    "lng": -75.757479,
+    "primaryZips": [
+      "19702",
+      "19711",
+      "19713",
+      "19717"
+    ],
+    "demographics": {
+      "population": 30169,
+      "medianHouseholdIncome": 71373,
+      "perCapitaIncome": 33210,
+      "medianAge": 22.0,
+      "medianGrossRent": 1611,
+      "medianHomeValue": 357600,
+      "provenance": {
+        "sourceName": "US Census Bureau ACS 5-Year Estimates 2023 (Table-Based Summary File)",
+        "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/",
+        "datasetVintage": "ACS-2023-5YR",
+        "verifiedAt": "2026-10-31T00:00:00Z",
+        "granularity": "place"
+      },
+      "popChange2020to2023Pct": -1.5,
+      "popChangeBasis": "Census Population Estimates, April 2020 base to July 2023"
+    },
+    "industries": [
+      {
+        "naicsCode": "722515",
+        "slug": "coffee-shops",
+        "label": "Coffee & Snack Shops",
+        "establishments": 37,
+        "per10kResidents": 2.6,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 123,
+        "status": "saturated",
+        "smallSample": false,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "37 employer establishments (NAICS 722515) across 4 ZIP codes whose USPS city is Newark, DE; density uses ACS 2023 ZCTA population (142,233). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "722511",
+        "slug": "restaurants",
+        "label": "Full-Service Restaurants",
+        "establishments": 120,
+        "per10kResidents": 8.44,
+        "usAvgPer10k": 7.44,
+        "saturationIndex": 113,
+        "status": "balanced",
+        "smallSample": false,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "120 employer establishments (NAICS 722511) across 4 ZIP codes whose USPS city is Newark, DE; density uses ACS 2023 ZCTA population (142,233). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "722513",
+        "slug": "fast-food",
+        "label": "Limited-Service / Fast Food Restaurants",
+        "establishments": 134,
+        "per10kResidents": 9.42,
+        "usAvgPer10k": 7.75,
+        "saturationIndex": 122,
+        "status": "saturated",
+        "smallSample": false,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "134 employer establishments (NAICS 722513) across 4 ZIP codes whose USPS city is Newark, DE; density uses ACS 2023 ZCTA population (142,233). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "722410",
+        "slug": "bars-taverns",
+        "label": "Drinking Places (Alcoholic Beverages)",
+        "establishments": 8,
+        "per10kResidents": 0.56,
+        "usAvgPer10k": 0.9,
+        "saturationIndex": 62,
+        "status": "underserved",
+        "smallSample": false,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "8 employer establishments (NAICS 722410) across 4 ZIP codes whose USPS city is Newark, DE; density uses ACS 2023 ZCTA population (142,233). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "812112",
+        "slug": "beauty-salons",
+        "label": "Beauty Salons & Hair Studios",
+        "establishments": 31,
+        "per10kResidents": 2.18,
+        "usAvgPer10k": 2.31,
+        "saturationIndex": 94,
+        "status": "balanced",
+        "smallSample": false,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "31 employer establishments (NAICS 812112) across 4 ZIP codes whose USPS city is Newark, DE; density uses ACS 2023 ZCTA population (142,233). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "812113",
+        "slug": "nail-salons",
+        "label": "Nail Salons",
+        "establishments": 27,
+        "per10kResidents": 1.9,
+        "usAvgPer10k": 0.86,
+        "saturationIndex": 221,
+        "status": "saturated",
+        "smallSample": false,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "27 employer establishments (NAICS 812113) across 4 ZIP codes whose USPS city is Newark, DE; density uses ACS 2023 ZCTA population (142,233). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "713940",
+        "slug": "gyms-fitness",
+        "label": "Fitness & Recreational Sports Centers",
+        "establishments": 22,
+        "per10kResidents": 1.55,
+        "usAvgPer10k": 1.0,
+        "saturationIndex": 155,
+        "status": "saturated",
+        "smallSample": false,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "22 employer establishments (NAICS 713940) across 4 ZIP codes whose USPS city is Newark, DE; density uses ACS 2023 ZCTA population (142,233). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "812910",
+        "slug": "pet-care",
+        "label": "Pet Care & Grooming Services",
+        "establishments": 4,
+        "per10kResidents": 0.28,
+        "usAvgPer10k": 0.46,
+        "saturationIndex": 61,
+        "status": "underserved",
+        "smallSample": true,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "4 employer establishments (NAICS 812910) across 4 ZIP codes whose USPS city is Newark, DE; density uses ACS 2023 ZCTA population (142,233). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "541940",
+        "slug": "veterinary",
+        "label": "Veterinary Services & Animal Hospitals",
         "establishments": 7,
-        "per10kResidents": 1.75,
-        "usAvgPer10k": 1.65,
-        "saturationIndex": 105,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "per10kResidents": 0.49,
+        "usAvgPer10k": 0.69,
+        "saturationIndex": 71,
+        "status": "underserved",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Dover."
+          "evidenceQuote": "7 employer establishments (NAICS 541940) across 4 ZIP codes whose USPS city is Newark, DE; density uses ACS 2023 ZCTA population (142,233). National benchmark = all US ZIP rows / US population."
         }
       },
       {
-        "naicsCode": "445291",
-        "slug": "bakeries",
-        "label": "Retail Bakeries",
+        "naicsCode": "811111",
+        "slug": "auto-repair",
+        "label": "General Automotive Repair",
+        "establishments": 27,
+        "per10kResidents": 1.9,
+        "usAvgPer10k": 2.2,
+        "saturationIndex": 86,
+        "status": "balanced",
+        "smallSample": false,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "27 employer establishments (NAICS 811111) across 4 ZIP codes whose USPS city is Newark, DE; density uses ACS 2023 ZCTA population (142,233). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "811192",
+        "slug": "car-washes",
+        "label": "Car Washes & Auto Detailing",
         "establishments": 3,
-        "per10kResidents": 0.75,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 91,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "per10kResidents": 0.21,
+        "usAvgPer10k": 0.35,
+        "saturationIndex": 60,
+        "status": "underserved",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Dover."
+          "evidenceQuote": "3 employer establishments (NAICS 811192) across 4 ZIP codes whose USPS city is Newark, DE; density uses ACS 2023 ZCTA population (142,233). National benchmark = all US ZIP rows / US population."
         }
       },
       {
-        "naicsCode": "453110",
-        "slug": "florists",
-        "label": "Florists & Floral Gift",
-        "establishments": 2,
-        "per10kResidents": 0.5,
-        "usAvgPer10k": 0.5,
-        "saturationIndex": 100,
+        "naicsCode": "621210",
+        "slug": "dentists",
+        "label": "Offices of Dentists",
+        "establishments": 45,
+        "per10kResidents": 3.16,
+        "usAvgPer10k": 3.89,
+        "saturationIndex": 81,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Dover."
+          "evidenceQuote": "45 employer establishments (NAICS 621210) across 4 ZIP codes whose USPS city is Newark, DE; density uses ACS 2023 ZCTA population (142,233). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "621310",
+        "slug": "chiropractors",
+        "label": "Offices of Chiropractors",
+        "establishments": 17,
+        "per10kResidents": 1.2,
+        "usAvgPer10k": 0.97,
+        "saturationIndex": 123,
+        "status": "saturated",
+        "smallSample": false,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "17 employer establishments (NAICS 621310) across 4 ZIP codes whose USPS city is Newark, DE; density uses ACS 2023 ZCTA population (142,233). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "621340",
+        "slug": "physical-therapy",
+        "label": "Physical, Occupational & Speech Therapists",
+        "establishments": 32,
+        "per10kResidents": 2.25,
+        "usAvgPer10k": 1.3,
+        "saturationIndex": 173,
+        "status": "saturated",
+        "smallSample": false,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "32 employer establishments (NAICS 621340) across 4 ZIP codes whose USPS city is Newark, DE; density uses ACS 2023 ZCTA population (142,233). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "624410",
+        "slug": "daycare",
+        "label": "Child Day Care Services",
+        "establishments": 45,
+        "per10kResidents": 3.16,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 149,
+        "status": "saturated",
+        "smallSample": false,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "45 employer establishments (NAICS 624410) across 4 ZIP codes whose USPS city is Newark, DE; density uses ACS 2023 ZCTA population (142,233). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "445120",
+        "slug": "convenience-stores",
+        "label": "Convenience Retail Stores",
+        "establishments": 8,
+        "per10kResidents": 0.56,
+        "usAvgPer10k": 0.82,
+        "saturationIndex": 69,
+        "status": "underserved",
+        "smallSample": false,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "8 employer establishments (NAICS 445120) across 4 ZIP codes whose USPS city is Newark, DE; density uses ACS 2023 ZCTA population (142,233). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "448140",
+        "slug": "clothing-boutiques",
+        "label": "Family Clothing Stores & Boutiques",
+        "establishments": 28,
+        "per10kResidents": 1.97,
+        "usAvgPer10k": 0.65,
+        "saturationIndex": 302,
+        "status": "saturated",
+        "smallSample": true,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "28 employer establishments (NAICS 448140) across 4 ZIP codes whose USPS city is Newark, DE; density uses ACS 2023 ZCTA population (142,233). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -1100,799 +1599,291 @@
         "slug": "law-firms",
         "label": "Offices of Lawyers",
         "establishments": 20,
-        "per10kResidents": 5.01,
-        "usAvgPer10k": 4.9,
-        "saturationIndex": 102,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Dover."
-        }
-      },
-      {
-        "naicsCode": "541211",
-        "slug": "accounting-cpa",
-        "label": "Offices of CPAs",
-        "establishments": 8,
-        "per10kResidents": 2.01,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 96,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Dover."
-        }
-      },
-      {
-        "naicsCode": "531210",
-        "slug": "real-estate-agencies",
-        "label": "Real Estate Brokerages",
-        "establishments": 15,
-        "per10kResidents": 3.76,
-        "usAvgPer10k": 3.8,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Dover."
-        }
-      }
-    ],
-    "permitsAndTax": {
-      "generalBusinessLicenseRequired": false,
-      "businessLicenseFeeSummary": "No general city business license required. State of Delaware statutory filings apply.",
-      "businessLicensePortalUrl": "https://www.doverde.gov/permits",
-      "zoningLookupUrl": "https://www.doverde.gov/zoning",
-      "buildingPermitPortalUrl": "https://www.doverde.gov/building",
-      "certificateOfOccupancyFee": "$185 standard municipal inspection fee",
-      "avgPermitWaitDays": 30,
-      "shortTermRentalStatus": "restricted",
-      "foodTruckPermitStatus": "allowed",
-      "combinedSalesTaxRate": 0.0,
-      "stateTaxRate": 0.0,
-      "localTaxRate": 0.0,
-      "provenance": {
-        "sourceName": "Dover Municipal Code & State Department of Revenue",
-        "sourceUrl": "https://www.doverde.gov",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place",
-        "evidenceQuote": "Statutory municipal code standards."
-      }
-    },
-    "topTrafficCorridors": [
-      {
-        "roadName": "Main Arterial Corridor 1",
-        "segmentDescription": "Central Commercial Corridor through Dover",
-        "aadt": 4787,
-        "heavyTruckPct": 5.5,
-        "lat": 39.160602,
-        "lng": -75.521659,
-        "year": 2024,
-        "provenance": {
-          "sourceName": "Delaware DOT AADT Database",
-          "sourceUrl": "https://www.transportation.gov/",
-          "datasetVintage": "2024-AADT",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "place"
-        }
-      }
-    ],
-    "marketSignals": {
-      "reportedRetailRentSqFtYr": 41.1,
-      "reportedIndustrialRentSqFtYr": 18.5,
-      "topSearchedNaics30d": [
-        "722515",
-        "713940",
-        "812111"
-      ],
-      "verifiedLocalProsCount": 8
-    },
-    "scores": {
-      "overallViability": 52,
-      "purchasingPower": 49,
-      "growthMomentum": 55,
-      "costEfficiency": 69,
-      "regulatoryFriction": 48
-    },
-    "executiveTravel": {
-      "timeZone": "America/New_York (ET: UTC-05:00)",
-      "timeZoneAbbr": "ET",
-      "utcOffset": "-05:00",
-      "primaryAirport": {
-        "name": "Dover Regional / Metropolitan Airport",
-        "iata": null,
-        "distanceMiles": 10.3,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
-      },
-      "powerPlugs": {
-        "types": [
-          "Type A (2-pin)",
-          "Type B (3-pin grounded)"
-        ],
-        "voltage": "120V",
-        "frequency": "60Hz",
-        "adapterAdvice": "Visitors from UK, EU, Australia, and Asia require a standard Type A/B plug adapter and dual-voltage converter."
-      },
-      "currency": {
-        "code": "USD",
-        "symbol": "$",
-        "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
-        "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
-      },
-      "climate": {
-        "summerHighF": 84,
-        "winterLowF": 22,
-        "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
-        "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
-      },
-      "emergency": {
-        "emergencyDispatch": "911",
-        "nonEmergencyPolice": "311 or local municipal dispatch",
-        "nearestTraumaHospital": "Dover Regional Memorial Hospital",
-        "hospitalAddress": "Medical Center District, Dover, DE"
-      },
-      "visitorLogistics": {
-        "tapWaterPotability": "100% Safe municipal drinking water conforming to EPA Safe Drinking Water Act standards.",
-        "salesTaxRefundPolicy": "International travelers may claim state sales tax refunds on qualifying departures at designated airport customs counters.",
-        "rideshareAvailability": "Ubiquitous (Uber and Lyft operational 24/7 across the metropolitan area)."
-      },
-      "provenance": {
-        "sourceName": "FAA Airport Database & International Trade Administration",
-        "sourceUrl": "https://www.trade.gov/",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
-      }
-    }
-  },
-  {
-    "slug": "de/newark",
-    "cityId": "1050670",
-    "countyFips": "10506",
-    "name": "Newark",
-    "stateCode": "de",
-    "stateName": "Delaware",
-    "countyName": "Newark Metropolitan Area",
-    "lat": 39.677649,
-    "lng": -75.757479,
-    "primaryZips": [
-      "71322"
-    ],
-    "demographics": {
-      "population": 30169,
-      "popGrowth5YrPct": -1.4,
-      "medianHouseholdIncome": 78066,
-      "perCapitaIncome": 45278,
-      "medianAge": 36.4,
-      "daytimeWorkerPop": 18705,
-      "daytimePopSurgePct": 8.5,
-      "medianGrossRent": 1501,
-      "medianHomeValue": 327877,
-      "provenance": {
-        "sourceName": "US Census Bureau ACS 5-Year (DP03/DP04/DP05) & PopEst",
-        "sourceUrl": "https://api.census.gov/data/2023/acs/acs5",
-        "datasetVintage": "2023-5YR",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
-      }
-    },
-    "laborAndEconomy": {
-      "unemploymentRatePct": 3.8,
-      "avgWeeklyWageAllIndustries": 1340,
-      "newHousingPermits12Mo": 226,
-      "permitsPer1kResidents": 7.5,
-      "femaRiskScore": 28.0,
-      "provenance": {
-        "sourceName": "BLS Local Area Unemployment Statistics (LAUS) & Census BPS",
-        "sourceUrl": "https://www.bls.gov/lau/",
-        "datasetVintage": "2024-M08",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
-      }
-    },
-    "industries": [
-      {
-        "naicsCode": "722515",
-        "slug": "coffee-shops",
-        "label": "Coffee & Snack Shops",
-        "establishments": 6,
-        "per10kResidents": 1.99,
-        "usAvgPer10k": 2.15,
-        "saturationIndex": 94,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Newark."
-        }
-      },
-      {
-        "naicsCode": "722511",
-        "slug": "restaurants",
-        "label": "Full-Service Restaurants",
-        "establishments": 21,
-        "per10kResidents": 6.96,
-        "usAvgPer10k": 6.8,
-        "saturationIndex": 102,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Newark."
-        }
-      },
-      {
-        "naicsCode": "722513",
-        "slug": "fast-food",
-        "label": "Fast Food Restaurants",
-        "establishments": 22,
-        "per10kResidents": 7.29,
-        "usAvgPer10k": 7.2,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Newark."
-        }
-      },
-      {
-        "naicsCode": "722410",
-        "slug": "bars-taverns",
-        "label": "Bars & Drinking Places",
-        "establishments": 6,
-        "per10kResidents": 1.99,
-        "usAvgPer10k": 1.85,
-        "saturationIndex": 106,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Newark."
-        }
-      },
-      {
-        "naicsCode": "812111",
-        "slug": "barber-shops",
-        "label": "Barber Shops",
-        "establishments": 4,
-        "per10kResidents": 1.33,
-        "usAvgPer10k": 1.35,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Newark."
-        }
-      },
-      {
-        "naicsCode": "812112",
-        "slug": "beauty-salons",
-        "label": "Beauty Salons & Hair Studios",
-        "establishments": 10,
-        "per10kResidents": 3.31,
-        "usAvgPer10k": 3.4,
-        "saturationIndex": 98,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Newark."
-        }
-      },
-      {
-        "naicsCode": "812113",
-        "slug": "nail-salons",
-        "label": "Nail Salons",
-        "establishments": 6,
-        "per10kResidents": 1.99,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 96,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Newark."
-        }
-      },
-      {
-        "naicsCode": "713940",
-        "slug": "gyms-fitness",
-        "label": "Fitness & Recreational Gyms",
-        "establishments": 4,
-        "per10kResidents": 1.33,
-        "usAvgPer10k": 1.25,
-        "saturationIndex": 105,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Newark."
-        }
-      },
-      {
-        "naicsCode": "812910",
-        "slug": "pet-care",
-        "label": "Pet Care & Grooming",
-        "establishments": 3,
-        "per10kResidents": 0.99,
-        "usAvgPer10k": 0.95,
-        "saturationIndex": 104,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Newark."
-        }
-      },
-      {
-        "naicsCode": "541940",
-        "slug": "veterinary",
-        "label": "Veterinary Services",
-        "establishments": 3,
-        "per10kResidents": 0.99,
-        "usAvgPer10k": 1.05,
-        "saturationIndex": 96,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Newark."
-        }
-      },
-      {
-        "naicsCode": "811111",
-        "slug": "auto-repair",
-        "label": "General Automotive Repair",
-        "establishments": 14,
-        "per10kResidents": 4.64,
+        "per10kResidents": 1.41,
         "usAvgPer10k": 4.8,
-        "saturationIndex": 98,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "saturationIndex": 29,
+        "status": "underserved",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Newark."
-        }
-      },
-      {
-        "naicsCode": "811192",
-        "slug": "car-washes",
-        "label": "Car Washes & Detailing",
-        "establishments": 2,
-        "per10kResidents": 0.66,
-        "usAvgPer10k": 0.65,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Newark."
-        }
-      },
-      {
-        "naicsCode": "812310",
-        "slug": "laundromats",
-        "label": "Coin Laundromats",
-        "establishments": 2,
-        "per10kResidents": 0.66,
-        "usAvgPer10k": 0.55,
-        "saturationIndex": 115,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Newark."
-        }
-      },
-      {
-        "naicsCode": "812320",
-        "slug": "dry-cleaners",
-        "label": "Dry Cleaning & Laundry",
-        "establishments": 3,
-        "per10kResidents": 0.99,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 113,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Newark."
-        }
-      },
-      {
-        "naicsCode": "621210",
-        "slug": "dentists",
-        "label": "Offices of Dentists",
-        "establishments": 12,
-        "per10kResidents": 3.98,
-        "usAvgPer10k": 3.9,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Newark."
-        }
-      },
-      {
-        "naicsCode": "621310",
-        "slug": "chiropractors",
-        "label": "Offices of Chiropractors",
-        "establishments": 4,
-        "per10kResidents": 1.33,
-        "usAvgPer10k": 1.4,
-        "saturationIndex": 96,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Newark."
-        }
-      },
-      {
-        "naicsCode": "621340",
-        "slug": "physical-therapy",
-        "label": "Physical Therapy Clinics",
-        "establishments": 5,
-        "per10kResidents": 1.66,
-        "usAvgPer10k": 1.55,
-        "saturationIndex": 105,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Newark."
-        }
-      },
-      {
-        "naicsCode": "624410",
-        "slug": "daycare",
-        "label": "Child Day Care Services",
-        "establishments": 7,
-        "per10kResidents": 2.32,
-        "usAvgPer10k": 2.25,
-        "saturationIndex": 102,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Newark."
-        }
-      },
-      {
-        "naicsCode": "445120",
-        "slug": "convenience-stores",
-        "label": "Convenience Stores",
-        "establishments": 6,
-        "per10kResidents": 1.99,
-        "usAvgPer10k": 1.95,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Newark."
-        }
-      },
-      {
-        "naicsCode": "448140",
-        "slug": "clothing-boutiques",
-        "label": "Family Clothing Stores",
-        "establishments": 5,
-        "per10kResidents": 1.66,
-        "usAvgPer10k": 1.65,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Newark."
-        }
-      },
-      {
-        "naicsCode": "445291",
-        "slug": "bakeries",
-        "label": "Retail Bakeries",
-        "establishments": 3,
-        "per10kResidents": 0.99,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 113,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Newark."
-        }
-      },
-      {
-        "naicsCode": "453110",
-        "slug": "florists",
-        "label": "Florists & Floral Gift",
-        "establishments": 2,
-        "per10kResidents": 0.66,
-        "usAvgPer10k": 0.5,
-        "saturationIndex": 124,
-        "status": "saturated",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Newark."
-        }
-      },
-      {
-        "naicsCode": "541110",
-        "slug": "law-firms",
-        "label": "Offices of Lawyers",
-        "establishments": 15,
-        "per10kResidents": 4.97,
-        "usAvgPer10k": 4.9,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Newark."
+          "evidenceQuote": "20 employer establishments (NAICS 541110) across 4 ZIP codes whose USPS city is Newark, DE; density uses ACS 2023 ZCTA population (142,233). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541211",
         "slug": "accounting-cpa",
-        "label": "Offices of CPAs",
-        "establishments": 6,
-        "per10kResidents": 1.99,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 96,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Offices of Certified Public Accountants",
+        "establishments": 13,
+        "per10kResidents": 0.91,
+        "usAvgPer10k": 1.44,
+        "saturationIndex": 63,
+        "status": "underserved",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Newark."
+          "evidenceQuote": "13 employer establishments (NAICS 541211) across 4 ZIP codes whose USPS city is Newark, DE; density uses ACS 2023 ZCTA population (142,233). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "531210",
         "slug": "real-estate-agencies",
-        "label": "Real Estate Brokerages",
-        "establishments": 11,
-        "per10kResidents": 3.65,
-        "usAvgPer10k": 3.8,
-        "saturationIndex": 97,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Offices of Real Estate Agents & Brokers",
+        "establishments": 42,
+        "per10kResidents": 2.95,
+        "usAvgPer10k": 4.74,
+        "saturationIndex": 62,
+        "status": "underserved",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Newark."
+          "evidenceQuote": "42 employer establishments (NAICS 531210) across 4 ZIP codes whose USPS city is Newark, DE; density uses ACS 2023 ZCTA population (142,233). National benchmark = all US ZIP rows / US population."
         }
       }
     ],
-    "permitsAndTax": {
-      "generalBusinessLicenseRequired": false,
-      "businessLicenseFeeSummary": "No general city business license required. State of Delaware statutory filings apply.",
-      "businessLicensePortalUrl": "https://www.newarkde.gov/permits",
-      "zoningLookupUrl": "https://www.newarkde.gov/zoning",
-      "buildingPermitPortalUrl": "https://www.newarkde.gov/building",
-      "certificateOfOccupancyFee": "$185 standard municipal inspection fee",
-      "avgPermitWaitDays": 30,
-      "shortTermRentalStatus": "restricted",
-      "foodTruckPermitStatus": "allowed",
-      "combinedSalesTaxRate": 0.0,
-      "stateTaxRate": 0.0,
-      "localTaxRate": 0.0,
-      "provenance": {
-        "sourceName": "Newark Municipal Code & State Department of Revenue",
-        "sourceUrl": "https://www.newarkde.gov",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place",
-        "evidenceQuote": "Statutory municipal code standards."
-      }
-    },
-    "topTrafficCorridors": [
-      {
-        "roadName": "Main Arterial Corridor 1",
-        "segmentDescription": "Central Commercial Corridor through Newark",
-        "aadt": 3620,
-        "heavyTruckPct": 5.5,
-        "lat": 39.677649,
-        "lng": -75.757479,
-        "year": 2024,
-        "provenance": {
-          "sourceName": "Delaware DOT AADT Database",
-          "sourceUrl": "https://www.transportation.gov/",
-          "datasetVintage": "2024-AADT",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "place"
-        }
-      }
-    ],
-    "marketSignals": {
-      "reportedRetailRentSqFtYr": 39.0,
-      "reportedIndustrialRentSqFtYr": 17.6,
-      "topSearchedNaics30d": [
-        "722515",
-        "713940",
-        "812111"
-      ],
-      "verifiedLocalProsCount": 8
-    },
-    "scores": {
-      "overallViability": 45,
-      "purchasingPower": 43,
-      "growthMomentum": 47,
-      "costEfficiency": 73,
-      "regulatoryFriction": 48
-    },
+    "marketSignals": {},
     "executiveTravel": {
-      "timeZone": "America/New_York (ET: UTC-05:00)",
+      "timeZone": "America/New_York",
       "timeZoneAbbr": "ET",
       "utcOffset": "-05:00",
-      "primaryAirport": {
-        "name": "Newark Regional / Metropolitan Airport",
-        "iata": null,
-        "distanceMiles": 10.2,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
-      },
-      "powerPlugs": {
-        "types": [
-          "Type A (2-pin)",
-          "Type B (3-pin grounded)"
-        ],
-        "voltage": "120V",
-        "frequency": "60Hz",
-        "adapterAdvice": "Visitors from UK, EU, Australia, and Asia require a standard Type A/B plug adapter and dual-voltage converter."
-      },
-      "currency": {
-        "code": "USD",
-        "symbol": "$",
-        "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
-        "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
-      },
-      "climate": {
-        "summerHighF": 84,
-        "winterLowF": 22,
-        "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
-        "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
-      },
       "emergency": {
         "emergencyDispatch": "911",
-        "nonEmergencyPolice": "311 or local municipal dispatch",
-        "nearestTraumaHospital": "Newark Regional Memorial Hospital",
-        "hospitalAddress": "Medical Center District, Newark, DE"
+        "nearestTraumaHospital": "Christiana Hospital",
+        "hospitalAddress": "4755 Ogletown-Stanton Road, Newark, DE 19718",
+        "cmsFacilityId": "080001",
+        "emergencyServices": true,
+        "source": "CMS Care Compare hospital general information (dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma or nearest claim.",
+        "erHospitals": [
+          {
+            "name": "Christiana Hospital",
+            "address": "4755 Ogletown-Stanton Road, Newark, DE 19718",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "080001"
+          },
+          {
+            "name": "Rockford Center",
+            "address": "100 Rockford Drive, Newark, DE 19713",
+            "type": "Psychiatric",
+            "cmsFacilityId": "084002"
+          }
+        ],
+        "erHospitalsSource": "CMS Care Compare hospital general information (dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma or nearest claim."
       },
-      "visitorLogistics": {
-        "tapWaterPotability": "100% Safe municipal drinking water conforming to EPA Safe Drinking Water Act standards.",
-        "salesTaxRefundPolicy": "International travelers may claim state sales tax refunds on qualifying departures at designated airport customs counters.",
-        "rideshareAvailability": "Ubiquitous (Uber and Lyft operational 24/7 across the metropolitan area)."
-      },
-      "provenance": {
-        "sourceName": "FAA Airport Database & International Trade Administration",
-        "sourceUrl": "https://www.trade.gov/",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
+      "primaryAirport": {
+        "name": "Wilmington Airport",
+        "iata": "ILG",
+        "lat": 39.678699,
+        "lng": -75.606499,
+        "distanceMiles": 8.0,
+        "transitToDowntown": null,
+        "source": "OurAirports (public domain) for name, IATA code and coordinates; distance is straight-line from the U.S. Census Gazetteer city center point",
+        "sourceUrl": "https://ourairports.com/data/",
+        "cityCenterMethod": "Census Gazetteer internal point",
+        "retrieved": "2026-10-31"
       }
+    },
+    "housingAndTaxes": {
+      "medianHomeValue": 357600,
+      "medianGrossRent": 1611,
+      "medianRealEstateTaxPaid": 2903,
+      "effectivePropertyTaxRatePct": 0.81,
+      "countyName": "New Castle County",
+      "source": "ACS 2023 5-yr: B25077 median home value, B25064 median gross rent, B25103 median real estate taxes paid. Effective rate = B25103 / B25077.",
+      "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/"
+    },
+    "climateNormals": {
+      "peakSummerHighF": 89,
+      "winterLowF": 25,
+      "annualRainfallInches": 47.0,
+      "sourceName": "NOAA NCEI U.S. Climate Normals 1991-2020 (Station USC00076410, 0.9 mi from Gazetteer center), retrieved 2026-10-31",
+      "sourceUrl": "https://www.ncei.noaa.gov/products/land-based-station/us-climate-normals"
+    },
+    "waterUtility": {
+      "pwsid": "DE0000552",
+      "providerName": "Artesian Water Company",
+      "populationServed": 231114,
+      "sourceType": "surface water",
+      "source": "U.S. EPA Safe Drinking Water Information System (SDWIS)",
+      "sourceUrl": "https://data.epa.gov/efservice/WATER_SYSTEM/PWSID/DE0000552/JSON",
+      "retrieved": "2026-10-31"
+    },
+    "higherEducation": {
+      "institutionCount": 5,
+      "totalEnrollment": 19759,
+      "institutions": [
+        {
+          "id": 130943,
+          "name": "University of Delaware",
+          "studentSize": 19071,
+          "ownership": "Public",
+          "schoolUrl": "https://www.udel.edu/",
+          "lat": 39.679577,
+          "lng": -75.752822
+        },
+        {
+          "id": 130873,
+          "name": "Dawn Career Institute LLC",
+          "studentSize": 355,
+          "ownership": "Private for-profit",
+          "schoolUrl": "https://www.dawncareerinstitute.edu/",
+          "lat": 39.668605,
+          "lng": -75.677768
+        },
+        {
+          "id": 131061,
+          "name": "Schilling-Douglas School of Hair Design",
+          "studentSize": 152,
+          "ownership": "Private for-profit",
+          "schoolUrl": "https://schillingdouglas.edu/",
+          "lat": 39.711442,
+          "lng": -75.74178
+        },
+        {
+          "id": 459301,
+          "name": "Paul Mitchell the School-Delaware",
+          "studentSize": 148,
+          "ownership": "Private for-profit",
+          "schoolUrl": "https://paulmitchell.edu/delaware",
+          "lat": 39.62274,
+          "lng": -75.680231
+        },
+        {
+          "id": 488262,
+          "name": "Hair Academy School of Barbering & Beauty",
+          "studentSize": 33,
+          "ownership": "Private for-profit",
+          "schoolUrl": "https://hairacademysbb.edu/",
+          "lat": 39.65906,
+          "lng": -75.73689
+        }
+      ],
+      "sourceName": "U.S. Department of Education College Scorecard",
+      "sourceUrl": "https://collegescorecard.ed.gov/",
+      "retrieved": "2026-10-31"
+    },
+    "evInfrastructure": {
+      "totalStations": 34,
+      "totalChargingPorts": 118,
+      "dcFastPorts": 63,
+      "level2Ports": 55,
+      "sampleStations": [
+        {
+          "name": "Newark, DE - Tesla Supercharger",
+          "address": "530 John F Kennedy Memorial Highway, Newark, DE 19702",
+          "network": "Tesla",
+          "dcFastPorts": 12,
+          "level2Ports": 0,
+          "lat": 39.663469,
+          "lng": -75.690194
+        },
+        {
+          "name": "Biden Center",
+          "address": "520 JFK Memorial Highway, Newark, DE 19702",
+          "network": "APPLEGREEN",
+          "dcFastPorts": 12,
+          "level2Ports": 0,
+          "lat": 39.662695,
+          "lng": -75.690514
+        },
+        {
+          "name": "Newark, DE - East Chestnut Hill Road - Tesla Supercharger",
+          "address": "274 E Chestnut Hill Rd, Newark, DE 19713",
+          "network": "Tesla",
+          "dcFastPorts": 8,
+          "level2Ports": 0,
+          "lat": 39.662063,
+          "lng": -75.735618
+        },
+        {
+          "name": "Newark, DE - Old Baltimore Pike - Tesla Supercharger",
+          "address": "865 Old Baltimore Pike, Newark, DE 19702",
+          "network": "Tesla",
+          "dcFastPorts": 8,
+          "level2Ports": 0,
+          "lat": 39.642605,
+          "lng": -75.729531
+        },
+        {
+          "name": "Newark, DE - Corporate Boulevard - Tesla Supercharger",
+          "address": "110 Corporate Blvd, Newark, DE 19702",
+          "network": "Tesla",
+          "dcFastPorts": 8,
+          "level2Ports": 0,
+          "lat": 39.61701,
+          "lng": -75.746765
+        }
+      ],
+      "sourceName": "U.S. Department of Energy / NLR Alternative Fuels Data Center (AFDC)",
+      "sourceUrl": "https://afdc.energy.gov/stations",
+      "retrieved": "2026-10-31"
+    },
+    "nationalParks": {
+      "parks": [
+        {
+          "parkCode": "frst",
+          "fullName": "First State National Historical Park",
+          "designation": "National Historical Park",
+          "distanceMiles": 14.8,
+          "description": "Famous as the First State to ratify the Constitution, Delaware was born out of a conflict among three world powers for dominance of the Delaware Valley. From this beginning, the region developed a distinct character that tolerated...",
+          "url": "https://www.nps.gov/frst/index.htm",
+          "lat": 39.830769,
+          "lng": -75.563539
+        },
+        {
+          "parkCode": "vafo",
+          "fullName": "Valley Forge National Historical Park",
+          "designation": "National Historical Park",
+          "distanceMiles": 33.6,
+          "description": "Valley Forge is the place where George Washington and the Continental Army took refuge during the winter of 1777-1778. Today the park protects 3,500 acres of meadows, woodlands, historic landscapes, and monuments commemorating the...",
+          "url": "https://www.nps.gov/vafo/index.htm",
+          "lat": 40.10055,
+          "lng": -75.445819
+        },
+        {
+          "parkCode": "hofu",
+          "fullName": "Hopewell Furnace National Historic Site",
+          "designation": "National Historic Site",
+          "distanceMiles": 36.5,
+          "description": "Hopewell Furnace showcases an early American landscape of industrial operations from 1771-1883, Hopewell and other iron plantations laid the foundation for the transformation of the United States into an industrial giant for the time....",
+          "url": "https://www.nps.gov/hofu/index.htm",
+          "lat": 40.206106,
+          "lng": -75.767664
+        },
+        {
+          "parkCode": "glde",
+          "fullName": "Gloria Dei Church National Historic Site",
+          "designation": "National Historic Site",
+          "distanceMiles": 37.1,
+          "description": "Before Pennsylvania there was New Sweden. Discover this last historic link to a forgotten past. Visit the church's pastoral surroundings and its burial ground of patriots and ordinary citizens alike.",
+          "url": "https://www.nps.gov/glde/index.htm",
+          "lat": 39.93435,
+          "lng": -75.143989
+        },
+        {
+          "parkCode": "thko",
+          "fullName": "Thaddeus Kosciuszko National Memorial",
+          "designation": "National Memorial",
+          "distanceMiles": 37.2,
+          "description": "Visit the house where wounded Polish freedom fighter Thaddeus Kosciuszko lived and hear how this brilliant military engineer designed successful fortifications during the American Revolution. See the room where he received notable...",
+          "url": "https://www.nps.gov/thko/index.htm",
+          "lat": 39.943453,
+          "lng": -75.14732
+        }
+      ],
+      "sourceName": "U.S. National Park Service",
+      "sourceUrl": "https://www.nps.gov/",
+      "retrieved": "2026-10-31"
     }
   }
 ]

@@ -29,7 +29,7 @@ CityClick publishes US municipal guides built strictly from traceable federal an
   23. Fayetteville, Arkansas: https://cityclick.com/ar/fayetteville/
   24. Bentonville, Arkansas: https://cityclick.com/ar/bentonville/
   25. Huntsville, Alabama: https://cityclick.com/al/huntsville/
-- Remaining Preview Catalog: ~1,476 additional US municipal entries carry `<meta name="robots" content="noindex, follow">` and remain excluded from `sitemap.xml` until verified from primary sources.
+- National Primary-Source Catalog: All 1,501 US municipal guides and 51 state directory hubs (`https://cityclick.com/{state}/`) are built strictly from primary federal and state datasets (`robots="index, follow"`) and included in `https://cityclick.com/sitemap.xml`. Where an optional dataset (such as a state/local retail sales-tax schedule in `sources/sales-tax.json` or an unambiguous single EPA SDWIS community water system) is not present on the city record, that UI block is cleanly omitted under the Prime Directive.
 - Canonical URL Rule: All HTML page routes use a trailing slash (e.g., `https://cityclick.com/tx/austin/`, `https://cityclick.com/methodology/`). API routes (`/api/v1/...`) and static asset files (`.json`, `.txt`, `.pdf`) do not use a trailing slash.
 
 ## 2. Primary Federal & State Data Sources

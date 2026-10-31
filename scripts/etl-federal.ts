@@ -449,7 +449,7 @@ export function runFederalETL() {
       population: record.demographics.population,
       popGrowth5YrPct: record.demographics.popGrowth5YrPct,
       medianHouseholdIncome: record.demographics.medianHouseholdIncome,
-      combinedSalesTaxRate: record.permitsAndTax.combinedSalesTaxRate,
+      combinedSalesTaxRate: record.permitsAndTax?.combinedSalesTaxRate,
       reportedRetailRentSqFtYr: record.marketSignals?.reportedRetailRentSqFtYr,
       overallViability: record.scores?.overallViability,
       purchasingPower: record.scores?.purchasingPower,
@@ -467,8 +467,8 @@ export function runFederalETL() {
     ) VALUES (
       '${record.slug}', '${record.cityId}', '${record.countyFips}', '${record.name}', '${record.stateCode}', '${record.stateName}',
       ${record.lat}, ${record.lng}, ${record.demographics.population}, ${record.demographics.popGrowth5YrPct ?? 'NULL'}, ${record.demographics.medianHouseholdIncome},
-      ${record.permitsAndTax.combinedSalesTaxRate}, ${record.marketSignals?.reportedRetailRentSqFtYr ?? 'NULL'},
-      ${record.permitsAndTax.avgPermitWaitDays ?? 'NULL'},
+      ${record.permitsAndTax?.combinedSalesTaxRate ?? 'NULL'}, ${record.marketSignals?.reportedRetailRentSqFtYr ?? 'NULL'},
+      ${record.permitsAndTax?.avgPermitWaitDays ?? 'NULL'},
       ${record.scores?.overallViability ?? 'NULL'}, ${record.scores?.purchasingPower ?? 'NULL'}, ${record.scores?.growthMomentum ?? 'NULL'}, ${record.scores?.costEfficiency ?? 'NULL'}, ${record.scores?.regulatoryFriction ?? 'NULL'},
       '${JSON.stringify(record).replace(/'/g, "''")}', '${verifiedAt}'
     );`);

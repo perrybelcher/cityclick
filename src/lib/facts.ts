@@ -81,16 +81,19 @@ export function buildFacts(city: CityRecord): Fact[] {
   const cl = city.climateNormals;
   if (cl?.peakSummerHighF != null) {
     let a = `${n} averages a July daily high of ${cl.peakSummerHighF}°F and a January daily low of ${cl.winterLowF}°F, with about ${cl.annualRainfallInches} inches of precipitation per year.`;
-    if (city.terrainElevation?.elevationFeet != null) {
+    const hasElev = city.terrainElevation?.elevationFeet != null;
+    if (hasElev && city.terrainElevation) {
       a += ` City center elevation is ${city.terrainElevation.elevationFeet.toFixed(1)} feet (${city.terrainElevation.elevationMeters.toFixed(1)} meters) above sea level.`;
     }
+    const isNoaaClimate = Boolean(cl.sourceName?.includes('NOAA'));
+    const climateAsOf = isNoaaClimate ? '1991–2020 NOAA climate normals' : '2015–2024 climate average';
     out.push({
-      q: `What is the climate and elevation in ${n}?`,
+      q: hasElev ? `What is the climate and elevation in ${n}?` : `What is the climate in ${n}?`,
       a,
-      source: city.terrainElevation?.elevationFeet != null
+      source: hasElev
         ? `${cl.sourceName ?? 'Open-Meteo Historical Weather API'}; USGS 3D Elevation Program (3DEP)`
         : cl.sourceName ?? 'Open-Meteo Historical Weather API',
-      asOf: '2015–2024 climate average; USGS 3DEP DEM',
+      asOf: hasElev ? `${climateAsOf}; USGS 3DEP DEM` : climateAsOf,
     });
   }
   const tr = city.executiveTravel;

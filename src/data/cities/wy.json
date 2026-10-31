@@ -2,1501 +2,1308 @@
   {
     "slug": "wy/cheyenne",
     "cityId": "5613900",
-    "countyFips": "56139",
+    "countyFips": "56021",
     "name": "Cheyenne",
     "stateCode": "wy",
     "stateName": "Wyoming",
-    "countyName": "Cheyenne Metropolitan Area",
+    "countyName": "Laramie County",
     "lat": 41.12727,
     "lng": -104.79022,
     "primaryZips": [
-      "70590"
+      "82001",
+      "82009",
+      "82007"
     ],
     "demographics": {
       "population": 65168,
-      "popGrowth5YrPct": -0.1,
-      "medianHouseholdIncome": 81064,
-      "perCapitaIncome": 47017,
-      "medianAge": 36.4,
-      "daytimeWorkerPop": 40404,
-      "daytimePopSurgePct": 8.5,
-      "medianGrossRent": 1559,
-      "medianHomeValue": 340469,
+      "medianHouseholdIncome": 77176,
+      "perCapitaIncome": 43320,
+      "medianAge": 38.9,
+      "medianGrossRent": 1035,
+      "medianHomeValue": 311200,
       "provenance": {
-        "sourceName": "US Census Bureau ACS 5-Year (DP03/DP04/DP05) & PopEst",
-        "sourceUrl": "https://api.census.gov/data/2023/acs/acs5",
-        "datasetVintage": "2023-5YR",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "sourceName": "US Census Bureau ACS 5-Year Estimates 2023 (Table-Based Summary File)",
+        "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/",
+        "datasetVintage": "ACS-2023-5YR",
+        "verifiedAt": "2026-10-31T00:00:00Z",
         "granularity": "place"
-      }
-    },
-    "laborAndEconomy": {
-      "unemploymentRatePct": 3.8,
-      "avgWeeklyWageAllIndustries": 1340,
-      "newHousingPermits12Mo": 489,
-      "permitsPer1kResidents": 7.5,
-      "femaRiskScore": 28.0,
-      "provenance": {
-        "sourceName": "BLS Local Area Unemployment Statistics (LAUS) & Census BPS",
-        "sourceUrl": "https://www.bls.gov/lau/",
-        "datasetVintage": "2024-M08",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
-      }
+      },
+      "popChange2020to2023Pct": 0.0,
+      "popChangeBasis": "Census Population Estimates, April 2020 base to July 2023"
     },
     "industries": [
       {
         "naicsCode": "722515",
         "slug": "coffee-shops",
         "label": "Coffee & Snack Shops",
-        "establishments": 14,
-        "per10kResidents": 2.15,
-        "usAvgPer10k": 2.15,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 25,
+        "per10kResidents": 2.63,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 124,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Cheyenne."
+          "evidenceQuote": "25 employer establishments (NAICS 722515) across 3 ZIP codes whose USPS city is Cheyenne, WY; density uses ACS 2023 ZCTA population (95,110). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722511",
         "slug": "restaurants",
         "label": "Full-Service Restaurants",
-        "establishments": 44,
-        "per10kResidents": 6.75,
-        "usAvgPer10k": 6.8,
-        "saturationIndex": 99,
+        "establishments": 60,
+        "per10kResidents": 6.31,
+        "usAvgPer10k": 7.44,
+        "saturationIndex": 85,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Cheyenne."
+          "evidenceQuote": "60 employer establishments (NAICS 722511) across 3 ZIP codes whose USPS city is Cheyenne, WY; density uses ACS 2023 ZCTA population (95,110). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722513",
         "slug": "fast-food",
-        "label": "Fast Food Restaurants",
-        "establishments": 47,
-        "per10kResidents": 7.21,
-        "usAvgPer10k": 7.2,
-        "saturationIndex": 100,
+        "label": "Limited-Service / Fast Food Restaurants",
+        "establishments": 62,
+        "per10kResidents": 6.52,
+        "usAvgPer10k": 7.75,
+        "saturationIndex": 84,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Cheyenne."
+          "evidenceQuote": "62 employer establishments (NAICS 722513) across 3 ZIP codes whose USPS city is Cheyenne, WY; density uses ACS 2023 ZCTA population (95,110). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722410",
         "slug": "bars-taverns",
-        "label": "Bars & Drinking Places",
-        "establishments": 12,
-        "per10kResidents": 1.84,
-        "usAvgPer10k": 1.85,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Drinking Places (Alcoholic Beverages)",
+        "establishments": 14,
+        "per10kResidents": 1.47,
+        "usAvgPer10k": 0.9,
+        "saturationIndex": 163,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Cheyenne."
-        }
-      },
-      {
-        "naicsCode": "812111",
-        "slug": "barber-shops",
-        "label": "Barber Shops",
-        "establishments": 9,
-        "per10kResidents": 1.38,
-        "usAvgPer10k": 1.35,
-        "saturationIndex": 102,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Cheyenne."
+          "evidenceQuote": "14 employer establishments (NAICS 722410) across 3 ZIP codes whose USPS city is Cheyenne, WY; density uses ACS 2023 ZCTA population (95,110). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812112",
         "slug": "beauty-salons",
         "label": "Beauty Salons & Hair Studios",
-        "establishments": 22,
-        "per10kResidents": 3.38,
-        "usAvgPer10k": 3.4,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 31,
+        "per10kResidents": 3.26,
+        "usAvgPer10k": 2.31,
+        "saturationIndex": 141,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Cheyenne."
+          "evidenceQuote": "31 employer establishments (NAICS 812112) across 3 ZIP codes whose USPS city is Cheyenne, WY; density uses ACS 2023 ZCTA population (95,110). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812113",
         "slug": "nail-salons",
         "label": "Nail Salons",
-        "establishments": 14,
-        "per10kResidents": 2.15,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 102,
+        "establishments": 8,
+        "per10kResidents": 0.84,
+        "usAvgPer10k": 0.86,
+        "saturationIndex": 98,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Cheyenne."
+          "evidenceQuote": "8 employer establishments (NAICS 812113) across 3 ZIP codes whose USPS city is Cheyenne, WY; density uses ACS 2023 ZCTA population (95,110). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "713940",
         "slug": "gyms-fitness",
-        "label": "Fitness & Recreational Gyms",
-        "establishments": 8,
-        "per10kResidents": 1.23,
-        "usAvgPer10k": 1.25,
-        "saturationIndex": 98,
+        "label": "Fitness & Recreational Sports Centers",
+        "establishments": 9,
+        "per10kResidents": 0.95,
+        "usAvgPer10k": 1.0,
+        "saturationIndex": 95,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Cheyenne."
+          "evidenceQuote": "9 employer establishments (NAICS 713940) across 3 ZIP codes whose USPS city is Cheyenne, WY; density uses ACS 2023 ZCTA population (95,110). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812910",
         "slug": "pet-care",
-        "label": "Pet Care & Grooming",
-        "establishments": 6,
-        "per10kResidents": 0.92,
-        "usAvgPer10k": 0.95,
-        "saturationIndex": 97,
+        "label": "Pet Care & Grooming Services",
+        "establishments": 5,
+        "per10kResidents": 0.53,
+        "usAvgPer10k": 0.46,
+        "saturationIndex": 113,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Cheyenne."
+          "evidenceQuote": "5 employer establishments (NAICS 812910) across 3 ZIP codes whose USPS city is Cheyenne, WY; density uses ACS 2023 ZCTA population (95,110). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541940",
         "slug": "veterinary",
-        "label": "Veterinary Services",
-        "establishments": 7,
-        "per10kResidents": 1.07,
-        "usAvgPer10k": 1.05,
-        "saturationIndex": 102,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Veterinary Services & Animal Hospitals",
+        "establishments": 13,
+        "per10kResidents": 1.37,
+        "usAvgPer10k": 0.69,
+        "saturationIndex": 198,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Cheyenne."
+          "evidenceQuote": "13 employer establishments (NAICS 541940) across 3 ZIP codes whose USPS city is Cheyenne, WY; density uses ACS 2023 ZCTA population (95,110). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "811111",
         "slug": "auto-repair",
         "label": "General Automotive Repair",
-        "establishments": 31,
-        "per10kResidents": 4.76,
-        "usAvgPer10k": 4.8,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 26,
+        "per10kResidents": 2.73,
+        "usAvgPer10k": 2.2,
+        "saturationIndex": 124,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Cheyenne."
+          "evidenceQuote": "26 employer establishments (NAICS 811111) across 3 ZIP codes whose USPS city is Cheyenne, WY; density uses ACS 2023 ZCTA population (95,110). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "811192",
         "slug": "car-washes",
-        "label": "Car Washes & Detailing",
+        "label": "Car Washes & Auto Detailing",
         "establishments": 4,
-        "per10kResidents": 0.61,
-        "usAvgPer10k": 0.65,
-        "saturationIndex": 95,
+        "per10kResidents": 0.42,
+        "usAvgPer10k": 0.35,
+        "saturationIndex": 120,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Cheyenne."
-        }
-      },
-      {
-        "naicsCode": "812310",
-        "slug": "laundromats",
-        "label": "Coin Laundromats",
-        "establishments": 4,
-        "per10kResidents": 0.61,
-        "usAvgPer10k": 0.55,
-        "saturationIndex": 110,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Cheyenne."
-        }
-      },
-      {
-        "naicsCode": "812320",
-        "slug": "dry-cleaners",
-        "label": "Dry Cleaning & Laundry",
-        "establishments": 6,
-        "per10kResidents": 0.92,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 107,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Cheyenne."
+          "evidenceQuote": "4 employer establishments (NAICS 811192) across 3 ZIP codes whose USPS city is Cheyenne, WY; density uses ACS 2023 ZCTA population (95,110). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621210",
         "slug": "dentists",
         "label": "Offices of Dentists",
-        "establishments": 25,
-        "per10kResidents": 3.84,
-        "usAvgPer10k": 3.9,
-        "saturationIndex": 99,
+        "establishments": 41,
+        "per10kResidents": 4.31,
+        "usAvgPer10k": 3.89,
+        "saturationIndex": 111,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Cheyenne."
+          "evidenceQuote": "41 employer establishments (NAICS 621210) across 3 ZIP codes whose USPS city is Cheyenne, WY; density uses ACS 2023 ZCTA population (95,110). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621310",
         "slug": "chiropractors",
         "label": "Offices of Chiropractors",
-        "establishments": 9,
-        "per10kResidents": 1.38,
-        "usAvgPer10k": 1.4,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 15,
+        "per10kResidents": 1.58,
+        "usAvgPer10k": 0.97,
+        "saturationIndex": 162,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Cheyenne."
+          "evidenceQuote": "15 employer establishments (NAICS 621310) across 3 ZIP codes whose USPS city is Cheyenne, WY; density uses ACS 2023 ZCTA population (95,110). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621340",
         "slug": "physical-therapy",
-        "label": "Physical Therapy Clinics",
-        "establishments": 10,
-        "per10kResidents": 1.53,
-        "usAvgPer10k": 1.55,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Physical, Occupational & Speech Therapists",
+        "establishments": 25,
+        "per10kResidents": 2.63,
+        "usAvgPer10k": 1.3,
+        "saturationIndex": 202,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Cheyenne."
+          "evidenceQuote": "25 employer establishments (NAICS 621340) across 3 ZIP codes whose USPS city is Cheyenne, WY; density uses ACS 2023 ZCTA population (95,110). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "624410",
         "slug": "daycare",
         "label": "Child Day Care Services",
-        "establishments": 15,
-        "per10kResidents": 2.3,
-        "usAvgPer10k": 2.25,
-        "saturationIndex": 102,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 37,
+        "per10kResidents": 3.89,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 183,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Cheyenne."
+          "evidenceQuote": "37 employer establishments (NAICS 624410) across 3 ZIP codes whose USPS city is Cheyenne, WY; density uses ACS 2023 ZCTA population (95,110). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "445120",
         "slug": "convenience-stores",
-        "label": "Convenience Stores",
-        "establishments": 13,
-        "per10kResidents": 1.99,
-        "usAvgPer10k": 1.95,
-        "saturationIndex": 102,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Convenience Retail Stores",
+        "establishments": 0,
+        "per10kResidents": 0.0,
+        "usAvgPer10k": 0.82,
+        "saturationIndex": 0,
+        "status": "underserved",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Cheyenne."
+          "evidenceQuote": "0 employer establishments (NAICS 445120) across 3 ZIP codes whose USPS city is Cheyenne, WY; density uses ACS 2023 ZCTA population (95,110). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "448140",
         "slug": "clothing-boutiques",
-        "label": "Family Clothing Stores",
-        "establishments": 11,
-        "per10kResidents": 1.69,
-        "usAvgPer10k": 1.65,
-        "saturationIndex": 102,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Family Clothing Stores & Boutiques",
+        "establishments": 14,
+        "per10kResidents": 1.47,
+        "usAvgPer10k": 0.65,
+        "saturationIndex": 226,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Cheyenne."
-        }
-      },
-      {
-        "naicsCode": "445291",
-        "slug": "bakeries",
-        "label": "Retail Bakeries",
-        "establishments": 6,
-        "per10kResidents": 0.92,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 107,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Cheyenne."
-        }
-      },
-      {
-        "naicsCode": "453110",
-        "slug": "florists",
-        "label": "Florists & Floral Gift",
-        "establishments": 3,
-        "per10kResidents": 0.46,
-        "usAvgPer10k": 0.5,
-        "saturationIndex": 93,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Cheyenne."
+          "evidenceQuote": "14 employer establishments (NAICS 448140) across 3 ZIP codes whose USPS city is Cheyenne, WY; density uses ACS 2023 ZCTA population (95,110). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541110",
         "slug": "law-firms",
         "label": "Offices of Lawyers",
-        "establishments": 32,
-        "per10kResidents": 4.91,
-        "usAvgPer10k": 4.9,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 124,
+        "per10kResidents": 13.04,
+        "usAvgPer10k": 4.8,
+        "saturationIndex": 271,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Cheyenne."
+          "evidenceQuote": "124 employer establishments (NAICS 541110) across 3 ZIP codes whose USPS city is Cheyenne, WY; density uses ACS 2023 ZCTA population (95,110). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541211",
         "slug": "accounting-cpa",
-        "label": "Offices of CPAs",
-        "establishments": 14,
-        "per10kResidents": 2.15,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 102,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Offices of Certified Public Accountants",
+        "establishments": 23,
+        "per10kResidents": 2.42,
+        "usAvgPer10k": 1.44,
+        "saturationIndex": 168,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Cheyenne."
+          "evidenceQuote": "23 employer establishments (NAICS 541211) across 3 ZIP codes whose USPS city is Cheyenne, WY; density uses ACS 2023 ZCTA population (95,110). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "531210",
         "slug": "real-estate-agencies",
-        "label": "Real Estate Brokerages",
-        "establishments": 25,
-        "per10kResidents": 3.84,
-        "usAvgPer10k": 3.8,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Offices of Real Estate Agents & Brokers",
+        "establishments": 60,
+        "per10kResidents": 6.31,
+        "usAvgPer10k": 4.74,
+        "saturationIndex": 133,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Cheyenne."
+          "evidenceQuote": "60 employer establishments (NAICS 531210) across 3 ZIP codes whose USPS city is Cheyenne, WY; density uses ACS 2023 ZCTA population (95,110). National benchmark = all US ZIP rows / US population."
         }
       }
     ],
-    "permitsAndTax": {
-      "generalBusinessLicenseRequired": false,
-      "businessLicenseFeeSummary": "No general city business license required. State of Wyoming statutory filings apply.",
-      "businessLicensePortalUrl": "https://www.cheyennewy.gov/permits",
-      "zoningLookupUrl": "https://www.cheyennewy.gov/zoning",
-      "buildingPermitPortalUrl": "https://www.cheyennewy.gov/building",
-      "certificateOfOccupancyFee": "$185 standard municipal inspection fee",
-      "avgPermitWaitDays": 30,
-      "shortTermRentalStatus": "restricted",
-      "foodTruckPermitStatus": "allowed",
-      "combinedSalesTaxRate": 0.055,
-      "stateTaxRate": 0.04,
-      "localTaxRate": 0.015,
-      "provenance": {
-        "sourceName": "Cheyenne Municipal Code & State Department of Revenue",
-        "sourceUrl": "https://www.cheyennewy.gov",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place",
-        "evidenceQuote": "Statutory municipal code standards."
-      }
-    },
-    "topTrafficCorridors": [
-      {
-        "roadName": "Main Arterial Corridor 1",
-        "segmentDescription": "Central Commercial Corridor through Cheyenne",
-        "aadt": 7820,
-        "heavyTruckPct": 5.5,
-        "lat": 41.12727,
-        "lng": -104.79022,
-        "year": 2024,
-        "provenance": {
-          "sourceName": "Wyoming DOT AADT Database",
-          "sourceUrl": "https://www.transportation.gov/",
-          "datasetVintage": "2024-AADT",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "place"
-        }
-      }
-    ],
-    "marketSignals": {
-      "reportedRetailRentSqFtYr": 40.2,
-      "reportedIndustrialRentSqFtYr": 18.1,
-      "topSearchedNaics30d": [
-        "722515",
-        "713940",
-        "812111"
-      ],
-      "verifiedLocalProsCount": 8
-    },
-    "scores": {
-      "overallViability": 48,
-      "purchasingPower": 46,
-      "growthMomentum": 50,
-      "costEfficiency": 71,
-      "regulatoryFriction": 48
-    },
+    "marketSignals": {},
     "executiveTravel": {
-      "timeZone": "America/Denver (MT: UTC-07:00)",
+      "timeZone": "America/Denver",
       "timeZoneAbbr": "MT",
       "utcOffset": "-07:00",
-      "primaryAirport": {
-        "name": "Cheyenne Regional / Metropolitan Airport",
-        "iata": null,
-        "distanceMiles": 10.5,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
-      },
-      "powerPlugs": {
-        "types": [
-          "Type A (2-pin)",
-          "Type B (3-pin grounded)"
-        ],
-        "voltage": "120V",
-        "frequency": "60Hz",
-        "adapterAdvice": "Visitors from UK, EU, Australia, and Asia require a standard Type A/B plug adapter and dual-voltage converter."
-      },
-      "currency": {
-        "code": "USD",
-        "symbol": "$",
-        "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
-        "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
-      },
-      "climate": {
-        "summerHighF": 84,
-        "winterLowF": 22,
-        "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
-        "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
-      },
       "emergency": {
         "emergencyDispatch": "911",
-        "nonEmergencyPolice": "311 or local municipal dispatch",
-        "nearestTraumaHospital": "Cheyenne Regional Memorial Hospital",
-        "hospitalAddress": "Medical Center District, Cheyenne, WY"
+        "nearestTraumaHospital": "Cheyenne Regional Med Ctr",
+        "hospitalAddress": "214 East 23rd Street, Cheyenne, WY 82001",
+        "cmsFacilityId": "530014",
+        "emergencyServices": true,
+        "source": "CMS Care Compare hospital general information (dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma or nearest claim.",
+        "erHospitals": [
+          {
+            "name": "Cheyenne Regional Med Ctr",
+            "address": "214 East 23rd Street, Cheyenne, WY 82001",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "530014"
+          },
+          {
+            "name": "Cheyenne VA Medical Center",
+            "address": "2360 E. Pershing Blvd., Cheyenne, WY 82001",
+            "type": "Acute Care - Veterans Administration",
+            "cmsFacilityId": "53004F"
+          }
+        ],
+        "erHospitalsSource": "CMS Care Compare hospital general information (dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma or nearest claim."
       },
-      "visitorLogistics": {
-        "tapWaterPotability": "100% Safe municipal drinking water conforming to EPA Safe Drinking Water Act standards.",
-        "salesTaxRefundPolicy": "International travelers may claim state sales tax refunds on qualifying departures at designated airport customs counters.",
-        "rideshareAvailability": "Ubiquitous (Uber and Lyft operational 24/7 across the metropolitan area)."
-      },
-      "provenance": {
-        "sourceName": "FAA Airport Database & International Trade Administration",
-        "sourceUrl": "https://www.trade.gov/",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
+      "primaryAirport": {
+        "name": "Cheyenne Regional Jerry Olson Field",
+        "iata": "CYS",
+        "lat": 41.155701,
+        "lng": -104.811997,
+        "distanceMiles": 2.3,
+        "transitToDowntown": null,
+        "source": "OurAirports (public domain) for name, IATA code and coordinates; distance is straight-line from the U.S. Census Gazetteer city center point",
+        "sourceUrl": "https://ourairports.com/data/",
+        "cityCenterMethod": "Census Gazetteer internal point",
+        "retrieved": "2026-10-31"
       }
+    },
+    "housingAndTaxes": {
+      "medianHomeValue": 311200,
+      "medianGrossRent": 1035,
+      "medianRealEstateTaxPaid": 1862,
+      "effectivePropertyTaxRatePct": 0.6,
+      "countyName": "Laramie County",
+      "source": "ACS 2023 5-yr: B25077 median home value, B25064 median gross rent, B25103 median real estate taxes paid. Effective rate = B25103 / B25077.",
+      "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/"
+    },
+    "climateNormals": {
+      "peakSummerHighF": 83,
+      "winterLowF": 18,
+      "annualRainfallInches": 16.0,
+      "sourceName": "NOAA NCEI U.S. Climate Normals 1991-2020 (Station USC00481676, 1.9 mi from Gazetteer center), retrieved 2026-10-31",
+      "sourceUrl": "https://www.ncei.noaa.gov/products/land-based-station/us-climate-normals"
+    },
+    "waterUtility": {
+      "pwsid": "WY5600011",
+      "providerName": "Cheyenne Board of Public Utilities",
+      "populationServed": 64165,
+      "sourceType": "surface water",
+      "source": "U.S. EPA Safe Drinking Water Information System (SDWIS)",
+      "sourceUrl": "https://data.epa.gov/efservice/WATER_SYSTEM/PWSID/WY5600011/JSON",
+      "retrieved": "2026-10-31"
+    },
+    "higherEducation": {
+      "institutionCount": 3,
+      "totalEnrollment": 5337,
+      "institutions": [
+        {
+          "id": 240620,
+          "name": "Laramie County Community College",
+          "studentSize": 2799,
+          "ownership": "Public",
+          "schoolUrl": "https://www.lccc.wy.edu/",
+          "lat": 41.104288,
+          "lng": -104.778789
+        },
+        {
+          "id": 487977,
+          "name": "Martinsburg College",
+          "studentSize": 2491,
+          "ownership": "Private for-profit",
+          "schoolUrl": "https://www.martinsburgcollege.edu/",
+          "lat": 39.487035,
+          "lng": -77.959662
+        },
+        {
+          "id": 240709,
+          "name": "Cheeks Beauty Academy",
+          "studentSize": 47,
+          "ownership": "Private for-profit",
+          "schoolUrl": "https://www.cheeksusa.com/",
+          "lat": 41.134123,
+          "lng": -104.816751
+        }
+      ],
+      "sourceName": "U.S. Department of Education College Scorecard",
+      "sourceUrl": "https://collegescorecard.ed.gov/",
+      "retrieved": "2026-10-31"
+    },
+    "evInfrastructure": {
+      "totalStations": 19,
+      "totalChargingPorts": 48,
+      "dcFastPorts": 26,
+      "level2Ports": 22,
+      "sampleStations": [
+        {
+          "name": "Cheyenne, WY",
+          "address": "1400 Dell Range Blvd., Cheyenne, WY 82009",
+          "network": "RIVIAN_ADVENTURE",
+          "dcFastPorts": 6,
+          "level2Ports": 0,
+          "lat": 41.161093,
+          "lng": -104.806435
+        },
+        {
+          "name": "Cheyenne, WY - Tesla Supercharger",
+          "address": "1400 Dell Range Blvd., Cheyenne, WY 82009",
+          "network": "Tesla",
+          "dcFastPorts": 4,
+          "level2Ports": 0,
+          "lat": 41.16113,
+          "lng": -104.804955
+        },
+        {
+          "name": "Target T0224 (Cheyenne, WY)",
+          "address": "1708 Dell Range Blvd, Cheyenne, WY 82009",
+          "network": "Electrify America",
+          "dcFastPorts": 4,
+          "level2Ports": 0,
+          "lat": 41.16148,
+          "lng": -104.80089
+        },
+        {
+          "name": "Flying J 759",
+          "address": "2250 Etchepare Drive, Cheyenne, WY 82007",
+          "network": "eVgo Network",
+          "dcFastPorts": 4,
+          "level2Ports": 0,
+          "lat": 41.09903,
+          "lng": -104.853135
+        },
+        {
+          "name": "Ken Garff Motors",
+          "address": "2200 Westland Rd, Cheyenne, WY 82001",
+          "network": "Non-Networked",
+          "dcFastPorts": 0,
+          "level2Ports": 4,
+          "lat": 41.130047,
+          "lng": -104.837326
+        }
+      ],
+      "sourceName": "U.S. Department of Energy / NLR Alternative Fuels Data Center (AFDC)",
+      "sourceUrl": "https://afdc.energy.gov/stations",
+      "retrieved": "2026-10-31"
     }
   },
   {
     "slug": "wy/casper",
     "cityId": "5613150",
-    "countyFips": "56131",
+    "countyFips": "56025",
     "name": "Casper",
     "stateCode": "wy",
     "stateName": "Wyoming",
-    "countyName": "Casper Metropolitan Area",
+    "countyName": "Natrona County",
     "lat": 42.84212,
     "lng": -106.321282,
     "primaryZips": [
-      "70672"
+      "82601",
+      "82604",
+      "82609"
     ],
     "demographics": {
       "population": 58720,
-      "popGrowth5YrPct": -1.0,
-      "medianHouseholdIncome": 79779,
-      "perCapitaIncome": 46272,
-      "medianAge": 36.4,
-      "daytimeWorkerPop": 36406,
-      "daytimePopSurgePct": 8.5,
-      "medianGrossRent": 1534,
-      "medianHomeValue": 335072,
+      "medianHouseholdIncome": 69171,
+      "perCapitaIncome": 41460,
+      "medianAge": 37.0,
+      "medianGrossRent": 964,
+      "medianHomeValue": 250700,
       "provenance": {
-        "sourceName": "US Census Bureau ACS 5-Year (DP03/DP04/DP05) & PopEst",
-        "sourceUrl": "https://api.census.gov/data/2023/acs/acs5",
-        "datasetVintage": "2023-5YR",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "sourceName": "US Census Bureau ACS 5-Year Estimates 2023 (Table-Based Summary File)",
+        "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/",
+        "datasetVintage": "ACS-2023-5YR",
+        "verifiedAt": "2026-10-31T00:00:00Z",
         "granularity": "place"
-      }
-    },
-    "laborAndEconomy": {
-      "unemploymentRatePct": 3.8,
-      "avgWeeklyWageAllIndustries": 1340,
-      "newHousingPermits12Mo": 440,
-      "permitsPer1kResidents": 7.5,
-      "femaRiskScore": 28.0,
-      "provenance": {
-        "sourceName": "BLS Local Area Unemployment Statistics (LAUS) & Census BPS",
-        "sourceUrl": "https://www.bls.gov/lau/",
-        "datasetVintage": "2024-M08",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
-      }
+      },
+      "popChange2020to2023Pct": -0.6,
+      "popChangeBasis": "Census Population Estimates, April 2020 base to July 2023"
     },
     "industries": [
       {
         "naicsCode": "722515",
         "slug": "coffee-shops",
         "label": "Coffee & Snack Shops",
-        "establishments": 13,
-        "per10kResidents": 2.21,
-        "usAvgPer10k": 2.15,
-        "saturationIndex": 103,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 25,
+        "per10kResidents": 3.41,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 161,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Casper."
+          "evidenceQuote": "25 employer establishments (NAICS 722515) across 3 ZIP codes whose USPS city is Casper, WY; density uses ACS 2023 ZCTA population (73,288). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722511",
         "slug": "restaurants",
         "label": "Full-Service Restaurants",
-        "establishments": 40,
-        "per10kResidents": 6.81,
-        "usAvgPer10k": 6.8,
-        "saturationIndex": 100,
+        "establishments": 51,
+        "per10kResidents": 6.96,
+        "usAvgPer10k": 7.44,
+        "saturationIndex": 94,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Casper."
+          "evidenceQuote": "51 employer establishments (NAICS 722511) across 3 ZIP codes whose USPS city is Casper, WY; density uses ACS 2023 ZCTA population (73,288). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722513",
         "slug": "fast-food",
-        "label": "Fast Food Restaurants",
-        "establishments": 42,
-        "per10kResidents": 7.15,
-        "usAvgPer10k": 7.2,
-        "saturationIndex": 99,
+        "label": "Limited-Service / Fast Food Restaurants",
+        "establishments": 46,
+        "per10kResidents": 6.28,
+        "usAvgPer10k": 7.75,
+        "saturationIndex": 81,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Casper."
+          "evidenceQuote": "46 employer establishments (NAICS 722513) across 3 ZIP codes whose USPS city is Casper, WY; density uses ACS 2023 ZCTA population (73,288). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722410",
         "slug": "bars-taverns",
-        "label": "Bars & Drinking Places",
-        "establishments": 11,
-        "per10kResidents": 1.87,
-        "usAvgPer10k": 1.85,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Drinking Places (Alcoholic Beverages)",
+        "establishments": 4,
+        "per10kResidents": 0.55,
+        "usAvgPer10k": 0.9,
+        "saturationIndex": 61,
+        "status": "underserved",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Casper."
-        }
-      },
-      {
-        "naicsCode": "812111",
-        "slug": "barber-shops",
-        "label": "Barber Shops",
-        "establishments": 8,
-        "per10kResidents": 1.36,
-        "usAvgPer10k": 1.35,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Casper."
+          "evidenceQuote": "4 employer establishments (NAICS 722410) across 3 ZIP codes whose USPS city is Casper, WY; density uses ACS 2023 ZCTA population (73,288). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812112",
         "slug": "beauty-salons",
         "label": "Beauty Salons & Hair Studios",
-        "establishments": 20,
-        "per10kResidents": 3.41,
-        "usAvgPer10k": 3.4,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 10,
+        "per10kResidents": 1.36,
+        "usAvgPer10k": 2.31,
+        "saturationIndex": 59,
+        "status": "underserved",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Casper."
+          "evidenceQuote": "10 employer establishments (NAICS 812112) across 3 ZIP codes whose USPS city is Casper, WY; density uses ACS 2023 ZCTA population (73,288). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812113",
         "slug": "nail-salons",
         "label": "Nail Salons",
-        "establishments": 12,
-        "per10kResidents": 2.04,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 98,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 0,
+        "per10kResidents": 0.0,
+        "usAvgPer10k": 0.86,
+        "saturationIndex": 0,
+        "status": "underserved",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Casper."
+          "evidenceQuote": "0 employer establishments (NAICS 812113) across 3 ZIP codes whose USPS city is Casper, WY; density uses ACS 2023 ZCTA population (73,288). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "713940",
         "slug": "gyms-fitness",
-        "label": "Fitness & Recreational Gyms",
-        "establishments": 7,
-        "per10kResidents": 1.19,
-        "usAvgPer10k": 1.25,
-        "saturationIndex": 96,
+        "label": "Fitness & Recreational Sports Centers",
+        "establishments": 8,
+        "per10kResidents": 1.09,
+        "usAvgPer10k": 1.0,
+        "saturationIndex": 110,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Casper."
+          "evidenceQuote": "8 employer establishments (NAICS 713940) across 3 ZIP codes whose USPS city is Casper, WY; density uses ACS 2023 ZCTA population (73,288). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812910",
         "slug": "pet-care",
-        "label": "Pet Care & Grooming",
+        "label": "Pet Care & Grooming Services",
         "establishments": 6,
-        "per10kResidents": 1.02,
-        "usAvgPer10k": 0.95,
-        "saturationIndex": 106,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "per10kResidents": 0.82,
+        "usAvgPer10k": 0.46,
+        "saturationIndex": 176,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Casper."
+          "evidenceQuote": "6 employer establishments (NAICS 812910) across 3 ZIP codes whose USPS city is Casper, WY; density uses ACS 2023 ZCTA population (73,288). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541940",
         "slug": "veterinary",
-        "label": "Veterinary Services",
-        "establishments": 6,
-        "per10kResidents": 1.02,
-        "usAvgPer10k": 1.05,
-        "saturationIndex": 98,
+        "label": "Veterinary Services & Animal Hospitals",
+        "establishments": 5,
+        "per10kResidents": 0.68,
+        "usAvgPer10k": 0.69,
+        "saturationIndex": 99,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Casper."
+          "evidenceQuote": "5 employer establishments (NAICS 541940) across 3 ZIP codes whose USPS city is Casper, WY; density uses ACS 2023 ZCTA population (73,288). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "811111",
         "slug": "auto-repair",
         "label": "General Automotive Repair",
-        "establishments": 28,
-        "per10kResidents": 4.77,
-        "usAvgPer10k": 4.8,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 32,
+        "per10kResidents": 4.37,
+        "usAvgPer10k": 2.2,
+        "saturationIndex": 198,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Casper."
+          "evidenceQuote": "32 employer establishments (NAICS 811111) across 3 ZIP codes whose USPS city is Casper, WY; density uses ACS 2023 ZCTA population (73,288). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "811192",
         "slug": "car-washes",
-        "label": "Car Washes & Detailing",
-        "establishments": 4,
-        "per10kResidents": 0.68,
-        "usAvgPer10k": 0.65,
-        "saturationIndex": 104,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Car Washes & Auto Detailing",
+        "establishments": 6,
+        "per10kResidents": 0.82,
+        "usAvgPer10k": 0.35,
+        "saturationIndex": 234,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Casper."
-        }
-      },
-      {
-        "naicsCode": "812310",
-        "slug": "laundromats",
-        "label": "Coin Laundromats",
-        "establishments": 3,
-        "per10kResidents": 0.51,
-        "usAvgPer10k": 0.55,
-        "saturationIndex": 94,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Casper."
-        }
-      },
-      {
-        "naicsCode": "812320",
-        "slug": "dry-cleaners",
-        "label": "Dry Cleaning & Laundry",
-        "establishments": 5,
-        "per10kResidents": 0.85,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Casper."
+          "evidenceQuote": "6 employer establishments (NAICS 811192) across 3 ZIP codes whose USPS city is Casper, WY; density uses ACS 2023 ZCTA population (73,288). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621210",
         "slug": "dentists",
         "label": "Offices of Dentists",
-        "establishments": 23,
-        "per10kResidents": 3.92,
-        "usAvgPer10k": 3.9,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 38,
+        "per10kResidents": 5.19,
+        "usAvgPer10k": 3.89,
+        "saturationIndex": 133,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Casper."
+          "evidenceQuote": "38 employer establishments (NAICS 621210) across 3 ZIP codes whose USPS city is Casper, WY; density uses ACS 2023 ZCTA population (73,288). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621310",
         "slug": "chiropractors",
         "label": "Offices of Chiropractors",
-        "establishments": 8,
+        "establishments": 10,
         "per10kResidents": 1.36,
-        "usAvgPer10k": 1.4,
-        "saturationIndex": 98,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "usAvgPer10k": 0.97,
+        "saturationIndex": 140,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Casper."
+          "evidenceQuote": "10 employer establishments (NAICS 621310) across 3 ZIP codes whose USPS city is Casper, WY; density uses ACS 2023 ZCTA population (73,288). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621340",
         "slug": "physical-therapy",
-        "label": "Physical Therapy Clinics",
-        "establishments": 9,
-        "per10kResidents": 1.53,
-        "usAvgPer10k": 1.55,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Physical, Occupational & Speech Therapists",
+        "establishments": 26,
+        "per10kResidents": 3.55,
+        "usAvgPer10k": 1.3,
+        "saturationIndex": 272,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Casper."
+          "evidenceQuote": "26 employer establishments (NAICS 621340) across 3 ZIP codes whose USPS city is Casper, WY; density uses ACS 2023 ZCTA population (73,288). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "624410",
         "slug": "daycare",
         "label": "Child Day Care Services",
-        "establishments": 13,
-        "per10kResidents": 2.21,
-        "usAvgPer10k": 2.25,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 33,
+        "per10kResidents": 4.5,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 212,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Casper."
+          "evidenceQuote": "33 employer establishments (NAICS 624410) across 3 ZIP codes whose USPS city is Casper, WY; density uses ACS 2023 ZCTA population (73,288). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "445120",
         "slug": "convenience-stores",
-        "label": "Convenience Stores",
-        "establishments": 11,
-        "per10kResidents": 1.87,
-        "usAvgPer10k": 1.95,
-        "saturationIndex": 97,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Convenience Retail Stores",
+        "establishments": 0,
+        "per10kResidents": 0.0,
+        "usAvgPer10k": 0.82,
+        "saturationIndex": 0,
+        "status": "underserved",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Casper."
+          "evidenceQuote": "0 employer establishments (NAICS 445120) across 3 ZIP codes whose USPS city is Casper, WY; density uses ACS 2023 ZCTA population (73,288). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "448140",
         "slug": "clothing-boutiques",
-        "label": "Family Clothing Stores",
-        "establishments": 10,
-        "per10kResidents": 1.7,
-        "usAvgPer10k": 1.65,
-        "saturationIndex": 103,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Family Clothing Stores & Boutiques",
+        "establishments": 7,
+        "per10kResidents": 0.96,
+        "usAvgPer10k": 0.65,
+        "saturationIndex": 146,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Casper."
-        }
-      },
-      {
-        "naicsCode": "445291",
-        "slug": "bakeries",
-        "label": "Retail Bakeries",
-        "establishments": 5,
-        "per10kResidents": 0.85,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Casper."
-        }
-      },
-      {
-        "naicsCode": "453110",
-        "slug": "florists",
-        "label": "Florists & Floral Gift",
-        "establishments": 3,
-        "per10kResidents": 0.51,
-        "usAvgPer10k": 0.5,
-        "saturationIndex": 102,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Casper."
+          "evidenceQuote": "7 employer establishments (NAICS 448140) across 3 ZIP codes whose USPS city is Casper, WY; density uses ACS 2023 ZCTA population (73,288). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541110",
         "slug": "law-firms",
         "label": "Offices of Lawyers",
-        "establishments": 29,
-        "per10kResidents": 4.94,
-        "usAvgPer10k": 4.9,
-        "saturationIndex": 101,
+        "establishments": 35,
+        "per10kResidents": 4.78,
+        "usAvgPer10k": 4.8,
+        "saturationIndex": 99,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Casper."
+          "evidenceQuote": "35 employer establishments (NAICS 541110) across 3 ZIP codes whose USPS city is Casper, WY; density uses ACS 2023 ZCTA population (73,288). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541211",
         "slug": "accounting-cpa",
-        "label": "Offices of CPAs",
-        "establishments": 12,
-        "per10kResidents": 2.04,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 98,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Offices of Certified Public Accountants",
+        "establishments": 14,
+        "per10kResidents": 1.91,
+        "usAvgPer10k": 1.44,
+        "saturationIndex": 133,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Casper."
+          "evidenceQuote": "14 employer establishments (NAICS 541211) across 3 ZIP codes whose USPS city is Casper, WY; density uses ACS 2023 ZCTA population (73,288). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "531210",
         "slug": "real-estate-agencies",
-        "label": "Real Estate Brokerages",
-        "establishments": 22,
-        "per10kResidents": 3.75,
-        "usAvgPer10k": 3.8,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Offices of Real Estate Agents & Brokers",
+        "establishments": 45,
+        "per10kResidents": 6.14,
+        "usAvgPer10k": 4.74,
+        "saturationIndex": 129,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Casper."
+          "evidenceQuote": "45 employer establishments (NAICS 531210) across 3 ZIP codes whose USPS city is Casper, WY; density uses ACS 2023 ZCTA population (73,288). National benchmark = all US ZIP rows / US population."
         }
       }
     ],
-    "permitsAndTax": {
-      "generalBusinessLicenseRequired": false,
-      "businessLicenseFeeSummary": "No general city business license required. State of Wyoming statutory filings apply.",
-      "businessLicensePortalUrl": "https://www.casperwy.gov/permits",
-      "zoningLookupUrl": "https://www.casperwy.gov/zoning",
-      "buildingPermitPortalUrl": "https://www.casperwy.gov/building",
-      "certificateOfOccupancyFee": "$185 standard municipal inspection fee",
-      "avgPermitWaitDays": 30,
-      "shortTermRentalStatus": "restricted",
-      "foodTruckPermitStatus": "allowed",
-      "combinedSalesTaxRate": 0.055,
-      "stateTaxRate": 0.04,
-      "localTaxRate": 0.015,
-      "provenance": {
-        "sourceName": "Casper Municipal Code & State Department of Revenue",
-        "sourceUrl": "https://www.casperwy.gov",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place",
-        "evidenceQuote": "Statutory municipal code standards."
-      }
-    },
-    "topTrafficCorridors": [
-      {
-        "roadName": "Main Arterial Corridor 1",
-        "segmentDescription": "Central Commercial Corridor through Casper",
-        "aadt": 7046,
-        "heavyTruckPct": 5.5,
-        "lat": 42.84212,
-        "lng": -106.321282,
-        "year": 2024,
-        "provenance": {
-          "sourceName": "Wyoming DOT AADT Database",
-          "sourceUrl": "https://www.transportation.gov/",
-          "datasetVintage": "2024-AADT",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "place"
-        }
-      }
-    ],
-    "marketSignals": {
-      "reportedRetailRentSqFtYr": 39.5,
-      "reportedIndustrialRentSqFtYr": 17.8,
-      "topSearchedNaics30d": [
-        "722515",
-        "713940",
-        "812111"
-      ],
-      "verifiedLocalProsCount": 8
-    },
-    "scores": {
-      "overallViability": 46,
-      "purchasingPower": 44,
-      "growthMomentum": 48,
-      "costEfficiency": 72,
-      "regulatoryFriction": 48
-    },
+    "marketSignals": {},
     "executiveTravel": {
-      "timeZone": "America/Denver (MT: UTC-07:00)",
+      "timeZone": "America/Denver",
       "timeZoneAbbr": "MT",
       "utcOffset": "-07:00",
-      "primaryAirport": {
-        "name": "Casper Regional / Metropolitan Airport",
-        "iata": null,
-        "distanceMiles": 10.5,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
-      },
-      "powerPlugs": {
-        "types": [
-          "Type A (2-pin)",
-          "Type B (3-pin grounded)"
-        ],
-        "voltage": "120V",
-        "frequency": "60Hz",
-        "adapterAdvice": "Visitors from UK, EU, Australia, and Asia require a standard Type A/B plug adapter and dual-voltage converter."
-      },
-      "currency": {
-        "code": "USD",
-        "symbol": "$",
-        "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
-        "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
-      },
-      "climate": {
-        "summerHighF": 84,
-        "winterLowF": 22,
-        "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
-        "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
-      },
       "emergency": {
         "emergencyDispatch": "911",
-        "nonEmergencyPolice": "311 or local municipal dispatch",
-        "nearestTraumaHospital": "Casper Regional Memorial Hospital",
-        "hospitalAddress": "Medical Center District, Casper, WY"
+        "nearestTraumaHospital": "Banner Wyoming Medical Center",
+        "hospitalAddress": "1233 East 2nd St, Casper, WY 82601",
+        "cmsFacilityId": "530012",
+        "emergencyServices": true,
+        "source": "CMS Care Compare hospital general information (dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma or nearest claim.",
+        "erHospitals": [
+          {
+            "name": "Banner Wyoming Medical Center",
+            "address": "1233 East 2nd St, Casper, WY 82601",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "530012"
+          }
+        ],
+        "erHospitalsSource": "CMS Care Compare hospital general information (dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma or nearest claim."
       },
-      "visitorLogistics": {
-        "tapWaterPotability": "100% Safe municipal drinking water conforming to EPA Safe Drinking Water Act standards.",
-        "salesTaxRefundPolicy": "International travelers may claim state sales tax refunds on qualifying departures at designated airport customs counters.",
-        "rideshareAvailability": "Ubiquitous (Uber and Lyft operational 24/7 across the metropolitan area)."
-      },
-      "provenance": {
-        "sourceName": "FAA Airport Database & International Trade Administration",
-        "sourceUrl": "https://www.trade.gov/",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
+      "primaryAirport": {
+        "name": "Casper-Natrona County International Airport",
+        "iata": "CPR",
+        "lat": 42.907381,
+        "lng": -106.461609,
+        "distanceMiles": 8.4,
+        "transitToDowntown": null,
+        "source": "OurAirports (public domain) for name, IATA code and coordinates; distance is straight-line from the U.S. Census Gazetteer city center point",
+        "sourceUrl": "https://ourairports.com/data/",
+        "cityCenterMethod": "Census Gazetteer internal point",
+        "retrieved": "2026-10-31"
       }
+    },
+    "housingAndTaxes": {
+      "medianHomeValue": 250700,
+      "medianGrossRent": 964,
+      "medianRealEstateTaxPaid": 1600,
+      "effectivePropertyTaxRatePct": 0.64,
+      "countyName": "Natrona County",
+      "source": "ACS 2023 5-yr: B25077 median home value, B25064 median gross rent, B25103 median real estate taxes paid. Effective rate = B25103 / B25077.",
+      "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/"
+    },
+    "climateNormals": {
+      "peakSummerHighF": 88,
+      "winterLowF": 16,
+      "annualRainfallInches": 13.4,
+      "sourceName": "NOAA NCEI U.S. Climate Normals 1991-2020 (Station USC00481569, 2.0 mi from Gazetteer center), retrieved 2026-10-31",
+      "sourceUrl": "https://www.ncei.noaa.gov/products/land-based-station/us-climate-normals"
+    },
+    "waterUtility": {
+      "pwsid": "WY5601415",
+      "providerName": "Casper, City Of",
+      "populationServed": 59000,
+      "sourceType": "surface water",
+      "source": "U.S. EPA Safe Drinking Water Information System (SDWIS)",
+      "sourceUrl": "https://data.epa.gov/efservice/WATER_SYSTEM/PWSID/WY5601415/JSON",
+      "retrieved": "2026-10-31"
+    },
+    "higherEducation": {
+      "institutionCount": 1,
+      "totalEnrollment": 2204,
+      "institutions": [
+        {
+          "id": 240505,
+          "name": "Casper College",
+          "studentSize": 2204,
+          "ownership": "Public",
+          "schoolUrl": "https://www.caspercollege.edu/",
+          "lat": 42.832788,
+          "lng": -106.326712
+        }
+      ],
+      "sourceName": "U.S. Department of Education College Scorecard",
+      "sourceUrl": "https://collegescorecard.ed.gov/",
+      "retrieved": "2026-10-31"
+    },
+    "evInfrastructure": {
+      "totalStations": 3,
+      "totalChargingPorts": 10,
+      "dcFastPorts": 8,
+      "level2Ports": 2,
+      "sampleStations": [
+        {
+          "name": "Target T0164 (Casper, WY)",
+          "address": "401 Wyoming Blvd SE, Casper, WY 82609",
+          "network": "Electrify America",
+          "dcFastPorts": 4,
+          "level2Ports": 0,
+          "lat": 42.84764,
+          "lng": -106.26338
+        },
+        {
+          "name": "Flying J 758",
+          "address": "41 SE Wyoming Blvd., Casper, WY 82609",
+          "network": "eVgo Network",
+          "dcFastPorts": 4,
+          "level2Ports": 0,
+          "lat": 42.85197,
+          "lng": -106.27097
+        },
+        {
+          "name": "HOMEWOOD CASPER CPRAM 1",
+          "address": "1251 Wilkins Way, Casper, WY 82601",
+          "network": "ChargePoint Network",
+          "dcFastPorts": 0,
+          "level2Ports": 2,
+          "lat": 42.868357,
+          "lng": -106.34049
+        }
+      ],
+      "sourceName": "U.S. Department of Energy / NLR Alternative Fuels Data Center (AFDC)",
+      "sourceUrl": "https://afdc.energy.gov/stations",
+      "retrieved": "2026-10-31"
     }
   },
   {
     "slug": "wy/gillette",
     "cityId": "5631855",
-    "countyFips": "56318",
+    "countyFips": "56005",
     "name": "Gillette",
     "stateCode": "wy",
     "stateName": "Wyoming",
-    "countyName": "Gillette Metropolitan Area",
+    "countyName": "Campbell County",
     "lat": 44.27258,
     "lng": -105.498936,
     "primaryZips": [
-      "71200"
+      "82718",
+      "82716"
     ],
     "demographics": {
       "population": 33496,
-      "popGrowth5YrPct": 0.0,
-      "medianHouseholdIncome": 79931,
-      "perCapitaIncome": 46360,
-      "medianAge": 36.4,
-      "daytimeWorkerPop": 20768,
-      "daytimePopSurgePct": 8.5,
-      "medianGrossRent": 1537,
-      "medianHomeValue": 335710,
+      "medianHouseholdIncome": 90699,
+      "perCapitaIncome": 39578,
+      "medianAge": 33.4,
+      "medianGrossRent": 922,
+      "medianHomeValue": 257200,
       "provenance": {
-        "sourceName": "US Census Bureau ACS 5-Year (DP03/DP04/DP05) & PopEst",
-        "sourceUrl": "https://api.census.gov/data/2023/acs/acs5",
-        "datasetVintage": "2023-5YR",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "sourceName": "US Census Bureau ACS 5-Year Estimates 2023 (Table-Based Summary File)",
+        "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/",
+        "datasetVintage": "ACS-2023-5YR",
+        "verifiedAt": "2026-10-31T00:00:00Z",
         "granularity": "place"
-      }
-    },
-    "laborAndEconomy": {
-      "unemploymentRatePct": 3.8,
-      "avgWeeklyWageAllIndustries": 1340,
-      "newHousingPermits12Mo": 251,
-      "permitsPer1kResidents": 7.5,
-      "femaRiskScore": 28.0,
-      "provenance": {
-        "sourceName": "BLS Local Area Unemployment Statistics (LAUS) & Census BPS",
-        "sourceUrl": "https://www.bls.gov/lau/",
-        "datasetVintage": "2024-M08",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
-      }
+      },
+      "popChange2020to2023Pct": 0.3,
+      "popChangeBasis": "Census Population Estimates, April 2020 base to July 2023"
     },
     "industries": [
       {
         "naicsCode": "722515",
         "slug": "coffee-shops",
         "label": "Coffee & Snack Shops",
-        "establishments": 7,
-        "per10kResidents": 2.09,
-        "usAvgPer10k": 2.15,
-        "saturationIndex": 98,
+        "establishments": 10,
+        "per10kResidents": 2.31,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 109,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Gillette."
+          "evidenceQuote": "10 employer establishments (NAICS 722515) across 2 ZIP codes whose USPS city is Gillette, WY; density uses ACS 2023 ZCTA population (43,288). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722511",
         "slug": "restaurants",
         "label": "Full-Service Restaurants",
-        "establishments": 23,
-        "per10kResidents": 6.87,
-        "usAvgPer10k": 6.8,
-        "saturationIndex": 101,
+        "establishments": 31,
+        "per10kResidents": 7.16,
+        "usAvgPer10k": 7.44,
+        "saturationIndex": 96,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Gillette."
+          "evidenceQuote": "31 employer establishments (NAICS 722511) across 2 ZIP codes whose USPS city is Gillette, WY; density uses ACS 2023 ZCTA population (43,288). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722513",
         "slug": "fast-food",
-        "label": "Fast Food Restaurants",
-        "establishments": 24,
-        "per10kResidents": 7.17,
-        "usAvgPer10k": 7.2,
-        "saturationIndex": 100,
+        "label": "Limited-Service / Fast Food Restaurants",
+        "establishments": 30,
+        "per10kResidents": 6.93,
+        "usAvgPer10k": 7.75,
+        "saturationIndex": 89,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Gillette."
+          "evidenceQuote": "30 employer establishments (NAICS 722513) across 2 ZIP codes whose USPS city is Gillette, WY; density uses ACS 2023 ZCTA population (43,288). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722410",
         "slug": "bars-taverns",
-        "label": "Bars & Drinking Places",
-        "establishments": 6,
-        "per10kResidents": 1.79,
-        "usAvgPer10k": 1.85,
-        "saturationIndex": 98,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Gillette."
-        }
-      },
-      {
-        "naicsCode": "812111",
-        "slug": "barber-shops",
-        "label": "Barber Shops",
+        "label": "Drinking Places (Alcoholic Beverages)",
         "establishments": 5,
-        "per10kResidents": 1.49,
-        "usAvgPer10k": 1.35,
-        "saturationIndex": 108,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "per10kResidents": 1.16,
+        "usAvgPer10k": 0.9,
+        "saturationIndex": 128,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Gillette."
+          "evidenceQuote": "5 employer establishments (NAICS 722410) across 2 ZIP codes whose USPS city is Gillette, WY; density uses ACS 2023 ZCTA population (43,288). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812112",
         "slug": "beauty-salons",
         "label": "Beauty Salons & Hair Studios",
-        "establishments": 11,
-        "per10kResidents": 3.28,
-        "usAvgPer10k": 3.4,
-        "saturationIndex": 97,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 6,
+        "per10kResidents": 1.39,
+        "usAvgPer10k": 2.31,
+        "saturationIndex": 60,
+        "status": "underserved",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Gillette."
+          "evidenceQuote": "6 employer establishments (NAICS 812112) across 2 ZIP codes whose USPS city is Gillette, WY; density uses ACS 2023 ZCTA population (43,288). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812113",
         "slug": "nail-salons",
         "label": "Nail Salons",
-        "establishments": 7,
-        "per10kResidents": 2.09,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 0,
+        "per10kResidents": 0.0,
+        "usAvgPer10k": 0.86,
+        "saturationIndex": 0,
+        "status": "underserved",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Gillette."
+          "evidenceQuote": "0 employer establishments (NAICS 812113) across 2 ZIP codes whose USPS city is Gillette, WY; density uses ACS 2023 ZCTA population (43,288). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "713940",
         "slug": "gyms-fitness",
-        "label": "Fitness & Recreational Gyms",
-        "establishments": 4,
-        "per10kResidents": 1.19,
-        "usAvgPer10k": 1.25,
-        "saturationIndex": 97,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Fitness & Recreational Sports Centers",
+        "establishments": 3,
+        "per10kResidents": 0.69,
+        "usAvgPer10k": 1.0,
+        "saturationIndex": 70,
+        "status": "underserved",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Gillette."
+          "evidenceQuote": "3 employer establishments (NAICS 713940) across 2 ZIP codes whose USPS city is Gillette, WY; density uses ACS 2023 ZCTA population (43,288). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812910",
         "slug": "pet-care",
-        "label": "Pet Care & Grooming",
-        "establishments": 3,
-        "per10kResidents": 0.9,
-        "usAvgPer10k": 0.95,
-        "saturationIndex": 96,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Pet Care & Grooming Services",
+        "establishments": 0,
+        "per10kResidents": 0.0,
+        "usAvgPer10k": 0.46,
+        "saturationIndex": 0,
+        "status": "underserved",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Gillette."
+          "evidenceQuote": "0 employer establishments (NAICS 812910) across 2 ZIP codes whose USPS city is Gillette, WY; density uses ACS 2023 ZCTA population (43,288). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541940",
         "slug": "veterinary",
-        "label": "Veterinary Services",
-        "establishments": 4,
-        "per10kResidents": 1.19,
-        "usAvgPer10k": 1.05,
-        "saturationIndex": 111,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Veterinary Services & Animal Hospitals",
+        "establishments": 5,
+        "per10kResidents": 1.16,
+        "usAvgPer10k": 0.69,
+        "saturationIndex": 167,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Gillette."
+          "evidenceQuote": "5 employer establishments (NAICS 541940) across 2 ZIP codes whose USPS city is Gillette, WY; density uses ACS 2023 ZCTA population (43,288). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -1504,707 +1311,528 @@
         "slug": "auto-repair",
         "label": "General Automotive Repair",
         "establishments": 16,
-        "per10kResidents": 4.78,
-        "usAvgPer10k": 4.8,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "per10kResidents": 3.7,
+        "usAvgPer10k": 2.2,
+        "saturationIndex": 168,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Gillette."
-        }
-      },
-      {
-        "naicsCode": "811192",
-        "slug": "car-washes",
-        "label": "Car Washes & Detailing",
-        "establishments": 2,
-        "per10kResidents": 0.6,
-        "usAvgPer10k": 0.65,
-        "saturationIndex": 94,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Gillette."
-        }
-      },
-      {
-        "naicsCode": "812310",
-        "slug": "laundromats",
-        "label": "Coin Laundromats",
-        "establishments": 2,
-        "per10kResidents": 0.6,
-        "usAvgPer10k": 0.55,
-        "saturationIndex": 107,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Gillette."
-        }
-      },
-      {
-        "naicsCode": "812320",
-        "slug": "dry-cleaners",
-        "label": "Dry Cleaning & Laundry",
-        "establishments": 3,
-        "per10kResidents": 0.9,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 104,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Gillette."
+          "evidenceQuote": "16 employer establishments (NAICS 811111) across 2 ZIP codes whose USPS city is Gillette, WY; density uses ACS 2023 ZCTA population (43,288). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621210",
         "slug": "dentists",
         "label": "Offices of Dentists",
-        "establishments": 13,
-        "per10kResidents": 3.88,
-        "usAvgPer10k": 3.9,
-        "saturationIndex": 100,
+        "establishments": 15,
+        "per10kResidents": 3.47,
+        "usAvgPer10k": 3.89,
+        "saturationIndex": 89,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Gillette."
+          "evidenceQuote": "15 employer establishments (NAICS 621210) across 2 ZIP codes whose USPS city is Gillette, WY; density uses ACS 2023 ZCTA population (43,288). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621310",
         "slug": "chiropractors",
         "label": "Offices of Chiropractors",
-        "establishments": 5,
-        "per10kResidents": 1.49,
-        "usAvgPer10k": 1.4,
-        "saturationIndex": 105,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 7,
+        "per10kResidents": 1.62,
+        "usAvgPer10k": 0.97,
+        "saturationIndex": 166,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Gillette."
+          "evidenceQuote": "7 employer establishments (NAICS 621310) across 2 ZIP codes whose USPS city is Gillette, WY; density uses ACS 2023 ZCTA population (43,288). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621340",
         "slug": "physical-therapy",
-        "label": "Physical Therapy Clinics",
-        "establishments": 5,
-        "per10kResidents": 1.49,
-        "usAvgPer10k": 1.55,
-        "saturationIndex": 97,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Physical, Occupational & Speech Therapists",
+        "establishments": 10,
+        "per10kResidents": 2.31,
+        "usAvgPer10k": 1.3,
+        "saturationIndex": 177,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Gillette."
+          "evidenceQuote": "10 employer establishments (NAICS 621340) across 2 ZIP codes whose USPS city is Gillette, WY; density uses ACS 2023 ZCTA population (43,288). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "624410",
         "slug": "daycare",
         "label": "Child Day Care Services",
-        "establishments": 8,
-        "per10kResidents": 2.39,
-        "usAvgPer10k": 2.25,
-        "saturationIndex": 105,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 12,
+        "per10kResidents": 2.77,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 131,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Gillette."
+          "evidenceQuote": "12 employer establishments (NAICS 624410) across 2 ZIP codes whose USPS city is Gillette, WY; density uses ACS 2023 ZCTA population (43,288). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "445120",
         "slug": "convenience-stores",
-        "label": "Convenience Stores",
-        "establishments": 7,
-        "per10kResidents": 2.09,
-        "usAvgPer10k": 1.95,
-        "saturationIndex": 106,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Convenience Retail Stores",
+        "establishments": 0,
+        "per10kResidents": 0.0,
+        "usAvgPer10k": 0.82,
+        "saturationIndex": 0,
+        "status": "underserved",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Gillette."
+          "evidenceQuote": "0 employer establishments (NAICS 445120) across 2 ZIP codes whose USPS city is Gillette, WY; density uses ACS 2023 ZCTA population (43,288). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "448140",
         "slug": "clothing-boutiques",
-        "label": "Family Clothing Stores",
-        "establishments": 6,
-        "per10kResidents": 1.79,
-        "usAvgPer10k": 1.65,
-        "saturationIndex": 107,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Family Clothing Stores & Boutiques",
+        "establishments": 0,
+        "per10kResidents": 0.0,
+        "usAvgPer10k": 0.65,
+        "saturationIndex": 0,
+        "status": "underserved",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Gillette."
-        }
-      },
-      {
-        "naicsCode": "445291",
-        "slug": "bakeries",
-        "label": "Retail Bakeries",
-        "establishments": 3,
-        "per10kResidents": 0.9,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 104,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Gillette."
-        }
-      },
-      {
-        "naicsCode": "453110",
-        "slug": "florists",
-        "label": "Florists & Floral Gift",
-        "establishments": 2,
-        "per10kResidents": 0.6,
-        "usAvgPer10k": 0.5,
-        "saturationIndex": 115,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Gillette."
+          "evidenceQuote": "0 employer establishments (NAICS 448140) across 2 ZIP codes whose USPS city is Gillette, WY; density uses ACS 2023 ZCTA population (43,288). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541110",
         "slug": "law-firms",
         "label": "Offices of Lawyers",
-        "establishments": 16,
-        "per10kResidents": 4.78,
-        "usAvgPer10k": 4.9,
-        "saturationIndex": 98,
+        "establishments": 24,
+        "per10kResidents": 5.54,
+        "usAvgPer10k": 4.8,
+        "saturationIndex": 115,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Gillette."
+          "evidenceQuote": "24 employer establishments (NAICS 541110) across 2 ZIP codes whose USPS city is Gillette, WY; density uses ACS 2023 ZCTA population (43,288). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541211",
         "slug": "accounting-cpa",
-        "label": "Offices of CPAs",
-        "establishments": 7,
-        "per10kResidents": 2.09,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Offices of Certified Public Accountants",
+        "establishments": 10,
+        "per10kResidents": 2.31,
+        "usAvgPer10k": 1.44,
+        "saturationIndex": 160,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Gillette."
+          "evidenceQuote": "10 employer establishments (NAICS 541211) across 2 ZIP codes whose USPS city is Gillette, WY; density uses ACS 2023 ZCTA population (43,288). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "531210",
         "slug": "real-estate-agencies",
-        "label": "Real Estate Brokerages",
-        "establishments": 13,
-        "per10kResidents": 3.88,
-        "usAvgPer10k": 3.8,
-        "saturationIndex": 102,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Offices of Real Estate Agents & Brokers",
+        "establishments": 35,
+        "per10kResidents": 8.09,
+        "usAvgPer10k": 4.74,
+        "saturationIndex": 170,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Gillette."
+          "evidenceQuote": "35 employer establishments (NAICS 531210) across 2 ZIP codes whose USPS city is Gillette, WY; density uses ACS 2023 ZCTA population (43,288). National benchmark = all US ZIP rows / US population."
         }
       }
     ],
-    "permitsAndTax": {
-      "generalBusinessLicenseRequired": false,
-      "businessLicenseFeeSummary": "No general city business license required. State of Wyoming statutory filings apply.",
-      "businessLicensePortalUrl": "https://www.gillettewy.gov/permits",
-      "zoningLookupUrl": "https://www.gillettewy.gov/zoning",
-      "buildingPermitPortalUrl": "https://www.gillettewy.gov/building",
-      "certificateOfOccupancyFee": "$185 standard municipal inspection fee",
-      "avgPermitWaitDays": 30,
-      "shortTermRentalStatus": "restricted",
-      "foodTruckPermitStatus": "allowed",
-      "combinedSalesTaxRate": 0.055,
-      "stateTaxRate": 0.04,
-      "localTaxRate": 0.015,
-      "provenance": {
-        "sourceName": "Gillette Municipal Code & State Department of Revenue",
-        "sourceUrl": "https://www.gillettewy.gov",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place",
-        "evidenceQuote": "Statutory municipal code standards."
-      }
-    },
-    "topTrafficCorridors": [
-      {
-        "roadName": "Main Arterial Corridor 1",
-        "segmentDescription": "Central Commercial Corridor through Gillette",
-        "aadt": 4020,
-        "heavyTruckPct": 5.5,
-        "lat": 44.27258,
-        "lng": -105.498936,
-        "year": 2024,
-        "provenance": {
-          "sourceName": "Wyoming DOT AADT Database",
-          "sourceUrl": "https://www.transportation.gov/",
-          "datasetVintage": "2024-AADT",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "place"
-        }
-      }
-    ],
-    "marketSignals": {
-      "reportedRetailRentSqFtYr": 40.0,
-      "reportedIndustrialRentSqFtYr": 18.0,
-      "topSearchedNaics30d": [
-        "722515",
-        "713940",
-        "812111"
-      ],
-      "verifiedLocalProsCount": 8
-    },
-    "scores": {
-      "overallViability": 48,
-      "purchasingPower": 46,
-      "growthMomentum": 50,
-      "costEfficiency": 71,
-      "regulatoryFriction": 48
-    },
+    "marketSignals": {},
     "executiveTravel": {
-      "timeZone": "America/Denver (MT: UTC-07:00)",
+      "timeZone": "America/Denver",
       "timeZoneAbbr": "MT",
       "utcOffset": "-07:00",
-      "primaryAirport": {
-        "name": "Gillette Regional / Metropolitan Airport",
-        "iata": null,
-        "distanceMiles": 10.3,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
-      },
-      "powerPlugs": {
-        "types": [
-          "Type A (2-pin)",
-          "Type B (3-pin grounded)"
-        ],
-        "voltage": "120V",
-        "frequency": "60Hz",
-        "adapterAdvice": "Visitors from UK, EU, Australia, and Asia require a standard Type A/B plug adapter and dual-voltage converter."
-      },
-      "currency": {
-        "code": "USD",
-        "symbol": "$",
-        "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
-        "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
-      },
-      "climate": {
-        "summerHighF": 84,
-        "winterLowF": 22,
-        "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
-        "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
-      },
       "emergency": {
         "emergencyDispatch": "911",
-        "nonEmergencyPolice": "311 or local municipal dispatch",
-        "nearestTraumaHospital": "Gillette Regional Memorial Hospital",
-        "hospitalAddress": "Medical Center District, Gillette, WY"
+        "nearestTraumaHospital": "Campbell County Health",
+        "hospitalAddress": "501 South Burma Avenue, Gillette, WY 82716",
+        "cmsFacilityId": "530002",
+        "emergencyServices": true,
+        "source": "CMS Care Compare hospital general information (dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma or nearest claim.",
+        "erHospitals": [
+          {
+            "name": "Campbell County Health",
+            "address": "501 South Burma Avenue, Gillette, WY 82716",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "530002"
+          }
+        ],
+        "erHospitalsSource": "CMS Care Compare hospital general information (dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma or nearest claim."
       },
-      "visitorLogistics": {
-        "tapWaterPotability": "100% Safe municipal drinking water conforming to EPA Safe Drinking Water Act standards.",
-        "salesTaxRefundPolicy": "International travelers may claim state sales tax refunds on qualifying departures at designated airport customs counters.",
-        "rideshareAvailability": "Ubiquitous (Uber and Lyft operational 24/7 across the metropolitan area)."
-      },
-      "provenance": {
-        "sourceName": "FAA Airport Database & International Trade Administration",
-        "sourceUrl": "https://www.trade.gov/",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
+      "primaryAirport": {
+        "name": "Northeast Wyoming Regional Airport",
+        "iata": "GCC",
+        "lat": 44.3489,
+        "lng": -105.539001,
+        "distanceMiles": 5.6,
+        "transitToDowntown": null,
+        "source": "OurAirports (public domain) for name, IATA code and coordinates; distance is straight-line from the U.S. Census Gazetteer city center point",
+        "sourceUrl": "https://ourairports.com/data/",
+        "cityCenterMethod": "Census Gazetteer internal point",
+        "retrieved": "2026-10-31"
       }
+    },
+    "housingAndTaxes": {
+      "medianHomeValue": 257200,
+      "medianGrossRent": 922,
+      "medianRealEstateTaxPaid": 1443,
+      "effectivePropertyTaxRatePct": 0.56,
+      "countyName": "Campbell County",
+      "source": "ACS 2023 5-yr: B25077 median home value, B25064 median gross rent, B25103 median real estate taxes paid. Effective rate = B25103 / B25077.",
+      "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/"
+    },
+    "climateNormals": {
+      "peakSummerHighF": 86,
+      "winterLowF": 16,
+      "annualRainfallInches": 17.6,
+      "sourceName": "NOAA NCEI U.S. Climate Normals 1991-2020 (Station USC00483855, 2.5 mi from Gazetteer center), retrieved 2026-10-31",
+      "sourceUrl": "https://www.ncei.noaa.gov/products/land-based-station/us-climate-normals"
+    },
+    "waterUtility": {
+      "pwsid": "WY5600019",
+      "providerName": "Gillette, City Of",
+      "populationServed": 32222,
+      "sourceType": "groundwater",
+      "source": "U.S. EPA Safe Drinking Water Information System (SDWIS)",
+      "sourceUrl": "https://data.epa.gov/efservice/WATER_SYSTEM/PWSID/WY5600019/JSON",
+      "retrieved": "2026-10-31"
+    },
+    "evInfrastructure": {
+      "totalStations": 5,
+      "totalChargingPorts": 22,
+      "dcFastPorts": 20,
+      "level2Ports": 2,
+      "sampleStations": [
+        {
+          "name": "Gillette, WY - South Douglas Highway - Tesla Supercharger",
+          "address": "2700 S Douglas Highway, Gillette, WY 82716",
+          "network": "Tesla",
+          "dcFastPorts": 8,
+          "level2Ports": 0,
+          "lat": 44.26989,
+          "lng": -105.495523
+        },
+        {
+          "name": "Gillette, WY - Tesla Supercharger",
+          "address": "211 Decker Court, Gillette, WY 82716",
+          "network": "Tesla",
+          "dcFastPorts": 4,
+          "level2Ports": 0,
+          "lat": 44.292993,
+          "lng": -105.526393
+        },
+        {
+          "name": "Kroger Smiths 180 (Gillette, WY)",
+          "address": "906 Camel Drive AKA EV, Gillette, WY 82716",
+          "network": "Electrify America",
+          "dcFastPorts": 4,
+          "level2Ports": 0,
+          "lat": 44.28153,
+          "lng": -105.49096
+        },
+        {
+          "name": "Flying J 762",
+          "address": "1810 South Douglas Highway, Gillette, WY 82718",
+          "network": "eVgo Network",
+          "dcFastPorts": 4,
+          "level2Ports": 0,
+          "lat": 44.27737,
+          "lng": -105.4951
+        },
+        {
+          "name": "The Butte",
+          "address": "4800 Tanner Drive, Gillette, WY 82718",
+          "network": "Blink Network",
+          "dcFastPorts": 0,
+          "level2Ports": 2,
+          "lat": 44.251803,
+          "lng": -105.502506
+        }
+      ],
+      "sourceName": "U.S. Department of Energy / NLR Alternative Fuels Data Center (AFDC)",
+      "sourceUrl": "https://afdc.energy.gov/stations",
+      "retrieved": "2026-10-31"
+    },
+    "nationalParks": {
+      "parks": [
+        {
+          "parkCode": "deto",
+          "fullName": "Devils Tower National Monument",
+          "designation": "National Monument",
+          "distanceMiles": 44.5,
+          "description": "The Tower is an astounding geologic feature that protrudes out of the prairie surrounding the Black Hills. It is considered sacred by Northern Plains Indians and indigenous people. Hundreds of parallel cracks make it one of the finest...",
+          "url": "https://www.nps.gov/deto/index.htm",
+          "lat": 44.590647,
+          "lng": -104.715634
+        }
+      ],
+      "sourceName": "U.S. National Park Service",
+      "sourceUrl": "https://www.nps.gov/",
+      "retrieved": "2026-10-31"
     }
   },
   {
     "slug": "wy/laramie",
     "cityId": "5645050",
-    "countyFips": "56450",
+    "countyFips": "56001",
     "name": "Laramie",
     "stateCode": "wy",
     "stateName": "Wyoming",
-    "countyName": "Laramie Metropolitan Area",
+    "countyName": "Albany County",
     "lat": 41.305955,
     "lng": -105.608637,
     "primaryZips": [
-      "71249"
+      "82070",
+      "82072",
+      "82073"
     ],
     "demographics": {
       "population": 32152,
-      "popGrowth5YrPct": 2.3,
-      "medianHouseholdIncome": 82618,
-      "perCapitaIncome": 47918,
-      "medianAge": 36.4,
-      "daytimeWorkerPop": 19934,
-      "daytimePopSurgePct": 8.5,
-      "medianGrossRent": 1589,
-      "medianHomeValue": 346996,
+      "medianHouseholdIncome": 52414,
+      "perCapitaIncome": 34422,
+      "medianAge": 26.9,
+      "medianGrossRent": 933,
+      "medianHomeValue": 302200,
       "provenance": {
-        "sourceName": "US Census Bureau ACS 5-Year (DP03/DP04/DP05) & PopEst",
-        "sourceUrl": "https://api.census.gov/data/2023/acs/acs5",
-        "datasetVintage": "2023-5YR",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "sourceName": "US Census Bureau ACS 5-Year Estimates 2023 (Table-Based Summary File)",
+        "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/",
+        "datasetVintage": "ACS-2023-5YR",
+        "verifiedAt": "2026-10-31T00:00:00Z",
         "granularity": "place"
-      }
-    },
-    "laborAndEconomy": {
-      "unemploymentRatePct": 3.8,
-      "avgWeeklyWageAllIndustries": 1340,
-      "newHousingPermits12Mo": 241,
-      "permitsPer1kResidents": 7.5,
-      "femaRiskScore": 28.0,
-      "provenance": {
-        "sourceName": "BLS Local Area Unemployment Statistics (LAUS) & Census BPS",
-        "sourceUrl": "https://www.bls.gov/lau/",
-        "datasetVintage": "2024-M08",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
-      }
+      },
+      "popChange2020to2023Pct": 2.4,
+      "popChangeBasis": "Census Population Estimates, April 2020 base to July 2023"
     },
     "industries": [
       {
         "naicsCode": "722515",
         "slug": "coffee-shops",
         "label": "Coffee & Snack Shops",
-        "establishments": 7,
-        "per10kResidents": 2.18,
-        "usAvgPer10k": 2.15,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 11,
+        "per10kResidents": 3.0,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 141,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Laramie."
+          "evidenceQuote": "11 employer establishments (NAICS 722515) across 3 ZIP codes whose USPS city is Laramie, WY; density uses ACS 2023 ZCTA population (36,632). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722511",
         "slug": "restaurants",
         "label": "Full-Service Restaurants",
-        "establishments": 22,
-        "per10kResidents": 6.84,
-        "usAvgPer10k": 6.8,
-        "saturationIndex": 100,
+        "establishments": 32,
+        "per10kResidents": 8.74,
+        "usAvgPer10k": 7.44,
+        "saturationIndex": 117,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Laramie."
+          "evidenceQuote": "32 employer establishments (NAICS 722511) across 3 ZIP codes whose USPS city is Laramie, WY; density uses ACS 2023 ZCTA population (36,632). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722513",
         "slug": "fast-food",
-        "label": "Fast Food Restaurants",
-        "establishments": 23,
-        "per10kResidents": 7.15,
-        "usAvgPer10k": 7.2,
-        "saturationIndex": 100,
+        "label": "Limited-Service / Fast Food Restaurants",
+        "establishments": 28,
+        "per10kResidents": 7.64,
+        "usAvgPer10k": 7.75,
+        "saturationIndex": 99,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Laramie."
+          "evidenceQuote": "28 employer establishments (NAICS 722513) across 3 ZIP codes whose USPS city is Laramie, WY; density uses ACS 2023 ZCTA population (36,632). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722410",
         "slug": "bars-taverns",
-        "label": "Bars & Drinking Places",
-        "establishments": 6,
-        "per10kResidents": 1.87,
-        "usAvgPer10k": 1.85,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Drinking Places (Alcoholic Beverages)",
+        "establishments": 9,
+        "per10kResidents": 2.46,
+        "usAvgPer10k": 0.9,
+        "saturationIndex": 272,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Laramie."
-        }
-      },
-      {
-        "naicsCode": "812111",
-        "slug": "barber-shops",
-        "label": "Barber Shops",
-        "establishments": 4,
-        "per10kResidents": 1.24,
-        "usAvgPer10k": 1.35,
-        "saturationIndex": 94,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Laramie."
+          "evidenceQuote": "9 employer establishments (NAICS 722410) across 3 ZIP codes whose USPS city is Laramie, WY; density uses ACS 2023 ZCTA population (36,632). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812112",
         "slug": "beauty-salons",
         "label": "Beauty Salons & Hair Studios",
-        "establishments": 11,
-        "per10kResidents": 3.42,
-        "usAvgPer10k": 3.4,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 13,
+        "per10kResidents": 3.55,
+        "usAvgPer10k": 2.31,
+        "saturationIndex": 154,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Laramie."
+          "evidenceQuote": "13 employer establishments (NAICS 812112) across 3 ZIP codes whose USPS city is Laramie, WY; density uses ACS 2023 ZCTA population (36,632). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812113",
         "slug": "nail-salons",
         "label": "Nail Salons",
-        "establishments": 7,
-        "per10kResidents": 2.18,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 103,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 0,
+        "per10kResidents": 0.0,
+        "usAvgPer10k": 0.86,
+        "saturationIndex": 0,
+        "status": "underserved",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Laramie."
+          "evidenceQuote": "0 employer establishments (NAICS 812113) across 3 ZIP codes whose USPS city is Laramie, WY; density uses ACS 2023 ZCTA population (36,632). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "713940",
         "slug": "gyms-fitness",
-        "label": "Fitness & Recreational Gyms",
-        "establishments": 4,
-        "per10kResidents": 1.24,
-        "usAvgPer10k": 1.25,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Laramie."
-        }
-      },
-      {
-        "naicsCode": "812910",
-        "slug": "pet-care",
-        "label": "Pet Care & Grooming",
+        "label": "Fitness & Recreational Sports Centers",
         "establishments": 3,
-        "per10kResidents": 0.93,
-        "usAvgPer10k": 0.95,
-        "saturationIndex": 99,
+        "per10kResidents": 0.82,
+        "usAvgPer10k": 1.0,
+        "saturationIndex": 82,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Laramie."
+          "evidenceQuote": "3 employer establishments (NAICS 713940) across 3 ZIP codes whose USPS city is Laramie, WY; density uses ACS 2023 ZCTA population (36,632). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541940",
         "slug": "veterinary",
-        "label": "Veterinary Services",
-        "establishments": 3,
-        "per10kResidents": 0.93,
-        "usAvgPer10k": 1.05,
-        "saturationIndex": 92,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Veterinary Services & Animal Hospitals",
+        "establishments": 5,
+        "per10kResidents": 1.36,
+        "usAvgPer10k": 0.69,
+        "saturationIndex": 198,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Laramie."
+          "evidenceQuote": "5 employer establishments (NAICS 541940) across 3 ZIP codes whose USPS city is Laramie, WY; density uses ACS 2023 ZCTA population (36,632). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "811111",
         "slug": "auto-repair",
         "label": "General Automotive Repair",
-        "establishments": 15,
-        "per10kResidents": 4.67,
-        "usAvgPer10k": 4.8,
-        "saturationIndex": 98,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 14,
+        "per10kResidents": 3.82,
+        "usAvgPer10k": 2.2,
+        "saturationIndex": 174,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Laramie."
-        }
-      },
-      {
-        "naicsCode": "811192",
-        "slug": "car-washes",
-        "label": "Car Washes & Detailing",
-        "establishments": 2,
-        "per10kResidents": 0.62,
-        "usAvgPer10k": 0.65,
-        "saturationIndex": 97,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Laramie."
-        }
-      },
-      {
-        "naicsCode": "812310",
-        "slug": "laundromats",
-        "label": "Coin Laundromats",
-        "establishments": 2,
-        "per10kResidents": 0.62,
-        "usAvgPer10k": 0.55,
-        "saturationIndex": 110,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Laramie."
-        }
-      },
-      {
-        "naicsCode": "812320",
-        "slug": "dry-cleaners",
-        "label": "Dry Cleaning & Laundry",
-        "establishments": 3,
-        "per10kResidents": 0.93,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 107,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Laramie."
+          "evidenceQuote": "14 employer establishments (NAICS 811111) across 3 ZIP codes whose USPS city is Laramie, WY; density uses ACS 2023 ZCTA population (36,632). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -2212,319 +1840,315 @@
         "slug": "dentists",
         "label": "Offices of Dentists",
         "establishments": 13,
-        "per10kResidents": 4.04,
-        "usAvgPer10k": 3.9,
-        "saturationIndex": 103,
+        "per10kResidents": 3.55,
+        "usAvgPer10k": 3.89,
+        "saturationIndex": 91,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Laramie."
+          "evidenceQuote": "13 employer establishments (NAICS 621210) across 3 ZIP codes whose USPS city is Laramie, WY; density uses ACS 2023 ZCTA population (36,632). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621310",
         "slug": "chiropractors",
         "label": "Offices of Chiropractors",
-        "establishments": 5,
-        "per10kResidents": 1.56,
-        "usAvgPer10k": 1.4,
-        "saturationIndex": 108,
+        "establishments": 4,
+        "per10kResidents": 1.09,
+        "usAvgPer10k": 0.97,
+        "saturationIndex": 112,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Laramie."
+          "evidenceQuote": "4 employer establishments (NAICS 621310) across 3 ZIP codes whose USPS city is Laramie, WY; density uses ACS 2023 ZCTA population (36,632). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621340",
         "slug": "physical-therapy",
-        "label": "Physical Therapy Clinics",
-        "establishments": 5,
-        "per10kResidents": 1.56,
-        "usAvgPer10k": 1.55,
-        "saturationIndex": 100,
+        "label": "Physical, Occupational & Speech Therapists",
+        "establishments": 4,
+        "per10kResidents": 1.09,
+        "usAvgPer10k": 1.3,
+        "saturationIndex": 84,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Laramie."
+          "evidenceQuote": "4 employer establishments (NAICS 621340) across 3 ZIP codes whose USPS city is Laramie, WY; density uses ACS 2023 ZCTA population (36,632). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "624410",
         "slug": "daycare",
         "label": "Child Day Care Services",
-        "establishments": 7,
-        "per10kResidents": 2.18,
-        "usAvgPer10k": 2.25,
-        "saturationIndex": 98,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 14,
+        "per10kResidents": 3.82,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 180,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Laramie."
+          "evidenceQuote": "14 employer establishments (NAICS 624410) across 3 ZIP codes whose USPS city is Laramie, WY; density uses ACS 2023 ZCTA population (36,632). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "445120",
         "slug": "convenience-stores",
-        "label": "Convenience Stores",
-        "establishments": 6,
-        "per10kResidents": 1.87,
-        "usAvgPer10k": 1.95,
-        "saturationIndex": 97,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Convenience Retail Stores",
+        "establishments": 0,
+        "per10kResidents": 0.0,
+        "usAvgPer10k": 0.82,
+        "saturationIndex": 0,
+        "status": "underserved",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Laramie."
+          "evidenceQuote": "0 employer establishments (NAICS 445120) across 3 ZIP codes whose USPS city is Laramie, WY; density uses ACS 2023 ZCTA population (36,632). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "448140",
         "slug": "clothing-boutiques",
-        "label": "Family Clothing Stores",
-        "establishments": 5,
-        "per10kResidents": 1.56,
-        "usAvgPer10k": 1.65,
-        "saturationIndex": 96,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Family Clothing Stores & Boutiques",
+        "establishments": 4,
+        "per10kResidents": 1.09,
+        "usAvgPer10k": 0.65,
+        "saturationIndex": 167,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Laramie."
-        }
-      },
-      {
-        "naicsCode": "445291",
-        "slug": "bakeries",
-        "label": "Retail Bakeries",
-        "establishments": 3,
-        "per10kResidents": 0.93,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 107,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Laramie."
-        }
-      },
-      {
-        "naicsCode": "453110",
-        "slug": "florists",
-        "label": "Florists & Floral Gift",
-        "establishments": 2,
-        "per10kResidents": 0.62,
-        "usAvgPer10k": 0.5,
-        "saturationIndex": 119,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Laramie."
+          "evidenceQuote": "4 employer establishments (NAICS 448140) across 3 ZIP codes whose USPS city is Laramie, WY; density uses ACS 2023 ZCTA population (36,632). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541110",
         "slug": "law-firms",
         "label": "Offices of Lawyers",
-        "establishments": 16,
-        "per10kResidents": 4.98,
-        "usAvgPer10k": 4.9,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 37,
+        "per10kResidents": 10.1,
+        "usAvgPer10k": 4.8,
+        "saturationIndex": 210,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Laramie."
+          "evidenceQuote": "37 employer establishments (NAICS 541110) across 3 ZIP codes whose USPS city is Laramie, WY; density uses ACS 2023 ZCTA population (36,632). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541211",
         "slug": "accounting-cpa",
-        "label": "Offices of CPAs",
+        "label": "Offices of Certified Public Accountants",
         "establishments": 7,
-        "per10kResidents": 2.18,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 103,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "per10kResidents": 1.91,
+        "usAvgPer10k": 1.44,
+        "saturationIndex": 133,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Laramie."
+          "evidenceQuote": "7 employer establishments (NAICS 541211) across 3 ZIP codes whose USPS city is Laramie, WY; density uses ACS 2023 ZCTA population (36,632). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "531210",
         "slug": "real-estate-agencies",
-        "label": "Real Estate Brokerages",
-        "establishments": 12,
-        "per10kResidents": 3.73,
-        "usAvgPer10k": 3.8,
-        "saturationIndex": 99,
+        "label": "Offices of Real Estate Agents & Brokers",
+        "establishments": 20,
+        "per10kResidents": 5.46,
+        "usAvgPer10k": 4.74,
+        "saturationIndex": 115,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Laramie."
+          "evidenceQuote": "20 employer establishments (NAICS 531210) across 3 ZIP codes whose USPS city is Laramie, WY; density uses ACS 2023 ZCTA population (36,632). National benchmark = all US ZIP rows / US population."
         }
       }
     ],
-    "permitsAndTax": {
-      "generalBusinessLicenseRequired": false,
-      "businessLicenseFeeSummary": "No general city business license required. State of Wyoming statutory filings apply.",
-      "businessLicensePortalUrl": "https://www.laramiewy.gov/permits",
-      "zoningLookupUrl": "https://www.laramiewy.gov/zoning",
-      "buildingPermitPortalUrl": "https://www.laramiewy.gov/building",
-      "certificateOfOccupancyFee": "$185 standard municipal inspection fee",
-      "avgPermitWaitDays": 30,
-      "shortTermRentalStatus": "restricted",
-      "foodTruckPermitStatus": "allowed",
-      "combinedSalesTaxRate": 0.055,
-      "stateTaxRate": 0.04,
-      "localTaxRate": 0.015,
-      "provenance": {
-        "sourceName": "Laramie Municipal Code & State Department of Revenue",
-        "sourceUrl": "https://www.laramiewy.gov",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place",
-        "evidenceQuote": "Statutory municipal code standards."
-      }
-    },
-    "topTrafficCorridors": [
-      {
-        "roadName": "Main Arterial Corridor 1",
-        "segmentDescription": "Central Commercial Corridor through Laramie",
-        "aadt": 3858,
-        "heavyTruckPct": 5.5,
-        "lat": 41.305955,
-        "lng": -105.608637,
-        "year": 2024,
-        "provenance": {
-          "sourceName": "Wyoming DOT AADT Database",
-          "sourceUrl": "https://www.transportation.gov/",
-          "datasetVintage": "2024-AADT",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "place"
-        }
-      }
-    ],
-    "marketSignals": {
-      "reportedRetailRentSqFtYr": 41.6,
-      "reportedIndustrialRentSqFtYr": 18.7,
-      "topSearchedNaics30d": [
-        "722515",
-        "713940",
-        "812111"
-      ],
-      "verifiedLocalProsCount": 8
-    },
-    "scores": {
-      "overallViability": 53,
-      "purchasingPower": 50,
-      "growthMomentum": 56,
-      "costEfficiency": 68,
-      "regulatoryFriction": 48
-    },
+    "marketSignals": {},
     "executiveTravel": {
-      "timeZone": "America/Denver (MT: UTC-07:00)",
+      "timeZone": "America/Denver",
       "timeZoneAbbr": "MT",
       "utcOffset": "-07:00",
-      "primaryAirport": {
-        "name": "Laramie Regional / Metropolitan Airport",
-        "iata": null,
-        "distanceMiles": 10.2,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
-      },
-      "powerPlugs": {
-        "types": [
-          "Type A (2-pin)",
-          "Type B (3-pin grounded)"
-        ],
-        "voltage": "120V",
-        "frequency": "60Hz",
-        "adapterAdvice": "Visitors from UK, EU, Australia, and Asia require a standard Type A/B plug adapter and dual-voltage converter."
-      },
-      "currency": {
-        "code": "USD",
-        "symbol": "$",
-        "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
-        "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
-      },
-      "climate": {
-        "summerHighF": 84,
-        "winterLowF": 22,
-        "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
-        "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
-      },
       "emergency": {
         "emergencyDispatch": "911",
-        "nonEmergencyPolice": "311 or local municipal dispatch",
-        "nearestTraumaHospital": "Laramie Regional Memorial Hospital",
-        "hospitalAddress": "Medical Center District, Laramie, WY"
+        "nearestTraumaHospital": "Ivinson Memorial Hospital",
+        "hospitalAddress": "255 N 30th, Laramie, WY 82072",
+        "cmsFacilityId": "530025",
+        "emergencyServices": true,
+        "source": "CMS Care Compare hospital general information (dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma or nearest claim.",
+        "erHospitals": [
+          {
+            "name": "Ivinson Memorial Hospital",
+            "address": "255 N 30th, Laramie, WY 82072",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "530025"
+          }
+        ],
+        "erHospitalsSource": "CMS Care Compare hospital general information (dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma or nearest claim."
       },
-      "visitorLogistics": {
-        "tapWaterPotability": "100% Safe municipal drinking water conforming to EPA Safe Drinking Water Act standards.",
-        "salesTaxRefundPolicy": "International travelers may claim state sales tax refunds on qualifying departures at designated airport customs counters.",
-        "rideshareAvailability": "Ubiquitous (Uber and Lyft operational 24/7 across the metropolitan area)."
-      },
-      "provenance": {
-        "sourceName": "FAA Airport Database & International Trade Administration",
-        "sourceUrl": "https://www.trade.gov/",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
+      "primaryAirport": {
+        "name": "Laramie Regional Airport",
+        "iata": "LAR",
+        "lat": 41.312099,
+        "lng": -105.675003,
+        "distanceMiles": 3.5,
+        "transitToDowntown": null,
+        "source": "OurAirports (public domain) for name, IATA code and coordinates; distance is straight-line from the U.S. Census Gazetteer city center point",
+        "sourceUrl": "https://ourairports.com/data/",
+        "cityCenterMethod": "Census Gazetteer internal point",
+        "retrieved": "2026-10-31"
       }
+    },
+    "housingAndTaxes": {
+      "medianHomeValue": 302200,
+      "medianGrossRent": 933,
+      "medianRealEstateTaxPaid": 1779,
+      "effectivePropertyTaxRatePct": 0.59,
+      "countyName": "Albany County",
+      "source": "ACS 2023 5-yr: B25077 median home value, B25064 median gross rent, B25103 median real estate taxes paid. Effective rate = B25103 / B25077.",
+      "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/"
+    },
+    "climateNormals": {
+      "peakSummerHighF": 81,
+      "winterLowF": 8,
+      "annualRainfallInches": 10.9,
+      "sourceName": "NOAA NCEI U.S. Climate Normals 1991-2020 (Station USC00485435, 2.4 mi from Gazetteer center), retrieved 2026-10-31",
+      "sourceUrl": "https://www.ncei.noaa.gov/products/land-based-station/us-climate-normals"
+    },
+    "waterUtility": {
+      "pwsid": "WY5600029",
+      "providerName": "Laramie, City Of",
+      "populationServed": 32395,
+      "sourceType": "surface water",
+      "source": "U.S. EPA Safe Drinking Water Information System (SDWIS)",
+      "sourceUrl": "https://data.epa.gov/efservice/WATER_SYSTEM/PWSID/WY5600029/JSON",
+      "retrieved": "2026-10-31"
+    },
+    "higherEducation": {
+      "institutionCount": 2,
+      "totalEnrollment": 9278,
+      "institutions": [
+        {
+          "id": 240727,
+          "name": "University of Wyoming",
+          "studentSize": 7944,
+          "ownership": "Public",
+          "schoolUrl": "https://www.uwyo.edu/",
+          "lat": 41.311773,
+          "lng": -105.57931
+        },
+        {
+          "id": 240718,
+          "name": "WyoTech",
+          "studentSize": 1334,
+          "ownership": "Private for-profit",
+          "schoolUrl": "https://www.wyotech.edu/",
+          "lat": 41.30354,
+          "lng": -105.621161
+        }
+      ],
+      "sourceName": "U.S. Department of Education College Scorecard",
+      "sourceUrl": "https://collegescorecard.ed.gov/",
+      "retrieved": "2026-10-31"
+    },
+    "evInfrastructure": {
+      "totalStations": 8,
+      "totalChargingPorts": 21,
+      "dcFastPorts": 10,
+      "level2Ports": 11,
+      "sampleStations": [
+        {
+          "name": "Laramie, WY - Tesla Supercharger",
+          "address": "1673 Centennial Drive, Laramie, WY 82070",
+          "network": "Tesla",
+          "dcFastPorts": 8,
+          "level2Ports": 0,
+          "lat": 41.325104,
+          "lng": -105.618097
+        },
+        {
+          "name": "City of Laramie Public Parking, ​​103 E University Ave.",
+          "address": "103 E University Avenue, Laramie, WY 82072",
+          "network": "EV Connect",
+          "dcFastPorts": 0,
+          "level2Ports": 4,
+          "lat": 41.313514,
+          "lng": -105.59557
+        },
+        {
+          "name": "BESTWESTERNLAR STATION 1",
+          "address": "1767 N Banner Rd, Laramie, WY 82072",
+          "network": "ChargePoint Network",
+          "dcFastPorts": 0,
+          "level2Ports": 2,
+          "lat": 41.328748,
+          "lng": -105.608882
+        },
+        {
+          "name": "FIRE STATION 3 COL FS3 GW",
+          "address": "2373 W Jefferson St, Laramie, WY 82070",
+          "network": "ChargePoint Network",
+          "dcFastPorts": 0,
+          "level2Ports": 2,
+          "lat": 41.311769,
+          "lng": -105.628893
+        },
+        {
+          "name": "University of Wyoming",
+          "address": "1121 E Bradley St, Laramie, WY 82072",
+          "network": "Non-Networked",
+          "dcFastPorts": 0,
+          "level2Ports": 2,
+          "lat": 41.31624,
+          "lng": -105.581952
+        }
+      ],
+      "sourceName": "U.S. Department of Energy / NLR Alternative Fuels Data Center (AFDC)",
+      "sourceUrl": "https://afdc.energy.gov/stations",
+      "retrieved": "2026-10-31"
     }
   }
 ]

@@ -301,7 +301,7 @@ export const CityRecordSchema = z.object({
     })
     .optional(),
   industries: z.array(NaicsSaturationSchema),
-  permitsAndTax: MunicipalPermitIntelSchema,
+  permitsAndTax: MunicipalPermitIntelSchema.optional(),
   topTrafficCorridors: z.array(TrafficCorridorSchema).optional(),
   marketSignals: z
     .object({

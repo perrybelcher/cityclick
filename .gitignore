@@ -7,3 +7,4 @@ dist/
 *.log
 data/census/
 data/census-local/
+data/cache/federal_bulk/

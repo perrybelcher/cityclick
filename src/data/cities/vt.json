@@ -2,633 +2,540 @@
   {
     "slug": "vt/burlington",
     "cityId": "5010675",
-    "countyFips": "50106",
+    "countyFips": "50007",
     "name": "Burlington",
     "stateCode": "vt",
     "stateName": "Vermont",
-    "countyName": "Burlington Metropolitan Area",
+    "countyName": "Chittenden County",
     "lat": 44.491927,
     "lng": -73.238882,
     "primaryZips": [
-      "70904"
+      "05401",
+      "05408",
+      "05405"
     ],
     "demographics": {
       "population": 44528,
-      "popGrowth5YrPct": -0.5,
-      "medianHouseholdIncome": 79852,
-      "perCapitaIncome": 46314,
-      "medianAge": 36.4,
-      "daytimeWorkerPop": 27607,
-      "daytimePopSurgePct": 8.5,
-      "medianGrossRent": 1536,
-      "medianHomeValue": 335378,
+      "medianHouseholdIncome": 68854,
+      "perCapitaIncome": 39027,
+      "medianAge": 26.7,
+      "medianGrossRent": 1609,
+      "medianHomeValue": 400200,
       "provenance": {
-        "sourceName": "US Census Bureau ACS 5-Year (DP03/DP04/DP05) & PopEst",
-        "sourceUrl": "https://api.census.gov/data/2023/acs/acs5",
-        "datasetVintage": "2023-5YR",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "sourceName": "US Census Bureau ACS 5-Year Estimates 2023 (Table-Based Summary File)",
+        "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/",
+        "datasetVintage": "ACS-2023-5YR",
+        "verifiedAt": "2026-10-31T00:00:00Z",
         "granularity": "place"
-      }
-    },
-    "laborAndEconomy": {
-      "unemploymentRatePct": 3.8,
-      "avgWeeklyWageAllIndustries": 1340,
-      "newHousingPermits12Mo": 334,
-      "permitsPer1kResidents": 7.5,
-      "femaRiskScore": 28.0,
-      "provenance": {
-        "sourceName": "BLS Local Area Unemployment Statistics (LAUS) & Census BPS",
-        "sourceUrl": "https://www.bls.gov/lau/",
-        "datasetVintage": "2024-M08",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
-      }
+      },
+      "popChange2020to2023Pct": -0.5,
+      "popChangeBasis": "Census Population Estimates, April 2020 base to July 2023"
     },
     "industries": [
       {
         "naicsCode": "722515",
         "slug": "coffee-shops",
         "label": "Coffee & Snack Shops",
-        "establishments": 10,
-        "per10kResidents": 2.25,
-        "usAvgPer10k": 2.15,
-        "saturationIndex": 104,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 19,
+        "per10kResidents": 4.25,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 200,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Burlington."
+          "evidenceQuote": "19 employer establishments (NAICS 722515) across 3 ZIP codes whose USPS city is Burlington, VT; density uses ACS 2023 ZCTA population (44,715). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722511",
         "slug": "restaurants",
         "label": "Full-Service Restaurants",
-        "establishments": 30,
-        "per10kResidents": 6.74,
-        "usAvgPer10k": 6.8,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 65,
+        "per10kResidents": 14.54,
+        "usAvgPer10k": 7.44,
+        "saturationIndex": 195,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Burlington."
+          "evidenceQuote": "65 employer establishments (NAICS 722511) across 3 ZIP codes whose USPS city is Burlington, VT; density uses ACS 2023 ZCTA population (44,715). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722513",
         "slug": "fast-food",
-        "label": "Fast Food Restaurants",
-        "establishments": 32,
-        "per10kResidents": 7.19,
-        "usAvgPer10k": 7.2,
-        "saturationIndex": 100,
+        "label": "Limited-Service / Fast Food Restaurants",
+        "establishments": 40,
+        "per10kResidents": 8.95,
+        "usAvgPer10k": 7.75,
+        "saturationIndex": 115,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Burlington."
+          "evidenceQuote": "40 employer establishments (NAICS 722513) across 3 ZIP codes whose USPS city is Burlington, VT; density uses ACS 2023 ZCTA population (44,715). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722410",
         "slug": "bars-taverns",
-        "label": "Bars & Drinking Places",
-        "establishments": 8,
-        "per10kResidents": 1.8,
-        "usAvgPer10k": 1.85,
-        "saturationIndex": 98,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Drinking Places (Alcoholic Beverages)",
+        "establishments": 20,
+        "per10kResidents": 4.47,
+        "usAvgPer10k": 0.9,
+        "saturationIndex": 496,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Burlington."
-        }
-      },
-      {
-        "naicsCode": "812111",
-        "slug": "barber-shops",
-        "label": "Barber Shops",
-        "establishments": 6,
-        "per10kResidents": 1.35,
-        "usAvgPer10k": 1.35,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Burlington."
+          "evidenceQuote": "20 employer establishments (NAICS 722410) across 3 ZIP codes whose USPS city is Burlington, VT; density uses ACS 2023 ZCTA population (44,715). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812112",
         "slug": "beauty-salons",
         "label": "Beauty Salons & Hair Studios",
-        "establishments": 15,
-        "per10kResidents": 3.37,
-        "usAvgPer10k": 3.4,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 16,
+        "per10kResidents": 3.58,
+        "usAvgPer10k": 2.31,
+        "saturationIndex": 155,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Burlington."
+          "evidenceQuote": "16 employer establishments (NAICS 812112) across 3 ZIP codes whose USPS city is Burlington, VT; density uses ACS 2023 ZCTA population (44,715). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812113",
         "slug": "nail-salons",
         "label": "Nail Salons",
-        "establishments": 9,
-        "per10kResidents": 2.02,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 97,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 7,
+        "per10kResidents": 1.57,
+        "usAvgPer10k": 0.86,
+        "saturationIndex": 182,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Burlington."
+          "evidenceQuote": "7 employer establishments (NAICS 812113) across 3 ZIP codes whose USPS city is Burlington, VT; density uses ACS 2023 ZCTA population (44,715). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "713940",
         "slug": "gyms-fitness",
-        "label": "Fitness & Recreational Gyms",
-        "establishments": 6,
-        "per10kResidents": 1.35,
-        "usAvgPer10k": 1.25,
-        "saturationIndex": 106,
+        "label": "Fitness & Recreational Sports Centers",
+        "establishments": 5,
+        "per10kResidents": 1.12,
+        "usAvgPer10k": 1.0,
+        "saturationIndex": 112,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Burlington."
+          "evidenceQuote": "5 employer establishments (NAICS 713940) across 3 ZIP codes whose USPS city is Burlington, VT; density uses ACS 2023 ZCTA population (44,715). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812910",
         "slug": "pet-care",
-        "label": "Pet Care & Grooming",
+        "label": "Pet Care & Grooming Services",
         "establishments": 4,
-        "per10kResidents": 0.9,
-        "usAvgPer10k": 0.95,
-        "saturationIndex": 96,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "per10kResidents": 0.89,
+        "usAvgPer10k": 0.46,
+        "saturationIndex": 193,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Burlington."
+          "evidenceQuote": "4 employer establishments (NAICS 812910) across 3 ZIP codes whose USPS city is Burlington, VT; density uses ACS 2023 ZCTA population (44,715). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541940",
         "slug": "veterinary",
-        "label": "Veterinary Services",
-        "establishments": 5,
-        "per10kResidents": 1.12,
-        "usAvgPer10k": 1.05,
-        "saturationIndex": 106,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Veterinary Services & Animal Hospitals",
+        "establishments": 0,
+        "per10kResidents": 0.0,
+        "usAvgPer10k": 0.69,
+        "saturationIndex": 0,
+        "status": "underserved",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Burlington."
+          "evidenceQuote": "0 employer establishments (NAICS 541940) across 3 ZIP codes whose USPS city is Burlington, VT; density uses ACS 2023 ZCTA population (44,715). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "811111",
         "slug": "auto-repair",
         "label": "General Automotive Repair",
-        "establishments": 21,
-        "per10kResidents": 4.72,
-        "usAvgPer10k": 4.8,
-        "saturationIndex": 99,
+        "establishments": 10,
+        "per10kResidents": 2.24,
+        "usAvgPer10k": 2.2,
+        "saturationIndex": 102,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Burlington."
-        }
-      },
-      {
-        "naicsCode": "811192",
-        "slug": "car-washes",
-        "label": "Car Washes & Detailing",
-        "establishments": 3,
-        "per10kResidents": 0.67,
-        "usAvgPer10k": 0.65,
-        "saturationIndex": 103,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Burlington."
-        }
-      },
-      {
-        "naicsCode": "812310",
-        "slug": "laundromats",
-        "label": "Coin Laundromats",
-        "establishments": 2,
-        "per10kResidents": 0.45,
-        "usAvgPer10k": 0.55,
-        "saturationIndex": 85,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Burlington."
-        }
-      },
-      {
-        "naicsCode": "812320",
-        "slug": "dry-cleaners",
-        "label": "Dry Cleaning & Laundry",
-        "establishments": 4,
-        "per10kResidents": 0.9,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 105,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Burlington."
+          "evidenceQuote": "10 employer establishments (NAICS 811111) across 3 ZIP codes whose USPS city is Burlington, VT; density uses ACS 2023 ZCTA population (44,715). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621210",
         "slug": "dentists",
         "label": "Offices of Dentists",
-        "establishments": 17,
-        "per10kResidents": 3.82,
-        "usAvgPer10k": 3.9,
-        "saturationIndex": 98,
+        "establishments": 14,
+        "per10kResidents": 3.13,
+        "usAvgPer10k": 3.89,
+        "saturationIndex": 81,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Burlington."
+          "evidenceQuote": "14 employer establishments (NAICS 621210) across 3 ZIP codes whose USPS city is Burlington, VT; density uses ACS 2023 ZCTA population (44,715). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621310",
         "slug": "chiropractors",
         "label": "Offices of Chiropractors",
-        "establishments": 6,
-        "per10kResidents": 1.35,
-        "usAvgPer10k": 1.4,
-        "saturationIndex": 97,
+        "establishments": 4,
+        "per10kResidents": 0.89,
+        "usAvgPer10k": 0.97,
+        "saturationIndex": 92,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Burlington."
+          "evidenceQuote": "4 employer establishments (NAICS 621310) across 3 ZIP codes whose USPS city is Burlington, VT; density uses ACS 2023 ZCTA population (44,715). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621340",
         "slug": "physical-therapy",
-        "label": "Physical Therapy Clinics",
-        "establishments": 7,
-        "per10kResidents": 1.57,
-        "usAvgPer10k": 1.55,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Physical, Occupational & Speech Therapists",
+        "establishments": 13,
+        "per10kResidents": 2.91,
+        "usAvgPer10k": 1.3,
+        "saturationIndex": 223,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Burlington."
+          "evidenceQuote": "13 employer establishments (NAICS 621340) across 3 ZIP codes whose USPS city is Burlington, VT; density uses ACS 2023 ZCTA population (44,715). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "624410",
         "slug": "daycare",
         "label": "Child Day Care Services",
-        "establishments": 10,
-        "per10kResidents": 2.25,
-        "usAvgPer10k": 2.25,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 12,
+        "per10kResidents": 2.68,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 127,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Burlington."
+          "evidenceQuote": "12 employer establishments (NAICS 624410) across 3 ZIP codes whose USPS city is Burlington, VT; density uses ACS 2023 ZCTA population (44,715). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "445120",
         "slug": "convenience-stores",
-        "label": "Convenience Stores",
-        "establishments": 9,
-        "per10kResidents": 2.02,
-        "usAvgPer10k": 1.95,
-        "saturationIndex": 103,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Convenience Retail Stores",
+        "establishments": 8,
+        "per10kResidents": 1.79,
+        "usAvgPer10k": 0.82,
+        "saturationIndex": 218,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Burlington."
+          "evidenceQuote": "8 employer establishments (NAICS 445120) across 3 ZIP codes whose USPS city is Burlington, VT; density uses ACS 2023 ZCTA population (44,715). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "448140",
         "slug": "clothing-boutiques",
-        "label": "Family Clothing Stores",
-        "establishments": 7,
-        "per10kResidents": 1.57,
-        "usAvgPer10k": 1.65,
-        "saturationIndex": 96,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Family Clothing Stores & Boutiques",
+        "establishments": 10,
+        "per10kResidents": 2.24,
+        "usAvgPer10k": 0.65,
+        "saturationIndex": 343,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Burlington."
-        }
-      },
-      {
-        "naicsCode": "445291",
-        "slug": "bakeries",
-        "label": "Retail Bakeries",
-        "establishments": 4,
-        "per10kResidents": 0.9,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 105,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Burlington."
-        }
-      },
-      {
-        "naicsCode": "453110",
-        "slug": "florists",
-        "label": "Florists & Floral Gift",
-        "establishments": 2,
-        "per10kResidents": 0.45,
-        "usAvgPer10k": 0.5,
-        "saturationIndex": 92,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Burlington."
+          "evidenceQuote": "10 employer establishments (NAICS 448140) across 3 ZIP codes whose USPS city is Burlington, VT; density uses ACS 2023 ZCTA population (44,715). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541110",
         "slug": "law-firms",
         "label": "Offices of Lawyers",
-        "establishments": 22,
-        "per10kResidents": 4.94,
-        "usAvgPer10k": 4.9,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 63,
+        "per10kResidents": 14.09,
+        "usAvgPer10k": 4.8,
+        "saturationIndex": 293,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Burlington."
+          "evidenceQuote": "63 employer establishments (NAICS 541110) across 3 ZIP codes whose USPS city is Burlington, VT; density uses ACS 2023 ZCTA population (44,715). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541211",
         "slug": "accounting-cpa",
-        "label": "Offices of CPAs",
-        "establishments": 9,
-        "per10kResidents": 2.02,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 97,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Offices of Certified Public Accountants",
+        "establishments": 5,
+        "per10kResidents": 1.12,
+        "usAvgPer10k": 1.44,
+        "saturationIndex": 78,
+        "status": "underserved",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Burlington."
+          "evidenceQuote": "5 employer establishments (NAICS 541211) across 3 ZIP codes whose USPS city is Burlington, VT; density uses ACS 2023 ZCTA population (44,715). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "531210",
         "slug": "real-estate-agencies",
-        "label": "Real Estate Brokerages",
-        "establishments": 17,
-        "per10kResidents": 3.82,
-        "usAvgPer10k": 3.8,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Offices of Real Estate Agents & Brokers",
+        "establishments": 13,
+        "per10kResidents": 2.91,
+        "usAvgPer10k": 4.74,
+        "saturationIndex": 61,
+        "status": "underserved",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Burlington."
+          "evidenceQuote": "13 employer establishments (NAICS 531210) across 3 ZIP codes whose USPS city is Burlington, VT; density uses ACS 2023 ZCTA population (44,715). National benchmark = all US ZIP rows / US population."
         }
       }
     ],
-    "permitsAndTax": {
-      "generalBusinessLicenseRequired": false,
-      "businessLicenseFeeSummary": "No general city business license required. State of Vermont statutory filings apply.",
-      "businessLicensePortalUrl": "https://www.burlingtonvt.gov/permits",
-      "zoningLookupUrl": "https://www.burlingtonvt.gov/zoning",
-      "buildingPermitPortalUrl": "https://www.burlingtonvt.gov/building",
-      "certificateOfOccupancyFee": "$185 standard municipal inspection fee",
-      "avgPermitWaitDays": 30,
-      "shortTermRentalStatus": "restricted",
-      "foodTruckPermitStatus": "allowed",
-      "combinedSalesTaxRate": 0.075,
-      "stateTaxRate": 0.06,
-      "localTaxRate": 0.015,
-      "provenance": {
-        "sourceName": "Burlington Municipal Code & State Department of Revenue",
-        "sourceUrl": "https://www.burlingtonvt.gov",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place",
-        "evidenceQuote": "Statutory municipal code standards."
-      }
-    },
-    "topTrafficCorridors": [
-      {
-        "roadName": "Main Arterial Corridor 1",
-        "segmentDescription": "Central Commercial Corridor through Burlington",
-        "aadt": 5343,
-        "heavyTruckPct": 5.5,
-        "lat": 44.491927,
-        "lng": -73.238882,
-        "year": 2024,
-        "provenance": {
-          "sourceName": "Vermont DOT AADT Database",
-          "sourceUrl": "https://www.transportation.gov/",
-          "datasetVintage": "2024-AADT",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "place"
-        }
-      }
-    ],
-    "marketSignals": {
-      "reportedRetailRentSqFtYr": 39.8,
-      "reportedIndustrialRentSqFtYr": 17.9,
-      "topSearchedNaics30d": [
-        "722515",
-        "713940",
-        "812111"
-      ],
-      "verifiedLocalProsCount": 8
-    },
-    "scores": {
-      "overallViability": 47,
-      "purchasingPower": 45,
-      "growthMomentum": 49,
-      "costEfficiency": 72,
-      "regulatoryFriction": 48
-    },
+    "marketSignals": {},
     "executiveTravel": {
-      "timeZone": "America/New_York (ET: UTC-05:00)",
+      "timeZone": "America/New_York",
       "timeZoneAbbr": "ET",
       "utcOffset": "-05:00",
-      "primaryAirport": {
-        "name": "Burlington Regional / Metropolitan Airport",
-        "iata": null,
-        "distanceMiles": 10.4,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
-      },
-      "powerPlugs": {
-        "types": [
-          "Type A (2-pin)",
-          "Type B (3-pin grounded)"
-        ],
-        "voltage": "120V",
-        "frequency": "60Hz",
-        "adapterAdvice": "Visitors from UK, EU, Australia, and Asia require a standard Type A/B plug adapter and dual-voltage converter."
-      },
-      "currency": {
-        "code": "USD",
-        "symbol": "$",
-        "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
-        "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
-      },
-      "climate": {
-        "summerHighF": 84,
-        "winterLowF": 22,
-        "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
-        "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
-      },
       "emergency": {
         "emergencyDispatch": "911",
-        "nonEmergencyPolice": "311 or local municipal dispatch",
-        "nearestTraumaHospital": "Burlington Regional Memorial Hospital",
-        "hospitalAddress": "Medical Center District, Burlington, VT"
+        "nearestTraumaHospital": "Univ. of Vermont - Fletcher Allen Health Care",
+        "hospitalAddress": "111 Colchester Ave, Burlington, VT 05401",
+        "cmsFacilityId": "470003",
+        "emergencyServices": true,
+        "source": "CMS Care Compare hospital general information (dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma or nearest claim.",
+        "erHospitals": [
+          {
+            "name": "Univ. of Vermont - Fletcher Allen Health Care",
+            "address": "111 Colchester Ave, Burlington, VT 05401",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "470003"
+          }
+        ],
+        "erHospitalsSource": "CMS Care Compare hospital general information (dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma or nearest claim."
       },
-      "visitorLogistics": {
-        "tapWaterPotability": "100% Safe municipal drinking water conforming to EPA Safe Drinking Water Act standards.",
-        "salesTaxRefundPolicy": "International travelers may claim state sales tax refunds on qualifying departures at designated airport customs counters.",
-        "rideshareAvailability": "Ubiquitous (Uber and Lyft operational 24/7 across the metropolitan area)."
-      },
-      "provenance": {
-        "sourceName": "FAA Airport Database & International Trade Administration",
-        "sourceUrl": "https://www.trade.gov/",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
+      "primaryAirport": {
+        "name": "Patrick Leahy Burlington International Airport",
+        "iata": "BTV",
+        "lat": 44.471901,
+        "lng": -73.153297,
+        "distanceMiles": 4.4,
+        "transitToDowntown": null,
+        "source": "OurAirports (public domain) for name, IATA code and coordinates; distance is straight-line from the U.S. Census Gazetteer city center point",
+        "sourceUrl": "https://ourairports.com/data/",
+        "cityCenterMethod": "Census Gazetteer internal point",
+        "retrieved": "2026-10-31"
       }
+    },
+    "housingAndTaxes": {
+      "medianHomeValue": 400200,
+      "medianGrossRent": 1609,
+      "medianRealEstateTaxPaid": 7144,
+      "effectivePropertyTaxRatePct": 1.79,
+      "countyName": "Chittenden County",
+      "source": "ACS 2023 5-yr: B25077 median home value, B25064 median gross rent, B25103 median real estate taxes paid. Effective rate = B25103 / B25077.",
+      "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/"
+    },
+    "climateNormals": {
+      "peakSummerHighF": 82,
+      "winterLowF": 13,
+      "annualRainfallInches": 37.5,
+      "sourceName": "NOAA NCEI U.S. Climate Normals 1991-2020 (Station USW00014742, 4.7 mi from Gazetteer center), retrieved 2026-10-31",
+      "sourceUrl": "https://www.ncei.noaa.gov/products/land-based-station/us-climate-normals"
+    },
+    "waterUtility": {
+      "pwsid": "VT0005053",
+      "providerName": "Burlington Dept Public Works Water Div",
+      "populationServed": 42000,
+      "sourceType": "surface water",
+      "source": "U.S. EPA Safe Drinking Water Information System (SDWIS)",
+      "sourceUrl": "https://data.epa.gov/efservice/WATER_SYSTEM/PWSID/VT0005053/JSON",
+      "retrieved": "2026-10-31"
+    },
+    "higherEducation": {
+      "institutionCount": 2,
+      "totalEnrollment": 14495,
+      "institutions": [
+        {
+          "id": 231174,
+          "name": "University of Vermont",
+          "studentSize": 11743,
+          "ownership": "Public",
+          "schoolUrl": "https://www.uvm.edu/",
+          "lat": 44.477325,
+          "lng": -73.196646
+        },
+        {
+          "id": 230852,
+          "name": "Champlain College",
+          "studentSize": 2752,
+          "ownership": "Private nonprofit",
+          "schoolUrl": "https://www.champlain.edu/",
+          "lat": 44.473287,
+          "lng": -73.202746
+        }
+      ],
+      "sourceName": "U.S. Department of Education College Scorecard",
+      "sourceUrl": "https://collegescorecard.ed.gov/",
+      "retrieved": "2026-10-31"
+    },
+    "evInfrastructure": {
+      "totalStations": 99,
+      "totalChargingPorts": 177,
+      "dcFastPorts": 8,
+      "level2Ports": 169,
+      "sampleStations": [
+        {
+          "name": "Cambrian Rise",
+          "address": "341 North Ave, Burlington, VT 05401",
+          "network": "EVMATCH",
+          "dcFastPorts": 0,
+          "level2Ports": 6,
+          "lat": 44.491156,
+          "lng": -73.227118
+        },
+        {
+          "name": "Sunset House",
+          "address": "70 Cambrian Way, Burlington, VT 54010",
+          "network": "EVMATCH",
+          "dcFastPorts": 0,
+          "level2Ports": 4,
+          "lat": 44.490361,
+          "lng": -73.228579
+        },
+        {
+          "name": "510 Shelburne Rd",
+          "address": "510 Shelburne Rd, Burlington, VT 05401",
+          "network": "VIALYNK",
+          "dcFastPorts": 2,
+          "level2Ports": 0,
+          "lat": 44.45125,
+          "lng": -73.2082
+        },
+        {
+          "name": "B E CHARGERS BE03",
+          "address": "45 Cherry St, Burlington, VT 05401",
+          "network": "ChargePoint Network",
+          "dcFastPorts": 0,
+          "level2Ports": 2,
+          "lat": 44.478917,
+          "lng": -73.217428
+        },
+        {
+          "name": "B E CHARGERS BE04",
+          "address": "585 Pine St, Burlington, VT 05401",
+          "network": "ChargePoint Network",
+          "dcFastPorts": 0,
+          "level2Ports": 2,
+          "lat": 44.463243,
+          "lng": -73.215921
+        }
+      ],
+      "sourceName": "U.S. Department of Energy / NLR Alternative Fuels Data Center (AFDC)",
+      "sourceUrl": "https://afdc.energy.gov/stations",
+      "retrieved": "2026-10-31"
     }
   }
 ]

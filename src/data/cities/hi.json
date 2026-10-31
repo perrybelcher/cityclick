@@ -1,634 +1,661 @@
 [
   {
-    "slug": "hi/urban-honolulu",
+    "slug": "hi/honolulu",
     "cityId": "1571550",
-    "countyFips": "15715",
-    "name": "Urban Honolulu",
+    "countyFips": "15003",
+    "name": "Honolulu",
     "stateCode": "hi",
     "stateName": "Hawaii",
-    "countyName": "Urban Honolulu Metropolitan Area",
+    "countyName": "Honolulu County",
     "lat": 21.324347,
     "lng": -157.84764,
     "primaryZips": [
-      "70055"
+      "96813",
+      "96814",
+      "96817",
+      "96819",
+      "96815",
+      "96816",
+      "96826",
+      "96822",
+      "96825",
+      "96818",
+      "96821"
     ],
     "demographics": {
       "population": 341778,
-      "popGrowth5YrPct": -1.9,
-      "medianHouseholdIncome": 82624,
-      "perCapitaIncome": 47922,
-      "medianAge": 36.4,
-      "daytimeWorkerPop": 211902,
-      "daytimePopSurgePct": 8.5,
-      "medianGrossRent": 1589,
-      "medianHomeValue": 347021,
+      "medianHouseholdIncome": 85428,
+      "perCapitaIncome": 48465,
+      "medianAge": 42.9,
+      "medianGrossRent": 1783,
+      "medianHomeValue": 834100,
       "provenance": {
-        "sourceName": "US Census Bureau ACS 5-Year (DP03/DP04/DP05) & PopEst",
-        "sourceUrl": "https://api.census.gov/data/2023/acs/acs5",
-        "datasetVintage": "2023-5YR",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "sourceName": "US Census Bureau ACS 5-Year Estimates 2023 (Table-Based Summary File)",
+        "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/",
+        "datasetVintage": "ACS-2023-5YR",
+        "verifiedAt": "2026-10-31T00:00:00Z",
         "granularity": "place"
-      }
-    },
-    "laborAndEconomy": {
-      "unemploymentRatePct": 3.8,
-      "avgWeeklyWageAllIndustries": 1340,
-      "newHousingPermits12Mo": 2563,
-      "permitsPer1kResidents": 7.5,
-      "femaRiskScore": 28.0,
-      "provenance": {
-        "sourceName": "BLS Local Area Unemployment Statistics (LAUS) & Census BPS",
-        "sourceUrl": "https://www.bls.gov/lau/",
-        "datasetVintage": "2024-M08",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
-      }
+      },
+      "popChange2020to2023Pct": -2.6,
+      "popChangeBasis": "Census Population Estimates, April 2020 base to July 2023"
     },
     "industries": [
       {
         "naicsCode": "722515",
         "slug": "coffee-shops",
         "label": "Coffee & Snack Shops",
-        "establishments": 73,
-        "per10kResidents": 2.14,
-        "usAvgPer10k": 2.15,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 216,
+        "per10kResidents": 5.21,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 245,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Urban Honolulu."
+          "evidenceQuote": "216 employer establishments (NAICS 722515) across 11 ZIP codes whose USPS city is Honolulu, HI; density uses ACS 2023 ZCTA population (414,940). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722511",
         "slug": "restaurants",
         "label": "Full-Service Restaurants",
-        "establishments": 232,
-        "per10kResidents": 6.79,
-        "usAvgPer10k": 6.8,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 547,
+        "per10kResidents": 13.18,
+        "usAvgPer10k": 7.44,
+        "saturationIndex": 177,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Urban Honolulu."
+          "evidenceQuote": "547 employer establishments (NAICS 722511) across 11 ZIP codes whose USPS city is Honolulu, HI; density uses ACS 2023 ZCTA population (414,940). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722513",
         "slug": "fast-food",
-        "label": "Fast Food Restaurants",
-        "establishments": 246,
-        "per10kResidents": 7.2,
-        "usAvgPer10k": 7.2,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Limited-Service / Fast Food Restaurants",
+        "establishments": 582,
+        "per10kResidents": 14.03,
+        "usAvgPer10k": 7.75,
+        "saturationIndex": 181,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Urban Honolulu."
+          "evidenceQuote": "582 employer establishments (NAICS 722513) across 11 ZIP codes whose USPS city is Honolulu, HI; density uses ACS 2023 ZCTA population (414,940). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722410",
         "slug": "bars-taverns",
-        "label": "Bars & Drinking Places",
-        "establishments": 63,
-        "per10kResidents": 1.84,
-        "usAvgPer10k": 1.85,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Drinking Places (Alcoholic Beverages)",
+        "establishments": 88,
+        "per10kResidents": 2.12,
+        "usAvgPer10k": 0.9,
+        "saturationIndex": 235,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Urban Honolulu."
-        }
-      },
-      {
-        "naicsCode": "812111",
-        "slug": "barber-shops",
-        "label": "Barber Shops",
-        "establishments": 46,
-        "per10kResidents": 1.35,
-        "usAvgPer10k": 1.35,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Urban Honolulu."
+          "evidenceQuote": "88 employer establishments (NAICS 722410) across 11 ZIP codes whose USPS city is Honolulu, HI; density uses ACS 2023 ZCTA population (414,940). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812112",
         "slug": "beauty-salons",
         "label": "Beauty Salons & Hair Studios",
-        "establishments": 116,
-        "per10kResidents": 3.39,
-        "usAvgPer10k": 3.4,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 140,
+        "per10kResidents": 3.37,
+        "usAvgPer10k": 2.31,
+        "saturationIndex": 146,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Urban Honolulu."
+          "evidenceQuote": "140 employer establishments (NAICS 812112) across 11 ZIP codes whose USPS city is Honolulu, HI; density uses ACS 2023 ZCTA population (414,940). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812113",
         "slug": "nail-salons",
         "label": "Nail Salons",
-        "establishments": 72,
-        "per10kResidents": 2.11,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 25,
+        "per10kResidents": 0.6,
+        "usAvgPer10k": 0.86,
+        "saturationIndex": 70,
+        "status": "underserved",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Urban Honolulu."
+          "evidenceQuote": "25 employer establishments (NAICS 812113) across 11 ZIP codes whose USPS city is Honolulu, HI; density uses ACS 2023 ZCTA population (414,940). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "713940",
         "slug": "gyms-fitness",
-        "label": "Fitness & Recreational Gyms",
-        "establishments": 43,
-        "per10kResidents": 1.26,
-        "usAvgPer10k": 1.25,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Fitness & Recreational Sports Centers",
+        "establishments": 22,
+        "per10kResidents": 0.53,
+        "usAvgPer10k": 1.0,
+        "saturationIndex": 53,
+        "status": "underserved",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Urban Honolulu."
+          "evidenceQuote": "22 employer establishments (NAICS 713940) across 11 ZIP codes whose USPS city is Honolulu, HI; density uses ACS 2023 ZCTA population (414,940). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812910",
         "slug": "pet-care",
-        "label": "Pet Care & Grooming",
-        "establishments": 32,
-        "per10kResidents": 0.94,
-        "usAvgPer10k": 0.95,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Pet Care & Grooming Services",
+        "establishments": 13,
+        "per10kResidents": 0.31,
+        "usAvgPer10k": 0.46,
+        "saturationIndex": 67,
+        "status": "underserved",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Urban Honolulu."
+          "evidenceQuote": "13 employer establishments (NAICS 812910) across 11 ZIP codes whose USPS city is Honolulu, HI; density uses ACS 2023 ZCTA population (414,940). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541940",
         "slug": "veterinary",
-        "label": "Veterinary Services",
-        "establishments": 36,
-        "per10kResidents": 1.05,
-        "usAvgPer10k": 1.05,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Veterinary Services & Animal Hospitals",
+        "establishments": 9,
+        "per10kResidents": 0.22,
+        "usAvgPer10k": 0.69,
+        "saturationIndex": 31,
+        "status": "underserved",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Urban Honolulu."
+          "evidenceQuote": "9 employer establishments (NAICS 541940) across 11 ZIP codes whose USPS city is Honolulu, HI; density uses ACS 2023 ZCTA population (414,940). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "811111",
         "slug": "auto-repair",
         "label": "General Automotive Repair",
-        "establishments": 164,
-        "per10kResidents": 4.8,
-        "usAvgPer10k": 4.8,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 71,
+        "per10kResidents": 1.71,
+        "usAvgPer10k": 2.2,
+        "saturationIndex": 78,
+        "status": "underserved",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Urban Honolulu."
+          "evidenceQuote": "71 employer establishments (NAICS 811111) across 11 ZIP codes whose USPS city is Honolulu, HI; density uses ACS 2023 ZCTA population (414,940). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "811192",
         "slug": "car-washes",
-        "label": "Car Washes & Detailing",
-        "establishments": 22,
-        "per10kResidents": 0.64,
-        "usAvgPer10k": 0.65,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Car Washes & Auto Detailing",
+        "establishments": 18,
+        "per10kResidents": 0.43,
+        "usAvgPer10k": 0.35,
+        "saturationIndex": 124,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Urban Honolulu."
-        }
-      },
-      {
-        "naicsCode": "812310",
-        "slug": "laundromats",
-        "label": "Coin Laundromats",
-        "establishments": 19,
-        "per10kResidents": 0.56,
-        "usAvgPer10k": 0.55,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Urban Honolulu."
-        }
-      },
-      {
-        "naicsCode": "812320",
-        "slug": "dry-cleaners",
-        "label": "Dry Cleaning & Laundry",
-        "establishments": 29,
-        "per10kResidents": 0.85,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Urban Honolulu."
+          "evidenceQuote": "18 employer establishments (NAICS 811192) across 11 ZIP codes whose USPS city is Honolulu, HI; density uses ACS 2023 ZCTA population (414,940). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621210",
         "slug": "dentists",
         "label": "Offices of Dentists",
-        "establishments": 133,
-        "per10kResidents": 3.89,
-        "usAvgPer10k": 3.9,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 264,
+        "per10kResidents": 6.36,
+        "usAvgPer10k": 3.89,
+        "saturationIndex": 164,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Urban Honolulu."
+          "evidenceQuote": "264 employer establishments (NAICS 621210) across 11 ZIP codes whose USPS city is Honolulu, HI; density uses ACS 2023 ZCTA population (414,940). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621310",
         "slug": "chiropractors",
         "label": "Offices of Chiropractors",
-        "establishments": 48,
-        "per10kResidents": 1.4,
-        "usAvgPer10k": 1.4,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 26,
+        "per10kResidents": 0.63,
+        "usAvgPer10k": 0.97,
+        "saturationIndex": 64,
+        "status": "underserved",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Urban Honolulu."
+          "evidenceQuote": "26 employer establishments (NAICS 621310) across 11 ZIP codes whose USPS city is Honolulu, HI; density uses ACS 2023 ZCTA population (414,940). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621340",
         "slug": "physical-therapy",
-        "label": "Physical Therapy Clinics",
-        "establishments": 53,
-        "per10kResidents": 1.55,
-        "usAvgPer10k": 1.55,
-        "saturationIndex": 100,
+        "label": "Physical, Occupational & Speech Therapists",
+        "establishments": 61,
+        "per10kResidents": 1.47,
+        "usAvgPer10k": 1.3,
+        "saturationIndex": 113,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Urban Honolulu."
+          "evidenceQuote": "61 employer establishments (NAICS 621340) across 11 ZIP codes whose USPS city is Honolulu, HI; density uses ACS 2023 ZCTA population (414,940). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "624410",
         "slug": "daycare",
         "label": "Child Day Care Services",
-        "establishments": 77,
-        "per10kResidents": 2.25,
-        "usAvgPer10k": 2.25,
-        "saturationIndex": 100,
+        "establishments": 71,
+        "per10kResidents": 1.71,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 81,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Urban Honolulu."
+          "evidenceQuote": "71 employer establishments (NAICS 624410) across 11 ZIP codes whose USPS city is Honolulu, HI; density uses ACS 2023 ZCTA population (414,940). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "445120",
         "slug": "convenience-stores",
-        "label": "Convenience Stores",
+        "label": "Convenience Retail Stores",
         "establishments": 67,
-        "per10kResidents": 1.96,
-        "usAvgPer10k": 1.95,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "per10kResidents": 1.61,
+        "usAvgPer10k": 0.82,
+        "saturationIndex": 197,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Urban Honolulu."
+          "evidenceQuote": "67 employer establishments (NAICS 445120) across 11 ZIP codes whose USPS city is Honolulu, HI; density uses ACS 2023 ZCTA population (414,940). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "448140",
         "slug": "clothing-boutiques",
-        "label": "Family Clothing Stores",
-        "establishments": 56,
-        "per10kResidents": 1.64,
-        "usAvgPer10k": 1.65,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Family Clothing Stores & Boutiques",
+        "establishments": 83,
+        "per10kResidents": 2.0,
+        "usAvgPer10k": 0.65,
+        "saturationIndex": 306,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Urban Honolulu."
-        }
-      },
-      {
-        "naicsCode": "445291",
-        "slug": "bakeries",
-        "label": "Retail Bakeries",
-        "establishments": 29,
-        "per10kResidents": 0.85,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Urban Honolulu."
-        }
-      },
-      {
-        "naicsCode": "453110",
-        "slug": "florists",
-        "label": "Florists & Floral Gift",
-        "establishments": 17,
-        "per10kResidents": 0.5,
-        "usAvgPer10k": 0.5,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Urban Honolulu."
+          "evidenceQuote": "83 employer establishments (NAICS 448140) across 11 ZIP codes whose USPS city is Honolulu, HI; density uses ACS 2023 ZCTA population (414,940). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541110",
         "slug": "law-firms",
         "label": "Offices of Lawyers",
-        "establishments": 167,
-        "per10kResidents": 4.89,
-        "usAvgPer10k": 4.9,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 399,
+        "per10kResidents": 9.62,
+        "usAvgPer10k": 4.8,
+        "saturationIndex": 200,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Urban Honolulu."
+          "evidenceQuote": "399 employer establishments (NAICS 541110) across 11 ZIP codes whose USPS city is Honolulu, HI; density uses ACS 2023 ZCTA population (414,940). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541211",
         "slug": "accounting-cpa",
-        "label": "Offices of CPAs",
-        "establishments": 72,
-        "per10kResidents": 2.11,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Offices of Certified Public Accountants",
+        "establishments": 173,
+        "per10kResidents": 4.17,
+        "usAvgPer10k": 1.44,
+        "saturationIndex": 290,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Urban Honolulu."
+          "evidenceQuote": "173 employer establishments (NAICS 541211) across 11 ZIP codes whose USPS city is Honolulu, HI; density uses ACS 2023 ZCTA population (414,940). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "531210",
         "slug": "real-estate-agencies",
-        "label": "Real Estate Brokerages",
-        "establishments": 130,
-        "per10kResidents": 3.8,
-        "usAvgPer10k": 3.8,
-        "saturationIndex": 100,
+        "label": "Offices of Real Estate Agents & Brokers",
+        "establishments": 201,
+        "per10kResidents": 4.84,
+        "usAvgPer10k": 4.74,
+        "saturationIndex": 102,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Urban Honolulu."
+          "evidenceQuote": "201 employer establishments (NAICS 531210) across 11 ZIP codes whose USPS city is Honolulu, HI; density uses ACS 2023 ZCTA population (414,940). National benchmark = all US ZIP rows / US population."
         }
       }
     ],
-    "permitsAndTax": {
-      "generalBusinessLicenseRequired": false,
-      "businessLicenseFeeSummary": "No general city business license required. State of Hawaii statutory filings apply.",
-      "businessLicensePortalUrl": "https://www.urban-honoluluhi.gov/permits",
-      "zoningLookupUrl": "https://www.urban-honoluluhi.gov/zoning",
-      "buildingPermitPortalUrl": "https://www.urban-honoluluhi.gov/building",
-      "certificateOfOccupancyFee": "$185 standard municipal inspection fee",
-      "avgPermitWaitDays": 30,
-      "shortTermRentalStatus": "restricted",
-      "foodTruckPermitStatus": "allowed",
-      "combinedSalesTaxRate": 0.055,
-      "stateTaxRate": 0.04,
-      "localTaxRate": 0.015,
-      "provenance": {
-        "sourceName": "Urban Honolulu Municipal Code & State Department of Revenue",
-        "sourceUrl": "https://www.urban-honoluluhi.gov",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place",
-        "evidenceQuote": "Statutory municipal code standards."
-      }
-    },
-    "topTrafficCorridors": [
-      {
-        "roadName": "Main Arterial Corridor 1",
-        "segmentDescription": "Central Commercial Corridor through Urban Honolulu",
-        "aadt": 41013,
-        "heavyTruckPct": 5.5,
-        "lat": 21.324347,
-        "lng": -157.84764,
-        "year": 2024,
-        "provenance": {
-          "sourceName": "Hawaii DOT AADT Database",
-          "sourceUrl": "https://www.transportation.gov/",
-          "datasetVintage": "2024-AADT",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "place"
-        }
-      }
-    ],
-    "marketSignals": {
-      "reportedRetailRentSqFtYr": 39.9,
-      "reportedIndustrialRentSqFtYr": 18.0,
-      "topSearchedNaics30d": [
-        "722515",
-        "713940",
-        "812111"
-      ],
-      "verifiedLocalProsCount": 8
-    },
-    "scores": {
-      "overallViability": 45,
-      "purchasingPower": 43,
-      "growthMomentum": 47,
-      "costEfficiency": 73,
-      "regulatoryFriction": 48
-    },
+    "marketSignals": {},
     "executiveTravel": {
-      "timeZone": "Pacific/Honolulu (HST: UTC-10:00)",
+      "timeZone": "Pacific/Honolulu",
       "timeZoneAbbr": "HST",
       "utcOffset": "-10:00",
-      "primaryAirport": {
-        "name": "Urban Honolulu Regional / Metropolitan Airport",
-        "iata": null,
-        "distanceMiles": 11.4,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
-      },
-      "powerPlugs": {
-        "types": [
-          "Type A (2-pin)",
-          "Type B (3-pin grounded)"
-        ],
-        "voltage": "120V",
-        "frequency": "60Hz",
-        "adapterAdvice": "Visitors from UK, EU, Australia, and Asia require a standard Type A/B plug adapter and dual-voltage converter."
-      },
-      "currency": {
-        "code": "USD",
-        "symbol": "$",
-        "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
-        "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
-      },
-      "climate": {
-        "summerHighF": 94,
-        "winterLowF": 47,
-        "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
-        "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
-      },
       "emergency": {
         "emergencyDispatch": "911",
-        "nonEmergencyPolice": "311 or local municipal dispatch",
-        "nearestTraumaHospital": "Urban Honolulu Regional Memorial Hospital",
-        "hospitalAddress": "Medical Center District, Urban Honolulu, HI"
+        "nearestTraumaHospital": "Kaiser Foundation Hospital",
+        "hospitalAddress": "3288 Moanalua Rd, Honolulu, HI 96819",
+        "cmsFacilityId": "120011",
+        "emergencyServices": true,
+        "source": "CMS Care Compare hospital general information (dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma or nearest claim.",
+        "erHospitals": [
+          {
+            "name": "Kaiser Foundation Hospital",
+            "address": "3288 Moanalua Rd, Honolulu, HI 96819",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "120011"
+          },
+          {
+            "name": "Kapiolani Medical Center for Women & Children",
+            "address": "1319 Punahou Street, Honolulu, HI 96826",
+            "type": "Children's",
+            "cmsFacilityId": "123300"
+          },
+          {
+            "name": "Kuakini Medical Center",
+            "address": "347 North Kuakini Street, Honolulu, HI 96817",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "120007"
+          },
+          {
+            "name": "Straub Clinic and Hospital",
+            "address": "888 S King Street, Honolulu, HI 96813",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "120022"
+          },
+          {
+            "name": "The Queens Medical Center",
+            "address": "1301 Punchbowl St, Honolulu, HI 96813",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "120001"
+          },
+          {
+            "name": "Tripler Amc (Ft Shafter)",
+            "address": "1 Jarrett White Rd, Honolulu, HI 96859",
+            "type": "Acute Care - Department of Defense",
+            "cmsFacilityId": "12001F"
+          }
+        ],
+        "erHospitalsSource": "CMS Care Compare hospital general information (dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma or nearest claim."
       },
-      "visitorLogistics": {
-        "tapWaterPotability": "100% Safe municipal drinking water conforming to EPA Safe Drinking Water Act standards.",
-        "salesTaxRefundPolicy": "International travelers may claim state sales tax refunds on qualifying departures at designated airport customs counters.",
-        "rideshareAvailability": "Ubiquitous (Uber and Lyft operational 24/7 across the metropolitan area)."
-      },
-      "provenance": {
-        "sourceName": "FAA Airport Database & International Trade Administration",
-        "sourceUrl": "https://www.trade.gov/",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
+      "primaryAirport": {
+        "name": "Daniel K. Inouye International Airport",
+        "iata": "HNL",
+        "lat": 21.318387,
+        "lng": -157.92567,
+        "distanceMiles": 5.0,
+        "transitToDowntown": null,
+        "source": "OurAirports (public domain) for name, IATA code and coordinates; distance is straight-line from the U.S. Census Gazetteer city center point",
+        "sourceUrl": "https://ourairports.com/data/",
+        "cityCenterMethod": "Census Gazetteer internal point",
+        "retrieved": "2026-10-31"
       }
+    },
+    "housingAndTaxes": {
+      "medianHomeValue": 834100,
+      "medianGrossRent": 1783,
+      "medianRealEstateTaxPaid": 2416,
+      "effectivePropertyTaxRatePct": 0.29,
+      "countyName": "Honolulu County",
+      "source": "ACS 2023 5-yr: B25077 median home value, B25064 median gross rent, B25103 median real estate taxes paid. Effective rate = B25103 / B25077.",
+      "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/"
+    },
+    "climateNormals": {
+      "peakSummerHighF": 79,
+      "winterLowF": 63,
+      "annualRainfallInches": 151.0,
+      "sourceName": "NOAA NCEI U.S. Climate Normals 1991-2020 (Station USC00516128, 3.0 mi from Gazetteer center), retrieved 2026-10-31",
+      "sourceUrl": "https://www.ncei.noaa.gov/products/land-based-station/us-climate-normals"
+    },
+    "waterUtility": {
+      "pwsid": "HI0000331",
+      "providerName": "Hnl-Windward-Pearl Harbor",
+      "populationServed": 631389,
+      "sourceType": "groundwater",
+      "source": "U.S. EPA Safe Drinking Water Information System (SDWIS)",
+      "sourceUrl": "https://data.epa.gov/efservice/WATER_SYSTEM/PWSID/HI0000331/JSON",
+      "retrieved": "2026-10-31"
+    },
+    "higherEducation": {
+      "institutionCount": 10,
+      "totalEnrollment": 25358,
+      "institutions": [
+        {
+          "id": 141574,
+          "name": "University of Hawaii at Manoa",
+          "studentSize": 15029,
+          "ownership": "Public",
+          "schoolUrl": "https://manoa.hawaii.edu/",
+          "lat": 21.298598,
+          "lng": -157.818979
+        },
+        {
+          "id": 141796,
+          "name": "Kapiolani Community College",
+          "studentSize": 3910,
+          "ownership": "Public",
+          "schoolUrl": "https://www.kapiolani.hawaii.edu/",
+          "lat": 21.27148,
+          "lng": -157.800213
+        },
+        {
+          "id": 141644,
+          "name": "Hawaii Pacific University",
+          "studentSize": 2392,
+          "ownership": "Private nonprofit",
+          "schoolUrl": "https://www.hpu.edu/",
+          "lat": 21.310306,
+          "lng": -157.859645
+        },
+        {
+          "id": 141680,
+          "name": "Honolulu Community College",
+          "studentSize": 1897,
+          "ownership": "Public",
+          "schoolUrl": "https://www.honolulu.hawaii.edu/",
+          "lat": 21.321785,
+          "lng": -157.87
+        },
+        {
+          "id": 141486,
+          "name": "Chaminade University of Honolulu",
+          "studentSize": 1672,
+          "ownership": "Private nonprofit",
+          "schoolUrl": "https://www.chaminade.edu/",
+          "lat": 21.28995,
+          "lng": -157.807851
+        },
+        {
+          "id": 460756,
+          "name": "Hawaii Medical College",
+          "studentSize": 194,
+          "ownership": "Private for-profit",
+          "schoolUrl": "https://www.hmi.edu/",
+          "lat": 21.295164,
+          "lng": -157.847652
+        }
+      ],
+      "sourceName": "U.S. Department of Education College Scorecard",
+      "sourceUrl": "https://collegescorecard.ed.gov/",
+      "retrieved": "2026-10-31"
+    },
+    "evInfrastructure": {
+      "totalStations": 135,
+      "totalChargingPorts": 378,
+      "dcFastPorts": 64,
+      "level2Ports": 314,
+      "sampleStations": [
+        {
+          "name": "HNL Public International Garage",
+          "address": "300 Rodgers Boulevard, Honolulu, HI 96819",
+          "network": "OpConnect",
+          "dcFastPorts": 0,
+          "level2Ports": 20,
+          "lat": 21.333737,
+          "lng": -157.923872
+        },
+        {
+          "name": "Honolulu, HI - Kahala Avenue - Tesla Supercharger",
+          "address": "5000 Kahala Avenue, Honolulu, HI 96816",
+          "network": "Tesla",
+          "dcFastPorts": 12,
+          "level2Ports": 0,
+          "lat": 21.271642,
+          "lng": -157.77462
+        },
+        {
+          "name": "Ulana Ward Village - Resident Chargers (DCFC)",
+          "address": "828 Auahi St, Honolulu, HI 96813",
+          "network": "OpConnect",
+          "dcFastPorts": 10,
+          "level2Ports": 0,
+          "lat": 21.296655,
+          "lng": -157.85777
+        },
+        {
+          "name": "Keauhou Pl",
+          "address": "555 S St, Honolulu, HI 96813",
+          "network": "LOOP",
+          "dcFastPorts": 0,
+          "level2Ports": 9,
+          "lat": 21.300758,
+          "lng": -157.860449
+        },
+        {
+          "name": "Honolulu, HI - Tesla Supercharger",
+          "address": "2330 Kalākaua Ave, Honolulu, HI 96815",
+          "network": "Tesla",
+          "dcFastPorts": 8,
+          "level2Ports": 0,
+          "lat": 21.278596,
+          "lng": -157.826179
+        }
+      ],
+      "sourceName": "U.S. Department of Energy / NLR Alternative Fuels Data Center (AFDC)",
+      "sourceUrl": "https://afdc.energy.gov/stations",
+      "retrieved": "2026-10-31"
+    },
+    "nationalParks": {
+      "parks": [
+        {
+          "parkCode": "valr",
+          "fullName": "Pearl Harbor National Memorial",
+          "designation": "National Memorial",
+          "distanceMiles": 6.6,
+          "description": "At Pearl Harbor National Memorial, we honor the lives affected by the December 7, 1941, attack. This pivotal moment in global history marked the United States' entry into World War II, impacting nations and communities worldwide. Join...",
+          "url": "https://www.nps.gov/valr/index.htm",
+          "lat": 21.36707,
+          "lng": -157.938579
+        },
+        {
+          "parkCode": "hono",
+          "fullName": "Honouliuli National Historic Site",
+          "designation": "National Historic Site",
+          "distanceMiles": 14.2,
+          "description": "In 2026, Honouliuli National Historic Site is commemorating the 80th year since Honouliuli Internment Camp closed with community events that will take place throughout the year. Stay tuned on our website or social media to learn more...",
+          "url": "https://www.nps.gov/hono/index.htm",
+          "lat": 21.388175,
+          "lng": -158.057499
+        }
+      ],
+      "sourceName": "U.S. National Park Service",
+      "sourceUrl": "https://www.nps.gov/",
+      "retrieved": "2026-10-31"
     }
   }
 ]

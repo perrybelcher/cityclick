@@ -2,1330 +2,1194 @@
   {
     "slug": "ak/anchorage",
     "cityId": "0203000",
-    "countyFips": "02030",
+    "countyFips": "02020",
     "name": "Anchorage",
     "stateCode": "ak",
     "stateName": "Alaska",
-    "countyName": "Anchorage Metropolitan Area",
+    "countyName": "Anchorage Municipality",
     "lat": 61.17425,
     "lng": -149.284329,
     "primaryZips": [
-      "70074"
+      "99503",
+      "99501",
+      "99518",
+      "99515",
+      "99507",
+      "99508",
+      "99504",
+      "99502",
+      "99516",
+      "99517",
+      "99519"
     ],
     "demographics": {
       "population": 286075,
-      "popGrowth5YrPct": -1.7,
-      "medianHouseholdIncome": 82419,
-      "perCapitaIncome": 47803,
-      "medianAge": 36.4,
-      "daytimeWorkerPop": 177366,
-      "daytimePopSurgePct": 8.5,
-      "medianGrossRent": 1585,
-      "medianHomeValue": 346160,
+      "medianHouseholdIncome": 98152,
+      "perCapitaIncome": 49338,
+      "medianAge": 34.9,
+      "medianGrossRent": 1453,
+      "medianHomeValue": 375900,
       "provenance": {
-        "sourceName": "US Census Bureau ACS 5-Year (DP03/DP04/DP05) & PopEst",
-        "sourceUrl": "https://api.census.gov/data/2023/acs/acs5",
-        "datasetVintage": "2023-5YR",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "sourceName": "US Census Bureau ACS 5-Year Estimates 2023 (Table-Based Summary File)",
+        "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/",
+        "datasetVintage": "ACS-2023-5YR",
+        "verifiedAt": "2026-10-31T00:00:00Z",
         "granularity": "place"
-      }
-    },
-    "laborAndEconomy": {
-      "unemploymentRatePct": 3.8,
-      "avgWeeklyWageAllIndustries": 1340,
-      "newHousingPermits12Mo": 2146,
-      "permitsPer1kResidents": 7.5,
-      "femaRiskScore": 28.0,
-      "provenance": {
-        "sourceName": "BLS Local Area Unemployment Statistics (LAUS) & Census BPS",
-        "sourceUrl": "https://www.bls.gov/lau/",
-        "datasetVintage": "2024-M08",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
-      }
+      },
+      "popChange2020to2023Pct": -1.8,
+      "popChangeBasis": "Census Population Estimates, April 2020 base to July 2023"
     },
     "industries": [
       {
         "naicsCode": "722515",
         "slug": "coffee-shops",
         "label": "Coffee & Snack Shops",
-        "establishments": 62,
-        "per10kResidents": 2.17,
-        "usAvgPer10k": 2.15,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 109,
+        "per10kResidents": 4.52,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 213,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Anchorage."
+          "evidenceQuote": "109 employer establishments (NAICS 722515) across 11 ZIP codes whose USPS city is Anchorage, AK; density uses ACS 2023 ZCTA population (241,374). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722511",
         "slug": "restaurants",
         "label": "Full-Service Restaurants",
-        "establishments": 195,
-        "per10kResidents": 6.82,
-        "usAvgPer10k": 6.8,
-        "saturationIndex": 100,
+        "establishments": 193,
+        "per10kResidents": 8.0,
+        "usAvgPer10k": 7.44,
+        "saturationIndex": 108,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Anchorage."
+          "evidenceQuote": "193 employer establishments (NAICS 722511) across 11 ZIP codes whose USPS city is Anchorage, AK; density uses ACS 2023 ZCTA population (241,374). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722513",
         "slug": "fast-food",
-        "label": "Fast Food Restaurants",
-        "establishments": 206,
-        "per10kResidents": 7.2,
-        "usAvgPer10k": 7.2,
-        "saturationIndex": 100,
+        "label": "Limited-Service / Fast Food Restaurants",
+        "establishments": 195,
+        "per10kResidents": 8.08,
+        "usAvgPer10k": 7.75,
+        "saturationIndex": 104,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Anchorage."
+          "evidenceQuote": "195 employer establishments (NAICS 722513) across 11 ZIP codes whose USPS city is Anchorage, AK; density uses ACS 2023 ZCTA population (241,374). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722410",
         "slug": "bars-taverns",
-        "label": "Bars & Drinking Places",
-        "establishments": 53,
-        "per10kResidents": 1.85,
-        "usAvgPer10k": 1.85,
-        "saturationIndex": 100,
+        "label": "Drinking Places (Alcoholic Beverages)",
+        "establishments": 23,
+        "per10kResidents": 0.95,
+        "usAvgPer10k": 0.9,
+        "saturationIndex": 106,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Anchorage."
-        }
-      },
-      {
-        "naicsCode": "812111",
-        "slug": "barber-shops",
-        "label": "Barber Shops",
-        "establishments": 39,
-        "per10kResidents": 1.36,
-        "usAvgPer10k": 1.35,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Anchorage."
+          "evidenceQuote": "23 employer establishments (NAICS 722410) across 11 ZIP codes whose USPS city is Anchorage, AK; density uses ACS 2023 ZCTA population (241,374). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812112",
         "slug": "beauty-salons",
         "label": "Beauty Salons & Hair Studios",
-        "establishments": 97,
-        "per10kResidents": 3.39,
-        "usAvgPer10k": 3.4,
-        "saturationIndex": 100,
+        "establishments": 49,
+        "per10kResidents": 2.03,
+        "usAvgPer10k": 2.31,
+        "saturationIndex": 88,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Anchorage."
+          "evidenceQuote": "49 employer establishments (NAICS 812112) across 11 ZIP codes whose USPS city is Anchorage, AK; density uses ACS 2023 ZCTA population (241,374). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812113",
         "slug": "nail-salons",
         "label": "Nail Salons",
-        "establishments": 60,
-        "per10kResidents": 2.1,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 30,
+        "per10kResidents": 1.24,
+        "usAvgPer10k": 0.86,
+        "saturationIndex": 145,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Anchorage."
+          "evidenceQuote": "30 employer establishments (NAICS 812113) across 11 ZIP codes whose USPS city is Anchorage, AK; density uses ACS 2023 ZCTA population (241,374). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "713940",
         "slug": "gyms-fitness",
-        "label": "Fitness & Recreational Gyms",
-        "establishments": 36,
-        "per10kResidents": 1.26,
-        "usAvgPer10k": 1.25,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Fitness & Recreational Sports Centers",
+        "establishments": 30,
+        "per10kResidents": 1.24,
+        "usAvgPer10k": 1.0,
+        "saturationIndex": 125,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Anchorage."
+          "evidenceQuote": "30 employer establishments (NAICS 713940) across 11 ZIP codes whose USPS city is Anchorage, AK; density uses ACS 2023 ZCTA population (241,374). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812910",
         "slug": "pet-care",
-        "label": "Pet Care & Grooming",
-        "establishments": 27,
-        "per10kResidents": 0.94,
-        "usAvgPer10k": 0.95,
-        "saturationIndex": 99,
+        "label": "Pet Care & Grooming Services",
+        "establishments": 13,
+        "per10kResidents": 0.54,
+        "usAvgPer10k": 0.46,
+        "saturationIndex": 116,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Anchorage."
+          "evidenceQuote": "13 employer establishments (NAICS 812910) across 11 ZIP codes whose USPS city is Anchorage, AK; density uses ACS 2023 ZCTA population (241,374). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541940",
         "slug": "veterinary",
-        "label": "Veterinary Services",
-        "establishments": 30,
-        "per10kResidents": 1.05,
-        "usAvgPer10k": 1.05,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Veterinary Services & Animal Hospitals",
+        "establishments": 13,
+        "per10kResidents": 0.54,
+        "usAvgPer10k": 0.69,
+        "saturationIndex": 78,
+        "status": "underserved",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Anchorage."
+          "evidenceQuote": "13 employer establishments (NAICS 541940) across 11 ZIP codes whose USPS city is Anchorage, AK; density uses ACS 2023 ZCTA population (241,374). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "811111",
         "slug": "auto-repair",
         "label": "General Automotive Repair",
-        "establishments": 137,
-        "per10kResidents": 4.79,
-        "usAvgPer10k": 4.8,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 67,
+        "per10kResidents": 2.78,
+        "usAvgPer10k": 2.2,
+        "saturationIndex": 126,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Anchorage."
+          "evidenceQuote": "67 employer establishments (NAICS 811111) across 11 ZIP codes whose USPS city is Anchorage, AK; density uses ACS 2023 ZCTA population (241,374). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "811192",
         "slug": "car-washes",
-        "label": "Car Washes & Detailing",
-        "establishments": 19,
-        "per10kResidents": 0.66,
-        "usAvgPer10k": 0.65,
-        "saturationIndex": 102,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Car Washes & Auto Detailing",
+        "establishments": 14,
+        "per10kResidents": 0.58,
+        "usAvgPer10k": 0.35,
+        "saturationIndex": 166,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Anchorage."
-        }
-      },
-      {
-        "naicsCode": "812310",
-        "slug": "laundromats",
-        "label": "Coin Laundromats",
-        "establishments": 16,
-        "per10kResidents": 0.56,
-        "usAvgPer10k": 0.55,
-        "saturationIndex": 102,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Anchorage."
-        }
-      },
-      {
-        "naicsCode": "812320",
-        "slug": "dry-cleaners",
-        "label": "Dry Cleaning & Laundry",
-        "establishments": 24,
-        "per10kResidents": 0.84,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Anchorage."
+          "evidenceQuote": "14 employer establishments (NAICS 811192) across 11 ZIP codes whose USPS city is Anchorage, AK; density uses ACS 2023 ZCTA population (241,374). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621210",
         "slug": "dentists",
         "label": "Offices of Dentists",
-        "establishments": 112,
-        "per10kResidents": 3.92,
-        "usAvgPer10k": 3.9,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 139,
+        "per10kResidents": 5.76,
+        "usAvgPer10k": 3.89,
+        "saturationIndex": 148,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Anchorage."
+          "evidenceQuote": "139 employer establishments (NAICS 621210) across 11 ZIP codes whose USPS city is Anchorage, AK; density uses ACS 2023 ZCTA population (241,374). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621310",
         "slug": "chiropractors",
         "label": "Offices of Chiropractors",
-        "establishments": 40,
-        "per10kResidents": 1.4,
-        "usAvgPer10k": 1.4,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 50,
+        "per10kResidents": 2.07,
+        "usAvgPer10k": 0.97,
+        "saturationIndex": 213,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Anchorage."
+          "evidenceQuote": "50 employer establishments (NAICS 621310) across 11 ZIP codes whose USPS city is Anchorage, AK; density uses ACS 2023 ZCTA population (241,374). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621340",
         "slug": "physical-therapy",
-        "label": "Physical Therapy Clinics",
-        "establishments": 44,
-        "per10kResidents": 1.54,
-        "usAvgPer10k": 1.55,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Physical, Occupational & Speech Therapists",
+        "establishments": 72,
+        "per10kResidents": 2.98,
+        "usAvgPer10k": 1.3,
+        "saturationIndex": 229,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Anchorage."
+          "evidenceQuote": "72 employer establishments (NAICS 621340) across 11 ZIP codes whose USPS city is Anchorage, AK; density uses ACS 2023 ZCTA population (241,374). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "624410",
         "slug": "daycare",
         "label": "Child Day Care Services",
-        "establishments": 64,
-        "per10kResidents": 2.24,
-        "usAvgPer10k": 2.25,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 62,
+        "per10kResidents": 2.57,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 121,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Anchorage."
+          "evidenceQuote": "62 employer establishments (NAICS 624410) across 11 ZIP codes whose USPS city is Anchorage, AK; density uses ACS 2023 ZCTA population (241,374). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "445120",
         "slug": "convenience-stores",
-        "label": "Convenience Stores",
-        "establishments": 56,
-        "per10kResidents": 1.96,
-        "usAvgPer10k": 1.95,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Convenience Retail Stores",
+        "establishments": 0,
+        "per10kResidents": 0.0,
+        "usAvgPer10k": 0.82,
+        "saturationIndex": 0,
+        "status": "underserved",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Anchorage."
+          "evidenceQuote": "0 employer establishments (NAICS 445120) across 11 ZIP codes whose USPS city is Anchorage, AK; density uses ACS 2023 ZCTA population (241,374). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "448140",
         "slug": "clothing-boutiques",
-        "label": "Family Clothing Stores",
-        "establishments": 47,
-        "per10kResidents": 1.64,
-        "usAvgPer10k": 1.65,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Family Clothing Stores & Boutiques",
+        "establishments": 26,
+        "per10kResidents": 1.08,
+        "usAvgPer10k": 0.65,
+        "saturationIndex": 165,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Anchorage."
-        }
-      },
-      {
-        "naicsCode": "445291",
-        "slug": "bakeries",
-        "label": "Retail Bakeries",
-        "establishments": 24,
-        "per10kResidents": 0.84,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Anchorage."
-        }
-      },
-      {
-        "naicsCode": "453110",
-        "slug": "florists",
-        "label": "Florists & Floral Gift",
-        "establishments": 14,
-        "per10kResidents": 0.49,
-        "usAvgPer10k": 0.5,
-        "saturationIndex": 98,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Anchorage."
+          "evidenceQuote": "26 employer establishments (NAICS 448140) across 11 ZIP codes whose USPS city is Anchorage, AK; density uses ACS 2023 ZCTA population (241,374). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541110",
         "slug": "law-firms",
         "label": "Offices of Lawyers",
-        "establishments": 140,
-        "per10kResidents": 4.89,
-        "usAvgPer10k": 4.9,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 201,
+        "per10kResidents": 8.33,
+        "usAvgPer10k": 4.8,
+        "saturationIndex": 173,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Anchorage."
+          "evidenceQuote": "201 employer establishments (NAICS 541110) across 11 ZIP codes whose USPS city is Anchorage, AK; density uses ACS 2023 ZCTA population (241,374). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541211",
         "slug": "accounting-cpa",
-        "label": "Offices of CPAs",
-        "establishments": 60,
-        "per10kResidents": 2.1,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Offices of Certified Public Accountants",
+        "establishments": 69,
+        "per10kResidents": 2.86,
+        "usAvgPer10k": 1.44,
+        "saturationIndex": 199,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Anchorage."
+          "evidenceQuote": "69 employer establishments (NAICS 541211) across 11 ZIP codes whose USPS city is Anchorage, AK; density uses ACS 2023 ZCTA population (241,374). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "531210",
         "slug": "real-estate-agencies",
-        "label": "Real Estate Brokerages",
-        "establishments": 109,
-        "per10kResidents": 3.81,
-        "usAvgPer10k": 3.8,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Offices of Real Estate Agents & Brokers",
+        "establishments": 138,
+        "per10kResidents": 5.72,
+        "usAvgPer10k": 4.74,
+        "saturationIndex": 121,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Anchorage."
+          "evidenceQuote": "138 employer establishments (NAICS 531210) across 11 ZIP codes whose USPS city is Anchorage, AK; density uses ACS 2023 ZCTA population (241,374). National benchmark = all US ZIP rows / US population."
         }
       }
     ],
-    "permitsAndTax": {
-      "generalBusinessLicenseRequired": false,
-      "businessLicenseFeeSummary": "No general city business license required. State of Alaska statutory filings apply.",
-      "businessLicensePortalUrl": "https://www.anchorageak.gov/permits",
-      "zoningLookupUrl": "https://www.anchorageak.gov/zoning",
-      "buildingPermitPortalUrl": "https://www.anchorageak.gov/building",
-      "certificateOfOccupancyFee": "$185 standard municipal inspection fee",
-      "avgPermitWaitDays": 30,
-      "shortTermRentalStatus": "restricted",
-      "foodTruckPermitStatus": "allowed",
-      "combinedSalesTaxRate": 0.0,
-      "stateTaxRate": 0.0,
-      "localTaxRate": 0.0,
-      "provenance": {
-        "sourceName": "Anchorage Municipal Code & State Department of Revenue",
-        "sourceUrl": "https://www.anchorageak.gov",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place",
-        "evidenceQuote": "Statutory municipal code standards."
-      }
-    },
-    "topTrafficCorridors": [
-      {
-        "roadName": "Main Arterial Corridor 1",
-        "segmentDescription": "Central Commercial Corridor through Anchorage",
-        "aadt": 34329,
-        "heavyTruckPct": 5.5,
-        "lat": 61.17425,
-        "lng": -149.284329,
-        "year": 2024,
-        "provenance": {
-          "sourceName": "Alaska DOT AADT Database",
-          "sourceUrl": "https://www.transportation.gov/",
-          "datasetVintage": "2024-AADT",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "place"
-        }
-      }
-    ],
-    "marketSignals": {
-      "reportedRetailRentSqFtYr": 39.9,
-      "reportedIndustrialRentSqFtYr": 18.0,
-      "topSearchedNaics30d": [
-        "722515",
-        "713940",
-        "812111"
-      ],
-      "verifiedLocalProsCount": 8
-    },
-    "scores": {
-      "overallViability": 45,
-      "purchasingPower": 43,
-      "growthMomentum": 47,
-      "costEfficiency": 73,
-      "regulatoryFriction": 48
-    },
+    "marketSignals": {},
     "executiveTravel": {
-      "timeZone": "America/Anchorage (AKT: UTC-09:00)",
+      "timeZone": "America/Anchorage",
       "timeZoneAbbr": "AKT",
       "utcOffset": "-09:00",
+      "emergency": {
+        "emergencyDispatch": "911",
+        "nearestTraumaHospital": "Alaska Native Medical Center",
+        "hospitalAddress": "4315 Diplomacy Dr, Anchorage, AK 99508",
+        "cmsFacilityId": "020026",
+        "emergencyServices": true,
+        "source": "CMS Care Compare hospital general information (dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma or nearest claim.",
+        "erHospitals": [
+          {
+            "name": "Alaska Native Medical Center",
+            "address": "4315 Diplomacy Dr, Anchorage, AK 99508",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "020026"
+          },
+          {
+            "name": "Alaska Regional Hospital",
+            "address": "2801 Debarr Road, Anchorage, AK 99508",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "020017"
+          },
+          {
+            "name": "North Star Hospital",
+            "address": "2530 Debarr Rd, Anchorage, AK 99508",
+            "type": "Psychiatric",
+            "cmsFacilityId": "024001"
+          },
+          {
+            "name": "Providence Alaska Medical Center",
+            "address": "3200 Providence Drive, Anchorage, AK 99508",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "020001"
+          }
+        ],
+        "erHospitalsSource": "CMS Care Compare hospital general information (dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma or nearest claim."
+      },
       "primaryAirport": {
         "name": "Ted Stevens Anchorage International Airport",
         "iata": "ANC",
-        "distanceMiles": 5.0,
-        "transitToDowntown": "People Mover Route 40 / Rideshare"
-      },
-      "powerPlugs": {
-        "types": [
-          "Type A (2-pin)",
-          "Type B (3-pin grounded)"
-        ],
-        "voltage": "120V",
-        "frequency": "60Hz",
-        "adapterAdvice": "Visitors from UK, EU, Australia, and Asia require a standard Type A/B plug adapter and dual-voltage converter."
-      },
-      "currency": {
-        "code": "USD",
-        "symbol": "$",
-        "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
-        "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
-      },
-      "climate": {
-        "summerHighF": 84,
-        "winterLowF": 22,
-        "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
-        "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
-      },
-      "emergency": {
-        "emergencyDispatch": "911",
-        "nonEmergencyPolice": "311 or local municipal dispatch",
-        "nearestTraumaHospital": "Anchorage Regional Memorial Hospital",
-        "hospitalAddress": "Medical Center District, Anchorage, AK"
-      },
-      "visitorLogistics": {
-        "tapWaterPotability": "100% Safe municipal drinking water conforming to EPA Safe Drinking Water Act standards.",
-        "salesTaxRefundPolicy": "International travelers may claim state sales tax refunds on qualifying departures at designated airport customs counters.",
-        "rideshareAvailability": "Ubiquitous (Uber and Lyft operational 24/7 across the metropolitan area)."
-      },
-      "provenance": {
-        "sourceName": "FAA Airport Database & International Trade Administration",
-        "sourceUrl": "https://www.trade.gov/",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
+        "lat": 61.179004,
+        "lng": -149.992561,
+        "distanceMiles": 23.6,
+        "transitToDowntown": null,
+        "source": "OurAirports (public domain) for name, IATA code and coordinates; distance is straight-line from the U.S. Census Gazetteer city center point",
+        "sourceUrl": "https://ourairports.com/data/",
+        "cityCenterMethod": "Census Gazetteer internal point",
+        "retrieved": "2026-10-31"
       }
+    },
+    "housingAndTaxes": {
+      "medianHomeValue": 375900,
+      "medianGrossRent": 1453,
+      "medianRealEstateTaxPaid": 4865,
+      "effectivePropertyTaxRatePct": 1.29,
+      "countyName": "Anchorage Municipality",
+      "source": "ACS 2023 5-yr: B25077 median home value, B25064 median gross rent, B25103 median real estate taxes paid. Effective rate = B25103 / B25077.",
+      "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/"
+    },
+    "climateNormals": {
+      "peakSummerHighF": 67,
+      "winterLowF": 6,
+      "annualRainfallInches": 22.6,
+      "sourceName": "NOAA NCEI U.S. Climate Normals 1991-2020 (Station USC00502642, 4.2 mi from Gazetteer center), retrieved 2026-10-31",
+      "sourceUrl": "https://www.ncei.noaa.gov/products/land-based-station/us-climate-normals"
+    },
+    "waterUtility": {
+      "pwsid": "AK2210906",
+      "providerName": "Moa Municipality of Anchorage",
+      "populationServed": 221351,
+      "sourceType": "surface water",
+      "source": "U.S. EPA Safe Drinking Water Information System (SDWIS)",
+      "sourceUrl": "https://data.epa.gov/efservice/WATER_SYSTEM/PWSID/AK2210906/JSON",
+      "retrieved": "2026-10-31"
+    },
+    "higherEducation": {
+      "institutionCount": 4,
+      "totalEnrollment": 10076,
+      "institutions": [
+        {
+          "id": 102553,
+          "name": "University of Alaska Anchorage",
+          "studentSize": 7212,
+          "ownership": "Public",
+          "schoolUrl": "https://www.uaa.alaska.edu/",
+          "lat": 61.190163,
+          "lng": -149.82619
+        },
+        {
+          "id": 102845,
+          "name": "Charter College",
+          "studentSize": 2157,
+          "ownership": "Private for-profit",
+          "schoolUrl": "https://chartercollege.edu/",
+          "lat": 61.19633,
+          "lng": -149.839274
+        },
+        {
+          "id": 102669,
+          "name": "Alaska Pacific University",
+          "studentSize": 457,
+          "ownership": "Private nonprofit",
+          "schoolUrl": "https://www.alaskapacific.edu/",
+          "lat": 61.190968,
+          "lng": -149.804168
+        },
+        {
+          "id": 103501,
+          "name": "Alaska Career College",
+          "studentSize": 250,
+          "ownership": "Private for-profit",
+          "schoolUrl": "https://www.alaskacareercollege.edu/",
+          "lat": 61.181443,
+          "lng": -149.856954
+        }
+      ],
+      "sourceName": "U.S. Department of Education College Scorecard",
+      "sourceUrl": "https://collegescorecard.ed.gov/",
+      "retrieved": "2026-10-31"
+    },
+    "evInfrastructure": {
+      "totalStations": 13,
+      "totalChargingPorts": 29,
+      "dcFastPorts": 9,
+      "level2Ports": 20,
+      "sampleStations": [
+        {
+          "name": "Anchorage, AK - Tesla Supercharger",
+          "address": "7701 DeBarr Rd, Anchorage, AK 99504",
+          "network": "Tesla",
+          "dcFastPorts": 8,
+          "level2Ports": 0,
+          "lat": 61.210003,
+          "lng": -149.736481
+        },
+        {
+          "name": "Avis Anchorage",
+          "address": "6607 Old Seward Highway, Anchorage, AK 99518",
+          "network": "TURNONGREEN",
+          "dcFastPorts": 0,
+          "level2Ports": 4,
+          "lat": 61.16085,
+          "lng": -149.86374
+        },
+        {
+          "name": "CHUGACH NORTH CEA PUBLIC",
+          "address": "1040 E 1st Ave, Anchorage, AK 99501",
+          "network": "ChargePoint Network",
+          "dcFastPorts": 0,
+          "level2Ports": 2,
+          "lat": 61.22133,
+          "lng": -149.862649
+        },
+        {
+          "name": "DIMOND CENTER WEST PARKING",
+          "address": "Dimond Center, Anchorage, AK 99515",
+          "network": "ChargePoint Network",
+          "dcFastPorts": 0,
+          "level2Ports": 2,
+          "lat": 61.143196,
+          "lng": -149.87144
+        },
+        {
+          "name": "MOA RUSTIC GOAT",
+          "address": "2716 W Northern Lights Blvd, Anchorage, AK 99517",
+          "network": "ChargePoint Network",
+          "dcFastPorts": 0,
+          "level2Ports": 2,
+          "lat": 61.195135,
+          "lng": -149.936129
+        }
+      ],
+      "sourceName": "U.S. Department of Energy / NLR Alternative Fuels Data Center (AFDC)",
+      "sourceUrl": "https://afdc.energy.gov/stations",
+      "retrieved": "2026-10-31"
+    },
+    "nationalParks": {
+      "parks": [
+        {
+          "parkCode": "anch",
+          "fullName": "Alaska Public Lands",
+          "designation": "National Park System Unit",
+          "distanceMiles": 20.5,
+          "description": "Alaska’s parks, forests, and refuges are rich and varied. The Alaska Public Lands Information Centers help visitors and residents to have meaningful, safe, enjoyable experiences on public lands, and encourages them to sustain the...",
+          "url": "https://www.nps.gov/anch/index.htm",
+          "lat": 61.2188,
+          "lng": -149.894536
+        }
+      ],
+      "sourceName": "U.S. National Park Service",
+      "sourceUrl": "https://www.nps.gov/",
+      "retrieved": "2026-10-31"
     }
   },
   {
     "slug": "ak/fairbanks",
     "cityId": "0224230",
-    "countyFips": "02242",
+    "countyFips": "02090",
     "name": "Fairbanks",
     "stateCode": "ak",
     "stateName": "Alaska",
-    "countyName": "Fairbanks Metropolitan Area",
+    "countyName": "Fairbanks North Star Borough",
     "lat": 64.836531,
     "lng": -147.651745,
     "primaryZips": [
-      "71260"
+      "99701",
+      "99709",
+      "99712",
+      "99775",
+      "99706"
     ],
     "demographics": {
       "population": 31856,
-      "popGrowth5YrPct": -1.7,
-      "medianHouseholdIncome": 77802,
-      "perCapitaIncome": 45125,
-      "medianAge": 36.4,
-      "daytimeWorkerPop": 19751,
-      "daytimePopSurgePct": 8.5,
-      "medianGrossRent": 1496,
-      "medianHomeValue": 326768,
+      "medianHouseholdIncome": 72077,
+      "perCapitaIncome": 36392,
+      "medianAge": 28.6,
+      "medianGrossRent": 1470,
+      "medianHomeValue": 255700,
       "provenance": {
-        "sourceName": "US Census Bureau ACS 5-Year (DP03/DP04/DP05) & PopEst",
-        "sourceUrl": "https://api.census.gov/data/2023/acs/acs5",
-        "datasetVintage": "2023-5YR",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "sourceName": "US Census Bureau ACS 5-Year Estimates 2023 (Table-Based Summary File)",
+        "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/",
+        "datasetVintage": "ACS-2023-5YR",
+        "verifiedAt": "2026-10-31T00:00:00Z",
         "granularity": "place"
-      }
-    },
-    "laborAndEconomy": {
-      "unemploymentRatePct": 3.8,
-      "avgWeeklyWageAllIndustries": 1340,
-      "newHousingPermits12Mo": 239,
-      "permitsPer1kResidents": 7.5,
-      "femaRiskScore": 28.0,
-      "provenance": {
-        "sourceName": "BLS Local Area Unemployment Statistics (LAUS) & Census BPS",
-        "sourceUrl": "https://www.bls.gov/lau/",
-        "datasetVintage": "2024-M08",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
-      }
+      },
+      "popChange2020to2023Pct": -2.0,
+      "popChangeBasis": "Census Population Estimates, April 2020 base to July 2023"
     },
     "industries": [
       {
         "naicsCode": "722515",
         "slug": "coffee-shops",
         "label": "Coffee & Snack Shops",
-        "establishments": 7,
-        "per10kResidents": 2.2,
-        "usAvgPer10k": 2.15,
-        "saturationIndex": 102,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 29,
+        "per10kResidents": 4.82,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 227,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Fairbanks."
+          "evidenceQuote": "29 employer establishments (NAICS 722515) across 5 ZIP codes whose USPS city is Fairbanks, AK; density uses ACS 2023 ZCTA population (60,106). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722511",
         "slug": "restaurants",
         "label": "Full-Service Restaurants",
-        "establishments": 22,
-        "per10kResidents": 6.91,
-        "usAvgPer10k": 6.8,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 60,
+        "per10kResidents": 9.98,
+        "usAvgPer10k": 7.44,
+        "saturationIndex": 134,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Fairbanks."
+          "evidenceQuote": "60 employer establishments (NAICS 722511) across 5 ZIP codes whose USPS city is Fairbanks, AK; density uses ACS 2023 ZCTA population (60,106). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722513",
         "slug": "fast-food",
-        "label": "Fast Food Restaurants",
-        "establishments": 23,
-        "per10kResidents": 7.22,
-        "usAvgPer10k": 7.2,
-        "saturationIndex": 100,
+        "label": "Limited-Service / Fast Food Restaurants",
+        "establishments": 44,
+        "per10kResidents": 7.32,
+        "usAvgPer10k": 7.75,
+        "saturationIndex": 94,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Fairbanks."
+          "evidenceQuote": "44 employer establishments (NAICS 722513) across 5 ZIP codes whose USPS city is Fairbanks, AK; density uses ACS 2023 ZCTA population (60,106). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722410",
         "slug": "bars-taverns",
-        "label": "Bars & Drinking Places",
-        "establishments": 6,
-        "per10kResidents": 1.88,
-        "usAvgPer10k": 1.85,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Drinking Places (Alcoholic Beverages)",
+        "establishments": 16,
+        "per10kResidents": 2.66,
+        "usAvgPer10k": 0.9,
+        "saturationIndex": 295,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Fairbanks."
-        }
-      },
-      {
-        "naicsCode": "812111",
-        "slug": "barber-shops",
-        "label": "Barber Shops",
-        "establishments": 4,
-        "per10kResidents": 1.26,
-        "usAvgPer10k": 1.35,
-        "saturationIndex": 95,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Fairbanks."
+          "evidenceQuote": "16 employer establishments (NAICS 722410) across 5 ZIP codes whose USPS city is Fairbanks, AK; density uses ACS 2023 ZCTA population (60,106). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812112",
         "slug": "beauty-salons",
         "label": "Beauty Salons & Hair Studios",
-        "establishments": 11,
-        "per10kResidents": 3.45,
-        "usAvgPer10k": 3.4,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 17,
+        "per10kResidents": 2.83,
+        "usAvgPer10k": 2.31,
+        "saturationIndex": 123,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Fairbanks."
+          "evidenceQuote": "17 employer establishments (NAICS 812112) across 5 ZIP codes whose USPS city is Fairbanks, AK; density uses ACS 2023 ZCTA population (60,106). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812113",
         "slug": "nail-salons",
         "label": "Nail Salons",
-        "establishments": 7,
-        "per10kResidents": 2.2,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 104,
+        "establishments": 6,
+        "per10kResidents": 1.0,
+        "usAvgPer10k": 0.86,
+        "saturationIndex": 116,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Fairbanks."
+          "evidenceQuote": "6 employer establishments (NAICS 812113) across 5 ZIP codes whose USPS city is Fairbanks, AK; density uses ACS 2023 ZCTA population (60,106). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "713940",
         "slug": "gyms-fitness",
-        "label": "Fitness & Recreational Gyms",
-        "establishments": 4,
-        "per10kResidents": 1.26,
-        "usAvgPer10k": 1.25,
-        "saturationIndex": 100,
+        "label": "Fitness & Recreational Sports Centers",
+        "establishments": 7,
+        "per10kResidents": 1.16,
+        "usAvgPer10k": 1.0,
+        "saturationIndex": 117,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Fairbanks."
+          "evidenceQuote": "7 employer establishments (NAICS 713940) across 5 ZIP codes whose USPS city is Fairbanks, AK; density uses ACS 2023 ZCTA population (60,106). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812910",
         "slug": "pet-care",
-        "label": "Pet Care & Grooming",
-        "establishments": 3,
-        "per10kResidents": 0.94,
-        "usAvgPer10k": 0.95,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Pet Care & Grooming Services",
+        "establishments": 6,
+        "per10kResidents": 1.0,
+        "usAvgPer10k": 0.46,
+        "saturationIndex": 215,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Fairbanks."
+          "evidenceQuote": "6 employer establishments (NAICS 812910) across 5 ZIP codes whose USPS city is Fairbanks, AK; density uses ACS 2023 ZCTA population (60,106). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541940",
         "slug": "veterinary",
-        "label": "Veterinary Services",
-        "establishments": 3,
-        "per10kResidents": 0.94,
-        "usAvgPer10k": 1.05,
-        "saturationIndex": 92,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Veterinary Services & Animal Hospitals",
+        "establishments": 6,
+        "per10kResidents": 1.0,
+        "usAvgPer10k": 0.69,
+        "saturationIndex": 145,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Fairbanks."
+          "evidenceQuote": "6 employer establishments (NAICS 541940) across 5 ZIP codes whose USPS city is Fairbanks, AK; density uses ACS 2023 ZCTA population (60,106). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "811111",
         "slug": "auto-repair",
         "label": "General Automotive Repair",
-        "establishments": 15,
-        "per10kResidents": 4.71,
-        "usAvgPer10k": 4.8,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 26,
+        "per10kResidents": 4.33,
+        "usAvgPer10k": 2.2,
+        "saturationIndex": 197,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Fairbanks."
+          "evidenceQuote": "26 employer establishments (NAICS 811111) across 5 ZIP codes whose USPS city is Fairbanks, AK; density uses ACS 2023 ZCTA population (60,106). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "811192",
         "slug": "car-washes",
-        "label": "Car Washes & Detailing",
-        "establishments": 2,
-        "per10kResidents": 0.63,
-        "usAvgPer10k": 0.65,
-        "saturationIndex": 97,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Car Washes & Auto Detailing",
+        "establishments": 0,
+        "per10kResidents": 0.0,
+        "usAvgPer10k": 0.35,
+        "saturationIndex": 0,
+        "status": "underserved",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Fairbanks."
-        }
-      },
-      {
-        "naicsCode": "812310",
-        "slug": "laundromats",
-        "label": "Coin Laundromats",
-        "establishments": 2,
-        "per10kResidents": 0.63,
-        "usAvgPer10k": 0.55,
-        "saturationIndex": 111,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Fairbanks."
-        }
-      },
-      {
-        "naicsCode": "812320",
-        "slug": "dry-cleaners",
-        "label": "Dry Cleaning & Laundry",
-        "establishments": 3,
-        "per10kResidents": 0.94,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 108,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Fairbanks."
+          "evidenceQuote": "0 employer establishments (NAICS 811192) across 5 ZIP codes whose USPS city is Fairbanks, AK; density uses ACS 2023 ZCTA population (60,106). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621210",
         "slug": "dentists",
         "label": "Offices of Dentists",
-        "establishments": 12,
-        "per10kResidents": 3.77,
-        "usAvgPer10k": 3.9,
-        "saturationIndex": 97,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 39,
+        "per10kResidents": 6.49,
+        "usAvgPer10k": 3.89,
+        "saturationIndex": 167,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Fairbanks."
+          "evidenceQuote": "39 employer establishments (NAICS 621210) across 5 ZIP codes whose USPS city is Fairbanks, AK; density uses ACS 2023 ZCTA population (60,106). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621310",
         "slug": "chiropractors",
         "label": "Offices of Chiropractors",
-        "establishments": 4,
-        "per10kResidents": 1.26,
-        "usAvgPer10k": 1.4,
-        "saturationIndex": 92,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 12,
+        "per10kResidents": 2.0,
+        "usAvgPer10k": 0.97,
+        "saturationIndex": 205,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Fairbanks."
+          "evidenceQuote": "12 employer establishments (NAICS 621310) across 5 ZIP codes whose USPS city is Fairbanks, AK; density uses ACS 2023 ZCTA population (60,106). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621340",
         "slug": "physical-therapy",
-        "label": "Physical Therapy Clinics",
-        "establishments": 5,
-        "per10kResidents": 1.57,
-        "usAvgPer10k": 1.55,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Physical, Occupational & Speech Therapists",
+        "establishments": 19,
+        "per10kResidents": 3.16,
+        "usAvgPer10k": 1.3,
+        "saturationIndex": 243,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Fairbanks."
+          "evidenceQuote": "19 employer establishments (NAICS 621340) across 5 ZIP codes whose USPS city is Fairbanks, AK; density uses ACS 2023 ZCTA population (60,106). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "624410",
         "slug": "daycare",
         "label": "Child Day Care Services",
-        "establishments": 7,
-        "per10kResidents": 2.2,
-        "usAvgPer10k": 2.25,
-        "saturationIndex": 98,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 19,
+        "per10kResidents": 3.16,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 149,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Fairbanks."
+          "evidenceQuote": "19 employer establishments (NAICS 624410) across 5 ZIP codes whose USPS city is Fairbanks, AK; density uses ACS 2023 ZCTA population (60,106). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "445120",
         "slug": "convenience-stores",
-        "label": "Convenience Stores",
-        "establishments": 6,
-        "per10kResidents": 1.88,
-        "usAvgPer10k": 1.95,
-        "saturationIndex": 97,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Convenience Retail Stores",
+        "establishments": 0,
+        "per10kResidents": 0.0,
+        "usAvgPer10k": 0.82,
+        "saturationIndex": 0,
+        "status": "underserved",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Fairbanks."
+          "evidenceQuote": "0 employer establishments (NAICS 445120) across 5 ZIP codes whose USPS city is Fairbanks, AK; density uses ACS 2023 ZCTA population (60,106). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "448140",
         "slug": "clothing-boutiques",
-        "label": "Family Clothing Stores",
-        "establishments": 5,
-        "per10kResidents": 1.57,
-        "usAvgPer10k": 1.65,
-        "saturationIndex": 96,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Family Clothing Stores & Boutiques",
+        "establishments": 8,
+        "per10kResidents": 1.33,
+        "usAvgPer10k": 0.65,
+        "saturationIndex": 204,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Fairbanks."
-        }
-      },
-      {
-        "naicsCode": "445291",
-        "slug": "bakeries",
-        "label": "Retail Bakeries",
-        "establishments": 3,
-        "per10kResidents": 0.94,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 108,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Fairbanks."
-        }
-      },
-      {
-        "naicsCode": "453110",
-        "slug": "florists",
-        "label": "Florists & Floral Gift",
-        "establishments": 2,
-        "per10kResidents": 0.63,
-        "usAvgPer10k": 0.5,
-        "saturationIndex": 119,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Fairbanks."
+          "evidenceQuote": "8 employer establishments (NAICS 448140) across 5 ZIP codes whose USPS city is Fairbanks, AK; density uses ACS 2023 ZCTA population (60,106). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541110",
         "slug": "law-firms",
         "label": "Offices of Lawyers",
-        "establishments": 16,
-        "per10kResidents": 5.02,
-        "usAvgPer10k": 4.9,
-        "saturationIndex": 102,
+        "establishments": 25,
+        "per10kResidents": 4.16,
+        "usAvgPer10k": 4.8,
+        "saturationIndex": 87,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Fairbanks."
+          "evidenceQuote": "25 employer establishments (NAICS 541110) across 5 ZIP codes whose USPS city is Fairbanks, AK; density uses ACS 2023 ZCTA population (60,106). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541211",
         "slug": "accounting-cpa",
-        "label": "Offices of CPAs",
-        "establishments": 7,
-        "per10kResidents": 2.2,
-        "usAvgPer10k": 2.1,
+        "label": "Offices of Certified Public Accountants",
+        "establishments": 9,
+        "per10kResidents": 1.5,
+        "usAvgPer10k": 1.44,
         "saturationIndex": 104,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Fairbanks."
+          "evidenceQuote": "9 employer establishments (NAICS 541211) across 5 ZIP codes whose USPS city is Fairbanks, AK; density uses ACS 2023 ZCTA population (60,106). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "531210",
         "slug": "real-estate-agencies",
-        "label": "Real Estate Brokerages",
-        "establishments": 12,
-        "per10kResidents": 3.77,
-        "usAvgPer10k": 3.8,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Offices of Real Estate Agents & Brokers",
+        "establishments": 50,
+        "per10kResidents": 8.32,
+        "usAvgPer10k": 4.74,
+        "saturationIndex": 175,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Fairbanks."
+          "evidenceQuote": "50 employer establishments (NAICS 531210) across 5 ZIP codes whose USPS city is Fairbanks, AK; density uses ACS 2023 ZCTA population (60,106). National benchmark = all US ZIP rows / US population."
         }
       }
     ],
-    "permitsAndTax": {
-      "generalBusinessLicenseRequired": false,
-      "businessLicenseFeeSummary": "No general city business license required. State of Alaska statutory filings apply.",
-      "businessLicensePortalUrl": "https://www.fairbanksak.gov/permits",
-      "zoningLookupUrl": "https://www.fairbanksak.gov/zoning",
-      "buildingPermitPortalUrl": "https://www.fairbanksak.gov/building",
-      "certificateOfOccupancyFee": "$185 standard municipal inspection fee",
-      "avgPermitWaitDays": 30,
-      "shortTermRentalStatus": "restricted",
-      "foodTruckPermitStatus": "allowed",
-      "combinedSalesTaxRate": 0.0,
-      "stateTaxRate": 0.0,
-      "localTaxRate": 0.0,
-      "provenance": {
-        "sourceName": "Fairbanks Municipal Code & State Department of Revenue",
-        "sourceUrl": "https://www.fairbanksak.gov",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place",
-        "evidenceQuote": "Statutory municipal code standards."
-      }
-    },
-    "topTrafficCorridors": [
-      {
-        "roadName": "Main Arterial Corridor 1",
-        "segmentDescription": "Central Commercial Corridor through Fairbanks",
-        "aadt": 3823,
-        "heavyTruckPct": 5.5,
-        "lat": 64.836531,
-        "lng": -147.651745,
-        "year": 2024,
-        "provenance": {
-          "sourceName": "Alaska DOT AADT Database",
-          "sourceUrl": "https://www.transportation.gov/",
-          "datasetVintage": "2024-AADT",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "place"
-        }
-      }
-    ],
-    "marketSignals": {
-      "reportedRetailRentSqFtYr": 38.8,
-      "reportedIndustrialRentSqFtYr": 17.5,
-      "topSearchedNaics30d": [
-        "722515",
-        "713940",
-        "812111"
-      ],
-      "verifiedLocalProsCount": 8
-    },
-    "scores": {
-      "overallViability": 44,
-      "purchasingPower": 42,
-      "growthMomentum": 46,
-      "costEfficiency": 74,
-      "regulatoryFriction": 48
-    },
+    "marketSignals": {},
     "executiveTravel": {
-      "timeZone": "America/Anchorage (AKT: UTC-09:00)",
+      "timeZone": "America/Anchorage",
       "timeZoneAbbr": "AKT",
       "utcOffset": "-09:00",
-      "primaryAirport": {
-        "name": "Fairbanks Regional / Metropolitan Airport",
-        "iata": null,
-        "distanceMiles": 10.2,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
-      },
-      "powerPlugs": {
-        "types": [
-          "Type A (2-pin)",
-          "Type B (3-pin grounded)"
-        ],
-        "voltage": "120V",
-        "frequency": "60Hz",
-        "adapterAdvice": "Visitors from UK, EU, Australia, and Asia require a standard Type A/B plug adapter and dual-voltage converter."
-      },
-      "currency": {
-        "code": "USD",
-        "symbol": "$",
-        "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
-        "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
-      },
-      "climate": {
-        "summerHighF": 84,
-        "winterLowF": 22,
-        "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
-        "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
-      },
       "emergency": {
         "emergencyDispatch": "911",
-        "nonEmergencyPolice": "311 or local municipal dispatch",
-        "nearestTraumaHospital": "Fairbanks Regional Memorial Hospital",
-        "hospitalAddress": "Medical Center District, Fairbanks, AK"
+        "nearestTraumaHospital": "Fairbanks Memorial Hospital",
+        "hospitalAddress": "1650 Cowles Street, Fairbanks, AK 99701",
+        "cmsFacilityId": "020012",
+        "emergencyServices": true,
+        "source": "CMS Care Compare hospital general information (dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma or nearest claim.",
+        "erHospitals": [
+          {
+            "name": "Fairbanks Memorial Hospital",
+            "address": "1650 Cowles Street, Fairbanks, AK 99701",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "020012"
+          }
+        ],
+        "erHospitalsSource": "CMS Care Compare hospital general information (dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma or nearest claim."
       },
-      "visitorLogistics": {
-        "tapWaterPotability": "100% Safe municipal drinking water conforming to EPA Safe Drinking Water Act standards.",
-        "salesTaxRefundPolicy": "International travelers may claim state sales tax refunds on qualifying departures at designated airport customs counters.",
-        "rideshareAvailability": "Ubiquitous (Uber and Lyft operational 24/7 across the metropolitan area)."
-      },
-      "provenance": {
-        "sourceName": "FAA Airport Database & International Trade Administration",
-        "sourceUrl": "https://www.trade.gov/",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
+      "primaryAirport": {
+        "name": "Fairbanks International Airport",
+        "iata": "FAI",
+        "lat": 64.815102,
+        "lng": -147.856003,
+        "distanceMiles": 6.2,
+        "transitToDowntown": null,
+        "source": "OurAirports (public domain) for name, IATA code and coordinates; distance is straight-line from the U.S. Census Gazetteer city center point",
+        "sourceUrl": "https://ourairports.com/data/",
+        "cityCenterMethod": "Census Gazetteer internal point",
+        "retrieved": "2026-10-31"
       }
+    },
+    "housingAndTaxes": {
+      "medianHomeValue": 255700,
+      "medianGrossRent": 1470,
+      "medianRealEstateTaxPaid": 3336,
+      "effectivePropertyTaxRatePct": 1.3,
+      "countyName": "Fairbanks North Star Borough",
+      "source": "ACS 2023 5-yr: B25077 median home value, B25064 median gross rent, B25103 median real estate taxes paid. Effective rate = B25103 / B25077.",
+      "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/"
+    },
+    "climateNormals": {
+      "peakSummerHighF": 73,
+      "winterLowF": -15,
+      "annualRainfallInches": 13.0,
+      "sourceName": "NOAA NCEI U.S. Climate Normals 1991-2020 (Station USC00500490, 2.4 mi from Gazetteer center), retrieved 2026-10-31",
+      "sourceUrl": "https://www.ncei.noaa.gov/products/land-based-station/us-climate-normals"
+    },
+    "waterUtility": {
+      "pwsid": "AK2310730",
+      "providerName": "Golden Heart Utilities",
+      "populationServed": 78324,
+      "sourceType": "groundwater",
+      "source": "U.S. EPA Safe Drinking Water Information System (SDWIS)",
+      "sourceUrl": "https://data.epa.gov/efservice/WATER_SYSTEM/PWSID/AK2310730/JSON",
+      "retrieved": "2026-10-31"
+    },
+    "higherEducation": {
+      "institutionCount": 1,
+      "totalEnrollment": 4207,
+      "institutions": [
+        {
+          "id": 102614,
+          "name": "University of Alaska Fairbanks",
+          "studentSize": 4207,
+          "ownership": "Public",
+          "schoolUrl": "https://www.uaf.edu/",
+          "lat": 64.85756,
+          "lng": -147.823146
+        }
+      ],
+      "sourceName": "U.S. Department of Education College Scorecard",
+      "sourceUrl": "https://collegescorecard.ed.gov/",
+      "retrieved": "2026-10-31"
+    },
+    "evInfrastructure": {
+      "totalStations": 2,
+      "totalChargingPorts": 9,
+      "dcFastPorts": 9,
+      "level2Ports": 0,
+      "sampleStations": [
+        {
+          "name": "Fairbanks, AK - Tesla Supercharger",
+          "address": "3755 Airport Way, Fairbanks, AK 99709",
+          "network": "Tesla",
+          "dcFastPorts": 7,
+          "level2Ports": 0,
+          "lat": 64.836414,
+          "lng": -147.816515
+        },
+        {
+          "name": "Golden Valley Electric Fairbanks",
+          "address": "758 Illinois Street, Fairbanks, AK 99701",
+          "network": "FLO",
+          "dcFastPorts": 2,
+          "level2Ports": 0,
+          "lat": 64.852466,
+          "lng": -147.718578
+        }
+      ],
+      "sourceName": "U.S. Department of Energy / NLR Alternative Fuels Data Center (AFDC)",
+      "sourceUrl": "https://afdc.energy.gov/stations",
+      "retrieved": "2026-10-31"
     }
   },
   {
-    "slug": "ak/juneau-and",
+    "slug": "ak/juneau",
     "cityId": "0236400",
-    "countyFips": "02364",
-    "name": "Juneau and",
+    "countyFips": "02110",
+    "name": "Juneau",
     "stateCode": "ak",
     "stateName": "Alaska",
-    "countyName": "Juneau and Metropolitan Area",
+    "countyName": "Juneau City and Borough",
     "lat": 58.37291,
     "lng": -134.178445,
     "primaryZips": [
-      "71279"
+      "99801"
     ],
     "demographics": {
       "population": 31555,
-      "popGrowth5YrPct": -2.0,
-      "medianHouseholdIncome": 77425,
-      "perCapitaIncome": 44906,
-      "medianAge": 36.4,
-      "daytimeWorkerPop": 19564,
-      "daytimePopSurgePct": 8.5,
-      "medianGrossRent": 1489,
-      "medianHomeValue": 325185,
+      "medianHouseholdIncome": 100513,
+      "perCapitaIncome": 51146,
+      "medianAge": 39.8,
+      "medianGrossRent": 1462,
+      "medianHomeValue": 432500,
       "provenance": {
-        "sourceName": "US Census Bureau ACS 5-Year (DP03/DP04/DP05) & PopEst",
-        "sourceUrl": "https://api.census.gov/data/2023/acs/acs5",
-        "datasetVintage": "2023-5YR",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "sourceName": "US Census Bureau ACS 5-Year Estimates 2023 (Table-Based Summary File)",
+        "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/",
+        "datasetVintage": "ACS-2023-5YR",
+        "verifiedAt": "2026-10-31T00:00:00Z",
         "granularity": "place"
-      }
-    },
-    "laborAndEconomy": {
-      "unemploymentRatePct": 3.8,
-      "avgWeeklyWageAllIndustries": 1340,
-      "newHousingPermits12Mo": 237,
-      "permitsPer1kResidents": 7.5,
-      "femaRiskScore": 28.0,
-      "provenance": {
-        "sourceName": "BLS Local Area Unemployment Statistics (LAUS) & Census BPS",
-        "sourceUrl": "https://www.bls.gov/lau/",
-        "datasetVintage": "2024-M08",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
-      }
+      },
+      "popChange2020to2023Pct": -2.2,
+      "popChangeBasis": "Census Population Estimates, April 2020 base to July 2023"
     },
     "industries": [
       {
         "naicsCode": "722515",
         "slug": "coffee-shops",
         "label": "Coffee & Snack Shops",
-        "establishments": 7,
-        "per10kResidents": 2.22,
-        "usAvgPer10k": 2.15,
-        "saturationIndex": 102,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 19,
+        "per10kResidents": 6.38,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 300,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Juneau and."
+          "evidenceQuote": "19 employer establishments (NAICS 722515) across 1 ZIP codes whose USPS city is Juneau, AK; density uses ACS 2023 ZCTA population (29,796). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -1333,566 +1197,439 @@
         "slug": "restaurants",
         "label": "Full-Service Restaurants",
         "establishments": 21,
-        "per10kResidents": 6.66,
-        "usAvgPer10k": 6.8,
-        "saturationIndex": 98,
+        "per10kResidents": 7.05,
+        "usAvgPer10k": 7.44,
+        "saturationIndex": 95,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Juneau and."
+          "evidenceQuote": "21 employer establishments (NAICS 722511) across 1 ZIP codes whose USPS city is Juneau, AK; density uses ACS 2023 ZCTA population (29,796). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722513",
         "slug": "fast-food",
-        "label": "Fast Food Restaurants",
+        "label": "Limited-Service / Fast Food Restaurants",
         "establishments": 23,
-        "per10kResidents": 7.29,
-        "usAvgPer10k": 7.2,
-        "saturationIndex": 101,
+        "per10kResidents": 7.72,
+        "usAvgPer10k": 7.75,
+        "saturationIndex": 100,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Juneau and."
+          "evidenceQuote": "23 employer establishments (NAICS 722513) across 1 ZIP codes whose USPS city is Juneau, AK; density uses ACS 2023 ZCTA population (29,796). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722410",
         "slug": "bars-taverns",
-        "label": "Bars & Drinking Places",
-        "establishments": 6,
-        "per10kResidents": 1.9,
-        "usAvgPer10k": 1.85,
-        "saturationIndex": 102,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Drinking Places (Alcoholic Beverages)",
+        "establishments": 8,
+        "per10kResidents": 2.68,
+        "usAvgPer10k": 0.9,
+        "saturationIndex": 298,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Juneau and."
-        }
-      },
-      {
-        "naicsCode": "812111",
-        "slug": "barber-shops",
-        "label": "Barber Shops",
-        "establishments": 4,
-        "per10kResidents": 1.27,
-        "usAvgPer10k": 1.35,
-        "saturationIndex": 95,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Juneau and."
+          "evidenceQuote": "8 employer establishments (NAICS 722410) across 1 ZIP codes whose USPS city is Juneau, AK; density uses ACS 2023 ZCTA population (29,796). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812112",
         "slug": "beauty-salons",
         "label": "Beauty Salons & Hair Studios",
-        "establishments": 11,
-        "per10kResidents": 3.49,
-        "usAvgPer10k": 3.4,
-        "saturationIndex": 102,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 10,
+        "per10kResidents": 3.36,
+        "usAvgPer10k": 2.31,
+        "saturationIndex": 145,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Juneau and."
+          "evidenceQuote": "10 employer establishments (NAICS 812112) across 1 ZIP codes whose USPS city is Juneau, AK; density uses ACS 2023 ZCTA population (29,796). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812113",
         "slug": "nail-salons",
         "label": "Nail Salons",
-        "establishments": 7,
-        "per10kResidents": 2.22,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 104,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 6,
+        "per10kResidents": 2.01,
+        "usAvgPer10k": 0.86,
+        "saturationIndex": 234,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Juneau and."
+          "evidenceQuote": "6 employer establishments (NAICS 812113) across 1 ZIP codes whose USPS city is Juneau, AK; density uses ACS 2023 ZCTA population (29,796). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "713940",
         "slug": "gyms-fitness",
-        "label": "Fitness & Recreational Gyms",
-        "establishments": 4,
-        "per10kResidents": 1.27,
-        "usAvgPer10k": 1.25,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Fitness & Recreational Sports Centers",
+        "establishments": 6,
+        "per10kResidents": 2.01,
+        "usAvgPer10k": 1.0,
+        "saturationIndex": 202,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Juneau and."
-        }
-      },
-      {
-        "naicsCode": "812910",
-        "slug": "pet-care",
-        "label": "Pet Care & Grooming",
-        "establishments": 3,
-        "per10kResidents": 0.95,
-        "usAvgPer10k": 0.95,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Juneau and."
+          "evidenceQuote": "6 employer establishments (NAICS 713940) across 1 ZIP codes whose USPS city is Juneau, AK; density uses ACS 2023 ZCTA population (29,796). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541940",
         "slug": "veterinary",
-        "label": "Veterinary Services",
-        "establishments": 3,
-        "per10kResidents": 0.95,
-        "usAvgPer10k": 1.05,
-        "saturationIndex": 93,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Veterinary Services & Animal Hospitals",
+        "establishments": 6,
+        "per10kResidents": 2.01,
+        "usAvgPer10k": 0.69,
+        "saturationIndex": 292,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Juneau and."
+          "evidenceQuote": "6 employer establishments (NAICS 541940) across 1 ZIP codes whose USPS city is Juneau, AK; density uses ACS 2023 ZCTA population (29,796). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "811111",
         "slug": "auto-repair",
         "label": "General Automotive Repair",
-        "establishments": 15,
-        "per10kResidents": 4.75,
-        "usAvgPer10k": 4.8,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 9,
+        "per10kResidents": 3.02,
+        "usAvgPer10k": 2.2,
+        "saturationIndex": 137,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Juneau and."
-        }
-      },
-      {
-        "naicsCode": "811192",
-        "slug": "car-washes",
-        "label": "Car Washes & Detailing",
-        "establishments": 2,
-        "per10kResidents": 0.63,
-        "usAvgPer10k": 0.65,
-        "saturationIndex": 98,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Juneau and."
-        }
-      },
-      {
-        "naicsCode": "812310",
-        "slug": "laundromats",
-        "label": "Coin Laundromats",
-        "establishments": 2,
-        "per10kResidents": 0.63,
-        "usAvgPer10k": 0.55,
-        "saturationIndex": 112,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Juneau and."
-        }
-      },
-      {
-        "naicsCode": "812320",
-        "slug": "dry-cleaners",
-        "label": "Dry Cleaning & Laundry",
-        "establishments": 3,
-        "per10kResidents": 0.95,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 109,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Juneau and."
+          "evidenceQuote": "9 employer establishments (NAICS 811111) across 1 ZIP codes whose USPS city is Juneau, AK; density uses ACS 2023 ZCTA population (29,796). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621210",
         "slug": "dentists",
         "label": "Offices of Dentists",
-        "establishments": 12,
-        "per10kResidents": 3.8,
-        "usAvgPer10k": 3.9,
-        "saturationIndex": 98,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 16,
+        "per10kResidents": 5.37,
+        "usAvgPer10k": 3.89,
+        "saturationIndex": 138,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Juneau and."
+          "evidenceQuote": "16 employer establishments (NAICS 621210) across 1 ZIP codes whose USPS city is Juneau, AK; density uses ACS 2023 ZCTA population (29,796). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621310",
         "slug": "chiropractors",
         "label": "Offices of Chiropractors",
-        "establishments": 4,
-        "per10kResidents": 1.27,
-        "usAvgPer10k": 1.4,
-        "saturationIndex": 93,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 9,
+        "per10kResidents": 3.02,
+        "usAvgPer10k": 0.97,
+        "saturationIndex": 311,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Juneau and."
+          "evidenceQuote": "9 employer establishments (NAICS 621310) across 1 ZIP codes whose USPS city is Juneau, AK; density uses ACS 2023 ZCTA population (29,796). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621340",
         "slug": "physical-therapy",
-        "label": "Physical Therapy Clinics",
-        "establishments": 5,
-        "per10kResidents": 1.58,
-        "usAvgPer10k": 1.55,
-        "saturationIndex": 102,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Physical, Occupational & Speech Therapists",
+        "establishments": 3,
+        "per10kResidents": 1.01,
+        "usAvgPer10k": 1.3,
+        "saturationIndex": 77,
+        "status": "underserved",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Juneau and."
+          "evidenceQuote": "3 employer establishments (NAICS 621340) across 1 ZIP codes whose USPS city is Juneau, AK; density uses ACS 2023 ZCTA population (29,796). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "624410",
         "slug": "daycare",
         "label": "Child Day Care Services",
-        "establishments": 7,
-        "per10kResidents": 2.22,
-        "usAvgPer10k": 2.25,
-        "saturationIndex": 99,
+        "establishments": 6,
+        "per10kResidents": 2.01,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 95,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Juneau and."
+          "evidenceQuote": "6 employer establishments (NAICS 624410) across 1 ZIP codes whose USPS city is Juneau, AK; density uses ACS 2023 ZCTA population (29,796). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "445120",
         "slug": "convenience-stores",
-        "label": "Convenience Stores",
-        "establishments": 6,
-        "per10kResidents": 1.9,
-        "usAvgPer10k": 1.95,
-        "saturationIndex": 98,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Juneau and."
-        }
-      },
-      {
-        "naicsCode": "448140",
-        "slug": "clothing-boutiques",
-        "label": "Family Clothing Stores",
+        "label": "Convenience Retail Stores",
         "establishments": 5,
-        "per10kResidents": 1.58,
-        "usAvgPer10k": 1.65,
-        "saturationIndex": 97,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "per10kResidents": 1.68,
+        "usAvgPer10k": 0.82,
+        "saturationIndex": 205,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Juneau and."
-        }
-      },
-      {
-        "naicsCode": "445291",
-        "slug": "bakeries",
-        "label": "Retail Bakeries",
-        "establishments": 3,
-        "per10kResidents": 0.95,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 109,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Juneau and."
-        }
-      },
-      {
-        "naicsCode": "453110",
-        "slug": "florists",
-        "label": "Florists & Floral Gift",
-        "establishments": 2,
-        "per10kResidents": 0.63,
-        "usAvgPer10k": 0.5,
-        "saturationIndex": 120,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Juneau and."
+          "evidenceQuote": "5 employer establishments (NAICS 445120) across 1 ZIP codes whose USPS city is Juneau, AK; density uses ACS 2023 ZCTA population (29,796). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541110",
         "slug": "law-firms",
         "label": "Offices of Lawyers",
-        "establishments": 15,
-        "per10kResidents": 4.75,
-        "usAvgPer10k": 4.9,
-        "saturationIndex": 98,
+        "establishments": 12,
+        "per10kResidents": 4.03,
+        "usAvgPer10k": 4.8,
+        "saturationIndex": 84,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Juneau and."
+          "evidenceQuote": "12 employer establishments (NAICS 541110) across 1 ZIP codes whose USPS city is Juneau, AK; density uses ACS 2023 ZCTA population (29,796). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541211",
         "slug": "accounting-cpa",
-        "label": "Offices of CPAs",
-        "establishments": 7,
-        "per10kResidents": 2.22,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 104,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Offices of Certified Public Accountants",
+        "establishments": 6,
+        "per10kResidents": 2.01,
+        "usAvgPer10k": 1.44,
+        "saturationIndex": 140,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Juneau and."
+          "evidenceQuote": "6 employer establishments (NAICS 541211) across 1 ZIP codes whose USPS city is Juneau, AK; density uses ACS 2023 ZCTA population (29,796). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "531210",
         "slug": "real-estate-agencies",
-        "label": "Real Estate Brokerages",
-        "establishments": 12,
-        "per10kResidents": 3.8,
-        "usAvgPer10k": 3.8,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Offices of Real Estate Agents & Brokers",
+        "establishments": 10,
+        "per10kResidents": 3.36,
+        "usAvgPer10k": 4.74,
+        "saturationIndex": 71,
+        "status": "underserved",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Juneau and."
+          "evidenceQuote": "10 employer establishments (NAICS 531210) across 1 ZIP codes whose USPS city is Juneau, AK; density uses ACS 2023 ZCTA population (29,796). National benchmark = all US ZIP rows / US population."
         }
       }
     ],
-    "permitsAndTax": {
-      "generalBusinessLicenseRequired": false,
-      "businessLicenseFeeSummary": "No general city business license required. State of Alaska statutory filings apply.",
-      "businessLicensePortalUrl": "https://www.juneau-andak.gov/permits",
-      "zoningLookupUrl": "https://www.juneau-andak.gov/zoning",
-      "buildingPermitPortalUrl": "https://www.juneau-andak.gov/building",
-      "certificateOfOccupancyFee": "$185 standard municipal inspection fee",
-      "avgPermitWaitDays": 30,
-      "shortTermRentalStatus": "restricted",
-      "foodTruckPermitStatus": "allowed",
-      "combinedSalesTaxRate": 0.0,
-      "stateTaxRate": 0.0,
-      "localTaxRate": 0.0,
-      "provenance": {
-        "sourceName": "Juneau and Municipal Code & State Department of Revenue",
-        "sourceUrl": "https://www.juneau-andak.gov",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place",
-        "evidenceQuote": "Statutory municipal code standards."
-      }
-    },
-    "topTrafficCorridors": [
-      {
-        "roadName": "Main Arterial Corridor 1",
-        "segmentDescription": "Central Commercial Corridor through Juneau and",
-        "aadt": 3787,
-        "heavyTruckPct": 5.5,
-        "lat": 58.37291,
-        "lng": -134.178445,
-        "year": 2024,
-        "provenance": {
-          "sourceName": "Alaska DOT AADT Database",
-          "sourceUrl": "https://www.transportation.gov/",
-          "datasetVintage": "2024-AADT",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "place"
-        }
-      }
-    ],
-    "marketSignals": {
-      "reportedRetailRentSqFtYr": 38.6,
-      "reportedIndustrialRentSqFtYr": 17.4,
-      "topSearchedNaics30d": [
-        "722515",
-        "713940",
-        "812111"
-      ],
-      "verifiedLocalProsCount": 8
-    },
-    "scores": {
-      "overallViability": 43,
-      "purchasingPower": 41,
-      "growthMomentum": 45,
-      "costEfficiency": 74,
-      "regulatoryFriction": 48
-    },
+    "marketSignals": {},
     "executiveTravel": {
-      "timeZone": "America/Anchorage (AKT: UTC-09:00)",
+      "timeZone": "America/Juneau",
       "timeZoneAbbr": "AKT",
       "utcOffset": "-09:00",
-      "primaryAirport": {
-        "name": "Juneau and Regional / Metropolitan Airport",
-        "iata": null,
-        "distanceMiles": 10.2,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
-      },
-      "powerPlugs": {
-        "types": [
-          "Type A (2-pin)",
-          "Type B (3-pin grounded)"
-        ],
-        "voltage": "120V",
-        "frequency": "60Hz",
-        "adapterAdvice": "Visitors from UK, EU, Australia, and Asia require a standard Type A/B plug adapter and dual-voltage converter."
-      },
-      "currency": {
-        "code": "USD",
-        "symbol": "$",
-        "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
-        "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
-      },
-      "climate": {
-        "summerHighF": 84,
-        "winterLowF": 22,
-        "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
-        "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
-      },
       "emergency": {
         "emergencyDispatch": "911",
-        "nonEmergencyPolice": "311 or local municipal dispatch",
-        "nearestTraumaHospital": "Juneau and Regional Memorial Hospital",
-        "hospitalAddress": "Medical Center District, Juneau and, AK"
+        "nearestTraumaHospital": "Bartlett Regional Hospital",
+        "hospitalAddress": "3260 Hospital Dr, Juneau, AK 99801",
+        "cmsFacilityId": "020008",
+        "emergencyServices": true,
+        "source": "CMS Care Compare hospital general information (dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma or nearest claim.",
+        "erHospitals": [
+          {
+            "name": "Bartlett Regional Hospital",
+            "address": "3260 Hospital Dr, Juneau, AK 99801",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "020008"
+          }
+        ],
+        "erHospitalsSource": "CMS Care Compare hospital general information (dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma or nearest claim."
       },
-      "visitorLogistics": {
-        "tapWaterPotability": "100% Safe municipal drinking water conforming to EPA Safe Drinking Water Act standards.",
-        "salesTaxRefundPolicy": "International travelers may claim state sales tax refunds on qualifying departures at designated airport customs counters.",
-        "rideshareAvailability": "Ubiquitous (Uber and Lyft operational 24/7 across the metropolitan area)."
-      },
-      "provenance": {
-        "sourceName": "FAA Airport Database & International Trade Administration",
-        "sourceUrl": "https://www.trade.gov/",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
+      "primaryAirport": {
+        "name": "Juneau International Airport",
+        "iata": "JNU",
+        "lat": 58.354935,
+        "lng": -134.574416,
+        "distanceMiles": 14.4,
+        "transitToDowntown": null,
+        "source": "OurAirports (public domain) for name, IATA code and coordinates; distance is straight-line from the U.S. Census Gazetteer city center point",
+        "sourceUrl": "https://ourairports.com/data/",
+        "cityCenterMethod": "Census Gazetteer internal point",
+        "retrieved": "2026-10-31"
       }
+    },
+    "housingAndTaxes": {
+      "medianHomeValue": 432500,
+      "medianGrossRent": 1462,
+      "medianRealEstateTaxPaid": 4039,
+      "effectivePropertyTaxRatePct": 0.93,
+      "countyName": "Juneau City and Borough",
+      "source": "ACS 2023 5-yr: B25077 median home value, B25064 median gross rent, B25103 median real estate taxes paid. Effective rate = B25103 / B25077.",
+      "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/"
+    },
+    "climateNormals": {
+      "peakSummerHighF": 63,
+      "winterLowF": 26,
+      "annualRainfallInches": 89.6,
+      "sourceName": "NOAA NCEI U.S. Climate Normals 1991-2020 (Station USC00504094, 9.9 mi from Gazetteer center), retrieved 2026-10-31",
+      "sourceUrl": "https://www.ncei.noaa.gov/products/land-based-station/us-climate-normals"
+    },
+    "waterUtility": {
+      "pwsid": "AK2110342",
+      "providerName": "City and Borough of Juneau",
+      "populationServed": 38526,
+      "sourceType": "surface water",
+      "source": "U.S. EPA Safe Drinking Water Information System (SDWIS)",
+      "sourceUrl": "https://data.epa.gov/efservice/WATER_SYSTEM/PWSID/AK2110342/JSON",
+      "retrieved": "2026-10-31"
+    },
+    "higherEducation": {
+      "institutionCount": 1,
+      "totalEnrollment": 907,
+      "institutions": [
+        {
+          "id": 102632,
+          "name": "University of Alaska Southeast",
+          "studentSize": 907,
+          "ownership": "Public",
+          "schoolUrl": "https://www.uas.alaska.edu/",
+          "lat": 58.384846,
+          "lng": -134.638255
+        }
+      ],
+      "sourceName": "U.S. Department of Education College Scorecard",
+      "sourceUrl": "https://collegescorecard.ed.gov/",
+      "retrieved": "2026-10-31"
+    },
+    "evInfrastructure": {
+      "totalStations": 16,
+      "totalChargingPorts": 27,
+      "dcFastPorts": 4,
+      "level2Ports": 23,
+      "sampleStations": [
+        {
+          "name": "Fred Meyer Juneau",
+          "address": "8181 Glacier Highway, Juneau, AK 99801",
+          "network": "Non-Networked",
+          "dcFastPorts": 2,
+          "level2Ports": 2,
+          "lat": 58.359016,
+          "lng": -134.559427
+        },
+        {
+          "name": "Alaska Electric Light & Power",
+          "address": "5601 Tonsgard Ct, Juneau, AK 99801",
+          "network": "Non-Networked",
+          "dcFastPorts": 0,
+          "level2Ports": 2,
+          "lat": 58.354895,
+          "lng": -134.495377
+        },
+        {
+          "name": "Marine Parking Garage",
+          "address": "292 Marine Way, Juneau, AK 99801",
+          "network": "Non-Networked",
+          "dcFastPorts": 0,
+          "level2Ports": 2,
+          "lat": 58.298366,
+          "lng": -134.404006
+        },
+        {
+          "name": "Douglas Library",
+          "address": "1016 3rd St, Juneau, AK 99801",
+          "network": "Non-Networked",
+          "dcFastPorts": 0,
+          "level2Ports": 2,
+          "lat": 58.277018,
+          "lng": -134.395039
+        },
+        {
+          "name": "Eaglecrest Ski Area",
+          "address": "3000 Fish Creek Rd, Juneau, AK 99801",
+          "network": "Non-Networked",
+          "dcFastPorts": 0,
+          "level2Ports": 2,
+          "lat": 58.276263,
+          "lng": -134.514818
+        }
+      ],
+      "sourceName": "U.S. Department of Energy / NLR Alternative Fuels Data Center (AFDC)",
+      "sourceUrl": "https://afdc.energy.gov/stations",
+      "retrieved": "2026-10-31"
     }
   }
 ]

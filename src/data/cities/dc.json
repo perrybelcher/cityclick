@@ -2,633 +2,697 @@
   {
     "slug": "dc/washington",
     "cityId": "1150000",
-    "countyFips": "11500",
+    "countyFips": "11001",
     "name": "Washington",
     "stateCode": "dc",
     "stateName": "District of Columbia",
-    "countyName": "Washington Metropolitan Area",
+    "countyName": "District of Columbia",
     "lat": 38.904247,
     "lng": -77.016517,
     "primaryZips": [
-      "70022"
+      "20036",
+      "20005",
+      "20001",
+      "20002",
+      "20006",
+      "20009",
+      "20007",
+      "20003",
+      "20016",
+      "20004",
+      "20011",
+      "20037"
     ],
     "demographics": {
       "population": 678972,
-      "popGrowth5YrPct": 1.2,
-      "medianHouseholdIncome": 88178,
-      "perCapitaIncome": 51143,
-      "medianAge": 36.4,
-      "daytimeWorkerPop": 420963,
-      "daytimePopSurgePct": 8.5,
-      "medianGrossRent": 1696,
-      "medianHomeValue": 370348,
+      "medianHouseholdIncome": 106287,
+      "perCapitaIncome": 75253,
+      "medianAge": 34.9,
+      "medianGrossRent": 1900,
+      "medianHomeValue": 724600,
       "provenance": {
-        "sourceName": "US Census Bureau ACS 5-Year (DP03/DP04/DP05) & PopEst",
-        "sourceUrl": "https://api.census.gov/data/2023/acs/acs5",
-        "datasetVintage": "2023-5YR",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "sourceName": "US Census Bureau ACS 5-Year Estimates 2023 (Table-Based Summary File)",
+        "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/",
+        "datasetVintage": "ACS-2023-5YR",
+        "verifiedAt": "2026-10-31T00:00:00Z",
         "granularity": "place"
-      }
-    },
-    "laborAndEconomy": {
-      "unemploymentRatePct": 3.8,
-      "avgWeeklyWageAllIndustries": 1340,
-      "newHousingPermits12Mo": 5092,
-      "permitsPer1kResidents": 7.5,
-      "femaRiskScore": 28.0,
-      "provenance": {
-        "sourceName": "BLS Local Area Unemployment Statistics (LAUS) & Census BPS",
-        "sourceUrl": "https://www.bls.gov/lau/",
-        "datasetVintage": "2024-M08",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
-      }
+      },
+      "popChange2020to2023Pct": -1.5,
+      "popChangeBasis": "Census Population Estimates, April 2020 base to July 2023"
     },
     "industries": [
       {
         "naicsCode": "722515",
         "slug": "coffee-shops",
         "label": "Coffee & Snack Shops",
-        "establishments": 146,
-        "per10kResidents": 2.15,
-        "usAvgPer10k": 2.15,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 227,
+        "per10kResidents": 3.38,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 159,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Washington."
+          "evidenceQuote": "227 employer establishments (NAICS 722515) across 28 ZIP codes whose USPS city is Washington, DC; density uses ACS 2023 ZCTA population (671,470). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722511",
         "slug": "restaurants",
         "label": "Full-Service Restaurants",
-        "establishments": 462,
-        "per10kResidents": 6.8,
-        "usAvgPer10k": 6.8,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 929,
+        "per10kResidents": 13.84,
+        "usAvgPer10k": 7.44,
+        "saturationIndex": 186,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Washington."
+          "evidenceQuote": "929 employer establishments (NAICS 722511) across 28 ZIP codes whose USPS city is Washington, DC; density uses ACS 2023 ZCTA population (671,470). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722513",
         "slug": "fast-food",
-        "label": "Fast Food Restaurants",
-        "establishments": 489,
-        "per10kResidents": 7.2,
-        "usAvgPer10k": 7.2,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Limited-Service / Fast Food Restaurants",
+        "establishments": 831,
+        "per10kResidents": 12.38,
+        "usAvgPer10k": 7.75,
+        "saturationIndex": 160,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Washington."
+          "evidenceQuote": "831 employer establishments (NAICS 722513) across 28 ZIP codes whose USPS city is Washington, DC; density uses ACS 2023 ZCTA population (671,470). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722410",
         "slug": "bars-taverns",
-        "label": "Bars & Drinking Places",
-        "establishments": 126,
-        "per10kResidents": 1.86,
-        "usAvgPer10k": 1.85,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Drinking Places (Alcoholic Beverages)",
+        "establishments": 155,
+        "per10kResidents": 2.31,
+        "usAvgPer10k": 0.9,
+        "saturationIndex": 256,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Washington."
-        }
-      },
-      {
-        "naicsCode": "812111",
-        "slug": "barber-shops",
-        "label": "Barber Shops",
-        "establishments": 92,
-        "per10kResidents": 1.35,
-        "usAvgPer10k": 1.35,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Washington."
+          "evidenceQuote": "155 employer establishments (NAICS 722410) across 28 ZIP codes whose USPS city is Washington, DC; density uses ACS 2023 ZCTA population (671,470). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812112",
         "slug": "beauty-salons",
         "label": "Beauty Salons & Hair Studios",
-        "establishments": 231,
-        "per10kResidents": 3.4,
-        "usAvgPer10k": 3.4,
-        "saturationIndex": 100,
+        "establishments": 149,
+        "per10kResidents": 2.22,
+        "usAvgPer10k": 2.31,
+        "saturationIndex": 96,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Washington."
+          "evidenceQuote": "149 employer establishments (NAICS 812112) across 28 ZIP codes whose USPS city is Washington, DC; density uses ACS 2023 ZCTA population (671,470). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812113",
         "slug": "nail-salons",
         "label": "Nail Salons",
-        "establishments": 143,
-        "per10kResidents": 2.11,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 100,
+        "establishments": 49,
+        "per10kResidents": 0.73,
+        "usAvgPer10k": 0.86,
+        "saturationIndex": 85,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Washington."
+          "evidenceQuote": "49 employer establishments (NAICS 812113) across 28 ZIP codes whose USPS city is Washington, DC; density uses ACS 2023 ZCTA population (671,470). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "713940",
         "slug": "gyms-fitness",
-        "label": "Fitness & Recreational Gyms",
-        "establishments": 85,
-        "per10kResidents": 1.25,
-        "usAvgPer10k": 1.25,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Fitness & Recreational Sports Centers",
+        "establishments": 121,
+        "per10kResidents": 1.8,
+        "usAvgPer10k": 1.0,
+        "saturationIndex": 181,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Washington."
+          "evidenceQuote": "121 employer establishments (NAICS 713940) across 28 ZIP codes whose USPS city is Washington, DC; density uses ACS 2023 ZCTA population (671,470). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812910",
         "slug": "pet-care",
-        "label": "Pet Care & Grooming",
-        "establishments": 65,
-        "per10kResidents": 0.96,
-        "usAvgPer10k": 0.95,
-        "saturationIndex": 101,
+        "label": "Pet Care & Grooming Services",
+        "establishments": 33,
+        "per10kResidents": 0.49,
+        "usAvgPer10k": 0.46,
+        "saturationIndex": 106,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Washington."
+          "evidenceQuote": "33 employer establishments (NAICS 812910) across 28 ZIP codes whose USPS city is Washington, DC; density uses ACS 2023 ZCTA population (671,470). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541940",
         "slug": "veterinary",
-        "label": "Veterinary Services",
-        "establishments": 71,
-        "per10kResidents": 1.05,
-        "usAvgPer10k": 1.05,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Veterinary Services & Animal Hospitals",
+        "establishments": 14,
+        "per10kResidents": 0.21,
+        "usAvgPer10k": 0.69,
+        "saturationIndex": 30,
+        "status": "underserved",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Washington."
+          "evidenceQuote": "14 employer establishments (NAICS 541940) across 28 ZIP codes whose USPS city is Washington, DC; density uses ACS 2023 ZCTA population (671,470). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "811111",
         "slug": "auto-repair",
         "label": "General Automotive Repair",
-        "establishments": 326,
-        "per10kResidents": 4.8,
-        "usAvgPer10k": 4.8,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 22,
+        "per10kResidents": 0.33,
+        "usAvgPer10k": 2.2,
+        "saturationIndex": 15,
+        "status": "underserved",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Washington."
+          "evidenceQuote": "22 employer establishments (NAICS 811111) across 28 ZIP codes whose USPS city is Washington, DC; density uses ACS 2023 ZCTA population (671,470). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "811192",
         "slug": "car-washes",
-        "label": "Car Washes & Detailing",
-        "establishments": 44,
-        "per10kResidents": 0.65,
-        "usAvgPer10k": 0.65,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Car Washes & Auto Detailing",
+        "establishments": 3,
+        "per10kResidents": 0.04,
+        "usAvgPer10k": 0.35,
+        "saturationIndex": 13,
+        "status": "underserved",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Washington."
-        }
-      },
-      {
-        "naicsCode": "812310",
-        "slug": "laundromats",
-        "label": "Coin Laundromats",
-        "establishments": 37,
-        "per10kResidents": 0.54,
-        "usAvgPer10k": 0.55,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Washington."
-        }
-      },
-      {
-        "naicsCode": "812320",
-        "slug": "dry-cleaners",
-        "label": "Dry Cleaning & Laundry",
-        "establishments": 58,
-        "per10kResidents": 0.85,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Washington."
+          "evidenceQuote": "3 employer establishments (NAICS 811192) across 28 ZIP codes whose USPS city is Washington, DC; density uses ACS 2023 ZCTA population (671,470). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621210",
         "slug": "dentists",
         "label": "Offices of Dentists",
-        "establishments": 265,
-        "per10kResidents": 3.9,
-        "usAvgPer10k": 3.9,
-        "saturationIndex": 100,
+        "establishments": 309,
+        "per10kResidents": 4.6,
+        "usAvgPer10k": 3.89,
+        "saturationIndex": 118,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Washington."
+          "evidenceQuote": "309 employer establishments (NAICS 621210) across 28 ZIP codes whose USPS city is Washington, DC; density uses ACS 2023 ZCTA population (671,470). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621310",
         "slug": "chiropractors",
         "label": "Offices of Chiropractors",
-        "establishments": 95,
-        "per10kResidents": 1.4,
-        "usAvgPer10k": 1.4,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 3,
+        "per10kResidents": 0.04,
+        "usAvgPer10k": 0.97,
+        "saturationIndex": 5,
+        "status": "underserved",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Washington."
+          "evidenceQuote": "3 employer establishments (NAICS 621310) across 28 ZIP codes whose USPS city is Washington, DC; density uses ACS 2023 ZCTA population (671,470). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621340",
         "slug": "physical-therapy",
-        "label": "Physical Therapy Clinics",
-        "establishments": 105,
-        "per10kResidents": 1.55,
-        "usAvgPer10k": 1.55,
-        "saturationIndex": 100,
+        "label": "Physical, Occupational & Speech Therapists",
+        "establishments": 98,
+        "per10kResidents": 1.46,
+        "usAvgPer10k": 1.3,
+        "saturationIndex": 112,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Washington."
+          "evidenceQuote": "98 employer establishments (NAICS 621340) across 28 ZIP codes whose USPS city is Washington, DC; density uses ACS 2023 ZCTA population (671,470). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "624410",
         "slug": "daycare",
         "label": "Child Day Care Services",
-        "establishments": 153,
-        "per10kResidents": 2.25,
-        "usAvgPer10k": 2.25,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 272,
+        "per10kResidents": 4.05,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 191,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Washington."
+          "evidenceQuote": "272 employer establishments (NAICS 624410) across 28 ZIP codes whose USPS city is Washington, DC; density uses ACS 2023 ZCTA population (671,470). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "445120",
         "slug": "convenience-stores",
-        "label": "Convenience Stores",
-        "establishments": 132,
-        "per10kResidents": 1.94,
-        "usAvgPer10k": 1.95,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Convenience Retail Stores",
+        "establishments": 117,
+        "per10kResidents": 1.74,
+        "usAvgPer10k": 0.82,
+        "saturationIndex": 213,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Washington."
+          "evidenceQuote": "117 employer establishments (NAICS 445120) across 28 ZIP codes whose USPS city is Washington, DC; density uses ACS 2023 ZCTA population (671,470). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "448140",
         "slug": "clothing-boutiques",
-        "label": "Family Clothing Stores",
-        "establishments": 112,
-        "per10kResidents": 1.65,
-        "usAvgPer10k": 1.65,
-        "saturationIndex": 100,
+        "label": "Family Clothing Stores & Boutiques",
+        "establishments": 46,
+        "per10kResidents": 0.69,
+        "usAvgPer10k": 0.65,
+        "saturationIndex": 105,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Washington."
-        }
-      },
-      {
-        "naicsCode": "445291",
-        "slug": "bakeries",
-        "label": "Retail Bakeries",
-        "establishments": 58,
-        "per10kResidents": 0.85,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Washington."
-        }
-      },
-      {
-        "naicsCode": "453110",
-        "slug": "florists",
-        "label": "Florists & Floral Gift",
-        "establishments": 34,
-        "per10kResidents": 0.5,
-        "usAvgPer10k": 0.5,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Washington."
+          "evidenceQuote": "46 employer establishments (NAICS 448140) across 28 ZIP codes whose USPS city is Washington, DC; density uses ACS 2023 ZCTA population (671,470). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541110",
         "slug": "law-firms",
         "label": "Offices of Lawyers",
-        "establishments": 333,
-        "per10kResidents": 4.9,
-        "usAvgPer10k": 4.9,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 1205,
+        "per10kResidents": 17.95,
+        "usAvgPer10k": 4.8,
+        "saturationIndex": 374,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Washington."
+          "evidenceQuote": "1205 employer establishments (NAICS 541110) across 28 ZIP codes whose USPS city is Washington, DC; density uses ACS 2023 ZCTA population (671,470). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541211",
         "slug": "accounting-cpa",
-        "label": "Offices of CPAs",
-        "establishments": 143,
-        "per10kResidents": 2.11,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 100,
+        "label": "Offices of Certified Public Accountants",
+        "establishments": 88,
+        "per10kResidents": 1.31,
+        "usAvgPer10k": 1.44,
+        "saturationIndex": 91,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Washington."
+          "evidenceQuote": "88 employer establishments (NAICS 541211) across 28 ZIP codes whose USPS city is Washington, DC; density uses ACS 2023 ZCTA population (671,470). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "531210",
         "slug": "real-estate-agencies",
-        "label": "Real Estate Brokerages",
-        "establishments": 258,
-        "per10kResidents": 3.8,
-        "usAvgPer10k": 3.8,
-        "saturationIndex": 100,
+        "label": "Offices of Real Estate Agents & Brokers",
+        "establishments": 372,
+        "per10kResidents": 5.54,
+        "usAvgPer10k": 4.74,
+        "saturationIndex": 117,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Washington."
+          "evidenceQuote": "372 employer establishments (NAICS 531210) across 28 ZIP codes whose USPS city is Washington, DC; density uses ACS 2023 ZCTA population (671,470). National benchmark = all US ZIP rows / US population."
         }
       }
     ],
-    "permitsAndTax": {
-      "generalBusinessLicenseRequired": false,
-      "businessLicenseFeeSummary": "No general city business license required. State of District of Columbia statutory filings apply.",
-      "businessLicensePortalUrl": "https://www.washingtondc.gov/permits",
-      "zoningLookupUrl": "https://www.washingtondc.gov/zoning",
-      "buildingPermitPortalUrl": "https://www.washingtondc.gov/building",
-      "certificateOfOccupancyFee": "$185 standard municipal inspection fee",
-      "avgPermitWaitDays": 30,
-      "shortTermRentalStatus": "restricted",
-      "foodTruckPermitStatus": "allowed",
-      "combinedSalesTaxRate": 0.075,
-      "stateTaxRate": 0.06,
-      "localTaxRate": 0.015,
-      "provenance": {
-        "sourceName": "Washington Municipal Code & State Department of Revenue",
-        "sourceUrl": "https://www.washingtondc.gov",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place",
-        "evidenceQuote": "Statutory municipal code standards."
-      }
-    },
-    "topTrafficCorridors": [
-      {
-        "roadName": "Main Arterial Corridor 1",
-        "segmentDescription": "Central Commercial Corridor through Washington",
-        "aadt": 81477,
-        "heavyTruckPct": 5.5,
-        "lat": 38.904247,
-        "lng": -77.016517,
-        "year": 2024,
-        "provenance": {
-          "sourceName": "District of Columbia DOT AADT Database",
-          "sourceUrl": "https://www.transportation.gov/",
-          "datasetVintage": "2024-AADT",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "place"
-        }
-      }
-    ],
-    "marketSignals": {
-      "reportedRetailRentSqFtYr": 42.5,
-      "reportedIndustrialRentSqFtYr": 19.1,
-      "topSearchedNaics30d": [
-        "722515",
-        "713940",
-        "812111"
-      ],
-      "verifiedLocalProsCount": 8
-    },
-    "scores": {
-      "overallViability": 53,
-      "purchasingPower": 50,
-      "growthMomentum": 56,
-      "costEfficiency": 68,
-      "regulatoryFriction": 48
-    },
+    "marketSignals": {},
     "executiveTravel": {
-      "timeZone": "America/New_York (ET: UTC-05:00)",
+      "timeZone": "America/New_York",
       "timeZoneAbbr": "ET",
       "utcOffset": "-05:00",
-      "primaryAirport": {
-        "name": "Washington Regional / Metropolitan Airport",
-        "iata": null,
-        "distanceMiles": 11.7,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
-      },
-      "powerPlugs": {
-        "types": [
-          "Type A (2-pin)",
-          "Type B (3-pin grounded)"
-        ],
-        "voltage": "120V",
-        "frequency": "60Hz",
-        "adapterAdvice": "Visitors from UK, EU, Australia, and Asia require a standard Type A/B plug adapter and dual-voltage converter."
-      },
-      "currency": {
-        "code": "USD",
-        "symbol": "$",
-        "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
-        "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
-      },
-      "climate": {
-        "summerHighF": 84,
-        "winterLowF": 22,
-        "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
-        "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
-      },
       "emergency": {
         "emergencyDispatch": "911",
-        "nonEmergencyPolice": "311 or local municipal dispatch",
-        "nearestTraumaHospital": "Washington Regional Memorial Hospital",
-        "hospitalAddress": "Medical Center District, Washington, DC"
+        "nearestTraumaHospital": "Children's National Hospital",
+        "hospitalAddress": "111 Michigan Ave, NW, Washington, DC 20010",
+        "cmsFacilityId": "093300",
+        "emergencyServices": true,
+        "source": "CMS Care Compare hospital general information (dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma or nearest claim.",
+        "erHospitals": [
+          {
+            "name": "Children's National Hospital",
+            "address": "111 Michigan Ave, NW, Washington, DC 20010",
+            "type": "Children's",
+            "cmsFacilityId": "093300"
+          },
+          {
+            "name": "George Washington Univ Hospital",
+            "address": "900 23rd St NW, Washington, DC 20037",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "090001"
+          },
+          {
+            "name": "Medstar Georgetown University Hospital",
+            "address": "3800 Reservoir Rd, Washington, DC 20007",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "090004"
+          },
+          {
+            "name": "Medstar Washington Hospital Center",
+            "address": "110 Irving Street NW, Washington, DC 20010",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "090011"
+          },
+          {
+            "name": "Sibley Memorial Hospital",
+            "address": "5255 Loughboro Rd NW, Washington, DC 20016",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "090005"
+          },
+          {
+            "name": "United Medical Center",
+            "address": "1310 Southern Avenue SE, Washington, DC 20032",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "090008"
+          },
+          {
+            "name": "Washington Dc VA Medical Center",
+            "address": "50 Irving Street N.W., Washington, DC 20422",
+            "type": "Acute Care - Veterans Administration",
+            "cmsFacilityId": "09002F"
+          }
+        ],
+        "erHospitalsSource": "CMS Care Compare hospital general information (dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma or nearest claim."
       },
-      "visitorLogistics": {
-        "tapWaterPotability": "100% Safe municipal drinking water conforming to EPA Safe Drinking Water Act standards.",
-        "salesTaxRefundPolicy": "International travelers may claim state sales tax refunds on qualifying departures at designated airport customs counters.",
-        "rideshareAvailability": "Ubiquitous (Uber and Lyft operational 24/7 across the metropolitan area)."
-      },
-      "provenance": {
-        "sourceName": "FAA Airport Database & International Trade Administration",
-        "sourceUrl": "https://www.trade.gov/",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
+      "primaryAirport": {
+        "name": "Ronald Reagan Washington National Airport",
+        "iata": "DCA",
+        "lat": 38.8521,
+        "lng": -77.037697,
+        "distanceMiles": 3.8,
+        "transitToDowntown": null,
+        "source": "OurAirports (public domain) for name, IATA code and coordinates; distance is straight-line from the U.S. Census Gazetteer city center point",
+        "sourceUrl": "https://ourairports.com/data/",
+        "cityCenterMethod": "Census Gazetteer internal point",
+        "retrieved": "2026-10-31"
       }
+    },
+    "housingAndTaxes": {
+      "medianHomeValue": 724600,
+      "medianGrossRent": 1900,
+      "medianRealEstateTaxPaid": 4180,
+      "effectivePropertyTaxRatePct": 0.58,
+      "countyName": "District of Columbia",
+      "source": "ACS 2023 5-yr: B25077 median home value, B25064 median gross rent, B25103 median real estate taxes paid. Effective rate = B25103 / B25077.",
+      "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/"
+    },
+    "climateNormals": {
+      "peakSummerHighF": 90,
+      "winterLowF": 28,
+      "annualRainfallInches": 45.6,
+      "sourceName": "NOAA NCEI U.S. Climate Normals 1991-2020 (Station USC00186350, 2.6 mi from Gazetteer center), retrieved 2026-10-31",
+      "sourceUrl": "https://www.ncei.noaa.gov/products/land-based-station/us-climate-normals"
+    },
+    "waterUtility": {
+      "pwsid": "DC0000002",
+      "providerName": "D.C. Water and Sewer Authority",
+      "populationServed": 632323,
+      "sourceType": "surface water",
+      "source": "U.S. EPA Safe Drinking Water Information System (SDWIS)",
+      "sourceUrl": "https://data.epa.gov/efservice/WATER_SYSTEM/PWSID/DC0000002/JSON",
+      "retrieved": "2026-10-31"
+    },
+    "higherEducation": {
+      "institutionCount": 23,
+      "totalEnrollment": 55676,
+      "institutions": [
+        {
+          "id": 131469,
+          "name": "George Washington University",
+          "studentSize": 11182,
+          "ownership": "Private nonprofit",
+          "schoolUrl": "https://www.gwu.edu/",
+          "lat": 38.89923,
+          "lng": -77.048363
+        },
+        {
+          "id": 131520,
+          "name": "Howard University",
+          "studentSize": 10108,
+          "ownership": "Private nonprofit",
+          "schoolUrl": "https://www.howard.edu/",
+          "lat": 38.922392,
+          "lng": -77.018966
+        },
+        {
+          "id": 459994,
+          "name": "Strayer University-Global Region",
+          "studentSize": 9376,
+          "ownership": "Private for-profit",
+          "schoolUrl": "https://www.strayer.edu/",
+          "lat": 38.904881,
+          "lng": -77.034133
+        },
+        {
+          "id": 131496,
+          "name": "Georgetown University",
+          "studentSize": 7569,
+          "ownership": "Private nonprofit",
+          "schoolUrl": "https://www.georgetown.edu/",
+          "lat": 38.908809,
+          "lng": -77.073463
+        },
+        {
+          "id": 131159,
+          "name": "American University",
+          "studentSize": 7266,
+          "ownership": "Private nonprofit",
+          "schoolUrl": "https://www.american.edu/",
+          "lat": 38.936005,
+          "lng": -77.088875
+        },
+        {
+          "id": 131399,
+          "name": "University of the District of Columbia",
+          "studentSize": 3351,
+          "ownership": "Public",
+          "schoolUrl": "https://www.udc.edu/",
+          "lat": 38.943819,
+          "lng": -77.066247
+        }
+      ],
+      "sourceName": "U.S. Department of Education College Scorecard",
+      "sourceUrl": "https://collegescorecard.ed.gov/",
+      "retrieved": "2026-10-31"
+    },
+    "evInfrastructure": {
+      "totalStations": 313,
+      "totalChargingPorts": 1096,
+      "dcFastPorts": 69,
+      "level2Ports": 1025,
+      "sampleStations": [
+        {
+          "name": "Washington, DC - Wisconsin Avenue (Floor G3, G4) - Tesla Destination",
+          "address": "4000 Wisconsin Ave, Washington, DC 20016",
+          "network": "Tesla Destination",
+          "dcFastPorts": 0,
+          "level2Ports": 34,
+          "lat": 38.94182,
+          "lng": -77.07701
+        },
+        {
+          "name": "Maza Gallerie",
+          "address": "5300 Wisconsin Ave NW, Washington, DC 20015",
+          "network": "NAYAX_ENERGY",
+          "dcFastPorts": 0,
+          "level2Ports": 20,
+          "lat": 38.95995,
+          "lng": -77.08611
+        },
+        {
+          "name": "Aerie",
+          "address": "2650 Woodley Rd NW, Washington, DC 20008",
+          "network": "LOOP",
+          "dcFastPorts": 0,
+          "level2Ports": 20,
+          "lat": 38.925391,
+          "lng": -77.055015
+        },
+        {
+          "name": "Washington Plaza Hotel - Tesla Destination",
+          "address": "10 Thomas Cir NW, Washington, DC 20005",
+          "network": "Tesla Destination",
+          "dcFastPorts": 0,
+          "level2Ports": 18,
+          "lat": 38.906456,
+          "lng": -77.031163
+        },
+        {
+          "name": "SCD 1700M LLC",
+          "address": "1150 17th Street Northwest, Washington, DC 20036",
+          "network": "Blink Network",
+          "dcFastPorts": 0,
+          "level2Ports": 16,
+          "lat": 38.905513,
+          "lng": -77.039193
+        }
+      ],
+      "sourceName": "U.S. Department of Energy / NLR Alternative Fuels Data Center (AFDC)",
+      "sourceUrl": "https://afdc.energy.gov/stations",
+      "retrieved": "2026-10-31"
+    },
+    "nationalParks": {
+      "parks": [
+        {
+          "parkCode": "cawo",
+          "fullName": "Carter G. Woodson Home National Historic Site",
+          "designation": "National Historic Site",
+          "distanceMiles": 0.6,
+          "description": "Before Dr. Carter G. Woodson, there was very little accurate written history about the lives and experiences of Americans of African descent. Today a National Historic Site, Dr. Woodson’s home served as the headquarters for the...",
+          "url": "https://www.nps.gov/cawo/index.htm",
+          "lat": 38.910893,
+          "lng": -77.024311
+        },
+        {
+          "parkCode": "foth",
+          "fullName": "Ford's Theatre National Historic Site",
+          "designation": "National Historic Site",
+          "distanceMiles": 0.7,
+          "description": "On April 14, 1865, President Abraham Lincoln was assassinated at Ford’s Theatre. Discover how everyday people experienced a national tragedy and how we have remembered a fallen leader. Today, in partnership with Ford’s Theatre Society...",
+          "url": "https://www.nps.gov/foth/index.htm",
+          "lat": 38.896688,
+          "lng": -77.025779
+        },
+        {
+          "parkCode": "mamc",
+          "fullName": "Mary McLeod Bethune Council House National Historic Site",
+          "designation": "National Historic Site",
+          "distanceMiles": 0.8,
+          "description": "Mary McLeod Bethune achieved her greatest recognition at the Washington, DC townhouse that is now this National Historic Site. The Council House was the first headquarters of the National Council of Negro Women (NCNW) and was Bethune’s...",
+          "url": "https://www.nps.gov/mamc/index.htm",
+          "lat": 38.908191,
+          "lng": -77.030967
+        },
+        {
+          "parkCode": "paav",
+          "fullName": "Pennsylvania Avenue",
+          "designation": "National Park System Unit",
+          "distanceMiles": 0.8,
+          "description": "A street unlike any other. It is known the world over as the heart of the Nation's Capital. America's history has marched, paraded, promenaded, and protested its way along the Avenue.",
+          "url": "https://www.nps.gov/paav/index.htm",
+          "lat": 38.894269,
+          "lng": -77.025066
+        },
+        {
+          "parkCode": "afam",
+          "fullName": "African American Civil War Memorial",
+          "designation": "National Park System Unit",
+          "distanceMiles": 1.0,
+          "description": "Over 200,000 African-American soldiers and sailors served in the U.S. Army and Navy during the Civil War. Their service helped to end the war and free over four million slaves. The African American Civil War Memorial honors their...",
+          "url": "https://www.nps.gov/afam/index.htm",
+          "lat": 38.9166,
+          "lng": -77.026
+        }
+      ],
+      "sourceName": "U.S. National Park Service",
+      "sourceUrl": "https://www.nps.gov/",
+      "retrieved": "2026-10-31"
     }
   }
 ]

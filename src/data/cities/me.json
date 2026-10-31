@@ -2,1406 +2,699 @@
   {
     "slug": "me/portland",
     "cityId": "2360545",
-    "countyFips": "23605",
+    "countyFips": "23005",
     "name": "Portland",
     "stateCode": "me",
     "stateName": "Maine",
-    "countyName": "Portland Metropolitan Area",
+    "countyName": "Cumberland County",
     "lat": 43.633157,
     "lng": -70.185305,
     "primaryZips": [
-      "70551"
+      "04101",
+      "04103",
+      "04102",
+      "04109"
     ],
     "demographics": {
       "population": 69104,
-      "popGrowth5YrPct": 0.9,
-      "medianHouseholdIncome": 82380,
-      "perCapitaIncome": 47780,
-      "medianAge": 36.4,
-      "daytimeWorkerPop": 42844,
-      "daytimePopSurgePct": 8.5,
-      "medianGrossRent": 1584,
-      "medianHomeValue": 345996,
+      "medianHouseholdIncome": 76174,
+      "perCapitaIncome": 52125,
+      "medianAge": 37.5,
+      "medianGrossRent": 1487,
+      "medianHomeValue": 452600,
       "provenance": {
-        "sourceName": "US Census Bureau ACS 5-Year (DP03/DP04/DP05) & PopEst",
-        "sourceUrl": "https://api.census.gov/data/2023/acs/acs5",
-        "datasetVintage": "2023-5YR",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "sourceName": "US Census Bureau ACS 5-Year Estimates 2023 (Table-Based Summary File)",
+        "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/",
+        "datasetVintage": "ACS-2023-5YR",
+        "verifiedAt": "2026-10-31T00:00:00Z",
         "granularity": "place"
-      }
-    },
-    "laborAndEconomy": {
-      "unemploymentRatePct": 3.8,
-      "avgWeeklyWageAllIndustries": 1340,
-      "newHousingPermits12Mo": 518,
-      "permitsPer1kResidents": 7.5,
-      "femaRiskScore": 28.0,
-      "provenance": {
-        "sourceName": "BLS Local Area Unemployment Statistics (LAUS) & Census BPS",
-        "sourceUrl": "https://www.bls.gov/lau/",
-        "datasetVintage": "2024-M08",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
-      }
+      },
+      "popChange2020to2023Pct": 1.0,
+      "popChangeBasis": "Census Population Estimates, April 2020 base to July 2023"
     },
     "industries": [
       {
         "naicsCode": "722515",
         "slug": "coffee-shops",
         "label": "Coffee & Snack Shops",
-        "establishments": 15,
-        "per10kResidents": 2.17,
-        "usAvgPer10k": 2.15,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 46,
+        "per10kResidents": 6.8,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 320,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Portland."
+          "evidenceQuote": "46 employer establishments (NAICS 722515) across 4 ZIP codes whose USPS city is Portland, ME; density uses ACS 2023 ZCTA population (67,663). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722511",
         "slug": "restaurants",
         "label": "Full-Service Restaurants",
-        "establishments": 47,
-        "per10kResidents": 6.8,
-        "usAvgPer10k": 6.8,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 178,
+        "per10kResidents": 26.31,
+        "usAvgPer10k": 7.44,
+        "saturationIndex": 354,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Portland."
+          "evidenceQuote": "178 employer establishments (NAICS 722511) across 4 ZIP codes whose USPS city is Portland, ME; density uses ACS 2023 ZCTA population (67,663). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722513",
         "slug": "fast-food",
-        "label": "Fast Food Restaurants",
-        "establishments": 50,
-        "per10kResidents": 7.24,
-        "usAvgPer10k": 7.2,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Limited-Service / Fast Food Restaurants",
+        "establishments": 74,
+        "per10kResidents": 10.94,
+        "usAvgPer10k": 7.75,
+        "saturationIndex": 141,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Portland."
+          "evidenceQuote": "74 employer establishments (NAICS 722513) across 4 ZIP codes whose USPS city is Portland, ME; density uses ACS 2023 ZCTA population (67,663). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722410",
         "slug": "bars-taverns",
-        "label": "Bars & Drinking Places",
-        "establishments": 13,
-        "per10kResidents": 1.88,
-        "usAvgPer10k": 1.85,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Drinking Places (Alcoholic Beverages)",
+        "establishments": 46,
+        "per10kResidents": 6.8,
+        "usAvgPer10k": 0.9,
+        "saturationIndex": 754,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Portland."
-        }
-      },
-      {
-        "naicsCode": "812111",
-        "slug": "barber-shops",
-        "label": "Barber Shops",
-        "establishments": 9,
-        "per10kResidents": 1.3,
-        "usAvgPer10k": 1.35,
-        "saturationIndex": 97,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Portland."
+          "evidenceQuote": "46 employer establishments (NAICS 722410) across 4 ZIP codes whose USPS city is Portland, ME; density uses ACS 2023 ZCTA population (67,663). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812112",
         "slug": "beauty-salons",
         "label": "Beauty Salons & Hair Studios",
-        "establishments": 23,
-        "per10kResidents": 3.33,
-        "usAvgPer10k": 3.4,
-        "saturationIndex": 98,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 29,
+        "per10kResidents": 4.29,
+        "usAvgPer10k": 2.31,
+        "saturationIndex": 186,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Portland."
+          "evidenceQuote": "29 employer establishments (NAICS 812112) across 4 ZIP codes whose USPS city is Portland, ME; density uses ACS 2023 ZCTA population (67,663). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812113",
         "slug": "nail-salons",
         "label": "Nail Salons",
-        "establishments": 15,
-        "per10kResidents": 2.17,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 103,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 10,
+        "per10kResidents": 1.48,
+        "usAvgPer10k": 0.86,
+        "saturationIndex": 172,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Portland."
+          "evidenceQuote": "10 employer establishments (NAICS 812113) across 4 ZIP codes whose USPS city is Portland, ME; density uses ACS 2023 ZCTA population (67,663). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "713940",
         "slug": "gyms-fitness",
-        "label": "Fitness & Recreational Gyms",
-        "establishments": 9,
-        "per10kResidents": 1.3,
-        "usAvgPer10k": 1.25,
-        "saturationIndex": 104,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Fitness & Recreational Sports Centers",
+        "establishments": 30,
+        "per10kResidents": 4.43,
+        "usAvgPer10k": 1.0,
+        "saturationIndex": 445,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Portland."
+          "evidenceQuote": "30 employer establishments (NAICS 713940) across 4 ZIP codes whose USPS city is Portland, ME; density uses ACS 2023 ZCTA population (67,663). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812910",
         "slug": "pet-care",
-        "label": "Pet Care & Grooming",
+        "label": "Pet Care & Grooming Services",
         "establishments": 7,
-        "per10kResidents": 1.01,
-        "usAvgPer10k": 0.95,
-        "saturationIndex": 106,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "per10kResidents": 1.03,
+        "usAvgPer10k": 0.46,
+        "saturationIndex": 223,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Portland."
+          "evidenceQuote": "7 employer establishments (NAICS 812910) across 4 ZIP codes whose USPS city is Portland, ME; density uses ACS 2023 ZCTA population (67,663). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541940",
         "slug": "veterinary",
-        "label": "Veterinary Services",
-        "establishments": 7,
-        "per10kResidents": 1.01,
-        "usAvgPer10k": 1.05,
-        "saturationIndex": 97,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Veterinary Services & Animal Hospitals",
+        "establishments": 19,
+        "per10kResidents": 2.81,
+        "usAvgPer10k": 0.69,
+        "saturationIndex": 407,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Portland."
+          "evidenceQuote": "19 employer establishments (NAICS 541940) across 4 ZIP codes whose USPS city is Portland, ME; density uses ACS 2023 ZCTA population (67,663). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "811111",
         "slug": "auto-repair",
         "label": "General Automotive Repair",
-        "establishments": 33,
-        "per10kResidents": 4.78,
-        "usAvgPer10k": 4.8,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 21,
+        "per10kResidents": 3.1,
+        "usAvgPer10k": 2.2,
+        "saturationIndex": 141,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Portland."
+          "evidenceQuote": "21 employer establishments (NAICS 811111) across 4 ZIP codes whose USPS city is Portland, ME; density uses ACS 2023 ZCTA population (67,663). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "811192",
         "slug": "car-washes",
-        "label": "Car Washes & Detailing",
+        "label": "Car Washes & Auto Detailing",
         "establishments": 4,
-        "per10kResidents": 0.58,
-        "usAvgPer10k": 0.65,
-        "saturationIndex": 90,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "per10kResidents": 0.59,
+        "usAvgPer10k": 0.35,
+        "saturationIndex": 169,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Portland."
-        }
-      },
-      {
-        "naicsCode": "812310",
-        "slug": "laundromats",
-        "label": "Coin Laundromats",
-        "establishments": 4,
-        "per10kResidents": 0.58,
-        "usAvgPer10k": 0.55,
-        "saturationIndex": 105,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Portland."
-        }
-      },
-      {
-        "naicsCode": "812320",
-        "slug": "dry-cleaners",
-        "label": "Dry Cleaning & Laundry",
-        "establishments": 6,
-        "per10kResidents": 0.87,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 102,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Portland."
+          "evidenceQuote": "4 employer establishments (NAICS 811192) across 4 ZIP codes whose USPS city is Portland, ME; density uses ACS 2023 ZCTA population (67,663). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621210",
         "slug": "dentists",
         "label": "Offices of Dentists",
-        "establishments": 27,
-        "per10kResidents": 3.91,
-        "usAvgPer10k": 3.9,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 44,
+        "per10kResidents": 6.5,
+        "usAvgPer10k": 3.89,
+        "saturationIndex": 167,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Portland."
+          "evidenceQuote": "44 employer establishments (NAICS 621210) across 4 ZIP codes whose USPS city is Portland, ME; density uses ACS 2023 ZCTA population (67,663). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621310",
         "slug": "chiropractors",
         "label": "Offices of Chiropractors",
-        "establishments": 10,
-        "per10kResidents": 1.45,
-        "usAvgPer10k": 1.4,
-        "saturationIndex": 103,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 18,
+        "per10kResidents": 2.66,
+        "usAvgPer10k": 0.97,
+        "saturationIndex": 274,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Portland."
+          "evidenceQuote": "18 employer establishments (NAICS 621310) across 4 ZIP codes whose USPS city is Portland, ME; density uses ACS 2023 ZCTA population (67,663). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621340",
         "slug": "physical-therapy",
-        "label": "Physical Therapy Clinics",
-        "establishments": 11,
-        "per10kResidents": 1.59,
-        "usAvgPer10k": 1.55,
-        "saturationIndex": 102,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Physical, Occupational & Speech Therapists",
+        "establishments": 21,
+        "per10kResidents": 3.1,
+        "usAvgPer10k": 1.3,
+        "saturationIndex": 238,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Portland."
+          "evidenceQuote": "21 employer establishments (NAICS 621340) across 4 ZIP codes whose USPS city is Portland, ME; density uses ACS 2023 ZCTA population (67,663). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "624410",
         "slug": "daycare",
         "label": "Child Day Care Services",
-        "establishments": 16,
-        "per10kResidents": 2.32,
-        "usAvgPer10k": 2.25,
-        "saturationIndex": 103,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 33,
+        "per10kResidents": 4.88,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 230,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Portland."
+          "evidenceQuote": "33 employer establishments (NAICS 624410) across 4 ZIP codes whose USPS city is Portland, ME; density uses ACS 2023 ZCTA population (67,663). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "445120",
         "slug": "convenience-stores",
-        "label": "Convenience Stores",
-        "establishments": 13,
-        "per10kResidents": 1.88,
-        "usAvgPer10k": 1.95,
-        "saturationIndex": 97,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Convenience Retail Stores",
+        "establishments": 10,
+        "per10kResidents": 1.48,
+        "usAvgPer10k": 0.82,
+        "saturationIndex": 180,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Portland."
+          "evidenceQuote": "10 employer establishments (NAICS 445120) across 4 ZIP codes whose USPS city is Portland, ME; density uses ACS 2023 ZCTA population (67,663). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "448140",
         "slug": "clothing-boutiques",
-        "label": "Family Clothing Stores",
-        "establishments": 11,
-        "per10kResidents": 1.59,
-        "usAvgPer10k": 1.65,
-        "saturationIndex": 97,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Family Clothing Stores & Boutiques",
+        "establishments": 7,
+        "per10kResidents": 1.03,
+        "usAvgPer10k": 0.65,
+        "saturationIndex": 158,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Portland."
-        }
-      },
-      {
-        "naicsCode": "445291",
-        "slug": "bakeries",
-        "label": "Retail Bakeries",
-        "establishments": 6,
-        "per10kResidents": 0.87,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 102,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Portland."
-        }
-      },
-      {
-        "naicsCode": "453110",
-        "slug": "florists",
-        "label": "Florists & Floral Gift",
-        "establishments": 3,
-        "per10kResidents": 0.43,
-        "usAvgPer10k": 0.5,
-        "saturationIndex": 88,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Portland."
+          "evidenceQuote": "7 employer establishments (NAICS 448140) across 4 ZIP codes whose USPS city is Portland, ME; density uses ACS 2023 ZCTA population (67,663). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541110",
         "slug": "law-firms",
         "label": "Offices of Lawyers",
-        "establishments": 34,
-        "per10kResidents": 4.92,
-        "usAvgPer10k": 4.9,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 142,
+        "per10kResidents": 20.99,
+        "usAvgPer10k": 4.8,
+        "saturationIndex": 437,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Portland."
+          "evidenceQuote": "142 employer establishments (NAICS 541110) across 4 ZIP codes whose USPS city is Portland, ME; density uses ACS 2023 ZCTA population (67,663). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541211",
         "slug": "accounting-cpa",
-        "label": "Offices of CPAs",
-        "establishments": 15,
-        "per10kResidents": 2.17,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 103,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Offices of Certified Public Accountants",
+        "establishments": 30,
+        "per10kResidents": 4.43,
+        "usAvgPer10k": 1.44,
+        "saturationIndex": 308,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Portland."
+          "evidenceQuote": "30 employer establishments (NAICS 541211) across 4 ZIP codes whose USPS city is Portland, ME; density uses ACS 2023 ZCTA population (67,663). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "531210",
         "slug": "real-estate-agencies",
-        "label": "Real Estate Brokerages",
-        "establishments": 26,
-        "per10kResidents": 3.76,
-        "usAvgPer10k": 3.8,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Offices of Real Estate Agents & Brokers",
+        "establishments": 124,
+        "per10kResidents": 18.33,
+        "usAvgPer10k": 4.74,
+        "saturationIndex": 386,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Portland."
+          "evidenceQuote": "124 employer establishments (NAICS 531210) across 4 ZIP codes whose USPS city is Portland, ME; density uses ACS 2023 ZCTA population (67,663). National benchmark = all US ZIP rows / US population."
         }
       }
     ],
-    "permitsAndTax": {
-      "generalBusinessLicenseRequired": false,
-      "businessLicenseFeeSummary": "No general city business license required. State of Maine statutory filings apply.",
-      "businessLicensePortalUrl": "https://www.portlandme.gov/permits",
-      "zoningLookupUrl": "https://www.portlandme.gov/zoning",
-      "buildingPermitPortalUrl": "https://www.portlandme.gov/building",
-      "certificateOfOccupancyFee": "$185 standard municipal inspection fee",
-      "avgPermitWaitDays": 30,
-      "shortTermRentalStatus": "restricted",
-      "foodTruckPermitStatus": "allowed",
-      "combinedSalesTaxRate": 0.07,
-      "stateTaxRate": 0.055,
-      "localTaxRate": 0.015,
-      "provenance": {
-        "sourceName": "Portland Municipal Code & State Department of Revenue",
-        "sourceUrl": "https://www.portlandme.gov",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place",
-        "evidenceQuote": "Statutory municipal code standards."
-      }
-    },
-    "topTrafficCorridors": [
-      {
-        "roadName": "Main Arterial Corridor 1",
-        "segmentDescription": "Central Commercial Corridor through Portland",
-        "aadt": 8292,
-        "heavyTruckPct": 5.5,
-        "lat": 43.633157,
-        "lng": -70.185305,
-        "year": 2024,
-        "provenance": {
-          "sourceName": "Maine DOT AADT Database",
-          "sourceUrl": "https://www.transportation.gov/",
-          "datasetVintage": "2024-AADT",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "place"
-        }
-      }
-    ],
-    "marketSignals": {
-      "reportedRetailRentSqFtYr": 41.0,
-      "reportedIndustrialRentSqFtYr": 18.4,
-      "topSearchedNaics30d": [
-        "722515",
-        "713940",
-        "812111"
-      ],
-      "verifiedLocalProsCount": 8
-    },
-    "scores": {
-      "overallViability": 50,
-      "purchasingPower": 48,
-      "growthMomentum": 52,
-      "costEfficiency": 70,
-      "regulatoryFriction": 48
-    },
+    "marketSignals": {},
     "executiveTravel": {
-      "timeZone": "America/New_York (ET: UTC-05:00)",
+      "timeZone": "America/New_York",
       "timeZoneAbbr": "ET",
       "utcOffset": "-05:00",
-      "primaryAirport": {
-        "name": "Portland Regional / Metropolitan Airport",
-        "iata": null,
-        "distanceMiles": 10.6,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
-      },
-      "powerPlugs": {
-        "types": [
-          "Type A (2-pin)",
-          "Type B (3-pin grounded)"
-        ],
-        "voltage": "120V",
-        "frequency": "60Hz",
-        "adapterAdvice": "Visitors from UK, EU, Australia, and Asia require a standard Type A/B plug adapter and dual-voltage converter."
-      },
-      "currency": {
-        "code": "USD",
-        "symbol": "$",
-        "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
-        "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
-      },
-      "climate": {
-        "summerHighF": 84,
-        "winterLowF": 22,
-        "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
-        "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
-      },
       "emergency": {
         "emergencyDispatch": "911",
-        "nonEmergencyPolice": "311 or local municipal dispatch",
-        "nearestTraumaHospital": "Portland Regional Memorial Hospital",
-        "hospitalAddress": "Medical Center District, Portland, ME"
+        "nearestTraumaHospital": "Mainehealth Maine Medical Center",
+        "hospitalAddress": "22 Bramhall St, Portland, ME 04102",
+        "cmsFacilityId": "200009",
+        "emergencyServices": true,
+        "source": "CMS Care Compare hospital general information (dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma or nearest claim.",
+        "erHospitals": [
+          {
+            "name": "Mainehealth Maine Medical Center",
+            "address": "22 Bramhall St, Portland, ME 04102",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "200009"
+          },
+          {
+            "name": "Northern Light Mercy Hospital",
+            "address": "144 State Street, Portland, ME 04101",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "200008"
+          }
+        ],
+        "erHospitalsSource": "CMS Care Compare hospital general information (dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma or nearest claim."
       },
-      "visitorLogistics": {
-        "tapWaterPotability": "100% Safe municipal drinking water conforming to EPA Safe Drinking Water Act standards.",
-        "salesTaxRefundPolicy": "International travelers may claim state sales tax refunds on qualifying departures at designated airport customs counters.",
-        "rideshareAvailability": "Ubiquitous (Uber and Lyft operational 24/7 across the metropolitan area)."
-      },
-      "provenance": {
-        "sourceName": "FAA Airport Database & International Trade Administration",
-        "sourceUrl": "https://www.trade.gov/",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
+      "primaryAirport": {
+        "name": "Portland International Jetport",
+        "iata": "PWM",
+        "lat": 43.646198,
+        "lng": -70.309303,
+        "distanceMiles": 6.3,
+        "transitToDowntown": null,
+        "source": "OurAirports (public domain) for name, IATA code and coordinates; distance is straight-line from the U.S. Census Gazetteer city center point",
+        "sourceUrl": "https://ourairports.com/data/",
+        "cityCenterMethod": "Census Gazetteer internal point",
+        "retrieved": "2026-10-31"
       }
+    },
+    "housingAndTaxes": {
+      "medianHomeValue": 452600,
+      "medianGrossRent": 1487,
+      "medianRealEstateTaxPaid": 5598,
+      "effectivePropertyTaxRatePct": 1.24,
+      "countyName": "Cumberland County",
+      "source": "ACS 2023 5-yr: B25077 median home value, B25064 median gross rent, B25103 median real estate taxes paid. Effective rate = B25103 / B25077.",
+      "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/"
+    },
+    "climateNormals": {
+      "peakSummerHighF": 80,
+      "winterLowF": 16,
+      "annualRainfallInches": 48.1,
+      "sourceName": "NOAA NCEI U.S. Climate Normals 1991-2020 (Station USW00014764, 5.9 mi from Gazetteer center), retrieved 2026-10-31",
+      "sourceUrl": "https://www.ncei.noaa.gov/products/land-based-station/us-climate-normals"
+    },
+    "waterUtility": {
+      "pwsid": "ME0091300",
+      "providerName": "Portland Water District-Greater",
+      "populationServed": 135068,
+      "sourceType": "surface water",
+      "source": "U.S. EPA Safe Drinking Water Information System (SDWIS)",
+      "sourceUrl": "https://data.epa.gov/efservice/WATER_SYSTEM/PWSID/ME0091300/JSON",
+      "retrieved": "2026-10-31"
+    },
+    "higherEducation": {
+      "institutionCount": 3,
+      "totalEnrollment": 4637,
+      "institutions": [
+        {
+          "id": 161554,
+          "name": "University of Southern Maine",
+          "studentSize": 4222,
+          "ownership": "Public",
+          "schoolUrl": "https://usm.maine.edu/",
+          "lat": 43.662863,
+          "lng": -70.274247
+        },
+        {
+          "id": 161509,
+          "name": "Maine College of Art & Design",
+          "studentSize": 415,
+          "ownership": "Private nonprofit",
+          "schoolUrl": "https://www.meca.edu/",
+          "lat": 43.655743,
+          "lng": -70.261015
+        },
+        {
+          "id": 462044,
+          "name": "Institute for Doctoral Studies in the Visual Arts",
+          "studentSize": null,
+          "ownership": "Private nonprofit",
+          "schoolUrl": "https://www.idsva.edu/",
+          "lat": 43.661402,
+          "lng": -70.251742
+        }
+      ],
+      "sourceName": "U.S. Department of Education College Scorecard",
+      "sourceUrl": "https://collegescorecard.ed.gov/",
+      "retrieved": "2026-10-31"
+    },
+    "evInfrastructure": {
+      "totalStations": 56,
+      "totalChargingPorts": 218,
+      "dcFastPorts": 32,
+      "level2Ports": 186,
+      "sampleStations": [
+        {
+          "name": "USM Parking Garage",
+          "address": "50 Bedford Street, Portland, ME 04101",
+          "network": "Blink Network",
+          "dcFastPorts": 0,
+          "level2Ports": 58,
+          "lat": 43.662308,
+          "lng": -70.273914
+        },
+        {
+          "name": "Dougherty Commons",
+          "address": "45 Dougherty Court, Portland, ME 04102",
+          "network": "RED_E",
+          "dcFastPorts": 0,
+          "level2Ports": 18,
+          "lat": 43.657093,
+          "lng": -70.28693
+        },
+        {
+          "name": "Portland, ME - Tesla Supercharger",
+          "address": "295 Forest Avenue, Portland, ME 04101",
+          "network": "Tesla",
+          "dcFastPorts": 12,
+          "level2Ports": 0,
+          "lat": 43.664472,
+          "lng": -70.269513
+        },
+        {
+          "name": "Portland, ME - Brighton Avenue - Tesla Supercharger",
+          "address": "1100 Brighton Ave, Portland, ME 04102",
+          "network": "Tesla",
+          "dcFastPorts": 12,
+          "level2Ports": 0,
+          "lat": 43.675418,
+          "lng": -70.32491
+        },
+        {
+          "name": "Unum",
+          "address": "2211 Congress St, Portland, ME 04122",
+          "network": "Non-Networked",
+          "dcFastPorts": 0,
+          "level2Ports": 12,
+          "lat": 43.653659,
+          "lng": -70.326199
+        }
+      ],
+      "sourceName": "U.S. Department of Energy / NLR Alternative Fuels Data Center (AFDC)",
+      "sourceUrl": "https://afdc.energy.gov/stations",
+      "retrieved": "2026-10-31"
+    },
+    "nationalParks": {
+      "parks": [
+        {
+          "parkCode": "frpe",
+          "fullName": "Frances Perkins National Monument",
+          "designation": "National Monument",
+          "distanceMiles": 40.5,
+          "description": "Known as the first woman to hold a presidential cabinet position and the “Woman behind the New Deal,” Frances Perkins championed many labor rights that Americans enjoy today, including safety standards, Social Security, and shorter...",
+          "url": "https://www.nps.gov/frpe/index.htm",
+          "lat": 44.0052,
+          "lng": -69.5568
+        }
+      ],
+      "sourceName": "U.S. National Park Service",
+      "sourceUrl": "https://www.nps.gov/",
+      "retrieved": "2026-10-31"
     }
   },
   {
     "slug": "me/lewiston",
     "cityId": "2338740",
-    "countyFips": "23387",
+    "countyFips": "23001",
     "name": "Lewiston",
     "stateCode": "me",
     "stateName": "Maine",
-    "countyName": "Lewiston Metropolitan Area",
+    "countyName": "Androscoggin County",
     "lat": 44.089513,
     "lng": -70.172095,
     "primaryZips": [
-      "71053"
+      "04240"
     ],
     "demographics": {
       "population": 38404,
-      "popGrowth5YrPct": 3.5,
-      "medianHouseholdIncome": 84379,
-      "perCapitaIncome": 48940,
-      "medianAge": 36.4,
-      "daytimeWorkerPop": 23810,
-      "daytimePopSurgePct": 8.5,
-      "medianGrossRent": 1623,
-      "medianHomeValue": 354392,
+      "medianHouseholdIncome": 56558,
+      "perCapitaIncome": 30023,
+      "medianAge": 37.8,
+      "medianGrossRent": 954,
+      "medianHomeValue": 214200,
       "provenance": {
-        "sourceName": "US Census Bureau ACS 5-Year (DP03/DP04/DP05) & PopEst",
-        "sourceUrl": "https://api.census.gov/data/2023/acs/acs5",
-        "datasetVintage": "2023-5YR",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "sourceName": "US Census Bureau ACS 5-Year Estimates 2023 (Table-Based Summary File)",
+        "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/",
+        "datasetVintage": "ACS-2023-5YR",
+        "verifiedAt": "2026-10-31T00:00:00Z",
         "granularity": "place"
-      }
-    },
-    "laborAndEconomy": {
-      "unemploymentRatePct": 3.8,
-      "avgWeeklyWageAllIndustries": 1340,
-      "newHousingPermits12Mo": 288,
-      "permitsPer1kResidents": 7.5,
-      "femaRiskScore": 28.0,
-      "provenance": {
-        "sourceName": "BLS Local Area Unemployment Statistics (LAUS) & Census BPS",
-        "sourceUrl": "https://www.bls.gov/lau/",
-        "datasetVintage": "2024-M08",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
-      }
+      },
+      "popChange2020to2023Pct": 3.4,
+      "popChangeBasis": "Census Population Estimates, April 2020 base to July 2023"
     },
     "industries": [
       {
         "naicsCode": "722515",
         "slug": "coffee-shops",
         "label": "Coffee & Snack Shops",
-        "establishments": 8,
-        "per10kResidents": 2.08,
-        "usAvgPer10k": 2.15,
-        "saturationIndex": 98,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Lewiston."
-        }
-      },
-      {
-        "naicsCode": "722511",
-        "slug": "restaurants",
-        "label": "Full-Service Restaurants",
-        "establishments": 26,
-        "per10kResidents": 6.77,
-        "usAvgPer10k": 6.8,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Lewiston."
-        }
-      },
-      {
-        "naicsCode": "722513",
-        "slug": "fast-food",
-        "label": "Fast Food Restaurants",
-        "establishments": 28,
-        "per10kResidents": 7.29,
-        "usAvgPer10k": 7.2,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Lewiston."
-        }
-      },
-      {
-        "naicsCode": "722410",
-        "slug": "bars-taverns",
-        "label": "Bars & Drinking Places",
-        "establishments": 7,
-        "per10kResidents": 1.82,
-        "usAvgPer10k": 1.85,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Lewiston."
-        }
-      },
-      {
-        "naicsCode": "812111",
-        "slug": "barber-shops",
-        "label": "Barber Shops",
-        "establishments": 5,
-        "per10kResidents": 1.3,
-        "usAvgPer10k": 1.35,
-        "saturationIndex": 97,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Lewiston."
-        }
-      },
-      {
-        "naicsCode": "812112",
-        "slug": "beauty-salons",
-        "label": "Beauty Salons & Hair Studios",
         "establishments": 13,
-        "per10kResidents": 3.39,
-        "usAvgPer10k": 3.4,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "per10kResidents": 3.43,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 162,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Lewiston."
-        }
-      },
-      {
-        "naicsCode": "812113",
-        "slug": "nail-salons",
-        "label": "Nail Salons",
-        "establishments": 8,
-        "per10kResidents": 2.08,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Lewiston."
-        }
-      },
-      {
-        "naicsCode": "713940",
-        "slug": "gyms-fitness",
-        "label": "Fitness & Recreational Gyms",
-        "establishments": 5,
-        "per10kResidents": 1.3,
-        "usAvgPer10k": 1.25,
-        "saturationIndex": 103,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Lewiston."
-        }
-      },
-      {
-        "naicsCode": "812910",
-        "slug": "pet-care",
-        "label": "Pet Care & Grooming",
-        "establishments": 4,
-        "per10kResidents": 1.04,
-        "usAvgPer10k": 0.95,
-        "saturationIndex": 108,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Lewiston."
-        }
-      },
-      {
-        "naicsCode": "541940",
-        "slug": "veterinary",
-        "label": "Veterinary Services",
-        "establishments": 4,
-        "per10kResidents": 1.04,
-        "usAvgPer10k": 1.05,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Lewiston."
-        }
-      },
-      {
-        "naicsCode": "811111",
-        "slug": "auto-repair",
-        "label": "General Automotive Repair",
-        "establishments": 18,
-        "per10kResidents": 4.69,
-        "usAvgPer10k": 4.8,
-        "saturationIndex": 98,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Lewiston."
-        }
-      },
-      {
-        "naicsCode": "811192",
-        "slug": "car-washes",
-        "label": "Car Washes & Detailing",
-        "establishments": 2,
-        "per10kResidents": 0.52,
-        "usAvgPer10k": 0.65,
-        "saturationIndex": 84,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Lewiston."
-        }
-      },
-      {
-        "naicsCode": "812310",
-        "slug": "laundromats",
-        "label": "Coin Laundromats",
-        "establishments": 2,
-        "per10kResidents": 0.52,
-        "usAvgPer10k": 0.55,
-        "saturationIndex": 96,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Lewiston."
-        }
-      },
-      {
-        "naicsCode": "812320",
-        "slug": "dry-cleaners",
-        "label": "Dry Cleaning & Laundry",
-        "establishments": 3,
-        "per10kResidents": 0.78,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 94,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Lewiston."
-        }
-      },
-      {
-        "naicsCode": "621210",
-        "slug": "dentists",
-        "label": "Offices of Dentists",
-        "establishments": 15,
-        "per10kResidents": 3.91,
-        "usAvgPer10k": 3.9,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Lewiston."
-        }
-      },
-      {
-        "naicsCode": "621310",
-        "slug": "chiropractors",
-        "label": "Offices of Chiropractors",
-        "establishments": 5,
-        "per10kResidents": 1.3,
-        "usAvgPer10k": 1.4,
-        "saturationIndex": 94,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Lewiston."
-        }
-      },
-      {
-        "naicsCode": "621340",
-        "slug": "physical-therapy",
-        "label": "Physical Therapy Clinics",
-        "establishments": 6,
-        "per10kResidents": 1.56,
-        "usAvgPer10k": 1.55,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Lewiston."
-        }
-      },
-      {
-        "naicsCode": "624410",
-        "slug": "daycare",
-        "label": "Child Day Care Services",
-        "establishments": 9,
-        "per10kResidents": 2.34,
-        "usAvgPer10k": 2.25,
-        "saturationIndex": 103,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Lewiston."
-        }
-      },
-      {
-        "naicsCode": "445120",
-        "slug": "convenience-stores",
-        "label": "Convenience Stores",
-        "establishments": 7,
-        "per10kResidents": 1.82,
-        "usAvgPer10k": 1.95,
-        "saturationIndex": 95,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Lewiston."
-        }
-      },
-      {
-        "naicsCode": "448140",
-        "slug": "clothing-boutiques",
-        "label": "Family Clothing Stores",
-        "establishments": 6,
-        "per10kResidents": 1.56,
-        "usAvgPer10k": 1.65,
-        "saturationIndex": 96,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Lewiston."
-        }
-      },
-      {
-        "naicsCode": "445291",
-        "slug": "bakeries",
-        "label": "Retail Bakeries",
-        "establishments": 3,
-        "per10kResidents": 0.78,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 94,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Lewiston."
-        }
-      },
-      {
-        "naicsCode": "453110",
-        "slug": "florists",
-        "label": "Florists & Floral Gift",
-        "establishments": 2,
-        "per10kResidents": 0.52,
-        "usAvgPer10k": 0.5,
-        "saturationIndex": 103,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Lewiston."
-        }
-      },
-      {
-        "naicsCode": "541110",
-        "slug": "law-firms",
-        "label": "Offices of Lawyers",
-        "establishments": 19,
-        "per10kResidents": 4.95,
-        "usAvgPer10k": 4.9,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Lewiston."
-        }
-      },
-      {
-        "naicsCode": "541211",
-        "slug": "accounting-cpa",
-        "label": "Offices of CPAs",
-        "establishments": 8,
-        "per10kResidents": 2.08,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Lewiston."
-        }
-      },
-      {
-        "naicsCode": "531210",
-        "slug": "real-estate-agencies",
-        "label": "Real Estate Brokerages",
-        "establishments": 15,
-        "per10kResidents": 3.91,
-        "usAvgPer10k": 3.8,
-        "saturationIndex": 102,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Lewiston."
-        }
-      }
-    ],
-    "permitsAndTax": {
-      "generalBusinessLicenseRequired": false,
-      "businessLicenseFeeSummary": "No general city business license required. State of Maine statutory filings apply.",
-      "businessLicensePortalUrl": "https://www.lewistonme.gov/permits",
-      "zoningLookupUrl": "https://www.lewistonme.gov/zoning",
-      "buildingPermitPortalUrl": "https://www.lewistonme.gov/building",
-      "certificateOfOccupancyFee": "$185 standard municipal inspection fee",
-      "avgPermitWaitDays": 30,
-      "shortTermRentalStatus": "restricted",
-      "foodTruckPermitStatus": "allowed",
-      "combinedSalesTaxRate": 0.07,
-      "stateTaxRate": 0.055,
-      "localTaxRate": 0.015,
-      "provenance": {
-        "sourceName": "Lewiston Municipal Code & State Department of Revenue",
-        "sourceUrl": "https://www.lewistonme.gov",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place",
-        "evidenceQuote": "Statutory municipal code standards."
-      }
-    },
-    "topTrafficCorridors": [
-      {
-        "roadName": "Main Arterial Corridor 1",
-        "segmentDescription": "Central Commercial Corridor through Lewiston",
-        "aadt": 4608,
-        "heavyTruckPct": 5.5,
-        "lat": 44.089513,
-        "lng": -70.172095,
-        "year": 2024,
-        "provenance": {
-          "sourceName": "Maine DOT AADT Database",
-          "sourceUrl": "https://www.transportation.gov/",
-          "datasetVintage": "2024-AADT",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "place"
-        }
-      }
-    ],
-    "marketSignals": {
-      "reportedRetailRentSqFtYr": 42.5,
-      "reportedIndustrialRentSqFtYr": 19.1,
-      "topSearchedNaics30d": [
-        "722515",
-        "713940",
-        "812111"
-      ],
-      "verifiedLocalProsCount": 8
-    },
-    "scores": {
-      "overallViability": 56,
-      "purchasingPower": 53,
-      "growthMomentum": 59,
-      "costEfficiency": 66,
-      "regulatoryFriction": 48
-    },
-    "executiveTravel": {
-      "timeZone": "America/New_York (ET: UTC-05:00)",
-      "timeZoneAbbr": "ET",
-      "utcOffset": "-05:00",
-      "primaryAirport": {
-        "name": "Lewiston Regional / Metropolitan Airport",
-        "iata": null,
-        "distanceMiles": 10.3,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
-      },
-      "powerPlugs": {
-        "types": [
-          "Type A (2-pin)",
-          "Type B (3-pin grounded)"
-        ],
-        "voltage": "120V",
-        "frequency": "60Hz",
-        "adapterAdvice": "Visitors from UK, EU, Australia, and Asia require a standard Type A/B plug adapter and dual-voltage converter."
-      },
-      "currency": {
-        "code": "USD",
-        "symbol": "$",
-        "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
-        "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
-      },
-      "climate": {
-        "summerHighF": 84,
-        "winterLowF": 22,
-        "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
-        "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
-      },
-      "emergency": {
-        "emergencyDispatch": "911",
-        "nonEmergencyPolice": "311 or local municipal dispatch",
-        "nearestTraumaHospital": "Lewiston Regional Memorial Hospital",
-        "hospitalAddress": "Medical Center District, Lewiston, ME"
-      },
-      "visitorLogistics": {
-        "tapWaterPotability": "100% Safe municipal drinking water conforming to EPA Safe Drinking Water Act standards.",
-        "salesTaxRefundPolicy": "International travelers may claim state sales tax refunds on qualifying departures at designated airport customs counters.",
-        "rideshareAvailability": "Ubiquitous (Uber and Lyft operational 24/7 across the metropolitan area)."
-      },
-      "provenance": {
-        "sourceName": "FAA Airport Database & International Trade Administration",
-        "sourceUrl": "https://www.trade.gov/",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
-      }
-    }
-  },
-  {
-    "slug": "me/bangor",
-    "cityId": "2302795",
-    "countyFips": "23027",
-    "name": "Bangor",
-    "stateCode": "me",
-    "stateName": "Maine",
-    "countyName": "Bangor Metropolitan Area",
-    "lat": 44.829625,
-    "lng": -68.788767,
-    "primaryZips": [
-      "71278"
-    ],
-    "demographics": {
-      "population": 31628,
-      "popGrowth5YrPct": -0.3,
-      "medianHouseholdIncome": 79469,
-      "perCapitaIncome": 46092,
-      "medianAge": 36.4,
-      "daytimeWorkerPop": 19609,
-      "daytimePopSurgePct": 8.5,
-      "medianGrossRent": 1528,
-      "medianHomeValue": 333770,
-      "provenance": {
-        "sourceName": "US Census Bureau ACS 5-Year (DP03/DP04/DP05) & PopEst",
-        "sourceUrl": "https://api.census.gov/data/2023/acs/acs5",
-        "datasetVintage": "2023-5YR",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
-      }
-    },
-    "laborAndEconomy": {
-      "unemploymentRatePct": 3.8,
-      "avgWeeklyWageAllIndustries": 1340,
-      "newHousingPermits12Mo": 237,
-      "permitsPer1kResidents": 7.5,
-      "femaRiskScore": 28.0,
-      "provenance": {
-        "sourceName": "BLS Local Area Unemployment Statistics (LAUS) & Census BPS",
-        "sourceUrl": "https://www.bls.gov/lau/",
-        "datasetVintage": "2024-M08",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
-      }
-    },
-    "industries": [
-      {
-        "naicsCode": "722515",
-        "slug": "coffee-shops",
-        "label": "Coffee & Snack Shops",
-        "establishments": 7,
-        "per10kResidents": 2.21,
-        "usAvgPer10k": 2.15,
-        "saturationIndex": 102,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Bangor."
+          "evidenceQuote": "13 employer establishments (NAICS 722515) across 1 ZIP codes whose USPS city is Lewiston, ME; density uses ACS 2023 ZCTA population (37,886). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722511",
         "slug": "restaurants",
         "label": "Full-Service Restaurants",
-        "establishments": 22,
-        "per10kResidents": 6.96,
-        "usAvgPer10k": 6.8,
-        "saturationIndex": 102,
+        "establishments": 31,
+        "per10kResidents": 8.18,
+        "usAvgPer10k": 7.44,
+        "saturationIndex": 110,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Bangor."
+          "evidenceQuote": "31 employer establishments (NAICS 722511) across 1 ZIP codes whose USPS city is Lewiston, ME; density uses ACS 2023 ZCTA population (37,886). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722513",
         "slug": "fast-food",
-        "label": "Fast Food Restaurants",
-        "establishments": 23,
-        "per10kResidents": 7.27,
-        "usAvgPer10k": 7.2,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Limited-Service / Fast Food Restaurants",
+        "establishments": 38,
+        "per10kResidents": 10.03,
+        "usAvgPer10k": 7.75,
+        "saturationIndex": 129,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Bangor."
+          "evidenceQuote": "38 employer establishments (NAICS 722513) across 1 ZIP codes whose USPS city is Lewiston, ME; density uses ACS 2023 ZCTA population (37,886). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722410",
         "slug": "bars-taverns",
-        "label": "Bars & Drinking Places",
-        "establishments": 6,
-        "per10kResidents": 1.9,
-        "usAvgPer10k": 1.85,
-        "saturationIndex": 102,
+        "label": "Drinking Places (Alcoholic Beverages)",
+        "establishments": 3,
+        "per10kResidents": 0.79,
+        "usAvgPer10k": 0.9,
+        "saturationIndex": 88,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Bangor."
-        }
-      },
-      {
-        "naicsCode": "812111",
-        "slug": "barber-shops",
-        "label": "Barber Shops",
-        "establishments": 4,
-        "per10kResidents": 1.26,
-        "usAvgPer10k": 1.35,
-        "saturationIndex": 95,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Bangor."
+          "evidenceQuote": "3 employer establishments (NAICS 722410) across 1 ZIP codes whose USPS city is Lewiston, ME; density uses ACS 2023 ZCTA population (37,886). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -1409,1122 +702,1506 @@
         "slug": "beauty-salons",
         "label": "Beauty Salons & Hair Studios",
         "establishments": 11,
-        "per10kResidents": 3.48,
-        "usAvgPer10k": 3.4,
-        "saturationIndex": 102,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "per10kResidents": 2.9,
+        "usAvgPer10k": 2.31,
+        "saturationIndex": 126,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Bangor."
+          "evidenceQuote": "11 employer establishments (NAICS 812112) across 1 ZIP codes whose USPS city is Lewiston, ME; density uses ACS 2023 ZCTA population (37,886). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812113",
         "slug": "nail-salons",
         "label": "Nail Salons",
-        "establishments": 7,
-        "per10kResidents": 2.21,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 104,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 0,
+        "per10kResidents": 0.0,
+        "usAvgPer10k": 0.86,
+        "saturationIndex": 0,
+        "status": "underserved",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Bangor."
+          "evidenceQuote": "0 employer establishments (NAICS 812113) across 1 ZIP codes whose USPS city is Lewiston, ME; density uses ACS 2023 ZCTA population (37,886). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "713940",
         "slug": "gyms-fitness",
-        "label": "Fitness & Recreational Gyms",
-        "establishments": 4,
-        "per10kResidents": 1.26,
-        "usAvgPer10k": 1.25,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Bangor."
-        }
-      },
-      {
-        "naicsCode": "812910",
-        "slug": "pet-care",
-        "label": "Pet Care & Grooming",
+        "label": "Fitness & Recreational Sports Centers",
         "establishments": 3,
-        "per10kResidents": 0.95,
-        "usAvgPer10k": 0.95,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "per10kResidents": 0.79,
+        "usAvgPer10k": 1.0,
+        "saturationIndex": 79,
+        "status": "underserved",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Bangor."
+          "evidenceQuote": "3 employer establishments (NAICS 713940) across 1 ZIP codes whose USPS city is Lewiston, ME; density uses ACS 2023 ZCTA population (37,886). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541940",
         "slug": "veterinary",
-        "label": "Veterinary Services",
-        "establishments": 3,
-        "per10kResidents": 0.95,
-        "usAvgPer10k": 1.05,
-        "saturationIndex": 93,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Veterinary Services & Animal Hospitals",
+        "establishments": 4,
+        "per10kResidents": 1.06,
+        "usAvgPer10k": 0.69,
+        "saturationIndex": 153,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Bangor."
+          "evidenceQuote": "4 employer establishments (NAICS 541940) across 1 ZIP codes whose USPS city is Lewiston, ME; density uses ACS 2023 ZCTA population (37,886). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "811111",
         "slug": "auto-repair",
         "label": "General Automotive Repair",
-        "establishments": 15,
-        "per10kResidents": 4.74,
-        "usAvgPer10k": 4.8,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 14,
+        "per10kResidents": 3.7,
+        "usAvgPer10k": 2.2,
+        "saturationIndex": 168,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Bangor."
-        }
-      },
-      {
-        "naicsCode": "811192",
-        "slug": "car-washes",
-        "label": "Car Washes & Detailing",
-        "establishments": 2,
-        "per10kResidents": 0.63,
-        "usAvgPer10k": 0.65,
-        "saturationIndex": 98,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Bangor."
-        }
-      },
-      {
-        "naicsCode": "812310",
-        "slug": "laundromats",
-        "label": "Coin Laundromats",
-        "establishments": 2,
-        "per10kResidents": 0.63,
-        "usAvgPer10k": 0.55,
-        "saturationIndex": 111,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Bangor."
-        }
-      },
-      {
-        "naicsCode": "812320",
-        "slug": "dry-cleaners",
-        "label": "Dry Cleaning & Laundry",
-        "establishments": 3,
-        "per10kResidents": 0.95,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 109,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Bangor."
+          "evidenceQuote": "14 employer establishments (NAICS 811111) across 1 ZIP codes whose USPS city is Lewiston, ME; density uses ACS 2023 ZCTA population (37,886). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621210",
         "slug": "dentists",
         "label": "Offices of Dentists",
-        "establishments": 12,
-        "per10kResidents": 3.79,
-        "usAvgPer10k": 3.9,
-        "saturationIndex": 98,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 9,
+        "per10kResidents": 2.38,
+        "usAvgPer10k": 3.89,
+        "saturationIndex": 61,
+        "status": "underserved",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Bangor."
+          "evidenceQuote": "9 employer establishments (NAICS 621210) across 1 ZIP codes whose USPS city is Lewiston, ME; density uses ACS 2023 ZCTA population (37,886). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621310",
         "slug": "chiropractors",
         "label": "Offices of Chiropractors",
-        "establishments": 4,
-        "per10kResidents": 1.26,
-        "usAvgPer10k": 1.4,
-        "saturationIndex": 93,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 7,
+        "per10kResidents": 1.85,
+        "usAvgPer10k": 0.97,
+        "saturationIndex": 190,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Bangor."
+          "evidenceQuote": "7 employer establishments (NAICS 621310) across 1 ZIP codes whose USPS city is Lewiston, ME; density uses ACS 2023 ZCTA population (37,886). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621340",
         "slug": "physical-therapy",
-        "label": "Physical Therapy Clinics",
-        "establishments": 5,
-        "per10kResidents": 1.58,
-        "usAvgPer10k": 1.55,
-        "saturationIndex": 102,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Physical, Occupational & Speech Therapists",
+        "establishments": 8,
+        "per10kResidents": 2.11,
+        "usAvgPer10k": 1.3,
+        "saturationIndex": 162,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Bangor."
+          "evidenceQuote": "8 employer establishments (NAICS 621340) across 1 ZIP codes whose USPS city is Lewiston, ME; density uses ACS 2023 ZCTA population (37,886). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "624410",
         "slug": "daycare",
         "label": "Child Day Care Services",
-        "establishments": 7,
-        "per10kResidents": 2.21,
-        "usAvgPer10k": 2.25,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 21,
+        "per10kResidents": 5.54,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 261,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Bangor."
+          "evidenceQuote": "21 employer establishments (NAICS 624410) across 1 ZIP codes whose USPS city is Lewiston, ME; density uses ACS 2023 ZCTA population (37,886). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "445120",
         "slug": "convenience-stores",
-        "label": "Convenience Stores",
-        "establishments": 6,
-        "per10kResidents": 1.9,
-        "usAvgPer10k": 1.95,
-        "saturationIndex": 98,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Convenience Retail Stores",
+        "establishments": 9,
+        "per10kResidents": 2.38,
+        "usAvgPer10k": 0.82,
+        "saturationIndex": 290,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Bangor."
+          "evidenceQuote": "9 employer establishments (NAICS 445120) across 1 ZIP codes whose USPS city is Lewiston, ME; density uses ACS 2023 ZCTA population (37,886). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "448140",
         "slug": "clothing-boutiques",
-        "label": "Family Clothing Stores",
-        "establishments": 5,
-        "per10kResidents": 1.58,
-        "usAvgPer10k": 1.65,
-        "saturationIndex": 97,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Family Clothing Stores & Boutiques",
+        "establishments": 0,
+        "per10kResidents": 0.0,
+        "usAvgPer10k": 0.65,
+        "saturationIndex": 0,
+        "status": "underserved",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Bangor."
-        }
-      },
-      {
-        "naicsCode": "445291",
-        "slug": "bakeries",
-        "label": "Retail Bakeries",
-        "establishments": 3,
-        "per10kResidents": 0.95,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 109,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Bangor."
-        }
-      },
-      {
-        "naicsCode": "453110",
-        "slug": "florists",
-        "label": "Florists & Floral Gift",
-        "establishments": 2,
-        "per10kResidents": 0.63,
-        "usAvgPer10k": 0.5,
-        "saturationIndex": 120,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Bangor."
+          "evidenceQuote": "0 employer establishments (NAICS 448140) across 1 ZIP codes whose USPS city is Lewiston, ME; density uses ACS 2023 ZCTA population (37,886). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541110",
         "slug": "law-firms",
         "label": "Offices of Lawyers",
-        "establishments": 15,
-        "per10kResidents": 4.74,
-        "usAvgPer10k": 4.9,
-        "saturationIndex": 98,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 27,
+        "per10kResidents": 7.13,
+        "usAvgPer10k": 4.8,
+        "saturationIndex": 148,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Bangor."
+          "evidenceQuote": "27 employer establishments (NAICS 541110) across 1 ZIP codes whose USPS city is Lewiston, ME; density uses ACS 2023 ZCTA population (37,886). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541211",
         "slug": "accounting-cpa",
-        "label": "Offices of CPAs",
-        "establishments": 7,
-        "per10kResidents": 2.21,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 104,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Offices of Certified Public Accountants",
+        "establishments": 3,
+        "per10kResidents": 0.79,
+        "usAvgPer10k": 1.44,
+        "saturationIndex": 55,
+        "status": "underserved",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Bangor."
+          "evidenceQuote": "3 employer establishments (NAICS 541211) across 1 ZIP codes whose USPS city is Lewiston, ME; density uses ACS 2023 ZCTA population (37,886). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "531210",
         "slug": "real-estate-agencies",
-        "label": "Real Estate Brokerages",
-        "establishments": 12,
-        "per10kResidents": 3.79,
-        "usAvgPer10k": 3.8,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Offices of Real Estate Agents & Brokers",
+        "establishments": 14,
+        "per10kResidents": 3.7,
+        "usAvgPer10k": 4.74,
+        "saturationIndex": 78,
+        "status": "underserved",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Bangor."
+          "evidenceQuote": "14 employer establishments (NAICS 531210) across 1 ZIP codes whose USPS city is Lewiston, ME; density uses ACS 2023 ZCTA population (37,886). National benchmark = all US ZIP rows / US population."
         }
       }
     ],
-    "permitsAndTax": {
-      "generalBusinessLicenseRequired": false,
-      "businessLicenseFeeSummary": "No general city business license required. State of Maine statutory filings apply.",
-      "businessLicensePortalUrl": "https://www.bangorme.gov/permits",
-      "zoningLookupUrl": "https://www.bangorme.gov/zoning",
-      "buildingPermitPortalUrl": "https://www.bangorme.gov/building",
-      "certificateOfOccupancyFee": "$185 standard municipal inspection fee",
-      "avgPermitWaitDays": 30,
-      "shortTermRentalStatus": "restricted",
-      "foodTruckPermitStatus": "allowed",
-      "combinedSalesTaxRate": 0.07,
-      "stateTaxRate": 0.055,
-      "localTaxRate": 0.015,
-      "provenance": {
-        "sourceName": "Bangor Municipal Code & State Department of Revenue",
-        "sourceUrl": "https://www.bangorme.gov",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place",
-        "evidenceQuote": "Statutory municipal code standards."
-      }
-    },
-    "topTrafficCorridors": [
-      {
-        "roadName": "Main Arterial Corridor 1",
-        "segmentDescription": "Central Commercial Corridor through Bangor",
-        "aadt": 3795,
-        "heavyTruckPct": 5.5,
-        "lat": 44.829625,
-        "lng": -68.788767,
-        "year": 2024,
-        "provenance": {
-          "sourceName": "Maine DOT AADT Database",
-          "sourceUrl": "https://www.transportation.gov/",
-          "datasetVintage": "2024-AADT",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "place"
-        }
-      }
-    ],
-    "marketSignals": {
-      "reportedRetailRentSqFtYr": 39.7,
-      "reportedIndustrialRentSqFtYr": 17.9,
-      "topSearchedNaics30d": [
-        "722515",
-        "713940",
-        "812111"
-      ],
-      "verifiedLocalProsCount": 8
-    },
-    "scores": {
-      "overallViability": 47,
-      "purchasingPower": 45,
-      "growthMomentum": 49,
-      "costEfficiency": 72,
-      "regulatoryFriction": 48
-    },
+    "marketSignals": {},
     "executiveTravel": {
-      "timeZone": "America/New_York (ET: UTC-05:00)",
+      "timeZone": "America/New_York",
       "timeZoneAbbr": "ET",
       "utcOffset": "-05:00",
-      "primaryAirport": {
-        "name": "Bangor Regional / Metropolitan Airport",
-        "iata": null,
-        "distanceMiles": 10.2,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
-      },
-      "powerPlugs": {
-        "types": [
-          "Type A (2-pin)",
-          "Type B (3-pin grounded)"
-        ],
-        "voltage": "120V",
-        "frequency": "60Hz",
-        "adapterAdvice": "Visitors from UK, EU, Australia, and Asia require a standard Type A/B plug adapter and dual-voltage converter."
-      },
-      "currency": {
-        "code": "USD",
-        "symbol": "$",
-        "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
-        "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
-      },
-      "climate": {
-        "summerHighF": 84,
-        "winterLowF": 22,
-        "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
-        "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
-      },
       "emergency": {
         "emergencyDispatch": "911",
-        "nonEmergencyPolice": "311 or local municipal dispatch",
-        "nearestTraumaHospital": "Bangor Regional Memorial Hospital",
-        "hospitalAddress": "Medical Center District, Bangor, ME"
+        "nearestTraumaHospital": "Central Maine Medical Center",
+        "hospitalAddress": "300 Main Street, Lewiston, ME 04240",
+        "cmsFacilityId": "200024",
+        "emergencyServices": true,
+        "source": "CMS Care Compare hospital general information (dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma or nearest claim.",
+        "erHospitals": [
+          {
+            "name": "Central Maine Medical Center",
+            "address": "300 Main Street, Lewiston, ME 04240",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "200024"
+          },
+          {
+            "name": "St Mary's Regional Med Ctr",
+            "address": "93 Campus Avenue - PO Box 291, Lewiston, ME 04243",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "200034"
+          }
+        ],
+        "erHospitalsSource": "CMS Care Compare hospital general information (dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma or nearest claim."
       },
-      "visitorLogistics": {
-        "tapWaterPotability": "100% Safe municipal drinking water conforming to EPA Safe Drinking Water Act standards.",
-        "salesTaxRefundPolicy": "International travelers may claim state sales tax refunds on qualifying departures at designated airport customs counters.",
-        "rideshareAvailability": "Ubiquitous (Uber and Lyft operational 24/7 across the metropolitan area)."
-      },
-      "provenance": {
-        "sourceName": "FAA Airport Database & International Trade Administration",
-        "sourceUrl": "https://www.trade.gov/",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
+      "primaryAirport": {
+        "name": "Portland International Jetport",
+        "iata": "PWM",
+        "lat": 43.646198,
+        "lng": -70.309303,
+        "distanceMiles": 31.4,
+        "transitToDowntown": null,
+        "source": "OurAirports (public domain) for name, IATA code and coordinates; distance is straight-line from the U.S. Census Gazetteer city center point",
+        "sourceUrl": "https://ourairports.com/data/",
+        "cityCenterMethod": "Census Gazetteer internal point",
+        "retrieved": "2026-10-31"
       }
+    },
+    "housingAndTaxes": {
+      "medianHomeValue": 214200,
+      "medianGrossRent": 954,
+      "medianRealEstateTaxPaid": 2859,
+      "effectivePropertyTaxRatePct": 1.33,
+      "countyName": "Androscoggin County",
+      "source": "ACS 2023 5-yr: B25077 median home value, B25064 median gross rent, B25103 median real estate taxes paid. Effective rate = B25103 / B25077.",
+      "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/"
+    },
+    "climateNormals": {
+      "peakSummerHighF": 80,
+      "winterLowF": 12,
+      "annualRainfallInches": 45.2,
+      "sourceName": "NOAA NCEI U.S. Climate Normals 1991-2020 (Station USC00174566, 2.3 mi from Gazetteer center), retrieved 2026-10-31",
+      "sourceUrl": "https://www.ncei.noaa.gov/products/land-based-station/us-climate-normals"
+    },
+    "waterUtility": {
+      "pwsid": "ME0090830",
+      "providerName": "Lewiston Water & Sewer Division",
+      "populationServed": 23720,
+      "sourceType": "surface water",
+      "source": "U.S. EPA Safe Drinking Water Information System (SDWIS)",
+      "sourceUrl": "https://data.epa.gov/efservice/WATER_SYSTEM/PWSID/ME0090830/JSON",
+      "retrieved": "2026-10-31"
+    },
+    "higherEducation": {
+      "institutionCount": 1,
+      "totalEnrollment": 1760,
+      "institutions": [
+        {
+          "id": 160977,
+          "name": "Bates College",
+          "studentSize": 1760,
+          "ownership": "Private nonprofit",
+          "schoolUrl": "https://www.bates.edu/",
+          "lat": 44.105299,
+          "lng": -70.203333
+        }
+      ],
+      "sourceName": "U.S. Department of Education College Scorecard",
+      "sourceUrl": "https://collegescorecard.ed.gov/",
+      "retrieved": "2026-10-31"
+    },
+    "evInfrastructure": {
+      "totalStations": 15,
+      "totalChargingPorts": 28,
+      "dcFastPorts": 2,
+      "level2Ports": 26,
+      "sampleStations": [
+        {
+          "name": "Bates College - Tesla Destination",
+          "address": "147 Russel St., Lewiston, ME 04240",
+          "network": "Tesla Destination",
+          "dcFastPorts": 0,
+          "level2Ports": 2,
+          "lat": 44.104276,
+          "lng": -70.198323
+        },
+        {
+          "name": "BATES COLLEGE KALPERIS",
+          "address": "100 Central Ave, Lewiston, ME 04240",
+          "network": "ChargePoint Network",
+          "dcFastPorts": 0,
+          "level2Ports": 2,
+          "lat": 44.103165,
+          "lng": -70.203447
+        },
+        {
+          "name": "BATES COLLEGE BONNEY SCIENCE",
+          "address": "104 Bardwell St, Lewiston, ME 04240",
+          "network": "ChargePoint Network",
+          "dcFastPorts": 0,
+          "level2Ports": 2,
+          "lat": 44.103995,
+          "lng": -70.204919
+        },
+        {
+          "name": "BATES COLLEGE SCHAEFFER THEAT",
+          "address": "329 College Street, Lewiston, ME 04240",
+          "network": "ChargePoint Network",
+          "dcFastPorts": 0,
+          "level2Ports": 2,
+          "lat": 44.107211,
+          "lng": -70.204207
+        },
+        {
+          "name": "BATES COLLEGE BARDWELL ST",
+          "address": "160 Bardwell Street, Lewiston, ME 04240",
+          "network": "ChargePoint Network",
+          "dcFastPorts": 0,
+          "level2Ports": 2,
+          "lat": 44.106361,
+          "lng": -70.202347
+        }
+      ],
+      "sourceName": "U.S. Department of Energy / NLR Alternative Fuels Data Center (AFDC)",
+      "sourceUrl": "https://afdc.energy.gov/stations",
+      "retrieved": "2026-10-31"
+    },
+    "nationalParks": {
+      "parks": [
+        {
+          "parkCode": "frpe",
+          "fullName": "Frances Perkins National Monument",
+          "designation": "National Monument",
+          "distanceMiles": 31.1,
+          "description": "Known as the first woman to hold a presidential cabinet position and the “Woman behind the New Deal,” Frances Perkins championed many labor rights that Americans enjoy today, including safety standards, Social Security, and shorter...",
+          "url": "https://www.nps.gov/frpe/index.htm",
+          "lat": 44.0052,
+          "lng": -69.5568
+        }
+      ],
+      "sourceName": "U.S. National Park Service",
+      "sourceUrl": "https://www.nps.gov/",
+      "retrieved": "2026-10-31"
     }
   },
   {
-    "slug": "me/south-portland",
-    "cityId": "2371990",
-    "countyFips": "23719",
-    "name": "South Portland",
+    "slug": "me/bangor",
+    "cityId": "2302795",
+    "countyFips": "23019",
+    "name": "Bangor",
     "stateCode": "me",
     "stateName": "Maine",
-    "countyName": "South Portland Metropolitan Area",
-    "lat": 43.631402,
-    "lng": -70.285989,
+    "countyName": "Penobscot County",
+    "lat": 44.829625,
+    "lng": -68.788767,
     "primaryZips": [
-      "71467"
+      "04401"
     ],
     "demographics": {
-      "population": 26840,
-      "popGrowth5YrPct": 1.0,
-      "medianHouseholdIncome": 80741,
-      "perCapitaIncome": 46830,
-      "medianAge": 36.4,
-      "daytimeWorkerPop": 16641,
-      "daytimePopSurgePct": 8.5,
-      "medianGrossRent": 1553,
-      "medianHomeValue": 339112,
+      "population": 31628,
+      "medianHouseholdIncome": 58096,
+      "perCapitaIncome": 38245,
+      "medianAge": 40.7,
+      "medianGrossRent": 1019,
+      "medianHomeValue": 206300,
       "provenance": {
-        "sourceName": "US Census Bureau ACS 5-Year (DP03/DP04/DP05) & PopEst",
-        "sourceUrl": "https://api.census.gov/data/2023/acs/acs5",
-        "datasetVintage": "2023-5YR",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "sourceName": "US Census Bureau ACS 5-Year Estimates 2023 (Table-Based Summary File)",
+        "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/",
+        "datasetVintage": "ACS-2023-5YR",
+        "verifiedAt": "2026-10-31T00:00:00Z",
         "granularity": "place"
-      }
-    },
-    "laborAndEconomy": {
-      "unemploymentRatePct": 3.8,
-      "avgWeeklyWageAllIndustries": 1340,
-      "newHousingPermits12Mo": 201,
-      "permitsPer1kResidents": 7.5,
-      "femaRiskScore": 28.0,
-      "provenance": {
-        "sourceName": "BLS Local Area Unemployment Statistics (LAUS) & Census BPS",
-        "sourceUrl": "https://www.bls.gov/lau/",
-        "datasetVintage": "2024-M08",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
-      }
+      },
+      "popChange2020to2023Pct": -0.3,
+      "popChangeBasis": "Census Population Estimates, April 2020 base to July 2023"
     },
     "industries": [
       {
         "naicsCode": "722515",
         "slug": "coffee-shops",
         "label": "Coffee & Snack Shops",
-        "establishments": 6,
-        "per10kResidents": 2.24,
-        "usAvgPer10k": 2.15,
-        "saturationIndex": 103,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 23,
+        "per10kResidents": 5.18,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 244,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for South Portland."
+          "evidenceQuote": "23 employer establishments (NAICS 722515) across 1 ZIP codes whose USPS city is Bangor, ME; density uses ACS 2023 ZCTA population (44,418). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722511",
         "slug": "restaurants",
         "label": "Full-Service Restaurants",
-        "establishments": 18,
-        "per10kResidents": 6.71,
-        "usAvgPer10k": 6.8,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 55,
+        "per10kResidents": 12.38,
+        "usAvgPer10k": 7.44,
+        "saturationIndex": 167,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for South Portland."
+          "evidenceQuote": "55 employer establishments (NAICS 722511) across 1 ZIP codes whose USPS city is Bangor, ME; density uses ACS 2023 ZCTA population (44,418). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722513",
         "slug": "fast-food",
-        "label": "Fast Food Restaurants",
-        "establishments": 19,
-        "per10kResidents": 7.08,
-        "usAvgPer10k": 7.2,
-        "saturationIndex": 99,
+        "label": "Limited-Service / Fast Food Restaurants",
+        "establishments": 36,
+        "per10kResidents": 8.1,
+        "usAvgPer10k": 7.75,
+        "saturationIndex": 105,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for South Portland."
+          "evidenceQuote": "36 employer establishments (NAICS 722513) across 1 ZIP codes whose USPS city is Bangor, ME; density uses ACS 2023 ZCTA population (44,418). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722410",
         "slug": "bars-taverns",
-        "label": "Bars & Drinking Places",
-        "establishments": 5,
-        "per10kResidents": 1.86,
-        "usAvgPer10k": 1.85,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Drinking Places (Alcoholic Beverages)",
+        "establishments": 9,
+        "per10kResidents": 2.03,
+        "usAvgPer10k": 0.9,
+        "saturationIndex": 225,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for South Portland."
-        }
-      },
-      {
-        "naicsCode": "812111",
-        "slug": "barber-shops",
-        "label": "Barber Shops",
-        "establishments": 4,
-        "per10kResidents": 1.49,
-        "usAvgPer10k": 1.35,
-        "saturationIndex": 108,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for South Portland."
+          "evidenceQuote": "9 employer establishments (NAICS 722410) across 1 ZIP codes whose USPS city is Bangor, ME; density uses ACS 2023 ZCTA population (44,418). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812112",
         "slug": "beauty-salons",
         "label": "Beauty Salons & Hair Studios",
-        "establishments": 9,
-        "per10kResidents": 3.35,
-        "usAvgPer10k": 3.4,
-        "saturationIndex": 99,
+        "establishments": 10,
+        "per10kResidents": 2.25,
+        "usAvgPer10k": 2.31,
+        "saturationIndex": 98,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for South Portland."
+          "evidenceQuote": "10 employer establishments (NAICS 812112) across 1 ZIP codes whose USPS city is Bangor, ME; density uses ACS 2023 ZCTA population (44,418). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812113",
         "slug": "nail-salons",
         "label": "Nail Salons",
-        "establishments": 6,
-        "per10kResidents": 2.24,
-        "usAvgPer10k": 2.1,
+        "establishments": 4,
+        "per10kResidents": 0.9,
+        "usAvgPer10k": 0.86,
         "saturationIndex": 105,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for South Portland."
+          "evidenceQuote": "4 employer establishments (NAICS 812113) across 1 ZIP codes whose USPS city is Bangor, ME; density uses ACS 2023 ZCTA population (44,418). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "713940",
         "slug": "gyms-fitness",
-        "label": "Fitness & Recreational Gyms",
-        "establishments": 3,
-        "per10kResidents": 1.12,
-        "usAvgPer10k": 1.25,
-        "saturationIndex": 92,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Fitness & Recreational Sports Centers",
+        "establishments": 7,
+        "per10kResidents": 1.58,
+        "usAvgPer10k": 1.0,
+        "saturationIndex": 158,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for South Portland."
+          "evidenceQuote": "7 employer establishments (NAICS 713940) across 1 ZIP codes whose USPS city is Bangor, ME; density uses ACS 2023 ZCTA population (44,418). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812910",
         "slug": "pet-care",
-        "label": "Pet Care & Grooming",
-        "establishments": 3,
-        "per10kResidents": 1.12,
-        "usAvgPer10k": 0.95,
-        "saturationIndex": 113,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Pet Care & Grooming Services",
+        "establishments": 9,
+        "per10kResidents": 2.03,
+        "usAvgPer10k": 0.46,
+        "saturationIndex": 436,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for South Portland."
+          "evidenceQuote": "9 employer establishments (NAICS 812910) across 1 ZIP codes whose USPS city is Bangor, ME; density uses ACS 2023 ZCTA population (44,418). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541940",
         "slug": "veterinary",
-        "label": "Veterinary Services",
-        "establishments": 3,
-        "per10kResidents": 1.12,
-        "usAvgPer10k": 1.05,
-        "saturationIndex": 105,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Veterinary Services & Animal Hospitals",
+        "establishments": 4,
+        "per10kResidents": 0.9,
+        "usAvgPer10k": 0.69,
+        "saturationIndex": 130,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for South Portland."
+          "evidenceQuote": "4 employer establishments (NAICS 541940) across 1 ZIP codes whose USPS city is Bangor, ME; density uses ACS 2023 ZCTA population (44,418). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "811111",
         "slug": "auto-repair",
         "label": "General Automotive Repair",
-        "establishments": 13,
-        "per10kResidents": 4.84,
-        "usAvgPer10k": 4.8,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 20,
+        "per10kResidents": 4.5,
+        "usAvgPer10k": 2.2,
+        "saturationIndex": 205,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for South Portland."
-        }
-      },
-      {
-        "naicsCode": "811192",
-        "slug": "car-washes",
-        "label": "Car Washes & Detailing",
-        "establishments": 2,
-        "per10kResidents": 0.75,
-        "usAvgPer10k": 0.65,
-        "saturationIndex": 111,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for South Portland."
-        }
-      },
-      {
-        "naicsCode": "812310",
-        "slug": "laundromats",
-        "label": "Coin Laundromats",
-        "establishments": 1,
-        "per10kResidents": 0.37,
-        "usAvgPer10k": 0.55,
-        "saturationIndex": 76,
-        "status": "underserved",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for South Portland."
-        }
-      },
-      {
-        "naicsCode": "812320",
-        "slug": "dry-cleaners",
-        "label": "Dry Cleaning & Laundry",
-        "establishments": 2,
-        "per10kResidents": 0.75,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 91,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for South Portland."
+          "evidenceQuote": "20 employer establishments (NAICS 811111) across 1 ZIP codes whose USPS city is Bangor, ME; density uses ACS 2023 ZCTA population (44,418). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621210",
         "slug": "dentists",
         "label": "Offices of Dentists",
-        "establishments": 10,
-        "per10kResidents": 3.73,
-        "usAvgPer10k": 3.9,
-        "saturationIndex": 97,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 33,
+        "per10kResidents": 7.43,
+        "usAvgPer10k": 3.89,
+        "saturationIndex": 191,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for South Portland."
+          "evidenceQuote": "33 employer establishments (NAICS 621210) across 1 ZIP codes whose USPS city is Bangor, ME; density uses ACS 2023 ZCTA population (44,418). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621310",
         "slug": "chiropractors",
         "label": "Offices of Chiropractors",
-        "establishments": 4,
-        "per10kResidents": 1.49,
-        "usAvgPer10k": 1.4,
-        "saturationIndex": 105,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 6,
+        "per10kResidents": 1.35,
+        "usAvgPer10k": 0.97,
+        "saturationIndex": 139,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for South Portland."
+          "evidenceQuote": "6 employer establishments (NAICS 621310) across 1 ZIP codes whose USPS city is Bangor, ME; density uses ACS 2023 ZCTA population (44,418). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621340",
         "slug": "physical-therapy",
-        "label": "Physical Therapy Clinics",
-        "establishments": 4,
-        "per10kResidents": 1.49,
-        "usAvgPer10k": 1.55,
-        "saturationIndex": 97,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Physical, Occupational & Speech Therapists",
+        "establishments": 10,
+        "per10kResidents": 2.25,
+        "usAvgPer10k": 1.3,
+        "saturationIndex": 173,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for South Portland."
+          "evidenceQuote": "10 employer establishments (NAICS 621340) across 1 ZIP codes whose USPS city is Bangor, ME; density uses ACS 2023 ZCTA population (44,418). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "624410",
         "slug": "daycare",
         "label": "Child Day Care Services",
-        "establishments": 6,
-        "per10kResidents": 2.24,
-        "usAvgPer10k": 2.25,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 29,
+        "per10kResidents": 6.53,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 308,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for South Portland."
+          "evidenceQuote": "29 employer establishments (NAICS 624410) across 1 ZIP codes whose USPS city is Bangor, ME; density uses ACS 2023 ZCTA population (44,418). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "445120",
         "slug": "convenience-stores",
-        "label": "Convenience Stores",
-        "establishments": 5,
-        "per10kResidents": 1.86,
-        "usAvgPer10k": 1.95,
-        "saturationIndex": 97,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Convenience Retail Stores",
+        "establishments": 8,
+        "per10kResidents": 1.8,
+        "usAvgPer10k": 0.82,
+        "saturationIndex": 220,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for South Portland."
+          "evidenceQuote": "8 employer establishments (NAICS 445120) across 1 ZIP codes whose USPS city is Bangor, ME; density uses ACS 2023 ZCTA population (44,418). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "448140",
         "slug": "clothing-boutiques",
-        "label": "Family Clothing Stores",
-        "establishments": 4,
-        "per10kResidents": 1.49,
-        "usAvgPer10k": 1.65,
-        "saturationIndex": 93,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Family Clothing Stores & Boutiques",
+        "establishments": 10,
+        "per10kResidents": 2.25,
+        "usAvgPer10k": 0.65,
+        "saturationIndex": 345,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for South Portland."
-        }
-      },
-      {
-        "naicsCode": "445291",
-        "slug": "bakeries",
-        "label": "Retail Bakeries",
-        "establishments": 2,
-        "per10kResidents": 0.75,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 91,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for South Portland."
-        }
-      },
-      {
-        "naicsCode": "453110",
-        "slug": "florists",
-        "label": "Florists & Floral Gift",
-        "establishments": 1,
-        "per10kResidents": 0.37,
-        "usAvgPer10k": 0.5,
-        "saturationIndex": 81,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for South Portland."
+          "evidenceQuote": "10 employer establishments (NAICS 448140) across 1 ZIP codes whose USPS city is Bangor, ME; density uses ACS 2023 ZCTA population (44,418). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541110",
         "slug": "law-firms",
         "label": "Offices of Lawyers",
-        "establishments": 13,
-        "per10kResidents": 4.84,
-        "usAvgPer10k": 4.9,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 36,
+        "per10kResidents": 8.1,
+        "usAvgPer10k": 4.8,
+        "saturationIndex": 169,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for South Portland."
+          "evidenceQuote": "36 employer establishments (NAICS 541110) across 1 ZIP codes whose USPS city is Bangor, ME; density uses ACS 2023 ZCTA population (44,418). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541211",
         "slug": "accounting-cpa",
-        "label": "Offices of CPAs",
-        "establishments": 6,
-        "per10kResidents": 2.24,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 105,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Offices of Certified Public Accountants",
+        "establishments": 12,
+        "per10kResidents": 2.7,
+        "usAvgPer10k": 1.44,
+        "saturationIndex": 188,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for South Portland."
+          "evidenceQuote": "12 employer establishments (NAICS 541211) across 1 ZIP codes whose USPS city is Bangor, ME; density uses ACS 2023 ZCTA population (44,418). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "531210",
         "slug": "real-estate-agencies",
-        "label": "Real Estate Brokerages",
-        "establishments": 10,
-        "per10kResidents": 3.73,
-        "usAvgPer10k": 3.8,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Offices of Real Estate Agents & Brokers",
+        "establishments": 39,
+        "per10kResidents": 8.78,
+        "usAvgPer10k": 4.74,
+        "saturationIndex": 185,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for South Portland."
+          "evidenceQuote": "39 employer establishments (NAICS 531210) across 1 ZIP codes whose USPS city is Bangor, ME; density uses ACS 2023 ZCTA population (44,418). National benchmark = all US ZIP rows / US population."
         }
       }
     ],
-    "permitsAndTax": {
-      "generalBusinessLicenseRequired": false,
-      "businessLicenseFeeSummary": "No general city business license required. State of Maine statutory filings apply.",
-      "businessLicensePortalUrl": "https://www.south-portlandme.gov/permits",
-      "zoningLookupUrl": "https://www.south-portlandme.gov/zoning",
-      "buildingPermitPortalUrl": "https://www.south-portlandme.gov/building",
-      "certificateOfOccupancyFee": "$185 standard municipal inspection fee",
-      "avgPermitWaitDays": 30,
-      "shortTermRentalStatus": "restricted",
-      "foodTruckPermitStatus": "allowed",
-      "combinedSalesTaxRate": 0.07,
-      "stateTaxRate": 0.055,
-      "localTaxRate": 0.015,
-      "provenance": {
-        "sourceName": "South Portland Municipal Code & State Department of Revenue",
-        "sourceUrl": "https://www.south-portlandme.gov",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place",
-        "evidenceQuote": "Statutory municipal code standards."
-      }
-    },
-    "topTrafficCorridors": [
-      {
-        "roadName": "Main Arterial Corridor 1",
-        "segmentDescription": "Central Commercial Corridor through South Portland",
-        "aadt": 3221,
-        "heavyTruckPct": 5.5,
-        "lat": 43.631402,
-        "lng": -70.285989,
-        "year": 2024,
-        "provenance": {
-          "sourceName": "Maine DOT AADT Database",
-          "sourceUrl": "https://www.transportation.gov/",
-          "datasetVintage": "2024-AADT",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "place"
-        }
-      }
-    ],
-    "marketSignals": {
-      "reportedRetailRentSqFtYr": 40.6,
-      "reportedIndustrialRentSqFtYr": 18.3,
-      "topSearchedNaics30d": [
-        "722515",
-        "713940",
-        "812111"
-      ],
-      "verifiedLocalProsCount": 8
-    },
-    "scores": {
-      "overallViability": 50,
-      "purchasingPower": 48,
-      "growthMomentum": 52,
-      "costEfficiency": 70,
-      "regulatoryFriction": 48
-    },
+    "marketSignals": {},
     "executiveTravel": {
-      "timeZone": "America/New_York (ET: UTC-05:00)",
+      "timeZone": "America/New_York",
       "timeZoneAbbr": "ET",
       "utcOffset": "-05:00",
-      "primaryAirport": {
-        "name": "South Portland Regional / Metropolitan Airport",
-        "iata": null,
-        "distanceMiles": 10.2,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
-      },
-      "powerPlugs": {
-        "types": [
-          "Type A (2-pin)",
-          "Type B (3-pin grounded)"
-        ],
-        "voltage": "120V",
-        "frequency": "60Hz",
-        "adapterAdvice": "Visitors from UK, EU, Australia, and Asia require a standard Type A/B plug adapter and dual-voltage converter."
-      },
-      "currency": {
-        "code": "USD",
-        "symbol": "$",
-        "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
-        "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
-      },
-      "climate": {
-        "summerHighF": 84,
-        "winterLowF": 22,
-        "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
-        "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
-      },
       "emergency": {
         "emergencyDispatch": "911",
-        "nonEmergencyPolice": "311 or local municipal dispatch",
-        "nearestTraumaHospital": "South Portland Regional Memorial Hospital",
-        "hospitalAddress": "Medical Center District, South Portland, ME"
+        "nearestTraumaHospital": "Northern Light Eastern Maine Medical Center",
+        "hospitalAddress": "489 State Street, Bangor, ME 04401",
+        "cmsFacilityId": "200033",
+        "emergencyServices": true,
+        "source": "CMS Care Compare hospital general information (dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma or nearest claim.",
+        "erHospitals": [
+          {
+            "name": "Northern Light Eastern Maine Medical Center",
+            "address": "489 State Street, Bangor, ME 04401",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "200033"
+          },
+          {
+            "name": "St. Joseph Hospital",
+            "address": "360 Broadway, Bangor, ME 04401",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "200001"
+          }
+        ],
+        "erHospitalsSource": "CMS Care Compare hospital general information (dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma or nearest claim."
       },
-      "visitorLogistics": {
-        "tapWaterPotability": "100% Safe municipal drinking water conforming to EPA Safe Drinking Water Act standards.",
-        "salesTaxRefundPolicy": "International travelers may claim state sales tax refunds on qualifying departures at designated airport customs counters.",
-        "rideshareAvailability": "Ubiquitous (Uber and Lyft operational 24/7 across the metropolitan area)."
-      },
-      "provenance": {
-        "sourceName": "FAA Airport Database & International Trade Administration",
-        "sourceUrl": "https://www.trade.gov/",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
+      "primaryAirport": {
+        "name": "Bangor International Airport",
+        "iata": "BGR",
+        "lat": 44.806364,
+        "lng": -68.826668,
+        "distanceMiles": 2.5,
+        "transitToDowntown": null,
+        "source": "OurAirports (public domain) for name, IATA code and coordinates; distance is straight-line from the U.S. Census Gazetteer city center point",
+        "sourceUrl": "https://ourairports.com/data/",
+        "cityCenterMethod": "Census Gazetteer internal point",
+        "retrieved": "2026-10-31"
       }
+    },
+    "housingAndTaxes": {
+      "medianHomeValue": 206300,
+      "medianGrossRent": 1019,
+      "medianRealEstateTaxPaid": 2998,
+      "effectivePropertyTaxRatePct": 1.45,
+      "countyName": "Penobscot County",
+      "source": "ACS 2023 5-yr: B25077 median home value, B25064 median gross rent, B25103 median real estate taxes paid. Effective rate = B25103 / B25077.",
+      "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/"
+    },
+    "climateNormals": {
+      "peakSummerHighF": 80,
+      "winterLowF": 9,
+      "annualRainfallInches": 41.7,
+      "sourceName": "NOAA NCEI U.S. Climate Normals 1991-2020 (Station USW00014606, 2.6 mi from Gazetteer center), retrieved 2026-10-31",
+      "sourceUrl": "https://www.ncei.noaa.gov/products/land-based-station/us-climate-normals"
+    },
+    "waterUtility": {
+      "pwsid": "ME0090110",
+      "providerName": "Bangor Water District",
+      "populationServed": 27298,
+      "sourceType": "surface water",
+      "source": "U.S. EPA Safe Drinking Water Information System (SDWIS)",
+      "sourceUrl": "https://data.epa.gov/efservice/WATER_SYSTEM/PWSID/ME0090110/JSON",
+      "retrieved": "2026-10-31"
+    },
+    "higherEducation": {
+      "institutionCount": 4,
+      "totalEnrollment": 5059,
+      "institutions": [
+        {
+          "id": 487524,
+          "name": "Husson University",
+          "studentSize": 2618,
+          "ownership": "Private nonprofit",
+          "schoolUrl": "https://www.husson.edu/",
+          "lat": 44.829002,
+          "lng": -68.791476
+        },
+        {
+          "id": 161138,
+          "name": "Eastern Maine Community College",
+          "studentSize": 1840,
+          "ownership": "Public",
+          "schoolUrl": "https://www.emcc.edu/",
+          "lat": 44.826048,
+          "lng": -68.74445
+        },
+        {
+          "id": 160995,
+          "name": "Beal University",
+          "studentSize": 484,
+          "ownership": "Private for-profit",
+          "schoolUrl": "https://www.beal.edu/",
+          "lat": 44.786465,
+          "lng": -68.785428
+        },
+        {
+          "id": 161493,
+          "name": "Empire Beauty School-Maine",
+          "studentSize": 117,
+          "ownership": "Private for-profit",
+          "schoolUrl": "https://www.empire.edu/",
+          "lat": 44.824546,
+          "lng": -68.777161
+        }
+      ],
+      "sourceName": "U.S. Department of Education College Scorecard",
+      "sourceUrl": "https://collegescorecard.ed.gov/",
+      "retrieved": "2026-10-31"
+    },
+    "evInfrastructure": {
+      "totalStations": 23,
+      "totalChargingPorts": 58,
+      "dcFastPorts": 30,
+      "level2Ports": 28,
+      "sampleStations": [
+        {
+          "name": "Bangor, ME - Tesla Supercharger",
+          "address": "693 Broadway, Bangor, ME 04401",
+          "network": "Tesla",
+          "dcFastPorts": 8,
+          "level2Ports": 0,
+          "lat": 44.824807,
+          "lng": -68.779065
+        },
+        {
+          "name": "Bangor MB.HPC",
+          "address": "327 Odlin Rd, Bangor, ME 04401",
+          "network": "MERCEDES_BENZ",
+          "dcFastPorts": 8,
+          "level2Ports": 0,
+          "lat": 44.789024,
+          "lng": -68.812113
+        },
+        {
+          "name": "Hollywood Casino Hotel & Raceway Bangor - Tesla Destination",
+          "address": "500 Main St, Bangor, ME 04401",
+          "network": "Tesla Destination",
+          "dcFastPorts": 0,
+          "level2Ports": 6,
+          "lat": 44.788646,
+          "lng": -68.777028
+        },
+        {
+          "name": "Airport Mall",
+          "address": "1129 Union St, Bangor, ME 04401",
+          "network": "JULE",
+          "dcFastPorts": 4,
+          "level2Ports": 0,
+          "lat": 44.81965,
+          "lng": -68.81114
+        },
+        {
+          "name": "Darling's Nissan",
+          "address": "114 Sylvan Rd, Bangor, ME 04401",
+          "network": "Non-Networked",
+          "dcFastPorts": 1,
+          "level2Ports": 2,
+          "lat": 44.827499,
+          "lng": -68.74575
+        }
+      ],
+      "sourceName": "U.S. Department of Energy / NLR Alternative Fuels Data Center (AFDC)",
+      "sourceUrl": "https://afdc.energy.gov/stations",
+      "retrieved": "2026-10-31"
+    },
+    "nationalParks": {
+      "parks": [
+        {
+          "parkCode": "acad",
+          "fullName": "Acadia National Park",
+          "designation": "National Park",
+          "distanceMiles": 39.4,
+          "description": "Acadia National Park protects the natural beauty of the highest rocky headlands along the Atlantic coastline of the United States, an abundance of habitats, and a rich cultural heritage. At 4 million visits a year, it's one of the top...",
+          "url": "https://www.nps.gov/acad/index.htm",
+          "lat": 44.409286,
+          "lng": -68.247501
+        }
+      ],
+      "sourceName": "U.S. National Park Service",
+      "sourceUrl": "https://www.nps.gov/",
+      "retrieved": "2026-10-31"
+    }
+  },
+  {
+    "slug": "me/south-portland",
+    "cityId": "2371990",
+    "countyFips": "23005",
+    "name": "South Portland",
+    "stateCode": "me",
+    "stateName": "Maine",
+    "countyName": "Cumberland County",
+    "lat": 43.631402,
+    "lng": -70.285989,
+    "primaryZips": [
+      "04106"
+    ],
+    "demographics": {
+      "population": 26840,
+      "medianHouseholdIncome": 84563,
+      "perCapitaIncome": 49719,
+      "medianAge": 40.7,
+      "medianGrossRent": 1648,
+      "medianHomeValue": 405800,
+      "provenance": {
+        "sourceName": "US Census Bureau ACS 5-Year Estimates 2023 (Table-Based Summary File)",
+        "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/",
+        "datasetVintage": "ACS-2023-5YR",
+        "verifiedAt": "2026-10-31T00:00:00Z",
+        "granularity": "place"
+      },
+      "popChange2020to2023Pct": 1.3,
+      "popChangeBasis": "Census Population Estimates, April 2020 base to July 2023"
+    },
+    "industries": [
+      {
+        "naicsCode": "722515",
+        "slug": "coffee-shops",
+        "label": "Coffee & Snack Shops",
+        "establishments": 19,
+        "per10kResidents": 7.05,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 332,
+        "status": "saturated",
+        "smallSample": true,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "19 employer establishments (NAICS 722515) across 1 ZIP codes whose USPS city is South Portland, ME; density uses ACS 2023 ZCTA population (26,966). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "722511",
+        "slug": "restaurants",
+        "label": "Full-Service Restaurants",
+        "establishments": 48,
+        "per10kResidents": 17.8,
+        "usAvgPer10k": 7.44,
+        "saturationIndex": 239,
+        "status": "saturated",
+        "smallSample": false,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "48 employer establishments (NAICS 722511) across 1 ZIP codes whose USPS city is South Portland, ME; density uses ACS 2023 ZCTA population (26,966). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "722513",
+        "slug": "fast-food",
+        "label": "Limited-Service / Fast Food Restaurants",
+        "establishments": 40,
+        "per10kResidents": 14.83,
+        "usAvgPer10k": 7.75,
+        "saturationIndex": 191,
+        "status": "saturated",
+        "smallSample": false,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "40 employer establishments (NAICS 722513) across 1 ZIP codes whose USPS city is South Portland, ME; density uses ACS 2023 ZCTA population (26,966). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "722410",
+        "slug": "bars-taverns",
+        "label": "Drinking Places (Alcoholic Beverages)",
+        "establishments": 3,
+        "per10kResidents": 1.11,
+        "usAvgPer10k": 0.9,
+        "saturationIndex": 123,
+        "status": "saturated",
+        "smallSample": true,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "3 employer establishments (NAICS 722410) across 1 ZIP codes whose USPS city is South Portland, ME; density uses ACS 2023 ZCTA population (26,966). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "812112",
+        "slug": "beauty-salons",
+        "label": "Beauty Salons & Hair Studios",
+        "establishments": 11,
+        "per10kResidents": 4.08,
+        "usAvgPer10k": 2.31,
+        "saturationIndex": 177,
+        "status": "saturated",
+        "smallSample": true,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "11 employer establishments (NAICS 812112) across 1 ZIP codes whose USPS city is South Portland, ME; density uses ACS 2023 ZCTA population (26,966). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "812113",
+        "slug": "nail-salons",
+        "label": "Nail Salons",
+        "establishments": 7,
+        "per10kResidents": 2.6,
+        "usAvgPer10k": 0.86,
+        "saturationIndex": 302,
+        "status": "saturated",
+        "smallSample": true,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "7 employer establishments (NAICS 812113) across 1 ZIP codes whose USPS city is South Portland, ME; density uses ACS 2023 ZCTA population (26,966). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "713940",
+        "slug": "gyms-fitness",
+        "label": "Fitness & Recreational Sports Centers",
+        "establishments": 10,
+        "per10kResidents": 3.71,
+        "usAvgPer10k": 1.0,
+        "saturationIndex": 372,
+        "status": "saturated",
+        "smallSample": true,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "10 employer establishments (NAICS 713940) across 1 ZIP codes whose USPS city is South Portland, ME; density uses ACS 2023 ZCTA population (26,966). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "811111",
+        "slug": "auto-repair",
+        "label": "General Automotive Repair",
+        "establishments": 11,
+        "per10kResidents": 4.08,
+        "usAvgPer10k": 2.2,
+        "saturationIndex": 185,
+        "status": "saturated",
+        "smallSample": true,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "11 employer establishments (NAICS 811111) across 1 ZIP codes whose USPS city is South Portland, ME; density uses ACS 2023 ZCTA population (26,966). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "621210",
+        "slug": "dentists",
+        "label": "Offices of Dentists",
+        "establishments": 16,
+        "per10kResidents": 5.93,
+        "usAvgPer10k": 3.89,
+        "saturationIndex": 153,
+        "status": "saturated",
+        "smallSample": false,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "16 employer establishments (NAICS 621210) across 1 ZIP codes whose USPS city is South Portland, ME; density uses ACS 2023 ZCTA population (26,966). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "621310",
+        "slug": "chiropractors",
+        "label": "Offices of Chiropractors",
+        "establishments": 8,
+        "per10kResidents": 2.97,
+        "usAvgPer10k": 0.97,
+        "saturationIndex": 305,
+        "status": "saturated",
+        "smallSample": true,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "8 employer establishments (NAICS 621310) across 1 ZIP codes whose USPS city is South Portland, ME; density uses ACS 2023 ZCTA population (26,966). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "621340",
+        "slug": "physical-therapy",
+        "label": "Physical, Occupational & Speech Therapists",
+        "establishments": 11,
+        "per10kResidents": 4.08,
+        "usAvgPer10k": 1.3,
+        "saturationIndex": 313,
+        "status": "saturated",
+        "smallSample": true,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "11 employer establishments (NAICS 621340) across 1 ZIP codes whose USPS city is South Portland, ME; density uses ACS 2023 ZCTA population (26,966). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "624410",
+        "slug": "daycare",
+        "label": "Child Day Care Services",
+        "establishments": 12,
+        "per10kResidents": 4.45,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 210,
+        "status": "saturated",
+        "smallSample": true,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "12 employer establishments (NAICS 624410) across 1 ZIP codes whose USPS city is South Portland, ME; density uses ACS 2023 ZCTA population (26,966). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "445120",
+        "slug": "convenience-stores",
+        "label": "Convenience Retail Stores",
+        "establishments": 4,
+        "per10kResidents": 1.48,
+        "usAvgPer10k": 0.82,
+        "saturationIndex": 181,
+        "status": "saturated",
+        "smallSample": true,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "4 employer establishments (NAICS 445120) across 1 ZIP codes whose USPS city is South Portland, ME; density uses ACS 2023 ZCTA population (26,966). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "541110",
+        "slug": "law-firms",
+        "label": "Offices of Lawyers",
+        "establishments": 3,
+        "per10kResidents": 1.11,
+        "usAvgPer10k": 4.8,
+        "saturationIndex": 23,
+        "status": "underserved",
+        "smallSample": false,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "3 employer establishments (NAICS 541110) across 1 ZIP codes whose USPS city is South Portland, ME; density uses ACS 2023 ZCTA population (26,966). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "541211",
+        "slug": "accounting-cpa",
+        "label": "Offices of Certified Public Accountants",
+        "establishments": 8,
+        "per10kResidents": 2.97,
+        "usAvgPer10k": 1.44,
+        "saturationIndex": 206,
+        "status": "saturated",
+        "smallSample": true,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "8 employer establishments (NAICS 541211) across 1 ZIP codes whose USPS city is South Portland, ME; density uses ACS 2023 ZCTA population (26,966). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "531210",
+        "slug": "real-estate-agencies",
+        "label": "Offices of Real Estate Agents & Brokers",
+        "establishments": 19,
+        "per10kResidents": 7.05,
+        "usAvgPer10k": 4.74,
+        "saturationIndex": 149,
+        "status": "saturated",
+        "smallSample": false,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "19 employer establishments (NAICS 531210) across 1 ZIP codes whose USPS city is South Portland, ME; density uses ACS 2023 ZCTA population (26,966). National benchmark = all US ZIP rows / US population."
+        }
+      }
+    ],
+    "marketSignals": {},
+    "executiveTravel": {
+      "timeZone": "America/New_York",
+      "timeZoneAbbr": "ET",
+      "utcOffset": "-05:00",
+      "emergency": {
+        "emergencyDispatch": "911",
+        "nearestTraumaHospital": "Bridgton Hospital",
+        "hospitalAddress": "10 Hospital Drive, Bridgton, ME 04009",
+        "cmsFacilityId": "201310",
+        "emergencyServices": true,
+        "source": "CMS Care Compare (dataset xubh-q36u, retrieved 2026-10-31): Cumberland County, ME hospitals with emergency services (none addressed inside city limits).",
+        "erHospitals": [
+          {
+            "name": "Bridgton Hospital",
+            "address": "10 Hospital Drive, Bridgton, ME 04009",
+            "type": "Critical Access Hospitals",
+            "cmsFacilityId": "201310"
+          },
+          {
+            "name": "Mainehealth Behavioral Health at Spring Harbor",
+            "address": "123 Andover Road, Westbrook, ME 04092",
+            "type": "Psychiatric",
+            "cmsFacilityId": "204005"
+          },
+          {
+            "name": "Mainehealth Maine Medical Center",
+            "address": "22 Bramhall St, Portland, ME 04102",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "200009"
+          },
+          {
+            "name": "Mainehealth Mid Coast Hospital",
+            "address": "123 Medical Center Drive, Brunswick, ME 04011",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "200021"
+          },
+          {
+            "name": "Northern Light Mercy Hospital",
+            "address": "144 State Street, Portland, ME 04101",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "200008"
+          }
+        ],
+        "erHospitalsSource": "CMS Care Compare (dataset xubh-q36u, retrieved 2026-10-31): Cumberland County, ME hospitals with emergency services (none addressed inside city limits).",
+        "erHospitalsScope": "Cumberland County, ME"
+      },
+      "primaryAirport": {
+        "name": "Portland International Jetport",
+        "iata": "PWM",
+        "lat": 43.646198,
+        "lng": -70.309303,
+        "distanceMiles": 1.6,
+        "transitToDowntown": null,
+        "source": "OurAirports (public domain) for name, IATA code and coordinates; distance is straight-line from the U.S. Census Gazetteer city center point",
+        "sourceUrl": "https://ourairports.com/data/",
+        "cityCenterMethod": "Census Gazetteer internal point",
+        "retrieved": "2026-10-31"
+      }
+    },
+    "housingAndTaxes": {
+      "medianHomeValue": 405800,
+      "medianGrossRent": 1648,
+      "medianRealEstateTaxPaid": 4156,
+      "effectivePropertyTaxRatePct": 1.02,
+      "countyName": "Cumberland County",
+      "source": "ACS 2023 5-yr: B25077 median home value, B25064 median gross rent, B25103 median real estate taxes paid. Effective rate = B25103 / B25077.",
+      "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/"
+    },
+    "climateNormals": {
+      "peakSummerHighF": 80,
+      "winterLowF": 16,
+      "annualRainfallInches": 48.1,
+      "sourceName": "NOAA NCEI U.S. Climate Normals 1991-2020 (Station USW00014764, 1.5 mi from Gazetteer center), retrieved 2026-10-31",
+      "sourceUrl": "https://www.ncei.noaa.gov/products/land-based-station/us-climate-normals"
+    },
+    "higherEducation": {
+      "institutionCount": 1,
+      "totalEnrollment": 5675,
+      "institutions": [
+        {
+          "id": 161545,
+          "name": "Southern Maine Community College",
+          "studentSize": 5675,
+          "ownership": "Public",
+          "schoolUrl": "https://www.smccme.edu/",
+          "lat": 43.646649,
+          "lng": -70.229182
+        }
+      ],
+      "sourceName": "U.S. Department of Education College Scorecard",
+      "sourceUrl": "https://collegescorecard.ed.gov/",
+      "retrieved": "2026-10-31"
+    },
+    "evInfrastructure": {
+      "totalStations": 25,
+      "totalChargingPorts": 52,
+      "dcFastPorts": 4,
+      "level2Ports": 48,
+      "sampleStations": [
+        {
+          "name": "311 Darling Ave",
+          "address": "311 Darling Ave, South Portland, ME 04106",
+          "network": "SYNERGEV",
+          "dcFastPorts": 0,
+          "level2Ports": 6,
+          "lat": 43.637986,
+          "lng": -70.327984
+        },
+        {
+          "name": "ReVision Energy",
+          "address": "758 Westbrook St, South Portland, ME 04106",
+          "network": "Non-Networked",
+          "dcFastPorts": 0,
+          "level2Ports": 5,
+          "lat": 43.64225,
+          "lng": -70.310097
+        },
+        {
+          "name": "Yankee Ford",
+          "address": "165 Waterman Dr, South Portland, ME 04106",
+          "network": "FORD_CHARGE",
+          "dcFastPorts": 4,
+          "level2Ports": 0,
+          "lat": 43.63738,
+          "lng": -70.25672
+        },
+        {
+          "name": "Howard Johnson Hotel South Portland - Tesla Destination",
+          "address": "675 Main St, South Portland, ME 04106",
+          "network": "Tesla Destination",
+          "dcFastPorts": 0,
+          "level2Ports": 4,
+          "lat": 43.620315,
+          "lng": -70.306189
+        },
+        {
+          "name": "SWTCH Energy",
+          "address": "5 Cottage Rd, South Portland, ME 04106",
+          "network": "SWTCH",
+          "dcFastPorts": 0,
+          "level2Ports": 4,
+          "lat": 43.63801,
+          "lng": -70.25275
+        }
+      ],
+      "sourceName": "U.S. Department of Energy / NLR Alternative Fuels Data Center (AFDC)",
+      "sourceUrl": "https://afdc.energy.gov/stations",
+      "retrieved": "2026-10-31"
+    },
+    "nationalParks": {
+      "parks": [
+        {
+          "parkCode": "frpe",
+          "fullName": "Frances Perkins National Monument",
+          "designation": "National Monument",
+          "distanceMiles": 44.6,
+          "description": "Known as the first woman to hold a presidential cabinet position and the “Woman behind the New Deal,” Frances Perkins championed many labor rights that Americans enjoy today, including safety standards, Social Security, and shorter...",
+          "url": "https://www.nps.gov/frpe/index.htm",
+          "lat": 44.0052,
+          "lng": -69.5568
+        }
+      ],
+      "sourceName": "U.S. National Park Service",
+      "sourceUrl": "https://www.nps.gov/",
+      "retrieved": "2026-10-31"
     }
   }
 ]

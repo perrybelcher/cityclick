@@ -34,13 +34,13 @@ export async function getStaticPaths() {
 }
 
 const { stateCode, stateName, cities } = Astro.props;
-const verifiedCount = cities.filter((c: any) => CERTIFIED_FLAGSHIP_SET.has(c.slug)).length;
+const flagshipCount = cities.filter((c: any) => CERTIFIED_FLAGSHIP_SET.has(c.slug)).length;
 ---
 
 <Layout
   title={`${stateName} City Directory — CityClick`}
-  description={`Browse ${cities.length} municipal entries in ${stateName}, including primary-source verified city guides and preview entries currently in review.`}
-  robots="noindex, follow"
+  description={`Browse ${cities.length} primary-sourced municipal guides in ${stateName} covering Census demographics, housing and property tax rates, climate, hospitals, and small-business trade density.`}
+  robots="index, follow"
 >
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
     <!-- Breadcrumbs -->
@@ -63,22 +63,22 @@ const verifiedCount = cities.filter((c: any) => CERTIFIED_FLAGSHIP_SET.has(c.slu
             {stateName} Municipal Directory
           </h1>
           <p class="text-sm text-slate-300 max-w-2xl leading-relaxed">
-            {cities.length} municipal entries in {stateName}. Primary-source verified city guides are badged below and sorted first; remaining preview entries are currently undergoing primary-record verification.
+            {cities.length} primary-sourced municipal guides in {stateName} built from U.S. Census Bureau, EPA SDWIS, CMS Care Compare, OurAirports, and NOAA NCEI / Open-Meteo records.
           </p>
         </div>
 
         <div class="flex items-center gap-3 shrink-0">
-          {verifiedCount > 0 && (
+          {flagshipCount > 0 && (
             <div class="bg-emerald-500/15 backdrop-blur-md px-5 py-3 rounded-2xl border border-emerald-400/30 text-right">
-              <div class="text-2xl font-black text-emerald-300">{verifiedCount}</div>
+              <div class="text-2xl font-black text-emerald-300">{flagshipCount}</div>
               <div class="text-[11px] font-bold text-emerald-200 uppercase tracking-wider">
-                {verifiedCount === 1 ? 'Verified Guide' : 'Verified Guides'}
+                {flagshipCount === 1 ? 'Featured Flagship' : 'Featured Flagships'}
               </div>
             </div>
           )}
           <div class="bg-white/10 backdrop-blur-md px-5 py-3 rounded-2xl border border-white/15 text-right">
             <div class="text-2xl font-black text-white">{cities.length}</div>
-            <div class="text-[11px] font-bold text-blue-300 uppercase tracking-wider">Municipal Entries</div>
+            <div class="text-[11px] font-bold text-blue-300 uppercase tracking-wider">Primary-Sourced Cities</div>
           </div>
         </div>
       </div>
@@ -90,7 +90,7 @@ const verifiedCount = cities.filter((c: any) => CERTIFIED_FLAGSHIP_SET.has(c.slu
         <input
           type="text"
           id="state-city-filter"
-          placeholder={`Filter ${cities.length} municipal entries in ${stateName}...`}
+          placeholder={`Filter ${cities.length} cities in ${stateName}...`}
           class="w-full px-4 py-3 pl-10 rounded-2xl bg-white border border-slate-200 text-sm font-medium text-slate-800 placeholder-slate-400 shadow-2xs outline-none focus:border-blue-500 transition"
         />
         <svg class="w-4 h-4 absolute left-3.5 top-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -102,13 +102,13 @@ const verifiedCount = cities.filter((c: any) => CERTIFIED_FLAGSHIP_SET.has(c.slu
     <!-- Cities Grid -->
     <div id="state-cities-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
       {cities.map((city) => {
-        const isCertified = CERTIFIED_FLAGSHIP_SET.has(city.slug);
+        const isFlagship = CERTIFIED_FLAGSHIP_SET.has(city.slug);
         return (
           <a
             href={`/${city.slug}/`}
             class:list={[
               'state-city-card p-5 rounded-2xl bg-white border transition flex flex-col justify-between group',
-              isCertified
+              isFlagship
                 ? 'border-emerald-300/90 hover:border-emerald-500 hover:shadow-md ring-1 ring-emerald-500/10'
                 : 'border-slate-200/80 hover:border-blue-500 hover:shadow-md',
             ]}
@@ -119,41 +119,35 @@ const verifiedCount = cities.filter((c: any) => CERTIFIED_FLAGSHIP_SET.has(c.slu
                 <h2 class="text-base font-black text-[#152438] group-hover:text-[#1D68F2] transition">
                   {city.name}
                 </h2>
-                {isCertified ? (
+                {isFlagship ? (
                   <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 shrink-0">
-                    Verified Guide
+                    Featured
                   </span>
                 ) : (
-                  <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-slate-100 text-slate-500 border border-slate-200 shrink-0">
-                    In Review
+                  <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-blue-50 text-[#1D68F2] border border-blue-200/80 shrink-0">
+                    Sourced
                   </span>
                 )}
               </div>
 
-              {isCertified ? (
-                <div class="mt-3 space-y-1 text-xs text-slate-500">
-                  {city.population ? (
-                    <div class="flex justify-between">
-                      <span>Population:</span>
-                      <span class="font-bold text-slate-700">{city.population.toLocaleString()}</span>
-                    </div>
-                  ) : null}
-                  {city.medianHouseholdIncome ? (
-                    <div class="flex justify-between">
-                      <span>Median Income:</span>
-                      <span class="font-bold text-slate-700">${city.medianHouseholdIncome.toLocaleString()}</span>
-                    </div>
-                  ) : null}
-                </div>
-              ) : (
-                <p class="mt-3 text-xs text-slate-500 leading-relaxed">
-                  Primary-source verification in progress
-                </p>
-              )}
+              <div class="mt-3 space-y-1 text-xs text-slate-500">
+                {city.population ? (
+                  <div class="flex justify-between">
+                    <span>Population:</span>
+                    <span class="font-bold text-slate-700">{city.population.toLocaleString()}</span>
+                  </div>
+                ) : null}
+                {city.medianHouseholdIncome ? (
+                  <div class="flex justify-between">
+                    <span>Median Income:</span>
+                    <span class="font-bold text-slate-700">${city.medianHouseholdIncome.toLocaleString()}</span>
+                  </div>
+                ) : null}
+              </div>
             </div>
 
             <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] font-bold text-[#1D68F2]">
-              <span>{isCertified ? 'Open Verified Guide' : 'View Entry'}</span>
+              <span>{isFlagship ? 'Open Featured Guide' : 'Open City Guide'}</span>
               <span class="group-hover:translate-x-1 transition">→</span>
             </div>
           </a>

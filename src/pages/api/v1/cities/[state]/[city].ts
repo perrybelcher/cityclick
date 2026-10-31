@@ -41,7 +41,7 @@ export const GET: APIRoute = async ({ params }) => {
           effectivePropertyTaxRatePct: (found as any).effectivePropertyTaxRatePct ?? null,
           source: 'US Census Bureau ACS 2023 5-year; Population Estimates 2023',
           certified: CERTIFIED_FLAGSHIP_SET.has(found.slug),
-          combinedSalesTax: found.combinedSalesTaxRate,
+          combinedSalesTax: (found as any).combinedSalesTaxRate ?? null,
           timeZone: found.timeZone,
           topUnderservedTrades: found.topUnderservedNaics,
         },
