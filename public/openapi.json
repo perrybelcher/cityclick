@@ -1,9 +1,9 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "CityClick B2B City Intelligence API",
-    "version": "1.0.0",
-    "description": "Deterministic municipal demographics, retail rent benchmarks, and NAICS competition saturation feeds."
+    "title": "CityClick Public Municipal Data API",
+    "version": "1.1.0",
+    "description": "Open public REST API returning primary-sourced US Census ACS 2023 5-Year and Population Estimates demographics, housing values, effective property tax rates, state/local combined retail sales tax, verification status, and underserved Census ZBP NAICS trade categories."
   },
   "servers": [
     {
@@ -13,15 +13,18 @@
   "paths": {
     "/api/v1/cities/{state}/{city}": {
       "get": {
-        "summary": "Get City Dossier",
-        "description": "Returns verified demographic indicators, viability scores, municipal permit turnaround times, and NAICS industry saturation metrics.",
+        "operationId": "getCitySummary",
+        "summary": "Get City Municipal Summary",
+        "description": "Returns primary-sourced Census demographic, housing, effective property tax, sales tax, and underserved ZBP trade summary metrics for a US city. Open public read access; no API key required.",
         "parameters": [
           {
             "name": "state",
             "in": "path",
             "required": true,
+            "description": "Two-letter lowercase US state postal code",
             "schema": {
               "type": "string",
+              "pattern": "^[a-z]{2}$",
               "example": "tx"
             }
           },
@@ -29,31 +32,120 @@
             "name": "city",
             "in": "path",
             "required": true,
+            "description": "Lowercase hyphenated city slug",
             "schema": {
               "type": "string",
+              "pattern": "^[a-z0-9-]+$",
               "example": "austin"
             }
           }
         ],
         "responses": {
           "200": {
-            "description": "Verified city dossier payload",
+            "description": "Municipal summary record",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "object",
+                  "required": ["status", "data"],
                   "properties": {
-                    "status": { "type": "string", "example": "success" },
+                    "status": {
+                      "type": "string",
+                      "const": "success",
+                      "example": "success"
+                    },
                     "data": {
                       "type": "object",
+                      "required": [
+                        "slug",
+                        "name",
+                        "state",
+                        "stateCode",
+                        "population",
+                        "medianHouseholdIncome",
+                        "popChange2020to2023Pct",
+                        "medianHomeValue",
+                        "medianGrossRent",
+                        "effectivePropertyTaxRatePct",
+                        "source",
+                        "certified",
+                        "combinedSalesTax",
+                        "timeZone",
+                        "topUnderservedTrades"
+                      ],
                       "properties": {
-                        "slug": { "type": "string" },
-                        "name": { "type": "string" },
-                        "population": { "type": "integer" },
-                        "medianHouseholdIncome": { "type": "integer" },
-                        "askingRentSqFtYr": { "type": "number" },
-                        "permitAvgWaitDays": { "type": "integer" },
-                        "combinedSalesTax": { "type": "number" }
+                        "slug": {
+                          "type": "string",
+                          "example": "tx/austin"
+                        },
+                        "name": {
+                          "type": "string",
+                          "example": "Austin"
+                        },
+                        "state": {
+                          "type": "string",
+                          "example": "Texas"
+                        },
+                        "stateCode": {
+                          "type": "string",
+                          "example": "tx"
+                        },
+                        "population": {
+                          "type": ["integer", "null"],
+                          "description": "Resident population (Census Population Estimates July 1, 2023 for incorporated places; ACS 2023 5-Year B01003 for CDPs)",
+                          "example": 979882
+                        },
+                        "medianHouseholdIncome": {
+                          "type": ["integer", "null"],
+                          "description": "Median household income in USD (Census ACS 2023 5-Year B19013)",
+                          "example": 91461
+                        },
+                        "popChange2020to2023Pct": {
+                          "type": ["number", "null"],
+                          "description": "Population change percentage from April 1, 2020 estimates base to July 1, 2023 (Census SUB-EST2023)",
+                          "example": 1.9
+                        },
+                        "medianHomeValue": {
+                          "type": ["integer", "null"],
+                          "description": "Median owner-occupied home value in USD (Census ACS 2023 5-Year B25077)",
+                          "example": 512700
+                        },
+                        "medianGrossRent": {
+                          "type": ["integer", "null"],
+                          "description": "Median gross monthly residential rent in USD (Census ACS 2023 5-Year B25064)",
+                          "example": 1655
+                        },
+                        "effectivePropertyTaxRatePct": {
+                          "type": ["number", "null"],
+                          "description": "Effective owner-occupied property tax rate percentage (ACS B25103 / B25077)",
+                          "example": 1.52
+                        },
+                        "source": {
+                          "type": "string",
+                          "example": "US Census Bureau ACS 2023 5-year; Population Estimates 2023"
+                        },
+                        "certified": {
+                          "type": "boolean",
+                          "description": "True when the city guide has passed primary-source audit and the rendered HTML Quality Gate",
+                          "example": true
+                        },
+                        "combinedSalesTax": {
+                          "type": ["number", "null"],
+                          "description": "Combined state and local general retail sales tax rate as a decimal (e.g. 0.0825 = 8.25%)",
+                          "example": 0.0825
+                        },
+                        "timeZone": {
+                          "type": ["string", "null"],
+                          "example": "CT"
+                        },
+                        "topUnderservedTrades": {
+                          "type": "array",
+                          "description": "NAICS trade labels with Census ZBP saturation index below 80",
+                          "items": {
+                            "type": "string"
+                          },
+                          "example": []
+                        }
                       }
                     }
                   }
@@ -61,8 +153,77 @@
               }
             }
           },
+          "400": {
+            "description": "Missing state or city parameter"
+          },
           "404": {
             "description": "City not found"
+          }
+        }
+      }
+    },
+    "/api/v1/checkout/report": {
+      "post": {
+        "operationId": "getPublicReportLink",
+        "summary": "Resolve Free Public City Resource URL",
+        "description": "Returns the free public PDF dossier URL for Austin (tx/austin) or the canonical trailing-slash public city guide URL for other cities.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["citySlug"],
+                "properties": {
+                  "citySlug": {
+                    "type": "string",
+                    "example": "tx/austin"
+                  },
+                  "email": {
+                    "type": "string",
+                    "format": "email"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Resolved free public resource URL",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": ["status", "freePublicResource", "pdfAvailable", "message", "downloadUrl"],
+                  "properties": {
+                    "status": {
+                      "type": "string",
+                      "const": "success"
+                    },
+                    "freePublicResource": {
+                      "type": "boolean",
+                      "const": true
+                    },
+                    "pdfAvailable": {
+                      "type": "boolean",
+                      "example": true
+                    },
+                    "message": {
+                      "type": "string"
+                    },
+                    "downloadUrl": {
+                      "type": "string",
+                      "format": "uri",
+                      "example": "https://cityclick.com/reports/tx-austin-feasibility-dossier.pdf"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid payload"
           }
         }
       }

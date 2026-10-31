@@ -4,7 +4,7 @@ import Layout from '../../layouts/Layout.astro';
 
 <Layout
   title="Join the Local B2B Partner Directory — CityClick"
-  description="Connect with qualified multi-unit operators, franchisees, and commercial tenants actively looking for permit expeditors, brokers, and zoning attorneys in your city."
+  description="Submit a partner inquiry to connect with founders, franchisees, and commercial tenants researching retail and office locations in your city."
 >
   <section class="bg-gradient-to-b from-[#EDF4FC] to-white py-16 border-b border-slate-200">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
@@ -15,64 +15,132 @@ import Layout from '../../layouts/Layout.astro';
         Connect with incoming business owners before they sign a lease
       </h1>
       <p class="text-base text-slate-600 mt-3 leading-relaxed">
-        CityClick sends verified tenant leads directly to approved local commercial brokers, municipal permit expeditors, and zoning attorneys.
+        Licensed commercial tenant brokers, land-use attorneys, and local CPAs can inquire below to be reviewed for CityClick's local service provider directory.
       </p>
     </div>
   </section>
 
   <section class="max-w-2xl mx-auto px-4 sm:px-6 py-12">
     <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm space-y-6">
-      <h2 class="text-xl font-bold text-[#152438]">Apply for Verified Local Partner Listing</h2>
-      
-      <form class="space-y-4 text-xs font-semibold" onsubmit="event.preventDefault(); alert('Application submitted! Our underwriting team reviews applications within 24 business hours.');">
+      <div class="space-y-1">
+        <h2 class="text-xl font-bold text-[#152438]">Prepare Partner Directory Inquiry</h2>
+        <p class="text-xs text-slate-500 leading-relaxed">
+          Completing this form prepares a pre-filled email inquiry directly to our partnerships desk at <a href="mailto:partners@cityclick.com" class="text-[#1D68F2] font-bold hover:underline">partners@cityclick.com</a>.
+        </p>
+      </div>
+
+      <form id="partner-inquiry-form" class="space-y-4 text-xs font-semibold">
         <div>
-          <label class="block text-slate-700 mb-1">Company / Firm Name</label>
-          <input type="text" placeholder="Austin Commercial Tenant Advisors" required class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm font-normal" />
+          <label for="p-firm" class="block text-slate-700 mb-1">Company / Firm Name</label>
+          <input id="p-firm" name="firm" type="text" placeholder="Metro Commercial Tenant Advisors" required class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm font-normal" />
         </div>
 
-        <div class="grid grid-cols-2 gap-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
-            <label class="block text-slate-700 mb-1">Target Market / City</label>
-            <input type="text" placeholder="Austin, TX" required class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm font-normal" />
+            <label for="p-market" class="block text-slate-700 mb-1">Target Market / City</label>
+            <input id="p-market" name="market" type="text" placeholder="City, State" required class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm font-normal" />
           </div>
           <div>
-            <label class="block text-slate-700 mb-1">Category</label>
-            <select class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm font-normal bg-white">
-              <option>Commercial Tenant Broker</option>
-              <option>Permit Expeditor</option>
-              <option>Zoning / Land Use Attorney</option>
-              <option>CPA / Small Business Accounting</option>
+            <label for="p-category" class="block text-slate-700 mb-1">Practice Category</label>
+            <select id="p-category" name="category" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm font-normal bg-white">
+              <option value="Commercial Tenant Broker">Commercial Tenant Broker</option>
+              <option value="Zoning / Land Use Attorney">Zoning / Land Use Attorney</option>
+              <option value="CPA / Small Business Accounting">CPA / Small Business Accounting</option>
+              <option value="Architecture / Space Planning">Architecture / Space Planning</option>
             </select>
           </div>
         </div>
 
-        <div class="grid grid-cols-2 gap-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
-            <label class="block text-slate-700 mb-1">Direct Contact Email</label>
-            <input type="email" placeholder="partner@firm.com" required class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm font-normal" />
+            <label for="p-email" class="block text-slate-700 mb-1">Direct Contact Email</label>
+            <input id="p-email" name="email" type="email" placeholder="partner@examplefirm.com" required class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm font-normal" />
           </div>
           <div>
-            <label class="block text-slate-700 mb-1">Phone Number</label>
-            <input type="tel" placeholder="(512) 555-0199" required class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm font-normal" />
+            <label for="p-phone" class="block text-slate-700 mb-1">Phone Number</label>
+            <input id="p-phone" name="phone" type="tel" placeholder="(555) 010-2000" required class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm font-normal" />
           </div>
         </div>
 
         <div>
-          <label class="block text-slate-700 mb-1">Firm Website URL</label>
-          <input type="url" placeholder="https://www.austinbrokerage.com" required class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm font-normal" />
+          <label for="p-website" class="block text-slate-700 mb-1">Firm Website URL</label>
+          <input id="p-website" name="website" type="url" placeholder="https://www.examplefirm.com" required class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm font-normal" />
         </div>
 
         <div>
-          <label class="block text-slate-700 mb-1">Credentials / License Number</label>
-          <input type="text" placeholder="Texas Real Estate Commission TREC #900123" required class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm font-normal" />
+          <label for="p-license" class="block text-slate-700 mb-1">State License or Bar Registration Number</label>
+          <input id="p-license" name="license" type="text" placeholder="State Real Estate Commission or Bar License #" required class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm font-normal" />
         </div>
 
         <div class="pt-4">
-          <button type="submit" class="w-full py-3.5 rounded-2xl bg-[#1D68F2] hover:bg-blue-600 text-white font-extrabold text-sm transition shadow-md">
-            Submit Partner Application →
+          <button type="submit" class="w-full py-3.5 rounded-2xl bg-[#1D68F2] hover:bg-blue-600 text-white font-extrabold text-sm transition shadow-md cursor-pointer">
+            Compose Email Inquiry to partners@cityclick.com →
           </button>
         </div>
       </form>
+
+      <div
+        id="partner-confirm-card"
+        class="hidden p-5 rounded-2xl bg-emerald-50 border border-emerald-200 space-y-3 text-xs text-emerald-950"
+      >
+        <div class="font-extrabold text-sm text-emerald-900">
+          Email Inquiry Draft Prepared
+        </div>
+        <p class="leading-relaxed">
+          Your browser opened a pre-filled email draft addressed to <strong>partners@cityclick.com</strong>. Please press send in your email client to complete delivery—no data is stored silently on our web server before you send your email.
+        </p>
+        <div class="flex flex-wrap items-center gap-3 pt-1">
+          <a
+            id="partner-mailto-link"
+            href="mailto:partners@cityclick.com"
+            class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs transition"
+          >
+            Re-open Email Draft →
+          </a>
+          <span class="text-emerald-800">
+            Using webmail? Send your details directly to <strong>partners@cityclick.com</strong>.
+          </span>
+        </div>
+      </div>
     </div>
   </section>
+
+  <script>
+    const form = document.getElementById('partner-inquiry-form') as HTMLFormElement | null;
+    const confirmCard = document.getElementById('partner-confirm-card');
+    const mailtoLink = document.getElementById('partner-mailto-link') as HTMLAnchorElement | null;
+
+    form?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const firm = (document.getElementById('p-firm') as HTMLInputElement)?.value.trim() || '';
+      const market = (document.getElementById('p-market') as HTMLInputElement)?.value.trim() || '';
+      const category = (document.getElementById('p-category') as HTMLSelectElement)?.value.trim() || '';
+      const email = (document.getElementById('p-email') as HTMLInputElement)?.value.trim() || '';
+      const phone = (document.getElementById('p-phone') as HTMLInputElement)?.value.trim() || '';
+      const website = (document.getElementById('p-website') as HTMLInputElement)?.value.trim() || '';
+      const license = (document.getElementById('p-license') as HTMLInputElement)?.value.trim() || '';
+
+      const subject = `CityClick Partner Directory Inquiry — ${firm} (${market})`;
+      const bodyLines = [
+        'CityClick Partnerships Desk,',
+        '',
+        'Please review our firm for the CityClick Local Partner Directory:',
+        '',
+        `Firm Name: ${firm}`,
+        `Target Market / City: ${market}`,
+        `Category: ${category}`,
+        `Contact Email: ${email}`,
+        `Phone Number: ${phone}`,
+        `Website URL: ${website}`,
+        `Credentials / License #: ${license}`,
+      ];
+      const mailtoUrl = `mailto:partners@cityclick.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyLines.join('\n'))}`;
+
+      if (mailtoLink) {
+        mailtoLink.href = mailtoUrl;
+      }
+      confirmCard?.classList.remove('hidden');
+      window.location.href = mailtoUrl;
+    });
+  </script>
 </Layout>

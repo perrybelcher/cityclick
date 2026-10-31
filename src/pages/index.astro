@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import manifest from '../data/index-manifest.json';
 
-// Curated 6 Premier Hubs with High-Quality Photography & Discovery Focus
+// Curated 7 Certified Flagship Hubs with Primary-Sourced Data & Photography
 const FEATURED_CITIES = [
   {
     slug: 'tx/austin',
@@ -10,44 +10,8 @@ const FEATURED_CITIES = [
     state: 'Texas',
     stateCode: 'TX',
     image: '/images/austin-skyline.jpg',
-    appeal: 'Census-sourced population, income, climate, and sales-tax figures for Austin, Texas.',
-    tagline: 'Texas'
-  },
-  {
-    slug: 'ar/hot-springs-village',
-    name: 'Hot Springs Village',
-    state: 'Arkansas',
-    stateCode: 'AR',
-    image: '/images/hsv-hero.jpg',
-    appeal: 'City guide for Hot Springs Village, Arkansas.',
-    tagline: 'Arkansas'
-  },
-  {
-    slug: 'id/boise',
-    name: 'Boise',
-    state: 'Idaho',
-    stateCode: 'ID',
-    image: '/images/boise-hero.jpg',
-    appeal: 'City guide for Boise, Idaho.',
-    tagline: 'Idaho'
-  },
-  {
-    slug: 'fl/tampa',
-    name: 'Tampa',
-    state: 'Florida',
-    stateCode: 'FL',
-    image: '/images/tampa-hero.jpg',
-    appeal: 'City guide for Tampa, Florida.',
-    tagline: 'Florida'
-  },
-  {
-    slug: 'az/scottsdale',
-    name: 'Scottsdale',
-    state: 'Arizona',
-    stateCode: 'AZ',
-    image: '/images/scottsdale-hero.jpg',
-    appeal: 'City guide for Scottsdale, Arizona.',
-    tagline: 'Arizona'
+    appeal: 'Census demographics, housing costs, Open-Meteo climate, CMS emergency hospitals, colleges, EV charging, and sales-tax data for Austin, Texas.',
+    tagline: 'Texas Capital'
   },
   {
     slug: 'tn/nashville',
@@ -55,21 +19,69 @@ const FEATURED_CITIES = [
     state: 'Tennessee',
     stateCode: 'TN',
     image: '/images/nashville-hero.jpg',
-    appeal: 'City guide for Nashville, Tennessee.',
-    tagline: 'Tennessee'
+    appeal: 'Primary-sourced population, housing, elevation, airport, CMS hospital, university, and NAICS trade density guide for Nashville, Tennessee.',
+    tagline: 'Middle Tennessee'
+  },
+  {
+    slug: 'ar/hot-springs',
+    name: 'Hot Springs',
+    state: 'Arkansas',
+    stateCode: 'AR',
+    image: '/images/hot-springs-hero.jpg',
+    appeal: 'Verified Census housing, Hot Springs National Park access, municipal water, CMS hospitals, and retail sales-tax guide for Hot Springs, Arkansas.',
+    tagline: 'National Park City'
+  },
+  {
+    slug: 'ar/hot-springs-village',
+    name: 'Hot Springs Village',
+    state: 'Arkansas',
+    stateCode: 'AR',
+    image: '/images/hsv-hero.jpg',
+    appeal: 'Census ACS demographics, housing values, Ouachita foothills elevation, and Garland County infrastructure guide for Hot Springs Village, Arkansas.',
+    tagline: 'Ouachita Foothills'
+  },
+  {
+    slug: 'id/boise',
+    name: 'Boise',
+    state: 'Idaho',
+    stateCode: 'ID',
+    image: '/images/boise-hero.jpg',
+    appeal: 'Primary-sourced demographics, Boise Airport proximity, USGS elevation, universities, and small-business trade counts for Boise, Idaho.',
+    tagline: 'Mountain West'
+  },
+  {
+    slug: 'fl/tampa',
+    name: 'Tampa',
+    state: 'Florida',
+    stateCode: 'FL',
+    image: '/images/tampa-hero.jpg',
+    appeal: 'Verified Census housing, Tampa International Airport distance, Gulf Coast climate averages, and NAICS trade density for Tampa, Florida.',
+    tagline: 'Gulf Coast'
+  },
+  {
+    slug: 'az/scottsdale',
+    name: 'Scottsdale',
+    state: 'Arizona',
+    stateCode: 'AZ',
+    image: '/images/scottsdale-hero.jpg',
+    appeal: 'Census income and home values, Sonoran Desert climate and elevation, CMS hospitals, and retail tax breakdown for Scottsdale, Arizona.',
+    tagline: 'Sonoran Desert'
   }
 ];
 
+const CERTIFIED_SET = new Set(FEATURED_CITIES.map((c) => c.slug));
+
 // Lightweight search index for all 1,501 cities (fast, client-side, zero lag)
-const searchIndex = manifest.map(c => ({
+const searchIndex = manifest.map((c: any) => ({
   n: c.name,
   s: c.stateCode.toUpperCase(),
-  u: c.slug
+  u: c.slug,
+  v: CERTIFIED_SET.has(c.slug) ? 1 : 0,
 }));
 
 // Group all 1,501 cities by state for the directory
 const stateCounts: Record<string, { code: string; name: string; count: number }> = {};
-manifest.forEach(c => {
+manifest.forEach((c: any) => {
   const code = c.stateCode.toLowerCase();
   if (!stateCounts[code]) {
     stateCounts[code] = { code, name: c.stateName, count: 0 };
@@ -81,7 +93,7 @@ const statesList = Object.values(stateCounts).sort((a, b) => a.name.localeCompar
 
 <Layout
   title="CityClick — Get to know your next city"
-  description="Plan a visit, find a place to live, or research your next business location. Census-sourced guides for six verified cities, with 1,495 more in review."
+  description="Plan a visit, find a place to live, or research your next business location. Primary-sourced guides for seven verified US cities, with 1,494 more in review."
   image="https://cityclick.com/images/og-cityclick.jpg"
 >
   <!-- Hero Section -->
@@ -92,7 +104,7 @@ const statesList = Object.values(stateCounts).sort((a, b) => a.name.localeCompar
         <div class="lg:col-span-7 space-y-6">
           <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-xs font-bold text-[#1D68F2]">
             <span class="w-2 h-2 rounded-full bg-[#1D68F2] animate-pulse"></span>
-            6 verified city guides · 1,495 more in review, added as each passes our data checks
+            7 verified city guides · 1,494 more in review, added as each passes our data checks
           </div>
 
           <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-[#152438] tracking-tight leading-[1.12]">
@@ -100,7 +112,7 @@ const statesList = Object.values(stateCounts).sort((a, b) => a.name.localeCompar
           </h1>
 
           <p class="text-base sm:text-lg text-slate-600 max-w-xl leading-relaxed">
-            Plan a visit, find a place to live, or research your next business location. Start with a city.
+            Plan a visit, find a place to live, or research your next business location. Every published metric cites its primary federal, state, or municipal source.
           </p>
 
           <!-- Search Interface with Persistent Visible Label -->
@@ -120,7 +132,7 @@ const statesList = Object.values(stateCounts).sort((a, b) => a.name.localeCompar
                   id="city-search-input"
                   type="text"
                   autocomplete="off"
-                  placeholder="Enter a city and state (e.g. Austin, Boise, Tampa)..."
+                  placeholder="Enter a city and state (e.g. Austin, Nashville, Hot Springs)..."
                   class="flex-1 border-0 focus:ring-0 text-slate-800 placeholder-slate-400 text-sm sm:text-base outline-none bg-transparent"
                 />
                 <button
@@ -135,7 +147,7 @@ const statesList = Object.values(stateCounts).sort((a, b) => a.name.localeCompar
               <!-- Live Autocomplete & Search Results Dropdown -->
               <div
                 id="search-results-dropdown"
-                class="absolute left-0 right-0 top-full mt-2 bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden z-50 hidden divide-y divide-slate-100 max-h-72 overflow-y-auto"
+                class="absolute left-0 right-0 top-full mt-2 bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden z-50 hidden divide-y divide-slate-100 max-h-80 overflow-y-auto"
               ></div>
             </div>
 
@@ -145,11 +157,14 @@ const statesList = Object.values(stateCounts).sort((a, b) => a.name.localeCompar
 
           <!-- Featured Cities Quick Links -->
           <div class="flex items-center gap-2 text-xs text-slate-500 pt-1 flex-wrap">
-            <span class="font-bold text-slate-400 uppercase tracking-wider text-[10px]">Featured cities:</span>
-            <a href="/tx/austin" class="px-2.5 py-1 rounded-lg bg-white border border-slate-200 hover:border-blue-400 hover:text-[#1D68F2] transition font-semibold">Austin, TX</a>
-            <a href="/ar/hot-springs-village" class="px-2.5 py-1 rounded-lg bg-white border border-slate-200 hover:border-blue-400 hover:text-[#1D68F2] transition font-semibold">Hot Springs Village, AR</a>
-            <a href="/id/boise" class="px-2.5 py-1 rounded-lg bg-white border border-slate-200 hover:border-blue-400 hover:text-[#1D68F2] transition font-semibold">Boise, ID</a>
-            <a href="/fl/tampa" class="px-2.5 py-1 rounded-lg bg-white border border-slate-200 hover:border-blue-400 hover:text-[#1D68F2] transition font-semibold">Tampa, FL</a>
+            <span class="font-bold text-slate-400 uppercase tracking-wider text-[10px]">Verified guides:</span>
+            <a href="/tx/austin/" class="px-2.5 py-1 rounded-lg bg-white border border-slate-200 hover:border-blue-400 hover:text-[#1D68F2] transition font-semibold">Austin, TX</a>
+            <a href="/tn/nashville/" class="px-2.5 py-1 rounded-lg bg-white border border-slate-200 hover:border-blue-400 hover:text-[#1D68F2] transition font-semibold">Nashville, TN</a>
+            <a href="/ar/hot-springs/" class="px-2.5 py-1 rounded-lg bg-white border border-slate-200 hover:border-blue-400 hover:text-[#1D68F2] transition font-semibold">Hot Springs, AR</a>
+            <a href="/ar/hot-springs-village/" class="px-2.5 py-1 rounded-lg bg-white border border-slate-200 hover:border-blue-400 hover:text-[#1D68F2] transition font-semibold">Hot Springs Village, AR</a>
+            <a href="/id/boise/" class="px-2.5 py-1 rounded-lg bg-white border border-slate-200 hover:border-blue-400 hover:text-[#1D68F2] transition font-semibold">Boise, ID</a>
+            <a href="/fl/tampa/" class="px-2.5 py-1 rounded-lg bg-white border border-slate-200 hover:border-blue-400 hover:text-[#1D68F2] transition font-semibold">Tampa, FL</a>
+            <a href="/az/scottsdale/" class="px-2.5 py-1 rounded-lg bg-white border border-slate-200 hover:border-blue-400 hover:text-[#1D68F2] transition font-semibold">Scottsdale, AZ</a>
           </div>
         </div>
 
@@ -157,7 +172,7 @@ const statesList = Object.values(stateCounts).sort((a, b) => a.name.localeCompar
         <div class="lg:col-span-5">
           <div class="grid grid-cols-2 gap-3.5 sm:gap-4">
             <!-- 1. Austin (Large Span) -->
-            <a href="/tx/austin" class="col-span-2 group relative rounded-3xl overflow-hidden shadow-xl border border-slate-200 h-48 block">
+            <a href="/tx/austin/" class="col-span-2 group relative rounded-3xl overflow-hidden shadow-xl border border-slate-200 h-48 block">
               <img
                 src="/images/austin-skyline.jpg"
                 alt="Austin, Texas Downtown Skyline"
@@ -166,35 +181,35 @@ const statesList = Object.values(stateCounts).sort((a, b) => a.name.localeCompar
               <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent flex flex-col justify-end p-5 text-white">
                 <span class="text-[10px] font-black uppercase tracking-wider text-blue-300">Featured Urban Guide</span>
                 <div class="text-xl font-black text-white group-hover:text-blue-200 transition">Austin, Texas</div>
-                <div class="text-xs text-slate-300">Texas city guide</div>
+                <div class="text-xs text-slate-300">Verified Texas flagship guide</div>
               </div>
             </a>
 
-            <!-- 2. Hot Springs Village (Lakeside) -->
-            <a href="/ar/hot-springs-village" class="group relative rounded-3xl overflow-hidden shadow-lg border border-slate-200 h-44 block">
+            <!-- 2. Hot Springs, AR -->
+            <a href="/ar/hot-springs/" class="group relative rounded-3xl overflow-hidden shadow-lg border border-slate-200 h-44 block">
               <img
-                src="/images/hsv-hero.jpg"
-                alt="Hot Springs Village, Arkansas Lake & Mountains"
+                src="/images/hot-springs-hero.jpg"
+                alt="Hot Springs, Arkansas National Park & Bathhouse Row"
                 class="w-full h-full object-cover group-hover:scale-105 transition duration-700 filter brightness-[0.80]"
               />
               <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent flex flex-col justify-end p-4 text-white">
-                <span class="text-[9px] font-black uppercase tracking-wider text-emerald-300">Lakeside Enclave</span>
-                <div class="text-sm font-black text-white group-hover:text-emerald-200 transition">Hot Springs Village, AR</div>
-                <div class="text-[11px] text-slate-300">Arkansas city guide</div>
+                <span class="text-[9px] font-black uppercase tracking-wider text-emerald-300">National Park City</span>
+                <div class="text-sm font-black text-white group-hover:text-emerald-200 transition">Hot Springs, AR</div>
+                <div class="text-[11px] text-slate-300">Verified Arkansas guide</div>
               </div>
             </a>
 
-            <!-- 3. Boise (Mountain West) -->
-            <a href="/id/boise" class="group relative rounded-3xl overflow-hidden shadow-lg border border-slate-200 h-44 block">
+            <!-- 3. Nashville, TN -->
+            <a href="/tn/nashville/" class="group relative rounded-3xl overflow-hidden shadow-lg border border-slate-200 h-44 block">
               <img
-                src="/images/boise-hero.jpg"
-                alt="Boise, Idaho River Greenbelt & Skyline"
+                src="/images/nashville-hero.jpg"
+                alt="Nashville, Tennessee Downtown Skyline"
                 class="w-full h-full object-cover group-hover:scale-105 transition duration-700 filter brightness-[0.80]"
               />
               <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent flex flex-col justify-end p-4 text-white">
-                <span class="text-[9px] font-black uppercase tracking-wider text-purple-300">Mountain West</span>
-                <div class="text-sm font-black text-white group-hover:text-purple-200 transition">Boise, Idaho</div>
-                <div class="text-[11px] text-slate-300">Idaho city guide</div>
+                <span class="text-[9px] font-black uppercase tracking-wider text-purple-300">Middle Tennessee</span>
+                <div class="text-sm font-black text-white group-hover:text-purple-200 transition">Nashville, TN</div>
+                <div class="text-[11px] text-slate-300">Verified Tennessee guide</div>
               </div>
             </a>
           </div>
@@ -209,31 +224,34 @@ const statesList = Object.values(stateCounts).sort((a, b) => a.name.localeCompar
       <div class="flex flex-col md:flex-row md:items-end justify-between mb-10">
         <div>
           <h2 class="text-2xl sm:text-3xl font-black text-[#152438] tracking-tight">
-            Featured Cities
+            Verified Flagship City Guides
           </h2>
           <p class="text-sm text-slate-500 mt-1">
-            Explore complete guides covering places to visit, neighborhood living, and commercial intelligence.
+            Complete primary-sourced guides covering visitor logistics, housing and tax costs, and small-business trade density.
           </p>
         </div>
-        <div class="mt-4 md:mt-0 text-xs font-bold text-slate-400">
-          Featured cities
+        <div class="mt-4 md:mt-0 text-xs font-bold text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
+          7 Certified Cities
         </div>
       </div>
 
-      <!-- 6 Attractive Featured City Cards -->
+      <!-- 7 Attractive Featured City Cards -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {FEATURED_CITIES.map((city) => (
           <div class="bg-white rounded-3xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-blue-400 transition duration-300 overflow-hidden flex flex-col justify-between group">
             <!-- Card Image Layer -->
-            <a href={`/${city.slug}`} class="relative h-48 overflow-hidden block">
+            <a href={`/${city.slug}/`} class="relative h-48 overflow-hidden block">
               <img
                 src={city.image}
                 alt={`${city.name}, ${city.state} Overview`}
                 class="w-full h-full object-cover group-hover:scale-105 transition duration-700 filter brightness-[0.85]"
               />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent flex items-end p-4 text-white">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent flex items-end justify-between p-4 text-white">
                 <span class="px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md text-[10px] font-extrabold uppercase tracking-wider text-blue-200 border border-white/20">
                   {city.tagline}
+                </span>
+                <span class="px-2.5 py-1 rounded-full bg-emerald-500/80 backdrop-blur-md text-[10px] font-extrabold uppercase tracking-wider text-white">
+                  Verified
                 </span>
               </div>
             </a>
@@ -257,23 +275,23 @@ const statesList = Object.values(stateCounts).sort((a, b) => a.name.localeCompar
               <!-- 3 Interactive Direct Action Portals -->
               <div class="pt-3 border-t border-slate-100 flex items-center gap-1.5 flex-wrap">
                 <a
-                  href={`/${city.slug}?tab=travel`}
+                  href={`/${city.slug}/?tab=travel`}
                   class="px-2.5 py-1.5 rounded-xl bg-blue-50 hover:bg-blue-100 text-[#1D68F2] font-black text-[11px] transition flex items-center gap-1 border border-blue-200/60"
                   title={`View ${city.name} Visitor Guide`}
                 >
                   <span>✈️</span> Visit
                 </a>
                 <a
-                  href={`/${city.slug}?tab=moving`}
+                  href={`/${city.slug}/?tab=moving`}
                   class="px-2.5 py-1.5 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-700 font-black text-[11px] transition flex items-center gap-1 border border-emerald-200/60"
-                  title={`View ${city.name} city guide`}
+                  title={`View ${city.name} Relocation Guide`}
                 >
                   <span>🏡</span> Live
                 </a>
                 <a
-                  href={`/${city.slug}?tab=business`}
+                  href={`/${city.slug}/?tab=business`}
                   class="px-2.5 py-1.5 rounded-xl bg-purple-50 hover:bg-purple-100 text-purple-700 font-black text-[11px] transition flex items-center gap-1 border border-purple-200/60"
-                  title={`Underwrite ${city.name} Commercial Trades & Rents`}
+                  title={`Explore ${city.name} Business & Tax Data`}
                 >
                   <span>💼</span> Business
                 </a>
@@ -281,7 +299,7 @@ const statesList = Object.values(stateCounts).sort((a, b) => a.name.localeCompar
 
               <!-- Button -->
               <a
-                href={`/${city.slug}`}
+                href={`/${city.slug}/`}
                 class="w-full text-center py-3 rounded-2xl bg-[#152438] hover:bg-[#1D68F2] text-white font-bold text-xs transition duration-200 shadow-md block"
               >
                 Explore {city.name} Guide →
@@ -302,47 +320,47 @@ const statesList = Object.values(stateCounts).sort((a, b) => a.name.localeCompar
             <span>⚖️</span> Head-to-Head Comparison
           </div>
           <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black text-white tracking-tight">
-            Compare Any Two Cities
+            Compare Verified Cities Side by Side
           </h2>
           <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
-            Side-by-side city pages. Only figures on each city record are shown.
+            Compare Census demographics, housing affordability multiples, effective property taxes, and combined sales-tax rates across certified guides.
           </p>
         </div>
 
         <!-- 3 Curated Comparison Presets -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
           <a
-            href="/compare/tx-austin-vs-fl-tampa"
+            href="/compare/tx-austin-vs-tn-nashville/"
             class="p-5 rounded-2xl bg-white/10 hover:bg-white/15 border border-white/15 transition flex items-center justify-between group"
           >
             <div>
-              <div class="text-[10px] uppercase font-bold text-blue-300 mb-1">City comparison</div>
-              <div class="text-sm font-black text-white group-hover:text-blue-200 transition">Austin, TX vs. Tampa, FL</div>
-              <div class="text-[11px] text-slate-400 mt-0.5">Open both city guides</div>
+              <div class="text-[10px] uppercase font-bold text-blue-300 mb-1">High-Growth Hubs</div>
+              <div class="text-sm font-black text-white group-hover:text-blue-200 transition">Austin, TX vs. Nashville, TN</div>
+              <div class="text-[11px] text-slate-400 mt-0.5">Compare income, housing & taxes</div>
             </div>
             <span class="text-xl font-bold text-blue-400 group-hover:translate-x-1 transition">→</span>
           </a>
 
           <a
-            href="/compare/id-boise-vs-az-scottsdale"
+            href="/compare/ar-hot-springs-vs-ar-hot-springs-village/"
             class="p-5 rounded-2xl bg-white/10 hover:bg-white/15 border border-white/15 transition flex items-center justify-between group"
           >
             <div>
-              <div class="text-[10px] uppercase font-bold text-emerald-300 mb-1">City comparison</div>
-              <div class="text-sm font-black text-white group-hover:text-emerald-200 transition">Boise, ID vs. Scottsdale, AZ</div>
-              <div class="text-[11px] text-slate-400 mt-0.5">Open both city guides</div>
+              <div class="text-[10px] uppercase font-bold text-emerald-300 mb-1">Garland County Showdown</div>
+              <div class="text-sm font-black text-white group-hover:text-emerald-200 transition">Hot Springs vs. Hot Springs Village</div>
+              <div class="text-[11px] text-slate-400 mt-0.5">Resort city vs. gated CDP</div>
             </div>
             <span class="text-xl font-bold text-emerald-400 group-hover:translate-x-1 transition">→</span>
           </a>
 
           <a
-            href="/compare/tx-austin-vs-ar-hot-springs-village"
+            href="/compare/id-boise-vs-az-scottsdale/"
             class="p-5 rounded-2xl bg-white/10 hover:bg-white/15 border border-white/15 transition flex items-center justify-between group"
           >
             <div>
-              <div class="text-[10px] uppercase font-bold text-purple-300 mb-1">City comparison</div>
-              <div class="text-sm font-black text-white group-hover:text-purple-200 transition">Austin vs. Hot Springs Village</div>
-              <div class="text-[11px] text-slate-400 mt-0.5">Open both city guides</div>
+              <div class="text-[10px] uppercase font-bold text-purple-300 mb-1">Western Markets</div>
+              <div class="text-sm font-black text-white group-hover:text-purple-200 transition">Boise, ID vs. Scottsdale, AZ</div>
+              <div class="text-[11px] text-slate-400 mt-0.5">Compare Western relocation hubs</div>
             </div>
             <span class="text-xl font-bold text-purple-400 group-hover:translate-x-1 transition">→</span>
           </a>
@@ -359,47 +377,44 @@ const statesList = Object.values(stateCounts).sort((a, b) => a.name.localeCompar
           See a place before you choose it
         </h2>
         <p class="text-sm text-slate-600 mt-1">
-          Every city guide connects authentic visual orientation with practical data to help you decide and act.
+          Every city guide pairs visual orientation with primary-sourced federal and state data.
         </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <!-- 1. Walk a Neighborhood / Relocate -->
         <div id="relocate" class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm space-y-3 scroll-mt-24">
           <div class="w-10 h-10 rounded-2xl bg-blue-100 text-[#1D68F2] flex items-center justify-center font-bold text-lg">
             🚶
           </div>
           <h3 class="text-base font-black text-[#152438]">Walk a Neighborhood</h3>
           <p class="text-xs text-slate-600 leading-relaxed">
-            Photo galleries and video tours of the city.
+            Photo galleries, aerial video tours, and interactive multi-layer maps of emergency hospitals, campuses, and parks.
           </p>
           <a href="/ar/hot-springs-village/" class="inline-flex items-center text-xs font-bold text-[#1D68F2] hover:text-blue-700">
             Preview Video Experience →
           </a>
         </div>
 
-        <!-- 2. Plan a Visit -->
         <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm space-y-3">
           <div class="w-10 h-10 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-lg">
             📋
           </div>
           <h3 class="text-base font-black text-[#152438]">Plan a Visit</h3>
           <p class="text-xs text-slate-600 leading-relaxed">
-            Airport distance, climate, and water-system facts where those fields are on the city record.
+            Commercial airport distance, 10-year climate averages, National Parks, scheduled live events, and EPA water-system facts.
           </p>
-          <a href="/id/boise/" class="inline-flex items-center text-xs font-bold text-emerald-700 hover:text-emerald-900">
-            Preview Visitor Guide →
+          <a href="/ar/hot-springs/" class="inline-flex items-center text-xs font-bold text-emerald-700 hover:text-emerald-900">
+            Preview Hot Springs Guide →
           </a>
         </div>
 
-        <!-- 3. See What is Changing -->
         <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm space-y-3">
           <div class="w-10 h-10 rounded-2xl bg-purple-100 text-purple-700 flex items-center justify-center font-bold text-lg">
             🏗️
           </div>
           <h3 class="text-base font-black text-[#152438]">See the Business Numbers</h3>
           <p class="text-xs text-slate-600 leading-relaxed">
-            Sales-tax rate and Census establishment counts where those fields are on the city record.
+            Granular retail sales-tax breakdowns, public EV charging counts, and Census ZBP small-business trade density.
           </p>
           <a href="/tx/austin/" class="inline-flex items-center text-xs font-bold text-purple-700 hover:text-purple-900">
             Preview Austin Guide →
@@ -417,12 +432,11 @@ const statesList = Object.values(stateCounts).sort((a, b) => a.name.localeCompar
           Tools to help you decide and plan
         </h2>
         <p class="text-sm text-slate-600 mt-1">
-          Practical financial, relocation, and commercial calculators tailored to each audience.
+          Practical relocation, comparison, and commercial lease calculators tailored to each audience.
         </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <!-- 1. For Visitors -->
         <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-4">
           <div class="space-y-3">
             <div class="w-10 h-10 rounded-2xl bg-blue-100 text-[#1D68F2] flex items-center justify-center font-bold text-lg">
@@ -433,15 +447,14 @@ const statesList = Object.values(stateCounts).sort((a, b) => a.name.localeCompar
             </span>
             <h3 class="text-base font-black text-[#152438]">City Shortlist & Trip Scouting</h3>
             <p class="text-xs text-slate-600 leading-relaxed">
-              Save cities and open their guides.
+              Save cities locally in your browser shortlist and compare visitor guides side by side.
             </p>
           </div>
           <a href="/#featured" class="inline-flex items-center text-xs font-bold text-[#1D68F2] hover:text-blue-700 pt-2">
-            Explore Featured Guides →
+            Explore Verified Guides →
           </a>
         </div>
 
-        <!-- 2. For Movers -->
         <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-4">
           <div class="space-y-3">
             <div class="w-10 h-10 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-lg">
@@ -452,15 +465,14 @@ const statesList = Object.values(stateCounts).sort((a, b) => a.name.localeCompar
             </span>
             <h3 class="text-base font-black text-[#152438]">State Tax & Housing Comparison</h3>
             <p class="text-xs text-slate-600 leading-relaxed">
-              Compare housing and tax figures on the city page.
+              Compare Census median home values, gross rents, and effective property tax rates across peer cities.
             </p>
           </div>
-          <a href="/tx/austin" class="inline-flex items-center text-xs font-bold text-emerald-700 hover:text-emerald-900 pt-2">
-            Compare Austin Living Metrics →
+          <a href="/compare/tx-austin-vs-tn-nashville/" class="inline-flex items-center text-xs font-bold text-emerald-700 hover:text-emerald-900 pt-2">
+            Compare Living Metrics →
           </a>
         </div>
 
-        <!-- 3. For Business Owners -->
         <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-4">
           <div class="space-y-3">
             <div class="w-10 h-10 rounded-2xl bg-purple-100 text-purple-700 flex items-center justify-center font-bold text-lg">
@@ -474,7 +486,7 @@ const statesList = Object.values(stateCounts).sort((a, b) => a.name.localeCompar
               Enter your quoted lease rate and calculate the daily customers needed to break even across common trades.
             </p>
           </div>
-          <a href="/tools/lease-calculator" class="inline-flex items-center text-xs font-bold text-purple-700 hover:text-purple-900 pt-2">
+          <a href="/tools/lease-calculator/" class="inline-flex items-center text-xs font-bold text-purple-700 hover:text-purple-900 pt-2">
             Open Lease Calculator →
           </a>
         </div>
@@ -490,14 +502,14 @@ const statesList = Object.values(stateCounts).sort((a, b) => a.name.localeCompar
           Browse cities by state
         </h2>
         <p class="text-sm text-slate-500 mt-1">
-          Find city guides, local information, and places to explore across the United States.
+          Explore state directories across the United States, with verified flagship guides badged at the top of their state.
         </p>
       </div>
 
       <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
         {statesList.map((st) => (
           <a
-            href={`/${st.code}`}
+            href={`/${st.code}/`}
             class="p-3.5 rounded-2xl bg-white border border-slate-200/80 hover:border-[#1D68F2] hover:bg-blue-50/50 hover:shadow-xs transition flex justify-between items-center text-xs"
           >
             <span class="font-bold text-slate-800 truncate">{st.name}</span>
@@ -519,20 +531,20 @@ const statesList = Object.values(stateCounts).sort((a, b) => a.name.localeCompar
             Stay Connected
           </div>
           <h2 class="text-2xl sm:text-3xl font-black text-white tracking-tight">
-            Follow a city or contribute local knowledge
+            Request a city audit or submit a verified correction
           </h2>
           <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
-            Get notified when new zoning, transit changes, or tax adjustments occur in communities you care about. If you are a business owner, civic official, or resident, help maintain verified data by submitting verified corrections.
+            Want your city promoted to our verified flagship tier next, or spotted an updated state tax notice? Reach our data audit desk directly with primary source documentation.
           </p>
         </div>
 
         <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/15 space-y-4">
-          <div class="text-xs font-bold text-white">Receive verified updates for your city:</div>
+          <div class="text-xs font-bold text-white">Request city verification updates via email:</div>
           <form class="flex flex-col sm:flex-row gap-2" id="follow-city-form">
             <input
-              type="email"
-              id="follow-email-input"
-              placeholder="Enter your email address"
+              type="text"
+              id="follow-city-topic"
+              placeholder="City & state (e.g. Little Rock, AR)"
               required
               class="flex-1 px-4 py-3 rounded-xl bg-white text-slate-800 text-xs outline-none font-medium placeholder-slate-400"
             />
@@ -540,13 +552,14 @@ const statesList = Object.values(stateCounts).sort((a, b) => a.name.localeCompar
               type="submit"
               class="px-5 py-3 rounded-xl bg-[#1D68F2] hover:bg-blue-600 text-white font-bold text-xs transition shrink-0 cursor-pointer shadow-md"
             >
-              Follow Updates
+              Email Audit Desk →
             </button>
           </form>
+          <p id="follow-city-feedback" class="hidden text-xs text-emerald-300 font-semibold"></p>
           <div class="flex items-center justify-between text-[11px] text-slate-400 pt-2 border-t border-white/10">
             <span>Verified public records only. Zero spam.</span>
-            <a href="mailto:contribute@cityclick.com" class="text-blue-300 hover:underline font-semibold">
-              Submit a correction →
+            <a href="mailto:audit@cityclick.com" class="text-blue-300 hover:underline font-semibold">
+              audit@cityclick.com →
             </a>
           </div>
         </div>
@@ -561,6 +574,24 @@ const statesList = Object.values(stateCounts).sort((a, b) => a.name.localeCompar
       const form = document.getElementById('hero-search-form');
       const dropdown = document.getElementById('search-results-dropdown');
       const urlResultsBox = document.getElementById('search-url-results');
+      const followForm = document.getElementById('follow-city-form');
+      const followTopic = document.getElementById('follow-city-topic');
+      const followFeedback = document.getElementById('follow-city-feedback');
+
+      if (followForm && followTopic) {
+        followForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const cityVal = followTopic.value.trim();
+          if (!cityVal) return;
+          const subject = encodeURIComponent('CityClick Verification Request: ' + cityVal);
+          const body = encodeURIComponent('Please notify me when primary-source verification is published for ' + cityVal + '.');
+          if (followFeedback) {
+            followFeedback.textContent = 'Opening your email client to contact audit@cityclick.com regarding ' + cityVal + '.';
+            followFeedback.classList.remove('hidden');
+          }
+          window.location.href = 'mailto:audit@cityclick.com?subject=' + subject + '&body=' + body;
+        });
+      }
 
       function normalize(str) {
         return (str || '').toLowerCase().trim().replace(/[^a-z0-9]/g, '');
@@ -570,22 +601,28 @@ const statesList = Object.values(stateCounts).sort((a, b) => a.name.localeCompar
         const q = normalize(query);
         if (!q) return [];
 
-        return searchIndex.filter(c => {
-          const nameNorm = normalize(c.n);
-          const stateNorm = normalize(c.s);
-          const fullNorm = normalize(c.n + c.s);
-          const slugNorm = normalize(c.u);
-
-          return nameNorm.startsWith(q) || 
-                 fullNorm.includes(q) || 
-                 slugNorm.includes(q) || 
-                 nameNorm.includes(q);
-        }).sort((a, b) => {
-          // Exact name match first
-          if (normalize(a.n) === q) return -1;
-          if (normalize(b.n) === q) return 1;
-          return a.n.localeCompare(b.n);
-        });
+        return searchIndex
+          .filter((c) => {
+            const nameNorm = normalize(c.n);
+            const fullNorm = normalize(c.n + c.s);
+            const slugNorm = normalize(c.u);
+            return (
+              nameNorm.startsWith(q) ||
+              fullNorm.includes(q) ||
+              slugNorm.includes(q) ||
+              nameNorm.includes(q)
+            );
+          })
+          .sort((a, b) => {
+            const aExact = normalize(a.n) === q || normalize(a.n + a.s) === q ? 1 : 0;
+            const bExact = normalize(b.n) === q || normalize(b.n + b.s) === q ? 1 : 0;
+            if (aExact !== bExact) return bExact - aExact;
+            if (a.v !== b.v) return b.v - a.v;
+            const aStarts = normalize(a.n).startsWith(q) ? 1 : 0;
+            const bStarts = normalize(b.n).startsWith(q) ? 1 : 0;
+            if (aStarts !== bStarts) return bStarts - aStarts;
+            return a.n.localeCompare(b.n);
+          });
       }
 
       function renderDropdown(matches) {
@@ -593,22 +630,29 @@ const statesList = Object.values(stateCounts).sort((a, b) => a.name.localeCompar
         if (matches.length === 0) {
           dropdown.innerHTML = `
             <div class="px-4 py-3 text-xs text-slate-500">
-              No matching published guide found. Try another city name or explore by state below.
+              No matching city entry found. Try another city name or browse by state below.
             </div>
           `;
           dropdown.classList.remove('hidden');
           return;
         }
 
-        dropdown.innerHTML = matches.slice(0, 7).map(c => `
-          <a href="/${c.u}" class="block px-4 py-3 hover:bg-blue-50/60 text-xs font-bold text-slate-800 flex justify-between items-center transition">
+        dropdown.innerHTML = matches
+          .slice(0, 8)
+          .map(
+            (c) => `
+          <a href="/${c.u}/" class="block px-4 py-3 hover:bg-blue-50/60 text-xs font-bold text-slate-800 flex justify-between items-center transition">
             <span class="flex items-center gap-2">
-              <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+              <span class="w-1.5 h-1.5 rounded-full ${c.v ? 'bg-emerald-500' : 'bg-slate-400'}"></span>
               <span>${c.n}, ${c.s}</span>
             </span>
-            <span class="text-[10px] text-blue-600 font-extrabold uppercase bg-blue-50 px-2 py-0.5 rounded border border-blue-100">Explore Guide →</span>
+            <span class="text-[10px] ${c.v ? 'text-emerald-700 bg-emerald-50 border-emerald-200' : 'text-slate-600 bg-slate-100 border-slate-200'} font-extrabold uppercase px-2 py-0.5 rounded border">
+              ${c.v ? 'Verified Guide →' : 'Preview →'}
+            </span>
           </a>
-        `).join('');
+        `
+          )
+          .join('');
         dropdown.classList.remove('hidden');
       }
 
@@ -616,29 +660,37 @@ const statesList = Object.values(stateCounts).sort((a, b) => a.name.localeCompar
         if (!dropdown) return;
         dropdown.innerHTML = `
           <div class="px-4 py-2.5 bg-slate-50 border-b border-slate-100 flex items-center justify-between text-[11px] font-black uppercase tracking-wider text-slate-500">
-            <span>🔥 Popular Destinations</span>
-            <span class="text-blue-600 font-bold">6 Verified Guides</span>
+            <span>⭐ Verified Flagship Guides</span>
+            <span class="text-emerald-700 font-bold">7 Certified Cities</span>
           </div>
           <div class="divide-y divide-slate-100">
-            <a href="/tx/austin" class="px-4 py-3 hover:bg-blue-50/60 text-xs font-bold text-slate-800 flex justify-between items-center transition">
+            <a href="/tx/austin/" class="px-4 py-3 hover:bg-blue-50/60 text-xs font-bold text-slate-800 flex justify-between items-center transition">
               <span class="flex items-center gap-2"><span>⭐</span> Austin, TX</span>
-              <span class="text-[10px] text-blue-600 font-extrabold uppercase bg-blue-50 px-2 py-0.5 rounded">Featured →</span>
+              <span class="text-[10px] text-emerald-700 font-extrabold uppercase bg-emerald-50 px-2 py-0.5 rounded">Verified →</span>
             </a>
-            <a href="/ar/hot-springs-village" class="px-4 py-3 hover:bg-blue-50/60 text-xs font-bold text-slate-800 flex justify-between items-center transition">
+            <a href="/tn/nashville/" class="px-4 py-3 hover:bg-blue-50/60 text-xs font-bold text-slate-800 flex justify-between items-center transition">
+              <span class="flex items-center gap-2"><span>⭐</span> Nashville, TN</span>
+              <span class="text-[10px] text-emerald-700 font-extrabold uppercase bg-emerald-50 px-2 py-0.5 rounded">Verified →</span>
+            </a>
+            <a href="/ar/hot-springs/" class="px-4 py-3 hover:bg-blue-50/60 text-xs font-bold text-slate-800 flex justify-between items-center transition">
+              <span class="flex items-center gap-2"><span>⭐</span> Hot Springs, AR</span>
+              <span class="text-[10px] text-emerald-700 font-extrabold uppercase bg-emerald-50 px-2 py-0.5 rounded">Verified →</span>
+            </a>
+            <a href="/ar/hot-springs-village/" class="px-4 py-3 hover:bg-blue-50/60 text-xs font-bold text-slate-800 flex justify-between items-center transition">
               <span class="flex items-center gap-2"><span>⭐</span> Hot Springs Village, AR</span>
-              <span class="text-[10px] text-emerald-600 font-extrabold uppercase bg-emerald-50 px-2 py-0.5 rounded">Lakeside →</span>
+              <span class="text-[10px] text-emerald-700 font-extrabold uppercase bg-emerald-50 px-2 py-0.5 rounded">Verified →</span>
             </a>
-            <a href="/fl/tampa" class="px-4 py-3 hover:bg-blue-50/60 text-xs font-bold text-slate-800 flex justify-between items-center transition">
+            <a href="/fl/tampa/" class="px-4 py-3 hover:bg-blue-50/60 text-xs font-bold text-slate-800 flex justify-between items-center transition">
               <span class="flex items-center gap-2"><span>⭐</span> Tampa, FL</span>
-              <span class="text-[10px] text-indigo-600 font-extrabold uppercase bg-indigo-50 px-2 py-0.5 rounded">Gulf Coast →</span>
+              <span class="text-[10px] text-emerald-700 font-extrabold uppercase bg-emerald-50 px-2 py-0.5 rounded">Verified →</span>
             </a>
-            <a href="/id/boise" class="px-4 py-3 hover:bg-blue-50/60 text-xs font-bold text-slate-800 flex justify-between items-center transition">
+            <a href="/id/boise/" class="px-4 py-3 hover:bg-blue-50/60 text-xs font-bold text-slate-800 flex justify-between items-center transition">
               <span class="flex items-center gap-2"><span>⭐</span> Boise, ID</span>
-              <span class="text-[10px] text-purple-600 font-extrabold uppercase bg-purple-50 px-2 py-0.5 rounded">Mountain West →</span>
+              <span class="text-[10px] text-emerald-700 font-extrabold uppercase bg-emerald-50 px-2 py-0.5 rounded">Verified →</span>
             </a>
-            <a href="/az/scottsdale" class="px-4 py-3 hover:bg-blue-50/60 text-xs font-bold text-slate-800 flex justify-between items-center transition">
+            <a href="/az/scottsdale/" class="px-4 py-3 hover:bg-blue-50/60 text-xs font-bold text-slate-800 flex justify-between items-center transition">
               <span class="flex items-center gap-2"><span>⭐</span> Scottsdale, AZ</span>
-              <span class="text-[10px] text-amber-600 font-extrabold uppercase bg-amber-50 px-2 py-0.5 rounded">Desert Resort →</span>
+              <span class="text-[10px] text-emerald-700 font-extrabold uppercase bg-emerald-50 px-2 py-0.5 rounded">Verified →</span>
             </a>
           </div>
         `;
@@ -662,15 +714,14 @@ const statesList = Object.values(stateCounts).sort((a, b) => a.name.localeCompar
           renderDropdown(matches);
         });
 
-        // Hide dropdown on outside click
         document.addEventListener('click', (e) => {
-          if (!form.contains(e.target)) {
+          if (form && dropdown && !form.contains(e.target) && !dropdown.contains(e.target)) {
             dropdown.classList.add('hidden');
           }
         });
       }
 
-      if (form) {
+      if (form && input) {
         form.addEventListener('submit', (e) => {
           e.preventDefault();
           const query = input.value.trim();
@@ -678,35 +729,36 @@ const statesList = Object.values(stateCounts).sort((a, b) => a.name.localeCompar
 
           const matches = searchCities(query);
           if (matches.length > 0) {
-            // Instant redirect to top match
-            window.location.href = `/${matches[0].u}`;
+            window.location.href = `/${matches[0].u}/`;
           } else {
             renderDropdown([]);
           }
         });
       }
 
-      // Check URL query parameters (e.g. /?search=Austin)
       const urlParams = new URLSearchParams(window.location.search);
       const searchParam = urlParams.get('search') || urlParams.get('q');
       if (searchParam && input) {
         input.value = searchParam;
         const matches = searchCities(searchParam);
-        if (matches.length > 0) {
-          if (urlResultsBox) {
-            urlResultsBox.innerHTML = `
-              <div class="font-bold text-slate-800 mb-2">Search results for "${searchParam}":</div>
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                ${matches.slice(0, 6).map(c => `
-                  <a href="/${c.u}" class="p-2.5 rounded-xl bg-white border border-blue-200 hover:border-blue-500 font-bold text-slate-800 flex justify-between items-center">
-                    <span>${c.n}, ${c.s}</span>
-                    <span class="text-[10px] text-blue-600 uppercase font-extrabold">Open Guide →</span>
-                  </a>
-                `).join('')}
-              </div>
-            `;
-            urlResultsBox.classList.remove('hidden');
-          }
+        if (matches.length > 0 && urlResultsBox) {
+          urlResultsBox.innerHTML = `
+            <div class="font-bold text-slate-800 mb-2">Search results for "${searchParam}":</div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+              ${matches
+                .slice(0, 6)
+                .map(
+                  (c) => `
+                <a href="/${c.u}/" class="p-2.5 rounded-xl bg-white border border-blue-200 hover:border-blue-500 font-bold text-slate-800 flex justify-between items-center">
+                  <span>${c.n}, ${c.s}</span>
+                  <span class="text-[10px] ${c.v ? 'text-emerald-700' : 'text-blue-600'} uppercase font-extrabold">${c.v ? 'Verified →' : 'Preview →'}</span>
+                </a>
+              `
+                )
+                .join('')}
+            </div>
+          `;
+          urlResultsBox.classList.remove('hidden');
         }
       }
     });

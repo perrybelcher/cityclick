@@ -1,43 +1,50 @@
 # CityClick (cityclick.com)
-> The Deterministic B2B City & Commercial Location Intelligence Platform
+> Primary-Sourced US City Guides for Visiting, Moving, and Starting a Local Business
 
 ## Project Overview
-CityClick is the authority engine for US municipal demographics, commercial asking rents, NAICS retail saturation indices, and municipal permit requirements. Built for multi-unit franchisees, commercial tenant brokers, and SBA lenders.
+CityClick publishes primary-sourced municipal guides for visitors, relocating households, and small-business founders. Every quantitative metric rendered on a certified guide is ingested directly from an official federal or state dataset with recorded source provenance and vintage. If a primary record is unavailable for a field, that UI block is omitted rather than estimated or filled with a placeholder.
 
-## Core Methodologies & Provenance
-- Sourcing Policy: All metrics are anchored to primary authoritative federal and municipal records:
-  - Demographics: US Census Bureau ACS 5-Year (DP03/DP04/DP05)
-  - Business Establishment Counts: US Census Bureau Zip Codes Business Patterns (ZBP)
-  - Labor & Unemployment: Bureau of Labor Statistics LAUS
-  - Building Permits: US Census Bureau Building Permits Survey (BPS)
-  - Hazard Vulnerability: FEMA National Risk Index
-- CityClick Business Viability Score™ (0–100):
-  - ECDF mid-rank percentile aggregation across 4 core dimensions:
-    - Purchasing Power (25%): 70% Median Household Income + 30% Daytime Worker Surge
-    - Growth Momentum (30%): 55% 5-Yr Population Growth + 45% Permits per 1k Residents
-    - Cost Efficiency (25%): 50% Income-to-Rent Ratio + 30% Low Unemployment + 20% FEMA Resilience
-    - Regulatory Friction (20%): 65% Low Sales Tax + 35% Short Permit Review Turnaround
-- Empirical Bayes NAICS Saturation Index (100 = US Benchmark):
-  - Uses empirical Bayes shrinkage (m = 10,000 prior) against small-business NAICS codes.
-  - Classification:
-    - Underserved: < 80
-    - Balanced: 80 - 120
-    - Saturated: > 120
+## Certified Indexable Flagship City Guides
+CityClick maintains 7 primary-source certified flagship guides (plus `ok/oklahoma-city` rebuilt in audit review, while ~1,494 additional US municipal entries remain in review with `noindex, follow`):
+- Austin, TX: https://cityclick.com/tx/austin/
+- Nashville, TN: https://cityclick.com/tn/nashville/
+- Hot Springs, AR: https://cityclick.com/ar/hot-springs/
+- Hot Springs Village, AR: https://cityclick.com/ar/hot-springs-village/
+- Boise, ID: https://cityclick.com/id/boise/
+- Tampa, FL: https://cityclick.com/fl/tampa/
+- Scottsdale, AZ: https://cityclick.com/az/scottsdale/
 
-## Key URLs & Resource Structure
-- Homepage & Screener: https://cityclick.com/
-- City Feasibility Dossiers: https://cityclick.com/{stateCode}/{citySlug}
-  - Austin, TX: https://cityclick.com/tx/austin
-  - Tampa, FL: https://cityclick.com/fl/tampa
-  - Boise, ID: https://cityclick.com/id/boise
-- Comparative Underwriting: https://cityclick.com/compare/{stateA}-{cityA}-vs-{stateB}-{cityB}
-  - Austin vs Tampa: https://cityclick.com/compare/tx-austin-vs-fl-tampa
-- Commercial Lease Calculator: https://cityclick.com/tools/lease-calculator
-- Full Methodology & Benchmarks: https://cityclick.com/llms-full.txt
+## Primary Data Sources & Methodology
+- Demographics, Housing & Effective Property Tax:
+  - U.S. Census Bureau ACS 2023 5-Year Summary File (`B01003`, `B19013`, `B19301`, `B01002`, `B25077`, `B25064`, `B25103`; effective property tax rate = `B25103 / B25077`).
+  - U.S. Census Bureau Population Estimates Program (`SUB-EST2023`, April 1, 2020 estimates base to July 1, 2023) for incorporated places.
+- Small-Business Trade Establishment Density:
+  - U.S. Census Bureau 2022 ZIP Code Business Patterns (`zbp22detail.zip`) paired with ACS 2023 ZCTA population (`860Z200US{zip}`) across USPS city ZIP codes:
+    - `per10kResidents = (E / ZCTA_Pop) * 10000`
+    - `saturationIndex = round((per10kResidents / usAvgPer10k) * 100)`
+    - Classification: `< 80` underserved, `80 - 120` balanced, `> 120` saturated (`100` = US national ZBP benchmark).
+  - CityClick never guesses commercial market lease rates; operators enter their own quoted lease terms in the breakeven calculator.
+- Retail Sales Tax:
+  - Official State Department of Revenue and Comptroller rate schedules (`sources/sales-tax.json`).
+- Terrain Elevation & Climate:
+  - USGS 3D Elevation Program (3DEP Point Query Service) at the Census 2023 Gazetteer municipal internal point.
+  - Open-Meteo Historical Weather API (ERA5 reanalysis, 2015-2024 daily averages for July high, January low, and annual precipitation).
+- Infrastructure & Civic Services:
+  - Drinking Water: U.S. EPA Safe Drinking Water Information System (SDWIS active Community Water Systems).
+  - Commercial Airports: OurAirports (`scheduled_service == "yes"`), straight-line Haversine distance from Census Gazetteer internal point.
+  - Emergency Hospitals: CMS Care Compare (`xubh-q36u`, `emergency_services == "Yes"`, listed objectively without trauma rankings).
+  - Higher Education, EV Charging & Parks: U.S. Dept. of Education College Scorecard, U.S. Dept. of Energy / NREL AFDC public EV stations, and National Park Service (NPS).
+
+## Key URLs & Documentation
+- Homepage: https://cityclick.com/
+- Head-to-Head City Comparison: https://cityclick.com/compare/tx-austin-vs-fl-tampa/
+- Commercial Lease & Breakeven Calculator: https://cityclick.com/tools/lease-calculator/
+- Data Methodology & Provenance: https://cityclick.com/methodology/
+- About CityClick: https://cityclick.com/about/
+- Developer REST API Documentation: https://cityclick.com/developers/
+- Full Technical Reference for LLMs: https://cityclick.com/llms-full.txt
 - OpenAPI 3.1 Specification: https://cityclick.com/openapi.json
 
-## Public Edge API Endpoints
-- GET /api/v1/cities/{stateCode}/{citySlug}
-  Returns full verified JSON dossier with provenance metadata.
-- GET /api/v1/screen?minPopulation=200000&maxRent=35
-  Filter US cities by feasibility score, retail rent, and saturation.
+## Public REST API
+- `GET https://cityclick.com/api/v1/cities/{state}/{city}`
+  Open public read endpoint (no API key required) returning Census demographics, housing and effective property tax rate, combined retail sales tax, `certified` verification status, time zone, and underserved ZBP trade categories.

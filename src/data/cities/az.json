@@ -601,14 +601,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -1218,7 +1218,7 @@
         "name": "Tucson Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 11.6,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -1233,14 +1233,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -1850,7 +1850,7 @@
         "name": "Mesa Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 11.6,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -1865,14 +1865,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -2482,7 +2482,7 @@
         "name": "Chandler Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 11.3,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -2497,14 +2497,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -3114,7 +3114,7 @@
         "name": "Gilbert Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 11.2,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -3129,14 +3129,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -3746,7 +3746,7 @@
         "name": "Glendale Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 11.2,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -3761,14 +3761,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -3794,11 +3794,11 @@
   {
     "slug": "az/scottsdale",
     "cityId": "0465000",
-    "countyFips": "04650",
+    "countyFips": "04013",
     "name": "Scottsdale",
     "stateCode": "az",
     "stateName": "Arizona",
-    "countyName": "Scottsdale Metropolitan Area",
+    "countyName": "Maricopa County",
     "lat": 33.684272,
     "lng": -111.861448,
     "primaryZips": [
@@ -3825,7 +3825,7 @@
         "sourceName": "US Census Bureau ACS 5-Year Estimates 2023 (Table-Based Summary File)",
         "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/",
         "datasetVintage": "ACS-2023-5YR",
-        "verifiedAt": "2026-10-18",
+        "verifiedAt": "2026-10-31T00:00:00Z",
         "granularity": "place"
       },
       "popChange2020to2023Pct": 1.3,
@@ -3841,13 +3841,14 @@
         "usAvgPer10k": 2.12,
         "saturationIndex": 189,
         "status": "saturated",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "118 employer establishments (NAICS 722515) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population of those ZIPs (293,445). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "118 employer establishments (NAICS 722515) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population (293,445). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -3859,13 +3860,14 @@
         "usAvgPer10k": 7.44,
         "saturationIndex": 189,
         "status": "saturated",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "412 employer establishments (NAICS 722511) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population of those ZIPs (293,445). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "412 employer establishments (NAICS 722511) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population (293,445). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -3877,13 +3879,14 @@
         "usAvgPer10k": 7.75,
         "saturationIndex": 122,
         "status": "saturated",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "277 employer establishments (NAICS 722513) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population of those ZIPs (293,445). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "277 employer establishments (NAICS 722513) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population (293,445). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -3895,13 +3898,14 @@
         "usAvgPer10k": 0.9,
         "saturationIndex": 132,
         "status": "saturated",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "35 employer establishments (NAICS 722410) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population of those ZIPs (293,445). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "35 employer establishments (NAICS 722410) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population (293,445). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -3913,13 +3917,14 @@
         "usAvgPer10k": 2.31,
         "saturationIndex": 314,
         "status": "saturated",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "213 employer establishments (NAICS 812112) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population of those ZIPs (293,445). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "213 employer establishments (NAICS 812112) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population (293,445). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -3931,13 +3936,14 @@
         "usAvgPer10k": 0.86,
         "saturationIndex": 214,
         "status": "saturated",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "54 employer establishments (NAICS 812113) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population of those ZIPs (293,445). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "54 employer establishments (NAICS 812113) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population (293,445). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -3949,13 +3955,14 @@
         "usAvgPer10k": 1.0,
         "saturationIndex": 308,
         "status": "saturated",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "90 employer establishments (NAICS 713940) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population of those ZIPs (293,445). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "90 employer establishments (NAICS 713940) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population (293,445). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -3967,13 +3974,14 @@
         "usAvgPer10k": 0.46,
         "saturationIndex": 242,
         "status": "saturated",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "33 employer establishments (NAICS 812910) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population of those ZIPs (293,445). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "33 employer establishments (NAICS 812910) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population (293,445). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -3985,13 +3993,14 @@
         "usAvgPer10k": 0.69,
         "saturationIndex": 326,
         "status": "saturated",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "66 employer establishments (NAICS 541940) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population of those ZIPs (293,445). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "66 employer establishments (NAICS 541940) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population (293,445). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -4003,13 +4012,14 @@
         "usAvgPer10k": 2.2,
         "saturationIndex": 101,
         "status": "balanced",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "65 employer establishments (NAICS 811111) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population of those ZIPs (293,445). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "65 employer establishments (NAICS 811111) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population (293,445). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -4021,13 +4031,14 @@
         "usAvgPer10k": 0.35,
         "saturationIndex": 107,
         "status": "balanced",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "11 employer establishments (NAICS 811192) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population of those ZIPs (293,445). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "11 employer establishments (NAICS 811192) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population (293,445). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -4039,13 +4050,14 @@
         "usAvgPer10k": 3.89,
         "saturationIndex": 250,
         "status": "saturated",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "285 employer establishments (NAICS 621210) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population of those ZIPs (293,445). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "285 employer establishments (NAICS 621210) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population (293,445). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -4057,13 +4069,14 @@
         "usAvgPer10k": 0.97,
         "saturationIndex": 357,
         "status": "saturated",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "102 employer establishments (NAICS 621310) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population of those ZIPs (293,445). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "102 employer establishments (NAICS 621310) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population (293,445). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -4075,13 +4088,14 @@
         "usAvgPer10k": 1.3,
         "saturationIndex": 293,
         "status": "saturated",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "112 employer establishments (NAICS 621340) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population of those ZIPs (293,445). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "112 employer establishments (NAICS 621340) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population (293,445). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -4093,13 +4107,14 @@
         "usAvgPer10k": 2.12,
         "saturationIndex": 71,
         "status": "underserved",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "44 employer establishments (NAICS 624410) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population of those ZIPs (293,445). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "44 employer establishments (NAICS 624410) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population (293,445). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -4111,13 +4126,14 @@
         "usAvgPer10k": 0.82,
         "saturationIndex": 21,
         "status": "underserved",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "5 employer establishments (NAICS 445120) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population of those ZIPs (293,445). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "5 employer establishments (NAICS 445120) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population (293,445). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -4129,13 +4145,14 @@
         "usAvgPer10k": 0.65,
         "saturationIndex": 271,
         "status": "saturated",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "52 employer establishments (NAICS 448140) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population of those ZIPs (293,445). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "52 employer establishments (NAICS 448140) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population (293,445). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -4147,13 +4164,14 @@
         "usAvgPer10k": 4.8,
         "saturationIndex": 270,
         "status": "saturated",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "380 employer establishments (NAICS 541110) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population of those ZIPs (293,445). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "380 employer establishments (NAICS 541110) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population (293,445). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -4165,13 +4183,14 @@
         "usAvgPer10k": 1.44,
         "saturationIndex": 329,
         "status": "saturated",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "139 employer establishments (NAICS 541211) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population of those ZIPs (293,445). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "139 employer establishments (NAICS 541211) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population (293,445). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -4183,73 +4202,48 @@
         "usAvgPer10k": 4.74,
         "saturationIndex": 719,
         "status": "saturated",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "1001 employer establishments (NAICS 531210) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population of those ZIPs (293,445). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "1001 employer establishments (NAICS 531210) across 11 ZIP codes whose USPS city is Scottsdale, AZ; density uses ACS 2023 ZCTA population (293,445). National benchmark = all US ZIP rows / US population."
         }
       }
     ],
     "permitsAndTax": {
       "stateTaxRate": 0.056,
+      "countyTaxRate": 0.007,
+      "cityTaxRate": 0.017,
+      "specialDistrictTaxRate": 0.0,
       "localTaxRate": 0.024,
       "combinedSalesTaxRate": 0.08,
       "provenance": {
-        "sourceName": "City of Scottsdale tax resources (5.6% state + 0.7% county + 1.70% city, effective 2025-07-01)",
+        "sourceName": "City of Scottsdale tax resources (5.6% state + 0.7% Maricopa County + 1.70% city, effective 2025-07-01)",
         "sourceUrl": "https://www.scottsdaleaz.gov/taxes/resources",
         "datasetVintage": "2026",
-        "verifiedAt": "2026-10-18",
+        "verifiedAt": "2026-10-31T00:00:00Z",
         "granularity": "place"
       }
     },
-    "topTrafficCorridors": [
-      {
-        "roadName": "Main Arterial Corridor 1",
-        "segmentDescription": "Central Commercial Corridor through Scottsdale",
-        "aadt": 29327,
-        "heavyTruckPct": 5.5,
-        "lat": 33.684272,
-        "lng": -111.861448,
-        "year": 2024,
-        "provenance": {
-          "sourceName": "Arizona DOT AADT Database",
-          "sourceUrl": "https://www.transportation.gov/",
-          "datasetVintage": "2024-AADT",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "place"
-        }
-      }
-    ],
     "marketSignals": {},
     "executiveTravel": {
-      "timeZone": "America/Phoenix (MST: UTC-07:00)",
+      "timeZone": "America/Phoenix",
       "timeZoneAbbr": "MST",
       "utcOffset": "-07:00",
       "primaryAirport": {
         "name": "Phoenix Sky Harbor International Airport",
         "iata": "PHX",
-        "distanceMiles": 6.1,
+        "lat": 33.435302,
+        "lng": -112.005905,
+        "distanceMiles": 19.1,
         "transitToDowntown": null,
-        "source": "Google Places API (New), retrieved 2026-10-18; straight-line distance to downtown anchor"
-      },
-      "powerPlugs": {
-        "types": [
-          "Type A (2-pin)",
-          "Type B (3-pin grounded)"
-        ],
-        "voltage": "120V",
-        "frequency": "60Hz",
-        "adapterAdvice": "Visitors from UK, EU, Australia, and Asia require a standard Type A/B plug adapter and dual-voltage converter."
-      },
-      "currency": {
-        "code": "USD",
-        "symbol": "$",
-        "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
-        "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
+        "source": "OurAirports (public domain) for name, IATA code and coordinates; distance is straight-line from the U.S. Census Gazetteer city center point",
+        "sourceUrl": "https://ourairports.com/data/",
+        "cityCenterMethod": "Census Gazetteer internal point",
+        "retrieved": "2026-10-31"
       },
       "climate": {
         "summerHighF": 100,
@@ -4257,25 +4251,43 @@
         "annualRainfallInches": 14.8,
         "summerHighBasis": "Average July daily high",
         "winterLowBasis": "Average January daily low",
-        "source": "Open-Meteo Historical Weather API (ERA5 reanalysis), 2015-2024 average, retrieved 2026-10-18"
+        "source": "Open-Meteo Historical Weather API (ERA5 reanalysis), 2015-2024 average, retrieved 2026-10-18",
+        "sourceUrl": "https://open-meteo.com/en/docs/historical-weather-api"
       },
       "emergency": {
         "emergencyDispatch": "911",
         "nearestTraumaHospital": "HonorHealth Scottsdale Osborn Medical Center",
-        "hospitalAddress": "7400 E Osborn Rd, Scottsdale, AZ 85251",
-        "source": "Google Places API (New), retrieved 2026-10-18"
-      },
-      "visitorLogistics": {
-        "tapWaterPotability": "100% Safe municipal drinking water conforming to EPA Safe Drinking Water Act standards.",
-        "salesTaxRefundPolicy": "International travelers may claim state sales tax refunds on qualifying departures at designated airport customs counters.",
-        "rideshareAvailability": "Ubiquitous (Uber and Lyft operational 24/7 across the metropolitan area)."
-      },
-      "provenance": {
-        "sourceName": "FAA Airport Database & International Trade Administration",
-        "sourceUrl": "https://www.trade.gov/",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
+        "hospitalAddress": "7400 East Osborn Road, Scottsdale, AZ 85251",
+        "cmsFacilityId": "030038",
+        "emergencyServices": true,
+        "source": "CMS Care Compare hospital general information (federal dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma level, ranking or nearest-facility claim.",
+        "erHospitals": [
+          {
+            "name": "HonorHealth Scottsdale Osborn Medical Center",
+            "address": "7400 East Osborn Road, Scottsdale, AZ 85251",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "030038",
+            "lat": 33.487708,
+            "lng": -111.923837
+          },
+          {
+            "name": "HonorHealth Scottsdale Shea Medical Center",
+            "address": "9003 East Shea Boulevard, Scottsdale, AZ 85260",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "030087",
+            "lat": 33.582496,
+            "lng": -111.885871
+          },
+          {
+            "name": "HonorHealth Scottsdale Thompson Peak Med Ctr",
+            "address": "7400 East Thompson Peak Parkway, Scottsdale, AZ 85255",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "030123",
+            "lat": 33.66985,
+            "lng": -111.922139
+          }
+        ],
+        "erHospitalsSource": "CMS Care Compare hospital general information (federal dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma level, ranking or nearest-facility claim."
       }
     },
     "climateNormals": {
@@ -4290,7 +4302,7 @@
       "medianGrossRent": 1910,
       "medianRealEstateTaxPaid": 2924,
       "effectivePropertyTaxRatePct": 0.41,
-      "countyName": "Scottsdale Metropolitan Area",
+      "countyName": "Maricopa County",
       "source": "ACS 2023 5-yr: B25077 median home value, B25064 median gross rent, B25103 median real estate taxes paid. Effective rate = B25103 / B25077.",
       "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/"
     },
@@ -4302,6 +4314,207 @@
       "source": "U.S. EPA Safe Drinking Water Information System (SDWIS)",
       "sourceUrl": "https://data.epa.gov/efservice/WATER_SYSTEM/PWSID/AZ0407098/JSON",
       "retrieved": "2026-10-18"
+    },
+    "terrainElevation": {
+      "elevationFeet": 2339.0,
+      "elevationMeters": 712.9,
+      "topographyClass": "Sonoran Desert / Salt River Valley",
+      "sourceName": "USGS 3D Elevation Program (3DEP Elevation Point Query Service)",
+      "sourceUrl": "https://epqs.nationalmap.gov/v1/json"
+    },
+    "higherEducation": {
+      "institutionCount": 7,
+      "totalEnrollment": 59711,
+      "institutions": [
+        {
+          "id": 483124,
+          "name": "Arizona State University Digital Immersion",
+          "studentSize": 53782,
+          "ownership": "Public",
+          "schoolUrl": "https://www.asu.edu/",
+          "lat": 33.463517,
+          "lng": -111.924487
+        },
+        {
+          "id": 105747,
+          "name": "Scottsdale Community College",
+          "studentSize": 5377,
+          "ownership": "Public",
+          "schoolUrl": "https://www.scottsdalecc.edu/",
+          "lat": 33.51135,
+          "lng": -111.885186
+        },
+        {
+          "id": 460914,
+          "name": "Penrose Academy",
+          "studentSize": 403,
+          "ownership": "Private for-profit",
+          "schoolUrl": "https://penrose.edu/",
+          "lat": 33.608309,
+          "lng": -111.927617
+        },
+        {
+          "id": 450951,
+          "name": "Arizona Culinary Institute",
+          "studentSize": 149,
+          "ownership": "Private for-profit",
+          "schoolUrl": "https://www.azculinary.edu/",
+          "lat": 33.581935,
+          "lng": -111.831237
+        },
+        {
+          "id": 104665,
+          "name": "The School of Architecture",
+          "studentSize": null,
+          "ownership": "Private nonprofit",
+          "schoolUrl": "https://tsoa.edu/",
+          "lat": 33.524271,
+          "lng": -111.916785
+        },
+        {
+          "id": 381459,
+          "name": "Phoenix Seminary",
+          "studentSize": null,
+          "ownership": "Private nonprofit",
+          "schoolUrl": "https://www.ps.edu/",
+          "lat": 33.581645,
+          "lng": -111.910665
+        }
+      ],
+      "sourceName": "U.S. Department of Education College Scorecard",
+      "sourceUrl": "https://collegescorecard.ed.gov/",
+      "retrieved": "2026-10-31"
+    },
+    "evInfrastructure": {
+      "totalStations": 161,
+      "totalChargingPorts": 465,
+      "dcFastPorts": 84,
+      "level2Ports": 381,
+      "sampleStations": [
+        {
+          "name": "Grand Hyatt Scottsdale Resort Garage",
+          "address": "7500 E. Doubletree Ranch Rd., Scottsdale, AZ 85258",
+          "network": "FLASH",
+          "dcFastPorts": 0,
+          "level2Ports": 25,
+          "lat": 33.567321,
+          "lng": -111.920695
+        },
+        {
+          "name": "Scottsdale, AZ - N Scottsdale Rd - Tesla Supercharger",
+          "address": "15059 N. Scottsdale Rd, Scottsdale, AZ 85254",
+          "network": "Tesla",
+          "dcFastPorts": 16,
+          "level2Ports": 0,
+          "lat": 33.623298,
+          "lng": -111.922719
+        },
+        {
+          "name": "Scottsdale, AZ - E Shea Blvd - Tesla Supercharger",
+          "address": "8740 East Shea Boulevard, Scottsdale, AZ 85260",
+          "network": "Tesla",
+          "dcFastPorts": 16,
+          "level2Ports": 0,
+          "lat": 33.583519,
+          "lng": -111.894006
+        },
+        {
+          "name": "Scottsdale, AZ - 7366 E Shea Blvd - Tesla Supercharger",
+          "address": "7366 E Shea Blvd, Scottsdale, AZ 85260",
+          "network": "Tesla",
+          "dcFastPorts": 16,
+          "level2Ports": 0,
+          "lat": 33.583197,
+          "lng": -111.922246
+        },
+        {
+          "name": "Portales Corporate Center",
+          "address": "4800 N. Scottsdale Road Suite 1200, Scottsdale, AZ 85251",
+          "network": "Blink Network",
+          "dcFastPorts": 0,
+          "level2Ports": 13,
+          "lat": 33.508492,
+          "lng": -111.927191
+        }
+      ],
+      "sourceName": "U.S. Department of Energy / NLR Alternative Fuels Data Center (AFDC)",
+      "sourceUrl": "https://afdc.energy.gov/stations",
+      "retrieved": "2026-10-31"
+    },
+    "nationalParks": {
+      "parks": [
+        {
+          "parkCode": "tont",
+          "fullName": "Tonto National Monument",
+          "designation": "National Monument",
+          "distanceMiles": 43.1,
+          "description": "Located within the northern range of the Sonoran Desert lie two cliff dwellings that were occupied from 1300-1450 CE (common era). They represent a vibrant culture consisting of local and immigrant groups that lived in the Tonto Basin....",
+          "url": "https://www.nps.gov/tont/index.htm",
+          "lat": 33.648429,
+          "lng": -111.113563
+        },
+        {
+          "parkCode": "cagr",
+          "fullName": "Casa Grande Ruins National Monument",
+          "designation": "National Monument",
+          "distanceMiles": 51.1,
+          "description": "An Ancestral Sonoran Desert People's farming community and \"Great House\" are preserved at Casa Grande Ruins. Whether a gathering place for people or simply a waypoint marker in an extensive system of canals and trading partners, the...",
+          "url": "https://www.nps.gov/cagr/index.htm",
+          "lat": 32.997026,
+          "lng": -111.532538
+        }
+      ],
+      "sourceName": "U.S. National Park Service (NPS) API",
+      "sourceUrl": "https://www.nps.gov/",
+      "retrieved": "2026-10-31"
+    },
+    "upcomingEvents": {
+      "totalMatchingEvents": 132,
+      "events": [
+        {
+          "id": "16v0Z_8QAG7cffq",
+          "name": "BOO! Arizona",
+          "date": "2026-10-31",
+          "venueName": "Westworld of Scottsdale",
+          "category": "Music",
+          "url": "https://on.fgtix.com/trk/0yvqc"
+        },
+        {
+          "id": "Z7r9jZ1A7PVZ6",
+          "name": "Lyle Lovett",
+          "date": "2026-11-05",
+          "venueName": "Virginia G. Piper Theater",
+          "category": "Music",
+          "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7PVZ6"
+        },
+        {
+          "id": "17k8v0G6CNP_zOz",
+          "name": "Rachael Gold and Shannon Wallace",
+          "date": "2026-11-06",
+          "venueName": "ASU Kerr",
+          "category": "Music",
+          "url": "https://www.ticketmaster.com/rachael-gold-and-shannon-wallace-scottsdale-arizona-11-06-2026/event/190064E8E5678838"
+        },
+        {
+          "id": "1A_ZkfxGkdkpMJC",
+          "name": "Ozzmania",
+          "date": "2026-11-06",
+          "venueName": "Showroom at Casino Arizona",
+          "category": "Music",
+          "url": "https://www.ticketmaster.com/ozzmania-scottsdale-arizona-11-06-2026/event/19006522C65B798E"
+        },
+        {
+          "id": "1A_Zkf6Gkdf4DBe",
+          "name": "Michelle Nicolo Prentice",
+          "date": "2026-11-07",
+          "venueName": "ASU Kerr",
+          "category": "Music",
+          "url": "https://www.ticketmaster.com/michelle-nicolo-prentice-scottsdale-arizona-11-07-2026/event/19006507D457BE82"
+        }
+      ],
+      "sourceName": "Ticketmaster Discovery API v2",
+      "sourceUrl": "https://developer.ticketmaster.com/",
+      "retrieved": "2026-10-31"
     }
   },
   {
@@ -4891,7 +5104,7 @@
         "name": "Peoria Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 11.1,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -4906,14 +5119,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -5523,7 +5736,7 @@
         "name": "Tempe Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 11.1,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -5538,14 +5751,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -6155,7 +6368,7 @@
         "name": "Surprise Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 11.0,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -6170,14 +6383,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -6787,7 +7000,7 @@
         "name": "Goodyear Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.8,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -6802,14 +7015,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -7419,7 +7632,7 @@
         "name": "Buckeye Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.8,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -7434,14 +7647,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -8051,7 +8264,7 @@
         "name": "Yuma Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.7,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -8066,14 +8279,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -8683,7 +8896,7 @@
         "name": "Avondale Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.7,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -8698,14 +8911,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -9315,7 +9528,7 @@
         "name": "Flagstaff Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.6,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -9330,14 +9543,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -9947,7 +10160,7 @@
         "name": "Queen Creek Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.6,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -9962,14 +10175,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -10579,7 +10792,7 @@
         "name": "Maricopa Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.6,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -10594,14 +10807,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -11211,7 +11424,7 @@
         "name": "Casa Grande Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.5,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -11226,14 +11439,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -11843,7 +12056,7 @@
         "name": "Lake Havasu Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.5,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -11858,14 +12071,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -12475,7 +12688,7 @@
         "name": "Marana Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.5,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -12490,14 +12703,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -13107,7 +13320,7 @@
         "name": "Prescott Valley Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.4,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -13122,14 +13335,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -13739,7 +13952,7 @@
         "name": "Oro Valley Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.4,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -13754,14 +13967,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -14371,7 +14584,7 @@
         "name": "Prescott Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.4,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -14386,14 +14599,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -15003,7 +15216,7 @@
         "name": "Sierra Vista Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.4,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -15018,14 +15231,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -15635,7 +15848,7 @@
         "name": "Bullhead Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.4,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -15650,14 +15863,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -16267,7 +16480,7 @@
         "name": "Apache Junction Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.3,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -16282,14 +16495,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -16899,7 +17112,7 @@
         "name": "San Luis Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.3,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -16914,14 +17127,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -17531,7 +17744,7 @@
         "name": "Sahuarita Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.3,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -17546,14 +17759,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -18163,7 +18376,7 @@
         "name": "El Mirage Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.3,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -18178,14 +18391,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -18795,7 +19008,7 @@
         "name": "Kingman Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.3,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -18810,14 +19023,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {

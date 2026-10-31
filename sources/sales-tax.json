@@ -1,10 +1,83 @@
 {
-  "_rule": "An entry needs a primary source URL and an as-of date. No entry => the tax block is hidden. Never copy a state default or another city's rate. Combined = state + local; HSV covers the Garland County portion only.",
-  "tx/austin": {"state": 0.0625, "local": 0.02, "source": "Texas Comptroller city sales tax rate table (Austin, Travis Co.)", "url": "https://comptroller.texas.gov/taxes/sales/docs/city-rates.pdf", "asOf": "2026-10-18"},
-  "id/boise": {"state": 0.06, "local": 0.0, "source": "Idaho State Tax Commission (6% state; no Boise local sales tax)", "url": "https://tax.idaho.gov/taxes/sales-use/online-guide/", "asOf": "2026-10-18"},
-  "fl/tampa": {"state": 0.06, "local": 0.015, "source": "Florida Dept. of Revenue discretionary sales surtax (Hillsborough 1.5%)", "url": "https://floridarevenue.com/taxes/taxesfees/Pages/discretionary.aspx", "asOf": "2026-10-18"},
-  "az/scottsdale": {"state": 0.056, "local": 0.024, "source": "City of Scottsdale tax resources (5.6% state + 0.7% county + 1.70% city, effective 2025-07-01)", "url": "https://www.scottsdaleaz.gov/taxes/resources", "asOf": "2026-10-18"},
-  "tn/nashville": {"state": 0.07, "local": 0.0275, "source": "Tennessee Dept. of Revenue Notice 24-11 (Davidson local rate 2.75% from 2025-02-01) + 7% state", "url": "https://www.tn.gov/content/dam/tn/revenue/documents/notices/sales/sales24-11.pdf", "asOf": "2026-10-18"},
-  "ok/oklahoma-city": {"state": 0.045, "local": 0.04125, "source": "City of Oklahoma City (4.5% state + 4.125% city = 8.625%)", "url": "https://www.okc.gov/Government/Budget-and-Finance/Taxes", "asOf": "2026-10-18"},
-  "ar/hot-springs-village": {"state": 0.065, "local": 0.015, "source": "Garland County portion: AR 6.5% + county 1.5% (Avalara); Saline County portion may differ", "url": "https://www.avalara.com/us/en/taxrates/state-rates/arkansas/cities/hot-springs-village.html", "asOf": "2026-10-18"}
+  "_rule": "An entry needs a primary source URL and an as-of date. No entry => the tax block is hidden. Never copy a state default or another city's rate. Combined = state + local (where county + city + specialDistrict == local); HSV covers the Garland County portion only.",
+  "tx/austin": {
+    "state": 0.0625,
+    "county": 0.0,
+    "city": 0.01,
+    "specialDistrict": 0.01,
+    "local": 0.02,
+    "source": "Texas Comptroller city sales tax rate table (Austin, Travis Co.: 6.25% state + 1.0% city + 1.0% Capital Metro MTA)",
+    "url": "https://comptroller.texas.gov/taxes/sales/docs/city-rates.pdf",
+    "asOf": "2026-10-31"
+  },
+  "id/boise": {
+    "state": 0.06,
+    "county": 0.0,
+    "city": 0.0,
+    "specialDistrict": 0.0,
+    "local": 0.0,
+    "source": "Idaho State Tax Commission (6% state; no Boise local sales tax)",
+    "url": "https://tax.idaho.gov/taxes/sales-use/online-guide/",
+    "asOf": "2026-10-31"
+  },
+  "fl/tampa": {
+    "state": 0.06,
+    "county": 0.015,
+    "city": 0.0,
+    "specialDistrict": 0.0,
+    "local": 0.015,
+    "source": "Florida Dept. of Revenue discretionary sales surtax (6.0% state + 1.5% Hillsborough County)",
+    "url": "https://floridarevenue.com/taxes/taxesfees/Pages/discretionary.aspx",
+    "asOf": "2026-10-31"
+  },
+  "az/scottsdale": {
+    "state": 0.056,
+    "county": 0.007,
+    "city": 0.017,
+    "specialDistrict": 0.0,
+    "local": 0.024,
+    "source": "City of Scottsdale tax resources (5.6% state + 0.7% Maricopa County + 1.70% city, effective 2025-07-01)",
+    "url": "https://www.scottsdaleaz.gov/taxes/resources",
+    "asOf": "2026-10-31"
+  },
+  "tn/nashville": {
+    "state": 0.07,
+    "county": 0.0275,
+    "city": 0.0,
+    "specialDistrict": 0.0,
+    "local": 0.0275,
+    "source": "Tennessee Dept. of Revenue Notice 24-11 (Davidson County local rate 2.75% from 2025-02-01 + 7.0% state)",
+    "url": "https://www.tn.gov/content/dam/tn/revenue/documents/notices/sales/sales24-11.pdf",
+    "asOf": "2026-10-31"
+  },
+  "ok/oklahoma-city": {
+    "state": 0.045,
+    "county": 0.0,
+    "city": 0.04125,
+    "specialDistrict": 0.0,
+    "local": 0.04125,
+    "source": "City of Oklahoma City (4.5% state + 4.125% city = 8.625%)",
+    "url": "https://www.okc.gov/Government/Budget-and-Finance/Taxes",
+    "asOf": "2026-10-31"
+  },
+  "ar/hot-springs-village": {
+    "state": 0.065,
+    "county": 0.015,
+    "city": 0.0,
+    "specialDistrict": 0.0,
+    "local": 0.015,
+    "source": "Arkansas Dept. of Finance and Administration local sales & use tax table (Garland County unincorporated portion: 6.5% state + 1.5% Garland County = 8.0%; Saline County portion may differ)",
+    "url": "https://www.dfa.arkansas.gov/excise-tax/sales-and-use-tax/local-tax-lookup-tools/",
+    "asOf": "2026-10-31"
+  },
+  "ar/hot-springs": {
+    "state": 0.065,
+    "county": 0.015,
+    "city": 0.015,
+    "specialDistrict": 0.0,
+    "local": 0.03,
+    "source": "Arkansas Dept. of Finance and Administration local sales & use tax table (6.5% state + 1.5% Garland County + 1.5% City of Hot Springs = 9.5%)",
+    "url": "https://www.dfa.arkansas.gov/excise-tax/sales-and-use-tax/local-tax-lookup-tools/",
+    "asOf": "2026-10-31"
+  }
 }

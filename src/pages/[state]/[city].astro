@@ -6,7 +6,6 @@ import { ALL_CITIES } from '../../data/catalog';
 import { generateSeoGraph } from '../../lib/seo';
 import { buildFacts } from '../../lib/facts';
 import austinDispatches from '../../data/dispatches/tx-austin.json';
-import hsvDispatches from '../../data/dispatches/ar-hot-springs-village.json';
 
 export function getStaticPaths() {
   return ALL_CITIES.map((c) => {
@@ -23,17 +22,11 @@ interface Props {
 }
 
 const { city } = Astro.props;
-const coffeeNaics = city.industries.find((i) => i.naicsCode === '722515') ?? city.industries[0]!;
 
-// Dispatches data (curated for Austin & Hot Springs Village, generic fallback for others)
 const isAustin = city.slug === 'tx/austin';
 const isHSV = city.slug === 'ar/hot-springs-village';
-const isBoise = city.slug === 'id/boise';
-const isTampa = city.slug === 'fl/tampa';
-const isScottsdale = city.slug === 'az/scottsdale';
-const isNashville = city.slug === 'tn/nashville';
 
-const industriesWithDefaults = city.industries.map((ind) => {
+const industriesWithDefaults = (city.industries ?? []).map((ind) => {
   const def = NAICS_25_DEFINITIONS.find((d) => d.naicsCode === ind.naicsCode);
   return {
     ...ind,
@@ -46,7 +39,8 @@ const industriesWithDefaults = city.industries.map((ind) => {
     },
   };
 });
-const defaultTrade = industriesWithDefaults.find((i) => i.naicsCode === '722515') ?? industriesWithDefaults[0]!;
+const defaultTrade =
+  industriesWithDefaults.find((i) => i.naicsCode === '722515') ?? industriesWithDefaults[0] ?? null;
 
 interface CityVideo {
   videoId: string;
@@ -60,20 +54,20 @@ const VERIFIED_VIDEOS: Record<string, CityVideo> = {
     videoId: 'QG0Y05GDjts',
     title: 'Austin, Texas Capital City & Lady Bird Lake: 4K Drone Tour',
     badge: 'Austin Urban Skyline & Lake Tour',
-    duration: '5:49'
+    duration: '5:49',
   },
   'ar/hot-springs-village': {
     videoId: 'QyVMK_eqVmo',
     title: 'Tour Hot Springs Village: 26,000 Acres, 11 Lakes & 9 Golf Courses',
     badge: "North America's Largest Gated Community Tour",
-    duration: '3:27'
+    duration: '3:27',
   },
   'id/boise': {
     videoId: 'apz6jUqmVJU',
     title: 'Discover Boise: Downtown Core, River Greenbelt & Foothills',
     badge: 'Boise River & Foothills Tour',
-    duration: '2:33'
-  }
+    duration: '2:33',
+  },
 };
 
 const featuredVideo = VERIFIED_VIDEOS[city.slug] ?? null;
@@ -81,10 +75,11 @@ const featuredVideo = VERIFIED_VIDEOS[city.slug] ?? null;
 const VERIFIED_HERO_IMAGES: Record<string, string> = {
   'tx/austin': '/images/austin-skyline.jpg',
   'ar/hot-springs-village': '/images/hsv-hero.jpg',
+  'ar/hot-springs': '/images/hot-springs-hero.jpg',
   'id/boise': '/images/boise-hero.jpg',
   'fl/tampa': '/images/tampa-hero.jpg',
   'az/scottsdale': '/images/scottsdale-hero.jpg',
-  'tn/nashville': '/images/nashville-hero.jpg'
+  'tn/nashville': '/images/nashville-hero.jpg',
 };
 const heroImage = VERIFIED_HERO_IMAGES[city.slug] ?? null;
 
@@ -93,88 +88,204 @@ const VERIFIED_GALLERIES: Record<string, Array<{ img: string; title: string }>> 
     { img: '/images/austin-skyline.jpg', title: 'Lady Bird Lake and Downtown' },
     { img: '/images/austin-capitol.jpg', title: 'Texas State Capitol' },
     { img: '/images/austin-barton-springs.jpg', title: 'Barton Springs Natural Pool' },
-    { img: '/images/austin-soco.jpg', title: 'South Congress Music Corridor' }
+    { img: '/images/austin-soco.jpg', title: 'South Congress Music Corridor' },
   ],
   'ar/hot-springs-village': [
     { img: '/images/hsv-hero.jpg', title: 'Ouachita Mountain Ridge' },
     { img: '/images/hsv-lake.jpg', title: 'Lake Balboa Waters' },
     { img: '/images/hsv-hills.jpg', title: 'Championship Fairways' },
-    { img: '/images/hsv-marina.jpg', title: 'Lake Marina and Boat Docks' }
+    { img: '/images/hsv-marina.jpg', title: 'Lake Marina and Boat Docks' },
+  ],
+  'ar/hot-springs': [
+    { img: '/images/hot-springs-hero.jpg', title: 'Hot Springs National Park Panorama' },
+    { img: '/images/hot-springs-bathhouse.jpg', title: 'Historic Bathhouse Row' },
+    { img: '/images/hot-springs-tower.jpg', title: 'Hot Springs Mountain Overlook' },
+    { img: '/images/hot-springs-lake.jpg', title: 'Ouachita Foothills and Lakes' },
   ],
   'id/boise': [
     { img: '/images/boise-skyline.jpg', title: 'Boise Skyline and Foothills' },
     { img: '/images/boise-capitol.jpg', title: 'Idaho State Capitol' },
     { img: '/images/boise-greenbelt.jpg', title: 'Boise River Greenbelt' },
-    { img: '/images/boise-hero.jpg', title: 'Downtown Core and Foothills' }
+    { img: '/images/boise-hero.jpg', title: 'Downtown Core and Foothills' },
   ],
   'fl/tampa': [
     { img: '/images/tampa-hero.jpg', title: 'Tampa Bay Waterfront' },
     { img: '/images/tampa-skyline.jpg', title: 'Downtown Skyline and Bay' },
     { img: '/images/tampa-skyway.jpg', title: 'Sunshine Skyway Landmark' },
-    { img: '/images/tampa-waterfront.jpg', title: 'Apollo Beach Coastal Park' }
+    { img: '/images/tampa-waterfront.jpg', title: 'Apollo Beach Coastal Park' },
   ],
   'az/scottsdale': [
     { img: '/images/scottsdale-hero.jpg', title: 'Sonoran Desert Resort Corridor' },
     { img: '/images/scottsdale-desert.jpg', title: 'Sonoran Desert Saguaro Flora' },
-    { img: '/images/scottsdale-mcdowell.jpg', title: 'McDowell Mountain Preserve' }
+    { img: '/images/scottsdale-mcdowell.jpg', title: 'McDowell Mountain Preserve' },
   ],
   'tn/nashville': [
     { img: '/images/nashville-hero.jpg', title: 'Music Row and Broadway Hub' },
     { img: '/images/nashville-skyline.jpg', title: 'Downtown Nashville Skyline' },
-    { img: '/images/nashville-parthenon.jpg', title: 'Centennial Park Parthenon' }
-  ]
+    { img: '/images/nashville-parthenon.jpg', title: 'Centennial Park Parthenon' },
+  ],
 };
 const cityGallery = VERIFIED_GALLERIES[city.slug] ?? null;
 
-const hasVerifiedDispatches = false; // re-enable only when every item has an article-level URL
+const hasVerifiedDispatches = false;
 const dispatches = isAustin ? austinDispatches : null;
 
-// Travel fields used below must come from the city record. No invented fallback numbers.
+// Travel & infrastructure fields must come strictly from the city record. Zero fallbacks.
 const travel = city.executiveTravel;
 const sourcedAirport = travel?.primaryAirport?.source ? travel.primaryAirport : null;
-const erHospitals: Array<{ name: string; address: string; type: string }> =
-  (travel as any)?.emergency?.erHospitals ?? [];
-const erHospitalsSource: string | null = (travel as any)?.emergency?.erHospitalsSource ?? null;
+const erHospitals = travel?.emergency?.erHospitals ?? [];
+const erHospitalsSource = travel?.emergency?.erHospitalsSource ?? null;
+const erHospitalsScope = travel?.emergency?.erHospitalsScope ?? city.name;
+
+const higherEd = city.higherEducation && city.higherEducation.institutions.length > 0 ? city.higherEducation : null;
+const evInfra = city.evInfrastructure && city.evInfrastructure.totalStations > 0 ? city.evInfrastructure : null;
+const nationalParks = city.nationalParks && city.nationalParks.parks.length > 0 ? city.nationalParks : null;
+const upcomingEvents = city.upcomingEvents && city.upcomingEvents.events.length > 0 ? city.upcomingEvents : null;
 
 const keyFacts = buildFacts(city);
+const canonicalCityUrl = `https://cityclick.com/${city.slug}/`;
 const seoGraph = generateSeoGraph({
   city,
-  canonicalUrl: Astro.url.href,
+  canonicalUrl: canonicalCityUrl,
 });
 
-const TOP_6_VERIFIED_SLUGS = [
+const CERTIFIED_FLAGSHIP_SLUGS = [
   'tx/austin',
   'ar/hot-springs-village',
+  'ar/hot-springs',
   'id/boise',
   'fl/tampa',
   'az/scottsdale',
-  'tn/nashville'
+  'tn/nashville',
 ];
-const isVerifiedCity = TOP_6_VERIFIED_SLUGS.includes(city.slug);
+const isVerifiedCity = CERTIFIED_FLAGSHIP_SLUGS.includes(city.slug);
 const robotsDirective = isVerifiedCity ? 'index, follow' : 'noindex, follow';
 
-// Map pins: airport only, and only when the record has coordinates. No claim badges or notes.
-const airportLat = (sourcedAirport as any)?.lat ?? (sourcedAirport as any)?.coordinates?.lat ?? null;
-const airportLng = (sourcedAirport as any)?.lng ?? (sourcedAirport as any)?.coordinates?.lng ?? null;
-const cityMapPins = {
-  visiting: sourcedAirport && airportLat != null && airportLng != null ? [
-    {
-      name: sourcedAirport.name,
-      category: 'Airport',
-      address: sourcedAirport.iata ?? '',
-      lat: airportLat,
-      lng: airportLng,
+const compareTargetSlug = isAustin ? 'tn-nashville' : isHSV ? 'ar-hot-springs' : 'tx-austin';
+const compareHref = isVerifiedCity
+  ? `/compare/${city.slug.replace('/', '-')}-vs-${compareTargetSlug}/`
+  : '/compare/tx-austin-vs-tn-nashville/';
+
+// Build verified multi-audience map pins strictly from coordinates on the city record
+interface MapPin {
+  name: string;
+  category: string;
+  address: string;
+  lat: number;
+  lng: number;
+}
+
+const visitingPins: MapPin[] = [];
+if (sourcedAirport && sourcedAirport.lat != null && sourcedAirport.lng != null) {
+  visitingPins.push({
+    name: `${sourcedAirport.name}${sourcedAirport.iata ? ` (${sourcedAirport.iata})` : ''}`,
+    category: 'Commercial Airport',
+    address: sourcedAirport.distanceMiles != null ? `${sourcedAirport.distanceMiles} mi straight line from city center` : '',
+    lat: sourcedAirport.lat,
+    lng: sourcedAirport.lng,
+  });
+}
+if (nationalParks) {
+  for (const pk of nationalParks.parks) {
+    if (pk.lat != null && pk.lng != null) {
+      visitingPins.push({
+        name: pk.fullName,
+        category: pk.designation || 'National Park Service',
+        address: pk.distanceMiles != null ? `${pk.distanceMiles} mi from city center` : '',
+        lat: pk.lat,
+        lng: pk.lng,
+      });
     }
-  ] : [],
-  living: [],
-  business: [],
+  }
+}
+if (city.lat != null && city.lng != null) {
+  visitingPins.push({
+    name: `${city.name}, ${city.stateCode.toUpperCase()} Municipal Center`,
+    category: 'Census Gazetteer Point',
+    address: city.countyName,
+    lat: city.lat,
+    lng: city.lng,
+  });
+}
+
+const livingPins: MapPin[] = [];
+for (const h of erHospitals) {
+  if (h.lat != null && h.lng != null) {
+    livingPins.push({
+      name: h.name,
+      category: 'CMS Emergency Hospital',
+      address: h.address,
+      lat: h.lat,
+      lng: h.lng,
+    });
+  }
+}
+if (higherEd) {
+  for (const inst of higherEd.institutions) {
+    if (inst.lat != null && inst.lng != null) {
+      livingPins.push({
+        name: inst.name,
+        category: 'Higher Education',
+        address: inst.studentSize ? `${inst.studentSize.toLocaleString('en-US')} undergraduates` : (inst.ownership ?? ''),
+        lat: inst.lat,
+        lng: inst.lng,
+      });
+    }
+  }
+}
+
+const businessPins: MapPin[] = [];
+if (evInfra?.sampleStations) {
+  for (const st of evInfra.sampleStations) {
+    if (st.lat != null && st.lng != null) {
+      businessPins.push({
+        name: st.name,
+        category: 'Public EV Charging Hub',
+        address: [st.address, st.network].filter(Boolean).join(' · '),
+        lat: st.lat,
+        lng: st.lng,
+      });
+    }
+  }
+}
+if (higherEd) {
+  for (const inst of higherEd.institutions.slice(0, 3)) {
+    if (inst.lat != null && inst.lng != null) {
+      businessPins.push({
+        name: inst.name,
+        category: 'Campus Economic Anchor',
+        address: inst.studentSize ? `${inst.studentSize.toLocaleString('en-US')} students` : (inst.ownership ?? ''),
+        lat: inst.lat,
+        lng: inst.lng,
+      });
+    }
+  }
+}
+if (businessPins.length === 0 && city.lat != null && city.lng != null) {
+  businessPins.push({
+    name: `${city.name} Commercial Center`,
+    category: 'Municipal Anchor',
+    address: city.primaryZips?.length ? `Primary ZIPs: ${city.primaryZips.slice(0, 4).join(', ')}` : city.countyName,
+    lat: city.lat,
+    lng: city.lng,
+  });
+}
+
+const cityMapPins = {
+  visiting: visitingPins,
+  living: livingPins,
+  business: businessPins,
 };
+
+const taxPct = (r: number) =>
+  `${Number((r * 100).toFixed(3)).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 3 })}%`;
+const hasVerifiedTax = city.permitsAndTax?.combinedSalesTaxRate != null && Boolean(city.permitsAndTax?.provenance);
 ---
 
 <Layout
   title={`${city.name}, ${city.stateCode.toUpperCase()}: Cost of Living, Taxes and Business Data — CityClick`}
-  description={`Explore ${city.name}, ${city.stateName}. Municipal guide covering cost of living, property taxes, and neighborhood demographics.`}
-  image={heroImage || 'https://cityclick.com/images/og-cityclick.jpg'}
+  description={`Explore ${city.name}, ${city.stateName}. Primary-sourced municipal guide covering cost of living, housing, taxes, climate, hospitals, and small-business trade density.`}
+  image={heroImage ? `https://cityclick.com${heroImage}` : 'https://cityclick.com/images/og-cityclick.jpg'}
   robots={robotsDirective}
 >
   <!-- Leaflet Map CSS -->
@@ -190,7 +301,7 @@ const cityMapPins = {
       <nav class="flex items-center gap-2 text-xs font-semibold text-slate-400 mb-4 tracking-wide uppercase">
         <a href="/" class="hover:text-blue-600 transition">Cities</a>
         <span>/</span>
-        <a href={`/${city.stateCode}`} class="hover:text-blue-600 transition">{city.stateName}</a>
+        <a href={`/${city.stateCode}/`} class="hover:text-blue-600 transition">{city.stateName}</a>
         <span>/</span>
         <span class="text-slate-800">{city.name}</span>
       </nav>
@@ -223,23 +334,24 @@ const cityMapPins = {
               </span>
               {city.climateNormals?.peakSummerHighF != null && (
                 <span class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-500/30 text-emerald-200 border border-emerald-400/40 backdrop-blur-md flex items-center gap-1.5">
-                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-                Avg July High {city.climateNormals.peakSummerHighF}°F
-              </span>)}
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                  Avg July High {city.climateNormals.peakSummerHighF}°F
+                </span>
+              )}
             </div>
 
             <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white drop-shadow-md">
               {city.name}, {city.stateName}
             </h1>
             <p class="text-base sm:text-lg text-slate-200 leading-relaxed drop-shadow-sm max-w-xl">
-              Plan a visit, explore neighborhoods to live, or underwrite commercial locations in {city.name}.
+              Plan a visit, explore neighborhoods to live, or research small-business location metrics in {city.name}.
             </p>
           </div>
 
           <!-- Action Buttons -->
           <div class="flex items-center gap-3 shrink-0">
             <a
-              href={`/compare/${city.slug.replace('/', '-')}-vs-${isAustin ? 'fl-tampa' : 'tx-austin'}`}
+              href={compareHref}
               class="px-5 py-3 rounded-2xl bg-slate-900/80 hover:bg-slate-800 border border-white/20 text-white font-bold text-xs transition backdrop-blur-md flex items-center gap-2 shadow-lg"
             >
               <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
@@ -259,12 +371,12 @@ const cityMapPins = {
         </div>
       </div>
 
-      <!-- PRIMARY INTENT GATE: WHAT BRINGS YOU TO CITY? (Moved Higher) -->
+      <!-- PRIMARY INTENT GATE: WHAT BRINGS YOU TO CITY? -->
       <div class="mb-6">
         <div class="flex items-center justify-between mb-3 px-1">
           <div class="flex items-center gap-2">
             <span class="text-xs font-black uppercase tracking-wider text-slate-700">What brings you to {city.name}?</span>
-            <span class="text-[11px] text-slate-400 hidden sm:inline">— Choose an objective to personalize your guide and metrics</span>
+            <span class="text-[11px] text-slate-400 hidden sm:inline">· Choose an objective to personalize your guide and metrics</span>
           </div>
         </div>
 
@@ -279,7 +391,7 @@ const cityMapPins = {
               <span class="text-2xl sm:text-3xl p-2.5 rounded-xl bg-white shadow-xs border border-blue-100">✈️</span>
               <div>
                 <div class="font-black text-sm sm:text-base text-[#152438]">Visiting {city.name}</div>
-                <div class="text-[11px] text-slate-500">Airport distance, climate, and water system</div>
+                <div class="text-[11px] text-slate-500">Airport distance, climate, parks & water</div>
               </div>
             </div>
             <span class="pillar-arrow text-sm font-black text-[#1D68F2]">→</span>
@@ -294,7 +406,7 @@ const cityMapPins = {
               <span class="text-2xl sm:text-3xl p-2.5 rounded-xl bg-slate-50 shadow-xs border border-slate-200">🏡</span>
               <div>
                 <div class="font-black text-sm sm:text-base text-[#152438]">Moving to {city.name}</div>
-                <div class="text-[11px] text-slate-500">Living costs, housing, and taxes</div>
+                <div class="text-[11px] text-slate-500">Living costs, housing, hospitals & colleges</div>
               </div>
             </div>
             <span class="pillar-arrow text-sm font-black text-slate-300 hidden">→</span>
@@ -309,7 +421,7 @@ const cityMapPins = {
               <span class="text-2xl sm:text-3xl p-2.5 rounded-xl bg-slate-50 shadow-xs border border-slate-200">💼</span>
               <div>
                 <div class="font-black text-sm sm:text-base text-[#152438]">Doing Business in {city.name}</div>
-                <div class="text-[11px] text-slate-500">Trade density, taxes & lease math</div>
+                <div class="text-[11px] text-slate-500">Trade density, retail tax & EV infrastructure</div>
               </div>
             </div>
             <span class="pillar-arrow text-sm font-black text-slate-300 hidden">→</span>
@@ -321,215 +433,174 @@ const cityMapPins = {
       <!-- Strip 1: Visiting (Active by Default) -->
       <div id="stats-strip-travel" class="stats-strip grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
         {city.climateNormals?.peakSummerHighF != null && (
-        <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
-          <div class="flex justify-between items-start text-slate-400 text-[10px] uppercase font-bold tracking-wider">
-            <span>Climate</span>
-            <span class="text-amber-600 font-extrabold">Open-Meteo</span>
+          <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
+            <div class="flex justify-between items-start text-slate-400 text-[10px] uppercase font-bold tracking-wider">
+              <span>Climate</span>
+              <span class="text-amber-600 font-extrabold">Open-Meteo</span>
+            </div>
+            <div class="text-xl sm:text-2xl font-black text-[#152438] mt-1">{city.climateNormals.peakSummerHighF}°F</div>
+            <div class="text-[10px] text-slate-500">Avg July High</div>
           </div>
-          <div class="text-xl sm:text-2xl font-black text-[#152438] mt-1">{city.climateNormals.peakSummerHighF}°F</div>
-          <div class="text-[10px] text-slate-500">Avg July High</div>
-        </div>
         )}
 
         {sourcedAirport?.distanceMiles != null && (
-        <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
-          <div class="flex justify-between items-start text-slate-400 text-[10px] uppercase font-bold tracking-wider">
-            <span>Airport Transit</span>
-            <span class="text-blue-600 font-extrabold">{sourcedAirport.iata ?? 'Airport'}</span>
+          <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
+            <div class="flex justify-between items-start text-slate-400 text-[10px] uppercase font-bold tracking-wider">
+              <span>Airport Transit</span>
+              <span class="text-blue-600 font-extrabold">{sourcedAirport.iata ?? 'Airport'}</span>
+            </div>
+            <div class="text-xl sm:text-2xl font-black text-[#152438] mt-1">{sourcedAirport.distanceMiles} Miles</div>
+            <div class="text-[10px] text-slate-500">straight line from city center</div>
           </div>
-          <div class="text-xl sm:text-2xl font-black text-[#152438] mt-1">{sourcedAirport.distanceMiles} Miles</div>
-          <div class="text-[10px] text-slate-500">straight line from city center</div>
-        </div>
         )}
 
         {city.terrainElevation?.elevationFeet != null && (
-        <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
-          <div class="flex justify-between items-start text-slate-400 text-[10px] uppercase font-bold tracking-wider">
-            <span>Topography</span>
-            <span class="text-emerald-700 font-extrabold">USGS 3DEP</span>
+          <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
+            <div class="flex justify-between items-start text-slate-400 text-[10px] uppercase font-bold tracking-wider">
+              <span>Topography</span>
+              <span class="text-emerald-700 font-extrabold">USGS 3DEP</span>
+            </div>
+            <div class="text-xl sm:text-2xl font-black text-[#152438] mt-1">{Math.round(city.terrainElevation.elevationFeet)} ft</div>
+            <div class="text-[10px] text-slate-500">{city.terrainElevation.topographyClass}</div>
           </div>
-          <div class="text-xl sm:text-2xl font-black text-[#152438] mt-1">{Math.round(city.terrainElevation.elevationFeet)} ft</div>
-          <div class="text-[10px] text-slate-500">{city.terrainElevation.topographyClass}</div>
-        </div>
         )}
 
-        {city.permitsAndTax?.combinedSalesTaxRate != null && city.permitsAndTax?.provenance && (
-        <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
-          <div class="flex justify-between items-start text-slate-400 text-[10px] uppercase font-bold tracking-wider">
-            <span>Local Sales Tax</span>
-            <span class="text-slate-600 font-extrabold">Combined</span>
+        {hasVerifiedTax && (
+          <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
+            <div class="flex justify-between items-start text-slate-400 text-[10px] uppercase font-bold tracking-wider">
+              <span>Local Sales Tax</span>
+              <span class="text-slate-600 font-extrabold">Combined</span>
+            </div>
+            <div class="text-xl sm:text-2xl font-black text-[#152438] mt-1">{taxPct(city.permitsAndTax.combinedSalesTaxRate)}</div>
+            <div class="text-[10px] text-slate-500">State + Local Tax</div>
           </div>
-          <div class="text-xl sm:text-2xl font-black text-[#152438] mt-1">{Number((city.permitsAndTax.combinedSalesTaxRate * 100).toFixed(3)).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:3})}%</div>
-          <div class="text-[10px] text-slate-500">State + Municipal Tax</div>
-        </div>
         )}
       </div>
 
       <!-- Strip 2: Moving (Active when Moving is chosen) -->
       <div id="stats-strip-moving" class="stats-strip hidden grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
-        <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
-          <div class="flex justify-between items-start text-slate-400 text-[10px] uppercase font-bold tracking-wider">
-            <span>Median Home</span>
-            <span class="text-blue-600 font-extrabold">ACS 2023</span>
+        {city.housingAndTaxes?.medianHomeValue != null && (
+          <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
+            <div class="flex justify-between items-start text-slate-400 text-[10px] uppercase font-bold tracking-wider">
+              <span>Median Home</span>
+              <span class="text-blue-600 font-extrabold">ACS 2023</span>
+            </div>
+            <div class="text-xl sm:text-2xl font-black text-[#152438] mt-1">${Math.round(city.housingAndTaxes.medianHomeValue / 1000)}K</div>
+            <div class="text-[10px] text-slate-500">Median Home Value (ACS)</div>
           </div>
-          <div class="text-xl sm:text-2xl font-black text-[#152438] mt-1">{city.housingAndTaxes?.medianHomeValue != null ? `$${Math.round(city.housingAndTaxes.medianHomeValue / 1000)}K` : '—'}</div>
-          <div class="text-[10px] text-slate-500">Median Home Value (ACS)</div>
-        </div>
+        )}
 
-        <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
-          <div class="flex justify-between items-start text-slate-400 text-[10px] uppercase font-bold tracking-wider">
-            <span>Typical Rent</span>
-            <span class="text-emerald-700 font-extrabold">ACS</span>
+        {city.housingAndTaxes?.medianGrossRent != null && (
+          <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
+            <div class="flex justify-between items-start text-slate-400 text-[10px] uppercase font-bold tracking-wider">
+              <span>Typical Rent</span>
+              <span class="text-emerald-700 font-extrabold">ACS</span>
+            </div>
+            <div class="text-xl sm:text-2xl font-black text-[#152438] mt-1">${city.housingAndTaxes.medianGrossRent.toLocaleString()}/mo</div>
+            <div class="text-[10px] text-slate-500">Median gross rent (ACS)</div>
           </div>
-          <div class="text-xl sm:text-2xl font-black text-[#152438] mt-1">{city.housingAndTaxes?.medianGrossRent != null ? `$${city.housingAndTaxes.medianGrossRent.toLocaleString()}/mo` : '—'}</div>
-          <div class="text-[10px] text-slate-500">Median gross rent (ACS)</div>
-        </div>
+        )}
 
-        <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
-          <div class="flex justify-between items-start text-slate-400 text-[10px] uppercase font-bold tracking-wider">
-            <span>Property Tax</span>
-            <span class="text-amber-700 font-extrabold">Ad-Valorem</span>
+        {city.housingAndTaxes?.effectivePropertyTaxRatePct != null && (
+          <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
+            <div class="flex justify-between items-start text-slate-400 text-[10px] uppercase font-bold tracking-wider">
+              <span>Property Tax</span>
+              <span class="text-amber-700 font-extrabold">Ad-Valorem</span>
+            </div>
+            <div class="text-xl sm:text-2xl font-black text-[#152438] mt-1">{city.housingAndTaxes.effectivePropertyTaxRatePct.toFixed(2)}%</div>
+            <div class="text-[10px] text-slate-500">Median RE tax ÷ median home value</div>
           </div>
-          <div class="text-xl sm:text-2xl font-black text-[#152438] mt-1">{city.housingAndTaxes?.effectivePropertyTaxRatePct != null ? `${city.housingAndTaxes.effectivePropertyTaxRatePct.toFixed(2)}%` : '—'}</div>
-          <div class="text-[10px] text-slate-500">Median RE tax ÷ median home value</div>
-        </div>
+        )}
 
-        <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
-          <div class="flex justify-between items-start text-slate-400 text-[10px] uppercase font-bold tracking-wider">
-            <span>Population Change</span>
-            <span class="text-emerald-700 font-extrabold">2020–23</span>
+        {city.demographics.popChange2020to2023Pct != null ? (
+          <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
+            <div class="flex justify-between items-start text-slate-400 text-[10px] uppercase font-bold tracking-wider">
+              <span>Population Change</span>
+              <span class="text-emerald-700 font-extrabold">2020–23</span>
+            </div>
+            <div class="text-xl sm:text-2xl font-black text-[#152438] mt-1">
+              {`${city.demographics.popChange2020to2023Pct > 0 ? '+' : ''}${city.demographics.popChange2020to2023Pct}%`}
+            </div>
+            <div class="text-[10px] text-slate-500">{(city.demographics.population / 1000).toFixed(1)}K Residents</div>
           </div>
-          <div class="text-xl sm:text-2xl font-black text-[#152438] mt-1">{city.demographics.popChange2020to2023Pct != null ? `${city.demographics.popChange2020to2023Pct > 0 ? '+' : ''}${city.demographics.popChange2020to2023Pct}%` : '—'}</div>
-          <div class="text-[10px] text-slate-500">{(city.demographics.population / 1000).toFixed(1)}K Residents</div>
-        </div>
+        ) : (
+          <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
+            <div class="flex justify-between items-start text-slate-400 text-[10px] uppercase font-bold tracking-wider">
+              <span>Resident Pop</span>
+              <span class="text-emerald-700 font-extrabold">ACS 2023</span>
+            </div>
+            <div class="text-xl sm:text-2xl font-black text-[#152438] mt-1">{city.demographics.population.toLocaleString()}</div>
+            <div class="text-[10px] text-slate-500">Census ACS 5-Year Estimate</div>
+          </div>
+        )}
       </div>
 
       <!-- Strip 3: Doing Business (Active when Doing Business is chosen) -->
-      <div id="stats-strip-business" class="stats-strip hidden grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
-        <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
-          <div class="flex justify-between items-start text-slate-400 text-[10px] uppercase font-bold tracking-wider">
-            <span>Underserved Trades</span>
-            <span class="text-indigo-600 font-extrabold">ZBP 2022</span>
+      {defaultTrade && (
+        <div id="stats-strip-business" class="stats-strip hidden grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+          <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
+            <div class="flex justify-between items-start text-slate-400 text-[10px] uppercase font-bold tracking-wider">
+              <span>Underserved Trades</span>
+              <span class="text-indigo-600 font-extrabold">ZBP 2022</span>
+            </div>
+            <div class="text-xl sm:text-2xl font-black text-[#152438] mt-1">
+              {city.industries.filter((i) => i.status === 'underserved').length} of {city.industries.length}
+            </div>
+            <div class="text-[10px] text-slate-500">Trades below 80% of national density</div>
           </div>
-          <div class="text-xl sm:text-2xl font-black text-[#152438] mt-1">{city.industries.filter((i) => i.status === 'underserved').length} of {city.industries.length}</div>
-          <div class="text-[10px] text-slate-500">Trades below 80% of national density</div>
-        </div>
 
-        <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
-          <div class="flex justify-between items-start text-slate-400 text-[10px] uppercase font-bold tracking-wider">
-            <span>Active Establishments</span>
-            <span class="text-blue-600 font-extrabold">Census ZBP</span>
+          <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
+            <div class="flex justify-between items-start text-slate-400 text-[10px] uppercase font-bold tracking-wider">
+              <span>Active Establishments</span>
+              <span class="text-blue-600 font-extrabold">Census ZBP</span>
+            </div>
+            <div id="strip-trade-count" class="text-xl sm:text-2xl font-black text-[#152438] mt-1">{defaultTrade.establishments}</div>
+            <div id="strip-trade-label" class="text-[10px] text-slate-500">{defaultTrade.label}</div>
           </div>
-          <div id="strip-trade-count" class="text-xl sm:text-2xl font-black text-[#152438] mt-1">{defaultTrade.establishments}</div>
-          <div id="strip-trade-label" class="text-[10px] text-slate-500">{defaultTrade.label}</div>
-        </div>
 
-        <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
-          <div class="flex justify-between items-start text-slate-400 text-[10px] uppercase font-bold tracking-wider">
-            <span>Saturation Index</span>
-            <span class="text-emerald-700 font-extrabold">Empirical Bayes</span>
+          <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
+            <div class="flex justify-between items-start text-slate-400 text-[10px] uppercase font-bold tracking-wider">
+              <span>Saturation Index</span>
+              <span class="text-emerald-700 font-extrabold">vs. US Density</span>
+            </div>
+            <div id="strip-trade-saturation" class="text-xl sm:text-2xl font-black text-[#152438] mt-1">{defaultTrade.saturationIndex} / 100</div>
+            <div id="strip-trade-status" class="text-[10px] text-slate-500 uppercase font-bold">{defaultTrade.status}</div>
           </div>
-          <div id="strip-trade-saturation" class="text-xl sm:text-2xl font-black text-[#152438] mt-1">{defaultTrade.saturationIndex} / 100</div>
-          <div id="strip-trade-status" class="text-[10px] text-slate-500 uppercase font-bold">{defaultTrade.status}</div>
-        </div>
 
-        <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
-          <div class="flex justify-between items-start text-slate-400 text-[10px] uppercase font-bold tracking-wider">
-            <span>Saturated Trades</span>
-            <span class="text-slate-600 font-extrabold">ZBP 2022</span>
+          <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
+            <div class="flex justify-between items-start text-slate-400 text-[10px] uppercase font-bold tracking-wider">
+              <span>Saturated Trades</span>
+              <span class="text-slate-600 font-extrabold">ZBP 2022</span>
+            </div>
+            <div class="text-xl sm:text-2xl font-black text-[#152438] mt-1">
+              {city.industries.filter((i) => i.status === 'saturated').length} of {city.industries.length}
+            </div>
+            <div class="text-[10px] text-slate-500">Trades above 120% of national density</div>
           </div>
-          <div class="text-xl sm:text-2xl font-black text-[#152438] mt-1">{city.industries.filter((i) => i.status === 'saturated').length} of {city.industries.length}</div>
-          <div class="text-[10px] text-slate-500">Trades above 120% of national density</div>
         </div>
-      </div>
+      )}
 
-      <!-- LIVE 7-DAY CITY PULSE WIRE (Austin Chronicle & Commercial News) -->
       {hasVerifiedDispatches && dispatches && (
-        <div class="bg-[#0B1120] rounded-2xl border border-slate-800 p-4 sm:p-5 text-white shadow-xl">
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-slate-800">
-            <div class="flex items-center gap-2.5">
-              <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
-              <span class="text-xs font-black uppercase tracking-wider text-emerald-400">Live 7-Day {city.name} Pulse</span>
-              <span class="text-slate-500 text-xs hidden sm:inline">·</span>
-              <span class="text-slate-400 text-xs hidden sm:inline">Verified local dispatches</span>
-            </div>
-            <!-- Ticker Pill Switcher -->
-            <div class="flex items-center gap-2 bg-slate-900/90 p-1 rounded-xl border border-slate-700/80 text-xs">
-              <button id="ticker-btn-events" class="px-3 py-1 rounded-lg font-bold bg-[#1D68F2] text-white transition cursor-pointer">
-                🎟️ {isAustin ? 'Austin Chronicle Events' : (isHSV ? 'Village Voice Events' : 'Local Events')}
-              </button>
-              <button id="ticker-btn-commercial" class="px-3 py-1 rounded-lg font-medium text-slate-400 hover:text-white transition cursor-pointer">
-                💼 Commercial & Development Wire
-              </button>
-            </div>
-          </div>
-
-          <!-- Dynamic Ticker Headlines Container -->
-          <div class="pt-3">
-            <!-- 1. Events Panel -->
-            <div id="ticker-panel-events" class="space-y-2">
-              {dispatches.chronicleEvents.map((ev, i) => (
-                <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 text-xs hover:bg-slate-800/40 p-1.5 rounded-lg transition">
-                  <div class="flex items-baseline gap-2">
-                    <span class="text-blue-400 font-mono text-[11px] font-bold shrink-0">•</span>
-                    <a href={ev.url} target="_blank" rel="noopener noreferrer" class="font-bold text-slate-100 hover:text-blue-300 transition">
-                      {ev.title}
-                    </a>
-                    <span class="text-[10px] px-2 py-0.5 rounded-md bg-slate-800 text-slate-300 border border-slate-700/60 hidden md:inline">
-                      {ev.category}
-                    </span>
-                  </div>
-                  <div class="flex items-center gap-2 text-[11px] text-slate-400 shrink-0 pl-4 sm:pl-0">
-                    <span class="text-slate-300 font-semibold">{ev.source}</span>
-                    <span>·</span>
-                    <span>{ev.date}</span>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <!-- 2. Commercial Wire Panel (Hidden by default) -->
-            <div id="ticker-panel-commercial" class="space-y-2 hidden">
-              {dispatches.commercialWire.map((item, i) => (
-                <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 text-xs hover:bg-slate-800/40 p-1.5 rounded-lg transition">
-                  <div class="flex items-baseline gap-2">
-                    <span class="text-emerald-400 font-mono text-[11px] font-bold shrink-0">•</span>
-                    <a href={item.url} target="_blank" rel="noopener noreferrer" class="font-bold text-slate-100 hover:text-emerald-300 transition">
-                      {item.title}
-                    </a>
-                    <span class="text-[10px] px-2 py-0.5 rounded-md bg-slate-800 text-slate-300 border border-slate-700/60 hidden md:inline">
-                      {item.category}
-                    </span>
-                  </div>
-                  <div class="flex items-center gap-2 text-[11px] text-slate-400 shrink-0 pl-4 sm:pl-0">
-                    <span class="text-slate-300 font-semibold">{item.source}</span>
-                    <span>·</span>
-                    <span>{item.date}</span>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
+        <div class="bg-[#0B1120] rounded-2xl border border-slate-800 p-4 sm:p-5 text-white shadow-xl"></div>
       )}
     </div>
   </section>
 
-  <!-- Main Split Layout (Pillars on Left, Free Lead Dossier on Right) -->
+  <!-- Main Split Layout (Pillars on Left, Adaptive Resource Cards on Right) -->
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
       <!-- Left Column: The Active Pillar (8 cols) -->
       <div class="lg:col-span-8 space-y-8">
 
         <!-- ========================================== -->
-        <!-- PILLAR 1: TRAVELING TO CITY               -->
+        <!-- PILLAR 1: TRAVELING TO CITY                -->
         <!-- ========================================== -->
         <div id="pillar-travel" class="pillar-panel space-y-8">
           <section class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-[0_4px_20px_-2px_rgba(0,0,0,0.06)] space-y-6">
             <div class="flex justify-between items-center pb-3 border-b border-slate-100">
               <div>
                 <h2 class="text-2xl font-black text-[#152438]">Traveling to {city.name}</h2>
-                <p class="text-xs text-slate-500 mt-1">Airport distance, climate, and water-system facts on the record</p>
+                <p class="text-xs text-slate-500 mt-1">Airport distance, climate, public lands, scheduled events, and water-system facts on the record</p>
               </div>
               <span class="px-3 py-1 rounded-full text-xs font-bold bg-blue-100 text-[#1D68F2]">Visitor Guide</span>
             </div>
@@ -539,7 +610,7 @@ const cityMapPins = {
               <div class="space-y-3 pt-1">
                 <div class="flex justify-between items-center">
                   <h3 class="font-black text-xl text-[#152438]">{city.name} in Photos</h3>
-                  <span class="text-xs text-slate-400 font-medium">Wikimedia Commons & USGS</span>
+                  <span class="text-xs text-slate-400 font-medium">Wikimedia Commons, NPS & USGS</span>
                 </div>
                 <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
                   {cityGallery.map((item) => (
@@ -568,7 +639,6 @@ const cityMapPins = {
                   </span>
                 </div>
 
-                <!-- Lite YouTube Player Container -->
                 <div
                   class="relative rounded-3xl overflow-hidden border border-slate-800 shadow-xl bg-slate-900 aspect-video group cursor-pointer"
                   id="video-tour-container"
@@ -604,69 +674,149 @@ const cityMapPins = {
             )}
 
             {sourcedAirport && (
-            <div class="bg-gradient-to-br from-[#152438] to-slate-900 rounded-3xl p-6 text-white space-y-4">
-              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                <div class="flex items-center gap-3">
-                  <span class="text-3xl">🛫</span>
-                  <div>
-                    <h3 class="font-black text-lg text-white">Getting Here: {sourcedAirport.name}{sourcedAirport.iata ? ` (${sourcedAirport.iata})` : ''}</h3>
-                    <p class="text-xs text-slate-300">{sourcedAirport.distanceMiles} miles from the city center (straight line)</p>
+              <div class="bg-gradient-to-br from-[#152438] to-slate-900 rounded-3xl p-6 text-white space-y-4">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                  <div class="flex items-center gap-3">
+                    <span class="text-3xl">🛫</span>
+                    <div>
+                      <h3 class="font-black text-lg text-white">Getting Here: {sourcedAirport.name}{sourcedAirport.iata ? ` (${sourcedAirport.iata})` : ''}</h3>
+                      {sourcedAirport.distanceMiles != null && (
+                        <p class="text-xs text-slate-300">{sourcedAirport.distanceMiles} miles from the city center (straight line)</p>
+                      )}
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 text-xs">
-                <div class="bg-white/10 p-3 rounded-xl border border-white/10">
-                  <span class="text-slate-400 block text-[11px]">Distance from city center</span>
-                  <span class="font-bold text-slate-100">{`${sourcedAirport.distanceMiles} mi straight line`}</span>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 text-xs">
+                  {sourcedAirport.distanceMiles != null && (
+                    <div class="bg-white/10 p-3 rounded-xl border border-white/10">
+                      <span class="text-slate-400 block text-[11px]">Distance from city center</span>
+                      <span class="font-bold text-slate-100">{`${sourcedAirport.distanceMiles} mi straight line`}</span>
+                    </div>
+                  )}
+                  <div class="bg-white/10 p-3 rounded-xl border border-white/10">
+                    <span class="text-slate-400 block text-[11px]">Airport</span>
+                    <span class="font-bold text-slate-100">{sourcedAirport.name}</span>
+                  </div>
+                  {travel?.timeZoneAbbr && (
+                    <div class="bg-white/10 p-3 rounded-xl border border-white/10">
+                      <span class="text-slate-400 block text-[11px]">Local Time Zone</span>
+                      <span class="font-bold text-slate-100">{travel.timeZone ? `${travel.timeZoneAbbr} (${travel.timeZone})` : travel.timeZoneAbbr}</span>
+                    </div>
+                  )}
                 </div>
-                <div class="bg-white/10 p-3 rounded-xl border border-white/10">
-                  <span class="text-slate-400 block text-[11px]">Airport</span>
-                  <span class="font-bold text-slate-100">{sourcedAirport.name}</span>
-                </div>
               </div>
-            </div>
             )}
 
-            {(city as any).waterUtility && (
-            <div class="rounded-3xl p-6 sm:p-7 bg-[#F8FAFC] border-2 border-blue-200/80 shadow-xs space-y-5">
-              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3 border-b border-slate-200">
-                <div class="flex items-center gap-2.5">
-                  <span class="text-xl">⚠️</span>
-                  <div>
-                    <h3 class="text-base font-black text-[#152438]">Before You Go: Water & Climate</h3>
-                    <p class="text-xs text-slate-500">Sourced climate and water-system facts for {city.name}</p>
-                  </div>
+            {nationalParks && (
+              <div class="space-y-3 pt-1">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-black text-base text-[#152438]">National Parks Near {city.name} (NPS)</h3>
+                  <span class="text-[11px] font-bold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200">National Park Service</span>
                 </div>
-                <span class="px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-wider bg-blue-100 text-[#1D68F2] border border-blue-200 shrink-0">
-                  Sourced
-                </span>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+                  {nationalParks.parks.map((pk) => (
+                    <a
+                      href={pk.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="p-4 rounded-2xl bg-[#F8FAFC] border border-slate-200 hover:border-emerald-400 transition block space-y-1.5 group"
+                    >
+                      <div class="flex items-start justify-between gap-2">
+                        <span class="font-black text-sm text-[#152438] group-hover:text-[#1D68F2] transition">{pk.fullName}</span>
+                        {pk.distanceMiles != null && (
+                          <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 shrink-0">{pk.distanceMiles} mi</span>
+                        )}
+                      </div>
+                      {pk.description && <p class="text-slate-600 leading-relaxed">{pk.description}</p>}
+                      <span class="inline-block text-[11px] font-bold text-[#1D68F2]">Official NPS Visitor Page ↗</span>
+                    </a>
+                  ))}
+                </div>
               </div>
+            )}
 
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
-                <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-2xs space-y-1.5">
-                  <div class="flex items-center gap-2 font-bold text-slate-800">
-                    <span class="text-base">🚰</span>
-                    <span>Water system</span>
-                  </div>
-                  <div class="text-slate-600 leading-relaxed">
-                    <span><strong>Tap water:</strong> Served by {(city as any).waterUtility.providerName} (PWSID {(city as any).waterUtility.pwsid}), a {(city as any).waterUtility.sourceType} system serving about {(city as any).waterUtility.populationServed.toLocaleString('en-US')} people. <em>Source: EPA SDWIS, retrieved Oct 2026.</em> In an emergency, dial 911.</span>
-                  </div>
+            {upcomingEvents && (
+              <div class="space-y-3 pt-1">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-black text-base text-[#152438]">Upcoming Scheduled Events in {city.name}</h3>
+                  <span class="text-[11px] text-slate-400">Source: {upcomingEvents.sourceName}</span>
+                </div>
+                <div class="divide-y divide-slate-100 rounded-2xl border border-slate-200 bg-[#F8FAFC] overflow-hidden text-xs">
+                  {upcomingEvents.events.map((ev) => (
+                    <a
+                      href={ev.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="p-3.5 hover:bg-blue-50/60 transition flex flex-col sm:flex-row sm:items-center justify-between gap-1.5 group"
+                    >
+                      <div>
+                        <div class="font-bold text-slate-800 group-hover:text-[#1D68F2] transition">{ev.name}</div>
+                        <div class="text-[11px] text-slate-500">
+                          {[ev.venueName, ev.category].filter(Boolean).join(' · ')}
+                        </div>
+                      </div>
+                      <div class="flex items-center gap-2 shrink-0">
+                        {ev.date && <span class="px-2 py-0.5 rounded bg-white border border-slate-200 font-semibold text-slate-700 text-[11px]">{ev.date}</span>}
+                        <span class="text-[11px] font-bold text-[#1D68F2]">Details ↗</span>
+                      </div>
+                    </a>
+                  ))}
                 </div>
               </div>
-            </div>
+            )}
+
+            {city.waterUtility && (
+              <div class="rounded-3xl p-6 sm:p-7 bg-[#F8FAFC] border-2 border-blue-200/80 shadow-xs space-y-5">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3 border-b border-slate-200">
+                  <div class="flex items-center gap-2.5">
+                    <span class="text-xl">⚠️</span>
+                    <div>
+                      <h3 class="text-base font-black text-[#152438]">Before You Go: Water & Climate</h3>
+                      <p class="text-xs text-slate-500">Sourced climate and water-system facts for {city.name}</p>
+                    </div>
+                  </div>
+                  <span class="px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-wider bg-blue-100 text-[#1D68F2] border border-blue-200 shrink-0">
+                    Sourced
+                  </span>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+                  <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-2xs space-y-1.5">
+                    <div class="flex items-center gap-2 font-bold text-slate-800">
+                      <span class="text-base">🚰</span>
+                      <span>Water system</span>
+                    </div>
+                    <div class="text-slate-600 leading-relaxed">
+                      <span><strong>Tap water:</strong> Served by {city.waterUtility.providerName} (PWSID {city.waterUtility.pwsid}), a {city.waterUtility.sourceType} system serving about {city.waterUtility.populationServed.toLocaleString('en-US')} people. <em>Source: EPA SDWIS, retrieved Oct 2026.</em> In an emergency, dial 911.</span>
+                    </div>
+                  </div>
+
+                  {city.climateNormals && (
+                    <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-2xs space-y-1.5">
+                      <div class="flex items-center gap-2 font-bold text-slate-800">
+                        <span class="text-base">🌦️</span>
+                        <span>Seasonal temperatures</span>
+                      </div>
+                      <div class="text-slate-600 leading-relaxed">
+                        <span><strong>10-year ERA5 average:</strong> {city.climateNormals.peakSummerHighF}°F average July high, {city.climateNormals.winterLowF}°F average January low, and {city.climateNormals.annualRainfallInches} inches of annual precipitation. <em>Source: Open-Meteo (2015–2024).</em></span>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </div>
             )}
           </section>
         </div>
 
         <!-- ========================================== -->
-        <!-- PILLAR 2: MOVING                         -->
+        <!-- PILLAR 2: MOVING                           -->
         <!-- ========================================== -->
         <div id="pillar-moving" class="pillar-panel hidden space-y-8">
           <section class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-[0_4px_20px_-2px_rgba(0,0,0,0.06)] space-y-6">
             <div class="flex justify-between items-center pb-3 border-b border-slate-100">
               <div>
                 <h2 class="text-2xl font-black text-[#152438]">Moving to {city.name}</h2>
-                <p class="text-xs text-slate-500 mt-1">Demographics, elevation, climate normals, healthcare, and neighborhood living dynamics</p>
+                <p class="text-xs text-slate-500 mt-1">Demographics, elevation, climate averages, emergency healthcare, housing, and higher education</p>
               </div>
               <span class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800">Relocation Index</span>
             </div>
@@ -676,7 +826,13 @@ const cityMapPins = {
               <div class="bg-[#F8FAFC] p-4 rounded-2xl border border-slate-200">
                 <span class="text-xs font-semibold text-slate-500">Total Population</span>
                 <div class="text-2xl font-black text-[#152438] mt-1">{city.demographics.population.toLocaleString()}</div>
-                <span class="text-[11px] text-emerald-600 font-semibold">{city.demographics.popChange2020to2023Pct != null ? `${city.demographics.popChange2020to2023Pct > 0 ? '+' : ''}${city.demographics.popChange2020to2023Pct}%` : '—'} Since 2020 (Census est.)</span>
+                {city.demographics.popChange2020to2023Pct != null ? (
+                  <span class="text-[11px] text-emerald-600 font-semibold">
+                    {`${city.demographics.popChange2020to2023Pct > 0 ? '+' : ''}${city.demographics.popChange2020to2023Pct}%`} Since 2020 (Census est.)
+                  </span>
+                ) : (
+                  <span class="text-[11px] text-slate-500">Census ACS 2023 5-Year Estimate</span>
+                )}
               </div>
               <div class="bg-[#F8FAFC] p-4 rounded-2xl border border-slate-200">
                 <span class="text-xs font-semibold text-slate-500">Median Household Income</span>
@@ -691,254 +847,369 @@ const cityMapPins = {
             </div>
 
             {(city.terrainElevation || city.climateNormals) && (
-            <div class="space-y-3 pt-2">
-              <h3 class="font-bold text-base text-[#152438]">Elevation, Terrain & Climate Normals</h3>
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
-                {city.terrainElevation && (
-                <div class="p-5 rounded-2xl bg-[#F8FAFC] border border-slate-200 space-y-2">
-                  <div class="flex items-center gap-2">
-                    <span class="text-lg">⛰️</span>
-                    <h4 class="font-bold text-sm text-[#152438]">USGS 3DEP High-Resolution Elevation</h4>
-                  </div>
-                  <div class="space-y-1.5 text-slate-600">
-                    <div class="flex justify-between">
-                      <span class="text-slate-400">Exact Elevation:</span>
-                      <span class="font-bold text-slate-800">{`${city.terrainElevation.elevationFeet.toFixed(1)} ft (${city.terrainElevation.elevationMeters.toFixed(1)} m)`}</span>
+              <div class="space-y-3 pt-2">
+                <h3 class="font-bold text-base text-[#152438]">Elevation, Terrain & Climate Normals</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+                  {city.terrainElevation && (
+                    <div class="p-5 rounded-2xl bg-[#F8FAFC] border border-slate-200 space-y-2">
+                      <div class="flex items-center gap-2">
+                        <span class="text-lg">⛰️</span>
+                        <h4 class="font-bold text-sm text-[#152438]">USGS 3DEP High-Resolution Elevation</h4>
+                      </div>
+                      <div class="space-y-1.5 text-slate-600">
+                        <div class="flex justify-between">
+                          <span class="text-slate-400">Exact Elevation:</span>
+                          <span class="font-bold text-slate-800">{`${city.terrainElevation.elevationFeet.toFixed(1)} ft (${city.terrainElevation.elevationMeters.toFixed(1)} m)`}</span>
+                        </div>
+                        <div class="flex justify-between">
+                          <span class="text-slate-400">Topography Class:</span>
+                          <span class="font-bold text-slate-800">{city.terrainElevation.topographyClass}</span>
+                        </div>
+                      </div>
                     </div>
-                    <div class="flex justify-between">
-                      <span class="text-slate-400">Topography Class:</span>
-                      <span class="font-bold text-slate-800">{city.terrainElevation.topographyClass}</span>
-                    </div>
-                  </div>
-                </div>
-                )}
+                  )}
 
-                {city.climateNormals?.peakSummerHighF != null && (
-                <div class="p-5 rounded-2xl bg-[#F8FAFC] border border-slate-200 space-y-2">
-                  <div class="flex items-center gap-2">
-                    <span class="text-lg">☀️</span>
-                    <h4 class="font-bold text-sm text-[#152438]">Climate Averages (2015–2024)</h4>
-                  </div>
-                  <div class="space-y-1.5 text-slate-600">
-                    <div class="flex justify-between">
-                      <span class="text-slate-400">Annual Precipitation:</span>
-                      <span class="font-bold text-slate-800">{`${city.climateNormals.annualRainfallInches} Inches`}</span>
+                  {city.climateNormals?.peakSummerHighF != null && (
+                    <div class="p-5 rounded-2xl bg-[#F8FAFC] border border-slate-200 space-y-2">
+                      <div class="flex items-center gap-2">
+                        <span class="text-lg">☀️</span>
+                        <h4 class="font-bold text-sm text-[#152438]">Climate Averages (2015–2024)</h4>
+                      </div>
+                      <div class="space-y-1.5 text-slate-600">
+                        <div class="flex justify-between">
+                          <span class="text-slate-400">Annual Precipitation:</span>
+                          <span class="font-bold text-slate-800">{`${city.climateNormals.annualRainfallInches} Inches`}</span>
+                        </div>
+                        <div class="flex justify-between">
+                          <span class="text-slate-400">Summer High / Winter Low:</span>
+                          <span class="font-bold text-slate-800">{`${city.climateNormals.peakSummerHighF}°F Avg July High / ${city.climateNormals.winterLowF}°F Avg Jan Low`}</span>
+                        </div>
+                      </div>
                     </div>
-                    <div class="flex justify-between">
-                      <span class="text-slate-400">Summer High / Winter Low:</span>
-                      <span class="font-bold text-slate-800">{`${city.climateNormals.peakSummerHighF}°F Avg July High / ${city.climateNormals.winterLowF}°F Avg Jan Low`}</span>
-                    </div>
-                  </div>
+                  )}
                 </div>
-                )}
               </div>
-            </div>
             )}
 
             {erHospitals.length > 0 && (
-            <div class="space-y-3 pt-2">
-              <h3 class="font-bold text-base text-[#152438]">Hospitals with emergency departments in {city.name} (CMS)</h3>
-              <div class="p-5 rounded-2xl bg-slate-900 text-white space-y-3">
-                <div class="space-y-2 text-slate-300">
-                  {erHospitals.map((h) => (
-                    <p><strong>{h.name}</strong> — {h.address} — {h.type}</p>
-                  ))}
+              <div class="space-y-3 pt-2">
+                <h3 class="font-bold text-base text-[#152438]">Hospitals with emergency departments in {erHospitalsScope} (CMS)</h3>
+                <div class="p-5 rounded-2xl bg-slate-900 text-white space-y-3">
+                  <div class="space-y-2 text-slate-300 text-xs sm:text-sm">
+                    {erHospitals.map((h) => (
+                      <p><strong>{h.name}</strong> · {h.address} · {h.type}</p>
+                    ))}
+                  </div>
+                  {erHospitalsSource && (
+                    <p class="text-[11px] text-slate-400 leading-relaxed">{erHospitalsSource}</p>
+                  )}
                 </div>
-                {erHospitalsSource && (
-                  <p class="text-[11px] text-slate-400 leading-relaxed">{erHospitalsSource}</p>
-                )}
               </div>
-            </div>
             )}
 
             <!-- Housing & Property Tax Friction -->
-            <div class="space-y-3 pt-2">
-              <h3 class="font-bold text-base text-[#152438]">Housing Costs & Property Tax Friction</h3>
-              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
-                <div class="bg-[#F8FAFC] p-4 rounded-2xl border border-slate-200">
-                  <span class="text-xs font-semibold text-slate-500">Median Home Price</span>
-                  <div class="text-2xl font-black text-[#152438] mt-1">{city.housingAndTaxes?.medianHomeValue != null ? `$${city.housingAndTaxes.medianHomeValue.toLocaleString()}` : '—'}</div>
-                  <span class="text-[11px] text-slate-400">Census ACS 2023 · owner-occupied median</span>
+            {(city.housingAndTaxes?.medianHomeValue != null || city.housingAndTaxes?.medianGrossRent != null || city.housingAndTaxes?.effectivePropertyTaxRatePct != null) && (
+              <div class="space-y-3 pt-2">
+                <h3 class="font-bold text-base text-[#152438]">Housing Costs & Property Tax Friction</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
+                  {city.housingAndTaxes?.medianHomeValue != null && (
+                    <div class="bg-[#F8FAFC] p-4 rounded-2xl border border-slate-200">
+                      <span class="text-xs font-semibold text-slate-500">Median Home Price</span>
+                      <div class="text-2xl font-black text-[#152438] mt-1">${city.housingAndTaxes.medianHomeValue.toLocaleString()}</div>
+                      <span class="text-[11px] text-slate-400">Census ACS 2023 · owner-occupied median</span>
+                    </div>
+                  )}
+                  {city.housingAndTaxes?.medianGrossRent != null && (
+                    <div class="bg-[#F8FAFC] p-4 rounded-2xl border border-slate-200">
+                      <span class="text-xs font-semibold text-slate-500">Median Gross Rent</span>
+                      <div class="text-2xl font-black text-[#152438] mt-1">${city.housingAndTaxes.medianGrossRent.toLocaleString()}/mo</div>
+                      <span class="text-[11px] text-slate-400">ACS 2023 · all renter-occupied units</span>
+                    </div>
+                  )}
+                  {city.housingAndTaxes?.effectivePropertyTaxRatePct != null && (
+                    <div class="bg-[#F8FAFC] p-4 rounded-2xl border border-slate-200">
+                      <span class="text-xs font-semibold text-slate-500">Effective Property Tax</span>
+                      <div class="text-2xl font-black text-[#152438] mt-1">{city.housingAndTaxes.effectivePropertyTaxRatePct.toFixed(2)}%</div>
+                      <span class="text-[11px] text-amber-700 font-semibold">Census ACS 2023 · B25103 ÷ B25077</span>
+                    </div>
+                  )}
                 </div>
-                <div class="bg-[#F8FAFC] p-4 rounded-2xl border border-slate-200">
-                  <span class="text-xs font-semibold text-slate-500">Median Gross Rent</span>
-                  <div class="text-2xl font-black text-[#152438] mt-1">{city.housingAndTaxes?.medianGrossRent != null ? `$${city.housingAndTaxes.medianGrossRent.toLocaleString()}/mo` : '—'}</div>
-                  <span class="text-[11px] text-slate-400">ACS 2023 · all renter-occupied units</span>
+                {city.housingAndTaxes?.homesteadExemptionNote && (
+                  <p class="text-[11px] text-slate-500">
+                    {city.housingAndTaxes.homesteadExemptionNote}
+                  </p>
+                )}
+              </div>
+            )}
+
+            <!-- Higher Education (Dept. of Education College Scorecard) -->
+            {higherEd && (
+              <div class="space-y-3 pt-2">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+                  <h3 class="font-bold text-base text-[#152438]">Colleges & Universities in {city.name}</h3>
+                  <span class="text-[11px] text-slate-400">{higherEd.institutionCount} institutions · {higherEd.sourceName}</span>
                 </div>
-                <div class="bg-[#F8FAFC] p-4 rounded-2xl border border-slate-200">
-                  <span class="text-xs font-semibold text-slate-500">Effective Property Tax</span>
-                  <div class="text-2xl font-black text-[#152438] mt-1">{city.housingAndTaxes?.effectivePropertyTaxRatePct != null ? `${city.housingAndTaxes.effectivePropertyTaxRatePct.toFixed(2)}%` : '—'}</div>
-                  <span class="text-[11px] text-amber-700 font-semibold">Census ACS 2023 · B25103 ÷ B25077</span>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+                  {higherEd.institutions.map((inst) => (
+                    <div class="bg-[#F8FAFC] p-4 rounded-2xl border border-slate-200 flex flex-col justify-between gap-2">
+                      <div>
+                        <div class="font-bold text-slate-800 text-sm">
+                          {inst.schoolUrl ? (
+                            <a href={inst.schoolUrl} target="_blank" rel="noopener noreferrer" class="hover:text-[#1D68F2] transition">
+                              {inst.name} ↗
+                            </a>
+                          ) : (
+                            inst.name
+                          )}
+                        </div>
+                        {inst.ownership && <span class="text-[11px] text-slate-500">{inst.ownership}</span>}
+                      </div>
+                      {inst.studentSize != null && (
+                        <div class="text-[11px] font-bold text-emerald-700">
+                          {inst.studentSize.toLocaleString('en-US')} undergraduate students
+                        </div>
+                      )}
+                    </div>
+                  ))}
                 </div>
               </div>
-              {city.housingAndTaxes?.homesteadExemptionNote && (
-              <p class="text-[11px] text-slate-500">
-                {city.housingAndTaxes.homesteadExemptionNote}
-              </p>
-              )}
-            </div>
+            )}
           </section>
         </div>
 
         <!-- ========================================== -->
-        <!-- PILLAR 3: DOING BUSINESS                  -->
+        <!-- PILLAR 3: DOING BUSINESS                   -->
         <!-- ========================================== -->
         <div id="pillar-business" class="pillar-panel hidden space-y-8" data-industries={JSON.stringify(industriesWithDefaults)}>
-          <!-- Interactive Trade / Industry Selector Banner -->
-          <div class="bg-gradient-to-r from-blue-900 to-slate-900 p-6 sm:p-7 rounded-3xl text-white shadow-xl flex flex-col md:flex-row md:items-center justify-between gap-5 border border-slate-800">
-            <div class="space-y-1">
-              <span class="text-[10px] font-black uppercase tracking-wider text-blue-400 bg-blue-500/20 px-2.5 py-1 rounded-full border border-blue-400/30">
-                Census trade counts
-              </span>
-              <h2 class="text-xl sm:text-2xl font-black text-white">Establishment counts on the record</h2>
-              <p class="text-xs text-slate-300 max-w-xl">
-                Choose a NAICS trade to see the Census establishment count for {city.name}. Lease rates and breakeven are not on the record.
-              </p>
-            </div>
-            <div class="shrink-0 w-full md:w-96 space-y-2">
-              <div class="flex items-center justify-between">
-                <label for="trade-select" class="block text-[11px] font-bold text-slate-300 uppercase tracking-wider">Select trade:</label>
+          {defaultTrade && (
+            <>
+              <!-- Interactive Trade / Industry Selector Banner -->
+              <div class="bg-gradient-to-r from-blue-900 to-slate-900 p-6 sm:p-7 rounded-3xl text-white shadow-xl flex flex-col md:flex-row md:items-center justify-between gap-5 border border-slate-800">
+                <div class="space-y-1">
+                  <span class="text-[10px] font-black uppercase tracking-wider text-blue-400 bg-blue-500/20 px-2.5 py-1 rounded-full border border-blue-400/30">
+                    Census trade counts
+                  </span>
+                  <h2 class="text-xl sm:text-2xl font-black text-white">Establishment counts on the record</h2>
+                  <p class="text-xs text-slate-300 max-w-xl">
+                    Choose a NAICS trade to see the Census establishment count and per-10,000 density for {city.name} ZIP codes.
+                  </p>
+                </div>
+                <div class="shrink-0 w-full md:w-96 space-y-2">
+                  <div class="flex items-center justify-between">
+                    <label for="trade-select" class="block text-[11px] font-bold text-slate-300 uppercase tracking-wider">Select trade:</label>
+                  </div>
+                  <select
+                    id="trade-select"
+                    class="w-full px-4 py-3 rounded-2xl bg-white text-slate-900 font-extrabold text-xs shadow-xl border-2 border-blue-400 focus:ring-2 focus:ring-blue-300 outline-none cursor-pointer"
+                  >
+                    <optgroup label="Standard NAICS Benchmarks">
+                      {industriesWithDefaults.map((ind) => (
+                        <option value={ind.naicsCode} selected={ind.naicsCode === defaultTrade.naicsCode}>
+                          {ind.label} · {ind.status.toUpperCase()} ({ind.establishments} units)
+                        </option>
+                      ))}
+                    </optgroup>
+                  </select>
+                </div>
               </div>
-              <select
-                id="trade-select"
-                class="w-full px-4 py-3 rounded-2xl bg-white text-slate-900 font-extrabold text-xs shadow-xl border-2 border-blue-400 focus:ring-2 focus:ring-blue-300 outline-none cursor-pointer"
-              >
-                <optgroup label="Standard NAICS Benchmarks">
-                  {industriesWithDefaults.map((ind) => (
-                    <option value={ind.naicsCode} selected={ind.naicsCode === '722515'}>
-                      {ind.label} — {ind.status.toUpperCase()} ({ind.establishments} units)
-                    </option>
-                  ))}
-                </optgroup>
-              </select>
-            </div>
-          </div>
 
-          <!-- Commercial Establishment Density & Saturation Metrics -->
-          <section class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-[0_4px_20px_-2px_rgba(0,0,0,0.06)] space-y-6">
-            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-slate-100">
-              <div>
-                <h2 id="active-trade-label" class="text-xl font-black text-[#152438]">Commercial Establishment Density — {defaultTrade.label}</h2>
-                <p id="active-trade-desc" class="text-xs text-slate-500 mt-0.5">Census County Business Patterns (ZBP 2022) small-business metrics across {city.name}</p>
+              <!-- Commercial Establishment Density & Saturation Metrics -->
+              <section class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-[0_4px_20px_-2px_rgba(0,0,0,0.06)] space-y-6">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-slate-100">
+                  <div>
+                    <h2 id="active-trade-label" class="text-xl font-black text-[#152438]">Commercial Establishment Density: {defaultTrade.label}</h2>
+                    <p id="active-trade-desc" class="text-xs text-slate-500 mt-0.5">Census ZIP Code Business Patterns (ZBP 2022) small-business metrics across {city.name} ZIP codes</p>
+                  </div>
+                  <span id="active-trade-badge" class={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider ${
+                    defaultTrade.status === 'underserved' ? 'bg-emerald-50 text-emerald-700 border border-emerald-200' :
+                    defaultTrade.status === 'balanced' ? 'bg-blue-50 text-blue-700 border border-blue-200' : 'bg-rose-50 text-rose-700 border border-rose-200'
+                  }`}>
+                    <span class="w-2 h-2 rounded-full bg-current animate-pulse"></span>
+                    {defaultTrade.status}
+                  </span>
+                </div>
+
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-2">
+                  <div class="bg-[#F8FAFC] p-4 rounded-2xl border border-slate-200">
+                    <span class="text-xs font-semibold text-slate-500">Active Establishments</span>
+                    <div id="active-trade-count" class="text-2xl font-black text-[#152438] mt-1">{defaultTrade.establishments}</div>
+                    <span class="text-[11px] text-slate-400">Census ZBP 2022</span>
+                  </div>
+                  <div class="bg-[#F8FAFC] p-4 rounded-2xl border border-slate-200">
+                    <span class="text-xs font-semibold text-slate-500">Density / 10k Residents</span>
+                    <div id="active-trade-density" class="text-2xl font-black text-[#152438] mt-1">{defaultTrade.per10kResidents}</div>
+                    <span id="active-trade-benchmark" class="text-[11px] text-slate-400">National Benchmark: {defaultTrade.usAvgPer10k}</span>
+                  </div>
+                  <div class="bg-[#F8FAFC] p-4 rounded-2xl border border-slate-200 col-span-2 sm:col-span-1">
+                    <span class="text-xs font-semibold text-slate-500">Saturation Index</span>
+                    <div id="active-trade-saturation" class="text-2xl font-black text-[#152438] mt-1">{defaultTrade.saturationIndex} <span class="text-xs font-normal text-slate-400">/ 100</span></div>
+                    <span class="text-[11px] text-emerald-600 font-semibold">Census ZBP vs national density</span>
+                  </div>
+                </div>
+              </section>
+
+              <!-- NAICS Saturation Table -->
+              <section class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-[0_4px_20px_-2px_rgba(0,0,0,0.06)] space-y-6">
+                <div>
+                  <h2 class="text-xl font-black text-[#152438]">{city.name} NAICS Industry Saturation Benchmark</h2>
+                  <p class="text-xs text-slate-500 mt-0.5">Trade density across {city.primaryZips?.length ?? 0} assigned ZIP codes versus the national ZBP average</p>
+                </div>
+
+                <div class="overflow-x-auto">
+                  <table class="w-full text-left text-xs">
+                    <thead>
+                      <tr class="border-b border-slate-200 text-slate-400 font-bold uppercase tracking-wider text-[11px]">
+                        <th class="py-3 pr-4">Industry / Trade</th>
+                        <th class="py-3 px-4">Active Units</th>
+                        <th class="py-3 px-4">Density / 10k</th>
+                        <th class="py-3 px-4">US Benchmark</th>
+                        <th class="py-3 pl-4">Market Status</th>
+                      </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100">
+                      {city.industries.map((ind) => (
+                        <tr
+                          class="trade-row hover:bg-blue-50/70 cursor-pointer transition group"
+                          data-naics={ind.naicsCode}
+                          title={`Click to inspect ${ind.label}`}
+                        >
+                          <td class="py-3.5 pr-4 font-bold text-slate-800 group-hover:text-[#1D68F2] flex items-center gap-1.5">
+                            <span>{ind.label}</span>
+                            <span class="text-[10px] text-blue-500 opacity-0 group-hover:opacity-100 transition">↗</span>
+                          </td>
+                          <td class="py-3.5 px-4 font-semibold text-slate-700">{ind.establishments}</td>
+                          <td class="py-3.5 px-4 text-slate-600">{ind.per10kResidents}</td>
+                          <td class="py-3.5 px-4 text-slate-400">{ind.usAvgPer10k}</td>
+                          <td class="py-3.5 pl-4">
+                            <span class={`px-2 py-0.5 rounded-full font-bold text-[10px] uppercase tracking-wider ${
+                              ind.status === 'underserved' ? 'bg-emerald-100 text-emerald-800' :
+                              ind.status === 'balanced' ? 'bg-blue-100 text-blue-800' : 'bg-rose-100 text-rose-800'
+                            }`}>
+                              {ind.status}
+                            </span>
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </section>
+            </>
+          )}
+
+          <!-- Permit & Sales Tax Requirements -->
+          {hasVerifiedTax && (
+            <section class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-[0_4px_20px_-2px_rgba(0,0,0,0.06)] space-y-6">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                <div>
+                  <h2 class="text-xl font-black text-[#152438]">Retail Sales Tax & Lease Underwriting</h2>
+                  <p class="text-xs text-slate-500 mt-0.5">Official state and local sales-tax breakdown on the record for {city.name}</p>
+                </div>
+                <a
+                  href={`/tools/lease-calculator/?tax=${Number((city.permitsAndTax.combinedSalesTaxRate * 100).toFixed(3))}&city=${encodeURIComponent(city.name)}`}
+                  class="px-3.5 py-2 rounded-xl bg-blue-50 hover:bg-blue-100 text-[#1D68F2] font-bold text-xs transition shrink-0 border border-blue-200"
+                >
+                  Model Your Lease Quote →
+                </a>
               </div>
-              <span id="active-trade-badge" class={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider ${
-                defaultTrade.status === 'underserved' ? 'bg-emerald-50 text-emerald-700 border border-emerald-200' :
-                defaultTrade.status === 'balanced' ? 'bg-blue-50 text-blue-700 border border-blue-200' : 'bg-rose-50 text-rose-700 border border-rose-200'
-              }`}>
-                <span class="w-2 h-2 rounded-full bg-current animate-pulse"></span>
-                {defaultTrade.status}
-              </span>
-            </div>
 
-            <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-2">
-              <div class="bg-[#F8FAFC] p-4 rounded-2xl border border-slate-200">
-                <span class="text-xs font-semibold text-slate-500">Active Establishments</span>
-                <div id="active-trade-count" class="text-2xl font-black text-[#152438] mt-1">{defaultTrade.establishments}</div>
-                <span class="text-[11px] text-slate-400">Census ZBP 2022</span>
-              </div>
-              <div class="bg-[#F8FAFC] p-4 rounded-2xl border border-slate-200">
-                <span class="text-xs font-semibold text-slate-500">Density / 10k Residents</span>
-                <div id="active-trade-density" class="text-2xl font-black text-[#152438] mt-1">{defaultTrade.per10kResidents}</div>
-                <span id="active-trade-benchmark" class="text-[11px] text-slate-400">National Benchmark: {defaultTrade.usAvgPer10k}</span>
-              </div>
-              <div class="bg-[#F8FAFC] p-4 rounded-2xl border border-slate-200 col-span-2 sm:col-span-1">
-                <span class="text-xs font-semibold text-slate-500">Saturation Index</span>
-                <div id="active-trade-saturation" class="text-2xl font-black text-[#152438] mt-1">{defaultTrade.saturationIndex} <span class="text-xs font-normal text-slate-400">/ 100</span></div>
-                <span class="text-[11px] text-emerald-600 font-semibold">Census ZBP vs national density</span>
-              </div>
-            </div>
-          </section>
-
-          <!-- Trade density is on the record. Lease math is not: no verified rent, ticket, or labor fields. -->
-
-          <!-- 25-Industry NAICS Saturation Table -->
-          <section class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-[0_4px_20px_-2px_rgba(0,0,0,0.06)] space-y-6">
-            <div>
-              <h2 class="text-xl font-black text-[#152438]">{city.name} NAICS Industry Saturation Benchmark</h2>
-              <p class="text-xs text-slate-500 mt-0.5">Trade density versus the national average for core small-business categories</p>
-            </div>
-
-            <div class="overflow-x-auto">
-              <table class="w-full text-left text-xs">
-                <thead>
-                  <tr class="border-b border-slate-200 text-slate-400 font-bold uppercase tracking-wider text-[11px]">
-                    <th class="py-3 pr-4">Industry / Trade</th>
-                    <th class="py-3 px-4">Active Units</th>
-                    <th class="py-3 px-4">Density / 10k</th>
-                    <th class="py-3 px-4">US Benchmark</th>
-                    <th class="py-3 pl-4">Market Status</th>
-                  </tr>
-                </thead>
-                <tbody class="divide-y divide-slate-100">
-                  {city.industries.map((ind) => (
-                    <tr
-                      class="trade-row hover:bg-blue-50/70 cursor-pointer transition group"
-                      data-naics={ind.naicsCode}
-                      title={`Click to underwrite ${ind.label}`}
-                    >
-                      <td class="py-3.5 pr-4 font-bold text-slate-800 group-hover:text-[#1D68F2] flex items-center gap-1.5">
-                        <span>{ind.label}</span>
-                        <span class="text-[10px] text-blue-500 opacity-0 group-hover:opacity-100 transition">↗</span>
-                      </td>
-                      <td class="py-3.5 px-4 font-semibold text-slate-700">{ind.establishments}</td>
-                      <td class="py-3.5 px-4 text-slate-600">{ind.per10kResidents}</td>
-                      <td class="py-3.5 px-4 text-slate-400">{ind.usAvgPer10k}</td>
-                      <td class="py-3.5 pl-4">
-                        <span class={`px-2 py-0.5 rounded-full font-bold text-[10px] uppercase tracking-wider ${
-                          ind.status === 'underserved' ? 'bg-emerald-100 text-emerald-800' :
-                          ind.status === 'balanced' ? 'bg-blue-100 text-blue-800' : 'bg-rose-100 text-rose-800'
-                        }`}>
-                          {ind.status}
+              <div class="overflow-x-auto">
+                <table class="w-full text-left text-xs">
+                  <thead>
+                    <tr class="border-b border-slate-200 text-slate-400 font-bold uppercase tracking-wider text-[11px]">
+                      <th class="py-3 pr-4">Tax Component</th>
+                      <th class="py-3 px-4">Verified Rate</th>
+                      <th class="py-3 pl-4">Jurisdiction / Authority</th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-slate-100">
+                    <tr class="hover:bg-slate-50">
+                      <td class="py-3.5 pr-4 font-semibold text-slate-700">State Sales Tax</td>
+                      <td class="py-3.5 px-4 font-bold text-slate-800">{taxPct(city.permitsAndTax.stateTaxRate)}</td>
+                      <td class="py-3.5 pl-4 text-slate-500">{city.stateName} statutory state rate</td>
+                    </tr>
+                    {city.permitsAndTax.countyTaxRate != null && city.permitsAndTax.countyTaxRate > 0 && (
+                      <tr class="hover:bg-slate-50">
+                        <td class="py-3.5 pr-4 font-semibold text-slate-700">County Sales Tax</td>
+                        <td class="py-3.5 px-4 font-bold text-slate-800">{taxPct(city.permitsAndTax.countyTaxRate)}</td>
+                        <td class="py-3.5 pl-4 text-slate-500">{city.countyName} local rate</td>
+                      </tr>
+                    )}
+                    {city.permitsAndTax.cityTaxRate != null && city.permitsAndTax.cityTaxRate > 0 && (
+                      <tr class="hover:bg-slate-50">
+                        <td class="py-3.5 pr-4 font-semibold text-slate-700">Municipal Sales Tax</td>
+                        <td class="py-3.5 px-4 font-bold text-slate-800">{taxPct(city.permitsAndTax.cityTaxRate)}</td>
+                        <td class="py-3.5 pl-4 text-slate-500">{city.name} municipal rate</td>
+                      </tr>
+                    )}
+                    {city.permitsAndTax.specialDistrictTaxRate != null && city.permitsAndTax.specialDistrictTaxRate > 0 && (
+                      <tr class="hover:bg-slate-50">
+                        <td class="py-3.5 pr-4 font-semibold text-slate-700">Special District Tax</td>
+                        <td class="py-3.5 px-4 font-bold text-slate-800">{taxPct(city.permitsAndTax.specialDistrictTaxRate)}</td>
+                        <td class="py-3.5 pl-4 text-slate-500">Regional transit / taxing district</td>
+                      </tr>
+                    )}
+                    <tr class="bg-slate-50/70">
+                      <td class="py-4 pr-4 font-black text-slate-900">Combined Retail Sales Tax</td>
+                      <td class="py-4 px-4">
+                        <span class="px-2.5 py-1 rounded-full font-extrabold text-[11px] bg-blue-100 text-[#1D68F2]">
+                          {taxPct(city.permitsAndTax.combinedSalesTaxRate)} Combined
                         </span>
                       </td>
+                      <td class="py-4 pl-4 text-slate-600">
+                        {city.permitsAndTax.provenance?.sourceUrl ? (
+                          <a href={city.permitsAndTax.provenance.sourceUrl} target="_blank" rel="noopener noreferrer" class="hover:text-[#1D68F2] underline">
+                            {city.permitsAndTax.provenance.sourceName} ↗
+                          </a>
+                        ) : (
+                          `${taxPct(city.permitsAndTax.stateTaxRate)} State + ${taxPct(city.permitsAndTax.localTaxRate)} Local`
+                        )}
+                      </td>
                     </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </section>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+          )}
 
-          <!-- Permit & Regulatory Requirements -->
-          <section class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-[0_4px_20px_-2px_rgba(0,0,0,0.06)] space-y-6">
-            <div>
-              <h2 class="text-xl font-black text-[#152438]">Permits, Taxes & Municipal Friction</h2>
-              <p class="text-xs text-slate-500 mt-0.5">Sales tax rate on the record for {city.name}</p>
-            </div>
-
-            <div class="overflow-x-auto">
-              <table class="w-full text-left text-xs">
-                <thead>
-                  <tr class="border-b border-slate-200 text-slate-400 font-bold uppercase tracking-wider text-[11px]">
-                    <th class="py-3 pr-4">Requirement</th>
-                    <th class="py-3 px-4">Status / Timeline</th>
-                    <th class="py-3 pl-4">Agency / Fee</th>
-                  </tr>
-                </thead>
-                <tbody class="divide-y divide-slate-100">
-                  <tr class="hover:bg-slate-50">
-                    <td class="py-4 pr-4 font-bold text-slate-800">Combined Sales Tax Rate</td>
-                    <td class="py-4 px-4">
-                      <span class="px-2.5 py-1 rounded-full font-bold text-[11px] bg-slate-100 text-slate-700">
-                        {Number((city.permitsAndTax.combinedSalesTaxRate * 100).toFixed(3)).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:3})}% Combined
-                      </span>
-                    </td>
-                    <td class="py-4 pl-4 text-slate-600">{(city.permitsAndTax.stateTaxRate * 100).toFixed(2)}% State + {(city.permitsAndTax.localTaxRate * 100).toFixed(2)}% Local</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </section>
+          <!-- Public EV Charging Infrastructure (NREL/NLR AFDC) -->
+          {evInfra && (
+            <section class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-[0_4px_20px_-2px_rgba(0,0,0,0.06)] space-y-5">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+                <div>
+                  <h2 class="text-xl font-black text-[#152438]">Public EV Charging Infrastructure</h2>
+                  <p class="text-xs text-slate-500 mt-0.5">Commercial fleet and customer charging stations in {city.name} ({evInfra.sourceName})</p>
+                </div>
+                <span class="text-[11px] font-bold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200 self-start sm:self-auto">
+                  U.S. DOE AFDC
+                </span>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
+                <div class="bg-[#F8FAFC] p-4 rounded-2xl border border-slate-200">
+                  <span class="text-xs font-semibold text-slate-500">Public Charging Locations</span>
+                  <div class="text-2xl font-black text-[#152438] mt-1">{evInfra.totalStations.toLocaleString('en-US')}</div>
+                  <span class="text-[11px] text-slate-400">Active public station sites</span>
+                </div>
+                <div class="bg-[#F8FAFC] p-4 rounded-2xl border border-slate-200">
+                  <span class="text-xs font-semibold text-slate-500">DC Fast-Charging Ports</span>
+                  <div class="text-2xl font-black text-[#152438] mt-1">{evInfra.dcFastPorts.toLocaleString('en-US')}</div>
+                  <span class="text-[11px] text-slate-400">High-speed commercial ports</span>
+                </div>
+                <div class="bg-[#F8FAFC] p-4 rounded-2xl border border-slate-200">
+                  <span class="text-xs font-semibold text-slate-500">Level 2 Charging Ports</span>
+                  <div class="text-2xl font-black text-[#152438] mt-1">{evInfra.level2Ports.toLocaleString('en-US')}</div>
+                  <span class="text-[11px] text-slate-400">Destination & retail ports</span>
+                </div>
+              </div>
+            </section>
+          )}
         </div>
 
-        <!-- ========================================== -->
-        <!-- MULTI-AUDIENCE INTERACTIVE MAP             -->
-        <!-- (Positioned beneath primary audience panes)-->
-        <!-- ========================================== -->
         <!-- KEY FACTS & FAQ: plain sentences, each with source and as-of date (feeds FAQPage JSON-LD) -->
         {keyFacts.length > 0 && (
           <section id="key-facts" class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-[0_4px_20px_-2px_rgba(0,0,0,0.06)] space-y-5">
             <h2 class="font-black text-xl text-[#152438]">{city.name} Key Facts & FAQ</h2>
-            <p class="text-xs text-slate-500">Each answer lists its source and the period it covers.</p>
+            <p class="text-xs text-slate-500">Each answer lists its primary source and the period it covers.</p>
             <div class="space-y-4">
               {keyFacts.map((f) => (
                 <div class="border-t border-slate-100 pt-4">
@@ -951,68 +1222,69 @@ const cityMapPins = {
           </section>
         )}
 
-        <section class="bg-white p-6 sm:p-7 rounded-3xl border border-slate-200/80 shadow-[0_4px_20px_-2px_rgba(0,0,0,0.06)] space-y-4">
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-slate-100">
-            <div>
-              <div class="flex items-center gap-2">
-                <span class="text-xl">🗺️</span>
-                <h2 class="text-xl font-black text-[#152438]">Interactive City Explorer</h2>
+        <!-- MULTI-AUDIENCE INTERACTIVE MAP (Only rendered when city coordinates exist; zero Austin fallback) -->
+        {city.lat != null && city.lng != null && (
+          <section class="bg-white p-6 sm:p-7 rounded-3xl border border-slate-200/80 shadow-[0_4px_20px_-2px_rgba(0,0,0,0.06)] space-y-4">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-slate-100">
+              <div>
+                <div class="flex items-center gap-2">
+                  <span class="text-xl">🗺️</span>
+                  <h2 class="text-xl font-black text-[#152438]">Interactive City Explorer</h2>
+                </div>
+                <p id="map-layer-subtitle" class="text-xs text-slate-500 mt-0.5">Explore verified airports, parks, hospitals, campuses, and EV hubs across {city.name}</p>
               </div>
-              <p id="map-layer-subtitle" class="text-xs text-slate-500 mt-0.5">Explore places, infrastructure, and commercial zones across {city.name}</p>
+
+              <!-- Audience Layer Toggles -->
+              <div class="inline-flex p-1 bg-slate-100 rounded-2xl border border-slate-200/80 text-xs font-bold shadow-2xs">
+                <button
+                  type="button"
+                  id="map-layer-visiting"
+                  class="map-layer-btn px-3.5 py-1.5 rounded-xl transition cursor-pointer bg-[#1D68F2] text-white shadow-xs"
+                  data-layer="visiting"
+                >
+                  ✈️ Visiting
+                </button>
+                <button
+                  type="button"
+                  id="map-layer-living"
+                  class="map-layer-btn px-3.5 py-1.5 rounded-xl transition cursor-pointer text-slate-600 hover:text-slate-900"
+                  data-layer="living"
+                >
+                  🏡 Living
+                </button>
+                <button
+                  type="button"
+                  id="map-layer-business"
+                  class="map-layer-btn px-3.5 py-1.5 rounded-xl transition cursor-pointer text-slate-600 hover:text-slate-900"
+                  data-layer="business"
+                >
+                  💼 Business
+                </button>
+              </div>
             </div>
 
-            <!-- Audience Layer Toggles -->
-            <div class="inline-flex p-1 bg-slate-100 rounded-2xl border border-slate-200/80 text-xs font-bold shadow-2xs">
-              <button
-                type="button"
-                id="map-layer-visiting"
-                class="map-layer-btn px-3.5 py-1.5 rounded-xl transition cursor-pointer bg-[#1D68F2] text-white shadow-xs"
-                data-layer="visiting"
-              >
-                ✈️ Visiting
-              </button>
-              <button
-                type="button"
-                id="map-layer-living"
-                class="map-layer-btn px-3.5 py-1.5 rounded-xl transition cursor-pointer text-slate-600 hover:text-slate-900"
-                data-layer="living"
-              >
-                🏡 Living
-              </button>
-              <button
-                type="button"
-                id="map-layer-business"
-                class="map-layer-btn px-3.5 py-1.5 rounded-xl transition cursor-pointer text-slate-600 hover:text-slate-900"
-                data-layer="business"
-              >
-                💼 Business
-              </button>
+            <!-- Leaflet Map Container -->
+            <div class="relative rounded-2xl overflow-hidden border border-slate-300 shadow-inner">
+              <div
+                id="city-leaflet-map"
+                class="h-96 w-full z-0"
+                data-lat={city.lat}
+                data-lng={city.lng}
+                data-zoom={11}
+                data-cityname={city.name}
+                data-map-pins={JSON.stringify(cityMapPins)}
+              ></div>
+              <div class="absolute top-3 left-3 z-10 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-xl border border-slate-200 text-xs font-bold text-slate-800 shadow-md flex items-center gap-2">
+                <span id="map-ping-indicator" class="w-2.5 h-2.5 rounded-full bg-[#1D68F2]"></span>
+                <span id="map-pin-status">{visitingPins.length} verified places mapped</span>
+              </div>
+              <div class="absolute bottom-3 left-3 z-10 bg-slate-900/85 backdrop-blur-md px-3 py-1.5 rounded-xl text-[11px] font-semibold text-white shadow-lg flex items-center gap-2">
+                <span id="map-layer-legend-dot" class="w-2.5 h-2.5 rounded-full bg-[#1D68F2]"></span>
+                <span id="map-layer-legend-text">Airport, National Parks & municipal center</span>
+              </div>
             </div>
-          </div>
-
-          <!-- Leaflet Map Container -->
-          <div class="relative rounded-2xl overflow-hidden border border-slate-300 shadow-inner">
-            <div
-              id="city-leaflet-map"
-              class="h-96 w-full z-0"
-              data-lat={city.lat ?? 30.2672}
-              data-lng={city.lng ?? -97.7431}
-              data-zoom={isAustin ? 13 : isHSV ? 12 : 12}
-              data-ishsv={isHSV ? "true" : "false"}
-              data-isaustin={isAustin ? "true" : "false"}
-              data-cityname={city.name}
-              data-map-pins={JSON.stringify(cityMapPins)}
-            ></div>
-            <div class="absolute top-3 left-3 z-10 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-xl border border-slate-200 text-xs font-bold text-slate-800 shadow-md flex items-center gap-2">
-              <span id="map-ping-indicator" class="w-2.5 h-2.5 rounded-full bg-[#1D68F2]"></span>
-              <span id="map-pin-status">Municipal Map Pins</span>
-            </div>
-            <div class="absolute bottom-3 left-3 z-10 bg-slate-900/85 backdrop-blur-md px-3 py-1.5 rounded-xl text-[11px] font-semibold text-white shadow-lg flex items-center gap-2">
-              <span id="map-layer-legend-dot" class="w-2.5 h-2.5 rounded-full bg-[#1D68F2]"></span>
-              <span id="map-layer-legend-text">Airport pin when coordinates are on the record</span>
-            </div>
-          </div>
-        </section>
+          </section>
+        )}
 
       </div>
 
@@ -1021,7 +1293,6 @@ const cityMapPins = {
 
         <!-- SIDEBAR 1: VISITING (Default Active) -->
         <div id="sidebar-travel" class="sidebar-panel space-y-6">
-          <!-- 1-Page Visitor Pocket Guide -->
           <div class="bg-white rounded-3xl p-6 sm:p-7 border border-slate-200/80 shadow-[0_4px_25px_-2px_rgba(0,0,0,0.08)] space-y-5">
             <div class="bg-gradient-to-br from-blue-900 to-slate-900 rounded-2xl p-4 text-white shadow-md border border-blue-700/50">
               <div class="flex items-center justify-between text-[10px] font-bold uppercase tracking-wider text-blue-300 mb-1">
@@ -1035,34 +1306,34 @@ const cityMapPins = {
             <div>
               <h3 class="text-xl font-black text-[#152438]">Download {city.name} Guide</h3>
               <p class="text-xs text-slate-500 mt-1 leading-relaxed">
-                Print the facts on this page: airport distance, climate, emergency-department list, and water system, where those fields exist for {city.name}.
+                Print the verified facts on this page: airport distance, climate, emergency-department list, and water system for {city.name}.
               </p>
             </div>
 
             <div class="space-y-2.5 py-3 border-y border-slate-100 text-xs text-slate-700 font-medium">
               {sourcedAirport?.distanceMiles != null && (
-              <div class="flex items-start gap-2.5">
-                <span class="w-4 h-4 rounded-full bg-blue-100 text-[#1D68F2] flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">✓</span>
-                <span><strong>Airport distance:</strong> {sourcedAirport.distanceMiles} miles, straight line from city center</span>
-              </div>
+                <div class="flex items-start gap-2.5">
+                  <span class="w-4 h-4 rounded-full bg-blue-100 text-[#1D68F2] flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">✓</span>
+                  <span><strong>Airport distance:</strong> {sourcedAirport.distanceMiles} miles, straight line from city center</span>
+                </div>
               )}
               {city.climateNormals?.peakSummerHighF != null && (
-              <div class="flex items-start gap-2.5">
-                <span class="w-4 h-4 rounded-full bg-blue-100 text-[#1D68F2] flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">✓</span>
-                <span><strong>Climate:</strong> {city.climateNormals.peakSummerHighF}°F average July high</span>
-              </div>
+                <div class="flex items-start gap-2.5">
+                  <span class="w-4 h-4 rounded-full bg-blue-100 text-[#1D68F2] flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">✓</span>
+                  <span><strong>Climate:</strong> {city.climateNormals.peakSummerHighF}°F average July high</span>
+                </div>
               )}
               {erHospitals.length > 0 && (
-              <div class="flex items-start gap-2.5">
-                <span class="w-4 h-4 rounded-full bg-blue-100 text-[#1D68F2] flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">✓</span>
-                <span><strong>Emergency departments:</strong> CMS hospital list for {city.name}</span>
-              </div>
+                <div class="flex items-start gap-2.5">
+                  <span class="w-4 h-4 rounded-full bg-blue-100 text-[#1D68F2] flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">✓</span>
+                  <span><strong>Emergency departments:</strong> {erHospitals.length} CMS-listed facilities</span>
+                </div>
               )}
-              {(city as any).waterUtility && (
-              <div class="flex items-start gap-2.5">
-                <span class="w-4 h-4 rounded-full bg-blue-100 text-[#1D68F2] flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">✓</span>
-                <span><strong>Water system:</strong> {(city as any).waterUtility.providerName}</span>
-              </div>
+              {city.waterUtility && (
+                <div class="flex items-start gap-2.5">
+                  <span class="w-4 h-4 rounded-full bg-blue-100 text-[#1D68F2] flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">✓</span>
+                  <span><strong>Water system:</strong> {city.waterUtility.providerName}</span>
+                </div>
               )}
             </div>
 
@@ -1085,10 +1356,11 @@ const cityMapPins = {
               <span class="text-2xl p-2 rounded-xl bg-blue-50 text-[#1D68F2]">🔖</span>
               <div>
                 <div class="font-bold text-xs text-[#152438]">Your Trip Shortlist</div>
-                <div class="text-[11px] text-slate-500">Saved cities and places for your trip</div>
+                <div class="text-[11px] text-slate-500">Saved cities stored locally in your browser</div>
               </div>
             </div>
             <button
+              type="button"
               onclick="document.getElementById('nav-saved-btn')?.click();"
               class="px-3 py-1.5 rounded-xl bg-slate-100 hover:bg-blue-50 text-slate-700 hover:text-[#1D68F2] font-bold text-xs transition cursor-pointer"
             >
@@ -1096,24 +1368,23 @@ const cityMapPins = {
             </button>
           </div>
 
-          <!-- Follow City Events -->
+          <!-- Request Data Update / Correction -->
           <div class="bg-gradient-to-br from-[#0F172A] to-[#1E293B] rounded-3xl p-6 text-white shadow-lg space-y-3">
-            <div class="text-xs font-bold uppercase tracking-wider text-blue-300">Follow {city.name} Events</div>
+            <div class="text-xs font-bold uppercase tracking-wider text-blue-300">{city.name} Data Updates</div>
             <p class="text-xs text-slate-300 leading-relaxed">
-              Get notified when this page is updated.
+              Spotted an updated state tax bulletin or municipal utility report for {city.name}? Contact our research desk directly.
             </p>
-            <form onsubmit="event.preventDefault(); alert('Subscribed to event updates for ' + this.getAttribute('data-city'));" data-city={city.name} class="space-y-2">
-              <input type="email" placeholder="Enter your email" required class="w-full px-3 py-2 rounded-xl bg-white text-slate-800 text-xs outline-none" />
-              <button type="submit" class="w-full py-2.5 rounded-xl bg-[#1D68F2] hover:bg-blue-600 text-white font-bold text-xs transition cursor-pointer">
-                Subscribe to Event Alerts
-              </button>
-            </form>
+            <a
+              href={`mailto:audit@cityclick.com?subject=${encodeURIComponent(`CityClick Update: ${city.name}, ${city.stateCode.toUpperCase()}`)}`}
+              class="block w-full text-center py-2.5 rounded-xl bg-[#1D68F2] hover:bg-blue-600 text-white font-bold text-xs transition"
+            >
+              Email Research Desk →
+            </a>
           </div>
         </div>
 
         <!-- SIDEBAR 2: MOVING -->
         <div id="sidebar-moving" class="sidebar-panel hidden space-y-6">
-          <!-- Relocation Checklist & Tax Kit -->
           <div class="bg-white rounded-3xl p-6 sm:p-7 border border-slate-200/80 shadow-[0_4px_25px_-2px_rgba(0,0,0,0.08)] space-y-5">
             <div class="bg-gradient-to-br from-emerald-900 to-slate-900 rounded-2xl p-4 text-white shadow-md border border-emerald-700/50">
               <div class="flex items-center justify-between text-[10px] font-bold uppercase tracking-wider text-emerald-300 mb-1">
@@ -1127,28 +1398,28 @@ const cityMapPins = {
             <div>
               <h3 class="text-xl font-black text-[#152438]">Housing facts on this page</h3>
               <p class="text-xs text-slate-500 mt-1 leading-relaxed">
-                Print the housing and tax figures shown for {city.name}. Only fields on the city record are included.
+                Print the housing, healthcare, and tax figures shown for {city.name}. Only fields on the city record are included.
               </p>
             </div>
 
             <div class="space-y-2.5 py-3 border-y border-slate-100 text-xs text-slate-700 font-medium">
               {city.housingAndTaxes?.medianHomeValue != null && (
-              <div class="flex items-start gap-2.5">
-                <span class="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">✓</span>
-                <span><strong>Median home value:</strong> ${city.housingAndTaxes.medianHomeValue.toLocaleString()}</span>
-              </div>
+                <div class="flex items-start gap-2.5">
+                  <span class="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">✓</span>
+                  <span><strong>Median home value:</strong> ${city.housingAndTaxes.medianHomeValue.toLocaleString()}</span>
+                </div>
               )}
               {city.housingAndTaxes?.medianGrossRent != null && (
-              <div class="flex items-start gap-2.5">
-                <span class="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">✓</span>
-                <span><strong>Median gross rent:</strong> ${city.housingAndTaxes.medianGrossRent.toLocaleString()}/mo</span>
-              </div>
+                <div class="flex items-start gap-2.5">
+                  <span class="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">✓</span>
+                  <span><strong>Median gross rent:</strong> ${city.housingAndTaxes.medianGrossRent.toLocaleString()}/mo</span>
+                </div>
               )}
-              {(city as any).waterUtility && (
-              <div class="flex items-start gap-2.5">
-                <span class="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">✓</span>
-                <span><strong>Water system:</strong> {(city as any).waterUtility.providerName}</span>
-              </div>
+              {city.waterUtility && (
+                <div class="flex items-start gap-2.5">
+                  <span class="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">✓</span>
+                  <span><strong>Water system:</strong> {city.waterUtility.providerName}</span>
+                </div>
               )}
             </div>
 
@@ -1158,10 +1429,10 @@ const cityMapPins = {
               class="w-full text-center py-4 px-4 rounded-2xl bg-emerald-700 hover:bg-emerald-800 text-white font-extrabold text-sm shadow-lg hover:shadow-xl transition flex items-center justify-center gap-2 cursor-pointer"
             >
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
-              Print / Save Relocation Checklist
+              Print / Save Relocation Summary
             </button>
             <div class="text-center text-[11px] text-slate-400 font-medium">
-              Free · Municipal Guidelines
+              Free Public Resource · Census & EPA Sourced
             </div>
           </div>
 
@@ -1175,7 +1446,7 @@ const cityMapPins = {
               </div>
             </div>
             <a
-              href={`/compare/${city.slug.replace('/', '-')}-vs-${isAustin ? 'fl-tampa' : 'tx-austin'}`}
+              href={compareHref}
               class="px-3 py-1.5 rounded-xl bg-emerald-50 text-emerald-700 hover:bg-emerald-100 font-bold text-xs transition"
             >
               Compare →
@@ -1185,84 +1456,73 @@ const cityMapPins = {
 
         <!-- SIDEBAR 3: DOING BUSINESS -->
         <div id="sidebar-business" class="sidebar-panel hidden space-y-6">
-          <!-- Dossier Card -->
           <div id="report" class="bg-white rounded-3xl p-6 sm:p-7 border border-slate-200/80 shadow-[0_4px_25px_-2px_rgba(0,0,0,0.08)] space-y-5">
             <div class="bg-gradient-to-br from-[#152438] to-slate-900 rounded-2xl p-4 text-white shadow-md border border-slate-700">
               <div class="flex items-center justify-between text-[10px] font-bold uppercase tracking-wider text-emerald-400 mb-1">
                 <span>CITYCLICK CITY DOSSIER</span>
-                <span class="bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded border border-emerald-400/30">FREE TO PRINT</span>
+                <span class="bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded border border-emerald-400/30">100% FREE</span>
               </div>
-              <div class="font-black text-sm text-white">{city.name} Institutional Dossier</div>
-              <div class="text-[11px] text-slate-300 mt-1">Print the figures on this page</div>
+              <div class="font-black text-sm text-white">{city.name} Commercial Dossier</div>
+              <div class="text-[11px] text-slate-300 mt-1">Export verified Census & tax figures</div>
             </div>
 
             <div>
               <h3 class="text-xl font-black text-[#152438]">Get Complete City Dossier (Free)</h3>
               <p class="text-xs text-slate-500 mt-1 leading-relaxed">
-                Print the business figures shown on this page for {city.name}.
+                Download or print the verified business, housing, and sales-tax figures for {city.name} immediately—no account or email required.
               </p>
             </div>
 
             <div class="space-y-2.5 py-3 border-y border-slate-100 text-xs text-slate-700 font-medium">
-              <div class="flex items-start gap-2.5">
-                <span class="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">✓</span>
-                <span><strong>Trade counts:</strong> Census establishment counts on this page</span>
-              </div>
-              {city.permitsAndTax?.combinedSalesTaxRate != null && (
-              <div class="flex items-start gap-2.5">
-                <span class="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">✓</span>
-                <span><strong>Sales tax:</strong> {Number((city.permitsAndTax.combinedSalesTaxRate * 100).toFixed(3)).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:3})}% combined</span>
-              </div>
+              {city.industries.length > 0 && (
+                <div class="flex items-start gap-2.5">
+                  <span class="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">✓</span>
+                  <span><strong>Trade counts:</strong> {city.industries.length} Census ZBP categories</span>
+                </div>
+              )}
+              {hasVerifiedTax && (
+                <div class="flex items-start gap-2.5">
+                  <span class="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">✓</span>
+                  <span><strong>Sales tax:</strong> {taxPct(city.permitsAndTax.combinedSalesTaxRate)} combined</span>
+                </div>
+              )}
+              {evInfra && (
+                <div class="flex items-start gap-2.5">
+                  <span class="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">✓</span>
+                  <span><strong>EV stations:</strong> {evInfra.totalStations.toLocaleString('en-US')} public locations</span>
+                </div>
               )}
             </div>
 
-            <!-- Lead Magnet Gate for Full Institutional Dossier -->
-            <div id="dossier-lead-box" class="pt-1">
-              <form id="dossier-lead-form" class="space-y-2.5">
-                <div>
-                  <label for="dossier-lead-email" class="block text-[11px] font-bold text-slate-700 mb-1">
-                    Enter work email to export complete institutional dossier:
-                  </label>
-                  <input
-                    type="email"
-                    id="dossier-lead-email"
-                    placeholder="name@company.com"
-                    required
-                    class="w-full px-4 py-3 rounded-2xl bg-[#F8FAFC] text-slate-800 text-xs font-semibold border border-slate-300 focus:border-[#1D68F2] focus:bg-white outline-none transition"
-                  />
-                </div>
-                <button
-                  type="submit"
+            <div class="space-y-2.5 pt-1">
+              {isAustin ? (
+                <a
+                  href="/reports/tx-austin-feasibility-dossier.pdf"
+                  download="Austin-Texas-Feasibility-Dossier.pdf"
+                  target="_blank"
                   class="w-full text-center py-4 px-4 rounded-2xl bg-[#1D68F2] hover:bg-[#1555C7] text-white font-extrabold text-sm shadow-lg hover:shadow-xl transition flex items-center justify-center gap-2 cursor-pointer"
                 >
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
-                  Export {city.name} Dossier (PDF)
+                  Download Austin Dossier (PDF)
+                </a>
+              ) : (
+                <button
+                  type="button"
+                  onclick="window.print();"
+                  class="w-full text-center py-4 px-4 rounded-2xl bg-[#1D68F2] hover:bg-[#1555C7] text-white font-extrabold text-sm shadow-lg hover:shadow-xl transition flex items-center justify-center gap-2 cursor-pointer"
+                >
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+                  Print / Save {city.name} Dossier (PDF)
                 </button>
-              </form>
-              <div id="dossier-download-active" class="hidden space-y-2 pt-1">
-                {isAustin ? (
-                  <a
-                    href="/reports/tx-austin-feasibility-dossier.pdf"
-                    download="Austin-Texas-Feasibility-Dossier.pdf"
-                    target="_blank"
-                    class="w-full text-center py-4 px-4 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-sm shadow-lg hover:shadow-xl transition flex items-center justify-center gap-2 cursor-pointer"
-                  >
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
-                    Download Austin Dossier PDF Now
-                  </a>
-                ) : (
-                  <button
-                    type="button"
-                    onclick="window.print();"
-                    class="w-full text-center py-4 px-4 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-sm shadow-lg hover:shadow-xl transition flex items-center justify-center gap-2 cursor-pointer"
-                  >
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
-                    Print / Save {city.name} Dossier PDF Now
-                  </button>
-                )}
-              </div>
-              <div class="mt-2.5 text-center text-[11px] text-slate-500 font-medium">
-                Print the figures on this page
+              )}
+              <a
+                href={`/tools/lease-calculator/?tax=${hasVerifiedTax ? Number((city.permitsAndTax.combinedSalesTaxRate * 100).toFixed(3)) : '8.25'}&city=${encodeURIComponent(city.name)}`}
+                class="block w-full text-center py-3 px-4 rounded-2xl bg-slate-100 hover:bg-blue-50 text-slate-800 hover:text-[#1D68F2] font-bold text-xs transition"
+              >
+                Open Lease & Breakeven Calculator →
+              </a>
+              <div class="text-center text-[11px] text-slate-400 font-medium">
+                Direct Access · Zero Paywall · Primary Federal & State Records
               </div>
             </div>
           </div>
@@ -1272,40 +1532,12 @@ const cityMapPins = {
     </div>
   </div>
 
-  <!-- Interactive Scripts (Pillars, Tickers, Leaflet Map, and Sliders) -->
+  <!-- Interactive Scripts (Pillars, Multi-Layer Map, Trade Switcher, Local Shortlist) -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" is:inline></script>
 
   <script is:inline>
     function initCityClick() {
-      // 1. Live Ticker Switcher
-      const tickerBtnEvents = document.getElementById('ticker-btn-events');
-      const tickerBtnCommercial = document.getElementById('ticker-btn-commercial');
-      const tickerPanelEvents = document.getElementById('ticker-panel-events');
-      const tickerPanelCommercial = document.getElementById('ticker-panel-commercial');
-
-      if (tickerBtnEvents && tickerBtnCommercial) {
-        tickerBtnEvents.addEventListener('click', () => {
-          tickerBtnEvents.classList.add('bg-[#1D68F2]', 'text-white');
-          tickerBtnEvents.classList.remove('text-slate-400');
-          tickerBtnCommercial.classList.remove('bg-[#1D68F2]', 'text-white');
-          tickerBtnCommercial.classList.add('text-slate-400');
-
-          tickerPanelEvents?.classList.remove('hidden');
-          tickerPanelCommercial?.classList.add('hidden');
-        });
-
-        tickerBtnCommercial.addEventListener('click', () => {
-          tickerBtnCommercial.classList.add('bg-[#1D68F2]', 'text-white');
-          tickerBtnCommercial.classList.remove('text-slate-400');
-          tickerBtnEvents.classList.remove('bg-[#1D68F2]', 'text-white');
-          tickerBtnEvents.classList.add('text-slate-400');
-
-          tickerPanelCommercial?.classList.remove('hidden');
-          tickerPanelEvents?.classList.add('hidden');
-        });
-      }
-
-      // 2. The 3 Primary Pillar Switchers
+      // 1. The 3 Primary Pillar Switchers
       const pillarBtns = document.querySelectorAll('.pillar-btn');
       const pillarPanels = document.querySelectorAll('.pillar-panel');
 
@@ -1313,7 +1545,6 @@ const cityMapPins = {
         btn.addEventListener('click', () => {
           const target = btn.getAttribute('data-pillar');
 
-          // Reset all card styles
           pillarBtns.forEach((b) => {
             b.classList.remove('border-[#1D68F2]', 'bg-blue-50/70', 'shadow-sm');
             b.classList.add('border-slate-200', 'bg-white');
@@ -1324,7 +1555,6 @@ const cityMapPins = {
             }
           });
 
-          // Activate clicked card
           btn.classList.add('border-[#1D68F2]', 'bg-blue-50/70', 'shadow-sm');
           btn.classList.remove('border-slate-200', 'bg-white');
           const activeArrow = btn.querySelector('.pillar-arrow');
@@ -1333,13 +1563,11 @@ const cityMapPins = {
             activeArrow.classList.remove('text-slate-300', 'hidden');
           }
 
-          // Toggle Panels
           pillarPanels.forEach((p) => p.classList.add('hidden'));
           const active = document.getElementById(target);
           if (active) active.classList.remove('hidden');
 
-          // Toggle Matching 4-Fact Stats Strip
-          document.querySelectorAll('.stats-strip').forEach(s => s.classList.add('hidden'));
+          document.querySelectorAll('.stats-strip').forEach((s) => s.classList.add('hidden'));
           if (target === 'pillar-travel') {
             document.getElementById('stats-strip-travel')?.classList.remove('hidden');
           } else if (target === 'pillar-moving') {
@@ -1348,8 +1576,7 @@ const cityMapPins = {
             document.getElementById('stats-strip-business')?.classList.remove('hidden');
           }
 
-          // Toggle Matching Adaptive Right Sidebar
-          document.querySelectorAll('.sidebar-panel').forEach(s => s.classList.add('hidden'));
+          document.querySelectorAll('.sidebar-panel').forEach((s) => s.classList.add('hidden'));
           if (target === 'pillar-travel') {
             document.getElementById('sidebar-travel')?.classList.remove('hidden');
           } else if (target === 'pillar-moving') {
@@ -1358,14 +1585,6 @@ const cityMapPins = {
             document.getElementById('sidebar-business')?.classList.remove('hidden');
           }
 
-          // Sync Ticker with selected pillar
-          if (target === 'pillar-travel' && tickerBtnEvents) {
-            tickerBtnEvents.click();
-          } else if (target === 'pillar-business' && tickerBtnCommercial) {
-            tickerBtnCommercial.click();
-          }
-
-          // Sync Map Layer with selected pillar
           if (target === 'pillar-travel' && window.switchCityMapLayer) {
             window.switchCityMapLayer('visiting');
           } else if (target === 'pillar-moving' && window.switchCityMapLayer) {
@@ -1380,13 +1599,12 @@ const cityMapPins = {
         });
       });
 
-      // 3. Multi-Audience Leaflet Map Initialization
+      // 2. Multi-Audience Leaflet Map Initialization
       const mapEl = document.getElementById('city-leaflet-map');
       if (window.L && mapEl) {
-        const centerLat = parseFloat(mapEl.getAttribute('data-lat') || '30.2672');
-        const centerLng = parseFloat(mapEl.getAttribute('data-lng') || '-97.7431');
-        const zoom = parseInt(mapEl.getAttribute('data-zoom') || '13', 10);
-        const cityName = mapEl.getAttribute('data-cityname') || 'City';
+        const centerLat = parseFloat(mapEl.getAttribute('data-lat') || '0');
+        const centerLng = parseFloat(mapEl.getAttribute('data-lng') || '0');
+        const zoom = parseInt(mapEl.getAttribute('data-zoom') || '11', 10);
 
         const map = L.map('city-leaflet-map', {
           center: [centerLat, centerLng],
@@ -1404,7 +1622,6 @@ const cityMapPins = {
         L.control.zoom({ position: 'topright' }).addTo(map);
 
         const markerLayer = L.layerGroup().addTo(map);
-
         const cityData = JSON.parse(mapEl.getAttribute('data-map-pins') || '{"visiting":[],"living":[],"business":[]}');
 
         function switchMapLayer(layer) {
@@ -1416,7 +1633,7 @@ const cityMapPins = {
           const legendText = document.getElementById('map-layer-legend-text');
           const pingIndicator = document.getElementById('map-ping-indicator');
 
-          [btnVisiting, btnLiving, btnBusiness].forEach(btn => {
+          [btnVisiting, btnLiving, btnBusiness].forEach((btn) => {
             if (btn) {
               btn.className = 'map-layer-btn px-3.5 py-1.5 rounded-xl transition cursor-pointer text-slate-600 hover:text-slate-900';
             }
@@ -1424,17 +1641,17 @@ const cityMapPins = {
 
           markerLayer.clearLayers();
 
-          let places = cityData[layer] || cityData.visiting;
+          const places = cityData[layer] || [];
           let color = '#1D68F2';
-          let label = 'Airport';
+          let label = 'Airport, National Parks & municipal center';
 
           if (layer === 'living') {
             color = '#059669';
-            label = 'Hospitals with emergency departments';
+            label = 'CMS emergency hospitals & colleges';
             if (btnLiving) btnLiving.className = 'map-layer-btn px-3.5 py-1.5 rounded-xl transition cursor-pointer bg-emerald-600 text-white shadow-xs';
           } else if (layer === 'business') {
             color = '#7C3AED';
-            label = 'Commercial corridors';
+            label = 'Public EV charging hubs & campus anchors';
             if (btnBusiness) btnBusiness.className = 'map-layer-btn px-3.5 py-1.5 rounded-xl transition cursor-pointer bg-purple-600 text-white shadow-xs';
           } else {
             if (btnVisiting) btnVisiting.className = 'map-layer-btn px-3.5 py-1.5 rounded-xl transition cursor-pointer bg-[#1D68F2] text-white shadow-xs';
@@ -1443,9 +1660,19 @@ const cityMapPins = {
           if (legendDot) legendDot.style.backgroundColor = color;
           if (pingIndicator) pingIndicator.style.backgroundColor = color;
           if (legendText) legendText.innerText = label;
-          if (statusEl) statusEl.innerText = places.length + ' places mapped · Click any pin';
+          if (statusEl) {
+            statusEl.innerText =
+              places.length === 1
+                ? '1 verified place mapped · Click pin'
+                : places.length + ' verified places mapped · Click any pin';
+          }
 
-          const pinHtml = '<div style="background-color: ' + color + '; width: 14px; height: 14px; border-radius: 50%; border: 3px solid #FFFFFF; box-shadow: 0 0 10px ' + color + 'B3;"></div>';
+          const pinHtml =
+            '<div style="background-color: ' +
+            color +
+            '; width: 14px; height: 14px; border-radius: 50%; border: 3px solid #FFFFFF; box-shadow: 0 0 10px ' +
+            color +
+            'B3;"></div>';
           const customIcon = L.divIcon({
             className: 'custom-pin-icon',
             html: pinHtml,
@@ -1453,17 +1680,37 @@ const cityMapPins = {
             iconAnchor: [7, 7],
           });
 
-          places.forEach(place => {
-            L.marker([place.lat, place.lng], { icon: customIcon })
-              .bindPopup(
-                '<div style="font-family: inherit; padding: 4px; min-width: 180px;">' +
-                  '<div style="font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: ' + color + ';">' + place.category + '</div>' +
-                  '<div style="font-weight: 800; font-size: 13px; color: #152438; margin-top: 2px;">' + place.name + '</div>' +
-                  (place.address ? '<div style="font-size: 11px; color: #64748B; margin-top: 2px;">' + place.address + '</div>' : '') +
-                '</div>'
-              )
-              .addTo(markerLayer);
+          const latLngs = [];
+          places.forEach((place) => {
+            if (typeof place.lat === 'number' && typeof place.lng === 'number') {
+              latLngs.push([place.lat, place.lng]);
+              L.marker([place.lat, place.lng], { icon: customIcon })
+                .bindPopup(
+                  '<div style="font-family: inherit; padding: 4px; min-width: 180px;">' +
+                    '<div style="font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: ' +
+                    color +
+                    ';">' +
+                    place.category +
+                    '</div>' +
+                    '<div style="font-weight: 800; font-size: 13px; color: #152438; margin-top: 2px;">' +
+                    place.name +
+                    '</div>' +
+                    (place.address
+                      ? '<div style="font-size: 11px; color: #64748B; margin-top: 2px;">' + place.address + '</div>'
+                      : '') +
+                  '</div>'
+                )
+                .addTo(markerLayer);
+            }
           });
+
+          if (latLngs.length > 1) {
+            map.fitBounds(latLngs, { padding: [36, 36], maxZoom: 12 });
+          } else if (latLngs.length === 1) {
+            map.setView(latLngs[0], 11);
+          } else {
+            map.setView([centerLat, centerLng], zoom);
+          }
         }
 
         switchMapLayer('visiting');
@@ -1475,135 +1722,30 @@ const cityMapPins = {
         window.switchCityMapLayer = switchMapLayer;
       }
 
-      // 4. Reactive Breakeven Slider Calculation
-      const sSqft = document.getElementById('slider-sqft');
-      const sRent = document.getElementById('slider-rent');
-      const sTicket = document.getElementById('slider-ticket');
-      const sCogs = document.getElementById('slider-cogs');
-      const sOverhead = document.getElementById('slider-overhead');
-
-      function salesTaxRateOk() { const t = parseFloat(sRent.dataset.tax); return t >= 0 && t < 0.2; }
-      function recalculate() {
-        if (!sSqft || !sRent || !sTicket || !sCogs || !sOverhead) return;
-        const sqft = parseFloat(sSqft.value);
-        const rent = parseFloat(sRent.value);
-        if (!(rent > 0) || !(salesTaxRateOk())) {
-          document.getElementById('label-rent').innerText = 'enter your quote';
-          ['output-daily-customers','output-monthly-revenue','output-monthly-fixed'].forEach((id) => { const e = document.getElementById(id); if (e) e.innerText = '—'; });
-          return;
-        }
-        const ticket = parseFloat(sTicket.value);
-        const cogsPct = parseFloat(sCogs.value) / 100;
-        const overhead = parseFloat(sOverhead.value);
-
-        document.getElementById('label-sqft').innerText = sqft.toLocaleString() + ' sqft';
-        document.getElementById('label-rent').innerText = '$' + rent.toFixed(2) + ' / sqft';
-        document.getElementById('label-ticket').innerText = '$' + ticket.toFixed(2);
-        document.getElementById('label-cogs').innerText = (cogsPct * 100).toFixed(0) + '%';
-        document.getElementById('label-overhead').innerText = '$' + Math.round(overhead).toLocaleString();
-
-        const nnn = 6.50; // illustrative CAM/NNN assumption, disclosed in UI
-        const wage = 16.50;
-        const hours = 120;
-        const salesTaxRate = parseFloat(sRent.dataset.tax);
-
-        const monthlyOcc = (sqft * (rent + nnn)) / 12;
-        const monthlyLabor = wage * hours * 4.3482 * 1.18;
-        const monthlyFixed = monthlyOcc + monthlyLabor + overhead;
-
-        const netTicket = ticket / (1 + salesTaxRate);
-        const contributionMargin = netTicket * (1 - cogsPct);
-
-        if (contributionMargin > 0 && ticket > 0 && cogsPct < 1) {
-          const monthlyCust = Math.ceil(monthlyFixed / contributionMargin);
-          const dailyCust = Math.ceil(monthlyCust / 30.4375);
-          const monthlyRev = monthlyFixed / (1 - cogsPct);
-
-          document.getElementById('output-daily-customers').innerText = dailyCust.toString();
-          document.getElementById('output-monthly-revenue').innerText = '$' + Math.round(monthlyRev).toLocaleString();
-          document.getElementById('output-monthly-fixed').innerText = '$' + Math.round(monthlyFixed).toLocaleString();
-        } else {
-          document.getElementById('output-daily-customers').innerText = '—';
-          document.getElementById('output-monthly-revenue').innerText = 'Invalid Input';
-          document.getElementById('output-monthly-fixed').innerText = '$' + Math.round(monthlyFixed).toLocaleString();
-        }
-      }
-
-      [sSqft, sRent, sTicket, sCogs, sOverhead].forEach((slider) => {
-        if (slider) slider.addEventListener('input', recalculate);
-      });
-
-      // Run initial recalculation to ensure parity
-      recalculate();
-
-      // 5. Video Player Activation
+      // 3. Video Player Activation
       const videoBox = document.getElementById('video-tour-container');
       if (videoBox) {
         videoBox.addEventListener('click', () => {
           const vId = videoBox.getAttribute('data-video-id');
           if (vId) {
-            videoBox.innerHTML = '<iframe class="w-full h-full" src="https://www.youtube-nocookie.com/embed/' + vId + '?autoplay=1&rel=0" title="Video Tour" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+            videoBox.innerHTML =
+              '<iframe class="w-full h-full" src="https://www.youtube-nocookie.com/embed/' +
+              vId +
+              '?autoplay=1&rel=0" title="Video Tour" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
           }
         });
       }
 
-      // 6. Dynamic 25-Trade & Custom Enterprise Underwriting Engine
+      // 4. Dynamic NAICS Trade Switcher (Updates BOTH Main Card AND Top 4-Fact Strip)
       const tradeSelect = document.getElementById('trade-select');
-      const customTradeBox = document.getElementById('custom-trade-box');
-      const customBusinessNameInput = document.getElementById('custom-business-name');
-      const applyCustomNameBtn = document.getElementById('apply-custom-name-btn');
-      const toggleCustomBtn = document.getElementById('toggle-custom-btn');
       const industriesData = JSON.parse(document.getElementById('pillar-business')?.getAttribute('data-industries') || '[]');
 
-      function applyTrade(naicsCode, customTitle) {
-        if (naicsCode === 'custom') {
-          if (customTradeBox) customTradeBox.classList.remove('hidden');
-          const entName = customTitle || (customBusinessNameInput ? customBusinessNameInput.value.trim() : '') || 'Custom Commercial Enterprise';
-
-          const labelEl = document.getElementById('active-trade-label');
-          if (labelEl) labelEl.innerText = 'Underwriting Pro-Forma — ' + entName;
-
-          const descEl = document.getElementById('active-trade-desc');
-          if (descEl) descEl.innerText = 'User-modeled commercial underwriting pro-forma parameters for ' + entName;
-
-          const countEl = document.getElementById('active-trade-count');
-          if (countEl) countEl.innerText = 'Custom';
-
-          const densityEl = document.getElementById('active-trade-density');
-          if (densityEl) densityEl.innerText = 'User Modeled';
-
-          const benchEl = document.getElementById('active-trade-benchmark');
-          if (benchEl) benchEl.innerText = 'Benchmark: Custom Specification';
-
-          const satEl = document.getElementById('active-trade-saturation');
-          if (satEl) satEl.innerHTML = 'Custom <span class="text-xs font-normal text-slate-400">Spec</span>';
-
-          const badge = document.getElementById('active-trade-badge');
-          if (badge) {
-            badge.className = 'inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-blue-50 text-[#1D68F2] border border-blue-200';
-            badge.innerHTML = '<span class="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span> Custom Enterprise';
-          }
-
-          const heroTradeLabel = document.getElementById('hero-trade-label');
-          if (heroTradeLabel) heroTradeLabel.innerText = entName;
-
-          if (tradeSelect && tradeSelect.value !== 'custom') {
-            tradeSelect.value = 'custom';
-          }
-
-          return;
-        }
-
-        // Standard 25-trade preset
-        if (customTradeBox) customTradeBox.classList.add('hidden');
-        const trade = industriesData.find(i => i.naicsCode === naicsCode);
+      function applyTrade(naicsCode) {
+        const trade = industriesData.find((i) => i.naicsCode === naicsCode);
         if (!trade) return;
 
         const labelEl = document.getElementById('active-trade-label');
-        if (labelEl) labelEl.innerText = 'Commercial Establishment Density — ' + trade.label;
-
-        const descEl = document.getElementById('active-trade-desc');
-        if (descEl) descEl.innerText = 'Census County Business Patterns (ZBP 2022) small-business metrics';
+        if (labelEl) labelEl.innerText = 'Commercial Establishment Density: ' + trade.label;
 
         const countEl = document.getElementById('active-trade-count');
         if (countEl) countEl.innerText = trade.establishments.toString();
@@ -1619,36 +1761,29 @@ const cityMapPins = {
 
         const badge = document.getElementById('active-trade-badge');
         if (badge) {
-          badge.className = 'inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider ' + (
-            trade.status === 'underserved' ? 'bg-emerald-50 text-emerald-700 border border-emerald-200' :
-            trade.status === 'balanced' ? 'bg-blue-50 text-blue-700 border border-blue-200' : 'bg-rose-50 text-rose-700 border border-rose-200'
-          );
+          badge.className =
+            'inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider ' +
+            (trade.status === 'underserved'
+              ? 'bg-emerald-50 text-emerald-700 border border-emerald-200'
+              : trade.status === 'balanced'
+              ? 'bg-blue-50 text-blue-700 border border-blue-200'
+              : 'bg-rose-50 text-rose-700 border border-rose-200');
           badge.innerHTML = '<span class="w-2 h-2 rounded-full bg-current animate-pulse"></span>' + trade.status;
         }
 
-        const heroTradeLabel = document.getElementById('hero-trade-label');
-        if (heroTradeLabel) heroTradeLabel.innerText = trade.label;
+        // Sync Top Doing Business 4-Fact Strip
+        const stripCount = document.getElementById('strip-trade-count');
+        if (stripCount) stripCount.innerText = trade.establishments.toString();
+        const stripLabel = document.getElementById('strip-trade-label');
+        if (stripLabel) stripLabel.innerText = trade.label;
+        const stripSat = document.getElementById('strip-trade-saturation');
+        if (stripSat) stripSat.innerText = trade.saturationIndex + ' / 100';
+        const stripStatus = document.getElementById('strip-trade-status');
+        if (stripStatus) stripStatus.innerText = trade.status;
 
         if (tradeSelect && tradeSelect.value !== naicsCode) {
           tradeSelect.value = naicsCode;
         }
-      }
-      if (toggleCustomBtn) {
-        toggleCustomBtn.addEventListener('click', () => {
-          applyTrade('custom');
-          customBusinessNameInput?.focus();
-        });
-      }
-
-      if (applyCustomNameBtn && customBusinessNameInput) {
-        applyCustomNameBtn.addEventListener('click', () => {
-          applyTrade('custom', customBusinessNameInput.value.trim());
-        });
-        customBusinessNameInput.addEventListener('keydown', (e) => {
-          if (e.key === 'Enter') {
-            applyTrade('custom', customBusinessNameInput.value.trim());
-          }
-        });
       }
 
       if (tradeSelect) {
@@ -1657,7 +1792,7 @@ const cityMapPins = {
         });
       }
 
-      document.querySelectorAll('.trade-row').forEach(row => {
+      document.querySelectorAll('.trade-row').forEach((row) => {
         row.addEventListener('click', () => {
           const naics = row.getAttribute('data-naics');
           if (naics) {
@@ -1667,7 +1802,7 @@ const cityMapPins = {
         });
       });
 
-      // 7. Save City Local Persistence
+      // 5. Save City Local Persistence
       const saveBtn = document.getElementById('save-city-btn');
       if (saveBtn) {
         const slug = saveBtn.getAttribute('data-slug');
@@ -1676,8 +1811,11 @@ const cityMapPins = {
         const labelSpan = document.getElementById('save-city-label');
 
         function checkSavedState() {
-          const saved = typeof getSavedCities === 'function' ? getSavedCities() : JSON.parse(localStorage.getItem('cityclick_saved_cities') || '[]');
-          const isSaved = saved.some(c => c.slug === slug);
+          const saved =
+            typeof getSavedCities === 'function'
+              ? getSavedCities()
+              : JSON.parse(localStorage.getItem('cityclick_saved_cities') || '[]');
+          const isSaved = saved.some((c) => c.slug === slug);
           if (isSaved) {
             saveBtn.classList.add('border-emerald-500', 'text-emerald-400');
             if (labelSpan) labelSpan.innerHTML = '<span class="text-emerald-400 font-bold">✓ Saved</span>';
@@ -1690,15 +1828,16 @@ const cityMapPins = {
         checkSavedState();
 
         saveBtn.addEventListener('click', () => {
-          let saved = typeof getSavedCities === 'function' ? getSavedCities() : JSON.parse(localStorage.getItem('cityclick_saved_cities') || '[]');
-          const exists = saved.some(c => c.slug === slug);
+          let saved =
+            typeof getSavedCities === 'function'
+              ? getSavedCities()
+              : JSON.parse(localStorage.getItem('cityclick_saved_cities') || '[]');
+          const exists = saved.some((c) => c.slug === slug);
 
           if (!exists) {
             saved.push({ slug, name, stateCode });
-            if (labelSpan) labelSpan.innerHTML = '<span class="text-emerald-400 font-bold">✓ Saved</span>';
           } else {
-            saved = saved.filter(c => c.slug !== slug);
-            if (labelSpan) labelSpan.innerText = 'Save city';
+            saved = saved.filter((c) => c.slug !== slug);
           }
 
           if (typeof setSavedCities === 'function') {
@@ -1712,13 +1851,17 @@ const cityMapPins = {
         window.addEventListener('cityclick_saved_changed', checkSavedState);
       }
 
-      // 8. URL Parameter & Hash Tab Deep-Link
+      // 6. URL Parameter & Hash Tab Deep-Link (Including #report -> Doing Business sidebar!)
       const urlParams = new URLSearchParams(window.location.search);
-      const tabParam = (urlParams.get('tab') || window.location.hash.replace('#', '')).toLowerCase();
+      const rawHash = window.location.hash.replace('#', '').toLowerCase();
+      const tabParam = (urlParams.get('tab') || rawHash).toLowerCase();
       if (tabParam === 'moving' || tabParam === 'live') {
         document.querySelector('button[data-pillar="pillar-moving"]')?.click();
-      } else if (tabParam === 'business' || tabParam === 'biz') {
+      } else if (tabParam === 'business' || tabParam === 'biz' || tabParam === 'report') {
         document.querySelector('button[data-pillar="pillar-business"]')?.click();
+        if (rawHash === 'report') {
+          setTimeout(() => document.getElementById('report')?.scrollIntoView({ behavior: 'smooth', block: 'center' }), 100);
+        }
       } else if (tabParam === 'travel' || tabParam === 'visit' || tabParam === 'visiting') {
         document.querySelector('button[data-pillar="pillar-travel"]')?.click();
       }

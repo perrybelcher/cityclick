@@ -3,16 +3,19 @@ import Layout from '../../layouts/Layout.astro';
 ---
 
 <Layout
-  title="Commercial Lease & Breakeven Calculator — CityClick"
-  description="Calculate the exact daily customer volume and monthly revenue required to break even on a retail or commercial lease, factoring in NNN CAM, wages, and sales taxes."
+  title="Commercial Lease and Breakeven Calculator — CityClick"
+  description="Calculate the daily customer volume and monthly revenue required to break even on a user-quoted commercial or retail lease, factoring in NNN CAM, payroll burden, COGS, and local sales tax."
 >
   <section class="bg-gradient-to-b from-[#EDF4FC] to-white py-12 border-b border-slate-200">
     <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-[#1D68F2] text-xs font-bold mb-3">
+        Interactive Retail Worksheet
+      </div>
       <h1 class="text-3xl sm:text-4xl font-extrabold text-[#152438] tracking-tight">
-        Commercial Lease & Breakeven Calculator
+        Commercial Lease &amp; Breakeven Calculator
       </h1>
-      <p class="text-sm text-slate-600 mt-2">
-        Underwrite retail locations before signing an LOI. Solves for monthly occupancy costs, labor burden, and daily customer transaction velocity.
+      <p class="text-sm text-slate-600 mt-2 leading-relaxed">
+        Model retail unit economics using your own quoted lease terms before signing a letter of intent. Solves for monthly occupancy cost, loaded payroll, net revenue, and daily customer volume.
       </p>
     </div>
   </section>
@@ -21,56 +24,62 @@ import Layout from '../../layouts/Layout.astro';
     <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm grid grid-cols-1 md:grid-cols-12 gap-8">
       <!-- Calculator Inputs -->
       <div class="md:col-span-7 space-y-4">
-        <h2 class="text-lg font-bold text-[#152438]">Lease & Cost Inputs</h2>
+        <div class="space-y-1">
+          <h2 class="text-lg font-bold text-[#152438]">Lease &amp; Cost Inputs</h2>
+          <p class="text-xs text-amber-800 bg-amber-50 border border-amber-200 rounded-xl px-3 py-2 font-medium">
+            Illustrative example — enter your own quoted lease rate, NNN/CAM pass-throughs, and operating assumptions.
+          </p>
+          <p id="c-city-context" class="hidden text-xs text-blue-800 bg-blue-50 border border-blue-200 rounded-xl px-3 py-2 font-semibold"></p>
+        </div>
 
         <div class="grid grid-cols-2 gap-4">
           <div>
-            <label class="block text-xs font-semibold text-slate-700 mb-1">Usable Square Feet</label>
-            <input id="c-sqft" type="number" value="1500" class="w-full px-3 py-2 border rounded-xl text-sm font-semibold" />
+            <label for="c-sqft" class="block text-xs font-semibold text-slate-700 mb-1">Usable Square Feet</label>
+            <input id="c-sqft" type="number" min="1" step="50" value="1500" class="w-full px-3 py-2 border border-slate-300 rounded-xl text-sm font-semibold" />
           </div>
           <div>
-            <label class="block text-xs font-semibold text-slate-700 mb-1">Base Asking Rent ($/sqft/yr)</label>
-            <input id="c-rent" type="number" value="32.00" step="0.5" class="w-full px-3 py-2 border rounded-xl text-sm font-semibold" />
+            <label for="c-rent" class="block text-xs font-semibold text-slate-700 mb-1">Quoted Base Rent ($/sqft/yr)</label>
+            <input id="c-rent" type="number" min="0" step="0.5" value="30" class="w-full px-3 py-2 border border-slate-300 rounded-xl text-sm font-semibold" />
           </div>
         </div>
 
         <div class="grid grid-cols-2 gap-4">
           <div>
-            <label class="block text-xs font-semibold text-slate-700 mb-1">NNN / CAM ($/sqft/yr)</label>
-            <input id="c-nnn" type="number" value="6.50" step="0.25" class="w-full px-3 py-2 border rounded-xl text-sm font-semibold" />
+            <label for="c-nnn" class="block text-xs font-semibold text-slate-700 mb-1">Quoted NNN / CAM ($/sqft/yr)</label>
+            <input id="c-nnn" type="number" min="0" step="0.25" value="6" class="w-full px-3 py-2 border border-slate-300 rounded-xl text-sm font-semibold" />
           </div>
           <div>
-            <label class="block text-xs font-semibold text-slate-700 mb-1">Hourly Wage ($/hr)</label>
-            <input id="c-wage" type="number" value="16.50" step="0.5" class="w-full px-3 py-2 border rounded-xl text-sm font-semibold" />
-          </div>
-        </div>
-
-        <div class="grid grid-cols-2 gap-4">
-          <div>
-            <label class="block text-xs font-semibold text-slate-700 mb-1">Staff Hours / Week</label>
-            <input id="c-hours" type="number" value="120" class="w-full px-3 py-2 border rounded-xl text-sm font-semibold" />
-          </div>
-          <div>
-            <label class="block text-xs font-semibold text-slate-700 mb-1">Average Gross Ticket ($)</label>
-            <input id="c-ticket" type="number" value="8.50" step="0.25" class="w-full px-3 py-2 border rounded-xl text-sm font-semibold" />
+            <label for="c-wage" class="block text-xs font-semibold text-slate-700 mb-1">Hourly Wage ($/hr)</label>
+            <input id="c-wage" type="number" min="0.01" step="0.5" value="16" class="w-full px-3 py-2 border border-slate-300 rounded-xl text-sm font-semibold" />
           </div>
         </div>
 
         <div class="grid grid-cols-2 gap-4">
           <div>
-            <label class="block text-xs font-semibold text-slate-700 mb-1">Cost of Goods (COGS %)</label>
-            <input id="c-cogs" type="number" value="28" class="w-full px-3 py-2 border rounded-xl text-sm font-semibold" />
+            <label for="c-hours" class="block text-xs font-semibold text-slate-700 mb-1">Staff Hours / Week</label>
+            <input id="c-hours" type="number" min="0" step="1" value="120" class="w-full px-3 py-2 border border-slate-300 rounded-xl text-sm font-semibold" />
           </div>
           <div>
-            <label class="block text-xs font-semibold text-slate-700 mb-1">Sales Tax Rate (%)</label>
-            <input id="c-tax" type="number" value="8.25" step="0.05" class="w-full px-3 py-2 border rounded-xl text-sm font-semibold" />
+            <label for="c-ticket" class="block text-xs font-semibold text-slate-700 mb-1">Average Gross Ticket ($)</label>
+            <input id="c-ticket" type="number" min="0.01" step="0.25" value="10" class="w-full px-3 py-2 border border-slate-300 rounded-xl text-sm font-semibold" />
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <label for="c-cogs" class="block text-xs font-semibold text-slate-700 mb-1">Cost of Goods (COGS %)</label>
+            <input id="c-cogs" type="number" min="0" max="99.9" step="0.5" value="28" class="w-full px-3 py-2 border border-slate-300 rounded-xl text-sm font-semibold" />
+          </div>
+          <div>
+            <label for="c-tax" class="block text-xs font-semibold text-slate-700 mb-1">Sales Tax Rate (%)</label>
+            <input id="c-tax" type="number" min="0" max="20" step="0.05" value="8.25" class="w-full px-3 py-2 border border-slate-300 rounded-xl text-sm font-semibold" />
           </div>
         </div>
 
         <div>
-          <label class="block text-xs font-semibold text-slate-700 mb-1">Monthly Operating Overhead ($)</label>
-          <input id="c-overhead" type="number" value="1200" step="50" class="w-full px-3 py-2 border rounded-xl text-sm font-semibold" />
-          <span class="text-[11px] text-slate-400 mt-0.5 block">Utilities, commercial property insurance, POS software, and administrative baseline.</span>
+          <label for="c-overhead" class="block text-xs font-semibold text-slate-700 mb-1">Monthly Operating Overhead ($)</label>
+          <input id="c-overhead" type="number" min="0" step="50" value="1200" class="w-full px-3 py-2 border border-slate-300 rounded-xl text-sm font-semibold" />
+          <span class="text-[11px] text-slate-400 mt-0.5 block">Utilities, commercial insurance, POS software, and fixed monthly services.</span>
         </div>
       </div>
 
@@ -78,27 +87,35 @@ import Layout from '../../layouts/Layout.astro';
       <div class="md:col-span-5 bg-[#EDF4FC] p-6 rounded-2xl border border-blue-200 flex flex-col justify-between">
         <div>
           <div class="text-xs font-bold uppercase tracking-wider text-[#1D68F2] mb-4">Required Breakeven Velocity</div>
-          
-          <div class="space-y-4">
+
+          <div
+            id="c-validation-msg"
+            role="alert"
+            class="hidden p-4 rounded-xl bg-amber-50 border border-amber-200 text-xs font-semibold text-amber-900 leading-relaxed"
+          >
+            Enter positive square footage, wage, and ticket values (with COGS under 100%) to calculate breakeven.
+          </div>
+
+          <div id="c-results-stack" class="space-y-4">
             <div>
               <div class="text-xs text-slate-600">Daily Customers Required</div>
-              <div id="c-out-daily" class="text-4xl font-black text-[#152438]">94</div>
-              <div class="text-[11px] text-slate-500">transactions per operating day</div>
+              <div id="c-out-daily" class="text-4xl font-black text-[#152438]">77</div>
+              <div class="text-[11px] text-slate-500"><span id="c-out-monthly-cust">2,339</span> transactions/mo across 30.4375 avg days</div>
             </div>
 
             <div class="pt-2 border-t border-blue-200">
               <div class="text-xs text-slate-600">Monthly Net Revenue Needed</div>
-              <div id="c-out-rev" class="text-2xl font-bold text-slate-800">$22,460</div>
+              <div id="c-out-rev" class="text-2xl font-bold text-slate-800">$21,599</div>
             </div>
 
             <div>
-              <div class="text-xs text-slate-600">Monthly Occupancy Cost (Rent+NNN)</div>
-              <div id="c-out-occ" class="text-lg font-bold text-slate-700">$4,813</div>
+              <div class="text-xs text-slate-600">Monthly Occupancy Cost (Rent + NNN)</div>
+              <div id="c-out-occ" class="text-lg font-bold text-slate-700">$4,500</div>
             </div>
 
             <div>
-              <div class="text-xs text-slate-600">Monthly Labor (incl 18% burden)</div>
-              <div id="c-out-labor" class="text-lg font-bold text-slate-700">$10,159</div>
+              <div class="text-xs text-slate-600">Monthly Labor (incl. 18% burden)</div>
+              <div id="c-out-labor" class="text-lg font-bold text-slate-700">$9,851</div>
             </div>
 
             <div>
@@ -108,24 +125,117 @@ import Layout from '../../layouts/Layout.astro';
           </div>
         </div>
 
-        <div class="pt-4 border-t border-blue-200 text-[11px] text-slate-500">
-          Engine accounts for 18% payroll burden (FICA/FUTA/SUTA) and strips state/local sales taxes before computing gross customer requirements.
+        <div class="pt-4 mt-4 border-t border-blue-200 text-[11px] text-slate-500 space-y-2">
+          <p>
+            Applies an 18% employer payroll tax &amp; benefits load (4.3482 weeks/mo) and strips state/local sales tax from gross ticket receipts before solving contribution margin.
+          </p>
+          <p>
+            <a href="/#featured" class="font-bold text-[#1D68F2] hover:underline">Look up verified city sales tax rates →</a>
+          </p>
         </div>
       </div>
     </div>
   </section>
 
   <script>
+    function applyQueryParams() {
+      const params = new URLSearchParams(window.location.search);
+      const taxParam = params.get('tax');
+      const cityParam = params.get('city');
+      const sqftParam = params.get('sqft');
+      const rentParam = params.get('rent');
+      const nnnParam = params.get('nnn');
+
+      if (taxParam !== null && taxParam.trim() !== '') {
+        const parsedTax = parseFloat(taxParam);
+        if (Number.isFinite(parsedTax) && parsedTax >= 0) {
+          const pctVal =
+            parsedTax > 0 && parsedTax < 0.5
+              ? Number((parsedTax * 100).toFixed(4))
+              : parsedTax;
+          if (pctVal <= 20) {
+            const taxEl = document.getElementById('c-tax') as HTMLInputElement | null;
+            if (taxEl) taxEl.value = String(pctVal);
+          }
+        }
+      }
+
+      const optionalNumeric: Array<[string | null, string]> = [
+        [sqftParam, 'c-sqft'],
+        [rentParam, 'c-rent'],
+        [nnnParam, 'c-nnn'],
+      ];
+      for (const [rawVal, id] of optionalNumeric) {
+        if (rawVal !== null && rawVal.trim() !== '') {
+          const num = parseFloat(rawVal);
+          if (Number.isFinite(num) && num >= 0) {
+            const el = document.getElementById(id) as HTMLInputElement | null;
+            if (el) el.value = String(num);
+          }
+        }
+      }
+
+      if (cityParam && cityParam.trim() !== '') {
+        const ctx = document.getElementById('c-city-context');
+        if (ctx) {
+          ctx.textContent = `Sales tax pre-filled for ${cityParam.trim()} — enter your own quoted lease rate below.`;
+          ctx.classList.remove('hidden');
+        }
+      }
+    }
+
     function updateCalc() {
-      const sqft = parseFloat((document.getElementById('c-sqft') as HTMLInputElement)?.value) || 0;
-      const rent = parseFloat((document.getElementById('c-rent') as HTMLInputElement)?.value) || 0;
-      const nnn = parseFloat((document.getElementById('c-nnn') as HTMLInputElement)?.value) || 0;
-      const wage = parseFloat((document.getElementById('c-wage') as HTMLInputElement)?.value) || 0;
-      const hours = parseFloat((document.getElementById('c-hours') as HTMLInputElement)?.value) || 0;
-      const ticket = parseFloat((document.getElementById('c-ticket') as HTMLInputElement)?.value) || 0;
-      const cogsPct = (parseFloat((document.getElementById('c-cogs') as HTMLInputElement)?.value) || 0) / 100;
-      const taxRate = (parseFloat((document.getElementById('c-tax') as HTMLInputElement)?.value) || 0) / 100;
-      const overhead = parseFloat((document.getElementById('c-overhead') as HTMLInputElement)?.value) || 0;
+      const sqft = parseFloat((document.getElementById('c-sqft') as HTMLInputElement)?.value);
+      const rent = parseFloat((document.getElementById('c-rent') as HTMLInputElement)?.value);
+      const nnn = parseFloat((document.getElementById('c-nnn') as HTMLInputElement)?.value);
+      const wage = parseFloat((document.getElementById('c-wage') as HTMLInputElement)?.value);
+      const hours = parseFloat((document.getElementById('c-hours') as HTMLInputElement)?.value);
+      const ticket = parseFloat((document.getElementById('c-ticket') as HTMLInputElement)?.value);
+      const rawCogs = parseFloat((document.getElementById('c-cogs') as HTMLInputElement)?.value);
+      const rawTax = parseFloat((document.getElementById('c-tax') as HTMLInputElement)?.value);
+      const overhead = parseFloat((document.getElementById('c-overhead') as HTMLInputElement)?.value);
+
+      const cogsPct = rawCogs / 100;
+      const taxRate = rawTax / 100;
+
+      const allFinite = [sqft, rent, nnn, wage, hours, ticket, rawCogs, rawTax, overhead].every((v) =>
+        Number.isFinite(v)
+      );
+
+      const isInvalid =
+        !allFinite ||
+        sqft <= 0 ||
+        rent < 0 ||
+        nnn < 0 ||
+        wage <= 0 ||
+        hours < 0 ||
+        ticket <= 0 ||
+        cogsPct < 0 ||
+        cogsPct >= 1 ||
+        taxRate < 0 ||
+        taxRate > 0.2 ||
+        overhead < 0;
+
+      const resultsStack = document.getElementById('c-results-stack');
+      const validationMsg = document.getElementById('c-validation-msg');
+      const outDaily = document.getElementById('c-out-daily');
+      const outMonthlyCust = document.getElementById('c-out-monthly-cust');
+      const outRev = document.getElementById('c-out-rev');
+      const outOcc = document.getElementById('c-out-occ');
+      const outLabor = document.getElementById('c-out-labor');
+      const outOverhead = document.getElementById('c-out-overhead');
+
+      if (isInvalid) {
+        resultsStack?.classList.add('hidden');
+        validationMsg?.classList.remove('hidden');
+        if (outDaily) outDaily.textContent = '';
+        if (outMonthlyCust) outMonthlyCust.textContent = '';
+        if (outRev) outRev.textContent = '';
+        if (outOcc) outOcc.textContent = '';
+        if (outLabor) outLabor.textContent = '';
+        if (outOverhead) outOverhead.textContent = '';
+        return;
+      }
 
       const monthlyOcc = (sqft * (rent + nnn)) / 12;
       const monthlyLabor = wage * hours * 4.3482 * 1.18;
@@ -134,30 +244,34 @@ import Layout from '../../layouts/Layout.astro';
       const netTicket = ticket / (1 + taxRate);
       const contributionMargin = netTicket * (1 - cogsPct);
 
-      if (contributionMargin > 0 && ticket > 0 && cogsPct < 1) {
-        const monthlyCust = Math.ceil(monthlyFixed / contributionMargin);
-        const dailyCust = Math.ceil(monthlyCust / 30.4375);
-        const monthlyRev = monthlyFixed / (1 - cogsPct);
-
-        document.getElementById('c-out-daily')!.innerText = dailyCust.toString();
-        document.getElementById('c-out-rev')!.innerText = '$' + Math.round(monthlyRev).toLocaleString();
-        document.getElementById('c-out-occ')!.innerText = '$' + Math.round(monthlyOcc).toLocaleString();
-        document.getElementById('c-out-labor')!.innerText = '$' + Math.round(monthlyLabor).toLocaleString();
-        document.getElementById('c-out-overhead')!.innerText = '$' + Math.round(overhead).toLocaleString();
-      } else {
-        document.getElementById('c-out-daily')!.innerText = '—';
-        document.getElementById('c-out-rev')!.innerText = 'Invalid Input';
-        document.getElementById('c-out-occ')!.innerText = '$' + Math.round(monthlyOcc).toLocaleString();
-        document.getElementById('c-out-labor')!.innerText = '$' + Math.round(monthlyLabor).toLocaleString();
-        document.getElementById('c-out-overhead')!.innerText = '$' + Math.round(overhead).toLocaleString();
+      if (!(contributionMargin > 0)) {
+        resultsStack?.classList.add('hidden');
+        validationMsg?.classList.remove('hidden');
+        return;
       }
+
+      const monthlyCust = Math.ceil(monthlyFixed / contributionMargin);
+      const dailyCust = Math.ceil(monthlyCust / 30.4375);
+      const monthlyRev = monthlyFixed / (1 - cogsPct);
+
+      validationMsg?.classList.add('hidden');
+      resultsStack?.classList.remove('hidden');
+
+      if (outDaily) outDaily.textContent = dailyCust.toLocaleString();
+      if (outMonthlyCust) outMonthlyCust.textContent = monthlyCust.toLocaleString();
+      if (outRev) outRev.textContent = '$' + Math.round(monthlyRev).toLocaleString();
+      if (outOcc) outOcc.textContent = '$' + Math.round(monthlyOcc).toLocaleString();
+      if (outLabor) outLabor.textContent = '$' + Math.round(monthlyLabor).toLocaleString();
+      if (outOverhead) outOverhead.textContent = '$' + Math.round(overhead).toLocaleString();
     }
 
-    ['c-sqft', 'c-rent', 'c-nnn', 'c-wage', 'c-hours', 'c-ticket', 'c-cogs', 'c-tax', 'c-overhead'].forEach(id => {
-      document.getElementById(id)?.addEventListener('input', updateCalc);
-    });
+    ['c-sqft', 'c-rent', 'c-nnn', 'c-wage', 'c-hours', 'c-ticket', 'c-cogs', 'c-tax', 'c-overhead'].forEach(
+      (id) => {
+        document.getElementById(id)?.addEventListener('input', updateCalc);
+      }
+    );
 
-    // Run initial calculation to guarantee parity
+    applyQueryParams();
     updateCalc();
   </script>
 </Layout>

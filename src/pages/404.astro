@@ -1,10 +1,21 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const CERTIFIED_GUIDES = [
+  { slug: 'tx/austin', label: 'Austin, TX' },
+  { slug: 'tn/nashville', label: 'Nashville, TN' },
+  { slug: 'ar/hot-springs', label: 'Hot Springs, AR' },
+  { slug: 'ar/hot-springs-village', label: 'Hot Springs Village, AR' },
+  { slug: 'id/boise', label: 'Boise, ID' },
+  { slug: 'fl/tampa', label: 'Tampa, FL' },
+  { slug: 'az/scottsdale', label: 'Scottsdale, AZ' },
+];
 ---
 
 <Layout
   title="Page Not Found (404) — CityClick"
-  description="The city guide or page you requested could not be found. Search across 1,501 published US municipal guides on CityClick."
+  description="The city guide or page you requested could not be found. Search CityClick's US city guides or open one of our primary-source verified flagship guides."
+  robots="noindex, follow"
 >
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center space-y-6">
     <div class="inline-flex items-center justify-center w-16 h-16 rounded-3xl bg-blue-50 text-[#1D68F2] font-black text-2xl border border-blue-200">
@@ -15,8 +26,8 @@ import Layout from '../layouts/Layout.astro';
       City or Page Not Found
     </h1>
 
-    <p class="text-sm text-slate-600 max-w-md mx-auto leading-relaxed">
-      The municipal guide or page you requested does not exist or may have moved. Use our search below to explore 1,501 published US cities.
+    <p class="text-sm text-slate-600 max-w-lg mx-auto leading-relaxed">
+      The city guide or page you requested does not exist or may have moved. Search CityClick's city guides below or open one of our primary-source verified flagship guides.
     </p>
 
     <!-- Quick Search Box -->
@@ -25,7 +36,7 @@ import Layout from '../layouts/Layout.astro';
         <input
           type="text"
           name="search"
-          placeholder="Search any city (e.g. Austin, Tampa, Boise)..."
+          placeholder="Search a city (e.g. Austin, Nashville, Boise)..."
           class="flex-1 px-4 py-2.5 text-xs outline-none bg-transparent"
         />
         <button
@@ -37,12 +48,31 @@ import Layout from '../layouts/Layout.astro';
       </form>
     </div>
 
-    <div class="pt-8 flex items-center justify-center gap-4 text-xs font-bold text-slate-500">
+    <!-- Verified Flagship Guides -->
+    <div class="pt-6 max-w-2xl mx-auto space-y-3">
+      <div class="text-[11px] font-bold uppercase tracking-wider text-slate-400">
+        Verified Flagship City Guides
+      </div>
+      <div class="flex flex-wrap items-center justify-center gap-2">
+        {CERTIFIED_GUIDES.map((guide) => (
+          <a
+            href={`/${guide.slug}/`}
+            class="px-3.5 py-2 rounded-xl bg-white border border-slate-200 hover:border-[#1D68F2] text-xs font-bold text-[#152438] hover:text-[#1D68F2] shadow-2xs transition"
+          >
+            {guide.label} →
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <div class="pt-6 flex flex-wrap items-center justify-center gap-4 text-xs font-bold text-slate-500">
       <a href="/" class="hover:text-[#1D68F2] transition">← Back to Homepage</a>
       <span>·</span>
-      <a href="/#featured" class="hover:text-[#1D68F2] transition">Featured Cities</a>
+      <a href="/#featured" class="hover:text-[#1D68F2] transition">Featured Guides</a>
       <span>·</span>
       <a href="/#states" class="hover:text-[#1D68F2] transition">Browse by State</a>
+      <span>·</span>
+      <a href="/methodology/" class="hover:text-[#1D68F2] transition">Data Methodology</a>
     </div>
   </div>
 </Layout>

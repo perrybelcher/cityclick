@@ -36,24 +36,6 @@ def J(u, t=90):
     return retry(lambda: json.load(urllib.request.urlopen(urllib.request.Request(u, headers={'User-Agent': 'Mozilla/5.0'}), timeout=t)))
 
 
-def gkey():
-    env = {}
-    for l in open('/opt/data/secrets/google-maps.env'):
-        if '=' in l:
-            k, v = l.strip().split('=', 1); env[k] = v.strip('"\'')
-    return list(env.values())[0]
-
-
-def places(q, bias=None, fields='places.displayName,places.formattedAddress,places.location,places.businessStatus,places.types'):
-    body = {'textQuery': q}
-    if bias:
-        body['locationBias'] = {'circle': {'center': {'latitude': bias[0], 'longitude': bias[1]}, 'radius': 30000.0}}
-    req = urllib.request.Request('https://places.googleapis.com/v1/places:searchText', data=json.dumps(body).encode(),
-                                 headers={'Content-Type': 'application/json', 'X-Goog-Api-Key': gkey(), 'X-Goog-FieldMask': fields})
-    time.sleep(1.5)
-    return retry(lambda: json.load(urllib.request.urlopen(req, timeout=30))).get('places', [])
-
-
 def hav(a, b, c, d):
     R = 3958.8
     p1, p2 = math.radians(a), math.radians(c)
@@ -74,7 +56,8 @@ def load(slug):
 def city_center(c):
     """Census Gazetteer internal point (official, no API key, no quota)."""
     import zipfile
-    p = os.path.join(ROOT, 'data', 'census', '2023_Gaz_place_national.zip')
+    from census_env import resolve_census_dir
+    p = os.path.join(resolve_census_dir(need_gazetteer=True), '2023_Gaz_place_national.zip')
     z = zipfile.ZipFile(p)
     rows = z.read(z.namelist()[0]).decode('latin1').splitlines()
     geoid = c['cityId']
@@ -150,7 +133,8 @@ def do_airport(c, iata, center):
     dist = round(hav(center[0], center[1], alat, alng), 1)
     if dist > 150:
         raise Stop(4, 'OUT_OF_BOUNDS', f'{dist} miles from the city center; wrong airport?')
-    return {'name': a['name'], 'iata': iata.upper(), 'distanceMiles': dist, 'transitToDowntown': None,
+    return {'name': a['name'], 'iata': iata.upper(), 'lat': round(alat, 6), 'lng': round(alng, 6),
+            'distanceMiles': dist, 'transitToDowntown': None,
             'source': 'OurAirports (public domain) for name, IATA code and coordinates; distance is straight-line from the U.S. Census Gazetteer city center point',
             'sourceUrl': 'https://ourairports.com/data/', 'cityCenterMethod': 'Census Gazetteer internal point', 'retrieved': TODAY}
 
@@ -191,8 +175,11 @@ def do_tax(slug):
     t = json.load(open(os.path.join(ROOT, 'sources', 'sales-tax.json'))).get(slug)
     if not t:
         raise Stop(3, 'TAX_NO_SOURCE', f'no entry for {slug} in sources/sales-tax.json; add one WITH a source URL (never copy a state default)')
-    return {'stateTaxRate': t['state'], 'localTaxRate': t['local'], 'combinedSalesTaxRate': round(t['state'] + t['local'], 5),
-            'provenance': {'sourceName': t['source'], 'sourceUrl': t['url'], 'datasetVintage': t['asOf'][:4], 'verifiedAt': t['asOf'], 'granularity': 'place'}}
+    verified_at = t['asOf'] if 'T' in str(t['asOf']) else f"{t['asOf']}T00:00:00Z"
+    return {'stateTaxRate': t['state'], 'countyTaxRate': t.get('county'), 'cityTaxRate': t.get('city'),
+            'specialDistrictTaxRate': t.get('specialDistrict'), 'localTaxRate': t['local'],
+            'combinedSalesTaxRate': round(t['state'] + t['local'], 5),
+            'provenance': {'sourceName': t['source'], 'sourceUrl': t['url'], 'datasetVintage': t['asOf'][:4], 'verifiedAt': verified_at, 'granularity': 'place'}}
 
 
 def main():

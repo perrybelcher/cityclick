@@ -3,6 +3,16 @@ export const prerender = false;
 import type { APIRoute } from 'astro';
 import manifest from '../../../../../data/index-manifest.json';
 
+const CERTIFIED_SLUGS = [
+  'tx/austin',
+  'ar/hot-springs-village',
+  'ar/hot-springs',
+  'id/boise',
+  'fl/tampa',
+  'az/scottsdale',
+  'tn/nashville',
+];
+
 export const GET: APIRoute = async ({ params }) => {
   const { state, city } = params;
 
@@ -37,8 +47,9 @@ export const GET: APIRoute = async ({ params }) => {
           popChange2020to2023Pct: (found as any).popChange2020to2023Pct ?? null,
           medianHomeValue: (found as any).medianHomeValue ?? null,
           medianGrossRent: (found as any).medianGrossRent ?? null,
+          effectivePropertyTaxRatePct: (found as any).effectivePropertyTaxRatePct ?? null,
           source: 'US Census Bureau ACS 2023 5-year; Population Estimates 2023',
-          certified: ['tx/austin','ar/hot-springs-village','id/boise','fl/tampa','az/scottsdale','tn/nashville','ok/oklahoma-city'].includes(found.slug),
+          certified: CERTIFIED_SLUGS.includes(found.slug),
           combinedSalesTax: found.combinedSalesTaxRate,
           timeZone: found.timeZone,
           topUnderservedTrades: found.topUnderservedNaics,

@@ -3,8 +3,8 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout
-  title="About CityClick — Municipal Intelligence"
-  description="CityClick is an independent municipal intelligence platform providing sourced municipal data for travelers, relocating families, and business founders."
+  title="About CityClick — Primary-Sourced City Guides"
+  description="CityClick publishes primary-sourced US city guides covering Census demographics, housing and effective property tax, state retail sales tax, climate, infrastructure, and ZBP trade density."
 >
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
     <div class="space-y-4 mb-10 pb-8 border-b border-slate-200">
@@ -12,10 +12,10 @@ import Layout from '../layouts/Layout.astro';
         <span>🏛️</span> Our Mission
       </div>
       <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-[#152438] tracking-tight">
-        Sourced data for your next city.
+        Sourced public records for your next city.
       </h1>
       <p class="text-base sm:text-lg text-slate-600 leading-relaxed">
-        CityClick exists to eliminate the guesswork, algorithmic fog, and outdated blogs that surround exploring, moving to, or doing business in American cities.
+        CityClick helps travelers, relocating households, and small-business founders evaluate American cities using traceable federal and state public records rather than guesswork or paywalled directories.
       </p>
     </div>
 
@@ -23,42 +23,57 @@ import Layout from '../layouts/Layout.astro';
       <section class="space-y-4">
         <h2 class="text-xl sm:text-2xl font-black text-[#152438]">Why We Built CityClick</h2>
         <p>
-          Whether you are a weekend visitor booking flights, a family evaluating school districts and property tax burdens, or an entrepreneur underwriting commercial lease breakeven across common NAICS trades, you deserve facts backed by audited provenance—not sponsored clickbait.
+          Whether you are planning a trip, comparing housing costs and effective property taxes before a move, or checking local retail establishment density before opening a shop, every number you rely on should trace directly to a named agency and dataset vintage.
         </p>
         <p>
-          Most city sites are either tourist marketing boards hiding practical drawbacks or clinical Census spreadsheets that normal humans cannot parse. CityClick bridges the gap: authentic visual orientation (4K drone tours, street-level photography) paired with audited institutional data.
+          Most city websites are either promotional brochures that omit practical trade-offs or raw federal tables scattered across a dozen separate agencies. CityClick brings verified public datasets and clean neighborhood orientation onto one page—and omits any block where a primary record does not exist.
         </p>
       </section>
 
       <section class="space-y-4">
-        <h2 class="text-xl sm:text-2xl font-black text-[#152438]">Our Sourcing Standard</h2>
+        <h2 class="text-xl sm:text-2xl font-black text-[#152438]">What Every Verified Guide Covers</h2>
         <p>
-          Every metric displayed on CityClick—from municipal water potability (PWSID) and USGS 3DEP elevation contours to ad-valorem millage rates and Federal Reserve FRED economic indices—is anchored to official public records.
+          Every quantitative metric published on a certified CityClick guide comes directly from official federal and state sources, with explicit agency attribution and retrieval vintage:
         </p>
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
-          <div class="p-5 rounded-2xl bg-[#F8FAFC] border border-slate-200">
-            <div class="font-black text-sm text-[#152438] mb-1">✈️ For Visitors</div>
-            <div class="text-xs text-slate-600">Airport transit reality, rideshare levels, drinking water safety, curated district stays, and arrival protocols.</div>
+          <div class="p-5 rounded-2xl bg-[#F8FAFC] border border-slate-200 space-y-1.5">
+            <div class="font-black text-sm text-[#152438]">✈️ For Visitors</div>
+            <div class="text-xs text-slate-600 leading-relaxed">
+              OurAirports scheduled commercial airport distances, Open-Meteo 10-year ERA5 seasonal temperatures and precipitation, USGS 3DEP terrain elevation, National Park Service sites, and live scheduled venue events.
+            </div>
           </div>
-          <div class="p-5 rounded-2xl bg-[#F8FAFC] border border-slate-200">
-            <div class="font-black text-sm text-[#152438] mb-1">🏡 For Movers</div>
-            <div class="text-xs text-slate-600">True property tax millage, public school zones, municipal utility setup, and neighborhood cost comparisons.</div>
+          <div class="p-5 rounded-2xl bg-[#F8FAFC] border border-slate-200 space-y-1.5">
+            <div class="font-black text-sm text-[#152438]">🏡 For Movers</div>
+            <div class="text-xs text-slate-600 leading-relaxed">
+              Census ACS 5-Year &amp; Population Estimates demographics, median home values, gross rents, effective property tax rates, EPA SDWIS community water systems, CMS Care Compare emergency hospitals, U.S. Dept. of Education College Scorecard institutions, and NREL public EV charging stations.
+            </div>
           </div>
-          <div class="p-5 rounded-2xl bg-[#F8FAFC] border border-slate-200">
-            <div class="font-black text-sm text-[#152438] mb-1">💼 For Business</div>
-            <div class="text-xs text-slate-600">25-NAICS trade density, Census ZBP counts, NNN commercial lease benchmarks, and municipal permit queues.</div>
+          <div class="p-5 rounded-2xl bg-[#F8FAFC] border border-slate-200 space-y-1.5">
+            <div class="font-black text-sm text-[#152438]">💼 For Business</div>
+            <div class="text-xs text-slate-600 leading-relaxed">
+              Census ZIP Code Business Patterns (ZBP) employer establishment counts and per-10,000-resident trade density compared against U.S. national density, official state revenue department retail sales-tax breakdowns, and an interactive breakeven calculator for user-quoted lease terms.
+            </div>
           </div>
         </div>
       </section>
 
       <section class="space-y-4 pt-4 border-t border-slate-200">
-        <h2 class="text-xl sm:text-2xl font-black text-[#152438]">Independent & Free Public Access</h2>
+        <h2 class="text-xl sm:text-2xl font-black text-[#152438]">Independent &amp; Open Public Access</h2>
         <p>
-          We do not gate essential civic information behind paywalls. Our institutional feasibility dossiers, visitor pocket guides, and relocation checklists are 100% free public resources designed to empower everyday citizens, founders, and visitors.
+          We do not invent missing figures or lock civic facts behind paywalls. Cities only enter our indexed flagship catalog after passing primary-source verification; additional municipal profiles remain clearly labeled in review until audited.
         </p>
-        <div class="pt-2">
-          <a href="/" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-2xl bg-[#1D68F2] hover:bg-[#1555C7] text-white font-bold text-xs shadow-md transition">
-            Explore 1,501 Published City Guides →
+        <div class="pt-2 flex flex-wrap items-center gap-3">
+          <a
+            href="/#featured"
+            class="inline-flex items-center gap-2 px-6 py-3.5 rounded-2xl bg-[#1D68F2] hover:bg-[#1555C7] text-white font-bold text-xs shadow-md transition"
+          >
+            Explore Verified City Guides →
+          </a>
+          <a
+            href="/methodology/"
+            class="inline-flex items-center gap-2 px-5 py-3.5 rounded-2xl bg-white border border-slate-200 hover:border-[#1D68F2] text-[#152438] hover:text-[#1D68F2] font-bold text-xs transition"
+          >
+            Read Data Methodology →
           </a>
         </div>
       </section>

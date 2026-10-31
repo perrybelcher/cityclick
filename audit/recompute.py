@@ -3,9 +3,12 @@
 (data/census) and check that the LIVE page shows exactly those numbers. Does not read src/data.
 Exit 1 on any mismatch. Usage: python3 audit/recompute.py [--base https://cityclick.com]"""
 import csv, sys, re, urllib.request, os, json
-D=os.path.join(os.path.dirname(os.path.abspath(__file__)),'..','data','census')+'/'
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'scripts'))
+from census_env import resolve_census_dir
+D=resolve_census_dir(need_acs=True, need_popest=True)
 base=sys.argv[sys.argv.index('--base')+1] if '--base' in sys.argv else 'https://cityclick.com'
 CITIES={'tx/austin':('1600000US4805000','48','Austin city'),'ar/hot-springs-village':('1600000US0533482','05',None),
+ 'ar/hot-springs':('1600000US0533400','05','Hot Springs city'),
  'id/boise':('1600000US1608830','16','Boise City city'),'fl/tampa':('1600000US1271000','12','Tampa city'),
  'az/scottsdale':('1600000US0465000','04','Scottsdale city'),'tn/nashville':('1600000US4752006','47','Nashville-Davidson metropolitan government (balance)'),
  'ok/oklahoma-city':('1600000US4055000','40','Oklahoma City city')}

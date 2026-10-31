@@ -3,164 +3,337 @@ import { z } from 'zod';
 export const DataGranularitySchema = z.enum([
   'place',            // Exact Census Place / Municipal boundary
   'zcta_aggregated',  // Aggregated across city's primary ZCTAs (used for ZBP NAICS)
+  'zip_aggregated',   // Alias used by rebuild_verified_cities.py for ZBP ZIP aggregation
   'county_fallback',  // County-level metric where Place data is suppressed (<25k pop)
-  'state_baseline'    // State-level statutory baseline
+  'state_baseline',   // State-level statutory baseline
 ]);
 
 export const ProvenanceSchema = z.object({
-  sourceName: z.string().min(3),       // e.g., "US Census ACS 5-Year (Table B19013)"
-  sourceUrl: z.string().url(),         // Direct API endpoint or official .gov URL
-  datasetVintage: z.string().min(4),   // e.g., "2024-5YR", "2026-Q2"
-  verifiedAt: z.string().datetime(),   // ISO-8601 UTC timestamp
+  sourceName: z.string().min(3),
+  sourceUrl: z.string().url(),
+  datasetVintage: z.string().min(4),
+  verifiedAt: z.string().regex(/^\d{4}-\d{2}-\d{2}(T.*)?$/),
   granularity: DataGranularitySchema,
-  evidenceQuote: z.string().max(280).optional() // Mandatory for Layer 2 Agent Scrapes
+  evidenceQuote: z.string().max(600).optional(),
 });
 
 export const NaicsSaturationSchema = z.object({
-  naicsCode: z.string().regex(/^\d{5,6}$/), // e.g., "722515" (Coffee & Snack Shops)
-  slug: z.string(),                         // e.g., "coffee-shops"
-  label: z.string(),                        // e.g., "Coffee & Snack Shops"
+  naicsCode: z.string().regex(/^\d{5,6}$/),
+  slug: z.string(),
+  label: z.string(),
+  category: z.string().optional(),
   establishments: z.number().int().nonnegative(),
   per10kResidents: z.number().nonnegative(),
   usAvgPer10k: z.number().positive(),
-  saturationIndex: z.number().int().nonnegative(), // 100 = US benchmark
+  saturationIndex: z.number().int().nonnegative(),
   status: z.enum(['underserved', 'balanced', 'saturated']),
-  annualPayrollAvgUsd: z.number().nonnegative().nullable(),
-  provenance: ProvenanceSchema
+  smallSample: z.boolean().optional(),
+  annualPayrollAvgUsd: z.number().nonnegative().nullable().optional(),
+  provenance: ProvenanceSchema,
 });
 
 export const TrafficCorridorSchema = z.object({
   roadName: z.string().min(2),
   segmentDescription: z.string(),
-  aadt: z.number().int().positive(),        // Annual Average Daily Traffic
+  aadt: z.number().int().positive(),
   heavyTruckPct: z.number().min(0).max(100).nullable(),
   lat: z.number().min(-90).max(90),
   lng: z.number().min(-180).max(180),
   year: z.number().int().min(2020).max(2030),
-  provenance: ProvenanceSchema
+  provenance: ProvenanceSchema,
 });
 
 export const MunicipalPermitIntelSchema = z.object({
-  generalBusinessLicenseRequired: z.boolean().nullable(),
-  businessLicenseFeeSummary: z.string().nullable(),
-  businessLicensePortalUrl: z.string().url().nullable(),
-  zoningLookupUrl: z.string().url().nullable(),
-  buildingPermitPortalUrl: z.string().url().nullable(),
-  certificateOfOccupancyFee: z.string().nullable(),
-  avgPermitWaitDays: z.number().int().positive().max(730).nullable(),
-  shortTermRentalStatus: z.enum(['allowed', 'restricted', 'banned', 'unverified']),
-  foodTruckPermitStatus: z.enum(['allowed', 'restricted', 'banned', 'unverified']),
-  combinedSalesTaxRate: z.number().min(0).max(0.15), // e.g., 0.0825 for 8.25%
+  generalBusinessLicenseRequired: z.boolean().nullable().optional(),
+  businessLicenseFeeSummary: z.string().nullable().optional(),
+  businessLicensePortalUrl: z.string().url().nullable().optional(),
+  zoningLookupUrl: z.string().url().nullable().optional(),
+  buildingPermitPortalUrl: z.string().url().nullable().optional(),
+  certificateOfOccupancyFee: z.string().nullable().optional(),
+  avgPermitWaitDays: z.number().int().positive().max(730).nullable().optional(),
+  shortTermRentalStatus: z.enum(['allowed', 'restricted', 'banned', 'unverified']).optional(),
+  foodTruckPermitStatus: z.enum(['allowed', 'restricted', 'banned', 'unverified']).optional(),
+  combinedSalesTaxRate: z.number().min(0).max(0.15),
   stateTaxRate: z.number().min(0).max(0.12),
   localTaxRate: z.number().min(0).max(0.10),
-  provenance: ProvenanceSchema
+  countyTaxRate: z.number().min(0).max(0.10).nullable().optional(),
+  cityTaxRate: z.number().min(0).max(0.10).nullable().optional(),
+  specialDistrictTaxRate: z.number().min(0).max(0.10).nullable().optional(),
+  provenance: ProvenanceSchema.optional(),
+});
+
+export const ErHospitalItemSchema = z.object({
+  name: z.string(),
+  address: z.string(),
+  type: z.string(),
+  cmsFacilityId: z.string().optional(),
+  lat: z.number().nullable().optional(),
+  lng: z.number().nullable().optional(),
 });
 
 export const ExecutiveTravelIntelSchema = z.object({
-  timeZone: z.string(),                     // e.g., "America/Chicago (Central Time: UTC-6 / CDT UTC-5)"
-  timeZoneAbbr: z.string(),                 // e.g., "CT"
-  utcOffset: z.string(),                    // e.g., "-06:00"
-  primaryAirport: z.object({
-    name: z.string(),                       // e.g., "Austin-Bergstrom International Airport"
-    iata: z.string().length(3),             // e.g., "AUS"
-    distanceMiles: z.number().positive(),
-    transitToDowntown: z.string()           // e.g., "20 min via Rideshare / CapMetro Route 20 ($1.25)"
-  }),
-  powerPlugs: z.object({
-    types: z.array(z.string()),             // ['Type A (2-pin)', 'Type B (3-pin standard grounded)']
-    voltage: z.string(),                    // "120V"
-    frequency: z.string(),                  // "60Hz"
-    adapterAdvice: z.string()               // e.g., "Visitors from UK, EU, AU, and Asia require a step-up voltage adapter or Type A/B plug converter."
-  }),
-  currency: z.object({
-    code: z.string(),                       // "USD"
-    symbol: z.string(),                     // "$"
-    name: z.string(),                       // "United States Dollar"
-    tippingCustoms: z.string(),             // e.g., "18–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15–20% for taxis/rideshares."
-    paymentMethods: z.string()              // e.g., "Apple Pay, Google Pay, and contactless chip cards universally accepted. Cashless venues common."
-  }),
-  climate: z.object({
-    summerHighF: z.number(),                // e.g., 97
-    winterLowF: z.number(),                 // e.g., 42
-    annualRainfallInches: z.number(),       // e.g., 35.5
-    bestVisitMonths: z.string(),            // e.g., "October–November and March–May for mild outdoor scouting temperatures"
-    weatherSummary: z.string()
-  }),
-  emergency: z.object({
-    emergencyDispatch: z.string(),          // "911"
-    nonEmergencyPolice: z.string(),         // "311 or (512) 974-2000"
-    nearestTraumaHospital: z.string(),      // "Dell Seton Medical Center at UT (Level 1 Trauma Center)"
-    hospitalAddress: z.string()
-  }),
-  visitorLogistics: z.object({
-    tapWaterPotability: z.string(),         // "100% Safe municipal drinking water conforming to EPA standards."
-    salesTaxRefundPolicy: z.string(),       // e.g., "Texas TaxFree Shopping allows foreign visitors to claim sales tax refunds at AUS airport booths for qualifying purchases."
-    rideshareAvailability: z.string()       // "Ubiquitous (Uber, Lyft, and local taxi fleets operational 24/7)"
-  }),
-  provenance: ProvenanceSchema
+  timeZone: z.string().optional(),
+  timeZoneAbbr: z.string().optional(),
+  utcOffset: z.string().optional(),
+  primaryAirport: z
+    .object({
+      name: z.string(),
+      iata: z.string().nullable().optional(),
+      lat: z.number().nullable().optional(),
+      lng: z.number().nullable().optional(),
+      distanceMiles: z.number().nonnegative().nullable().optional(),
+      transitToDowntown: z.string().nullable().optional(),
+      source: z.string().optional(),
+      sourceUrl: z.string().optional(),
+      cityCenterMethod: z.string().optional(),
+      retrieved: z.string().optional(),
+    })
+    .optional(),
+  powerPlugs: z
+    .object({
+      types: z.array(z.string()),
+      voltage: z.string(),
+      frequency: z.string(),
+      adapterAdvice: z.string(),
+    })
+    .optional(),
+  currency: z
+    .object({
+      code: z.string(),
+      symbol: z.string(),
+      name: z.string(),
+      tippingCustoms: z.string(),
+      paymentMethods: z.string(),
+    })
+    .optional(),
+  climate: z
+    .object({
+      summerHighF: z.number(),
+      winterLowF: z.number(),
+      annualRainfallInches: z.number(),
+      bestVisitMonths: z.string().optional(),
+      weatherSummary: z.string().optional(),
+      summerHighBasis: z.string().optional(),
+      winterLowBasis: z.string().optional(),
+      source: z.string().optional(),
+    })
+    .optional(),
+  emergency: z
+    .object({
+      emergencyDispatch: z.string().optional(),
+      nonEmergencyPolice: z.string().optional(),
+      nearestTraumaHospital: z.string().optional(),
+      hospitalAddress: z.string().optional(),
+      cmsFacilityId: z.string().optional(),
+      emergencyServices: z.boolean().optional(),
+      source: z.string().nullable().optional(),
+      sourceNote: z.string().optional(),
+      erHospitals: z.array(ErHospitalItemSchema).optional(),
+      erHospitalsSource: z.string().nullable().optional(),
+      erHospitalsScope: z.string().nullable().optional(),
+    })
+    .optional(),
+  visitorLogistics: z
+    .object({
+      tapWaterPotability: z.string().optional(),
+      salesTaxRefundPolicy: z.string().optional(),
+      rideshareAvailability: z.string().optional(),
+    })
+    .optional(),
+  provenance: ProvenanceSchema.optional(),
+});
+
+export const HousingAndTaxesSchema = z.object({
+  medianHomeValue: z.number().nonnegative().nullable().optional(),
+  medianGrossRent: z.number().nonnegative().nullable().optional(),
+  medianRealEstateTaxPaid: z.number().nonnegative().nullable().optional(),
+  effectivePropertyTaxRatePct: z.number().nonnegative().nullable().optional(),
+  homesteadExemptionNote: z.string().nullable().optional(),
+  countyName: z.string().nullable().optional(),
+  source: z.string().optional(),
+  sourceUrl: z.string().optional(),
+});
+
+export const ClimateNormalsSchema = z.object({
+  peakSummerHighF: z.number(),
+  winterLowF: z.number(),
+  annualRainfallInches: z.number(),
+  sourceName: z.string().optional(),
+  sourceUrl: z.string().optional(),
+});
+
+export const TerrainElevationSchema = z.object({
+  elevationFeet: z.number(),
+  elevationMeters: z.number(),
+  topographyClass: z.string(),
+  sourceName: z.string().optional(),
+  sourceUrl: z.string().optional(),
+});
+
+export const WaterUtilitySchema = z.object({
+  pwsid: z.string(),
+  providerName: z.string(),
+  populationServed: z.number().nonnegative(),
+  sourceType: z.string(),
+  source: z.string(),
+  sourceUrl: z.string().optional(),
+  retrieved: z.string().optional(),
+});
+
+export const HigherEducationInstitutionSchema = z.object({
+  id: z.union([z.number(), z.string()]),
+  name: z.string(),
+  studentSize: z.number().nonnegative().nullable().optional(),
+  ownership: z.string().nullable().optional(),
+  schoolUrl: z.string().nullable().optional(),
+  lat: z.number().nullable().optional(),
+  lng: z.number().nullable().optional(),
+});
+
+export const HigherEducationSchema = z.object({
+  institutionCount: z.number().int().nonnegative(),
+  totalEnrollment: z.number().int().nonnegative().optional(),
+  institutions: z.array(HigherEducationInstitutionSchema),
+  sourceName: z.string(),
+  sourceUrl: z.string(),
+  retrieved: z.string(),
+});
+
+export const EvSampleStationSchema = z.object({
+  name: z.string(),
+  address: z.string().optional(),
+  network: z.string().nullable().optional(),
+  dcFastPorts: z.number().int().nonnegative().optional(),
+  level2Ports: z.number().int().nonnegative().optional(),
+  lat: z.number().nullable().optional(),
+  lng: z.number().nullable().optional(),
+});
+
+export const EvInfrastructureSchema = z.object({
+  totalStations: z.number().int().nonnegative(),
+  totalChargingPorts: z.number().int().nonnegative().optional(),
+  dcFastPorts: z.number().int().nonnegative(),
+  level2Ports: z.number().int().nonnegative(),
+  sampleStations: z.array(EvSampleStationSchema).optional(),
+  sourceName: z.string(),
+  sourceUrl: z.string(),
+  retrieved: z.string(),
+});
+
+export const NationalParkItemSchema = z.object({
+  parkCode: z.string(),
+  fullName: z.string(),
+  designation: z.string().optional(),
+  distanceMiles: z.number().nonnegative().optional(),
+  description: z.string().optional(),
+  url: z.string(),
+  lat: z.number().nullable().optional(),
+  lng: z.number().nullable().optional(),
+});
+
+export const NationalParksSchema = z.object({
+  parks: z.array(NationalParkItemSchema),
+  sourceName: z.string(),
+  sourceUrl: z.string(),
+  retrieved: z.string(),
+});
+
+export const UpcomingEventItemSchema = z.object({
+  id: z.string().optional(),
+  name: z.string(),
+  date: z.string().nullable().optional(),
+  venueName: z.string().nullable().optional(),
+  category: z.string().nullable().optional(),
+  url: z.string(),
+  lat: z.number().nullable().optional(),
+  lng: z.number().nullable().optional(),
+});
+
+export const UpcomingEventsSchema = z.object({
+  totalMatchingEvents: z.number().int().nonnegative().optional(),
+  events: z.array(UpcomingEventItemSchema),
+  sourceName: z.string(),
+  sourceUrl: z.string(),
+  retrieved: z.string(),
 });
 
 export const CityRecordSchema = z.object({
-  slug: z.string().regex(/^[a-z]{2}\/[a-z0-9-]+$/), // e.g., "tx/austin"
-  cityId: z.string().regex(/^\d{7}$/),              // 7-digit State+Place FIPS e.g., "4805000"
-  countyFips: z.string().regex(/^\d{5}$/),          // 5-digit State+County FIPS e.g., "48453"
+  slug: z.string().regex(/^[a-z]{2}\/[a-z0-9-]+$/),
+  cityId: z.string().regex(/^\d{5,7}$/),
+  countyFips: z.string().regex(/^\d{5}$/),
   name: z.string().min(1),
   stateCode: z.string().length(2),
   stateName: z.string().min(3),
   countyName: z.string().min(3),
-  lat: z.number().min(17).max(72),                  // US bounds
-  lng: z.number().min(-180).max(-64),
-  primaryZips: z.array(z.string().regex(/^\d{5}$/)).min(1),
+  lat: z.number().min(17).max(72).nullable(),
+  lng: z.number().min(-180).max(-64).nullable(),
+  primaryZips: z.array(z.string().regex(/^\d{5}$/)),
   demographics: z.object({
     population: z.number().int().positive(),
+    popChange2020to2023Pct: z.number().min(-50).max(200).nullable().optional(),
+    popChangeBasis: z.string().optional(),
     popGrowth5YrPct: z.number().min(-50).max(200).optional(),
     medianHouseholdIncome: z.number().int().positive(),
     perCapitaIncome: z.number().int().positive(),
-    medianAge: z.number().min(15).max(85),
+    medianAge: z.number().min(10).max(95),
     daytimeWorkerPop: z.number().int().nonnegative().optional(),
     daytimePopSurgePct: z.number().min(-80).max(500).optional(),
     medianGrossRent: z.number().int().positive(),
     medianHomeValue: z.number().int().positive(),
-    provenance: ProvenanceSchema
+    provenance: ProvenanceSchema,
   }),
-  laborAndEconomy: z.object({
-    unemploymentRatePct: z.number().min(0).max(40),
-    avgWeeklyWageAllIndustries: z.number().positive(),
-    newHousingPermits12Mo: z.number().int().nonnegative(),
-    permitsPer1kResidents: z.number().nonnegative(),
-    femaRiskScore: z.number().min(0).max(100),
-    provenance: ProvenanceSchema
-  }),
-  industries: z.array(NaicsSaturationSchema).length(25),
+  housingAndTaxes: HousingAndTaxesSchema.optional(),
+  climateNormals: ClimateNormalsSchema.optional(),
+  terrainElevation: TerrainElevationSchema.optional(),
+  waterUtility: WaterUtilitySchema.optional(),
+  higherEducation: HigherEducationSchema.optional(),
+  evInfrastructure: EvInfrastructureSchema.optional(),
+  nationalParks: NationalParksSchema.optional(),
+  upcomingEvents: UpcomingEventsSchema.optional(),
+  laborAndEconomy: z
+    .object({
+      unemploymentRatePct: z.number().min(0).max(40),
+      avgWeeklyWageAllIndustries: z.number().positive(),
+      newHousingPermits12Mo: z.number().int().nonnegative(),
+      permitsPer1kResidents: z.number().nonnegative(),
+      femaRiskScore: z.number().min(0).max(100),
+      provenance: ProvenanceSchema,
+    })
+    .optional(),
+  industries: z.array(NaicsSaturationSchema),
   permitsAndTax: MunicipalPermitIntelSchema,
-  topTrafficCorridors: z.array(TrafficCorridorSchema),
-  marketSignals: z.object({
-    reportedRetailRentSqFtYr: z.number().positive().nullable(),
-    reportedIndustrialRentSqFtYr: z.number().positive().nullable(),
-    topSearchedNaics30d: z.array(z.string()),
-    verifiedLocalProsCount: z.number().int().nonnegative()
-  }),
-  scores: z.object({
-    overallViability: z.number().int().min(0).max(100),
-    purchasingPower: z.number().int().min(0).max(100),
-    growthMomentum: z.number().int().min(0).max(100),
-    costEfficiency: z.number().int().min(0).max(100),
-    regulatoryFriction: z.number().int().min(0).max(100)
-  }),
-  executiveTravel: ExecutiveTravelIntelSchema.optional()
+  topTrafficCorridors: z.array(TrafficCorridorSchema).optional(),
+  marketSignals: z
+    .object({
+      reportedRetailRentSqFtYr: z.number().positive().nullable().optional(),
+      reportedIndustrialRentSqFtYr: z.number().positive().nullable().optional(),
+      topSearchedNaics30d: z.array(z.string()).optional(),
+      verifiedLocalProsCount: z.number().int().nonnegative().optional(),
+    })
+    .optional(),
+  scores: z
+    .object({
+      overallViability: z.number().int().min(0).max(100),
+      purchasingPower: z.number().int().min(0).max(100),
+      growthMomentum: z.number().int().min(0).max(100),
+      costEfficiency: z.number().int().min(0).max(100),
+      regulatoryFriction: z.number().int().min(0).max(100),
+    })
+    .optional(),
+  executiveTravel: ExecutiveTravelIntelSchema.optional(),
 });
 
 export const BreakevenInputSchema = z.object({
   sqft: z.number().positive(),
   baseRentPerSqFtYr: z.number().nonnegative(),
-  nnnCamPerSqFtYr: z.number().nonnegative().default(6.50),
+  nnnCamPerSqFtYr: z.number().nonnegative().default(6.5),
   hourlyWage: z.number().positive(),
   staffHoursPerWeek: z.number().nonnegative(),
   payrollTaxAndBenefitsLoadPct: z.number().min(0).max(1).default(0.18),
   otherMonthlyFixedOverhead: z.number().nonnegative().default(1200),
   avgGrossTicket: z.number().positive(),
   cogsPct: z.number().min(0).max(0.999),
-  combinedSalesTaxRate: z.number().min(0).max(0.15)
+  combinedSalesTaxRate: z.number().min(0).max(0.15),
 });
 
 export const BreakevenOutputSchema = z.object({
@@ -173,7 +346,7 @@ export const BreakevenOutputSchema = z.object({
   dailyCustomersNeeded: z.number().int().nonnegative(),
   monthlyBreakEvenNetRevenue: z.number().nonnegative(),
   dailyBreakEvenGrossReceipts: z.number().nonnegative(),
-  annualRevenuePerSqFtNeeded: z.number().nonnegative()
+  annualRevenuePerSqFtNeeded: z.number().nonnegative(),
 });
 
 export type DataGranularity = z.infer<typeof DataGranularitySchema>;
@@ -183,5 +356,5 @@ export type TrafficCorridor = z.infer<typeof TrafficCorridorSchema>;
 export type MunicipalPermitIntel = z.infer<typeof MunicipalPermitIntelSchema>;
 export type ExecutiveTravelIntel = z.infer<typeof ExecutiveTravelIntelSchema>;
 export type CityRecord = z.infer<typeof CityRecordSchema>;
-export type BreakevenInput = z.infer<typeof BreakevenInputSchema>;
+export type BreakevenInput = z.input<typeof BreakevenInputSchema>;
 export type BreakevenOutput = z.infer<typeof BreakevenOutputSchema>;

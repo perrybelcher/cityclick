@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { CityRecordSchema, type CityRecord, type NaicsSaturation, type TrafficCorridor, type MunicipalPermitIntel } from '../src/lib/schema';
+import { CityRecordSchema, type CityRecord, type NaicsSaturation } from '../src/lib/schema';
 import { NAICS_25_DEFINITIONS } from '../src/config/naics';
 import { computeNaicsSaturation } from '../src/lib/saturation';
 import { computeCityScores, type NationalCohortData } from '../src/lib/scores';
@@ -450,10 +450,10 @@ export function runFederalETL() {
       popGrowth5YrPct: record.demographics.popGrowth5YrPct,
       medianHouseholdIncome: record.demographics.medianHouseholdIncome,
       combinedSalesTaxRate: record.permitsAndTax.combinedSalesTaxRate,
-      reportedRetailRentSqFtYr: record.marketSignals.reportedRetailRentSqFtYr,
-      overallViability: record.scores.overallViability,
-      purchasingPower: record.scores.purchasingPower,
-      growthMomentum: record.scores.growthMomentum,
+      reportedRetailRentSqFtYr: record.marketSignals?.reportedRetailRentSqFtYr,
+      overallViability: record.scores?.overallViability,
+      purchasingPower: record.scores?.purchasingPower,
+      growthMomentum: record.scores?.growthMomentum,
       topUnderservedNaics: topUnderserved.length > 0 ? topUnderserved : ['Pet Care', 'Daycare']
     });
 
@@ -466,10 +466,10 @@ export function runFederalETL() {
       data_json, updated_at
     ) VALUES (
       '${record.slug}', '${record.cityId}', '${record.countyFips}', '${record.name}', '${record.stateCode}', '${record.stateName}',
-      ${record.lat}, ${record.lng}, ${record.demographics.population}, ${record.demographics.popGrowth5YrPct}, ${record.demographics.medianHouseholdIncome},
-      ${record.permitsAndTax.combinedSalesTaxRate}, ${record.marketSignals.reportedRetailRentSqFtYr},
+      ${record.lat}, ${record.lng}, ${record.demographics.population}, ${record.demographics.popGrowth5YrPct ?? 'NULL'}, ${record.demographics.medianHouseholdIncome},
+      ${record.permitsAndTax.combinedSalesTaxRate}, ${record.marketSignals?.reportedRetailRentSqFtYr ?? 'NULL'},
       ${record.permitsAndTax.avgPermitWaitDays ?? 'NULL'},
-      ${record.scores.overallViability}, ${record.scores.purchasingPower}, ${record.scores.growthMomentum}, ${record.scores.costEfficiency}, ${record.scores.regulatoryFriction},
+      ${record.scores?.overallViability ?? 'NULL'}, ${record.scores?.purchasingPower ?? 'NULL'}, ${record.scores?.growthMomentum ?? 'NULL'}, ${record.scores?.costEfficiency ?? 'NULL'}, ${record.scores?.regulatoryFriction ?? 'NULL'},
       '${JSON.stringify(record).replace(/'/g, "''")}', '${verifiedAt}'
     );`);
   }

@@ -8,54 +8,203 @@ Astro.response.headers.set('Cache-Control', 'public, s-maxage=86400, stale-while
 
 const { cityA, cityB } = Astro.params;
 
-const CERTIFIED = ['tx/austin','ar/hot-springs-village','id/boise','fl/tampa','az/scottsdale','tn/nashville','ok/oklahoma-city'];
+const INDEXABLE_FLAGSHIPS = [
+  'tx/austin',
+  'tn/nashville',
+  'ar/hot-springs',
+  'ar/hot-springs-village',
+  'id/boise',
+  'fl/tampa',
+  'az/scottsdale',
+];
+const INDEXABLE_SET = new Set(INDEXABLE_FLAGSHIPS);
+
+const ALLOWED_COMPARE_SLUGS = [...INDEXABLE_FLAGSHIPS, 'ok/oklahoma-city'];
+
+const allowedCities = ALLOWED_COMPARE_SLUGS.map((slug) => manifest.find((c: any) => c.slug === slug)).filter(Boolean) as any[];
+const certifiedCities = INDEXABLE_FLAGSHIPS.map((slug) => manifest.find((c: any) => c.slug === slug)).filter(Boolean) as any[];
+
 let recordA: any = null;
 let recordB: any = null;
 
-for (const c of manifest) {
-  const slugKey = c.slug.replace('/', '-'); // e.g. tx-austin
+for (const c of allowedCities) {
+  const slugKey = c.slug.replace('/', '-');
   if (slugKey === cityA || c.slug === cityA) recordA = c;
   if (slugKey === cityB || c.slug === cityB) recordB = c;
 }
 
-// Fallback if not found
-if (!recordA || !recordB || !CERTIFIED.includes(recordA.slug) || !CERTIFIED.includes(recordB.slug)) {
+if (!recordA || !recordB) {
   return Astro.redirect('/?error=comparison_not_found');
 }
-const cmp = (label: string, a: number | null, b: number | null, higherWord: string, fmt: (n: number) => string) => {
+
+const cmp = (
+  label: string,
+  a: number | null | undefined,
+  b: number | null | undefined,
+  higherWord: string,
+  fmt: (n: number) => string
+) => {
   if (a == null || b == null || a === b) return null;
-  const hi = a > b ? recordA : recordB, lo = a > b ? recordB : recordA;
+  const hi = a > b ? recordA : recordB;
+  const lo = a > b ? recordB : recordA;
   return `${hi.name} has ${higherWord} ${label} (${fmt(Math.max(a, b))} vs. ${fmt(Math.min(a, b))} in ${lo.name}).`;
 };
+
 const usdF = (n: number) => `$${Math.round(n).toLocaleString('en-US')}`;
 const pctF = (n: number) => `${n.toFixed(2)}%`;
+
 const verdictLines = [
   cmp('median household income', recordA.medianHouseholdIncome, recordB.medianHouseholdIncome, 'the higher', usdF),
   cmp('median home value', recordA.medianHomeValue, recordB.medianHomeValue, 'the higher', usdF),
   cmp('median gross rent per month', recordA.medianGrossRent, recordB.medianGrossRent, 'the higher', usdF),
   cmp('effective property tax rate', recordA.effectivePropertyTaxRatePct, recordB.effectivePropertyTaxRatePct, 'the higher', pctF),
-  cmp('combined sales tax rate', recordA.combinedSalesTaxRate != null ? recordA.combinedSalesTaxRate * 100 : null, recordB.combinedSalesTaxRate != null ? recordB.combinedSalesTaxRate * 100 : null, 'the higher', (n) => `${Number(n.toFixed(3))}%`),
-  cmp('population change since 2020', recordA.popChange2020to2023Pct, recordB.popChange2020to2023Pct, 'the faster', (n) => `${n > 0 ? '+' : ''}${n}%`),
+  cmp(
+    'combined sales tax rate',
+    recordA.combinedSalesTaxRate != null ? recordA.combinedSalesTaxRate * 100 : null,
+    recordB.combinedSalesTaxRate != null ? recordB.combinedSalesTaxRate * 100 : null,
+    'the higher',
+    (n) => `${Number(n.toFixed(3))}%`
+  ),
+  cmp(
+    'population change since 2020',
+    recordA.popChange2020to2023Pct,
+    recordB.popChange2020to2023Pct,
+    'the faster',
+    (n) => `${n > 0 ? '+' : ''}${n}%`
+  ),
 ].filter(Boolean) as string[];
-const ratio = recordA.medianHouseholdIncome && recordB.medianHouseholdIncome && recordA.medianHomeValue && recordB.medianHomeValue
-  ? [recordA, recordB].map((r) => ({ name: r.name, x: r.medianHomeValue / r.medianHouseholdIncome })) : null;
+
+const ratio =
+  recordA.medianHouseholdIncome &&
+  recordB.medianHouseholdIncome &&
+  recordA.medianHomeValue &&
+  recordB.medianHomeValue
+    ? [recordA, recordB].map((r) => ({ name: r.name, x: r.medianHomeValue / r.medianHouseholdIncome }))
+    : null;
+
+interface CompareRow {
+  label: string;
+  valA: string;
+  valB: string;
+  shaded?: boolean;
+}
+
+const rows: CompareRow[] = [];
+if (recordA.population != null && recordB.population != null) {
+  rows.push({
+    label: 'Population (2023 est.)',
+    valA: recordA.population.toLocaleString('en-US'),
+    valB: recordB.population.toLocaleString('en-US'),
+  });
+}
+if (recordA.popChange2020to2023Pct != null && recordB.popChange2020to2023Pct != null) {
+  rows.push({
+    label: 'Population Change Since 2020',
+    valA: `${recordA.popChange2020to2023Pct > 0 ? '+' : ''}${recordA.popChange2020to2023Pct}%`,
+    valB: `${recordB.popChange2020to2023Pct > 0 ? '+' : ''}${recordB.popChange2020to2023Pct}%`,
+  });
+}
+if (recordA.medianHouseholdIncome != null && recordB.medianHouseholdIncome != null) {
+  rows.push({
+    label: 'Median Household Income',
+    valA: `$${recordA.medianHouseholdIncome.toLocaleString('en-US')}`,
+    valB: `$${recordB.medianHouseholdIncome.toLocaleString('en-US')}`,
+  });
+}
+if (recordA.medianHomeValue != null && recordB.medianHomeValue != null) {
+  rows.push({
+    label: 'Median Home Value',
+    valA: `$${recordA.medianHomeValue.toLocaleString('en-US')}`,
+    valB: `$${recordB.medianHomeValue.toLocaleString('en-US')}`,
+  });
+}
+if (recordA.medianGrossRent != null && recordB.medianGrossRent != null) {
+  rows.push({
+    label: 'Median Gross Rent (monthly)',
+    valA: `$${recordA.medianGrossRent.toLocaleString('en-US')}`,
+    valB: `$${recordB.medianGrossRent.toLocaleString('en-US')}`,
+  });
+}
+if (recordA.effectivePropertyTaxRatePct != null && recordB.effectivePropertyTaxRatePct != null) {
+  rows.push({
+    label: 'Effective Property Tax Rate',
+    valA: `${recordA.effectivePropertyTaxRatePct.toFixed(2)}%`,
+    valB: `${recordB.effectivePropertyTaxRatePct.toFixed(2)}%`,
+  });
+}
+if (recordA.combinedSalesTaxRate != null && recordB.combinedSalesTaxRate != null) {
+  rows.push({
+    label: 'Combined Sales Tax Rate',
+    valA: `${Number((recordA.combinedSalesTaxRate * 100).toFixed(3)).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 3 })}%`,
+    valB: `${Number((recordB.combinedSalesTaxRate * 100).toFixed(3)).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 3 })}%`,
+  });
+}
+if (recordA.timeZone && recordB.timeZone) {
+  rows.push({
+    label: 'Time Zone',
+    valA: recordA.timeZone,
+    valB: recordB.timeZone,
+  });
+}
+
+const popChangeOmittedNote =
+  recordA.popChange2020to2023Pct == null || recordB.popChange2020to2023Pct == null;
+
+const compareRobots =
+  INDEXABLE_SET.has(recordA.slug) && INDEXABLE_SET.has(recordB.slug) && recordA.slug !== recordB.slug
+    ? 'index, follow, max-image-preview:large'
+    : 'noindex, follow';
 ---
 
 <Layout
   title={`${recordA.name}, ${recordA.stateCode.toUpperCase()} vs ${recordB.name}, ${recordB.stateCode.toUpperCase()} Comparison — CityClick`}
-  description={`Compare ${recordA.name} and ${recordB.name} side-by-side on Census demographics, housing costs, property tax and sales tax, and local sales tax.`}
+  description={`Compare ${recordA.name} and ${recordB.name} side-by-side on Census demographics, housing costs, effective property tax, and combined sales tax.`}
+  robots={compareRobots}
 >
   <section class="bg-gradient-to-b from-[#EDF4FC] to-white py-12 border-b border-slate-200">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-[#1D68F2] text-xs font-bold mb-4">
-        Comparative Site Selection
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 space-y-6">
+      <div>
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-[#1D68F2] text-xs font-bold mb-4">
+          Head-to-Head City Comparison
+        </div>
+        <h1 class="text-3xl sm:text-4xl font-black text-[#152438] tracking-tight">
+          {recordA.name}, {recordA.stateCode.toUpperCase()} vs {recordB.name}, {recordB.stateCode.toUpperCase()}
+        </h1>
+        <p class="text-sm text-slate-600 mt-2">
+          Side-by-side comparison of primary-sourced Census demographics, housing costs, and local sales-tax rates. Only metrics verified on both city records are compared.
+        </p>
       </div>
-      <h1 class="text-3xl sm:text-4xl font-black text-[#152438] tracking-tight">
-        {recordA.name}, {recordA.stateCode.toUpperCase()} vs {recordB.name}, {recordB.stateCode.toUpperCase()}
-      </h1>
-      <p class="text-sm text-slate-600 mt-2">
-        Side-by-side municipal, commercial underwriting, and travel logistics comparison for multi-unit operators.
-      </p>
+
+      <!-- Interactive City-vs-City Switcher (Starts from Current Selection) -->
+      <form id="compare-picker-form" class="bg-white p-4 sm:p-5 rounded-2xl border border-slate-200 shadow-xs flex flex-col sm:flex-row items-stretch sm:items-end gap-3">
+        <div class="flex-1">
+          <label for="compare-city-a" class="block text-[11px] font-bold uppercase tracking-wider text-slate-500 mb-1">First City</label>
+          <select id="compare-city-a" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 bg-white text-xs sm:text-sm font-bold text-[#152438] outline-none focus:border-[#1D68F2]">
+            {certifiedCities.map((c) => (
+              <option value={c.slug.replace('/', '-')} selected={c.slug === recordA.slug}>
+                {c.name}, {c.stateCode.toUpperCase()}
+              </option>
+            ))}
+          </select>
+        </div>
+        <div class="hidden sm:flex items-center justify-center pb-2.5 text-xs font-black text-slate-400">VS</div>
+        <div class="flex-1">
+          <label for="compare-city-b" class="block text-[11px] font-bold uppercase tracking-wider text-slate-500 mb-1">Second City</label>
+          <select id="compare-city-b" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 bg-white text-xs sm:text-sm font-bold text-[#152438] outline-none focus:border-[#1D68F2]">
+            {certifiedCities.map((c) => (
+              <option value={c.slug.replace('/', '-')} selected={c.slug === recordB.slug}>
+                {c.name}, {c.stateCode.toUpperCase()}
+              </option>
+            ))}
+          </select>
+        </div>
+        <button
+          type="submit"
+          class="px-5 py-2.5 rounded-xl bg-[#1D68F2] hover:bg-[#1555C7] text-white font-extrabold text-xs sm:text-sm transition cursor-pointer shrink-0 shadow-xs"
+        >
+          Compare Cities →
+        </button>
+      </form>
     </div>
   </section>
 
@@ -68,58 +217,13 @@ const ratio = recordA.medianHouseholdIncome && recordB.medianHouseholdIncome && 
       </div>
 
       <div class="divide-y divide-slate-100 text-xs sm:text-sm">
-        <div class="grid grid-cols-3 p-4 sm:p-6 items-center">
-          <div class="font-semibold text-slate-700">Population (2023 est.)</div>
-          <div class="text-center font-bold text-slate-800">{recordA.population != null ? recordA.population.toLocaleString() : '—'}</div>
-          <div class="text-center font-bold text-slate-800">{recordB.population != null ? recordB.population.toLocaleString() : '—'}</div>
-        </div>
-        <div class="grid grid-cols-3 p-4 sm:p-6 items-center bg-slate-50/50">
-          <div class="font-semibold text-slate-700">Population Change Since 2020</div>
-          <div class="text-center font-bold text-slate-800">{recordA.popChange2020to2023Pct != null ? `${recordA.popChange2020to2023Pct > 0 ? '+' : ''}${recordA.popChange2020to2023Pct}%` : '—'}</div>
-          <div class="text-center font-bold text-slate-800">{recordB.popChange2020to2023Pct != null ? `${recordB.popChange2020to2023Pct > 0 ? '+' : ''}${recordB.popChange2020to2023Pct}%` : '—'}</div>
-        </div>
-        <div class="grid grid-cols-3 p-4 sm:p-6 items-center">
-          <div class="font-semibold text-slate-700">Median Household Income</div>
-          <div class="text-center font-bold text-slate-800">{recordA.medianHouseholdIncome != null ? `$${recordA.medianHouseholdIncome.toLocaleString()}` : '—'}</div>
-          <div class="text-center font-bold text-slate-800">{recordB.medianHouseholdIncome != null ? `$${recordB.medianHouseholdIncome.toLocaleString()}` : '—'}</div>
-        </div>
-        <div class="grid grid-cols-3 p-4 sm:p-6 items-center bg-slate-50/50">
-          <div class="font-semibold text-slate-700">Median Home Value</div>
-          <div class="text-center font-bold text-slate-800">{recordA.medianHomeValue != null ? `$${recordA.medianHomeValue.toLocaleString()}` : '—'}</div>
-          <div class="text-center font-bold text-slate-800">{recordB.medianHomeValue != null ? `$${recordB.medianHomeValue.toLocaleString()}` : '—'}</div>
-        </div>
-        <div class="grid grid-cols-3 p-4 sm:p-6 items-center">
-          <div class="font-semibold text-slate-700">Median Gross Rent (monthly)</div>
-          <div class="text-center font-bold text-slate-800">{recordA.medianGrossRent != null ? `$${recordA.medianGrossRent.toLocaleString()}` : '—'}</div>
-          <div class="text-center font-bold text-slate-800">{recordB.medianGrossRent != null ? `$${recordB.medianGrossRent.toLocaleString()}` : '—'}</div>
-        </div>
-        <div class="grid grid-cols-3 p-4 sm:p-6 items-center bg-slate-50/50">
-          <div class="font-semibold text-slate-700">Effective Property Tax Rate</div>
-          <div class="text-center font-bold text-slate-800">{recordA.effectivePropertyTaxRatePct != null ? `${recordA.effectivePropertyTaxRatePct.toFixed(2)}%` : '—'}</div>
-          <div class="text-center font-bold text-slate-800">{recordB.effectivePropertyTaxRatePct != null ? `${recordB.effectivePropertyTaxRatePct.toFixed(2)}%` : '—'}</div>
-        </div>
-
-        <!-- Combined Sales Tax -->
-        <div class="grid grid-cols-3 p-4 sm:p-6 items-center bg-slate-50/50">
-          <div class="font-semibold text-slate-700">Combined Sales Tax Rate</div>
-          <div class="text-center font-bold text-slate-800">
-            {recordA.combinedSalesTaxRate != null ? `${Number((recordA.combinedSalesTaxRate * 100).toFixed(3)).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:3})}%` : '—'}
+        {rows.map((row, idx) => (
+          <div class={`grid grid-cols-3 p-4 sm:p-6 items-center ${idx % 2 === 1 ? 'bg-slate-50/50' : ''}`}>
+            <div class="font-semibold text-slate-700">{row.label}</div>
+            <div class="text-center font-bold text-slate-800">{row.valA}</div>
+            <div class="text-center font-bold text-slate-800">{row.valB}</div>
           </div>
-          <div class="text-center font-bold text-slate-800">
-            {recordB.combinedSalesTaxRate != null ? `${Number((recordB.combinedSalesTaxRate * 100).toFixed(3)).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:3})}%` : '—'}
-          </div>
-        </div>
-
-        <!-- Time Zone -->
-        <div class="grid grid-cols-3 p-4 sm:p-6 items-center">
-          <div class="font-semibold text-slate-700">Time Zone</div>
-          <div class="text-center font-bold text-slate-800">
-            {recordA.timeZone ?? 'CT'}
-          </div>
-          <div class="text-center font-bold text-slate-800">
-            {recordB.timeZone ?? 'ET'}
-          </div>
-        </div>
+        ))}
       </div>
 
       <!-- Actions -->
@@ -127,35 +231,57 @@ const ratio = recordA.medianHouseholdIncome && recordB.medianHouseholdIncome && 
         <div></div>
         <div class="text-center">
           <a
-            href={`/${recordA.slug}`}
+            href={`/${recordA.slug}/`}
             class="px-4 py-2 rounded-xl bg-[#1D68F2] text-white font-semibold text-xs inline-block hover:bg-blue-600 transition"
           >
-            Inspect {recordA.name} Profile →
+            Inspect {recordA.name} Guide →
           </a>
         </div>
         <div class="text-center">
           <a
-            href={`/${recordB.slug}`}
+            href={`/${recordB.slug}/`}
             class="px-4 py-2 rounded-xl bg-[#1D68F2] text-white font-semibold text-xs inline-block hover:bg-blue-600 transition"
           >
-            Inspect {recordB.name} Profile →
+            Inspect {recordB.name} Guide →
           </a>
         </div>
       </div>
     </div>
   </section>
+
   <section class="max-w-6xl mx-auto px-4 sm:px-6 pb-10">
     <div class="bg-white rounded-3xl border border-slate-200 shadow-sm p-6 sm:p-8 space-y-4">
       <h2 class="text-xl font-black text-[#152438]">How {recordA.name} and {recordB.name} compare</h2>
       <ul class="list-disc pl-5 space-y-1.5 text-sm text-slate-700">
         {verdictLines.map((l) => <li>{l}</li>)}
       </ul>
-      {ratio && (
+      {ratio && ratio[0] && ratio[1] && (
         <p class="text-sm text-slate-700">
           Housing cost relative to income: median home value is {ratio[0].x.toFixed(1)}x median household income in {ratio[0].name} and {ratio[1].x.toFixed(1)}x in {ratio[1].name}. A lower multiple generally means homes are more affordable relative to local earnings.
         </p>
       )}
-      <p class="text-xs text-slate-400">Differences are computed directly from the table above. Sources: U.S. Census Bureau ACS 2023 5-year estimates (2019–2023), Population Estimates (July 2023), and state revenue departments for sales tax. Not financial advice.</p>
+      {popChangeOmittedNote && (
+        <p class="text-xs text-slate-500">
+          Note: 2020-to-2023 population change is omitted when comparing an unincorporated Census-designated place (such as Hot Springs Village), because the Census sub-county municipal population estimates dataset covers incorporated municipalities only.
+        </p>
+      )}
+      <p class="text-xs text-slate-400">
+        Differences are computed directly from the verified figures above. Sources: U.S. Census Bureau ACS 2023 5-year estimates (2019–2023), Population Estimates (July 2023), and state revenue departments for sales tax. Not financial advice.
+      </p>
     </div>
   </section>
+
+  <script is:inline>
+    const pickerForm = document.getElementById('compare-picker-form');
+    if (pickerForm) {
+      pickerForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const a = document.getElementById('compare-city-a')?.value;
+        const b = document.getElementById('compare-city-b')?.value;
+        if (a && b) {
+          window.location.href = '/compare/' + a + '-vs-' + b + '/';
+        }
+      });
+    }
+  </script>
 </Layout>

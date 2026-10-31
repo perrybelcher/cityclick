@@ -31,7 +31,7 @@
         "sourceName": "US Census Bureau ACS 5-Year Estimates 2023 (Table-Based Summary File)",
         "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/",
         "datasetVintage": "ACS-2023-5YR",
-        "verifiedAt": "2026-10-18",
+        "verifiedAt": "2026-10-31T00:00:00Z",
         "granularity": "place"
       },
       "popChange2020to2023Pct": -0.1,
@@ -47,13 +47,14 @@
         "usAvgPer10k": 2.12,
         "saturationIndex": 147,
         "status": "saturated",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "83 employer establishments (NAICS 722515) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population of those ZIPs (265,704). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "83 employer establishments (NAICS 722515) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population (265,704). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -65,13 +66,14 @@
         "usAvgPer10k": 7.44,
         "saturationIndex": 105,
         "status": "balanced",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "207 employer establishments (NAICS 722511) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population of those ZIPs (265,704). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "207 employer establishments (NAICS 722511) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population (265,704). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -83,13 +85,14 @@
         "usAvgPer10k": 7.75,
         "saturationIndex": 115,
         "status": "balanced",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "236 employer establishments (NAICS 722513) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population of those ZIPs (265,704). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "236 employer establishments (NAICS 722513) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population (265,704). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -101,13 +104,14 @@
         "usAvgPer10k": 0.9,
         "saturationIndex": 292,
         "status": "saturated",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "70 employer establishments (NAICS 722410) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population of those ZIPs (265,704). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "70 employer establishments (NAICS 722410) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population (265,704). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -119,13 +123,14 @@
         "usAvgPer10k": 2.31,
         "saturationIndex": 142,
         "status": "saturated",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "87 employer establishments (NAICS 812112) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population of those ZIPs (265,704). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "87 employer establishments (NAICS 812112) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population (265,704). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -137,13 +142,14 @@
         "usAvgPer10k": 0.86,
         "saturationIndex": 83,
         "status": "balanced",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "19 employer establishments (NAICS 812113) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population of those ZIPs (265,704). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "19 employer establishments (NAICS 812113) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population (265,704). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -155,13 +161,14 @@
         "usAvgPer10k": 1.0,
         "saturationIndex": 136,
         "status": "saturated",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "36 employer establishments (NAICS 713940) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population of those ZIPs (265,704). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "36 employer establishments (NAICS 713940) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population (265,704). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -173,13 +180,14 @@
         "usAvgPer10k": 0.46,
         "saturationIndex": 259,
         "status": "saturated",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "32 employer establishments (NAICS 812910) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population of those ZIPs (265,704). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "32 employer establishments (NAICS 812910) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population (265,704). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -191,13 +199,14 @@
         "usAvgPer10k": 0.69,
         "saturationIndex": 185,
         "status": "saturated",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "34 employer establishments (NAICS 541940) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population of those ZIPs (265,704). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "34 employer establishments (NAICS 541940) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population (265,704). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -209,13 +218,33 @@
         "usAvgPer10k": 2.2,
         "saturationIndex": 101,
         "status": "balanced",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "59 employer establishments (NAICS 811111) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population of those ZIPs (265,704). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "59 employer establishments (NAICS 811111) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population (265,704). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "811192",
+        "slug": "car-washes",
+        "label": "Car Washes & Auto Detailing",
+        "establishments": 11,
+        "per10kResidents": 0.41,
+        "usAvgPer10k": 0.35,
+        "saturationIndex": 118,
+        "status": "balanced",
+        "smallSample": true,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "11 employer establishments (NAICS 811192) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population (265,704). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -227,13 +256,14 @@
         "usAvgPer10k": 3.89,
         "saturationIndex": 152,
         "status": "saturated",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "157 employer establishments (NAICS 621210) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population of those ZIPs (265,704). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "157 employer establishments (NAICS 621210) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population (265,704). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -245,13 +275,14 @@
         "usAvgPer10k": 0.97,
         "saturationIndex": 267,
         "status": "saturated",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "69 employer establishments (NAICS 621310) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population of those ZIPs (265,704). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "69 employer establishments (NAICS 621310) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population (265,704). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -263,13 +294,14 @@
         "usAvgPer10k": 1.3,
         "saturationIndex": 173,
         "status": "saturated",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "60 employer establishments (NAICS 621340) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population of those ZIPs (265,704). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "60 employer establishments (NAICS 621340) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population (265,704). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -281,13 +313,14 @@
         "usAvgPer10k": 2.12,
         "saturationIndex": 131,
         "status": "saturated",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "74 employer establishments (NAICS 624410) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population of those ZIPs (265,704). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "74 employer establishments (NAICS 624410) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population (265,704). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -299,13 +332,14 @@
         "usAvgPer10k": 0.82,
         "saturationIndex": 0,
         "status": "underserved",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "0 employer establishments (NAICS 445120) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population of those ZIPs (265,704). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "0 employer establishments (NAICS 445120) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population (265,704). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -317,13 +351,14 @@
         "usAvgPer10k": 0.65,
         "saturationIndex": 167,
         "status": "saturated",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "29 employer establishments (NAICS 448140) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population of those ZIPs (265,704). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "29 employer establishments (NAICS 448140) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population (265,704). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -335,13 +370,14 @@
         "usAvgPer10k": 4.8,
         "saturationIndex": 203,
         "status": "saturated",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "259 employer establishments (NAICS 541110) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population of those ZIPs (265,704). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "259 employer establishments (NAICS 541110) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population (265,704). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -353,13 +389,14 @@
         "usAvgPer10k": 1.44,
         "saturationIndex": 256,
         "status": "saturated",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "98 employer establishments (NAICS 541211) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population of those ZIPs (265,704). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "98 employer establishments (NAICS 541211) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population (265,704). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -371,72 +408,48 @@
         "usAvgPer10k": 4.74,
         "saturationIndex": 301,
         "status": "saturated",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "379 employer establishments (NAICS 531210) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population of those ZIPs (265,704). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "379 employer establishments (NAICS 531210) across 9 ZIP codes whose USPS city is Boise, ID; density uses ACS 2023 ZCTA population (265,704). National benchmark = all US ZIP rows / US population."
         }
       }
     ],
     "permitsAndTax": {
       "stateTaxRate": 0.06,
+      "countyTaxRate": 0.0,
+      "cityTaxRate": 0.0,
+      "specialDistrictTaxRate": 0.0,
       "localTaxRate": 0.0,
       "combinedSalesTaxRate": 0.06,
       "provenance": {
         "sourceName": "Idaho State Tax Commission (6% state; no Boise local sales tax)",
         "sourceUrl": "https://tax.idaho.gov/taxes/sales-use/online-guide/",
         "datasetVintage": "2026",
-        "verifiedAt": "2026-10-18",
+        "verifiedAt": "2026-10-31T00:00:00Z",
         "granularity": "place"
       }
     },
-    "topTrafficCorridors": [
-      {
-        "roadName": "Main Arterial Corridor 1",
-        "segmentDescription": "Central Commercial Corridor through Boise",
-        "aadt": 28251,
-        "heavyTruckPct": 5.5,
-        "lat": 43.600229,
-        "lng": -116.231656,
-        "year": 2024,
-        "provenance": {
-          "sourceName": "Idaho DOT AADT Database",
-          "sourceUrl": "https://www.transportation.gov/",
-          "datasetVintage": "2024-AADT",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "place"
-        }
-      }
-    ],
     "marketSignals": {},
     "executiveTravel": {
-      "timeZone": "America/Boise (MT: UTC-07:00)",
+      "timeZone": "America/Boise",
       "timeZoneAbbr": "MT",
       "utcOffset": "-07:00",
       "primaryAirport": {
-        "name": "Boise Airport",
+        "name": "Boise Air Terminal/Gowen Field",
         "iata": "BOI",
-        "distanceMiles": 4.5,
-        "transitToDowntown": null
-      },
-      "powerPlugs": {
-        "types": [
-          "Type A (2-pin)",
-          "Type B (3-pin grounded)"
-        ],
-        "voltage": "120V",
-        "frequency": "60Hz",
-        "adapterAdvice": "Visitors from UK, EU, Australia, and Asia require a standard Type A/B plug adapter and dual-voltage converter."
-      },
-      "currency": {
-        "code": "USD",
-        "symbol": "$",
-        "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
-        "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
+        "lat": 43.5644,
+        "lng": -116.223,
+        "distanceMiles": 2.5,
+        "transitToDowntown": null,
+        "source": "OurAirports (public domain) for name, IATA code and coordinates; distance is straight-line from the U.S. Census Gazetteer city center point",
+        "sourceUrl": "https://ourairports.com/data/",
+        "cityCenterMethod": "Census Gazetteer internal point",
+        "retrieved": "2026-10-31"
       },
       "climate": {
         "summerHighF": 94,
@@ -444,31 +457,51 @@
         "annualRainfallInches": 14.4,
         "summerHighBasis": "Average July daily high",
         "winterLowBasis": "Average January daily low",
-        "source": "Open-Meteo Historical Weather API (ERA5 reanalysis), 2015-2024 average, retrieved 2026-10-18"
+        "source": "Open-Meteo Historical Weather API (ERA5 reanalysis), 2015-2024 average, retrieved 2026-10-18",
+        "sourceUrl": "https://open-meteo.com/en/docs/historical-weather-api"
       },
       "emergency": {
         "emergencyDispatch": "911",
-        "nearestTraumaHospital": "St. Luke's Boise Medical Center",
-        "hospitalAddress": "190 E Bannock St, Downtown Boise, ID 83712",
-        "source": "Google Places API (New), retrieved 2026-10-18"
-      },
-      "visitorLogistics": {
-        "tapWaterPotability": "100% Safe municipal drinking water conforming to EPA Safe Drinking Water Act standards.",
-        "salesTaxRefundPolicy": "International travelers may claim state sales tax refunds on qualifying departures at designated airport customs counters.",
-        "rideshareAvailability": "Ubiquitous (Uber and Lyft operational 24/7 across the metropolitan area)."
-      },
-      "provenance": {
-        "sourceName": "FAA Airport Database & International Trade Administration",
-        "sourceUrl": "https://www.trade.gov/",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
+        "nearestTraumaHospital": "Boise VA Medical Center",
+        "hospitalAddress": "500 W. Fort Street, Boise, ID 83702",
+        "cmsFacilityId": "13003F",
+        "emergencyServices": true,
+        "source": "CMS Care Compare hospital general information (federal dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma level, ranking or nearest-facility claim.",
+        "erHospitals": [
+          {
+            "name": "Boise VA Medical Center",
+            "address": "500 W. Fort Street, Boise, ID 83702",
+            "type": "Acute Care - Veterans Administration",
+            "cmsFacilityId": "13003F",
+            "lat": 43.619442,
+            "lng": -116.194855
+          },
+          {
+            "name": "Saint Alphonsus Regional Med Ctr",
+            "address": "1055 North Curtis Road, Boise, ID 83706",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "130007",
+            "lat": 43.613802,
+            "lng": -116.253709
+          },
+          {
+            "name": "St. Luke's Regional Med Ctr",
+            "address": "190 East Bannock Street, Boise, ID 83712",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "130006",
+            "lat": 43.612499,
+            "lng": -116.1927
+          }
+        ],
+        "erHospitalsSource": "CMS Care Compare hospital general information (federal dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma level, ranking or nearest-facility claim."
       }
     },
     "terrainElevation": {
       "elevationFeet": 2730.0,
       "elevationMeters": 832.1,
-      "topographyClass": "Boise River Basin & Northern Rocky Mountain Foothills"
+      "topographyClass": "Boise River Basin & Northern Rocky Mountain Foothills",
+      "sourceName": "USGS 3D Elevation Program (3DEP Elevation Point Query Service)",
+      "sourceUrl": "https://epqs.nationalmap.gov/v1/json"
     },
     "climateNormals": {
       "peakSummerHighF": 94,
@@ -494,6 +527,173 @@
       "source": "U.S. EPA Safe Drinking Water Information System (SDWIS)",
       "sourceUrl": "https://data.epa.gov/efservice/WATER_SYSTEM/PWSID/ID4010016/JSON",
       "retrieved": "2026-10-18"
+    },
+    "higherEducation": {
+      "institutionCount": 8,
+      "totalEnrollment": 19477,
+      "institutions": [
+        {
+          "id": 142115,
+          "name": "Boise State University",
+          "studentSize": 17674,
+          "ownership": "Public",
+          "schoolUrl": "https://www.boisestate.edu/",
+          "lat": 43.604284,
+          "lng": -116.203301
+        },
+        {
+          "id": 496326,
+          "name": "Eagle Gate College-Boise Campus",
+          "studentSize": 594,
+          "ownership": "Private for-profit",
+          "schoolUrl": "https://www.eaglegatecollege.edu/",
+          "lat": 43.59091,
+          "lng": -116.298572
+        },
+        {
+          "id": 142054,
+          "name": "Carrington College-Boise",
+          "studentSize": 478,
+          "ownership": "Private for-profit",
+          "schoolUrl": "https://carrington.edu/",
+          "lat": 43.615923,
+          "lng": -116.243919
+        },
+        {
+          "id": 455859,
+          "name": "Oliver Finley Academy of Cosmetology",
+          "studentSize": 254,
+          "ownership": "Private for-profit",
+          "schoolUrl": "https://oliverfinley.com/",
+          "lat": 43.667102,
+          "lng": -116.281478
+        },
+        {
+          "id": 260929,
+          "name": "Paul Mitchell the School-Boise",
+          "studentSize": 183,
+          "ownership": "Private for-profit",
+          "schoolUrl": "https://paulmitchell.edu/boise",
+          "lat": 43.594479,
+          "lng": -116.286058
+        },
+        {
+          "id": 476850,
+          "name": "Boise Barber College",
+          "studentSize": 104,
+          "ownership": "Private for-profit",
+          "schoolUrl": "https://boisebarbercollege.com/",
+          "lat": 43.588823,
+          "lng": -116.278054
+        }
+      ],
+      "sourceName": "U.S. Department of Education College Scorecard",
+      "sourceUrl": "https://collegescorecard.ed.gov/",
+      "retrieved": "2026-10-31"
+    },
+    "evInfrastructure": {
+      "totalStations": 59,
+      "totalChargingPorts": 166,
+      "dcFastPorts": 31,
+      "level2Ports": 135,
+      "sampleStations": [
+        {
+          "name": "AC Element Hotel Boise Downtown",
+          "address": "1005 West Grove Street, Boise, ID 83702",
+          "network": "NOODOE",
+          "dcFastPorts": 0,
+          "level2Ports": 18,
+          "lat": 43.615885,
+          "lng": -116.206888
+        },
+        {
+          "name": "Boise, ID - Tesla Supercharger",
+          "address": "1426 South Entertainment Ave., Boise, ID 83709",
+          "network": "Tesla",
+          "dcFastPorts": 8,
+          "level2Ports": 0,
+          "lat": 43.592281,
+          "lng": -116.279463
+        },
+        {
+          "name": "Boise, ID - North Orchard Street - Tesla Supercharger",
+          "address": "851 N Orchard St, Boise, ID 83706",
+          "network": "Tesla",
+          "dcFastPorts": 8,
+          "level2Ports": 0,
+          "lat": 43.612161,
+          "lng": -116.244069
+        },
+        {
+          "name": "Boise Airport",
+          "address": "3201 Airport Way, Boise, ID 83705",
+          "network": "Non-Networked",
+          "dcFastPorts": 0,
+          "level2Ports": 8,
+          "lat": 43.570458,
+          "lng": -116.222068
+        },
+        {
+          "name": "Boise State University - Brady Garage",
+          "address": "1323 S Brady St, Boise, ID 83725",
+          "network": "Non-Networked",
+          "dcFastPorts": 0,
+          "level2Ports": 8,
+          "lat": 43.605299,
+          "lng": -116.208335
+        }
+      ],
+      "sourceName": "U.S. Department of Energy / NLR Alternative Fuels Data Center (AFDC)",
+      "sourceUrl": "https://afdc.energy.gov/stations",
+      "retrieved": "2026-10-31"
+    },
+    "upcomingEvents": {
+      "totalMatchingEvents": 339,
+      "events": [
+        {
+          "id": "G5vzZ_2pqPEre",
+          "name": "Boise State Football vs. Texas State",
+          "date": "2026-10-31",
+          "venueName": "Albertsons Stadium",
+          "category": "Sports",
+          "url": "https://www.ticketmaster.com/boise-state-football-vs-texas-state-boise-idaho-10-31-2026/event/1E0064F59D967782"
+        },
+        {
+          "id": "rZ7HnEZ1AfP9ud",
+          "name": "Plini - An Unnameable Desire North American Tour",
+          "date": "2026-10-31",
+          "venueName": "9th St. Parallel at Knitting Factory",
+          "category": "Music",
+          "url": "https://www.ticketweb.com/event/plini-an-unnameable-9th-st-parallel-at-knitting-tickets/14957343"
+        },
+        {
+          "id": "rZ7HnEZ1AfGsG0",
+          "name": "DJ BODIE LEE HALLOWEEN",
+          "date": "2026-10-31",
+          "venueName": "Neurolux Lounge",
+          "category": "Music",
+          "url": "https://www.ticketweb.com/event/dj-bodie-lee-halloween-neurolux-lounge-tickets/14331324"
+        },
+        {
+          "id": "rZ7HnEZ1AfuAA7",
+          "name": "LIONEER, White Hot Velvet, Alandria , Town of Trees",
+          "date": "2026-11-02",
+          "venueName": "Neurolux Lounge",
+          "category": "Music",
+          "url": "https://www.ticketweb.com/event/lioneer-white-hot-velvet-alandria-neurolux-lounge-tickets/14345144"
+        },
+        {
+          "id": "rZ7HnEZ1Af8v8f",
+          "name": "Rittz",
+          "date": "2026-11-03",
+          "venueName": "9th St. Parallel at Knitting Factory",
+          "category": "Music",
+          "url": "https://www.ticketweb.com/event/rittz-9th-st-parallel-at-knitting-tickets/14401414"
+        }
+      ],
+      "sourceName": "Ticketmaster Discovery API v2",
+      "sourceUrl": "https://developer.ticketmaster.com/",
+      "retrieved": "2026-10-31"
     }
   },
   {
@@ -1083,7 +1283,7 @@
         "name": "Meridian Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.9,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -1098,14 +1298,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -1715,7 +1915,7 @@
         "name": "Nampa Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.8,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -1730,14 +1930,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -2347,7 +2547,7 @@
         "name": "Caldwell Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.6,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -2362,14 +2562,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -2979,7 +3179,7 @@
         "name": "Idaho Falls Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.6,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -2994,14 +3194,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -3611,7 +3811,7 @@
         "name": "Pocatello Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.5,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -3626,14 +3826,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -4243,7 +4443,7 @@
         "name": "Coeur d'Alene Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.5,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -4258,14 +4458,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -4875,7 +5075,7 @@
         "name": "Twin Falls Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.5,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -4890,14 +5090,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -5507,7 +5707,7 @@
         "name": "Post Falls Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.4,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -5522,14 +5722,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -6139,7 +6339,7 @@
         "name": "Rexburg Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.3,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -6154,14 +6354,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -6771,7 +6971,7 @@
         "name": "Lewiston Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.3,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -6786,14 +6986,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -7403,7 +7603,7 @@
         "name": "Eagle Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.2,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -7418,14 +7618,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -8035,7 +8235,7 @@
         "name": "Kuna Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.2,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -8050,14 +8250,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -8667,7 +8867,7 @@
         "name": "Moscow Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.2,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -8682,14 +8882,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {

@@ -586,7 +586,7 @@
         "name": "Little Rock Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 11.1,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -601,14 +601,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -1218,7 +1218,7 @@
         "name": "Fayetteville Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.8,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -1233,14 +1233,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -1850,7 +1850,7 @@
         "name": "Fort Smith Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.7,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -1865,14 +1865,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -2482,7 +2482,7 @@
         "name": "Springdale Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.7,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -2497,14 +2497,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -3114,7 +3114,7 @@
         "name": "Jonesboro Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.6,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -3129,14 +3129,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -3746,7 +3746,7 @@
         "name": "Rogers Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.6,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -3761,14 +3761,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -4378,7 +4378,7 @@
         "name": "Conway Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.6,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -4393,14 +4393,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -5010,7 +5010,7 @@
         "name": "North Little Rock Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.5,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -5025,14 +5025,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -5642,7 +5642,7 @@
         "name": "Bentonville Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.5,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -5657,14 +5657,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -6274,7 +6274,7 @@
         "name": "Pine Bluff Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.3,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -6289,14 +6289,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -6322,633 +6322,643 @@
   {
     "slug": "ar/hot-springs",
     "cityId": "0533400",
-    "countyFips": "05334",
+    "countyFips": "05051",
     "name": "Hot Springs",
     "stateCode": "ar",
     "stateName": "Arkansas",
-    "countyName": "Hot Springs Metropolitan Area",
+    "countyName": "Garland County",
     "lat": 34.489442,
     "lng": -93.050254,
     "primaryZips": [
-      "71066"
+      "71913",
+      "71901"
     ],
     "demographics": {
       "population": 37994,
-      "popGrowth5YrPct": 0.1,
-      "medianHouseholdIncome": 80279,
-      "perCapitaIncome": 46562,
-      "medianAge": 36.4,
-      "daytimeWorkerPop": 23556,
-      "daytimePopSurgePct": 8.5,
-      "medianGrossRent": 1544,
-      "medianHomeValue": 337172,
+      "medianHouseholdIncome": 46441,
+      "perCapitaIncome": 29736,
+      "medianAge": 45.1,
+      "medianGrossRent": 902,
+      "medianHomeValue": 156900,
       "provenance": {
-        "sourceName": "US Census Bureau ACS 5-Year (DP03/DP04/DP05) & PopEst",
-        "sourceUrl": "https://api.census.gov/data/2023/acs/acs5",
-        "datasetVintage": "2023-5YR",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "sourceName": "US Census Bureau ACS 5-Year Estimates 2023 (Table-Based Summary File)",
+        "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/",
+        "datasetVintage": "ACS-2023-5YR",
+        "verifiedAt": "2026-10-31T00:00:00Z",
         "granularity": "place"
-      }
-    },
-    "laborAndEconomy": {
-      "unemploymentRatePct": 3.8,
-      "avgWeeklyWageAllIndustries": 1340,
-      "newHousingPermits12Mo": 285,
-      "permitsPer1kResidents": 7.5,
-      "femaRiskScore": 28.0,
-      "provenance": {
-        "sourceName": "BLS Local Area Unemployment Statistics (LAUS) & Census BPS",
-        "sourceUrl": "https://www.bls.gov/lau/",
-        "datasetVintage": "2024-M08",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
-      }
+      },
+      "popChange2020to2023Pct": 0.2,
+      "popChangeBasis": "Census Population Estimates, April 2020 base to July 2023"
     },
     "industries": [
       {
         "naicsCode": "722515",
         "slug": "coffee-shops",
         "label": "Coffee & Snack Shops",
-        "establishments": 8,
-        "per10kResidents": 2.11,
-        "usAvgPer10k": 2.15,
-        "saturationIndex": 98,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 22,
+        "per10kResidents": 2.87,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 135,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Hot Springs."
+          "evidenceQuote": "22 employer establishments (NAICS 722515) across 2 ZIP codes whose USPS city is Hot Springs National Park, AR; density uses ACS 2023 ZCTA population (76,572). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722511",
         "slug": "restaurants",
         "label": "Full-Service Restaurants",
-        "establishments": 26,
-        "per10kResidents": 6.84,
-        "usAvgPer10k": 6.8,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 93,
+        "per10kResidents": 12.15,
+        "usAvgPer10k": 7.44,
+        "saturationIndex": 163,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Hot Springs."
+          "evidenceQuote": "93 employer establishments (NAICS 722511) across 2 ZIP codes whose USPS city is Hot Springs National Park, AR; density uses ACS 2023 ZCTA population (76,572). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722513",
         "slug": "fast-food",
-        "label": "Fast Food Restaurants",
-        "establishments": 27,
-        "per10kResidents": 7.11,
-        "usAvgPer10k": 7.2,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Limited-Service / Fast Food Restaurants",
+        "establishments": 83,
+        "per10kResidents": 10.84,
+        "usAvgPer10k": 7.75,
+        "saturationIndex": 140,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Hot Springs."
+          "evidenceQuote": "83 employer establishments (NAICS 722513) across 2 ZIP codes whose USPS city is Hot Springs National Park, AR; density uses ACS 2023 ZCTA population (76,572). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722410",
         "slug": "bars-taverns",
-        "label": "Bars & Drinking Places",
-        "establishments": 7,
-        "per10kResidents": 1.84,
-        "usAvgPer10k": 1.85,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Drinking Places (Alcoholic Beverages)",
+        "establishments": 4,
+        "per10kResidents": 0.52,
+        "usAvgPer10k": 0.9,
+        "saturationIndex": 58,
+        "status": "underserved",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Hot Springs."
-        }
-      },
-      {
-        "naicsCode": "812111",
-        "slug": "barber-shops",
-        "label": "Barber Shops",
-        "establishments": 5,
-        "per10kResidents": 1.32,
-        "usAvgPer10k": 1.35,
-        "saturationIndex": 98,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Hot Springs."
+          "evidenceQuote": "4 employer establishments (NAICS 722410) across 2 ZIP codes whose USPS city is Hot Springs National Park, AR; density uses ACS 2023 ZCTA population (76,572). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812112",
         "slug": "beauty-salons",
         "label": "Beauty Salons & Hair Studios",
-        "establishments": 13,
-        "per10kResidents": 3.42,
-        "usAvgPer10k": 3.4,
-        "saturationIndex": 101,
+        "establishments": 17,
+        "per10kResidents": 2.22,
+        "usAvgPer10k": 2.31,
+        "saturationIndex": 96,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Hot Springs."
+          "evidenceQuote": "17 employer establishments (NAICS 812112) across 2 ZIP codes whose USPS city is Hot Springs National Park, AR; density uses ACS 2023 ZCTA population (76,572). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812113",
         "slug": "nail-salons",
         "label": "Nail Salons",
-        "establishments": 8,
-        "per10kResidents": 2.11,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 100,
+        "establishments": 7,
+        "per10kResidents": 0.91,
+        "usAvgPer10k": 0.86,
+        "saturationIndex": 106,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Hot Springs."
+          "evidenceQuote": "7 employer establishments (NAICS 812113) across 2 ZIP codes whose USPS city is Hot Springs National Park, AR; density uses ACS 2023 ZCTA population (76,572). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "713940",
         "slug": "gyms-fitness",
-        "label": "Fitness & Recreational Gyms",
-        "establishments": 5,
-        "per10kResidents": 1.32,
-        "usAvgPer10k": 1.25,
-        "saturationIndex": 104,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Fitness & Recreational Sports Centers",
+        "establishments": 3,
+        "per10kResidents": 0.39,
+        "usAvgPer10k": 1.0,
+        "saturationIndex": 39,
+        "status": "underserved",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Hot Springs."
+          "evidenceQuote": "3 employer establishments (NAICS 713940) across 2 ZIP codes whose USPS city is Hot Springs National Park, AR; density uses ACS 2023 ZCTA population (76,572). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812910",
         "slug": "pet-care",
-        "label": "Pet Care & Grooming",
-        "establishments": 4,
-        "per10kResidents": 1.05,
-        "usAvgPer10k": 0.95,
-        "saturationIndex": 109,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Pet Care & Grooming Services",
+        "establishments": 5,
+        "per10kResidents": 0.65,
+        "usAvgPer10k": 0.46,
+        "saturationIndex": 141,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Hot Springs."
+          "evidenceQuote": "5 employer establishments (NAICS 812910) across 2 ZIP codes whose USPS city is Hot Springs National Park, AR; density uses ACS 2023 ZCTA population (76,572). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541940",
         "slug": "veterinary",
-        "label": "Veterinary Services",
-        "establishments": 4,
-        "per10kResidents": 1.05,
-        "usAvgPer10k": 1.05,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Veterinary Services & Animal Hospitals",
+        "establishments": 12,
+        "per10kResidents": 1.57,
+        "usAvgPer10k": 0.69,
+        "saturationIndex": 227,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Hot Springs."
+          "evidenceQuote": "12 employer establishments (NAICS 541940) across 2 ZIP codes whose USPS city is Hot Springs National Park, AR; density uses ACS 2023 ZCTA population (76,572). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "811111",
         "slug": "auto-repair",
         "label": "General Automotive Repair",
-        "establishments": 18,
-        "per10kResidents": 4.74,
-        "usAvgPer10k": 4.8,
-        "saturationIndex": 99,
+        "establishments": 20,
+        "per10kResidents": 2.61,
+        "usAvgPer10k": 2.2,
+        "saturationIndex": 119,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Hot Springs."
+          "evidenceQuote": "20 employer establishments (NAICS 811111) across 2 ZIP codes whose USPS city is Hot Springs National Park, AR; density uses ACS 2023 ZCTA population (76,572). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "811192",
         "slug": "car-washes",
-        "label": "Car Washes & Detailing",
-        "establishments": 2,
-        "per10kResidents": 0.53,
-        "usAvgPer10k": 0.65,
-        "saturationIndex": 85,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Car Washes & Auto Detailing",
+        "establishments": 0,
+        "per10kResidents": 0.0,
+        "usAvgPer10k": 0.35,
+        "saturationIndex": 0,
+        "status": "underserved",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Hot Springs."
-        }
-      },
-      {
-        "naicsCode": "812310",
-        "slug": "laundromats",
-        "label": "Coin Laundromats",
-        "establishments": 2,
-        "per10kResidents": 0.53,
-        "usAvgPer10k": 0.55,
-        "saturationIndex": 97,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Hot Springs."
-        }
-      },
-      {
-        "naicsCode": "812320",
-        "slug": "dry-cleaners",
-        "label": "Dry Cleaning & Laundry",
-        "establishments": 3,
-        "per10kResidents": 0.79,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 94,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Hot Springs."
+          "evidenceQuote": "0 employer establishments (NAICS 811192) across 2 ZIP codes whose USPS city is Hot Springs National Park, AR; density uses ACS 2023 ZCTA population (76,572). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621210",
         "slug": "dentists",
         "label": "Offices of Dentists",
-        "establishments": 15,
-        "per10kResidents": 3.95,
-        "usAvgPer10k": 3.9,
-        "saturationIndex": 101,
+        "establishments": 32,
+        "per10kResidents": 4.18,
+        "usAvgPer10k": 3.89,
+        "saturationIndex": 108,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Hot Springs."
+          "evidenceQuote": "32 employer establishments (NAICS 621210) across 2 ZIP codes whose USPS city is Hot Springs National Park, AR; density uses ACS 2023 ZCTA population (76,572). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621310",
         "slug": "chiropractors",
         "label": "Offices of Chiropractors",
-        "establishments": 5,
-        "per10kResidents": 1.32,
-        "usAvgPer10k": 1.4,
-        "saturationIndex": 95,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 12,
+        "per10kResidents": 1.57,
+        "usAvgPer10k": 0.97,
+        "saturationIndex": 161,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Hot Springs."
+          "evidenceQuote": "12 employer establishments (NAICS 621310) across 2 ZIP codes whose USPS city is Hot Springs National Park, AR; density uses ACS 2023 ZCTA population (76,572). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621340",
         "slug": "physical-therapy",
-        "label": "Physical Therapy Clinics",
-        "establishments": 6,
-        "per10kResidents": 1.58,
-        "usAvgPer10k": 1.55,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Physical, Occupational & Speech Therapists",
+        "establishments": 32,
+        "per10kResidents": 4.18,
+        "usAvgPer10k": 1.3,
+        "saturationIndex": 321,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Hot Springs."
+          "evidenceQuote": "32 employer establishments (NAICS 621340) across 2 ZIP codes whose USPS city is Hot Springs National Park, AR; density uses ACS 2023 ZCTA population (76,572). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "624410",
         "slug": "daycare",
         "label": "Child Day Care Services",
-        "establishments": 9,
-        "per10kResidents": 2.37,
-        "usAvgPer10k": 2.25,
-        "saturationIndex": 104,
+        "establishments": 17,
+        "per10kResidents": 2.22,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 105,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Hot Springs."
+          "evidenceQuote": "17 employer establishments (NAICS 624410) across 2 ZIP codes whose USPS city is Hot Springs National Park, AR; density uses ACS 2023 ZCTA population (76,572). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "445120",
         "slug": "convenience-stores",
-        "label": "Convenience Stores",
-        "establishments": 7,
-        "per10kResidents": 1.84,
-        "usAvgPer10k": 1.95,
-        "saturationIndex": 96,
+        "label": "Convenience Retail Stores",
+        "establishments": 5,
+        "per10kResidents": 0.65,
+        "usAvgPer10k": 0.82,
+        "saturationIndex": 80,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Hot Springs."
+          "evidenceQuote": "5 employer establishments (NAICS 445120) across 2 ZIP codes whose USPS city is Hot Springs National Park, AR; density uses ACS 2023 ZCTA population (76,572). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "448140",
         "slug": "clothing-boutiques",
-        "label": "Family Clothing Stores",
+        "label": "Family Clothing Stores & Boutiques",
         "establishments": 6,
-        "per10kResidents": 1.58,
-        "usAvgPer10k": 1.65,
-        "saturationIndex": 97,
+        "per10kResidents": 0.78,
+        "usAvgPer10k": 0.65,
+        "saturationIndex": 120,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Hot Springs."
-        }
-      },
-      {
-        "naicsCode": "445291",
-        "slug": "bakeries",
-        "label": "Retail Bakeries",
-        "establishments": 3,
-        "per10kResidents": 0.79,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 94,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Hot Springs."
-        }
-      },
-      {
-        "naicsCode": "453110",
-        "slug": "florists",
-        "label": "Florists & Floral Gift",
-        "establishments": 2,
-        "per10kResidents": 0.53,
-        "usAvgPer10k": 0.5,
-        "saturationIndex": 104,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Hot Springs."
+          "evidenceQuote": "6 employer establishments (NAICS 448140) across 2 ZIP codes whose USPS city is Hot Springs National Park, AR; density uses ACS 2023 ZCTA population (76,572). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541110",
         "slug": "law-firms",
         "label": "Offices of Lawyers",
-        "establishments": 19,
-        "per10kResidents": 5.0,
-        "usAvgPer10k": 4.9,
-        "saturationIndex": 102,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 55,
+        "per10kResidents": 7.18,
+        "usAvgPer10k": 4.8,
+        "saturationIndex": 150,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Hot Springs."
+          "evidenceQuote": "55 employer establishments (NAICS 541110) across 2 ZIP codes whose USPS city is Hot Springs National Park, AR; density uses ACS 2023 ZCTA population (76,572). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541211",
         "slug": "accounting-cpa",
-        "label": "Offices of CPAs",
-        "establishments": 8,
-        "per10kResidents": 2.11,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Offices of Certified Public Accountants",
+        "establishments": 20,
+        "per10kResidents": 2.61,
+        "usAvgPer10k": 1.44,
+        "saturationIndex": 181,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Hot Springs."
+          "evidenceQuote": "20 employer establishments (NAICS 541211) across 2 ZIP codes whose USPS city is Hot Springs National Park, AR; density uses ACS 2023 ZCTA population (76,572). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "531210",
         "slug": "real-estate-agencies",
-        "label": "Real Estate Brokerages",
-        "establishments": 14,
-        "per10kResidents": 3.68,
-        "usAvgPer10k": 3.8,
-        "saturationIndex": 98,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Offices of Real Estate Agents & Brokers",
+        "establishments": 48,
+        "per10kResidents": 6.27,
+        "usAvgPer10k": 4.74,
+        "saturationIndex": 132,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Hot Springs."
+          "evidenceQuote": "48 employer establishments (NAICS 531210) across 2 ZIP codes whose USPS city is Hot Springs National Park, AR; density uses ACS 2023 ZCTA population (76,572). National benchmark = all US ZIP rows / US population."
         }
       }
     ],
     "permitsAndTax": {
-      "generalBusinessLicenseRequired": false,
-      "businessLicenseFeeSummary": "No general city business license required. State of Arkansas statutory filings apply.",
-      "businessLicensePortalUrl": "https://www.hot-springsar.gov/permits",
-      "zoningLookupUrl": "https://www.hot-springsar.gov/zoning",
-      "buildingPermitPortalUrl": "https://www.hot-springsar.gov/building",
-      "certificateOfOccupancyFee": "$185 standard municipal inspection fee",
-      "avgPermitWaitDays": 30,
-      "shortTermRentalStatus": "restricted",
-      "foodTruckPermitStatus": "allowed",
-      "combinedSalesTaxRate": 0.08,
       "stateTaxRate": 0.065,
-      "localTaxRate": 0.015,
+      "countyTaxRate": 0.015,
+      "cityTaxRate": 0.015,
+      "specialDistrictTaxRate": 0.0,
+      "localTaxRate": 0.03,
+      "combinedSalesTaxRate": 0.095,
       "provenance": {
-        "sourceName": "Hot Springs Municipal Code & State Department of Revenue",
-        "sourceUrl": "https://www.hot-springsar.gov",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place",
-        "evidenceQuote": "Statutory municipal code standards."
+        "sourceName": "Arkansas Dept. of Finance and Administration local sales & use tax table (6.5% state + 1.5% Garland County + 1.5% City of Hot Springs = 9.5%)",
+        "sourceUrl": "https://www.dfa.arkansas.gov/excise-tax/sales-and-use-tax/local-tax-lookup-tools/",
+        "datasetVintage": "2026",
+        "verifiedAt": "2026-10-31T00:00:00Z",
+        "granularity": "place"
       }
     },
-    "topTrafficCorridors": [
-      {
-        "roadName": "Main Arterial Corridor 1",
-        "segmentDescription": "Central Commercial Corridor through Hot Springs",
-        "aadt": 4559,
-        "heavyTruckPct": 5.5,
-        "lat": 34.489442,
-        "lng": -93.050254,
-        "year": 2024,
-        "provenance": {
-          "sourceName": "Arkansas DOT AADT Database",
-          "sourceUrl": "https://www.transportation.gov/",
-          "datasetVintage": "2024-AADT",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "place"
-        }
-      }
-    ],
-    "marketSignals": {
-      "reportedRetailRentSqFtYr": 40.1,
-      "reportedIndustrialRentSqFtYr": 18.0,
-      "topSearchedNaics30d": [
-        "722515",
-        "713940",
-        "812111"
-      ],
-      "verifiedLocalProsCount": 8
-    },
-    "scores": {
-      "overallViability": 48,
-      "purchasingPower": 46,
-      "growthMomentum": 50,
-      "costEfficiency": 71,
-      "regulatoryFriction": 48
-    },
+    "marketSignals": {},
     "executiveTravel": {
-      "timeZone": "America/Chicago (CT: UTC-06:00)",
+      "timeZone": "America/Chicago",
       "timeZoneAbbr": "CT",
       "utcOffset": "-06:00",
       "primaryAirport": {
-        "name": "Hot Springs Regional / Metropolitan Airport",
-        "iata": null,
-        "distanceMiles": 10.3,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
-      },
-      "powerPlugs": {
-        "types": [
-          "Type A (2-pin)",
-          "Type B (3-pin grounded)"
-        ],
-        "voltage": "120V",
-        "frequency": "60Hz",
-        "adapterAdvice": "Visitors from UK, EU, Australia, and Asia require a standard Type A/B plug adapter and dual-voltage converter."
-      },
-      "currency": {
-        "code": "USD",
-        "symbol": "$",
-        "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
-        "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
+        "name": "Bill & Hillary Clinton National Airport/Adams Field",
+        "iata": "LIT",
+        "lat": 34.729222,
+        "lng": -92.223591,
+        "distanceMiles": 49.8,
+        "transitToDowntown": null,
+        "source": "OurAirports (public domain) for name, IATA code and coordinates; distance is straight-line from the U.S. Census Gazetteer city center point",
+        "sourceUrl": "https://ourairports.com/data/",
+        "cityCenterMethod": "Census Gazetteer internal point",
+        "retrieved": "2026-10-31"
       },
       "climate": {
-        "summerHighF": 94,
-        "winterLowF": 47,
-        "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
-        "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
+        "summerHighF": 91,
+        "winterLowF": 34,
+        "annualRainfallInches": 54.7,
+        "summerHighBasis": "Average July daily high",
+        "winterLowBasis": "Average January daily low",
+        "source": "Open-Meteo Historical Weather API (ERA5 reanalysis), 2015-2024 average, retrieved 2026-10-31",
+        "sourceUrl": "https://open-meteo.com/en/docs/historical-weather-api"
       },
       "emergency": {
         "emergencyDispatch": "911",
-        "nonEmergencyPolice": "311 or local municipal dispatch",
-        "nearestTraumaHospital": "Hot Springs Regional Memorial Hospital",
-        "hospitalAddress": "Medical Center District, Hot Springs, AR"
-      },
-      "visitorLogistics": {
-        "tapWaterPotability": "100% Safe municipal drinking water conforming to EPA Safe Drinking Water Act standards.",
-        "salesTaxRefundPolicy": "International travelers may claim state sales tax refunds on qualifying departures at designated airport customs counters.",
-        "rideshareAvailability": "Ubiquitous (Uber and Lyft operational 24/7 across the metropolitan area)."
-      },
-      "provenance": {
-        "sourceName": "FAA Airport Database & International Trade Administration",
-        "sourceUrl": "https://www.trade.gov/",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
+        "nearestTraumaHospital": "CHI St. Vincent Hospital Hot Springs",
+        "hospitalAddress": "300 Werner Street, Hot Springs, AR 71903",
+        "cmsFacilityId": "040026",
+        "emergencyServices": true,
+        "source": "CMS Care Compare hospital general information (federal dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma level, ranking or nearest-facility claim.",
+        "erHospitals": [
+          {
+            "name": "CHI St. Vincent Hospital Hot Springs",
+            "address": "300 Werner Street, Hot Springs, AR 71903",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "040026",
+            "lat": 34.466092,
+            "lng": -93.066972
+          },
+          {
+            "name": "Levi Hospital",
+            "address": "300 Prospect Ave, Hot Springs, AR 71901",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "040132",
+            "lat": 34.509931,
+            "lng": -93.056834
+          },
+          {
+            "name": "National Park Medical Center",
+            "address": "1910 Malvern Avenue, Hot Springs, AR 71901",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "040078",
+            "lat": 34.486668,
+            "lng": -93.033903
+          }
+        ],
+        "erHospitalsSource": "CMS Care Compare hospital general information (federal dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma level, ranking or nearest-facility claim."
       }
+    },
+    "housingAndTaxes": {
+      "medianHomeValue": 156900,
+      "medianGrossRent": 902,
+      "medianRealEstateTaxPaid": 834,
+      "effectivePropertyTaxRatePct": 0.53,
+      "countyName": "Garland County",
+      "source": "ACS 2023 5-yr: B25077 median home value, B25064 median gross rent, B25103 median real estate taxes paid. Effective rate = B25103 / B25077.",
+      "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/"
+    },
+    "climateNormals": {
+      "peakSummerHighF": 91,
+      "winterLowF": 34,
+      "annualRainfallInches": 54.7,
+      "sourceName": "Open-Meteo Historical Weather API (ERA5 reanalysis), 2015-2024 average, retrieved 2026-10-31",
+      "sourceUrl": "https://open-meteo.com/en/docs/historical-weather-api"
+    },
+    "terrainElevation": {
+      "elevationFeet": 575.2,
+      "elevationMeters": 175.3,
+      "topographyClass": "Ouachita Mountains & Hot Springs Basin",
+      "sourceName": "USGS 3D Elevation Program (3DEP Elevation Point Query Service)",
+      "sourceUrl": "https://epqs.nationalmap.gov/v1/json"
+    },
+    "waterUtility": {
+      "pwsid": "AR0000209",
+      "providerName": "Hot Springs Utilities",
+      "populationServed": 75343,
+      "sourceType": "surface water",
+      "source": "U.S. EPA Safe Drinking Water Information System (SDWIS)",
+      "sourceUrl": "https://data.epa.gov/efservice/WATER_SYSTEM/PWSID/AR0000209/JSON",
+      "retrieved": "2026-10-31"
+    },
+    "higherEducation": {
+      "institutionCount": 3,
+      "totalEnrollment": 2019,
+      "institutions": [
+        {
+          "id": 106980,
+          "name": "National Park College",
+          "studentSize": 1789,
+          "ownership": "Public",
+          "schoolUrl": "https://www.np.edu/",
+          "lat": 34.512687,
+          "lng": -93.119248
+        },
+        {
+          "id": 492069,
+          "name": "Champion Christian College",
+          "studentSize": 144,
+          "ownership": "Private nonprofit",
+          "schoolUrl": "https://champion.edu/",
+          "lat": 34.499589,
+          "lng": -93.065945
+        },
+        {
+          "id": 107099,
+          "name": "Hot Springs Beauty College",
+          "studentSize": 86,
+          "ownership": "Private for-profit",
+          "schoolUrl": "https://hotspringsbeautycollege.com/",
+          "lat": 34.496057,
+          "lng": -93.037277
+        }
+      ],
+      "sourceName": "U.S. Department of Education College Scorecard",
+      "sourceUrl": "https://collegescorecard.ed.gov/",
+      "retrieved": "2026-10-31"
+    },
+    "evInfrastructure": {
+      "totalStations": 16,
+      "totalChargingPorts": 40,
+      "dcFastPorts": 4,
+      "level2Ports": 36,
+      "sampleStations": [
+        {
+          "name": "ASMSA",
+          "address": "100 Whittington Ave, Hot Springs, AR 71901",
+          "network": "Non-Networked",
+          "dcFastPorts": 0,
+          "level2Ports": 5,
+          "lat": 34.518484,
+          "lng": -93.057167
+        },
+        {
+          "name": "Mid-America Museum",
+          "address": "500 Mid America Blvd, Hot Springs, AR 71913",
+          "network": "Non-Networked",
+          "dcFastPorts": 0,
+          "level2Ports": 4,
+          "lat": 34.515772,
+          "lng": -93.116499
+        },
+        {
+          "name": "Hampton Inn Hot Springs",
+          "address": "151 Temperance Hill Rd, Hot Springs, AR 71913",
+          "network": "Blink Network",
+          "dcFastPorts": 0,
+          "level2Ports": 4,
+          "lat": 34.454064,
+          "lng": -93.076092
+        },
+        {
+          "name": "Gregg Orr Cadillac Of Hot Springs",
+          "address": "4555 Central Ave, Hot Springs, AR 71913",
+          "network": "EV Connect",
+          "dcFastPorts": 2,
+          "level2Ports": 1,
+          "lat": 34.447724,
+          "lng": -93.083296
+        },
+        {
+          "name": "TownePlace Suites by Marriott Hot Springs",
+          "address": "120 Desai-Patel Court, Hot Springs, AR 71913",
+          "network": "Blink Network",
+          "dcFastPorts": 0,
+          "level2Ports": 3,
+          "lat": 34.454373,
+          "lng": -93.073435
+        }
+      ],
+      "sourceName": "U.S. Department of Energy / NLR Alternative Fuels Data Center (AFDC)",
+      "sourceUrl": "https://afdc.energy.gov/stations",
+      "retrieved": "2026-10-31"
+    },
+    "nationalParks": {
+      "parks": [
+        {
+          "parkCode": "hosp",
+          "fullName": "Hot Springs National Park",
+          "designation": "National Park",
+          "distanceMiles": 2.5,
+          "description": "Hot Springs National Park has a rich cultural past. The grand architecture of our historic bathhouses is equally matched by the natural curiosities that have been drawing people here for hundreds of years. Ancient thermal springs...",
+          "url": "https://www.nps.gov/hosp/index.htm",
+          "lat": 34.524144,
+          "lng": -93.063329
+        },
+        {
+          "parkCode": "chsc",
+          "fullName": "Little Rock Central High School National Historic Site",
+          "designation": "National Historic Site",
+          "distanceMiles": 46.0,
+          "description": "In 1957, Little Rock Central High School was the epicenter of confrontation and a catalyst for change as the fundamental test for the United States to enforce African American civil rights following Brown v. Board of Education. Learn...",
+          "url": "https://www.nps.gov/chsc/index.htm",
+          "lat": 34.736947,
+          "lng": -92.299879
+        }
+      ],
+      "sourceName": "U.S. National Park Service (NPS) API",
+      "sourceUrl": "https://www.nps.gov/",
+      "retrieved": "2026-10-31"
     }
   },
   {
@@ -7538,7 +7548,7 @@
         "name": "Benton Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.3,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -7553,14 +7563,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -8170,7 +8180,7 @@
         "name": "Sherwood Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.2,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -8185,14 +8195,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -8802,7 +8812,7 @@
         "name": "Bella Vista Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.2,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -8817,14 +8827,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -9434,7 +9444,7 @@
         "name": "Paragould Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.2,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -9449,14 +9459,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -10066,7 +10076,7 @@
         "name": "Russellville Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.2,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -10081,14 +10091,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -10698,7 +10708,7 @@
         "name": "Texarkana Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.2,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -10713,14 +10723,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -11330,7 +11340,7 @@
         "name": "Jacksonville Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.2,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -11345,14 +11355,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -11962,7 +11972,7 @@
         "name": "Cabot Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.2,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -11977,14 +11987,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -12031,48 +12041,41 @@
         "sourceName": "US Census Bureau ACS 5-Year Estimates 2023 (Table-Based Summary File)",
         "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/",
         "datasetVintage": "ACS-2023-5YR",
-        "verifiedAt": "2026-10-18",
+        "verifiedAt": "2026-10-31T00:00:00Z",
         "granularity": "place"
       }
     },
     "marketSignals": {},
     "permitsAndTax": {
       "stateTaxRate": 0.065,
+      "countyTaxRate": 0.015,
+      "cityTaxRate": 0.0,
+      "specialDistrictTaxRate": 0.0,
       "localTaxRate": 0.015,
       "combinedSalesTaxRate": 0.08,
       "provenance": {
-        "sourceName": "Garland County portion: AR 6.5% + county 1.5% (Avalara); Saline County portion may differ",
-        "sourceUrl": "https://www.avalara.com/us/en/taxrates/state-rates/arkansas/cities/hot-springs-village.html",
+        "sourceName": "Arkansas Dept. of Finance and Administration local sales & use tax table (Garland County unincorporated portion: 6.5% state + 1.5% Garland County = 8.0%; Saline County portion may differ)",
+        "sourceUrl": "https://www.dfa.arkansas.gov/excise-tax/sales-and-use-tax/local-tax-lookup-tools/",
         "datasetVintage": "2026",
-        "verifiedAt": "2026-10-18",
+        "verifiedAt": "2026-10-31T00:00:00Z",
         "granularity": "place"
       }
     },
     "executiveTravel": {
-      "timeZone": "America/Chicago (Central Time: UTC-6 / CDT UTC-5)",
+      "timeZone": "America/Chicago",
       "timeZoneAbbr": "CT",
       "utcOffset": "-06:00",
       "primaryAirport": {
-        "name": "Bill and Hillary Clinton National Airport",
+        "name": "Bill & Hillary Clinton National Airport/Adams Field",
         "iata": "LIT",
-        "distanceMiles": 53.0,
-        "transitToDowntown": null
-      },
-      "powerPlugs": {
-        "types": [
-          "Type A (2-pin)",
-          "Type B (3-pin grounded)"
-        ],
-        "voltage": "120V",
-        "frequency": "60Hz",
-        "adapterAdvice": "Standard US 120V sockets; foreign visitors require Type A/B plug adapter."
-      },
-      "currency": {
-        "code": "USD",
-        "symbol": "$",
-        "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard at golf clubhouses and village dining venues. $2\u2013$5 for valet/bellhop.",
-        "paymentMethods": "Credit cards, Apple Pay, and member account charges accepted throughout village amenities."
+        "lat": 34.729222,
+        "lng": -92.223591,
+        "distanceMiles": 42.6,
+        "transitToDowntown": null,
+        "source": "OurAirports (public domain) for name, IATA code and coordinates; distance is straight-line from the U.S. Census Gazetteer city center point",
+        "sourceUrl": "https://ourairports.com/data/",
+        "cityCenterMethod": "Census Gazetteer internal point",
+        "retrieved": "2026-10-31"
       },
       "climate": {
         "summerHighF": 91,
@@ -12080,31 +12083,52 @@
         "annualRainfallInches": 53.2,
         "summerHighBasis": "Average July daily high",
         "winterLowBasis": "Average January daily low",
-        "source": "Open-Meteo Historical Weather API (ERA5 reanalysis), 2015-2024 average, retrieved 2026-10-18"
+        "source": "Open-Meteo Historical Weather API (ERA5 reanalysis), 2015-2024 average, retrieved 2026-10-18",
+        "sourceUrl": "https://open-meteo.com/en/docs/historical-weather-api"
       },
       "emergency": {
-        "emergencyDispatch": "911 (Dedicated 24/7 Hot Springs Village Police & Fire Inside Gates)",
-        "nearestTraumaHospital": "CHI St. Vincent Hot Springs",
-        "hospitalAddress": "300 Werner St, Hot Springs, AR 71913 (approx. 16 mi south)",
-        "source": "Google Places API (New), retrieved 2026-10-18"
-      },
-      "visitorLogistics": {
-        "tapWaterPotability": "100% Safe municipal tap water (Hot Springs Village Water Dept PWSID AR0000208 conforming to EPA Safe Drinking Water Act).",
-        "salesTaxRefundPolicy": "Arkansas does not offer retail sales tax refunds for foreign visitors.",
-        "rideshareAvailability": "Limited within private gated interior; local village shuttle and pre-booked private town cars recommended."
-      },
-      "provenance": {
-        "sourceName": "Hot Springs Village Property Owners Association (HSV POA) & Arkansas Department of Health",
-        "sourceUrl": "https://www.explorethevillage.com",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T16:00:00Z",
-        "granularity": "place"
+        "emergencyDispatch": "911",
+        "nearestTraumaHospital": "CHI St. Vincent Hospital Hot Springs",
+        "hospitalAddress": "300 Werner Street, Hot Springs, AR 71903",
+        "cmsFacilityId": "040026",
+        "emergencyServices": true,
+        "source": "CMS Care Compare hospital general information (federal dataset xubh-q36u), retrieved 2026-10-31: Hot Springs Village is an unincorporated CDP served by these Garland County CMS hospitals in neighboring Hot Springs listed with emergency services. No trauma level, ranking or nearest-facility claim.",
+        "erHospitals": [
+          {
+            "name": "CHI St. Vincent Hospital Hot Springs",
+            "address": "300 Werner Street, Hot Springs, AR 71903",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "040026",
+            "lat": 34.466092,
+            "lng": -93.066972
+          },
+          {
+            "name": "Levi Hospital",
+            "address": "300 Prospect Ave, Hot Springs, AR 71901",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "040132",
+            "lat": 34.509931,
+            "lng": -93.056834
+          },
+          {
+            "name": "National Park Medical Center",
+            "address": "1910 Malvern Avenue, Hot Springs, AR 71901",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "040078",
+            "lat": 34.486668,
+            "lng": -93.033903
+          }
+        ],
+        "erHospitalsSource": "CMS Care Compare hospital general information (federal dataset xubh-q36u), retrieved 2026-10-31: Hot Springs Village is an unincorporated CDP served by these Garland County CMS hospitals in neighboring Hot Springs listed with emergency services. No trauma level, ranking or nearest-facility claim.",
+        "erHospitalsScope": "Garland County (Hot Springs, AR)"
       }
     },
     "terrainElevation": {
       "elevationFeet": 699.8,
       "elevationMeters": 213.3,
-      "topographyClass": "Ouachita Mountain Foothills & Lake Ouachita Basin"
+      "topographyClass": "Ouachita Mountain Foothills & Lake Ouachita Basin",
+      "sourceName": "USGS 3D Elevation Program (3DEP Elevation Point Query Service)",
+      "sourceUrl": "https://epqs.nationalmap.gov/v1/json"
     },
     "climateNormals": {
       "peakSummerHighF": 91,
@@ -12124,6 +12148,25 @@
     },
     "industries": [
       {
+        "naicsCode": "722515",
+        "slug": "coffee-shops",
+        "label": "Coffee & Snack Shops",
+        "establishments": 0,
+        "per10kResidents": 0.0,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 0,
+        "status": "underserved",
+        "smallSample": true,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "0 employer establishments (NAICS 722515) across 1 ZIP codes whose USPS city is Hot Springs Village, AR; density uses ACS 2023 ZCTA population (18,427). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
         "naicsCode": "722511",
         "slug": "restaurants",
         "label": "Full-Service Restaurants",
@@ -12132,13 +12175,14 @@
         "usAvgPer10k": 7.44,
         "saturationIndex": 124,
         "status": "saturated",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "17 employer establishments (NAICS 722511) across 1 ZIP codes whose USPS city is Hot Springs Village, AR; density uses ACS 2023 ZCTA population of those ZIPs (18,427). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "17 employer establishments (NAICS 722511) across 1 ZIP codes whose USPS city is Hot Springs Village, AR; density uses ACS 2023 ZCTA population (18,427). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -12150,13 +12194,166 @@
         "usAvgPer10k": 7.75,
         "saturationIndex": 49,
         "status": "underserved",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "7 employer establishments (NAICS 722513) across 1 ZIP codes whose USPS city is Hot Springs Village, AR; density uses ACS 2023 ZCTA population of those ZIPs (18,427). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "7 employer establishments (NAICS 722513) across 1 ZIP codes whose USPS city is Hot Springs Village, AR; density uses ACS 2023 ZCTA population (18,427). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "812112",
+        "slug": "beauty-salons",
+        "label": "Beauty Salons & Hair Studios",
+        "establishments": 0,
+        "per10kResidents": 0.0,
+        "usAvgPer10k": 2.31,
+        "saturationIndex": 0,
+        "status": "underserved",
+        "smallSample": true,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "0 employer establishments (NAICS 812112) across 1 ZIP codes whose USPS city is Hot Springs Village, AR; density uses ACS 2023 ZCTA population (18,427). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "811111",
+        "slug": "auto-repair",
+        "label": "General Automotive Repair",
+        "establishments": 3,
+        "per10kResidents": 1.63,
+        "usAvgPer10k": 2.2,
+        "saturationIndex": 74,
+        "status": "underserved",
+        "smallSample": true,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "3 employer establishments (NAICS 811111) across 1 ZIP codes whose USPS city is Hot Springs Village, AR; density uses ACS 2023 ZCTA population (18,427). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "621210",
+        "slug": "dentists",
+        "label": "Offices of Dentists",
+        "establishments": 5,
+        "per10kResidents": 2.71,
+        "usAvgPer10k": 3.89,
+        "saturationIndex": 70,
+        "status": "underserved",
+        "smallSample": true,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "5 employer establishments (NAICS 621210) across 1 ZIP codes whose USPS city is Hot Springs Village, AR; density uses ACS 2023 ZCTA population (18,427). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "621340",
+        "slug": "physical-therapy",
+        "label": "Physical, Occupational & Speech Therapists",
+        "establishments": 6,
+        "per10kResidents": 3.26,
+        "usAvgPer10k": 1.3,
+        "saturationIndex": 250,
+        "status": "saturated",
+        "smallSample": true,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "6 employer establishments (NAICS 621340) across 1 ZIP codes whose USPS city is Hot Springs Village, AR; density uses ACS 2023 ZCTA population (18,427). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "624410",
+        "slug": "daycare",
+        "label": "Child Day Care Services",
+        "establishments": 0,
+        "per10kResidents": 0.0,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 0,
+        "status": "underserved",
+        "smallSample": true,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "0 employer establishments (NAICS 624410) across 1 ZIP codes whose USPS city is Hot Springs Village, AR; density uses ACS 2023 ZCTA population (18,427). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "541110",
+        "slug": "law-firms",
+        "label": "Offices of Lawyers",
+        "establishments": 0,
+        "per10kResidents": 0.0,
+        "usAvgPer10k": 4.8,
+        "saturationIndex": 0,
+        "status": "underserved",
+        "smallSample": true,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "0 employer establishments (NAICS 541110) across 1 ZIP codes whose USPS city is Hot Springs Village, AR; density uses ACS 2023 ZCTA population (18,427). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "541211",
+        "slug": "accounting-cpa",
+        "label": "Offices of Certified Public Accountants",
+        "establishments": 3,
+        "per10kResidents": 1.63,
+        "usAvgPer10k": 1.44,
+        "saturationIndex": 113,
+        "status": "balanced",
+        "smallSample": true,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "3 employer establishments (NAICS 541211) across 1 ZIP codes whose USPS city is Hot Springs Village, AR; density uses ACS 2023 ZCTA population (18,427). National benchmark = all US ZIP rows / US population."
+        }
+      },
+      {
+        "naicsCode": "531210",
+        "slug": "real-estate-agencies",
+        "label": "Offices of Real Estate Agents & Brokers",
+        "establishments": 15,
+        "per10kResidents": 8.14,
+        "usAvgPer10k": 4.74,
+        "saturationIndex": 172,
+        "status": "saturated",
+        "smallSample": true,
+        "provenance": {
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "15 employer establishments (NAICS 531210) across 1 ZIP codes whose USPS city is Hot Springs Village, AR; density uses ACS 2023 ZCTA population (18,427). National benchmark = all US ZIP rows / US population."
         }
       }
     ],
@@ -12171,6 +12368,35 @@
       "source": "U.S. EPA Safe Drinking Water Information System (SDWIS)",
       "sourceUrl": "https://data.epa.gov/efservice/WATER_SYSTEM/PWSID/AR0000208/JSON",
       "retrieved": "2026-10-18"
+    },
+    "lat": 34.658069,
+    "lng": -92.968643,
+    "nationalParks": {
+      "parks": [
+        {
+          "parkCode": "hosp",
+          "fullName": "Hot Springs National Park",
+          "designation": "National Park",
+          "distanceMiles": 10.7,
+          "description": "Hot Springs National Park has a rich cultural past. The grand architecture of our historic bathhouses is equally matched by the natural curiosities that have been drawing people here for hundreds of years. Ancient thermal springs...",
+          "url": "https://www.nps.gov/hosp/index.htm",
+          "lat": 34.524144,
+          "lng": -93.063329
+        },
+        {
+          "parkCode": "chsc",
+          "fullName": "Little Rock Central High School National Historic Site",
+          "designation": "National Historic Site",
+          "distanceMiles": 38.4,
+          "description": "In 1957, Little Rock Central High School was the epicenter of confrontation and a catalyst for change as the fundamental test for the United States to enforce African American civil rights following Brown v. Board of Education. Learn...",
+          "url": "https://www.nps.gov/chsc/index.htm",
+          "lat": 34.736947,
+          "lng": -92.299879
+        }
+      ],
+      "sourceName": "U.S. National Park Service (NPS) API",
+      "sourceUrl": "https://www.nps.gov/",
+      "retrieved": "2026-10-31"
     }
   }
 ]

@@ -12,10 +12,11 @@ export function runQA(): boolean {
     return false;
   }
 
-  // The Top Six Featured Benchmark Models (Mandatory 100% Pass)
+  // The Top Seven Featured Benchmark Models (Mandatory 100% Pass)
   const flagships = [
     { file: 'tx/austin/index.html', slug: 'tx/austin', name: 'Austin', state: 'Texas' },
     { file: 'ar/hot-springs-village/index.html', slug: 'ar/hot-springs-village', name: 'Hot Springs Village', state: 'Arkansas' },
+    { file: 'ar/hot-springs/index.html', slug: 'ar/hot-springs', name: 'Hot Springs', state: 'Arkansas' },
     { file: 'id/boise/index.html', slug: 'id/boise', name: 'Boise', state: 'Idaho' },
     { file: 'fl/tampa/index.html', slug: 'fl/tampa', name: 'Tampa', state: 'Florida' },
     { file: 'az/scottsdale/index.html', slug: 'az/scottsdale', name: 'Scottsdale', state: 'Arizona' },
@@ -78,7 +79,7 @@ export function runQA(): boolean {
       errors++;
     }
     const titleMatch = html.match(/<title>(.*?)<\/title>/);
-    if (titleMatch && titleMatch[1].includes('&amp;')) {
+    if (titleMatch?.[1]?.includes('&amp;')) {
       console.error(`FAIL [SEO-TITLE] in ${f.name}: Title contains raw unescaped '&amp;' entity: ${titleMatch[1]}`);
       errors++;
     }
@@ -128,7 +129,7 @@ export function runQA(): boolean {
     if (!h.includes('"@type":"FAQPage"')) { console.error(`FAIL [FAQ-SCHEMA] ${f.name}: no FAQPage JSON-LD`); errors++; }
     if (/ of 25<\/(div|span)>/.test(h)) { console.error(`FAIL [HARDCODED-COUNT] ${f.name}: hardcoded '25' trade count`); errors++; }
     // duplicate H3 section headings on one page
-    const heads = [...h.matchAll(/<h3[^>]*>([^<]{4,80})<\/h3>/g)].map(m => m[1].trim());
+    const heads = [...h.matchAll(/<h3[^>]*>([^<]{4,80})<\/h3>/g)].map(m => (m[1] ?? '').trim());
     const dupH = [...new Set(heads.filter((x, i) => heads.indexOf(x) !== i))];
     if (dupH.length) { console.error(`FAIL [DUPLICATE-SECTION] ${f.name}: ${dupH.join(' | ')}`); errors++; }
     // news links must be article-level (path deeper than one segment), never a section homepage
@@ -137,7 +138,7 @@ export function runQA(): boolean {
   }
   const dataDir = path.resolve(process.cwd(), 'src/data/cities');
   const slugToState: Record<string,string> = {};
-  for (const f of flagships) slugToState[f.slug] = f.slug.split('/')[0];
+  for (const f of flagships) slugToState[f.slug] = f.slug.split('/')[0] ?? '';
   const seen: Record<string,string[]> = {};
   for (const f of flagships) {
     const st = slugToState[f.slug];
@@ -158,7 +159,7 @@ export function runQA(): boolean {
     const nm = `${c?.name}`;
     if (/balance|metropolitan government|city city/i.test(nm)) { console.error(`FAIL [NAME] ${f.name}: '${nm}'`); errors++; }
   }
-  for (const [sig, names] of Object.entries(seen)) if (names.length > 1) { console.error(`FAIL [DUPLICATE-VALUES] identical climate for ${names.join(', ')}`); errors++; }
+  for (const [_sig, names] of Object.entries(seen)) if (names.length > 1) { console.error(`FAIL [DUPLICATE-VALUES] identical climate for ${names.join(', ')}`); errors++; }
 
   // Crawl shield across EVERY non-flagship city page, not a 3-page sample
   const flagSet = new Set(flagships.map(f => f.slug));

@@ -1,73 +1,93 @@
-# CityClick (cityclick.com) — Full Methodology & Commercial Underwriting Knowledge Base
+# CityClick (cityclick.com) — Full Primary-Source Methodology & API Reference
 
-## 1. Architectural Mission
-CityClick provides deterministic, source-cited commercial real estate and municipal intelligence for 1,500+ US cities.
+## 1. Platform Scope & Crawl Shield Governance
+CityClick publishes US municipal guides built strictly from traceable federal and state primary datasets for visitors, relocating households, and local business founders.
+- Prime Directive: A blank or omitted block is always chosen over an estimated, defaulted, or unverified figure.
+- Certified Indexable Flagship Guides (7 cities passing primary-source audit and rendered HTML quality checks):
+  1. Austin, Texas: https://cityclick.com/tx/austin/
+  2. Nashville, Tennessee: https://cityclick.com/tn/nashville/
+  3. Hot Springs, Arkansas: https://cityclick.com/ar/hot-springs/
+  4. Hot Springs Village, Arkansas: https://cityclick.com/ar/hot-springs-village/
+  5. Boise, Idaho: https://cityclick.com/id/boise/
+  6. Tampa, Florida: https://cityclick.com/fl/tampa/
+  7. Scottsdale, Arizona: https://cityclick.com/az/scottsdale/
+- Additional Rebuilt & Preview Catalog: `ok/oklahoma-city` is rebuilt in audit review, while ~1,494 additional US municipal entries carry `<meta name="robots" content="noindex, follow">` and remain excluded from `sitemap.xml` until verified from primary sources.
+- Canonical URL Rule: All HTML page routes use a trailing slash (e.g., `https://cityclick.com/tx/austin/`, `https://cityclick.com/methodology/`). API routes (`/api/v1/...`) and static asset files (`.json`, `.txt`, `.pdf`) do not use a trailing slash.
 
-## 2. Mathematical Formulations
+## 2. Primary Federal & State Data Sources
 
-### 2.1 ECDF Mid-Rank Percentile
-PercentileRank(x_i, X) = round(100 * (count(x < x_i) + 0.5 * count(x == x_i)) / N)
+### 2.1 Demographics, Housing & Effective Property Tax
+- U.S. Census Bureau ACS 2023 5-Year Table-Based Summary File (`ACS-2023-5YR`):
+  - `B01003`: Total resident population (used directly for CDPs not covered by `SUB-EST2023`)
+  - `B19013`: Median household income (USD)
+  - `B19301`: Per-capita income (USD)
+  - `B01002`: Median resident age (years)
+  - `B25077`: Median value of owner-occupied housing units (USD)
+  - `B25064`: Median gross monthly residential rent (USD)
+  - `B25103`: Median annual real estate taxes paid on owner-occupied units (USD)
+  - Effective Property Tax Rate (%): `round((B25103 / B25077) * 100, 2)`
+- U.S. Census Bureau Population Estimates Program (`SUB-EST2023`, `SUMLEV == 162`):
+  - Total population as of July 1, 2023 (`POPESTIMATE2023`)
+  - Population change percentage from April 1, 2020 estimates base (`ESTIMATESBASE2020`) to July 1, 2023:
+    `popChange2020to2023Pct = round((POPESTIMATE2023 / ESTIMATESBASE2020 - 1) * 100, 1)`
 
-### 2.2 Viability Score Components (0–100)
-1. Purchasing Power (25% Weight):
-   PP = round(0.70 * PercentileRank(MedianHouseholdIncome) + 0.30 * PercentileRank(DaytimePopSurgePct))
+### 2.2 Small-Business NAICS Trade Density (Census ZBP + ZCTA)
+- Source: U.S. Census Bureau 2022 ZIP Code Business Patterns (`zbp22detail.zip`) paired with ACS 2023 5-Year ZCTA resident population (`860Z200US{zip}`).
+- Same-Universe Calculation:
+  For all USPS ZIP codes assigned to the city in ZBP that have positive ACS ZCTA population (`ZCTA_Pop`), employer establishments `E` for a 6-digit NAICS code are summed across those exact ZIP codes:
+  - `per10kResidents = (E / ZCTA_Pop) * 10000`
+  - `usAvgPer10k = (US_Total_ZBP_Establishments / US_ACS_Population) * 10000`
+  - `saturationIndex = round((per10kResidents / usAvgPer10k) * 100)`
+- Status Thresholds (`100` = US national ZBP benchmark):
+  - `saturationIndex < 80`: `underserved`
+  - `80 <= saturationIndex <= 120`: `balanced`
+  - `saturationIndex > 120`: `saturated`
+- Noise Filter: Any NAICS category with `usAvgPer10k < 0.3` or expected city establishments `(usAvgPer10k * ZCTA_Pop / 10000) < 10` is omitted rather than extrapolated.
 
-2. Growth Momentum (30% Weight):
-   GM = round(0.55 * PercentileRank(PopGrowth5YrPct) + 0.45 * PercentileRank(PermitsPer1kResidents))
+### 2.3 Verified U.S. National ZBP Benchmarks (`usAvgPer10k`, Vintage ZBP-2022 / ACS-2023)
+- `722515` | Coffee & Snack Shops: 2.12 establishments per 10,000 residents
+- `722511` | Full-Service Restaurants: 7.44 per 10,000
+- `722513` | Limited-Service / Fast Food Restaurants: 7.75 per 10,000
+- `722410` | Drinking Places (Alcoholic Beverages): 0.90 per 10,000
+- `812112` | Beauty Salons & Hair Studios: 2.31 per 10,000
+- `812113` | Nail Salons: 0.86 per 10,000
+- `713940` | Fitness & Recreational Sports Centers: 1.00 per 10,000
+- `812910` | Pet Care & Grooming Services: 0.46 per 10,000
+- `541940` | Veterinary Services & Animal Hospitals: 0.69 per 10,000
+- `811111` | General Automotive Repair: 2.20 per 10,000
+- `811192` | Car Washes & Auto Detailing: 0.35 per 10,000
+- `621210` | Offices of Dentists: 3.89 per 10,000
+- `621310` | Offices of Chiropractors: 0.97 per 10,000
+- `621340` | Physical, Occupational & Speech Therapists: 1.30 per 10,000
+- `624410` | Child Day Care Services: 2.12 per 10,000
+- `445120` | Convenience Retail Stores: 0.82 per 10,000
+- `448140` | Family Clothing Stores & Boutiques: 0.65 per 10,000
+- `541110` | Offices of Lawyers: 4.80 per 10,000
+- `541211` | Offices of Certified Public Accountants: 1.44 per 10,000
+- `531210` | Offices of Real Estate Agents & Brokers: 4.74 per 10,000
 
-3. Cost Efficiency (25% Weight):
-   IRR = MedianHouseholdIncome / (MedianGrossRent * 12)
-   CE = round(0.50 * PercentileRank(IRR) + 0.30 * (100 - PercentileRank(UnemploymentRatePct)) + 0.20 * (100 - PercentileRank(FemaRiskIndex)))
+### 2.4 Retail Sales Tax, Climate, Geography & Civic Infrastructure
+- Retail Sales Tax: Official state Department of Revenue and Comptroller rate publications stored in `sources/sales-tax.json` (`stateTaxRate`, `localTaxRate`, `combinedSalesTaxRate`, `sourceUrl`, `verifiedAt`).
+- Terrain Elevation: USGS 3D Elevation Program (3DEP Point Query Service) queried at the U.S. Census 2023 Gazetteer municipal internal point.
+- Climate Averages: Open-Meteo Historical Weather API (ERA5 reanalysis, `2015-01-01` to `2024-12-31`), reporting mean July daily maximum (`peakSummerHighF`), mean January daily minimum (`winterLowF`), and mean annual precipitation (`annualRainfallInches`).
+- Drinking Water: U.S. EPA Safe Drinking Water Information System (SDWIS Envirofacts), active Community Water Systems (`PWS_TYPE_CODE = CWS`, `PWS_ACTIVITY_CODE = A`).
+- Commercial Airports: OurAirports (`scheduled_service == "yes"`), straight-line Haversine distance in miles from the Census 2023 Gazetteer internal point.
+- Emergency Hospitals: CMS Care Compare Hospital General Information (`xubh-q36u`) filtered to `emergency_services == "Yes"` — listed objectively with CMS Facility IDs and zero trauma-level or ranking claims.
+- Higher Education, EV Charging & Parks: U.S. Dept. of Education College Scorecard, U.S. Dept. of Energy / NREL AFDC public EV charging stations, and National Park Service (NPS) API.
 
-4. Regulatory Friction (20% Weight):
-   TaxScore = 100 - PercentileRank(CombinedSalesTaxRate)
-   WaitScore = max(0, min(100, round(100 - (AvgPermitWaitDays - 14) * 1.2))) [Defaults to 50 if null]
-   RF = round(0.65 * TaxScore + 0.35 * WaitScore)
+## 3. Retail Lease Breakeven Calculator Formulas (`/tools/lease-calculator/`)
+CityClick does not publish guessed commercial market rents. Users enter their own quoted base rent and NNN/CAM pass-throughs:
+- `MonthlyOccupancyCost = (SqFt * (QuotedBaseRentSqFtYr + QuotedNnnCamSqFtYr)) / 12`
+- `MonthlyLaborCost = HourlyWage * StaffHoursPerWeek * 4.3482 * 1.18` (includes 18% employer payroll tax & benefits burden)
+- `MonthlyFixedCost = MonthlyOccupancyCost + MonthlyLaborCost + MonthlyOverhead`
+- `NetTicketExTax = AvgGrossTicket / (1 + CombinedSalesTaxRate)`
+- `ContributionMarginPerCustomer = NetTicketExTax * (1 - CogsPct)`
+- `MonthlyCustomersNeeded = ceil(MonthlyFixedCost / ContributionMarginPerCustomer)`
+- `DailyCustomersNeeded = ceil(MonthlyCustomersNeeded / 30.4375)`
+- `MonthlyNetRevenueNeeded = MonthlyFixedCost / (1 - CogsPct)`
 
-Overall Viability Score = round(0.25 * PP + 0.30 * GM + 0.25 * CE + 0.20 * RF)
-
-### 2.3 Bayesian-Shrunk NAICS Saturation Index
-For establishments E and population P:
-per10kResidents = (E / P) * 10000
-smoothedPer10k = (P * per10kResidents + m * usAvgPer10k) / (P + m) [where m = 10,000 residents prior]
-saturationIndex = round((smoothedPer10k / usAvgPer10k) * 100)
-
-## 3. The 25 Small-Business NAICS Benchmarks (US Baselines)
-- 722515 | Coffee & Snack Shops: 2.15 per 10k
-- 722511 | Full-Service Restaurants: 6.80 per 10k
-- 722513 | Fast Food Restaurants: 7.20 per 10k
-- 722410 | Bars & Drinking Places: 1.85 per 10k
-- 812111 | Barber Shops: 1.35 per 10k
-- 812112 | Beauty Salons: 3.40 per 10k
-- 812113 | Nail Salons: 2.10 per 10k
-- 713940 | Fitness & Gyms: 1.25 per 10k
-- 812910 | Pet Care & Grooming: 0.95 per 10k
-- 541940 | Veterinary Services: 1.05 per 10k
-- 811111 | General Auto Repair: 4.80 per 10k
-- 811192 | Car Washes: 0.65 per 10k
-- 812310 | Laundromats: 0.55 per 10k
-- 812320 | Dry Cleaners: 0.85 per 10k
-- 621210 | Dentists: 3.90 per 10k
-- 621310 | Chiropractors: 1.40 per 10k
-- 621340 | Physical Therapy: 1.55 per 10k
-- 624410 | Child Daycare: 2.25 per 10k
-- 445120 | Convenience Stores: 1.95 per 10k
-- 448140 | Clothing Boutiques: 1.65 per 10k
-- 445291 | Retail Bakeries: 0.85 per 10k
-- 453110 | Florists: 0.50 per 10k
-- 541110 | Law Firms: 4.90 per 10k
-- 541211 | CPAs & Accounting: 2.10 per 10k
-- 531210 | Real Estate Agencies: 3.80 per 10k
-
-## 4. Retail Breakeven Formulas
-- Monthly Occupancy Cost = (SqFt * (BaseRentSqFtYr + NnnCamSqFtYr)) / 12
-- Monthly Labor Cost = HourlyWage * StaffHoursPerWeek * 4.3482 * (1 + PayrollTaxAndBenefitsLoadPct [0.18])
-- Net Ticket Ex-Tax = AvgGrossTicket / (1 + CombinedSalesTaxRate)
-- Contribution Margin Per Customer = NetTicketExTax * (1 - CogsPct)
-- Monthly Customers Needed = ceil(MonthlyFixedCost / ContributionMarginPerCustomer)
-- Daily Customers Needed = ceil(MonthlyCustomersNeeded / 30.4375)
-
-## 5. API Example Response
+## 4. Public REST API (`GET /api/v1/cities/{state}/{city}`)
+Open public read access (no API key required). Verified response for `GET https://cityclick.com/api/v1/cities/tx/austin`:
 ```json
 {
   "status": "success",
@@ -75,19 +95,18 @@ saturationIndex = round((smoothedPer10k / usAvgPer10k) * 100)
     "slug": "tx/austin",
     "name": "Austin",
     "state": "Texas",
+    "stateCode": "tx",
     "population": 979882,
-    "popGrowth5YrPct": 8.4,
-    "medianHouseholdIncome": 92248,
-    "reportedRetailRentSqFtYr": 32.0,
-    "avgPermitWaitDays": 32,
+    "medianHouseholdIncome": 91461,
+    "popChange2020to2023Pct": 1.9,
+    "medianHomeValue": 512700,
+    "medianGrossRent": 1655,
+    "effectivePropertyTaxRatePct": 1.52,
+    "source": "US Census Bureau ACS 2023 5-year; Population Estimates 2023",
+    "certified": true,
     "combinedSalesTax": 0.0825,
-    "viabilityScores": {
-      "overallViability": 52,
-      "purchasingPower": 85,
-      "growthMomentum": 88,
-      "costEfficiency": 45,
-      "regulatoryFriction": 42
-    }
+    "timeZone": "CT",
+    "topUnderservedTrades": []
   }
 }
 ```

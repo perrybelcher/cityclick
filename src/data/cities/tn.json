@@ -2,7 +2,7 @@
   {
     "slug": "tn/nashville",
     "cityId": "4752006",
-    "countyFips": "47520",
+    "countyFips": "47037",
     "name": "Nashville",
     "stateCode": "tn",
     "stateName": "Tennessee",
@@ -34,7 +34,7 @@
         "sourceName": "US Census Bureau ACS 5-Year Estimates 2023 (Table-Based Summary File)",
         "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/",
         "datasetVintage": "ACS-2023-5YR",
-        "verifiedAt": "2026-10-18",
+        "verifiedAt": "2026-10-31T00:00:00Z",
         "granularity": "place"
       },
       "popChange2020to2023Pct": -0.2,
@@ -50,13 +50,14 @@
         "usAvgPer10k": 2.12,
         "saturationIndex": 175,
         "status": "saturated",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "177 employer establishments (NAICS 722515) across 21 ZIP codes whose USPS city is Nashville, TN; density uses ACS 2023 ZCTA population of those ZIPs (475,253). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "177 employer establishments (NAICS 722515) across 21 ZIP codes whose USPS city is Nashville, TN; density uses ACS 2023 ZCTA population (475,253). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -68,13 +69,14 @@
         "usAvgPer10k": 7.44,
         "saturationIndex": 186,
         "status": "saturated",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "658 employer establishments (NAICS 722511) across 21 ZIP codes whose USPS city is Nashville, TN; density uses ACS 2023 ZCTA population of those ZIPs (475,253). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "658 employer establishments (NAICS 722511) across 21 ZIP codes whose USPS city is Nashville, TN; density uses ACS 2023 ZCTA population (475,253). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -86,13 +88,14 @@
         "usAvgPer10k": 7.75,
         "saturationIndex": 168,
         "status": "saturated",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "618 employer establishments (NAICS 722513) across 21 ZIP codes whose USPS city is Nashville, TN; density uses ACS 2023 ZCTA population of those ZIPs (475,253). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "618 employer establishments (NAICS 722513) across 21 ZIP codes whose USPS city is Nashville, TN; density uses ACS 2023 ZCTA population (475,253). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -104,13 +107,14 @@
         "usAvgPer10k": 0.9,
         "saturationIndex": 233,
         "status": "saturated",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "100 employer establishments (NAICS 722410) across 21 ZIP codes whose USPS city is Nashville, TN; density uses ACS 2023 ZCTA population of those ZIPs (475,253). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "100 employer establishments (NAICS 722410) across 21 ZIP codes whose USPS city is Nashville, TN; density uses ACS 2023 ZCTA population (475,253). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -122,13 +126,14 @@
         "usAvgPer10k": 2.31,
         "saturationIndex": 131,
         "status": "saturated",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "144 employer establishments (NAICS 812112) across 21 ZIP codes whose USPS city is Nashville, TN; density uses ACS 2023 ZCTA population of those ZIPs (475,253). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "144 employer establishments (NAICS 812112) across 21 ZIP codes whose USPS city is Nashville, TN; density uses ACS 2023 ZCTA population (475,253). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -140,13 +145,14 @@
         "usAvgPer10k": 0.86,
         "saturationIndex": 39,
         "status": "underserved",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "16 employer establishments (NAICS 812113) across 21 ZIP codes whose USPS city is Nashville, TN; density uses ACS 2023 ZCTA population of those ZIPs (475,253). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "16 employer establishments (NAICS 812113) across 21 ZIP codes whose USPS city is Nashville, TN; density uses ACS 2023 ZCTA population (475,253). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -158,13 +164,14 @@
         "usAvgPer10k": 1.0,
         "saturationIndex": 215,
         "status": "saturated",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "102 employer establishments (NAICS 713940) across 21 ZIP codes whose USPS city is Nashville, TN; density uses ACS 2023 ZCTA population of those ZIPs (475,253). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "102 employer establishments (NAICS 713940) across 21 ZIP codes whose USPS city is Nashville, TN; density uses ACS 2023 ZCTA population (475,253). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -176,13 +183,14 @@
         "usAvgPer10k": 0.46,
         "saturationIndex": 163,
         "status": "saturated",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "36 employer establishments (NAICS 812910) across 21 ZIP codes whose USPS city is Nashville, TN; density uses ACS 2023 ZCTA population of those ZIPs (475,253). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "36 employer establishments (NAICS 812910) across 21 ZIP codes whose USPS city is Nashville, TN; density uses ACS 2023 ZCTA population (475,253). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -194,13 +202,14 @@
         "usAvgPer10k": 0.69,
         "saturationIndex": 125,
         "status": "saturated",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "41 employer establishments (NAICS 541940) across 21 ZIP codes whose USPS city is Nashville, TN; density uses ACS 2023 ZCTA population of those ZIPs (475,253). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "41 employer establishments (NAICS 541940) across 21 ZIP codes whose USPS city is Nashville, TN; density uses ACS 2023 ZCTA population (475,253). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -212,13 +221,14 @@
         "usAvgPer10k": 2.2,
         "saturationIndex": 98,
         "status": "balanced",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "102 employer establishments (NAICS 811111) across 21 ZIP codes whose USPS city is Nashville, TN; density uses ACS 2023 ZCTA population of those ZIPs (475,253). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "102 employer establishments (NAICS 811111) across 21 ZIP codes whose USPS city is Nashville, TN; density uses ACS 2023 ZCTA population (475,253). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -230,13 +240,14 @@
         "usAvgPer10k": 0.35,
         "saturationIndex": 78,
         "status": "underserved",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "13 employer establishments (NAICS 811192) across 21 ZIP codes whose USPS city is Nashville, TN; density uses ACS 2023 ZCTA population of those ZIPs (475,253). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "13 employer establishments (NAICS 811192) across 21 ZIP codes whose USPS city is Nashville, TN; density uses ACS 2023 ZCTA population (475,253). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -248,13 +259,14 @@
         "usAvgPer10k": 3.89,
         "saturationIndex": 113,
         "status": "balanced",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "208 employer establishments (NAICS 621210) across 21 ZIP codes whose USPS city is Nashville, TN; density uses ACS 2023 ZCTA population of those ZIPs (475,253). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "208 employer establishments (NAICS 621210) across 21 ZIP codes whose USPS city is Nashville, TN; density uses ACS 2023 ZCTA population (475,253). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -266,13 +278,14 @@
         "usAvgPer10k": 0.97,
         "saturationIndex": 102,
         "status": "balanced",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "47 employer establishments (NAICS 621310) across 21 ZIP codes whose USPS city is Nashville, TN; density uses ACS 2023 ZCTA population of those ZIPs (475,253). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "47 employer establishments (NAICS 621310) across 21 ZIP codes whose USPS city is Nashville, TN; density uses ACS 2023 ZCTA population (475,253). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -284,13 +297,14 @@
         "usAvgPer10k": 1.3,
         "saturationIndex": 74,
         "status": "underserved",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "46 employer establishments (NAICS 621340) across 21 ZIP codes whose USPS city is Nashville, TN; density uses ACS 2023 ZCTA population of those ZIPs (475,253). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "46 employer establishments (NAICS 621340) across 21 ZIP codes whose USPS city is Nashville, TN; density uses ACS 2023 ZCTA population (475,253). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -302,13 +316,14 @@
         "usAvgPer10k": 2.12,
         "saturationIndex": 72,
         "status": "underserved",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "73 employer establishments (NAICS 624410) across 21 ZIP codes whose USPS city is Nashville, TN; density uses ACS 2023 ZCTA population of those ZIPs (475,253). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "73 employer establishments (NAICS 624410) across 21 ZIP codes whose USPS city is Nashville, TN; density uses ACS 2023 ZCTA population (475,253). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -320,13 +335,14 @@
         "usAvgPer10k": 0.82,
         "saturationIndex": 85,
         "status": "balanced",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "33 employer establishments (NAICS 445120) across 21 ZIP codes whose USPS city is Nashville, TN; density uses ACS 2023 ZCTA population of those ZIPs (475,253). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "33 employer establishments (NAICS 445120) across 21 ZIP codes whose USPS city is Nashville, TN; density uses ACS 2023 ZCTA population (475,253). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -338,13 +354,14 @@
         "usAvgPer10k": 0.65,
         "saturationIndex": 235,
         "status": "saturated",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "73 employer establishments (NAICS 448140) across 21 ZIP codes whose USPS city is Nashville, TN; density uses ACS 2023 ZCTA population of those ZIPs (475,253). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "73 employer establishments (NAICS 448140) across 21 ZIP codes whose USPS city is Nashville, TN; density uses ACS 2023 ZCTA population (475,253). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -356,13 +373,14 @@
         "usAvgPer10k": 4.8,
         "saturationIndex": 171,
         "status": "saturated",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "391 employer establishments (NAICS 541110) across 21 ZIP codes whose USPS city is Nashville, TN; density uses ACS 2023 ZCTA population of those ZIPs (475,253). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "391 employer establishments (NAICS 541110) across 21 ZIP codes whose USPS city is Nashville, TN; density uses ACS 2023 ZCTA population (475,253). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -374,13 +392,14 @@
         "usAvgPer10k": 1.44,
         "saturationIndex": 126,
         "status": "saturated",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "86 employer establishments (NAICS 541211) across 21 ZIP codes whose USPS city is Nashville, TN; density uses ACS 2023 ZCTA population of those ZIPs (475,253). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "86 employer establishments (NAICS 541211) across 21 ZIP codes whose USPS city is Nashville, TN; density uses ACS 2023 ZCTA population (475,253). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -392,73 +411,48 @@
         "usAvgPer10k": 4.74,
         "saturationIndex": 97,
         "status": "balanced",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "219 employer establishments (NAICS 531210) across 21 ZIP codes whose USPS city is Nashville, TN; density uses ACS 2023 ZCTA population of those ZIPs (475,253). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "219 employer establishments (NAICS 531210) across 21 ZIP codes whose USPS city is Nashville, TN; density uses ACS 2023 ZCTA population (475,253). National benchmark = all US ZIP rows / US population."
         }
       }
     ],
     "permitsAndTax": {
       "stateTaxRate": 0.07,
+      "countyTaxRate": 0.0275,
+      "cityTaxRate": 0.0,
+      "specialDistrictTaxRate": 0.0,
       "localTaxRate": 0.0275,
       "combinedSalesTaxRate": 0.0975,
       "provenance": {
-        "sourceName": "Tennessee Dept. of Revenue Notice 24-11 (Davidson local rate 2.75% from 2025-02-01) + 7% state",
+        "sourceName": "Tennessee Dept. of Revenue Notice 24-11 (Davidson County local rate 2.75% from 2025-02-01 + 7.0% state)",
         "sourceUrl": "https://www.tn.gov/content/dam/tn/revenue/documents/notices/sales/sales24-11.pdf",
         "datasetVintage": "2026",
-        "verifiedAt": "2026-10-18",
+        "verifiedAt": "2026-10-31T00:00:00Z",
         "granularity": "place"
       }
     },
-    "topTrafficCorridors": [
-      {
-        "roadName": "Main Arterial Corridor 1",
-        "segmentDescription": "Central Commercial Corridor through Nashville",
-        "aadt": 82535,
-        "heavyTruckPct": 5.5,
-        "lat": 36.1718,
-        "lng": -86.785002,
-        "year": 2024,
-        "provenance": {
-          "sourceName": "Tennessee DOT AADT Database",
-          "sourceUrl": "https://www.transportation.gov/",
-          "datasetVintage": "2024-AADT",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "place"
-        }
-      }
-    ],
     "marketSignals": {},
     "executiveTravel": {
-      "timeZone": "America/Chicago (CT: UTC-06:00)",
+      "timeZone": "America/Chicago",
       "timeZoneAbbr": "CT",
       "utcOffset": "-06:00",
       "primaryAirport": {
         "name": "Nashville International Airport",
         "iata": "BNA",
-        "distanceMiles": 6.2,
+        "lat": 36.1245,
+        "lng": -86.6782,
+        "distanceMiles": 6.8,
         "transitToDowntown": null,
-        "source": "Google Places API (New), retrieved 2026-10-18; straight-line distance to downtown anchor"
-      },
-      "powerPlugs": {
-        "types": [
-          "Type A (2-pin)",
-          "Type B (3-pin grounded)"
-        ],
-        "voltage": "120V",
-        "frequency": "60Hz",
-        "adapterAdvice": "Visitors from UK, EU, Australia, and Asia require a standard Type A/B plug adapter and dual-voltage converter."
-      },
-      "currency": {
-        "code": "USD",
-        "symbol": "$",
-        "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
-        "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
+        "source": "OurAirports (public domain) for name, IATA code and coordinates; distance is straight-line from the U.S. Census Gazetteer city center point",
+        "sourceUrl": "https://ourairports.com/data/",
+        "cityCenterMethod": "Census Gazetteer internal point",
+        "retrieved": "2026-10-31"
       },
       "climate": {
         "summerHighF": 89,
@@ -466,25 +460,75 @@
         "annualRainfallInches": 67.8,
         "summerHighBasis": "Average July daily high",
         "winterLowBasis": "Average January daily low",
-        "source": "Open-Meteo Historical Weather API (ERA5 reanalysis), 2015-2024 average, retrieved 2026-10-18"
+        "source": "Open-Meteo Historical Weather API (ERA5 reanalysis), 2015-2024 average, retrieved 2026-10-18",
+        "sourceUrl": "https://open-meteo.com/en/docs/historical-weather-api"
       },
       "emergency": {
         "emergencyDispatch": "911",
-        "nearestTraumaHospital": "Vanderbilt University Medical Center",
-        "hospitalAddress": "1211 Medical Center Dr, Nashville, TN 37232",
-        "source": "Google Places API (New), retrieved 2026-10-18"
-      },
-      "visitorLogistics": {
-        "tapWaterPotability": "100% Safe municipal drinking water conforming to EPA Safe Drinking Water Act standards.",
-        "salesTaxRefundPolicy": "International travelers may claim state sales tax refunds on qualifying departures at designated airport customs counters.",
-        "rideshareAvailability": "Ubiquitous (Uber and Lyft operational 24/7 across the metropolitan area)."
-      },
-      "provenance": {
-        "sourceName": "FAA Airport Database & International Trade Administration",
-        "sourceUrl": "https://www.trade.gov/",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
+        "nearestTraumaHospital": "Ascension Saint Thomas Hospital",
+        "hospitalAddress": "4220 Harding Rd, PO Box 380, Nashville, TN 37205",
+        "cmsFacilityId": "440082",
+        "emergencyServices": true,
+        "source": "CMS Care Compare hospital general information (federal dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma level, ranking or nearest-facility claim.",
+        "erHospitals": [
+          {
+            "name": "Ascension Saint Thomas Hospital",
+            "address": "4220 Harding Rd, PO Box 380, Nashville, TN 37205",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "440082",
+            "lat": 36.127652,
+            "lng": -86.843864
+          },
+          {
+            "name": "Metro Nashville General Hospital",
+            "address": "1818 Albion Street, Nashville, TN 37208",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "440111",
+            "lat": 36.166309,
+            "lng": -86.805596
+          },
+          {
+            "name": "TriStar Centennial Medical Center",
+            "address": "2300 Patterson Street, Nashville, TN 37203",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "440161",
+            "lat": 36.152931,
+            "lng": -86.8077
+          },
+          {
+            "name": "TriStar Skyline Medical Center",
+            "address": "3441 Dickerson Pike, Nashville, TN 37207",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "440006",
+            "lat": 36.244496,
+            "lng": -86.75643
+          },
+          {
+            "name": "TriStar Southern Hills Medical Center",
+            "address": "391 Wallace Rd, Nashville, TN 37211",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "440197",
+            "lat": 36.078487,
+            "lng": -86.722121
+          },
+          {
+            "name": "VA Middle Tennessee Healthcare System",
+            "address": "1310 24th Avenue South, Nashville, TN 37212",
+            "type": "Acute Care - Veterans Administration",
+            "cmsFacilityId": "44018F",
+            "lat": 36.142355,
+            "lng": -86.804737
+          },
+          {
+            "name": "Vanderbilt University Medical Center",
+            "address": "1211 Medical Center Drive, Nashville, TN 37232",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "440039",
+            "lat": 36.142653,
+            "lng": -86.801329
+          }
+        ],
+        "erHospitalsSource": "CMS Care Compare hospital general information (federal dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma level, ranking or nearest-facility claim."
       }
     },
     "climateNormals": {
@@ -511,6 +555,197 @@
       "source": "U.S. EPA Safe Drinking Water Information System (SDWIS)",
       "sourceUrl": "https://data.epa.gov/efservice/WATER_SYSTEM/PWSID/TN0000494/JSON",
       "retrieved": "2026-10-18"
+    },
+    "terrainElevation": {
+      "elevationFeet": 426.7,
+      "elevationMeters": 130.1,
+      "topographyClass": "Nashville Basin / Cumberland River Valley",
+      "sourceName": "USGS 3D Elevation Program (3DEP Elevation Point Query Service)",
+      "sourceUrl": "https://epqs.nationalmap.gov/v1/json"
+    },
+    "higherEducation": {
+      "institutionCount": 25,
+      "totalEnrollment": 39095,
+      "institutions": [
+        {
+          "id": 221999,
+          "name": "Vanderbilt University",
+          "studentSize": 7208,
+          "ownership": "Private nonprofit",
+          "schoolUrl": "https://www.vanderbilt.edu/",
+          "lat": 36.14659,
+          "lng": -86.803369
+        },
+        {
+          "id": 219709,
+          "name": "Belmont University",
+          "studentSize": 7137,
+          "ownership": "Private nonprofit",
+          "schoolUrl": "https://www.belmont.edu/",
+          "lat": 36.135589,
+          "lng": -86.794807
+        },
+        {
+          "id": 221184,
+          "name": "Nashville State Community College",
+          "studentSize": 5653,
+          "ownership": "Public",
+          "schoolUrl": "https://www.nscc.edu/",
+          "lat": 36.134857,
+          "lng": -86.857342
+        },
+        {
+          "id": 221838,
+          "name": "Tennessee State University",
+          "studentSize": 4848,
+          "ownership": "Public",
+          "schoolUrl": "https://www.tnstate.edu/",
+          "lat": 36.166321,
+          "lng": -86.828275
+        },
+        {
+          "id": 219976,
+          "name": "Lipscomb University",
+          "studentSize": 2997,
+          "ownership": "Private nonprofit",
+          "schoolUrl": "https://www.lipscomb.edu/",
+          "lat": 36.106253,
+          "lng": -86.799791
+        },
+        {
+          "id": 443766,
+          "name": "Strayer University-Tennessee",
+          "studentSize": 1784,
+          "ownership": "Private for-profit",
+          "schoolUrl": "https://www.strayer.edu/campus-locations/tennessee/thousand-oaks",
+          "lat": 35.076643,
+          "lng": -89.901042
+        }
+      ],
+      "sourceName": "U.S. Department of Education College Scorecard",
+      "sourceUrl": "https://collegescorecard.ed.gov/",
+      "retrieved": "2026-10-31"
+    },
+    "evInfrastructure": {
+      "totalStations": 345,
+      "totalChargingPorts": 904,
+      "dcFastPorts": 168,
+      "level2Ports": 736,
+      "sampleStations": [
+        {
+          "name": "Nashville Zoo",
+          "address": "3777 Nolensville Pk, Nashville, TN 37211",
+          "network": "LOOP",
+          "dcFastPorts": 0,
+          "level2Ports": 36,
+          "lat": 36.09099,
+          "lng": -86.73529
+        },
+        {
+          "name": "Nashville, TN - Tesla Supercharger",
+          "address": "61 East Thompson Lane, Nashville, TN 37211",
+          "network": "Tesla",
+          "dcFastPorts": 24,
+          "level2Ports": 0,
+          "lat": 36.110516,
+          "lng": -86.723828
+        },
+        {
+          "name": "Nashville, TN - Charlotte Pike - Tesla Supercharger",
+          "address": "6814 Charlotte Pike, Nashville, TN 37209",
+          "network": "Tesla",
+          "dcFastPorts": 24,
+          "level2Ports": 0,
+          "lat": 36.134,
+          "lng": -86.891771
+        },
+        {
+          "name": "Nashville, TN - Thompson Lane - Tesla Supercharger",
+          "address": "719 Thompson Lane, Nashville, TN 37204",
+          "network": "Tesla",
+          "dcFastPorts": 24,
+          "level2Ports": 0,
+          "lat": 36.105829,
+          "lng": -86.76313
+        },
+        {
+          "name": "Nashville, TN - Dickerson Pike - Tesla Supercharger",
+          "address": "3451 Dickerson Pike, Nashville, TN 37207",
+          "network": "Tesla",
+          "dcFastPorts": 16,
+          "level2Ports": 0,
+          "lat": 36.244567,
+          "lng": -86.755321
+        }
+      ],
+      "sourceName": "U.S. Department of Energy / NLR Alternative Fuels Data Center (AFDC)",
+      "sourceUrl": "https://afdc.energy.gov/stations",
+      "retrieved": "2026-10-31"
+    },
+    "nationalParks": {
+      "parks": [
+        {
+          "parkCode": "stri",
+          "fullName": "Stones River National Battlefield",
+          "designation": "National Battlefield",
+          "distanceMiles": 28.4,
+          "description": "The Battle of Stones River began on the last day of 1862 and became one of the bloodiest conflicts of the Civil War. The battle produced important military and political gains for the Union, and it changed forever the people who lived...",
+          "url": "https://www.nps.gov/stri/index.htm",
+          "lat": 35.876087,
+          "lng": -86.430784
+        }
+      ],
+      "sourceName": "U.S. National Park Service (NPS) API",
+      "sourceUrl": "https://www.nps.gov/",
+      "retrieved": "2026-10-31"
+    },
+    "upcomingEvents": {
+      "totalMatchingEvents": 1489,
+      "events": [
+        {
+          "id": "Z7r9jZ1AAZU_d",
+          "name": "Nashville Ballet presents Dia de los Muertos",
+          "date": "2026-10-31",
+          "venueName": "The Martin Center for Nashville Ballet",
+          "category": "Arts & Theatre",
+          "url": "https://www.ticketmaster.com/event/Z7r9jZ1AAZU_d"
+        },
+        {
+          "id": "Z7r9jZ1AAZ_vf",
+          "name": "Rock and Roll Playhouse",
+          "date": "2026-10-31",
+          "venueName": "The Basement East",
+          "category": "Music",
+          "url": "https://www.ticketmaster.com/event/Z7r9jZ1AAZ_vf"
+        },
+        {
+          "id": "rZ7HnEZ1AfJ9GS",
+          "name": "Rock & Roll Playhouse: Halloween Spectacular for Kids",
+          "date": "2026-10-31",
+          "venueName": "The Basement East",
+          "category": "Miscellaneous",
+          "url": "https://www.ticketweb.com/event/rock-roll-playhouse-halloween-the-basement-east-tickets/14997333"
+        },
+        {
+          "id": "rZ7HnEZ1AfbMqK",
+          "name": "BACKSTAGE NASHVILLE! DAYTIME HIT SONGWRITERS SHOW featuring Dennis Morgan , Brett Tyler , Mark Irwin & Kimberly Kelly and Brian Fuller",
+          "date": "2026-10-31",
+          "venueName": "3rd and Lindsley",
+          "category": "Music",
+          "url": "https://www.ticketweb.com/event/backstage-nashville-daytime-hit-songwriters-3rd-and-lindsley-tickets/14637753"
+        },
+        {
+          "id": "G5viZ_8LYeXoM",
+          "name": "Nashville Predators v Tampa Bay Lightning - Fan Fang Giveaway",
+          "date": "2026-10-31",
+          "venueName": "Bridgestone Arena",
+          "category": "Sports",
+          "url": "https://www.ticketmaster.com/nashville-predators-v-tampa-bay-lightning-nashville-tennessee-10-31-2026/event/1B006507F00BE477"
+        }
+      ],
+      "sourceName": "Ticketmaster Discovery API v2",
+      "sourceUrl": "https://developer.ticketmaster.com/",
+      "retrieved": "2026-10-31"
     }
   },
   {
@@ -1100,7 +1335,7 @@
         "name": "Memphis Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 11.7,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -1115,14 +1350,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -1732,7 +1967,7 @@
         "name": "Knoxville Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 11.1,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -1747,14 +1982,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -2364,7 +2599,7 @@
         "name": "Chattanooga Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 11.0,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -2379,14 +2614,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -2996,7 +3231,7 @@
         "name": "Clarksville Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 11.0,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -3011,14 +3246,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -3628,7 +3863,7 @@
         "name": "Murfreesboro Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 11.0,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -3643,14 +3878,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -4260,7 +4495,7 @@
         "name": "Franklin Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.7,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -4275,14 +4510,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -4892,7 +5127,7 @@
         "name": "Johnson Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.6,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -4907,14 +5142,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -5524,7 +5759,7 @@
         "name": "Jackson Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.6,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -5539,14 +5774,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -6156,7 +6391,7 @@
         "name": "Hendersonville Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.5,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -6171,14 +6406,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -6788,7 +7023,7 @@
         "name": "Spring Hill Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.5,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -6803,14 +7038,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -7420,7 +7655,7 @@
         "name": "Smyrna Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.5,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -7435,14 +7670,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -8052,7 +8287,7 @@
         "name": "Kingsport Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.5,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -8067,14 +8302,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -8684,7 +8919,7 @@
         "name": "Bartlett Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.5,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -8699,14 +8934,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -9316,7 +9551,7 @@
         "name": "Collierville Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.4,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -9331,14 +9566,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -9948,7 +10183,7 @@
         "name": "Gallatin Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.4,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -9963,14 +10198,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -10580,7 +10815,7 @@
         "name": "Cleveland Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.4,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -10595,14 +10830,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -11212,7 +11447,7 @@
         "name": "Lebanon Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.4,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -11227,14 +11462,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -11844,7 +12079,7 @@
         "name": "Columbia Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.4,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -11859,14 +12094,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -12476,7 +12711,7 @@
         "name": "Brentwood Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.4,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -12491,14 +12726,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -13108,7 +13343,7 @@
         "name": "Mount Juliet Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.4,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -13123,14 +13358,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -13740,7 +13975,7 @@
         "name": "Germantown Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.3,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -13755,14 +13990,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -14372,7 +14607,7 @@
         "name": "La Vergne Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.3,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -14387,14 +14622,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -15004,7 +15239,7 @@
         "name": "Cookeville Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.3,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -15019,14 +15254,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -15636,7 +15871,7 @@
         "name": "Oak Ridge Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.3,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -15651,14 +15886,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -16268,7 +16503,7 @@
         "name": "Maryville Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.2,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -16283,14 +16518,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -16900,7 +17135,7 @@
         "name": "Morristown Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.2,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -16915,14 +17150,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -17532,7 +17767,7 @@
         "name": "Bristol Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.2,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -17547,14 +17782,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {

@@ -2,11 +2,11 @@
   {
     "slug": "ok/oklahoma-city",
     "cityId": "4055000",
-    "countyFips": "40550",
+    "countyFips": "40109",
     "name": "Oklahoma City",
     "stateCode": "ok",
     "stateName": "Oklahoma",
-    "countyName": "Oklahoma Metropolitan Area",
+    "countyName": "Oklahoma County",
     "lat": 35.467079,
     "lng": -97.513657,
     "primaryZips": [
@@ -34,7 +34,7 @@
         "sourceName": "US Census Bureau ACS 5-Year Estimates 2023 (Table-Based Summary File)",
         "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/",
         "datasetVintage": "ACS-2023-5YR",
-        "verifiedAt": "2026-10-18",
+        "verifiedAt": "2026-10-31T00:00:00Z",
         "granularity": "place"
       },
       "popChange2020to2023Pct": 3.2,
@@ -50,13 +50,14 @@
         "usAvgPer10k": 2.12,
         "saturationIndex": 98,
         "status": "balanced",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "145 employer establishments (NAICS 722515) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population of those ZIPs (695,373). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "145 employer establishments (NAICS 722515) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population (695,373). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -68,13 +69,14 @@
         "usAvgPer10k": 7.44,
         "saturationIndex": 134,
         "status": "saturated",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "691 employer establishments (NAICS 722511) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population of those ZIPs (695,373). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "691 employer establishments (NAICS 722511) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population (695,373). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -86,13 +88,14 @@
         "usAvgPer10k": 7.75,
         "saturationIndex": 131,
         "status": "saturated",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "707 employer establishments (NAICS 722513) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population of those ZIPs (695,373). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "707 employer establishments (NAICS 722513) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population (695,373). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -104,13 +107,14 @@
         "usAvgPer10k": 0.9,
         "saturationIndex": 128,
         "status": "saturated",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "80 employer establishments (NAICS 722410) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population of those ZIPs (695,373). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "80 employer establishments (NAICS 722410) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population (695,373). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -122,13 +126,14 @@
         "usAvgPer10k": 2.31,
         "saturationIndex": 88,
         "status": "balanced",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "141 employer establishments (NAICS 812112) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population of those ZIPs (695,373). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "141 employer establishments (NAICS 812112) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population (695,373). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -140,13 +145,14 @@
         "usAvgPer10k": 0.86,
         "saturationIndex": 37,
         "status": "underserved",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "22 employer establishments (NAICS 812113) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population of those ZIPs (695,373). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "22 employer establishments (NAICS 812113) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population (695,373). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -158,13 +164,14 @@
         "usAvgPer10k": 1.0,
         "saturationIndex": 87,
         "status": "balanced",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "60 employer establishments (NAICS 713940) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population of those ZIPs (695,373). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "60 employer establishments (NAICS 713940) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population (695,373). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -176,13 +183,14 @@
         "usAvgPer10k": 0.46,
         "saturationIndex": 99,
         "status": "balanced",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "32 employer establishments (NAICS 812910) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population of those ZIPs (695,373). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "32 employer establishments (NAICS 812910) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population (695,373). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -194,13 +202,14 @@
         "usAvgPer10k": 0.69,
         "saturationIndex": 121,
         "status": "saturated",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "58 employer establishments (NAICS 541940) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population of those ZIPs (695,373). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "58 employer establishments (NAICS 541940) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population (695,373). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -212,13 +221,14 @@
         "usAvgPer10k": 2.2,
         "saturationIndex": 76,
         "status": "underserved",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "117 employer establishments (NAICS 811111) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population of those ZIPs (695,373). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "117 employer establishments (NAICS 811111) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population (695,373). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -230,13 +240,14 @@
         "usAvgPer10k": 0.35,
         "saturationIndex": 140,
         "status": "saturated",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "34 employer establishments (NAICS 811192) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population of those ZIPs (695,373). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "34 employer establishments (NAICS 811192) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population (695,373). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -248,13 +259,14 @@
         "usAvgPer10k": 3.89,
         "saturationIndex": 132,
         "status": "saturated",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "356 employer establishments (NAICS 621210) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population of those ZIPs (695,373). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "356 employer establishments (NAICS 621210) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population (695,373). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -266,13 +278,14 @@
         "usAvgPer10k": 0.97,
         "saturationIndex": 109,
         "status": "balanced",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "74 employer establishments (NAICS 621310) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population of those ZIPs (695,373). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "74 employer establishments (NAICS 621310) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population (695,373). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -284,13 +297,14 @@
         "usAvgPer10k": 1.3,
         "saturationIndex": 109,
         "status": "balanced",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "99 employer establishments (NAICS 621340) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population of those ZIPs (695,373). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "99 employer establishments (NAICS 621340) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population (695,373). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -302,13 +316,14 @@
         "usAvgPer10k": 2.12,
         "saturationIndex": 131,
         "status": "saturated",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "193 employer establishments (NAICS 624410) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population of those ZIPs (695,373). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "193 employer establishments (NAICS 624410) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population (695,373). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -320,13 +335,14 @@
         "usAvgPer10k": 0.82,
         "saturationIndex": 32,
         "status": "underserved",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "18 employer establishments (NAICS 445120) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population of those ZIPs (695,373). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "18 employer establishments (NAICS 445120) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population (695,373). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -338,13 +354,14 @@
         "usAvgPer10k": 0.65,
         "saturationIndex": 159,
         "status": "saturated",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "72 employer establishments (NAICS 448140) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population of those ZIPs (695,373). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "72 employer establishments (NAICS 448140) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population (695,373). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -356,13 +373,14 @@
         "usAvgPer10k": 4.8,
         "saturationIndex": 235,
         "status": "saturated",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "786 employer establishments (NAICS 541110) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population of those ZIPs (695,373). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "786 employer establishments (NAICS 541110) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population (695,373). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -374,13 +392,14 @@
         "usAvgPer10k": 1.44,
         "saturationIndex": 172,
         "status": "saturated",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "172 employer establishments (NAICS 541211) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population of those ZIPs (695,373). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "172 employer establishments (NAICS 541211) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population (695,373). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -392,98 +411,192 @@
         "usAvgPer10k": 4.74,
         "saturationIndex": 97,
         "status": "balanced",
+        "smallSample": false,
         "provenance": {
           "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
           "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
           "datasetVintage": "ZBP-2022",
-          "verifiedAt": "2026-10-18",
-          "granularity": "zip_aggregated",
-          "evidenceQuote": "319 employer establishments (NAICS 531210) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population of those ZIPs (695,373). National benchmark = all US ZIP rows / US population."
+          "verifiedAt": "2026-10-31T00:00:00Z",
+          "granularity": "zcta_aggregated",
+          "evidenceQuote": "319 employer establishments (NAICS 531210) across 43 ZIP codes whose USPS city is Oklahoma City, OK; density uses ACS 2023 ZCTA population (695,373). National benchmark = all US ZIP rows / US population."
         }
       }
     ],
     "permitsAndTax": {
       "stateTaxRate": 0.045,
+      "countyTaxRate": 0.0,
+      "cityTaxRate": 0.04125,
+      "specialDistrictTaxRate": 0.0,
       "localTaxRate": 0.04125,
       "combinedSalesTaxRate": 0.08625,
       "provenance": {
         "sourceName": "City of Oklahoma City (4.5% state + 4.125% city = 8.625%)",
         "sourceUrl": "https://www.okc.gov/Government/Budget-and-Finance/Taxes",
         "datasetVintage": "2026",
-        "verifiedAt": "2026-10-18",
+        "verifiedAt": "2026-10-31T00:00:00Z",
         "granularity": "place"
       }
     },
-    "topTrafficCorridors": [
-      {
-        "roadName": "Main Arterial Corridor 1",
-        "segmentDescription": "Central Commercial Corridor through Oklahoma",
-        "aadt": 84332,
-        "heavyTruckPct": 5.5,
-        "lat": 35.467079,
-        "lng": -97.513657,
-        "year": 2024,
-        "provenance": {
-          "sourceName": "Oklahoma DOT AADT Database",
-          "sourceUrl": "https://www.transportation.gov/",
-          "datasetVintage": "2024-AADT",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "place"
-        }
-      }
-    ],
     "marketSignals": {},
     "executiveTravel": {
-      "timeZone": "America/Chicago (CT: UTC-06:00)",
+      "timeZone": "America/Chicago",
       "timeZoneAbbr": "CT",
       "utcOffset": "-06:00",
       "primaryAirport": {
-        "name": "Will Rogers International Airport",
+        "name": "OKC Will Rogers World Airport",
         "iata": "OKC",
-        "distanceMiles": 7.3,
+        "lat": 35.393388,
+        "lng": -97.598248,
+        "distanceMiles": 7.0,
         "transitToDowntown": null,
-        "source": "Google Places API (New), retrieved 2026-10-18; straight-line distance to city anchor"
-      },
-      "powerPlugs": {
-        "types": [
-          "Type A (2-pin)",
-          "Type B (3-pin grounded)"
-        ],
-        "voltage": "120V",
-        "frequency": "60Hz",
-        "adapterAdvice": "Visitors from UK, EU, Australia, and Asia require a standard Type A/B plug adapter and dual-voltage converter."
-      },
-      "currency": {
-        "code": "USD",
-        "symbol": "$",
-        "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
-        "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
+        "source": "OurAirports (public domain) for name, IATA code and coordinates; distance is straight-line from the U.S. Census Gazetteer city center point",
+        "sourceUrl": "https://ourairports.com/data/",
+        "cityCenterMethod": "Census Gazetteer internal point",
+        "retrieved": "2026-10-31"
       },
       "climate": {
-        "summerHighF": 84,
-        "winterLowF": 22,
-        "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
-        "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
+        "summerHighF": 93,
+        "winterLowF": 30,
+        "annualRainfallInches": 36.0,
+        "summerHighBasis": "Average July daily high",
+        "winterLowBasis": "Average January daily low",
+        "source": "Open-Meteo Historical Weather API (ERA5 reanalysis), 2015-2024 average, retrieved 2026-10-18",
+        "sourceUrl": "https://open-meteo.com/en/docs/historical-weather-api"
       },
       "emergency": {
         "emergencyDispatch": "911",
-        "nearestTraumaHospital": "OU Health University of Oklahoma Medical Center",
-        "hospitalAddress": "700 NE 13th St, Oklahoma City, OK 73104",
-        "source": "Google Places API (New), retrieved 2026-10-18"
-      },
-      "visitorLogistics": {
-        "tapWaterPotability": "100% Safe municipal drinking water conforming to EPA Safe Drinking Water Act standards.",
-        "salesTaxRefundPolicy": "International travelers may claim state sales tax refunds on qualifying departures at designated airport customs counters.",
-        "rideshareAvailability": "Ubiquitous (Uber and Lyft operational 24/7 across the metropolitan area)."
-      },
-      "provenance": {
-        "sourceName": "FAA Airport Database & International Trade Administration",
-        "sourceUrl": "https://www.trade.gov/",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
+        "nearestTraumaHospital": "Community Hospital, LLC",
+        "hospitalAddress": "3100 Southwest 89th Street, Oklahoma City, OK 73159",
+        "cmsFacilityId": "370203",
+        "emergencyServices": true,
+        "source": "CMS Care Compare hospital general information (federal dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma level, ranking or nearest-facility claim.",
+        "erHospitals": [
+          {
+            "name": "Community Hospital, LLC",
+            "address": "3100 Southwest 89th Street, Oklahoma City, OK 73159",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "370203",
+            "lat": 35.377056,
+            "lng": -97.570886
+          },
+          {
+            "name": "Integris Baptist Medical Center, Inc",
+            "address": "3300 Northwest Expressway, Oklahoma City, OK 73112",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "370028"
+          },
+          {
+            "name": "Integris Southwest Medical Center",
+            "address": "4401 South Western Avenue, Oklahoma City, OK 73109",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "370106",
+            "lat": 35.420691,
+            "lng": -97.530295
+          },
+          {
+            "name": "Lakeside Women's Hospital, A Member of Integris He",
+            "address": "11200 North Portland Avenue, Oklahoma City, OK 73120",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "370199",
+            "lat": 35.583329,
+            "lng": -97.584965
+          },
+          {
+            "name": "McBride Orthopedic Hospital",
+            "address": "9600 North Broadway Extension, Oklahoma City, OK 73114",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "370222",
+            "lat": 35.567689,
+            "lng": -97.512797
+          },
+          {
+            "name": "Mercy Hospital Oklahoma City, Inc",
+            "address": "4300 West Memorial Road, Oklahoma City, OK 73120",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "370013",
+            "lat": 35.608965,
+            "lng": -97.601639
+          },
+          {
+            "name": "Northwest Surgical Hospital",
+            "address": "9204 North May Avenue, Oklahoma City, OK 73120",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "370192",
+            "lat": 35.563727,
+            "lng": -97.567119
+          },
+          {
+            "name": "OU Medical Center",
+            "address": "700 NE 13th Street, Oklahoma City, OK 73104",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "370093",
+            "lat": 35.482289,
+            "lng": -97.502778
+          },
+          {
+            "name": "Oklahoma Center for Orthopaedic & Multi-Sp",
+            "address": "8100 South Walker Bldg C, Oklahoma City, OK 73139",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "370212",
+            "lat": 35.386114,
+            "lng": -97.521201
+          },
+          {
+            "name": "Oklahoma City VA Medical Center",
+            "address": "921 NE 13th Street, Oklahoma City, OK 73104",
+            "type": "Acute Care - Veterans Administration",
+            "cmsFacilityId": "37014F",
+            "lat": 35.482462,
+            "lng": -97.496507
+          },
+          {
+            "name": "Oklahoma Heart Hospital South, LLC",
+            "address": "5200 East I-240 Service Road, Oklahoma City, OK 73135",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "370234"
+          },
+          {
+            "name": "Oklahoma Heart Hospital, LLC",
+            "address": "4050 West Memorial Road, Oklahoma City, OK 73120",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "370215",
+            "lat": 35.608973,
+            "lng": -97.595994
+          },
+          {
+            "name": "Oklahoma Spine Hospital",
+            "address": "14101 Parkway Commons Drive, Oklahoma City, OK 73134",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "370206",
+            "lat": 35.61498,
+            "lng": -97.582642
+          },
+          {
+            "name": "OneCore Health",
+            "address": "100 NE 85th Street, Oklahoma City, OK 73114",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "370220",
+            "lat": 35.557881,
+            "lng": -97.504025
+          },
+          {
+            "name": "SSM Health St. Anthony Hospital - Oklahoma City",
+            "address": "1000 North Lee Avenue, Oklahoma City, OK 73101",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "370037",
+            "lat": 35.477302,
+            "lng": -97.524244
+          },
+          {
+            "name": "Surgical Hospital of Oklahoma",
+            "address": "100 Southeast 59th Street, Oklahoma City, OK 73129",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "370201",
+            "lat": 35.406157,
+            "lng": -97.51027
+          }
+        ],
+        "erHospitalsSource": "CMS Care Compare hospital general information (federal dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma level, ranking or nearest-facility claim."
       }
     },
     "housingAndTaxes": {
@@ -491,7 +604,7 @@
       "medianGrossRent": 1083,
       "medianRealEstateTaxPaid": 2186,
       "effectivePropertyTaxRatePct": 1.02,
-      "countyName": "Oklahoma Metropolitan Area",
+      "countyName": "Oklahoma County",
       "source": "ACS 2023 5-yr: B25077 median home value, B25064 median gross rent, B25103 median real estate taxes paid. Effective rate = B25103 / B25077.",
       "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/"
     },
@@ -510,6 +623,197 @@
       "annualRainfallInches": 36.0,
       "sourceName": "Open-Meteo Historical Weather API (ERA5 reanalysis), 2015-2024 average, retrieved 2026-10-18",
       "sourceUrl": "https://open-meteo.com/en/docs/historical-weather-api"
+    },
+    "terrainElevation": {
+      "elevationFeet": 1196.1,
+      "elevationMeters": 364.6,
+      "topographyClass": "Central Redbed Plains / North Canadian River Basin",
+      "sourceName": "USGS 3D Elevation Program (3DEP Elevation Point Query Service)",
+      "sourceUrl": "https://epqs.nationalmap.gov/v1/json"
+    },
+    "higherEducation": {
+      "institutionCount": 13,
+      "totalEnrollment": 19862,
+      "institutions": [
+        {
+          "id": 207449,
+          "name": "Oklahoma City Community College",
+          "studentSize": 9758,
+          "ownership": "Public",
+          "schoolUrl": "https://www.occc.edu/",
+          "lat": 35.387699,
+          "lng": -97.570109
+        },
+        {
+          "id": 207397,
+          "name": "Oklahoma State University-Oklahoma City",
+          "studentSize": 3514,
+          "ownership": "Public",
+          "schoolUrl": "https://osuokc.edu/",
+          "lat": 35.474969,
+          "lng": -97.581959
+        },
+        {
+          "id": 245953,
+          "name": "Mid-America Christian University",
+          "studentSize": 1666,
+          "ownership": "Private nonprofit",
+          "schoolUrl": "https://www.macu.edu/",
+          "lat": 35.347785,
+          "lng": -97.578297
+        },
+        {
+          "id": 207458,
+          "name": "Oklahoma City University",
+          "studentSize": 1514,
+          "ownership": "Private nonprofit",
+          "schoolUrl": "https://www.okcu.edu/",
+          "lat": 35.495271,
+          "lng": -97.541242
+        },
+        {
+          "id": 207342,
+          "name": "University of Oklahoma-Health Sciences Center",
+          "studentSize": 1214,
+          "ownership": "Public",
+          "schoolUrl": "https://ouhsc.edu/",
+          "lat": 35.47928,
+          "lng": -97.496289
+        },
+        {
+          "id": 245999,
+          "name": "Francis Tuttle Technology Center",
+          "studentSize": 886,
+          "ownership": "Public",
+          "schoolUrl": "https://www.francistuttle.edu/",
+          "lat": 35.60052,
+          "lng": -97.640672
+        }
+      ],
+      "sourceName": "U.S. Department of Education College Scorecard",
+      "sourceUrl": "https://collegescorecard.ed.gov/",
+      "retrieved": "2026-10-31"
+    },
+    "evInfrastructure": {
+      "totalStations": 79,
+      "totalChargingPorts": 273,
+      "dcFastPorts": 151,
+      "level2Ports": 122,
+      "sampleStations": [
+        {
+          "name": "Oklahoma City, OK - 36th Street - Tesla Supercharger",
+          "address": "625 NE 36th St, Oklahoma City, OK 73105",
+          "network": "Tesla",
+          "dcFastPorts": 16,
+          "level2Ports": 0,
+          "lat": 35.508774,
+          "lng": -97.501428
+        },
+        {
+          "name": "Oklahoma City, OK - West Memorial Road - Tesla Supercharger",
+          "address": "3437 W Memorial Rd, Oklahoma City, OK 73134",
+          "network": "Tesla",
+          "dcFastPorts": 12,
+          "level2Ports": 0,
+          "lat": 35.610604,
+          "lng": -97.578048
+        },
+        {
+          "name": "Metro Ford OKC",
+          "address": "2800 W I-44 Service Rd, Oklahoma City, OK 73112",
+          "network": "FCN",
+          "dcFastPorts": 6,
+          "level2Ports": 6,
+          "lat": 35.510383,
+          "lng": -97.564807
+        },
+        {
+          "name": "Oklahoma City, OK - 36th Street - Tesla Destination",
+          "address": "625 NE 36th St, Oklahoma City, OK 73105",
+          "network": "Tesla Destination",
+          "dcFastPorts": 0,
+          "level2Ports": 11,
+          "lat": 35.508762,
+          "lng": -97.501486
+        },
+        {
+          "name": "Target T1397 (Oklahoma City, OK)",
+          "address": "13924 N Pennsylvania Ave, Oklahoma City, OK 73134",
+          "network": "Electrify America",
+          "dcFastPorts": 10,
+          "level2Ports": 0,
+          "lat": 35.61185,
+          "lng": -97.54846
+        }
+      ],
+      "sourceName": "U.S. Department of Energy / NLR Alternative Fuels Data Center (AFDC)",
+      "sourceUrl": "https://afdc.energy.gov/stations",
+      "retrieved": "2026-10-31"
+    },
+    "nationalParks": {
+      "parks": [
+        {
+          "parkCode": "okci",
+          "fullName": "Oklahoma City National Memorial",
+          "designation": "National Memorial",
+          "distanceMiles": 0.5,
+          "description": "The outdoor symbolic memorial is a place of quiet reflection, honoring victims, survivors, rescuers, and all who were changed forever on April 19, 1995. It encompasses the now sacred soil where the Alfred P. Murrah Federal Building once...",
+          "url": "https://www.nps.gov/okci/index.htm",
+          "lat": 35.473,
+          "lng": -97.5171
+        }
+      ],
+      "sourceName": "U.S. National Park Service (NPS) API",
+      "sourceUrl": "https://www.nps.gov/",
+      "retrieved": "2026-10-31"
+    },
+    "upcomingEvents": {
+      "totalMatchingEvents": 291,
+      "events": [
+        {
+          "id": "vvG1YZ_a62aeP6",
+          "name": "National Cowboy Museum",
+          "date": "2026-04-17",
+          "venueName": "National Cowboy & Western Heritage Museum",
+          "category": "Arts & Theatre",
+          "url": "https://nationalcowboymuseum.org/"
+        },
+        {
+          "id": "Z7r9jZ1AA7xjN",
+          "name": "Bingo Loco - Ages 21+",
+          "date": "2026-10-31",
+          "venueName": "Tower Theatre - Oklahoma City",
+          "category": "Music",
+          "url": "https://www.ticketmaster.com/event/Z7r9jZ1AA7xjN"
+        },
+        {
+          "id": "Z7r9jZ1A70Zax",
+          "name": "PJ Morton",
+          "date": "2026-11-01",
+          "venueName": "Tower Theatre - Oklahoma City",
+          "category": "Music",
+          "url": "https://www.ticketmaster.com/event/Z7r9jZ1A70Zax"
+        },
+        {
+          "id": "Z7r9jZ1AAZd8N",
+          "name": "Ryan Bingham w/ The Texas Gentlemen",
+          "date": "2026-11-01",
+          "venueName": "Criterion Theater - Oklahoma City",
+          "category": "Music",
+          "url": "https://www.ticketmaster.com/event/Z7r9jZ1AAZd8N"
+        },
+        {
+          "id": "Z7r9jZ1A700Jv",
+          "name": "Shakey Graves w/ Wild Pink",
+          "date": "2026-11-02",
+          "venueName": "The Jones Assembly",
+          "category": "Music",
+          "url": "https://www.ticketmaster.com/event/Z7r9jZ1A700Jv"
+        }
+      ],
+      "sourceName": "Ticketmaster Discovery API v2",
+      "sourceUrl": "https://developer.ticketmaster.com/",
+      "retrieved": "2026-10-31"
     }
   },
   {
@@ -1099,7 +1403,7 @@
         "name": "Tulsa Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 11.5,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -1114,14 +1418,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -1731,7 +2035,7 @@
         "name": "Norman Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.9,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -1746,14 +2050,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -2363,7 +2667,7 @@
         "name": "Broken Arrow Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.8,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -2378,14 +2682,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -2995,7 +3299,7 @@
         "name": "Edmond Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.7,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -3010,14 +3314,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -3627,7 +3931,7 @@
         "name": "Lawton Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.7,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -3642,14 +3946,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -4259,7 +4563,7 @@
         "name": "Moore Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.5,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -4274,14 +4578,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -4891,7 +5195,7 @@
         "name": "Midwest Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.5,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -4906,14 +5210,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -5523,7 +5827,7 @@
         "name": "Enid Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.4,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -5538,14 +5842,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -6155,7 +6459,7 @@
         "name": "Stillwater Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.4,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -6170,14 +6474,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -6787,7 +7091,7 @@
         "name": "Owasso Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.3,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -6802,14 +7106,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -7419,7 +7723,7 @@
         "name": "Bartlesville Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.3,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -7434,14 +7738,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -8051,7 +8355,7 @@
         "name": "Muskogee Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.3,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -8066,14 +8370,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -8683,7 +8987,7 @@
         "name": "Shawnee Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.2,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -8698,14 +9002,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -9315,7 +9619,7 @@
         "name": "Bixby Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.2,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -9330,14 +9634,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -9947,7 +10251,7 @@
         "name": "Jenks Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.2,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -9962,14 +10266,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -10579,7 +10883,7 @@
         "name": "Yukon Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.2,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -10594,14 +10898,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {

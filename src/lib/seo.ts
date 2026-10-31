@@ -7,10 +7,9 @@ export interface SeoGraphOptions {
 }
 
 export function generateSeoGraph({ city, canonicalUrl }: SeoGraphOptions) {
-  const coffeeNaics =
-    city.industries.find((i) => i.naicsCode === '722515') ?? city.industries[0]!;
-
+  const cleanCanonical = canonicalUrl.endsWith('/') ? canonicalUrl : `${canonicalUrl}/`;
   const travel = city.executiveTravel;
+  const sourcedAirport = travel?.primaryAirport?.source ? travel.primaryAirport : null;
 
   const faqs = buildFacts(city).map((f) => ({
     '@type': 'Question',
@@ -18,85 +17,126 @@ export function generateSeoGraph({ city, canonicalUrl }: SeoGraphOptions) {
     acceptedAnswer: { '@type': 'Answer', text: `${f.a} Source: ${f.source} (${f.asOf}).` },
   }));
 
+  const measuredVars = [
+    'Resident Population',
+    'Median Household Income',
+    'Median Home Value',
+    'Median Gross Rent',
+    'Effective Property Tax Rate',
+  ];
+  if (city.demographics.popChange2020to2023Pct != null) {
+    measuredVars.push('Population Change 2020-2023');
+  }
+  if (city.industries.length > 0) {
+    measuredVars.push('NAICS Establishment Densities');
+  }
+  if (city.permitsAndTax?.combinedSalesTaxRate != null && city.permitsAndTax?.provenance) {
+    measuredVars.push('Combined Sales Tax Rate');
+  }
+
+  const attractions: Record<string, unknown>[] = [];
+  if (sourcedAirport?.name) {
+    attractions.push({
+      '@type': 'Airport',
+      name: sourcedAirport.name,
+      ...(sourcedAirport.iata ? { iataCode: sourcedAirport.iata } : {}),
+      ...(sourcedAirport.lat != null && sourcedAirport.lng != null
+        ? {
+            geo: {
+              '@type': 'GeoCoordinates',
+              latitude: sourcedAirport.lat,
+              longitude: sourcedAirport.lng,
+            },
+          }
+        : {}),
+    });
+  }
+  if (city.nationalParks?.parks?.length) {
+    for (const pk of city.nationalParks.parks.slice(0, 3)) {
+      attractions.push({
+        '@type': 'Park',
+        name: pk.fullName,
+        url: pk.url,
+      });
+    }
+  }
+
   return {
     '@context': 'https://schema.org',
     '@graph': [
       // 1. City / Place
       {
         '@type': 'City',
-        '@id': `${canonicalUrl}#city`,
+        '@id': `${cleanCanonical}#city`,
         name: city.name,
         containedInPlace: {
           '@type': 'AdministrativeArea',
           name: city.stateName,
           identifier: city.stateCode.toUpperCase(),
         },
-        geo: {
-          '@type': 'GeoCoordinates',
-          latitude: city.lat,
-          longitude: city.lng,
-        },
+        ...(city.lat != null && city.lng != null
+          ? {
+              geo: {
+                '@type': 'GeoCoordinates',
+                latitude: city.lat,
+                longitude: city.lng,
+              },
+            }
+          : {}),
         identifier: city.cityId,
-        sameAs: `https://data.census.gov/profile/${city.name}_city,_${city.stateName}?g=160XX00US${city.cityId}`,
-        description: `Economic, demographic, and commercial feasibility profile for ${city.name}, ${city.stateName}.`,
+        sameAs: `https://data.census.gov/profile?g=160XX00US${city.cityId}`,
+        description: `Primary-sourced demographic, housing, climate, utility, and small-business trade density guide for ${city.name}, ${city.stateName}.`,
       },
       // 2. Verified Federal Dataset
       {
         '@type': 'Dataset',
-        '@id': `${canonicalUrl}#dataset`,
-        name: `${city.name}, ${city.stateCode.toUpperCase()} Commercial Viability & NAICS Saturation Dataset (2026)`,
-        description: `Verified Census ACS 5-Year, BLS LAUS, and ZBP establishment data for ${city.name}, including NAICS industry saturation metrics and Census housing statistics.`,
-        url: canonicalUrl,
+        '@id': `${cleanCanonical}#dataset`,
+        name: `${city.name}, ${city.stateCode.toUpperCase()} Municipal & Small-Business Trade Dataset (2026)`,
+        description: `Sourced U.S. Census ACS 5-Year, Population Estimates, and ZIP Code Business Patterns dataset for ${city.name}, ${city.stateName}.`,
+        url: cleanCanonical,
         license: 'https://creativecommons.org/licenses/by/4.0/',
         creator: [
           {
             '@type': 'Organization',
-            name: 'US Census Bureau',
-            url: 'https://www.census.gov',
+            name: 'U.S. Census Bureau',
+            url: 'https://www.census.gov/',
           },
           {
             '@type': 'Organization',
             name: 'CityClick',
-            url: 'https://cityclick.com',
+            url: 'https://cityclick.com/',
           },
         ],
-        temporalCoverage: '2023/2026',
+        temporalCoverage: '2022/2026',
         spatialCoverage: `${city.name}, ${city.stateName}`,
-        variableMeasured: [
-          'Median Household Income',
-          'Population Change 2020-2023',
-                    'NAICS Establishment Densities',
-                    'Combined Sales Tax Rate',
-                            ],
+        variableMeasured: measuredVars,
         distribution: {
           '@type': 'DataDownload',
           encodingFormat: 'application/json',
           contentUrl: `https://cityclick.com/api/v1/cities/${city.slug}`,
         },
       },
-      // 3. Tourist Destination & Executive Travel Schema
+      // 3. Tourist Destination
       {
         '@type': 'TouristDestination',
-        '@id': `${canonicalUrl}#travel`,
+        '@id': `${cleanCanonical}#travel`,
         name: `${city.name}, ${city.stateName}`,
-        description: `Executive travel, time zone, electrical standards, and visitor logistics guide for ${city.name}, ${city.stateName}.`,
-        geo: {
-          '@type': 'GeoCoordinates',
-          latitude: city.lat,
-          longitude: city.lng,
-        },
-        includesAttraction: [
-          {
-            '@type': 'Airport',
-            name: travel?.primaryAirport.name ?? `${city.name} Airport`,
-            iataCode: travel?.primaryAirport.iata ?? undefined,
-          },
-        ],
+        description: `Visitor logistics, airport distance, climate averages, and municipal water guide for ${city.name}, ${city.stateName}.`,
+        ...(city.lat != null && city.lng != null
+          ? {
+              geo: {
+                '@type': 'GeoCoordinates',
+                latitude: city.lat,
+                longitude: city.lng,
+              },
+            }
+          : {}),
+        ...(attractions.length > 0 ? { includesAttraction: attractions } : {}),
       },
       // 4. BreadcrumbList
       {
         '@type': 'BreadcrumbList',
-        '@id': `${canonicalUrl}#breadcrumbs`,
+        '@id': `${cleanCanonical}#breadcrumbs`,
         itemListElement: [
           {
             '@type': 'ListItem',
@@ -108,35 +148,31 @@ export function generateSeoGraph({ city, canonicalUrl }: SeoGraphOptions) {
             '@type': 'ListItem',
             position: 2,
             name: city.stateName,
-            item: `https://cityclick.com/${city.stateCode}`,
+            item: `https://cityclick.com/${city.stateCode}/`,
           },
           {
             '@type': 'ListItem',
             position: 3,
             name: city.name,
-            item: canonicalUrl,
+            item: cleanCanonical,
           },
         ],
       },
-      // 5. Voice & LLM Speakable Specification
+      // 5. Voice & LLM Speakable Specification matching actual DOM selectors
       {
         '@type': 'WebPage',
-        '@id': `${canonicalUrl}#webpage`,
-        url: canonicalUrl,
-        name: `${city.name}, ${city.stateCode.toUpperCase()} Commercial Feasibility & Executive Travel Dossier`,
+        '@id': `${cleanCanonical}#webpage`,
+        url: cleanCanonical,
+        name: `${city.name}, ${city.stateCode.toUpperCase()} Cost of Living, Taxes and Business Guide`,
         speakable: {
           '@type': 'SpeakableSpecification',
-          cssSelector: [
-            '#aeo-b2b-capsule',
-            '#aeo-travel-capsule',
-            '#key-demographics-summary',
-          ],
+          cssSelector: ['h1', '#key-facts'],
         },
       },
       // 6. Comprehensive FAQPage
       {
         '@type': 'FAQPage',
-        '@id': `${canonicalUrl}#faq`,
+        '@id': `${cleanCanonical}#faq`,
         mainEntity: faqs,
       },
     ],

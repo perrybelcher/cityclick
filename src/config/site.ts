@@ -4,7 +4,7 @@ export const SITE = {
   url: 'https://cityclick.com',
   title: 'CityClick — Get to know your next city',
   description:
-    'Plan a visit, find a place to live, or research your next business location across 1,501 verified US city guides.',
+    'Plan a visit, find a place to live, or research your next business location with primary-sourced US city guides.',
   ogImage: 'https://cityclick.com/images/og-cityclick.jpg',
   contactEmail: 'data@cityclick.com',
   affiliates: {

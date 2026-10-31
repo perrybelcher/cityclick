@@ -3,101 +3,133 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout
-  title="Data Methodology & Provenance — CityClick"
-  description="Audit trail and data methodology for CityClick. Verified sources including US Census Bureau ACS, BLS, USGS, Open-Meteo, EPA, and Federal Reserve FRED."
+  title="Data Methodology and Sources — CityClick"
+  description="Primary federal and state data sources behind CityClick: US Census ACS 2023 and Population Estimates, Census 2022 ZBP, state revenue sales tax tables, USGS 3DEP, Open-Meteo ERA5, EPA SDWIS, OurAirports, CMS Care Compare, College Scorecard, NREL AFDC, and NPS."
 >
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
     <div class="space-y-4 mb-10 pb-8 border-b border-slate-200">
       <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-bold uppercase tracking-wider">
-        <span>🔬</span> Provenance & Standards
+        <span>🔬</span> Provenance &amp; Standards
       </div>
       <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-[#152438] tracking-tight">
-        Data Methodology & Sources
+        Data Methodology &amp; Primary Sources
       </h1>
       <p class="text-base sm:text-lg text-slate-600 leading-relaxed">
-        CityClick operates under a strict sourcing policy: a blank is better than a wrong number. Every metric rendered on our platform is tied to an official federal, state, or municipal database with verified vintage.
+        CityClick follows one foundational rule: a blank is better than a wrong number. Every quantitative metric rendered on a verified city guide is computed directly from an official federal or state dataset with a recorded vintage—never estimated, defaulted, or copied from a neighboring market.
       </p>
     </div>
 
     <div class="space-y-12 text-slate-700 leading-relaxed text-sm">
-      <!-- 1. Demographics & Economics -->
+      <!-- 1. Demographics, Housing & Effective Property Tax -->
       <section class="space-y-4">
         <h2 class="text-xl font-black text-[#152438] flex items-center gap-2">
-          <span>📊</span> Demographics, Income & Labor Force
+          <span>📊</span> 1. Demographics, Housing &amp; Effective Property Tax
         </h2>
         <div class="p-5 rounded-2xl bg-[#F8FAFC] border border-slate-200 space-y-3">
           <div>
-            <div class="font-bold text-slate-900">US Census Bureau — American Community Survey (ACS 5-Year)</div>
-            <div class="text-xs text-slate-500">Source Vintage: 2019–2023 ACS Public Release · Geographic Level: Census Incorporated Place / County FIPS</div>
+            <div class="font-bold text-slate-900">U.S. Census Bureau — ACS 2023 5-Year Summary File &amp; Population Estimates (SUB-EST2023)</div>
+            <div class="text-xs text-slate-500">Vintage: 2019–2023 ACS 5-Year &amp; Vintage 2023 Population Estimates · Level: Census Incorporated Place / CDP</div>
           </div>
           <p class="text-xs text-slate-600">
-            Total resident population, 5-year growth trajectory, median household income (MHI), per capita income, and daytime commuter labor inflow ratios are compiled directly from official Census ACS tables.
+            Household, income, and housing baselines are ingested directly from the Census ACS 2023 5-Year Table-Based Summary File: total population (<code>B01003</code>), median household income (<code>B19013</code>), per-capita income (<code>B19301</code>), median resident age (<code>B01002</code>), median owner-occupied home value (<code>B25077</code>), median gross monthly rent (<code>B25064</code>), and median annual real estate taxes paid (<code>B25103</code>).
+          </p>
+          <p class="text-xs text-slate-600">
+            <strong>Effective Property Tax Rate:</strong> Computed directly from owner-occupied Census responses as <code>B25103 / B25077</code> (median annual real estate tax paid divided by median home value).
           </p>
           <div class="pt-2 border-t border-slate-200 text-xs text-slate-500">
-            <strong>Federal Reserve Bank of St. Louis (FRED API):</strong> County-level monthly unemployment rates (`LAUCN` series) and civilian labor force benchmarks updated directly from Bureau of Labor Statistics (BLS) releases.
+            <strong>Recent Population Change:</strong> For incorporated municipalities covered by the Census Population Estimates Program (<code>SUB-EST2023</code>), total resident population reflects the July 1, 2023 estimate and population change measures percentage change from the April 1, 2020 estimates base to July 1, 2023. For Census Designated Places (CDPs) not tracked in <code>SUB-EST2023</code>, population reflects ACS <code>B01003</code> and no synthetic growth figure is shown.
           </div>
         </div>
       </section>
 
-      <!-- 2. Commercial Underwriting & NAICS Saturation -->
+      <!-- 2. Small-Business Trade Density -->
       <section class="space-y-4">
         <h2 class="text-xl font-black text-[#152438] flex items-center gap-2">
-          <span>💼</span> 25-Trade NAICS Saturation Index
+          <span>💼</span> 2. Small-Business Trade Density (Census ZBP)
         </h2>
         <div class="p-5 rounded-2xl bg-[#F8FAFC] border border-slate-200 space-y-3">
           <div>
-            <div class="font-bold text-slate-900">US Census Bureau — ZIP Codes Business Patterns (ZBP)</div>
-            <div class="text-xs text-slate-500">Mathematical Model: Empirical Bayes Shrinkage Prior (m = 10,000 national baseline)</div>
+            <div class="font-bold text-slate-900">U.S. Census Bureau — 2022 ZIP Code Business Patterns (<code>zbp22detail.zip</code>)</div>
+            <div class="text-xs text-slate-500">Denominator: ACS 2023 5-Year ZCTA Population (<code>860Z200US&#123;zip&#125;</code>) Across Matching USPS City ZIP Codes</div>
           </div>
           <p class="text-xs text-slate-600">
-            To prevent statistical distortion in smaller communities while accurately measuring saturation in major metros, establishment density per 10,000 residents is smoothed using Empirical Bayes shrinkage against national trade priors across 25 primary NAICS retail and service categories.
+            Employer establishment counts (<code>E</code>) for 6-digit retail and service NAICS codes are summed across USPS ZIP codes assigned to the city and paired with the exact ACS 2023 ZCTA resident population of those same ZIP codes so numerator and denominator share the identical geographic boundary:
           </p>
-          <p class="text-xs text-slate-600">
-            Commercial lease rates ($/sqft/year) reflect asking triple-net (NNN) commercial retail benchmarks reconciled against regional brokerage reports and county appraisal district commercial records.
-          </p>
-        </div>
-      </section>
-
-      <!-- 3. Physical Geography, Terrain & Climate -->
-      <section class="space-y-4">
-        <h2 class="text-xl font-black text-[#152438] flex items-center gap-2">
-          <span>🏔️</span> Terrain Elevation & Climate Normals
-        </h2>
-        <div class="p-5 rounded-2xl bg-[#F8FAFC] border border-slate-200 space-y-3">
-          <div>
-            <div class="font-bold text-slate-900">USGS 3D Elevation Program (3DEP Point Query Service)</div>
-            <div class="text-xs text-slate-500">Spatial Accuracy: 1/3-arc-second (~10-meter) Digital Elevation Models (DEM)</div>
+          <div class="p-3 rounded-xl bg-white border border-slate-200 font-mono text-xs text-slate-800 space-y-1">
+            <div>per10kResidents = (E / ZCTA_Population) × 10,000</div>
+            <div>usAvgPer10k = (US_ZBP_Establishments / US_ACS_Population) × 10,000</div>
+            <div>saturationIndex = round((per10kResidents / usAvgPer10k) × 100)</div>
           </div>
           <p class="text-xs text-slate-600">
-            Precise municipal elevation above sea level is resolved using exact municipal centroid coordinates queried against the National Elevation Dataset (NED).
+            Each NAICS category is compared directly against the U.S. national ZBP benchmark (<code>100</code> = national average): indices <code>&lt; 80</code> are classified as <strong>underserved</strong>, <code>80–120</code> as <strong>balanced</strong>, and <code>&gt; 120</code> as <strong>saturated</strong>. Categories where the national benchmark is under <code>0.3</code> establishments per 10,000 residents or expected local count is under <code>10</code> establishments are omitted rather than noisy.
           </p>
           <div class="pt-2 border-t border-slate-200 text-xs text-slate-500">
-            <strong>Open-Meteo Meteorological Normals:</strong> 30-year climate baselines resolving annual sunny days, peak summer temperatures, winter low envelopes, and annual precipitation.
+            <strong>No Guessed Commercial Lease Rates:</strong> CityClick never fabricates or estimates commercial asking rents. In our <a href="/tools/lease-calculator/" class="text-[#1D68F2] font-bold hover:underline">Commercial Lease &amp; Breakeven Calculator</a>, operators enter their own quoted base rent and NNN/CAM pass-throughs alongside verified local sales-tax rates.
           </div>
         </div>
       </section>
 
-      <!-- 4. Municipal Utilities & Drinking Water -->
+      <!-- 3. Retail Sales Tax -->
       <section class="space-y-4">
         <h2 class="text-xl font-black text-[#152438] flex items-center gap-2">
-          <span>🚰</span> Municipal Drinking Water & Public Safety
+          <span>🧾</span> 3. Retail Sales Tax Breakdown
         </h2>
         <div class="p-5 rounded-2xl bg-[#F8FAFC] border border-slate-200 space-y-3">
           <div>
-            <div class="font-bold text-slate-900">EPA Safe Drinking Water Information System (SDWIS Envirofacts)</div>
-            <div class="text-xs text-slate-500">Public Water System Identification (PWSID) Tracking</div>
+            <div class="font-bold text-slate-900">Official State Departments of Revenue &amp; Comptrollers</div>
+            <div class="text-xs text-slate-500">Audited Ledger: <code>sources/sales-tax.json</code></div>
           </div>
           <p class="text-xs text-slate-600">
-            Every municipal profile references the primary active Public Water System ID (e.g. `TX2270001` for Austin Water, `AR0000208` for Hot Springs Village), primary source classification (groundwater aquifer vs surface water reservoir), and Safe Drinking Water Act compliance status.
+            State and municipal/special-district general retail sales tax rates are recorded directly from each state's official revenue department or comptroller rate publications, storing the state base rate, local rate, combined total rate, official source URL, and verification date. If a local rate is not verified from a primary tax schedule, the tax block is omitted.
           </p>
         </div>
       </section>
 
-      <!-- 5. Continuous Audit Commitment -->
+      <!-- 4. Physical Geography & Climate -->
+      <section class="space-y-4">
+        <h2 class="text-xl font-black text-[#152438] flex items-center gap-2">
+          <span>🏔️</span> 4. Physical Geography &amp; Historical Climate
+        </h2>
+        <div class="p-5 rounded-2xl bg-[#F8FAFC] border border-slate-200 space-y-3">
+          <div>
+            <div class="font-bold text-slate-900">USGS 3D Elevation Program (3DEP) &amp; Open-Meteo Historical Weather API (ERA5)</div>
+            <div class="text-xs text-slate-500">Reference Coordinate: U.S. Census 2023 Gazetteer Municipal Internal Point</div>
+          </div>
+          <p class="text-xs text-slate-600">
+            <strong>Terrain Elevation:</strong> Resolved in feet and meters above sea level by querying the USGS 3DEP Elevation Point Query Service (1/3-arc-second Digital Elevation Model) at the city's official Census 2023 Gazetteer internal point.
+          </p>
+          <div class="pt-2 border-t border-slate-200 text-xs text-slate-500">
+            <strong>10-Year ERA5 Climate Averages (2015–2024):</strong> Computed from daily Open-Meteo ERA5 reanalysis archives covering January 1, 2015 through December 31, 2024—reporting mean July daily maximum temperature (°F), mean January daily minimum temperature (°F), and mean annual precipitation (inches).
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. Water, Airports, Emergency Hospitals, Higher Education, EV Charging & Parks -->
+      <section class="space-y-4">
+        <h2 class="text-xl font-black text-[#152438] flex items-center gap-2">
+          <span>🏥</span> 5. Water, Airports, Emergency Hospitals, Education, EV Charging &amp; Parks
+        </h2>
+        <div class="p-5 rounded-2xl bg-[#F8FAFC] border border-slate-200 space-y-3 text-xs text-slate-600">
+          <div>
+            <strong class="text-slate-900">Community Drinking Water (U.S. EPA SDWIS):</strong> Active Community Water Systems (<code>PWS_TYPE_CODE = CWS</code>, activity <code>A</code>) queried via EPA Envirofacts, reporting Public Water System ID (PWSID), system name, population served, and primary water source (surface water vs. groundwater).
+          </div>
+          <div class="pt-2 border-t border-slate-200">
+            <strong class="text-slate-900">Commercial Airports (OurAirports + Census Gazetteer):</strong> Verified against the public-domain OurAirports registry restricted to airports with scheduled commercial passenger service (<code>scheduled_service == "yes"</code>). Distance is calculated via straight-line Haversine mileage from the Census 2023 Gazetteer city internal point.
+          </div>
+          <div class="pt-2 border-t border-slate-200">
+            <strong class="text-slate-900">Emergency Hospitals (CMS Care Compare):</strong> Queried from the federal Centers for Medicare &amp; Medicaid Services Hospital General Information dataset (<code>xubh-q36u</code>) filtered strictly to facilities with <code>emergency_services == "Yes"</code>. CityClick lists verified CMS emergency hospitals objectively without claiming trauma-level designations or subjective rankings.
+          </div>
+          <div class="pt-2 border-t border-slate-200">
+            <strong class="text-slate-900">Higher Education, Public EV Charging &amp; National Parks:</strong> Degree-granting institutions from the U.S. Department of Education College Scorecard, public electric-vehicle charging stations and port counts from the U.S. Department of Energy / NREL (NLR) Alternative Fuels Data Center (AFDC), and nearby park units from the National Park Service (NPS) API.
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. Public Audit & Corrections Policy -->
       <section class="space-y-4 pt-4 border-t border-slate-200">
-        <h2 class="text-xl font-black text-[#152438]">Public Audit & Corrections Policy</h2>
+        <h2 class="text-xl font-black text-[#152438]">Public Audit &amp; Corrections Policy</h2>
         <p>
-          If you are a municipal official, civil engineer, or local business owner and notice a changed permit fee, new utility district, or adjusted school boundary, submit verification evidence to our research desk at <a href="mailto:audit@cityclick.com" class="text-[#1D68F2] font-bold hover:underline">audit@cityclick.com</a>. Verified corrections update within 48 hours.
+          If you are a municipal official, researcher, or resident and spot an updated state sales-tax schedule, water-system record, or hospital listing, send primary documentation to <a href="mailto:audit@cityclick.com" class="text-[#1D68F2] font-bold hover:underline">audit@cityclick.com</a>. Verified updates with primary source URLs are incorporated into our data pipeline.
         </p>
       </section>
     </div>
