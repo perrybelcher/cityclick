@@ -71,21 +71,19 @@
   "stateCode": "tx",
   "stateName": "Texas",
   "population": 2314157,
-  "popGrowth5YrPct": 0.6,
-  "medianHouseholdIncome": 91242,
-  "combinedSalesTaxRate": 0.0775,
-  "reportedRetailRentSqFtYr": 43.1,
-  "overallViability": 52,
-  "purchasingPower": 49,
-  "growthMomentum": 55,
+  "medianHouseholdIncome": 62894,
+  "combinedSalesTaxRate": 0.0825,
   "topUnderservedNaics": [
-   "Pet Care & Grooming",
-   "Child Day Care Services"
+   "Physical, Occupational & Speech Therapists",
+   "Nail Salons",
+   "Pet Care & Grooming Services"
   ],
   "timeZone": "CT",
-  "certified": false,
-  "medianHomeValue": 383216,
-  "medianGrossRent": 1755
+  "certified": true,
+  "medianHomeValue": 253400,
+  "medianGrossRent": 1313,
+  "effectivePropertyTaxRatePct": 1.58,
+  "popChange2020to2023Pct": 0.6
  },
  {
   "slug": "az/phoenix",
@@ -93,21 +91,19 @@
   "stateCode": "az",
   "stateName": "Arizona",
   "population": 1650070,
-  "popGrowth5YrPct": 2.3,
-  "medianHouseholdIncome": 92167,
-  "combinedSalesTaxRate": 0.071,
-  "reportedRetailRentSqFtYr": 44.0,
-  "overallViability": 56,
-  "purchasingPower": 53,
-  "growthMomentum": 59,
+  "medianHouseholdIncome": 77041,
+  "combinedSalesTaxRate": 0.091,
   "topUnderservedNaics": [
-   "Pet Care & Grooming",
-   "Child Day Care Services"
+   "Child Day Care Services",
+   "Nail Salons",
+   "Family Clothing Stores & Boutiques"
   ],
   "timeZone": "MST",
-  "certified": false,
-  "medianHomeValue": 387101,
-  "medianGrossRent": 1772
+  "certified": true,
+  "medianHomeValue": 381900,
+  "medianGrossRent": 1458,
+  "effectivePropertyTaxRatePct": 0.48,
+  "popChange2020to2023Pct": 2.6
  },
  {
   "slug": "pa/philadelphia",
@@ -137,21 +133,19 @@
   "stateCode": "tx",
   "stateName": "Texas",
   "population": 1495295,
-  "popGrowth5YrPct": 3.9,
-  "medianHouseholdIncome": 93774,
-  "combinedSalesTaxRate": 0.0775,
-  "reportedRetailRentSqFtYr": 45.0,
-  "overallViability": 60,
-  "purchasingPower": 57,
-  "growthMomentum": 63,
+  "medianHouseholdIncome": 62917,
+  "combinedSalesTaxRate": 0.0825,
   "topUnderservedNaics": [
-   "Pet Care & Grooming",
-   "Child Day Care Services"
+   "Nail Salons",
+   "Offices of Chiropractors",
+   "General Automotive Repair"
   ],
   "timeZone": "CT",
-  "certified": false,
-  "medianHomeValue": 393851,
-  "medianGrossRent": 1803
+  "certified": true,
+  "medianHomeValue": 219700,
+  "medianGrossRent": 1258,
+  "effectivePropertyTaxRatePct": 1.81,
+  "popChange2020to2023Pct": 4.3
  },
  {
   "slug": "ca/san-diego",
@@ -181,21 +175,19 @@
   "stateCode": "tx",
   "stateName": "Texas",
   "population": 1302868,
-  "popGrowth5YrPct": -0.0,
-  "medianHouseholdIncome": 88662,
-  "combinedSalesTaxRate": 0.0775,
-  "reportedRetailRentSqFtYr": 42.2,
-  "overallViability": 50,
-  "purchasingPower": 48,
-  "growthMomentum": 52,
+  "medianHouseholdIncome": 67760,
+  "combinedSalesTaxRate": 0.0825,
   "topUnderservedNaics": [
-   "Pet Care & Grooming",
-   "Child Day Care Services"
+   "Nail Salons",
+   "Child Day Care Services",
+   "General Automotive Repair"
   ],
   "timeZone": "CT",
-  "certified": false,
-  "medianHomeValue": 372380,
-  "medianGrossRent": 1705
+  "certified": true,
+  "medianHomeValue": 295300,
+  "medianGrossRent": 1403,
+  "effectivePropertyTaxRatePct": 1.66,
+  "popChange2020to2023Pct": -0.1
  },
  {
   "slug": "fl/jacksonville",
@@ -203,21 +195,17 @@
   "stateCode": "fl",
   "stateName": "Florida",
   "population": 985843,
-  "popGrowth5YrPct": 3.6,
-  "medianHouseholdIncome": 92136,
+  "medianHouseholdIncome": 66981,
   "combinedSalesTaxRate": 0.075,
-  "reportedRetailRentSqFtYr": 44.5,
-  "overallViability": 59,
-  "purchasingPower": 56,
-  "growthMomentum": 62,
   "topUnderservedNaics": [
-   "Pet Care & Grooming",
-   "Child Day Care Services"
+   "Drinking Places (Alcoholic Beverages)"
   ],
   "timeZone": "ET",
-  "certified": false,
-  "medianHomeValue": 386971,
-  "medianGrossRent": 1772
+  "certified": true,
+  "medianHomeValue": 266100,
+  "medianGrossRent": 1375,
+  "effectivePropertyTaxRatePct": 0.77,
+  "popChange2020to2023Pct": 3.8
  },
  {
   "slug": "tx/austin",
@@ -307,21 +295,15 @@
   "stateCode": "nc",
   "stateName": "North Carolina",
   "population": 911311,
-  "popGrowth5YrPct": 4.1,
-  "medianHouseholdIncome": 92503,
-  "combinedSalesTaxRate": 0.0625,
-  "reportedRetailRentSqFtYr": 44.8,
-  "overallViability": 60,
-  "purchasingPower": 57,
-  "growthMomentum": 63,
-  "topUnderservedNaics": [
-   "Pet Care & Grooming",
-   "Child Day Care Services"
-  ],
+  "medianHouseholdIncome": 78438,
+  "combinedSalesTaxRate": 0.0825,
+  "topUnderservedNaics": [],
   "timeZone": "ET",
-  "certified": false,
-  "medianHomeValue": 388513,
-  "medianGrossRent": 1779
+  "certified": true,
+  "medianHomeValue": 351500,
+  "medianGrossRent": 1504,
+  "effectivePropertyTaxRatePct": 0.77,
+  "popChange2020to2023Pct": 4.2
  },
  {
   "slug": "in/indianapolis",
@@ -395,21 +377,17 @@
   "stateCode": "co",
   "stateName": "Colorado",
   "population": 716577,
-  "popGrowth5YrPct": -0.1,
-  "medianHouseholdIncome": 86770,
-  "combinedSalesTaxRate": 0.044,
-  "reportedRetailRentSqFtYr": 41.7,
-  "overallViability": 50,
-  "purchasingPower": 48,
-  "growthMomentum": 52,
+  "medianHouseholdIncome": 91681,
+  "combinedSalesTaxRate": 0.0915,
   "topUnderservedNaics": [
-   "Pet Care & Grooming",
-   "Child Day Care Services"
+   "Convenience Retail Stores"
   ],
   "timeZone": "MT",
-  "certified": false,
-  "medianHomeValue": 364434,
-  "medianGrossRent": 1669
+  "certified": true,
+  "medianHomeValue": 586700,
+  "medianGrossRent": 1770,
+  "effectivePropertyTaxRatePct": 0.44,
+  "popChange2020to2023Pct": 0.1
  },
  {
   "slug": "ok/oklahoma-city",
@@ -429,7 +407,7 @@
   "medianHomeValue": 215100,
   "medianGrossRent": 1083,
   "effectivePropertyTaxRatePct": 1.02,
-  "certified": false
+  "certified": true
  },
  {
   "slug": "tn/nashville",
@@ -501,21 +479,17 @@
   "stateCode": "nv",
   "stateName": "Nevada",
   "population": 660929,
-  "popGrowth5YrPct": 2.2,
-  "medianHouseholdIncome": 89302,
-  "combinedSalesTaxRate": 0.0835,
-  "reportedRetailRentSqFtYr": 43.2,
-  "overallViability": 55,
-  "purchasingPower": 52,
-  "growthMomentum": 58,
+  "medianHouseholdIncome": 70723,
+  "combinedSalesTaxRate": 0.08375,
   "topUnderservedNaics": [
-   "Pet Care & Grooming",
    "Child Day Care Services"
   ],
   "timeZone": "PT",
-  "certified": false,
-  "medianHomeValue": 375068,
-  "medianGrossRent": 1717
+  "certified": true,
+  "medianHomeValue": 395300,
+  "medianGrossRent": 1456,
+  "effectivePropertyTaxRatePct": 0.5,
+  "popChange2020to2023Pct": 2.5
  },
  {
   "slug": "ma/boston",
@@ -787,21 +761,17 @@
   "stateCode": "ga",
   "stateName": "Georgia",
   "population": 510823,
-  "popGrowth5YrPct": 2.2,
-  "medianHouseholdIncome": 88595,
-  "combinedSalesTaxRate": 0.055,
-  "reportedRetailRentSqFtYr": 43.0,
-  "overallViability": 55,
-  "purchasingPower": 52,
-  "growthMomentum": 58,
+  "medianHouseholdIncome": 81938,
+  "combinedSalesTaxRate": 0.089,
   "topUnderservedNaics": [
-   "Pet Care & Grooming",
-   "Child Day Care Services"
+   "General Automotive Repair"
   ],
   "timeZone": "ET",
-  "certified": false,
-  "medianHomeValue": 372099,
-  "medianGrossRent": 1704
+  "certified": true,
+  "medianHomeValue": 420600,
+  "medianGrossRent": 1617,
+  "effectivePropertyTaxRatePct": 0.97,
+  "popChange2020to2023Pct": 2.4
  },
  {
   "slug": "mo/kansas",
@@ -875,21 +845,18 @@
   "stateCode": "nc",
   "stateName": "North Carolina",
   "population": 482295,
-  "popGrowth5YrPct": 3.6,
-  "medianHouseholdIncome": 90121,
-  "combinedSalesTaxRate": 0.0625,
-  "reportedRetailRentSqFtYr": 44.0,
-  "overallViability": 58,
-  "purchasingPower": 55,
-  "growthMomentum": 61,
+  "medianHouseholdIncome": 82424,
+  "combinedSalesTaxRate": 0.0725,
   "topUnderservedNaics": [
-   "Pet Care & Grooming",
-   "Child Day Care Services"
+   "Nail Salons",
+   "Convenience Retail Stores"
   ],
   "timeZone": "ET",
-  "certified": false,
-  "medianHomeValue": 378508,
-  "medianGrossRent": 1733
+  "certified": true,
+  "medianHomeValue": 377800,
+  "medianGrossRent": 1468,
+  "effectivePropertyTaxRatePct": 0.76,
+  "popChange2020to2023Pct": 3.1
  },
  {
   "slug": "fl/miami",
@@ -897,21 +864,18 @@
   "stateCode": "fl",
   "stateName": "Florida",
   "population": 455924,
-  "popGrowth5YrPct": 3.0,
-  "medianHouseholdIncome": 89251,
-  "combinedSalesTaxRate": 0.075,
-  "reportedRetailRentSqFtYr": 43.5,
-  "overallViability": 57,
-  "purchasingPower": 54,
-  "growthMomentum": 60,
+  "medianHouseholdIncome": 59390,
+  "combinedSalesTaxRate": 0.07,
   "topUnderservedNaics": [
-   "Pet Care & Grooming",
-   "Child Day Care Services"
+   "Drinking Places (Alcoholic Beverages)",
+   "Nail Salons"
   ],
   "timeZone": "ET",
-  "certified": false,
-  "medianHomeValue": 374854,
-  "medianGrossRent": 1716
+  "certified": true,
+  "medianHomeValue": 475200,
+  "medianGrossRent": 1657,
+  "effectivePropertyTaxRatePct": 0.88,
+  "popChange2020to2023Pct": 3.1
  },
  {
   "slug": "va/virginia-beach",
@@ -1245,21 +1209,18 @@
   "stateCode": "fl",
   "stateName": "Florida",
   "population": 320742,
-  "popGrowth5YrPct": 4.2,
-  "medianHouseholdIncome": 89784,
-  "combinedSalesTaxRate": 0.075,
-  "reportedRetailRentSqFtYr": 44.1,
-  "overallViability": 59,
-  "purchasingPower": 56,
-  "growthMomentum": 62,
+  "medianHouseholdIncome": 69268,
+  "combinedSalesTaxRate": 0.065,
   "topUnderservedNaics": [
-   "Pet Care & Grooming",
-   "Child Day Care Services"
+   "Nail Salons",
+   "Offices of Dentists"
   ],
   "timeZone": "ET",
-  "certified": false,
-  "medianHomeValue": 377093,
-  "medianGrossRent": 1727
+  "certified": true,
+  "medianHomeValue": 359000,
+  "medianGrossRent": 1650,
+  "effectivePropertyTaxRatePct": 0.81,
+  "popChange2020to2023Pct": 4.2
  },
  {
   "slug": "ky/lexington-fayette-urban-county",
@@ -2162,21 +2123,19 @@
   "stateCode": "al",
   "stateName": "Alabama",
   "population": 225564,
-  "popGrowth5YrPct": 4.2,
-  "medianHouseholdIncome": 88923,
-  "combinedSalesTaxRate": 0.055,
-  "reportedRetailRentSqFtYr": 43.9,
-  "overallViability": 59,
-  "purchasingPower": 56,
-  "growthMomentum": 62,
+  "medianHouseholdIncome": 70778,
+  "combinedSalesTaxRate": 0.09,
   "topUnderservedNaics": [
-   "Pet Care & Grooming",
-   "Child Day Care Services"
+   "Convenience Retail Stores",
+   "Nail Salons",
+   "Pet Care & Grooming Services"
   ],
   "timeZone": "CT",
-  "certified": false,
-  "medianHomeValue": 373477,
-  "medianGrossRent": 1710
+  "certified": true,
+  "medianHomeValue": 263100,
+  "medianGrossRent": 1078,
+  "effectivePropertyTaxRatePct": 0.48,
+  "popChange2020to2023Pct": 4.9
  },
  {
   "slug": "tx/frisco",
@@ -2465,26 +2424,20 @@
   "medianGrossRent": 1617
  },
  {
-  "slug": "ut/salt-lake",
-  "name": "Salt Lake",
+  "slug": "ut/salt-lake-city",
+  "name": "Salt Lake City",
   "stateCode": "ut",
   "stateName": "Utah",
   "population": 209593,
-  "popGrowth5YrPct": 4.5,
-  "medianHouseholdIncome": 89109,
-  "combinedSalesTaxRate": 0.076,
-  "reportedRetailRentSqFtYr": 44.1,
-  "overallViability": 59,
-  "purchasingPower": 56,
-  "growthMomentum": 62,
-  "topUnderservedNaics": [
-   "Pet Care & Grooming",
-   "Child Day Care Services"
-  ],
+  "medianHouseholdIncome": 74925,
+  "combinedSalesTaxRate": 0.0845,
+  "topUnderservedNaics": [],
   "timeZone": "MT",
-  "certified": false,
-  "medianHomeValue": 374258,
-  "medianGrossRent": 1714
+  "certified": true,
+  "medianHomeValue": 495700,
+  "medianGrossRent": 1343,
+  "effectivePropertyTaxRatePct": 0.53,
+  "popChange2020to2023Pct": 4.9
  },
  {
   "slug": "ny/yonkers",
@@ -2580,21 +2533,19 @@
   "stateCode": "ar",
   "stateName": "Arkansas",
   "population": 203842,
-  "popGrowth5YrPct": 0.6,
-  "medianHouseholdIncome": 84364,
-  "combinedSalesTaxRate": 0.08,
-  "reportedRetailRentSqFtYr": 41.3,
-  "overallViability": 50,
-  "purchasingPower": 48,
-  "growthMomentum": 52,
+  "medianHouseholdIncome": 60583,
+  "combinedSalesTaxRate": 0.08625,
   "topUnderservedNaics": [
-   "Pet Care & Grooming",
-   "Child Day Care Services"
+   "Nail Salons",
+   "Pet Care & Grooming Services",
+   "General Automotive Repair"
   ],
   "timeZone": "CT",
-  "certified": false,
-  "medianHomeValue": 354329,
-  "medianGrossRent": 1622
+  "certified": true,
+  "medianHomeValue": 221200,
+  "medianGrossRent": 1067,
+  "effectivePropertyTaxRatePct": 0.84,
+  "popChange2020to2023Pct": 0.6
  },
  {
   "slug": "tx/amarillo",
@@ -7068,21 +7019,19 @@
   "stateCode": "ar",
   "stateName": "Arkansas",
   "population": 101680,
-  "popGrowth5YrPct": 7.3,
-  "medianHouseholdIncome": 90854,
-  "combinedSalesTaxRate": 0.08,
-  "reportedRetailRentSqFtYr": 45.6,
-  "overallViability": 66,
-  "purchasingPower": 63,
-  "growthMomentum": 69,
+  "medianHouseholdIncome": 59074,
+  "combinedSalesTaxRate": 0.0975,
   "topUnderservedNaics": [
-   "Pet Care & Grooming",
-   "Child Day Care Services"
+   "Nail Salons",
+   "Convenience Retail Stores",
+   "General Automotive Repair"
   ],
   "timeZone": "CT",
-  "certified": false,
-  "medianHomeValue": 381587,
-  "medianGrossRent": 1747
+  "certified": true,
+  "medianHomeValue": 322500,
+  "medianGrossRent": 1003,
+  "effectivePropertyTaxRatePct": 0.59,
+  "popChange2020to2023Pct": 7.8
  },
  {
   "slug": "ma/quincy",
@@ -14438,21 +14387,19 @@
   "stateCode": "ar",
   "stateName": "Arkansas",
   "population": 59471,
-  "popGrowth5YrPct": 8.5,
-  "medianHouseholdIncome": 91204,
-  "combinedSalesTaxRate": 0.08,
-  "reportedRetailRentSqFtYr": 46.2,
-  "overallViability": 68,
-  "purchasingPower": 65,
-  "growthMomentum": 71,
+  "medianHouseholdIncome": 108465,
+  "combinedSalesTaxRate": 0.095,
   "topUnderservedNaics": [
-   "Pet Care & Grooming",
-   "Child Day Care Services"
+   "Convenience Retail Stores",
+   "Family Clothing Stores & Boutiques",
+   "General Automotive Repair"
   ],
   "timeZone": "CT",
-  "certified": false,
-  "medianHomeValue": 383057,
-  "medianGrossRent": 1754
+  "certified": true,
+  "medianHomeValue": 370700,
+  "medianGrossRent": 1238,
+  "effectivePropertyTaxRatePct": 0.73,
+  "popChange2020to2023Pct": 9.7
  },
  {
   "slug": "mo/st-peters",

@@ -1,18 +1,9 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import manifest from '../../data/index-manifest.json';
+import { CERTIFIED_FLAGSHIP_SET } from '../../config/flagships';
 
 export async function getStaticPaths() {
-  const certifiedSlugs = new Set([
-    'tx/austin',
-    'ar/hot-springs-village',
-    'ar/hot-springs',
-    'id/boise',
-    'fl/tampa',
-    'az/scottsdale',
-    'tn/nashville',
-  ]);
-
   const statesMap: Record<string, { stateCode: string; stateName: string; cities: any[] }> = {};
 
   manifest.forEach((city) => {
@@ -33,8 +24,8 @@ export async function getStaticPaths() {
       stateCode: st.stateCode,
       stateName: st.stateName,
       cities: st.cities.sort((a, b) => {
-        const aCert = certifiedSlugs.has(a.slug) ? 1 : 0;
-        const bCert = certifiedSlugs.has(b.slug) ? 1 : 0;
+        const aCert = CERTIFIED_FLAGSHIP_SET.has(a.slug) ? 1 : 0;
+        const bCert = CERTIFIED_FLAGSHIP_SET.has(b.slug) ? 1 : 0;
         if (aCert !== bCert) return bCert - aCert;
         return (b.population || 0) - (a.population || 0);
       }),
@@ -42,18 +33,8 @@ export async function getStaticPaths() {
   }));
 }
 
-const CERTIFIED_SLUGS = new Set([
-  'tx/austin',
-  'ar/hot-springs-village',
-  'ar/hot-springs',
-  'id/boise',
-  'fl/tampa',
-  'az/scottsdale',
-  'tn/nashville',
-]);
-
 const { stateCode, stateName, cities } = Astro.props;
-const verifiedCount = cities.filter((c: any) => CERTIFIED_SLUGS.has(c.slug)).length;
+const verifiedCount = cities.filter((c: any) => CERTIFIED_FLAGSHIP_SET.has(c.slug)).length;
 ---
 
 <Layout
@@ -121,7 +102,7 @@ const verifiedCount = cities.filter((c: any) => CERTIFIED_SLUGS.has(c.slug)).len
     <!-- Cities Grid -->
     <div id="state-cities-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
       {cities.map((city) => {
-        const isCertified = CERTIFIED_SLUGS.has(city.slug);
+        const isCertified = CERTIFIED_FLAGSHIP_SET.has(city.slug);
         return (
           <a
             href={`/${city.slug}/`}

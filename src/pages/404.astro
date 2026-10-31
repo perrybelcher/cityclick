@@ -1,15 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { CERTIFIED_FLAGSHIPS } from '../config/flagships';
 
-const CERTIFIED_GUIDES = [
-  { slug: 'tx/austin', label: 'Austin, TX' },
-  { slug: 'tn/nashville', label: 'Nashville, TN' },
-  { slug: 'ar/hot-springs', label: 'Hot Springs, AR' },
-  { slug: 'ar/hot-springs-village', label: 'Hot Springs Village, AR' },
-  { slug: 'id/boise', label: 'Boise, ID' },
-  { slug: 'fl/tampa', label: 'Tampa, FL' },
-  { slug: 'az/scottsdale', label: 'Scottsdale, AZ' },
-];
+const CERTIFIED_GUIDES = CERTIFIED_FLAGSHIPS.map((f) => ({
+  slug: f.slug,
+  label: `${f.name}, ${f.stateCode}`,
+}));
 ---
 
 <Layout

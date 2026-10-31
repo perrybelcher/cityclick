@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { CERTIFIED_FLAGSHIPS } from '../config/flagships';
 ---
 
 <Layout
@@ -92,13 +93,9 @@ import Layout from '../layouts/Layout.astro';
           id="api-test-slug"
           class="flex-1 px-4 py-2.5 rounded-xl border border-slate-300 bg-white text-sm font-semibold text-slate-800"
         >
-          <option value="tx/austin">tx/austin — Austin, TX</option>
-          <option value="tn/nashville">tn/nashville — Nashville, TN</option>
-          <option value="ar/hot-springs">ar/hot-springs — Hot Springs, AR</option>
-          <option value="ar/hot-springs-village">ar/hot-springs-village — Hot Springs Village, AR</option>
-          <option value="id/boise">id/boise — Boise, ID</option>
-          <option value="fl/tampa">fl/tampa — Tampa, FL</option>
-          <option value="az/scottsdale">az/scottsdale — Scottsdale, AZ</option>
+          {CERTIFIED_FLAGSHIPS.map((f) => (
+            <option value={f.slug}>{f.slug} — {f.name}, {f.stateCode}</option>
+          ))}
         </select>
         <button
           id="api-test-btn"

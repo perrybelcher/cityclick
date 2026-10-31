@@ -2,633 +2,776 @@
   {
     "slug": "nv/las-vegas",
     "cityId": "3240000",
-    "countyFips": "32400",
+    "countyFips": "32003",
     "name": "Las Vegas",
     "stateCode": "nv",
     "stateName": "Nevada",
-    "countyName": "Las Vegas Metropolitan Area",
+    "countyName": "Clark County",
     "lat": 36.233499,
     "lng": -115.264037,
     "primaryZips": [
-      "70024"
+      "89118",
+      "89119",
+      "89109",
+      "89102",
+      "89117",
+      "89103",
+      "89123",
+      "89146",
+      "89148",
+      "89101",
+      "89120",
+      "89128"
     ],
     "demographics": {
       "population": 660929,
-      "popGrowth5YrPct": 2.2,
-      "medianHouseholdIncome": 89302,
-      "perCapitaIncome": 51795,
-      "medianAge": 36.4,
-      "daytimeWorkerPop": 409776,
-      "daytimePopSurgePct": 8.5,
-      "medianGrossRent": 1717,
-      "medianHomeValue": 375068,
+      "medianHouseholdIncome": 70723,
+      "perCapitaIncome": 38421,
+      "medianAge": 38.5,
+      "medianGrossRent": 1456,
+      "medianHomeValue": 395300,
       "provenance": {
-        "sourceName": "US Census Bureau ACS 5-Year (DP03/DP04/DP05) & PopEst",
-        "sourceUrl": "https://api.census.gov/data/2023/acs/acs5",
-        "datasetVintage": "2023-5YR",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "sourceName": "US Census Bureau ACS 5-Year Estimates 2023 (Table-Based Summary File)",
+        "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/",
+        "datasetVintage": "ACS-2023-5YR",
+        "verifiedAt": "2026-10-31T00:00:00Z",
         "granularity": "place"
-      }
-    },
-    "laborAndEconomy": {
-      "unemploymentRatePct": 3.8,
-      "avgWeeklyWageAllIndustries": 1340,
-      "newHousingPermits12Mo": 4957,
-      "permitsPer1kResidents": 7.5,
-      "femaRiskScore": 28.0,
-      "provenance": {
-        "sourceName": "BLS Local Area Unemployment Statistics (LAUS) & Census BPS",
-        "sourceUrl": "https://www.bls.gov/lau/",
-        "datasetVintage": "2024-M08",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
-      }
+      },
+      "popChange2020to2023Pct": 2.5,
+      "popChangeBasis": "Census Population Estimates, April 2020 base to July 2023"
     },
     "industries": [
       {
         "naicsCode": "722515",
         "slug": "coffee-shops",
         "label": "Coffee & Snack Shops",
-        "establishments": 142,
-        "per10kResidents": 2.15,
-        "usAvgPer10k": 2.15,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 426,
+        "per10kResidents": 2.62,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 123,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Las Vegas."
+          "evidenceQuote": "426 employer establishments (NAICS 722515) across 44 ZIP codes whose USPS city is Las Vegas, NV; density uses ACS 2023 ZCTA population (1,625,332). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722511",
         "slug": "restaurants",
         "label": "Full-Service Restaurants",
-        "establishments": 449,
-        "per10kResidents": 6.79,
-        "usAvgPer10k": 6.8,
-        "saturationIndex": 100,
+        "establishments": 1403,
+        "per10kResidents": 8.63,
+        "usAvgPer10k": 7.44,
+        "saturationIndex": 116,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Las Vegas."
+          "evidenceQuote": "1403 employer establishments (NAICS 722511) across 44 ZIP codes whose USPS city is Las Vegas, NV; density uses ACS 2023 ZCTA population (1,625,332). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722513",
         "slug": "fast-food",
-        "label": "Fast Food Restaurants",
-        "establishments": 476,
-        "per10kResidents": 7.2,
-        "usAvgPer10k": 7.2,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Limited-Service / Fast Food Restaurants",
+        "establishments": 1714,
+        "per10kResidents": 10.55,
+        "usAvgPer10k": 7.75,
+        "saturationIndex": 136,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Las Vegas."
+          "evidenceQuote": "1714 employer establishments (NAICS 722513) across 44 ZIP codes whose USPS city is Las Vegas, NV; density uses ACS 2023 ZCTA population (1,625,332). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722410",
         "slug": "bars-taverns",
-        "label": "Bars & Drinking Places",
-        "establishments": 122,
-        "per10kResidents": 1.85,
-        "usAvgPer10k": 1.85,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Drinking Places (Alcoholic Beverages)",
+        "establishments": 372,
+        "per10kResidents": 2.29,
+        "usAvgPer10k": 0.9,
+        "saturationIndex": 254,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Las Vegas."
-        }
-      },
-      {
-        "naicsCode": "812111",
-        "slug": "barber-shops",
-        "label": "Barber Shops",
-        "establishments": 89,
-        "per10kResidents": 1.35,
-        "usAvgPer10k": 1.35,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Las Vegas."
+          "evidenceQuote": "372 employer establishments (NAICS 722410) across 44 ZIP codes whose USPS city is Las Vegas, NV; density uses ACS 2023 ZCTA population (1,625,332). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812112",
         "slug": "beauty-salons",
         "label": "Beauty Salons & Hair Studios",
-        "establishments": 225,
-        "per10kResidents": 3.4,
-        "usAvgPer10k": 3.4,
-        "saturationIndex": 100,
+        "establishments": 364,
+        "per10kResidents": 2.24,
+        "usAvgPer10k": 2.31,
+        "saturationIndex": 97,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Las Vegas."
+          "evidenceQuote": "364 employer establishments (NAICS 812112) across 44 ZIP codes whose USPS city is Las Vegas, NV; density uses ACS 2023 ZCTA population (1,625,332). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812113",
         "slug": "nail-salons",
         "label": "Nail Salons",
-        "establishments": 139,
-        "per10kResidents": 2.1,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 100,
+        "establishments": 145,
+        "per10kResidents": 0.89,
+        "usAvgPer10k": 0.86,
+        "saturationIndex": 104,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Las Vegas."
+          "evidenceQuote": "145 employer establishments (NAICS 812113) across 44 ZIP codes whose USPS city is Las Vegas, NV; density uses ACS 2023 ZCTA population (1,625,332). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "713940",
         "slug": "gyms-fitness",
-        "label": "Fitness & Recreational Gyms",
-        "establishments": 83,
-        "per10kResidents": 1.26,
-        "usAvgPer10k": 1.25,
+        "label": "Fitness & Recreational Sports Centers",
+        "establishments": 162,
+        "per10kResidents": 1.0,
+        "usAvgPer10k": 1.0,
         "saturationIndex": 100,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Las Vegas."
+          "evidenceQuote": "162 employer establishments (NAICS 713940) across 44 ZIP codes whose USPS city is Las Vegas, NV; density uses ACS 2023 ZCTA population (1,625,332). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812910",
         "slug": "pet-care",
-        "label": "Pet Care & Grooming",
-        "establishments": 63,
-        "per10kResidents": 0.95,
-        "usAvgPer10k": 0.95,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Pet Care & Grooming Services",
+        "establishments": 93,
+        "per10kResidents": 0.57,
+        "usAvgPer10k": 0.46,
+        "saturationIndex": 123,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Las Vegas."
+          "evidenceQuote": "93 employer establishments (NAICS 812910) across 44 ZIP codes whose USPS city is Las Vegas, NV; density uses ACS 2023 ZCTA population (1,625,332). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541940",
         "slug": "veterinary",
-        "label": "Veterinary Services",
-        "establishments": 69,
-        "per10kResidents": 1.04,
-        "usAvgPer10k": 1.05,
-        "saturationIndex": 99,
+        "label": "Veterinary Services & Animal Hospitals",
+        "establishments": 97,
+        "per10kResidents": 0.6,
+        "usAvgPer10k": 0.69,
+        "saturationIndex": 86,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Las Vegas."
+          "evidenceQuote": "97 employer establishments (NAICS 541940) across 44 ZIP codes whose USPS city is Las Vegas, NV; density uses ACS 2023 ZCTA population (1,625,332). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "811111",
         "slug": "auto-repair",
         "label": "General Automotive Repair",
-        "establishments": 317,
-        "per10kResidents": 4.8,
-        "usAvgPer10k": 4.8,
-        "saturationIndex": 100,
+        "establishments": 337,
+        "per10kResidents": 2.07,
+        "usAvgPer10k": 2.2,
+        "saturationIndex": 94,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Las Vegas."
+          "evidenceQuote": "337 employer establishments (NAICS 811111) across 44 ZIP codes whose USPS city is Las Vegas, NV; density uses ACS 2023 ZCTA population (1,625,332). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "811192",
         "slug": "car-washes",
-        "label": "Car Washes & Detailing",
-        "establishments": 43,
-        "per10kResidents": 0.65,
-        "usAvgPer10k": 0.65,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Car Washes & Auto Detailing",
+        "establishments": 71,
+        "per10kResidents": 0.44,
+        "usAvgPer10k": 0.35,
+        "saturationIndex": 125,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Las Vegas."
-        }
-      },
-      {
-        "naicsCode": "812310",
-        "slug": "laundromats",
-        "label": "Coin Laundromats",
-        "establishments": 36,
-        "per10kResidents": 0.54,
-        "usAvgPer10k": 0.55,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Las Vegas."
-        }
-      },
-      {
-        "naicsCode": "812320",
-        "slug": "dry-cleaners",
-        "label": "Dry Cleaning & Laundry",
-        "establishments": 56,
-        "per10kResidents": 0.85,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Las Vegas."
+          "evidenceQuote": "71 employer establishments (NAICS 811192) across 44 ZIP codes whose USPS city is Las Vegas, NV; density uses ACS 2023 ZCTA population (1,625,332). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621210",
         "slug": "dentists",
         "label": "Offices of Dentists",
-        "establishments": 258,
-        "per10kResidents": 3.9,
-        "usAvgPer10k": 3.9,
-        "saturationIndex": 100,
+        "establishments": 678,
+        "per10kResidents": 4.17,
+        "usAvgPer10k": 3.89,
+        "saturationIndex": 107,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Las Vegas."
+          "evidenceQuote": "678 employer establishments (NAICS 621210) across 44 ZIP codes whose USPS city is Las Vegas, NV; density uses ACS 2023 ZCTA population (1,625,332). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621310",
         "slug": "chiropractors",
         "label": "Offices of Chiropractors",
-        "establishments": 93,
-        "per10kResidents": 1.41,
-        "usAvgPer10k": 1.4,
-        "saturationIndex": 101,
+        "establishments": 165,
+        "per10kResidents": 1.02,
+        "usAvgPer10k": 0.97,
+        "saturationIndex": 104,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Las Vegas."
+          "evidenceQuote": "165 employer establishments (NAICS 621310) across 44 ZIP codes whose USPS city is Las Vegas, NV; density uses ACS 2023 ZCTA population (1,625,332). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621340",
         "slug": "physical-therapy",
-        "label": "Physical Therapy Clinics",
-        "establishments": 102,
-        "per10kResidents": 1.54,
-        "usAvgPer10k": 1.55,
-        "saturationIndex": 100,
+        "label": "Physical, Occupational & Speech Therapists",
+        "establishments": 217,
+        "per10kResidents": 1.34,
+        "usAvgPer10k": 1.3,
+        "saturationIndex": 102,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Las Vegas."
+          "evidenceQuote": "217 employer establishments (NAICS 621340) across 44 ZIP codes whose USPS city is Las Vegas, NV; density uses ACS 2023 ZCTA population (1,625,332). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "624410",
         "slug": "daycare",
         "label": "Child Day Care Services",
-        "establishments": 149,
-        "per10kResidents": 2.25,
-        "usAvgPer10k": 2.25,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 160,
+        "per10kResidents": 0.98,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 46,
+        "status": "underserved",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Las Vegas."
+          "evidenceQuote": "160 employer establishments (NAICS 624410) across 44 ZIP codes whose USPS city is Las Vegas, NV; density uses ACS 2023 ZCTA population (1,625,332). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "445120",
         "slug": "convenience-stores",
-        "label": "Convenience Stores",
-        "establishments": 129,
-        "per10kResidents": 1.95,
-        "usAvgPer10k": 1.95,
-        "saturationIndex": 100,
+        "label": "Convenience Retail Stores",
+        "establishments": 159,
+        "per10kResidents": 0.98,
+        "usAvgPer10k": 0.82,
+        "saturationIndex": 119,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Las Vegas."
+          "evidenceQuote": "159 employer establishments (NAICS 445120) across 44 ZIP codes whose USPS city is Las Vegas, NV; density uses ACS 2023 ZCTA population (1,625,332). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "448140",
         "slug": "clothing-boutiques",
-        "label": "Family Clothing Stores",
-        "establishments": 109,
-        "per10kResidents": 1.65,
-        "usAvgPer10k": 1.65,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Family Clothing Stores & Boutiques",
+        "establishments": 252,
+        "per10kResidents": 1.55,
+        "usAvgPer10k": 0.65,
+        "saturationIndex": 238,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Las Vegas."
-        }
-      },
-      {
-        "naicsCode": "445291",
-        "slug": "bakeries",
-        "label": "Retail Bakeries",
-        "establishments": 56,
-        "per10kResidents": 0.85,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Las Vegas."
-        }
-      },
-      {
-        "naicsCode": "453110",
-        "slug": "florists",
-        "label": "Florists & Floral Gift",
-        "establishments": 33,
-        "per10kResidents": 0.5,
-        "usAvgPer10k": 0.5,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Las Vegas."
+          "evidenceQuote": "252 employer establishments (NAICS 448140) across 44 ZIP codes whose USPS city is Las Vegas, NV; density uses ACS 2023 ZCTA population (1,625,332). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541110",
         "slug": "law-firms",
         "label": "Offices of Lawyers",
-        "establishments": 324,
-        "per10kResidents": 4.9,
-        "usAvgPer10k": 4.9,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 1151,
+        "per10kResidents": 7.08,
+        "usAvgPer10k": 4.8,
+        "saturationIndex": 147,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Las Vegas."
+          "evidenceQuote": "1151 employer establishments (NAICS 541110) across 44 ZIP codes whose USPS city is Las Vegas, NV; density uses ACS 2023 ZCTA population (1,625,332). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541211",
         "slug": "accounting-cpa",
-        "label": "Offices of CPAs",
-        "establishments": 139,
-        "per10kResidents": 2.1,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 100,
+        "label": "Offices of Certified Public Accountants",
+        "establishments": 228,
+        "per10kResidents": 1.4,
+        "usAvgPer10k": 1.44,
+        "saturationIndex": 97,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Las Vegas."
+          "evidenceQuote": "228 employer establishments (NAICS 541211) across 44 ZIP codes whose USPS city is Las Vegas, NV; density uses ACS 2023 ZCTA population (1,625,332). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "531210",
         "slug": "real-estate-agencies",
-        "label": "Real Estate Brokerages",
-        "establishments": 251,
-        "per10kResidents": 3.8,
-        "usAvgPer10k": 3.8,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Offices of Real Estate Agents & Brokers",
+        "establishments": 1346,
+        "per10kResidents": 8.28,
+        "usAvgPer10k": 4.74,
+        "saturationIndex": 175,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Las Vegas."
+          "evidenceQuote": "1346 employer establishments (NAICS 531210) across 44 ZIP codes whose USPS city is Las Vegas, NV; density uses ACS 2023 ZCTA population (1,625,332). National benchmark = all US ZIP rows / US population."
         }
       }
     ],
     "permitsAndTax": {
-      "generalBusinessLicenseRequired": false,
-      "businessLicenseFeeSummary": "No general city business license required. State of Nevada statutory filings apply.",
-      "businessLicensePortalUrl": "https://www.las-vegasnv.gov/permits",
-      "zoningLookupUrl": "https://www.las-vegasnv.gov/zoning",
-      "buildingPermitPortalUrl": "https://www.las-vegasnv.gov/building",
-      "certificateOfOccupancyFee": "$185 standard municipal inspection fee",
-      "avgPermitWaitDays": 30,
-      "shortTermRentalStatus": "restricted",
-      "foodTruckPermitStatus": "allowed",
-      "combinedSalesTaxRate": 0.0835,
       "stateTaxRate": 0.0685,
-      "localTaxRate": 0.015,
+      "countyTaxRate": 0.01525,
+      "cityTaxRate": 0.0,
+      "specialDistrictTaxRate": 0.0,
+      "localTaxRate": 0.01525,
+      "combinedSalesTaxRate": 0.08375,
       "provenance": {
-        "sourceName": "Las Vegas Municipal Code & State Department of Revenue",
-        "sourceUrl": "https://www.las-vegasnv.gov",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place",
-        "evidenceQuote": "Statutory municipal code standards."
+        "sourceName": "Nevada Dept. of Taxation Sales and Use Tax Rate Map (Clark County: 6.85% state statutory base + 1.525% Clark County option = 8.375%)",
+        "sourceUrl": "https://tax.nv.gov/tax-types/sales-tax-use-tax/",
+        "datasetVintage": "2026",
+        "verifiedAt": "2026-10-31T00:00:00Z",
+        "granularity": "place"
       }
     },
-    "topTrafficCorridors": [
-      {
-        "roadName": "Main Arterial Corridor 1",
-        "segmentDescription": "Central Commercial Corridor through Las Vegas",
-        "aadt": 79311,
-        "heavyTruckPct": 5.5,
-        "lat": 36.233499,
-        "lng": -115.264037,
-        "year": 2024,
-        "provenance": {
-          "sourceName": "Nevada DOT AADT Database",
-          "sourceUrl": "https://www.transportation.gov/",
-          "datasetVintage": "2024-AADT",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "place"
-        }
-      }
-    ],
-    "marketSignals": {
-      "reportedRetailRentSqFtYr": 43.2,
-      "reportedIndustrialRentSqFtYr": 19.4,
-      "topSearchedNaics30d": [
-        "722515",
-        "713940",
-        "812111"
-      ],
-      "verifiedLocalProsCount": 8
-    },
-    "scores": {
-      "overallViability": 55,
-      "purchasingPower": 52,
-      "growthMomentum": 58,
-      "costEfficiency": 67,
-      "regulatoryFriction": 48
-    },
+    "marketSignals": {},
     "executiveTravel": {
-      "timeZone": "America/Los_Angeles (PT: UTC-08:00)",
+      "timeZone": "America/Los_Angeles",
       "timeZoneAbbr": "PT",
       "utcOffset": "-08:00",
       "primaryAirport": {
         "name": "Harry Reid International Airport",
         "iata": "LAS",
-        "distanceMiles": 3.0,
-        "transitToDowntown": "RTC Route 108 / Rideshare"
-      },
-      "powerPlugs": {
-        "types": [
-          "Type A (2-pin)",
-          "Type B (3-pin grounded)"
-        ],
-        "voltage": "120V",
-        "frequency": "60Hz",
-        "adapterAdvice": "Visitors from UK, EU, Australia, and Asia require a standard Type A/B plug adapter and dual-voltage converter."
-      },
-      "currency": {
-        "code": "USD",
-        "symbol": "$",
-        "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
-        "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
+        "lat": 36.083361,
+        "lng": -115.151817,
+        "distanceMiles": 12.1,
+        "transitToDowntown": null,
+        "source": "OurAirports (public domain) for name, IATA code and coordinates; distance is straight-line from the U.S. Census Gazetteer city center point",
+        "sourceUrl": "https://ourairports.com/data/",
+        "cityCenterMethod": "Census Gazetteer internal point",
+        "retrieved": "2026-10-31"
       },
       "climate": {
-        "summerHighF": 84,
-        "winterLowF": 22,
-        "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
-        "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
+        "summerHighF": 103,
+        "winterLowF": 40,
+        "annualRainfallInches": 5.9,
+        "summerHighBasis": "Average July daily high",
+        "winterLowBasis": "Average January daily low",
+        "source": "Open-Meteo Historical Weather API (ERA5 reanalysis), 2015-2024 average, retrieved 2026-10-31",
+        "sourceUrl": "https://open-meteo.com/en/docs/historical-weather-api"
       },
       "emergency": {
         "emergencyDispatch": "911",
-        "nonEmergencyPolice": "311 or local municipal dispatch",
-        "nearestTraumaHospital": "Las Vegas Regional Memorial Hospital",
-        "hospitalAddress": "Medical Center District, Las Vegas, NV"
-      },
-      "visitorLogistics": {
-        "tapWaterPotability": "100% Safe municipal drinking water conforming to EPA Safe Drinking Water Act standards.",
-        "salesTaxRefundPolicy": "International travelers may claim state sales tax refunds on qualifying departures at designated airport customs counters.",
-        "rideshareAvailability": "Ubiquitous (Uber and Lyft operational 24/7 across the metropolitan area)."
-      },
-      "provenance": {
-        "sourceName": "FAA Airport Database & International Trade Administration",
-        "sourceUrl": "https://www.trade.gov/",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
+        "nearestTraumaHospital": "Centennial Hills Hospital Medical Center",
+        "hospitalAddress": "6900 N Durango Dr, Las Vegas, NV 89149",
+        "cmsFacilityId": "290054",
+        "emergencyServices": true,
+        "source": "CMS Care Compare hospital general information (federal dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma level, ranking or nearest-facility claim.",
+        "erHospitals": [
+          {
+            "name": "Centennial Hills Hospital Medical Center",
+            "address": "6900 N Durango Dr, Las Vegas, NV 89149",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "290054",
+            "lat": 36.287264,
+            "lng": -115.287779
+          },
+          {
+            "name": "MountainView Hospital",
+            "address": "3100 N Tenaya Way, Las Vegas, NV 89128",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "290039",
+            "lat": 36.213594,
+            "lng": -115.249848
+          },
+          {
+            "name": "Saint Rose Dominican Hospitals - San Martin Campus",
+            "address": "8280 W Warm Springs Road, Las Vegas, NV 89113",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "290053",
+            "lat": 36.055631,
+            "lng": -115.272823
+          },
+          {
+            "name": "Southern Hills Hospital and Medical Center",
+            "address": "9300 West Sunset Rd, Las Vegas, NV 89148",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "290047",
+            "lat": 36.070322,
+            "lng": -115.294382
+          },
+          {
+            "name": "Spring Valley Hospital Medical Center",
+            "address": "5400 South Rainbow Blvd, Las Vegas, NV 89118",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "290046",
+            "lat": 36.090719,
+            "lng": -115.24281
+          },
+          {
+            "name": "Summerlin Hospital Medical Center",
+            "address": "657 Town Center Drive, Las Vegas, NV 89144",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "290041",
+            "lat": 36.165906,
+            "lng": -115.324329
+          },
+          {
+            "name": "Sunrise Hospital and Medical Center",
+            "address": "3186 S Maryland Pkwy, Las Vegas, NV 89109",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "290003",
+            "lat": 36.131946,
+            "lng": -115.136796
+          },
+          {
+            "name": "University Medical Center",
+            "address": "1800 W Charleston Blvd, Las Vegas, NV 89102",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "290007",
+            "lat": 36.15899,
+            "lng": -115.167462
+          },
+          {
+            "name": "Valley Hospital Medical Center",
+            "address": "620 Shadow Lane, Las Vegas, NV 89106",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "290021",
+            "lat": 36.163921,
+            "lng": -115.165517
+          }
+        ],
+        "erHospitalsSource": "CMS Care Compare hospital general information (federal dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma level, ranking or nearest-facility claim."
       }
+    },
+    "housingAndTaxes": {
+      "medianHomeValue": 395300,
+      "medianGrossRent": 1456,
+      "medianRealEstateTaxPaid": 1985,
+      "effectivePropertyTaxRatePct": 0.5,
+      "countyName": "Clark County",
+      "source": "ACS 2023 5-yr: B25077 median home value, B25064 median gross rent, B25103 median real estate taxes paid. Effective rate = B25103 / B25077.",
+      "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/"
+    },
+    "climateNormals": {
+      "peakSummerHighF": 103,
+      "winterLowF": 40,
+      "annualRainfallInches": 5.9,
+      "sourceName": "Open-Meteo Historical Weather API (ERA5 reanalysis), 2015-2024 average, retrieved 2026-10-31",
+      "sourceUrl": "https://open-meteo.com/en/docs/historical-weather-api"
+    },
+    "terrainElevation": {
+      "elevationFeet": 2350.7,
+      "elevationMeters": 716.5,
+      "topographyClass": "Mojave Desert / Las Vegas Valley Basin",
+      "sourceName": "USGS 3D Elevation Program (3DEP Elevation Point Query Service)",
+      "sourceUrl": "https://epqs.nationalmap.gov/v1/json"
+    },
+    "waterUtility": {
+      "pwsid": "NV0000090",
+      "providerName": "Las Vegas Valley Water District",
+      "populationServed": 1539277,
+      "sourceType": "surface water",
+      "source": "U.S. EPA Safe Drinking Water Information System (SDWIS)",
+      "sourceUrl": "https://data.epa.gov/efservice/WATER_SYSTEM/PWSID/NV0000090/JSON",
+      "retrieved": "2026-10-31"
+    },
+    "higherEducation": {
+      "institutionCount": 24,
+      "totalEnrollment": 62603,
+      "institutions": [
+        {
+          "id": 182005,
+          "name": "College of Southern Nevada",
+          "studentSize": 27252,
+          "ownership": "Public",
+          "schoolUrl": "https://www.csn.edu/",
+          "lat": 36.158114,
+          "lng": -115.233099
+        },
+        {
+          "id": 182281,
+          "name": "University of Nevada-Las Vegas",
+          "studentSize": 24622,
+          "ownership": "Public",
+          "schoolUrl": "https://www.unlv.edu/",
+          "lat": 36.106047,
+          "lng": -115.138462
+        },
+        {
+          "id": 445948,
+          "name": "Northwest Career College",
+          "studentSize": 2937,
+          "ownership": "Private for-profit",
+          "schoolUrl": "https://www.northwestcareercollege.edu/",
+          "lat": 36.203875,
+          "lng": -115.255585
+        },
+        {
+          "id": 487375,
+          "name": "Arizona College of Nursing-Las Vegas",
+          "studentSize": 1222,
+          "ownership": "Private for-profit",
+          "schoolUrl": "https://www.arizonacollege.edu/",
+          "lat": 36.067353,
+          "lng": -115.274149
+        },
+        {
+          "id": 496919,
+          "name": "United Education Institute-Las Vegas",
+          "studentSize": 855,
+          "ownership": "Private for-profit",
+          "schoolUrl": "https://www.uei.edu/",
+          "lat": 36.126687,
+          "lng": -115.135647
+        },
+        {
+          "id": 445230,
+          "name": "Pima Medical Institute-Las Vegas",
+          "studentSize": 678,
+          "ownership": "Private for-profit",
+          "schoolUrl": "https://pmi.edu/",
+          "lat": 36.114105,
+          "lng": -115.102238
+        }
+      ],
+      "sourceName": "U.S. Department of Education College Scorecard",
+      "sourceUrl": "https://collegescorecard.ed.gov/",
+      "retrieved": "2026-10-31"
+    },
+    "evInfrastructure": {
+      "totalStations": 327,
+      "totalChargingPorts": 1583,
+      "dcFastPorts": 564,
+      "level2Ports": 1019,
+      "sampleStations": [
+        {
+          "name": "Las Vegas, NV - Arroyo Crossing Parkway - Tesla Supercharger",
+          "address": "7285 Arroyo Crossing Pkwy, Las Vegas, NV 89113",
+          "network": "Tesla",
+          "dcFastPorts": 48,
+          "level2Ports": 0,
+          "lat": 36.062251,
+          "lng": -115.251721
+        },
+        {
+          "name": "Las Vegas, NV - South Durango Drive - Tesla Destination",
+          "address": "6903 S Durango Dr, Las Vegas, NV 89113",
+          "network": "Tesla Destination",
+          "dcFastPorts": 0,
+          "level2Ports": 40,
+          "lat": 36.064496,
+          "lng": -115.283857
+        },
+        {
+          "name": "Ariva Apartments",
+          "address": "11055 S. Las Vegas Blvd, Las Vegas, NV 89183",
+          "network": "Blink Network",
+          "dcFastPorts": 0,
+          "level2Ports": 35,
+          "lat": 35.989119,
+          "lng": -115.174039
+        },
+        {
+          "name": "Resort World Las Vegas Parking Garage",
+          "address": "3000 S Las Vegas Blvd, Las Vegas, NV 89109",
+          "network": "Non-Networked",
+          "dcFastPorts": 0,
+          "level2Ports": 30,
+          "lat": 36.135935,
+          "lng": -115.167411
+        },
+        {
+          "name": "Las Vegas, NV - 7400 Las Vegas Boulevard South - Tesla Supercharger",
+          "address": "7400 Las Vegas Blvd S, Las Vegas, NV 89123",
+          "network": "Tesla",
+          "dcFastPorts": 28,
+          "level2Ports": 0,
+          "lat": 36.05664,
+          "lng": -115.170459
+        }
+      ],
+      "sourceName": "U.S. Department of Energy / NLR Alternative Fuels Data Center (AFDC)",
+      "sourceUrl": "https://afdc.energy.gov/stations",
+      "retrieved": "2026-10-31"
+    },
+    "nationalParks": {
+      "parks": [
+        {
+          "parkCode": "tusk",
+          "fullName": "Tule Springs Fossil Beds National Monument",
+          "designation": "National Monument",
+          "distanceMiles": 11.2,
+          "description": "Over the last ~570,000 years, water has transformed the Upper Las Vegas Valley. Tule Springs Fossil Beds National Monument is an urban park that preserves the unique story of this ever-changing environment.",
+          "url": "https://www.nps.gov/tusk/index.htm",
+          "lat": 36.389322,
+          "lng": -115.320222
+        },
+        {
+          "parkCode": "lake",
+          "fullName": "Lake Mead National Recreation Area",
+          "designation": "National Recreation Area",
+          "distanceMiles": 54.4,
+          "description": "Experience outdoor thrills, striking landscapes, and brilliant blue waters. This year-round recreation area spreads across 1.5 million acres of mountains, canyons, valleys and two vast reservoirs. Visitors come here for scenic drives...",
+          "url": "https://www.nps.gov/lake/index.htm",
+          "lat": 35.966225,
+          "lng": -114.346907
+        }
+      ],
+      "sourceName": "U.S. National Park Service (NPS) API",
+      "sourceUrl": "https://www.nps.gov/",
+      "retrieved": "2026-10-31"
+    },
+    "upcomingEvents": {
+      "totalMatchingEvents": 10000,
+      "events": [
+        {
+          "id": "1AyZkCaGkeTZnYk",
+          "name": "Sin City Stones | Official Caesars Ticket + Hotel Packages",
+          "date": "2025-12-11",
+          "venueName": "X Rocks Theater at Horseshoe Las Vegas",
+          "category": "Music",
+          "url": "https://travel.ticketmaster.com/attraction/119325?_uid=2d1a81bc-09c6-45ae-ba80-43c6cfcac5ca&utm_source=Caesars_TM&utm_medium=TM_ADP_SinCityStones"
+        },
+        {
+          "id": "16d0Z_e_gG7yogm",
+          "name": "Chippendales | Official Caesars Ticket + Hotel Packages",
+          "date": "2026-01-06",
+          "venueName": "Chippendales Theater at Planet Hollywood",
+          "category": "Arts & Theatre",
+          "url": "https://travel.ticketmaster.com/attraction/180?_uid=2d1a81bc-09c6-45ae-ba80-43c6cfcac5ca&utm_source=Caesars_TM&utm_medium=TM_ADP_Chippendales"
+        },
+        {
+          "id": "1AvjZ_dGkB7_QWZ",
+          "name": "The Wizard of Oz at Sphere | Exclusive Ticket + Hotel Deals",
+          "date": "2026-02-02",
+          "venueName": "Sphere",
+          "category": "Arts & Theatre",
+          "url": "https://travel.ticketmaster.com/event-marketing/woz-sphere?utm_source=ticketmaster_adp&utm_medium=referral&utm_campaign=resorts-world-woz-sphere"
+        },
+        {
+          "id": "1kAYv0J6GA5O5iU",
+          "name": "Awakening | Official Wynn-Encore Ticket + Hotel Packages",
+          "date": "2026-04-24",
+          "venueName": "Awakening Theater at Wynn Las Vegas",
+          "category": "Arts & Theatre",
+          "url": "https://travel.ticketmaster.com/en-US/attraction/33302?_uid=ea1d7c6e-7379-4107-826e-13a585c8938e&utm_source=WYNNENCORE&utm_medium=TM_ADP_Awakening"
+        },
+        {
+          "id": "17C8v0G614UH--S",
+          "name": "WOW - The Vegas Spectacular | Official Rio Ticket + Hotel Packages",
+          "date": "2026-05-05",
+          "venueName": "Rio Showroom at Rio Las Vegas",
+          "category": "Arts & Theatre",
+          "url": "https://travel.ticketmaster.com/en-US/attraction/459?_uid=c64fe0cd-79ff-46f6-bae6-a36bef3cf72a&utm_source=Rio&utm_medium=TM_ADP_WOWVegasSpectacular"
+        }
+      ],
+      "sourceName": "Ticketmaster Discovery API v2",
+      "sourceUrl": "https://developer.ticketmaster.com/",
+      "retrieved": "2026-10-31"
     }
   },
   {
@@ -1218,7 +1361,7 @@
         "name": "Henderson Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 11.4,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -1233,14 +1376,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -1850,7 +1993,7 @@
         "name": "North Las Vegas Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 11.3,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -1865,14 +2008,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -2482,7 +2625,7 @@
         "name": "Reno Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 11.2,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -2497,14 +2640,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -3114,7 +3257,7 @@
         "name": "Sparks Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.8,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -3129,14 +3272,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -3746,7 +3889,7 @@
         "name": "Carson Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.5,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -3761,14 +3904,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {

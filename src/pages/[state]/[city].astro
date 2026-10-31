@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import { NAICS_25_DEFINITIONS } from '../../config/naics';
+import { CERTIFIED_FLAGSHIP_SET, DEFAULT_COMPARE_BY_SLUG, HERO_IMAGES_BY_SLUG } from '../../config/flagships';
 import type { CityRecord } from '../../lib/schema';
 import { ALL_CITIES } from '../../data/catalog';
 import { generateSeoGraph } from '../../lib/seo';
@@ -72,16 +73,7 @@ const VERIFIED_VIDEOS: Record<string, CityVideo> = {
 
 const featuredVideo = VERIFIED_VIDEOS[city.slug] ?? null;
 
-const VERIFIED_HERO_IMAGES: Record<string, string> = {
-  'tx/austin': '/images/austin-skyline.jpg',
-  'ar/hot-springs-village': '/images/hsv-hero.jpg',
-  'ar/hot-springs': '/images/hot-springs-hero.jpg',
-  'id/boise': '/images/boise-hero.jpg',
-  'fl/tampa': '/images/tampa-hero.jpg',
-  'az/scottsdale': '/images/scottsdale-hero.jpg',
-  'tn/nashville': '/images/nashville-hero.jpg',
-};
-const heroImage = VERIFIED_HERO_IMAGES[city.slug] ?? null;
+const heroImage = HERO_IMAGES_BY_SLUG[city.slug] ?? null;
 
 const VERIFIED_GALLERIES: Record<string, Array<{ img: string; title: string }>> = {
   'tx/austin': [
@@ -149,19 +141,10 @@ const seoGraph = generateSeoGraph({
   canonicalUrl: canonicalCityUrl,
 });
 
-const CERTIFIED_FLAGSHIP_SLUGS = [
-  'tx/austin',
-  'ar/hot-springs-village',
-  'ar/hot-springs',
-  'id/boise',
-  'fl/tampa',
-  'az/scottsdale',
-  'tn/nashville',
-];
-const isVerifiedCity = CERTIFIED_FLAGSHIP_SLUGS.includes(city.slug);
+const isVerifiedCity = CERTIFIED_FLAGSHIP_SET.has(city.slug);
 const robotsDirective = isVerifiedCity ? 'index, follow' : 'noindex, follow';
 
-const compareTargetSlug = isAustin ? 'tn-nashville' : isHSV ? 'ar-hot-springs' : 'tx-austin';
+const compareTargetSlug = DEFAULT_COMPARE_BY_SLUG[city.slug] ?? (isHSV ? 'ar-hot-springs' : 'tx-austin');
 const compareHref = isVerifiedCity
   ? `/compare/${city.slug.replace('/', '-')}-vs-${compareTargetSlug}/`
   : '/compare/tx-austin-vs-tn-nashville/';

@@ -2,633 +2,780 @@
   {
     "slug": "az/phoenix",
     "cityId": "0455000",
-    "countyFips": "04550",
+    "countyFips": "04013",
     "name": "Phoenix",
     "stateCode": "az",
     "stateName": "Arizona",
-    "countyName": "Phoenix Metropolitan Area",
+    "countyName": "Maricopa County",
     "lat": 33.572154,
     "lng": -112.090132,
     "primaryZips": [
-      "70005"
+      "85016",
+      "85018",
+      "85027",
+      "85032",
+      "85040",
+      "85034",
+      "85004",
+      "85009",
+      "85020",
+      "85012",
+      "85044",
+      "85028"
     ],
     "demographics": {
       "population": 1650070,
-      "popGrowth5YrPct": 2.3,
-      "medianHouseholdIncome": 92167,
-      "perCapitaIncome": 53457,
-      "medianAge": 36.4,
-      "daytimeWorkerPop": 1023043,
-      "daytimePopSurgePct": 8.5,
-      "medianGrossRent": 1772,
-      "medianHomeValue": 387101,
+      "medianHouseholdIncome": 77041,
+      "perCapitaIncome": 40309,
+      "medianAge": 34.8,
+      "medianGrossRent": 1458,
+      "medianHomeValue": 381900,
       "provenance": {
-        "sourceName": "US Census Bureau ACS 5-Year (DP03/DP04/DP05) & PopEst",
-        "sourceUrl": "https://api.census.gov/data/2023/acs/acs5",
-        "datasetVintage": "2023-5YR",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "sourceName": "US Census Bureau ACS 5-Year Estimates 2023 (Table-Based Summary File)",
+        "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/",
+        "datasetVintage": "ACS-2023-5YR",
+        "verifiedAt": "2026-10-31T00:00:00Z",
         "granularity": "place"
-      }
-    },
-    "laborAndEconomy": {
-      "unemploymentRatePct": 3.8,
-      "avgWeeklyWageAllIndustries": 1340,
-      "newHousingPermits12Mo": 12376,
-      "permitsPer1kResidents": 7.5,
-      "femaRiskScore": 28.0,
-      "provenance": {
-        "sourceName": "BLS Local Area Unemployment Statistics (LAUS) & Census BPS",
-        "sourceUrl": "https://www.bls.gov/lau/",
-        "datasetVintage": "2024-M08",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
-      }
+      },
+      "popChange2020to2023Pct": 2.6,
+      "popChangeBasis": "Census Population Estimates, April 2020 base to July 2023"
     },
     "industries": [
       {
         "naicsCode": "722515",
         "slug": "coffee-shops",
         "label": "Coffee & Snack Shops",
-        "establishments": 355,
-        "per10kResidents": 2.15,
-        "usAvgPer10k": 2.15,
-        "saturationIndex": 100,
+        "establishments": 317,
+        "per10kResidents": 2.18,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 103,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Phoenix."
+          "evidenceQuote": "317 employer establishments (NAICS 722515) across 42 ZIP codes whose USPS city is Phoenix, AZ; density uses ACS 2023 ZCTA population (1,454,993). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722511",
         "slug": "restaurants",
         "label": "Full-Service Restaurants",
-        "establishments": 1122,
-        "per10kResidents": 6.8,
-        "usAvgPer10k": 6.8,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 834,
+        "per10kResidents": 5.73,
+        "usAvgPer10k": 7.44,
+        "saturationIndex": 77,
+        "status": "underserved",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Phoenix."
+          "evidenceQuote": "834 employer establishments (NAICS 722511) across 42 ZIP codes whose USPS city is Phoenix, AZ; density uses ACS 2023 ZCTA population (1,454,993). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722513",
         "slug": "fast-food",
-        "label": "Fast Food Restaurants",
-        "establishments": 1188,
-        "per10kResidents": 7.2,
-        "usAvgPer10k": 7.2,
-        "saturationIndex": 100,
+        "label": "Limited-Service / Fast Food Restaurants",
+        "establishments": 1237,
+        "per10kResidents": 8.5,
+        "usAvgPer10k": 7.75,
+        "saturationIndex": 110,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Phoenix."
+          "evidenceQuote": "1237 employer establishments (NAICS 722513) across 42 ZIP codes whose USPS city is Phoenix, AZ; density uses ACS 2023 ZCTA population (1,454,993). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722410",
         "slug": "bars-taverns",
-        "label": "Bars & Drinking Places",
-        "establishments": 305,
-        "per10kResidents": 1.85,
-        "usAvgPer10k": 1.85,
-        "saturationIndex": 100,
+        "label": "Drinking Places (Alcoholic Beverages)",
+        "establishments": 138,
+        "per10kResidents": 0.95,
+        "usAvgPer10k": 0.9,
+        "saturationIndex": 105,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Phoenix."
-        }
-      },
-      {
-        "naicsCode": "812111",
-        "slug": "barber-shops",
-        "label": "Barber Shops",
-        "establishments": 223,
-        "per10kResidents": 1.35,
-        "usAvgPer10k": 1.35,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Phoenix."
+          "evidenceQuote": "138 employer establishments (NAICS 722410) across 42 ZIP codes whose USPS city is Phoenix, AZ; density uses ACS 2023 ZCTA population (1,454,993). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812112",
         "slug": "beauty-salons",
         "label": "Beauty Salons & Hair Studios",
-        "establishments": 561,
-        "per10kResidents": 3.4,
-        "usAvgPer10k": 3.4,
-        "saturationIndex": 100,
+        "establishments": 283,
+        "per10kResidents": 1.95,
+        "usAvgPer10k": 2.31,
+        "saturationIndex": 84,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Phoenix."
+          "evidenceQuote": "283 employer establishments (NAICS 812112) across 42 ZIP codes whose USPS city is Phoenix, AZ; density uses ACS 2023 ZCTA population (1,454,993). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812113",
         "slug": "nail-salons",
         "label": "Nail Salons",
-        "establishments": 347,
-        "per10kResidents": 2.1,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 83,
+        "per10kResidents": 0.57,
+        "usAvgPer10k": 0.86,
+        "saturationIndex": 66,
+        "status": "underserved",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Phoenix."
+          "evidenceQuote": "83 employer establishments (NAICS 812113) across 42 ZIP codes whose USPS city is Phoenix, AZ; density uses ACS 2023 ZCTA population (1,454,993). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "713940",
         "slug": "gyms-fitness",
-        "label": "Fitness & Recreational Gyms",
-        "establishments": 206,
-        "per10kResidents": 1.25,
-        "usAvgPer10k": 1.25,
-        "saturationIndex": 100,
+        "label": "Fitness & Recreational Sports Centers",
+        "establishments": 128,
+        "per10kResidents": 0.88,
+        "usAvgPer10k": 1.0,
+        "saturationIndex": 88,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Phoenix."
+          "evidenceQuote": "128 employer establishments (NAICS 713940) across 42 ZIP codes whose USPS city is Phoenix, AZ; density uses ACS 2023 ZCTA population (1,454,993). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812910",
         "slug": "pet-care",
-        "label": "Pet Care & Grooming",
-        "establishments": 157,
-        "per10kResidents": 0.95,
-        "usAvgPer10k": 0.95,
-        "saturationIndex": 100,
+        "label": "Pet Care & Grooming Services",
+        "establishments": 58,
+        "per10kResidents": 0.4,
+        "usAvgPer10k": 0.46,
+        "saturationIndex": 86,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Phoenix."
+          "evidenceQuote": "58 employer establishments (NAICS 812910) across 42 ZIP codes whose USPS city is Phoenix, AZ; density uses ACS 2023 ZCTA population (1,454,993). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541940",
         "slug": "veterinary",
-        "label": "Veterinary Services",
-        "establishments": 173,
-        "per10kResidents": 1.05,
-        "usAvgPer10k": 1.05,
-        "saturationIndex": 100,
+        "label": "Veterinary Services & Animal Hospitals",
+        "establishments": 118,
+        "per10kResidents": 0.81,
+        "usAvgPer10k": 0.69,
+        "saturationIndex": 117,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Phoenix."
+          "evidenceQuote": "118 employer establishments (NAICS 541940) across 42 ZIP codes whose USPS city is Phoenix, AZ; density uses ACS 2023 ZCTA population (1,454,993). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "811111",
         "slug": "auto-repair",
         "label": "General Automotive Repair",
-        "establishments": 792,
-        "per10kResidents": 4.8,
-        "usAvgPer10k": 4.8,
-        "saturationIndex": 100,
+        "establishments": 337,
+        "per10kResidents": 2.32,
+        "usAvgPer10k": 2.2,
+        "saturationIndex": 105,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Phoenix."
+          "evidenceQuote": "337 employer establishments (NAICS 811111) across 42 ZIP codes whose USPS city is Phoenix, AZ; density uses ACS 2023 ZCTA population (1,454,993). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "811192",
         "slug": "car-washes",
-        "label": "Car Washes & Detailing",
-        "establishments": 107,
-        "per10kResidents": 0.65,
-        "usAvgPer10k": 0.65,
-        "saturationIndex": 100,
+        "label": "Car Washes & Auto Detailing",
+        "establishments": 53,
+        "per10kResidents": 0.36,
+        "usAvgPer10k": 0.35,
+        "saturationIndex": 104,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Phoenix."
-        }
-      },
-      {
-        "naicsCode": "812310",
-        "slug": "laundromats",
-        "label": "Coin Laundromats",
-        "establishments": 91,
-        "per10kResidents": 0.55,
-        "usAvgPer10k": 0.55,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Phoenix."
-        }
-      },
-      {
-        "naicsCode": "812320",
-        "slug": "dry-cleaners",
-        "label": "Dry Cleaning & Laundry",
-        "establishments": 140,
-        "per10kResidents": 0.85,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Phoenix."
+          "evidenceQuote": "53 employer establishments (NAICS 811192) across 42 ZIP codes whose USPS city is Phoenix, AZ; density uses ACS 2023 ZCTA population (1,454,993). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621210",
         "slug": "dentists",
         "label": "Offices of Dentists",
-        "establishments": 644,
-        "per10kResidents": 3.9,
-        "usAvgPer10k": 3.9,
-        "saturationIndex": 100,
+        "establishments": 557,
+        "per10kResidents": 3.83,
+        "usAvgPer10k": 3.89,
+        "saturationIndex": 99,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Phoenix."
+          "evidenceQuote": "557 employer establishments (NAICS 621210) across 42 ZIP codes whose USPS city is Phoenix, AZ; density uses ACS 2023 ZCTA population (1,454,993). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621310",
         "slug": "chiropractors",
         "label": "Offices of Chiropractors",
-        "establishments": 231,
-        "per10kResidents": 1.4,
-        "usAvgPer10k": 1.4,
-        "saturationIndex": 100,
+        "establishments": 170,
+        "per10kResidents": 1.17,
+        "usAvgPer10k": 0.97,
+        "saturationIndex": 120,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Phoenix."
+          "evidenceQuote": "170 employer establishments (NAICS 621310) across 42 ZIP codes whose USPS city is Phoenix, AZ; density uses ACS 2023 ZCTA population (1,454,993). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621340",
         "slug": "physical-therapy",
-        "label": "Physical Therapy Clinics",
-        "establishments": 256,
-        "per10kResidents": 1.55,
-        "usAvgPer10k": 1.55,
-        "saturationIndex": 100,
+        "label": "Physical, Occupational & Speech Therapists",
+        "establishments": 203,
+        "per10kResidents": 1.4,
+        "usAvgPer10k": 1.3,
+        "saturationIndex": 107,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Phoenix."
+          "evidenceQuote": "203 employer establishments (NAICS 621340) across 42 ZIP codes whose USPS city is Phoenix, AZ; density uses ACS 2023 ZCTA population (1,454,993). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "624410",
         "slug": "daycare",
         "label": "Child Day Care Services",
-        "establishments": 371,
-        "per10kResidents": 2.25,
-        "usAvgPer10k": 2.25,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 189,
+        "per10kResidents": 1.3,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 61,
+        "status": "underserved",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Phoenix."
+          "evidenceQuote": "189 employer establishments (NAICS 624410) across 42 ZIP codes whose USPS city is Phoenix, AZ; density uses ACS 2023 ZCTA population (1,454,993). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "445120",
         "slug": "convenience-stores",
-        "label": "Convenience Stores",
-        "establishments": 322,
-        "per10kResidents": 1.95,
-        "usAvgPer10k": 1.95,
-        "saturationIndex": 100,
+        "label": "Convenience Retail Stores",
+        "establishments": 100,
+        "per10kResidents": 0.69,
+        "usAvgPer10k": 0.82,
+        "saturationIndex": 84,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Phoenix."
+          "evidenceQuote": "100 employer establishments (NAICS 445120) across 42 ZIP codes whose USPS city is Phoenix, AZ; density uses ACS 2023 ZCTA population (1,454,993). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "448140",
         "slug": "clothing-boutiques",
-        "label": "Family Clothing Stores",
-        "establishments": 272,
-        "per10kResidents": 1.65,
-        "usAvgPer10k": 1.65,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Family Clothing Stores & Boutiques",
+        "establishments": 64,
+        "per10kResidents": 0.44,
+        "usAvgPer10k": 0.65,
+        "saturationIndex": 67,
+        "status": "underserved",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Phoenix."
-        }
-      },
-      {
-        "naicsCode": "445291",
-        "slug": "bakeries",
-        "label": "Retail Bakeries",
-        "establishments": 140,
-        "per10kResidents": 0.85,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Phoenix."
-        }
-      },
-      {
-        "naicsCode": "453110",
-        "slug": "florists",
-        "label": "Florists & Floral Gift",
-        "establishments": 83,
-        "per10kResidents": 0.5,
-        "usAvgPer10k": 0.5,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Phoenix."
+          "evidenceQuote": "64 employer establishments (NAICS 448140) across 42 ZIP codes whose USPS city is Phoenix, AZ; density uses ACS 2023 ZCTA population (1,454,993). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541110",
         "slug": "law-firms",
         "label": "Offices of Lawyers",
-        "establishments": 809,
-        "per10kResidents": 4.9,
-        "usAvgPer10k": 4.9,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 1160,
+        "per10kResidents": 7.97,
+        "usAvgPer10k": 4.8,
+        "saturationIndex": 166,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Phoenix."
+          "evidenceQuote": "1160 employer establishments (NAICS 541110) across 42 ZIP codes whose USPS city is Phoenix, AZ; density uses ACS 2023 ZCTA population (1,454,993). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541211",
         "slug": "accounting-cpa",
-        "label": "Offices of CPAs",
-        "establishments": 347,
-        "per10kResidents": 2.1,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Offices of Certified Public Accountants",
+        "establishments": 257,
+        "per10kResidents": 1.77,
+        "usAvgPer10k": 1.44,
+        "saturationIndex": 123,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Phoenix."
+          "evidenceQuote": "257 employer establishments (NAICS 541211) across 42 ZIP codes whose USPS city is Phoenix, AZ; density uses ACS 2023 ZCTA population (1,454,993). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "531210",
         "slug": "real-estate-agencies",
-        "label": "Real Estate Brokerages",
-        "establishments": 627,
-        "per10kResidents": 3.8,
-        "usAvgPer10k": 3.8,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Offices of Real Estate Agents & Brokers",
+        "establishments": 1212,
+        "per10kResidents": 8.33,
+        "usAvgPer10k": 4.74,
+        "saturationIndex": 176,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Phoenix."
+          "evidenceQuote": "1212 employer establishments (NAICS 531210) across 42 ZIP codes whose USPS city is Phoenix, AZ; density uses ACS 2023 ZCTA population (1,454,993). National benchmark = all US ZIP rows / US population."
         }
       }
     ],
     "permitsAndTax": {
-      "generalBusinessLicenseRequired": false,
-      "businessLicenseFeeSummary": "No general city business license required. State of Arizona statutory filings apply.",
-      "businessLicensePortalUrl": "https://www.phoenixaz.gov/permits",
-      "zoningLookupUrl": "https://www.phoenixaz.gov/zoning",
-      "buildingPermitPortalUrl": "https://www.phoenixaz.gov/building",
-      "certificateOfOccupancyFee": "$185 standard municipal inspection fee",
-      "avgPermitWaitDays": 30,
-      "shortTermRentalStatus": "restricted",
-      "foodTruckPermitStatus": "allowed",
-      "combinedSalesTaxRate": 0.071,
       "stateTaxRate": 0.056,
-      "localTaxRate": 0.015,
+      "countyTaxRate": 0.007,
+      "cityTaxRate": 0.028,
+      "specialDistrictTaxRate": 0.0,
+      "localTaxRate": 0.035,
+      "combinedSalesTaxRate": 0.091,
       "provenance": {
-        "sourceName": "Phoenix Municipal Code & State Department of Revenue",
-        "sourceUrl": "https://www.phoenixaz.gov",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place",
-        "evidenceQuote": "Statutory municipal code standards."
+        "sourceName": "City of Phoenix Transaction Privilege Tax schedule (5.6% state + 0.7% Maricopa County + 2.8% City of Phoenix per Ord. G-7369 effective 2025-07-01)",
+        "sourceUrl": "https://www.phoenix.gov/finance/plt",
+        "datasetVintage": "2026",
+        "verifiedAt": "2026-10-31T00:00:00Z",
+        "granularity": "place"
       }
     },
-    "topTrafficCorridors": [
-      {
-        "roadName": "Main Arterial Corridor 1",
-        "segmentDescription": "Central Commercial Corridor through Phoenix",
-        "aadt": 198008,
-        "heavyTruckPct": 5.5,
-        "lat": 33.572154,
-        "lng": -112.090132,
-        "year": 2024,
-        "provenance": {
-          "sourceName": "Arizona DOT AADT Database",
-          "sourceUrl": "https://www.transportation.gov/",
-          "datasetVintage": "2024-AADT",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "place"
-        }
-      }
-    ],
-    "marketSignals": {
-      "reportedRetailRentSqFtYr": 44.0,
-      "reportedIndustrialRentSqFtYr": 19.8,
-      "topSearchedNaics30d": [
-        "722515",
-        "713940",
-        "812111"
-      ],
-      "verifiedLocalProsCount": 8
-    },
-    "scores": {
-      "overallViability": 56,
-      "purchasingPower": 53,
-      "growthMomentum": 59,
-      "costEfficiency": 66,
-      "regulatoryFriction": 48
-    },
+    "marketSignals": {},
     "executiveTravel": {
-      "timeZone": "America/Phoenix (MST: UTC-07:00)",
+      "timeZone": "America/Phoenix",
       "timeZoneAbbr": "MST",
       "utcOffset": "-07:00",
       "primaryAirport": {
         "name": "Phoenix Sky Harbor International Airport",
         "iata": "PHX",
-        "distanceMiles": 4.0,
-        "transitToDowntown": "Valley Metro Rail / Rideshare"
-      },
-      "powerPlugs": {
-        "types": [
-          "Type A (2-pin)",
-          "Type B (3-pin grounded)"
-        ],
-        "voltage": "120V",
-        "frequency": "60Hz",
-        "adapterAdvice": "Visitors from UK, EU, Australia, and Asia require a standard Type A/B plug adapter and dual-voltage converter."
-      },
-      "currency": {
-        "code": "USD",
-        "symbol": "$",
-        "name": "United States Dollar",
-        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
-        "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
+        "lat": 33.435302,
+        "lng": -112.005905,
+        "distanceMiles": 10.6,
+        "transitToDowntown": null,
+        "source": "OurAirports (public domain) for name, IATA code and coordinates; distance is straight-line from the U.S. Census Gazetteer city center point",
+        "sourceUrl": "https://ourairports.com/data/",
+        "cityCenterMethod": "Census Gazetteer internal point",
+        "retrieved": "2026-10-31"
       },
       "climate": {
-        "summerHighF": 94,
-        "winterLowF": 47,
-        "annualRainfallInches": 20,
-        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
-        "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
+        "summerHighF": 105,
+        "winterLowF": 43,
+        "annualRainfallInches": 11.4,
+        "summerHighBasis": "Average July daily high",
+        "winterLowBasis": "Average January daily low",
+        "source": "Open-Meteo Historical Weather API (ERA5 reanalysis), 2015-2024 average, retrieved 2026-10-31",
+        "sourceUrl": "https://open-meteo.com/en/docs/historical-weather-api"
       },
       "emergency": {
         "emergencyDispatch": "911",
-        "nonEmergencyPolice": "311 or local municipal dispatch",
-        "nearestTraumaHospital": "Phoenix Regional Memorial Hospital",
-        "hospitalAddress": "Medical Center District, Phoenix, AZ"
-      },
-      "visitorLogistics": {
-        "tapWaterPotability": "100% Safe municipal drinking water conforming to EPA Safe Drinking Water Act standards.",
-        "salesTaxRefundPolicy": "International travelers may claim state sales tax refunds on qualifying departures at designated airport customs counters.",
-        "rideshareAvailability": "Ubiquitous (Uber and Lyft operational 24/7 across the metropolitan area)."
-      },
-      "provenance": {
-        "sourceName": "FAA Airport Database & International Trade Administration",
-        "sourceUrl": "https://www.trade.gov/",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
+        "nearestTraumaHospital": "Abrazo Central Campus",
+        "hospitalAddress": "2000 West Bethany Home Road, Phoenix, AZ 85015",
+        "cmsFacilityId": "030030",
+        "emergencyServices": true,
+        "source": "CMS Care Compare hospital general information (federal dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma level, ranking or nearest-facility claim.",
+        "erHospitals": [
+          {
+            "name": "Abrazo Central Campus",
+            "address": "2000 West Bethany Home Road, Phoenix, AZ 85015",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "030030",
+            "lat": 33.524177,
+            "lng": -112.101942
+          },
+          {
+            "name": "Abrazo Scottsdale Campus",
+            "address": "3929 East Bell Road, Phoenix, AZ 85032",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "030083",
+            "lat": 33.640639,
+            "lng": -111.997293
+          },
+          {
+            "name": "Banner - University Medical Center Phoenix",
+            "address": "1111 East Mcdowell Road, Phoenix, AZ 85006",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "030002",
+            "lat": 33.465654,
+            "lng": -112.059489
+          },
+          {
+            "name": "Banner Estrella Medical Center",
+            "address": "9201 West Thomas Road, Phoenix, AZ 85037",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "030115"
+          },
+          {
+            "name": "Honor Health John C. Lincoln Medical Center",
+            "address": "250 East Dunlap Avenue, Phoenix, AZ 85020",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "030014",
+            "lat": 33.56781,
+            "lng": -112.071145
+          },
+          {
+            "name": "HonorHealth Deer Valley Medical Center",
+            "address": "19829 North 27th Avenue, Phoenix, AZ 85027",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "030092",
+            "lat": 33.665997,
+            "lng": -112.117172
+          },
+          {
+            "name": "HonorHealth Sonoran Crossing Medical Center",
+            "address": "33400 North 32nd Avenue, Phoenix, AZ 85085",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "030146",
+            "lat": 33.785668,
+            "lng": -112.128682
+          },
+          {
+            "name": "HonorHealth Tempe Medical Center",
+            "address": "1800 East Van Buren Street, Phoenix, AZ 85006",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "030037",
+            "lat": 33.451485,
+            "lng": -112.043303
+          },
+          {
+            "name": "Mayo Clinic Hospital",
+            "address": "5777 East Mayo Boulevard, Phoenix, AZ 85054",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "030103",
+            "lat": 33.663347,
+            "lng": -111.955759
+          },
+          {
+            "name": "Phoenix VA Medical Center",
+            "address": "650 E. Indian School Road, Phoenix, AZ 85012",
+            "type": "Acute Care - Veterans Administration",
+            "cmsFacilityId": "03012F",
+            "lat": 33.49484,
+            "lng": -112.066786
+          },
+          {
+            "name": "St. Joseph's Hospital and Medical Center",
+            "address": "350 West Thomas Road, Phoenix, AZ 85013",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "030024",
+            "lat": 33.480363,
+            "lng": -112.078611
+          }
+        ],
+        "erHospitalsSource": "CMS Care Compare hospital general information (federal dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma level, ranking or nearest-facility claim."
       }
+    },
+    "housingAndTaxes": {
+      "medianHomeValue": 381900,
+      "medianGrossRent": 1458,
+      "medianRealEstateTaxPaid": 1825,
+      "effectivePropertyTaxRatePct": 0.48,
+      "countyName": "Maricopa County",
+      "source": "ACS 2023 5-yr: B25077 median home value, B25064 median gross rent, B25103 median real estate taxes paid. Effective rate = B25103 / B25077.",
+      "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/"
+    },
+    "climateNormals": {
+      "peakSummerHighF": 105,
+      "winterLowF": 43,
+      "annualRainfallInches": 11.4,
+      "sourceName": "Open-Meteo Historical Weather API (ERA5 reanalysis), 2015-2024 average, retrieved 2026-10-31",
+      "sourceUrl": "https://open-meteo.com/en/docs/historical-weather-api"
+    },
+    "terrainElevation": {
+      "elevationFeet": 1242.1,
+      "elevationMeters": 378.6,
+      "topographyClass": "Sonoran Desert / Salt River Valley",
+      "sourceName": "USGS 3D Elevation Program (3DEP Elevation Point Query Service)",
+      "sourceUrl": "https://epqs.nationalmap.gov/v1/json"
+    },
+    "waterUtility": {
+      "pwsid": "AZ0407025",
+      "providerName": "Phoenix City Of",
+      "populationServed": 1695000,
+      "sourceType": "surface water",
+      "source": "U.S. EPA Safe Drinking Water Information System (SDWIS)",
+      "sourceUrl": "https://data.epa.gov/efservice/WATER_SYSTEM/PWSID/AZ0407025/JSON",
+      "retrieved": "2026-10-31"
+    },
+    "higherEducation": {
+      "institutionCount": 29,
+      "totalEnrollment": 191290,
+      "institutions": [
+        {
+          "id": 484613,
+          "name": "University of Phoenix-Arizona",
+          "studentSize": 85991,
+          "ownership": "Private for-profit",
+          "schoolUrl": "https://www.phoenix.edu/",
+          "lat": 33.41128,
+          "lng": -112.012761
+        },
+        {
+          "id": 104717,
+          "name": "Grand Canyon University",
+          "studentSize": 73371,
+          "ownership": "Private nonprofit",
+          "schoolUrl": "https://www.gcu.edu/",
+          "lat": 33.513231,
+          "lng": -112.129929
+        },
+        {
+          "id": 105428,
+          "name": "Phoenix College",
+          "studentSize": 8555,
+          "ownership": "Public",
+          "schoolUrl": "https://www.phoenixcollege.edu/",
+          "lat": 33.481361,
+          "lng": -112.088293
+        },
+        {
+          "id": 364016,
+          "name": "Paradise Valley Community College",
+          "studentSize": 5117,
+          "ownership": "Public",
+          "schoolUrl": "https://www.paradisevalley.edu/",
+          "lat": 33.652135,
+          "lng": -112.009865
+        },
+        {
+          "id": 105145,
+          "name": "GateWay Community College",
+          "studentSize": 4538,
+          "ownership": "Public",
+          "schoolUrl": "https://www.gatewaycc.edu/",
+          "lat": 33.449686,
+          "lng": -111.997077
+        },
+        {
+          "id": 105792,
+          "name": "South Mountain Community College",
+          "studentSize": 3645,
+          "ownership": "Public",
+          "schoolUrl": "https://www.southmountaincc.edu/",
+          "lat": 33.382406,
+          "lng": -112.032635
+        }
+      ],
+      "sourceName": "U.S. Department of Education College Scorecard",
+      "sourceUrl": "https://collegescorecard.ed.gov/",
+      "retrieved": "2026-10-31"
+    },
+    "evInfrastructure": {
+      "totalStations": 359,
+      "totalChargingPorts": 921,
+      "dcFastPorts": 164,
+      "level2Ports": 757,
+      "sampleStations": [
+        {
+          "name": "2213 E. CAMELBACK RD - RESIDENCES AT CAMELBACK - Tesla Destination",
+          "address": "2213 E Camelback Rd, Phoenix, AZ 85016",
+          "network": "Tesla Destination",
+          "dcFastPorts": 0,
+          "level2Ports": 55,
+          "lat": 33.507681,
+          "lng": -112.033305
+        },
+        {
+          "name": "Phoenix, AZ - E Mayo Blvd - Tesla Supercharger",
+          "address": "7000 E Mayo Blvd, Phoenix, AZ 85054",
+          "network": "Tesla",
+          "dcFastPorts": 20,
+          "level2Ports": 0,
+          "lat": 33.656537,
+          "lng": -111.927733
+        },
+        {
+          "name": "Phoenix, AZ - E Camelback Rd - Tesla Supercharger",
+          "address": "2502 East Camelback Road, Phoenix, AZ 85016",
+          "network": "Tesla",
+          "dcFastPorts": 16,
+          "level2Ports": 0,
+          "lat": 33.511866,
+          "lng": -112.026784
+        },
+        {
+          "name": "Phoenix, AZ - Agua Fria Fwy - Tesla Supercharger",
+          "address": "2805 Agua Fria Fwy, Phoenix, AZ 85027",
+          "network": "Tesla",
+          "dcFastPorts": 16,
+          "level2Ports": 0,
+          "lat": 33.667024,
+          "lng": -112.120899
+        },
+        {
+          "name": "Phoenix, AZ - E Cactus Rd - Tesla Supercharger",
+          "address": "4304 E Cactus Rd, Phoenix, AZ 85032",
+          "network": "Tesla",
+          "dcFastPorts": 16,
+          "level2Ports": 0,
+          "lat": 33.599733,
+          "lng": -111.988527
+        }
+      ],
+      "sourceName": "U.S. Department of Energy / NLR Alternative Fuels Data Center (AFDC)",
+      "sourceUrl": "https://afdc.energy.gov/stations",
+      "retrieved": "2026-10-31"
+    },
+    "nationalParks": {
+      "parks": [
+        {
+          "parkCode": "cagr",
+          "fullName": "Casa Grande Ruins National Monument",
+          "designation": "National Monument",
+          "distanceMiles": 51.2,
+          "description": "An Ancestral Sonoran Desert People's farming community and \"Great House\" are preserved at Casa Grande Ruins. Whether a gathering place for people or simply a waypoint marker in an extensive system of canals and trading partners, the...",
+          "url": "https://www.nps.gov/cagr/index.htm",
+          "lat": 32.997026,
+          "lng": -111.532538
+        }
+      ],
+      "sourceName": "U.S. National Park Service (NPS) API",
+      "sourceUrl": "https://www.nps.gov/",
+      "retrieved": "2026-10-31"
+    },
+    "upcomingEvents": {
+      "totalMatchingEvents": 1202,
+      "events": [
+        {
+          "id": "1Av0Z_KGkDt7D1D",
+          "name": "Chase Field Stadium Tours",
+          "date": "2026-10-31",
+          "venueName": "Chase Field",
+          "category": "Miscellaneous",
+          "url": "https://www.ticketmaster.com/chase-field-stadium-tours-phoenix-arizona-10-31-2026/event/1900653EE913B2BB"
+        },
+        {
+          "id": "16e0Z_8jtG7g-CA",
+          "name": "2nd Annual Melrose Halloween Crawl",
+          "date": "2026-10-31",
+          "venueName": "Thunderbird Lounge",
+          "category": "Miscellaneous",
+          "url": "https://www.ticketweb.com/event/2nd-annual-melrose-halloween-crawl-thunderbird-lounge-tickets/15021813?REFERRAL_ID=tmfeed"
+        },
+        {
+          "id": "Z7r9jZ1AAvE03",
+          "name": "The Rock and Roll Playhouse Plays: GREEN DAY + BLINK 182",
+          "date": "2026-10-31",
+          "venueName": "The Rebel Lounge",
+          "category": "Music",
+          "url": "https://www.ticketmaster.com/event/Z7r9jZ1AAvE03"
+        },
+        {
+          "id": "Z7r9jZ1AAvEAg",
+          "name": "All Star Monster Truck Tour",
+          "date": "2026-10-31",
+          "venueName": "Arizona State Fairgrounds",
+          "category": "Sports",
+          "url": "https://www.ticketmaster.com/event/Z7r9jZ1AAvEAg"
+        },
+        {
+          "id": "Z7r9jZ1A7PUZU",
+          "name": "Drunk Shakespeare: Drunk Dracula (21+ Event)",
+          "date": "2026-10-31",
+          "venueName": "Rose Theatre at Arizona Center",
+          "category": "Arts & Theatre",
+          "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7PUZU"
+        }
+      ],
+      "sourceName": "Ticketmaster Discovery API v2",
+      "sourceUrl": "https://developer.ticketmaster.com/",
+      "retrieved": "2026-10-31"
     }
   },
   {

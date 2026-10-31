@@ -792,1897 +792,2454 @@
   {
     "slug": "tx/houston",
     "cityId": "4835000",
-    "countyFips": "48350",
+    "countyFips": "48201",
     "name": "Houston",
     "stateCode": "tx",
     "stateName": "Texas",
-    "countyName": "Houston Metropolitan Area",
+    "countyName": "Harris County",
     "lat": 29.785743,
     "lng": -95.388806,
     "primaryZips": [
-      "70004"
+      "77056",
+      "77024",
+      "77002",
+      "77036",
+      "77057",
+      "77027",
+      "77041",
+      "77007",
+      "77070",
+      "77008",
+      "77084",
+      "77079"
     ],
     "demographics": {
       "population": 2314157,
-      "popGrowth5YrPct": 0.6,
-      "medianHouseholdIncome": 91242,
-      "perCapitaIncome": 52920,
-      "medianAge": 36.4,
-      "daytimeWorkerPop": 1434777,
-      "daytimePopSurgePct": 8.5,
-      "medianGrossRent": 1755,
-      "medianHomeValue": 383216,
+      "medianHouseholdIncome": 62894,
+      "perCapitaIncome": 41142,
+      "medianAge": 34.3,
+      "medianGrossRent": 1313,
+      "medianHomeValue": 253400,
       "provenance": {
-        "sourceName": "US Census Bureau ACS 5-Year (DP03/DP04/DP05) & PopEst",
-        "sourceUrl": "https://api.census.gov/data/2023/acs/acs5",
-        "datasetVintage": "2023-5YR",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "sourceName": "US Census Bureau ACS 5-Year Estimates 2023 (Table-Based Summary File)",
+        "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/",
+        "datasetVintage": "ACS-2023-5YR",
+        "verifiedAt": "2026-10-31T00:00:00Z",
         "granularity": "place"
-      }
-    },
-    "laborAndEconomy": {
-      "unemploymentRatePct": 3.8,
-      "avgWeeklyWageAllIndustries": 1340,
-      "newHousingPermits12Mo": 17356,
-      "permitsPer1kResidents": 7.5,
-      "femaRiskScore": 28.0,
-      "provenance": {
-        "sourceName": "BLS Local Area Unemployment Statistics (LAUS) & Census BPS",
-        "sourceUrl": "https://www.bls.gov/lau/",
-        "datasetVintage": "2024-M08",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
-      }
+      },
+      "popChange2020to2023Pct": 0.6,
+      "popChangeBasis": "Census Population Estimates, April 2020 base to July 2023"
     },
     "industries": [
       {
         "naicsCode": "722515",
         "slug": "coffee-shops",
         "label": "Coffee & Snack Shops",
-        "establishments": 498,
-        "per10kResidents": 2.15,
-        "usAvgPer10k": 2.15,
-        "saturationIndex": 100,
+        "establishments": 727,
+        "per10kResidents": 2.27,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 107,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Houston."
+          "evidenceQuote": "727 employer establishments (NAICS 722515) across 97 ZIP codes whose USPS city is Houston, TX; density uses ACS 2023 ZCTA population (3,206,570). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722511",
         "slug": "restaurants",
         "label": "Full-Service Restaurants",
-        "establishments": 1574,
-        "per10kResidents": 6.8,
-        "usAvgPer10k": 6.8,
-        "saturationIndex": 100,
+        "establishments": 2458,
+        "per10kResidents": 7.67,
+        "usAvgPer10k": 7.44,
+        "saturationIndex": 103,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Houston."
+          "evidenceQuote": "2458 employer establishments (NAICS 722511) across 97 ZIP codes whose USPS city is Houston, TX; density uses ACS 2023 ZCTA population (3,206,570). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722513",
         "slug": "fast-food",
-        "label": "Fast Food Restaurants",
-        "establishments": 1666,
-        "per10kResidents": 7.2,
-        "usAvgPer10k": 7.2,
-        "saturationIndex": 100,
+        "label": "Limited-Service / Fast Food Restaurants",
+        "establishments": 2727,
+        "per10kResidents": 8.5,
+        "usAvgPer10k": 7.75,
+        "saturationIndex": 110,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Houston."
+          "evidenceQuote": "2727 employer establishments (NAICS 722513) across 97 ZIP codes whose USPS city is Houston, TX; density uses ACS 2023 ZCTA population (3,206,570). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722410",
         "slug": "bars-taverns",
-        "label": "Bars & Drinking Places",
-        "establishments": 428,
-        "per10kResidents": 1.85,
-        "usAvgPer10k": 1.85,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Drinking Places (Alcoholic Beverages)",
+        "establishments": 383,
+        "per10kResidents": 1.19,
+        "usAvgPer10k": 0.9,
+        "saturationIndex": 132,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Houston."
-        }
-      },
-      {
-        "naicsCode": "812111",
-        "slug": "barber-shops",
-        "label": "Barber Shops",
-        "establishments": 312,
-        "per10kResidents": 1.35,
-        "usAvgPer10k": 1.35,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Houston."
+          "evidenceQuote": "383 employer establishments (NAICS 722410) across 97 ZIP codes whose USPS city is Houston, TX; density uses ACS 2023 ZCTA population (3,206,570). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812112",
         "slug": "beauty-salons",
         "label": "Beauty Salons & Hair Studios",
-        "establishments": 787,
-        "per10kResidents": 3.4,
-        "usAvgPer10k": 3.4,
-        "saturationIndex": 100,
+        "establishments": 609,
+        "per10kResidents": 1.9,
+        "usAvgPer10k": 2.31,
+        "saturationIndex": 82,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Houston."
+          "evidenceQuote": "609 employer establishments (NAICS 812112) across 97 ZIP codes whose USPS city is Houston, TX; density uses ACS 2023 ZCTA population (3,206,570). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812113",
         "slug": "nail-salons",
         "label": "Nail Salons",
-        "establishments": 486,
-        "per10kResidents": 2.1,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 152,
+        "per10kResidents": 0.47,
+        "usAvgPer10k": 0.86,
+        "saturationIndex": 55,
+        "status": "underserved",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Houston."
+          "evidenceQuote": "152 employer establishments (NAICS 812113) across 97 ZIP codes whose USPS city is Houston, TX; density uses ACS 2023 ZCTA population (3,206,570). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "713940",
         "slug": "gyms-fitness",
-        "label": "Fitness & Recreational Gyms",
-        "establishments": 289,
-        "per10kResidents": 1.25,
-        "usAvgPer10k": 1.25,
-        "saturationIndex": 100,
+        "label": "Fitness & Recreational Sports Centers",
+        "establishments": 293,
+        "per10kResidents": 0.91,
+        "usAvgPer10k": 1.0,
+        "saturationIndex": 92,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Houston."
+          "evidenceQuote": "293 employer establishments (NAICS 713940) across 97 ZIP codes whose USPS city is Houston, TX; density uses ACS 2023 ZCTA population (3,206,570). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812910",
         "slug": "pet-care",
-        "label": "Pet Care & Grooming",
-        "establishments": 220,
-        "per10kResidents": 0.95,
-        "usAvgPer10k": 0.95,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Pet Care & Grooming Services",
+        "establishments": 94,
+        "per10kResidents": 0.29,
+        "usAvgPer10k": 0.46,
+        "saturationIndex": 63,
+        "status": "underserved",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Houston."
+          "evidenceQuote": "94 employer establishments (NAICS 812910) across 97 ZIP codes whose USPS city is Houston, TX; density uses ACS 2023 ZCTA population (3,206,570). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541940",
         "slug": "veterinary",
-        "label": "Veterinary Services",
-        "establishments": 243,
-        "per10kResidents": 1.05,
-        "usAvgPer10k": 1.05,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Veterinary Services & Animal Hospitals",
+        "establishments": 154,
+        "per10kResidents": 0.48,
+        "usAvgPer10k": 0.69,
+        "saturationIndex": 70,
+        "status": "underserved",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Houston."
+          "evidenceQuote": "154 employer establishments (NAICS 541940) across 97 ZIP codes whose USPS city is Houston, TX; density uses ACS 2023 ZCTA population (3,206,570). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "811111",
         "slug": "auto-repair",
         "label": "General Automotive Repair",
-        "establishments": 1111,
-        "per10kResidents": 4.8,
-        "usAvgPer10k": 4.8,
-        "saturationIndex": 100,
+        "establishments": 686,
+        "per10kResidents": 2.14,
+        "usAvgPer10k": 2.2,
+        "saturationIndex": 97,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Houston."
+          "evidenceQuote": "686 employer establishments (NAICS 811111) across 97 ZIP codes whose USPS city is Houston, TX; density uses ACS 2023 ZCTA population (3,206,570). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "811192",
         "slug": "car-washes",
-        "label": "Car Washes & Detailing",
-        "establishments": 150,
-        "per10kResidents": 0.65,
-        "usAvgPer10k": 0.65,
-        "saturationIndex": 100,
+        "label": "Car Washes & Auto Detailing",
+        "establishments": 126,
+        "per10kResidents": 0.39,
+        "usAvgPer10k": 0.35,
+        "saturationIndex": 112,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Houston."
-        }
-      },
-      {
-        "naicsCode": "812310",
-        "slug": "laundromats",
-        "label": "Coin Laundromats",
-        "establishments": 127,
-        "per10kResidents": 0.55,
-        "usAvgPer10k": 0.55,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Houston."
-        }
-      },
-      {
-        "naicsCode": "812320",
-        "slug": "dry-cleaners",
-        "label": "Dry Cleaning & Laundry",
-        "establishments": 197,
-        "per10kResidents": 0.85,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Houston."
+          "evidenceQuote": "126 employer establishments (NAICS 811192) across 97 ZIP codes whose USPS city is Houston, TX; density uses ACS 2023 ZCTA population (3,206,570). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621210",
         "slug": "dentists",
         "label": "Offices of Dentists",
-        "establishments": 903,
-        "per10kResidents": 3.9,
-        "usAvgPer10k": 3.9,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 1556,
+        "per10kResidents": 4.85,
+        "usAvgPer10k": 3.89,
+        "saturationIndex": 125,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Houston."
+          "evidenceQuote": "1556 employer establishments (NAICS 621210) across 97 ZIP codes whose USPS city is Houston, TX; density uses ACS 2023 ZCTA population (3,206,570). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621310",
         "slug": "chiropractors",
         "label": "Offices of Chiropractors",
-        "establishments": 324,
-        "per10kResidents": 1.4,
-        "usAvgPer10k": 1.4,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 219,
+        "per10kResidents": 0.68,
+        "usAvgPer10k": 0.97,
+        "saturationIndex": 70,
+        "status": "underserved",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Houston."
+          "evidenceQuote": "219 employer establishments (NAICS 621310) across 97 ZIP codes whose USPS city is Houston, TX; density uses ACS 2023 ZCTA population (3,206,570). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621340",
         "slug": "physical-therapy",
-        "label": "Physical Therapy Clinics",
-        "establishments": 359,
-        "per10kResidents": 1.55,
-        "usAvgPer10k": 1.55,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Physical, Occupational & Speech Therapists",
+        "establishments": 225,
+        "per10kResidents": 0.7,
+        "usAvgPer10k": 1.3,
+        "saturationIndex": 54,
+        "status": "underserved",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Houston."
+          "evidenceQuote": "225 employer establishments (NAICS 621340) across 97 ZIP codes whose USPS city is Houston, TX; density uses ACS 2023 ZCTA population (3,206,570). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "624410",
         "slug": "daycare",
         "label": "Child Day Care Services",
-        "establishments": 521,
-        "per10kResidents": 2.25,
-        "usAvgPer10k": 2.25,
-        "saturationIndex": 100,
+        "establishments": 591,
+        "per10kResidents": 1.84,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 87,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Houston."
+          "evidenceQuote": "591 employer establishments (NAICS 624410) across 97 ZIP codes whose USPS city is Houston, TX; density uses ACS 2023 ZCTA population (3,206,570). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "445120",
         "slug": "convenience-stores",
-        "label": "Convenience Stores",
-        "establishments": 451,
-        "per10kResidents": 1.95,
-        "usAvgPer10k": 1.95,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Convenience Retail Stores",
+        "establishments": 589,
+        "per10kResidents": 1.84,
+        "usAvgPer10k": 0.82,
+        "saturationIndex": 224,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Houston."
+          "evidenceQuote": "589 employer establishments (NAICS 445120) across 97 ZIP codes whose USPS city is Houston, TX; density uses ACS 2023 ZCTA population (3,206,570). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "448140",
         "slug": "clothing-boutiques",
-        "label": "Family Clothing Stores",
-        "establishments": 382,
-        "per10kResidents": 1.65,
-        "usAvgPer10k": 1.65,
-        "saturationIndex": 100,
+        "label": "Family Clothing Stores & Boutiques",
+        "establishments": 207,
+        "per10kResidents": 0.65,
+        "usAvgPer10k": 0.65,
+        "saturationIndex": 99,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Houston."
-        }
-      },
-      {
-        "naicsCode": "445291",
-        "slug": "bakeries",
-        "label": "Retail Bakeries",
-        "establishments": 197,
-        "per10kResidents": 0.85,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Houston."
-        }
-      },
-      {
-        "naicsCode": "453110",
-        "slug": "florists",
-        "label": "Florists & Floral Gift",
-        "establishments": 116,
-        "per10kResidents": 0.5,
-        "usAvgPer10k": 0.5,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Houston."
+          "evidenceQuote": "207 employer establishments (NAICS 448140) across 97 ZIP codes whose USPS city is Houston, TX; density uses ACS 2023 ZCTA population (3,206,570). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541110",
         "slug": "law-firms",
         "label": "Offices of Lawyers",
-        "establishments": 1134,
-        "per10kResidents": 4.9,
-        "usAvgPer10k": 4.9,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 2833,
+        "per10kResidents": 8.83,
+        "usAvgPer10k": 4.8,
+        "saturationIndex": 184,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Houston."
+          "evidenceQuote": "2833 employer establishments (NAICS 541110) across 97 ZIP codes whose USPS city is Houston, TX; density uses ACS 2023 ZCTA population (3,206,570). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541211",
         "slug": "accounting-cpa",
-        "label": "Offices of CPAs",
-        "establishments": 486,
-        "per10kResidents": 2.1,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Offices of Certified Public Accountants",
+        "establishments": 573,
+        "per10kResidents": 1.79,
+        "usAvgPer10k": 1.44,
+        "saturationIndex": 124,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Houston."
+          "evidenceQuote": "573 employer establishments (NAICS 541211) across 97 ZIP codes whose USPS city is Houston, TX; density uses ACS 2023 ZCTA population (3,206,570). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "531210",
         "slug": "real-estate-agencies",
-        "label": "Real Estate Brokerages",
-        "establishments": 879,
-        "per10kResidents": 3.8,
-        "usAvgPer10k": 3.8,
-        "saturationIndex": 100,
+        "label": "Offices of Real Estate Agents & Brokers",
+        "establishments": 1267,
+        "per10kResidents": 3.95,
+        "usAvgPer10k": 4.74,
+        "saturationIndex": 83,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Houston."
+          "evidenceQuote": "1267 employer establishments (NAICS 531210) across 97 ZIP codes whose USPS city is Houston, TX; density uses ACS 2023 ZCTA population (3,206,570). National benchmark = all US ZIP rows / US population."
         }
       }
     ],
     "permitsAndTax": {
-      "generalBusinessLicenseRequired": false,
-      "businessLicenseFeeSummary": "No general city business license required. State of Texas statutory filings apply.",
-      "businessLicensePortalUrl": "https://www.houstontx.gov/permits",
-      "zoningLookupUrl": "https://www.houstontx.gov/zoning",
-      "buildingPermitPortalUrl": "https://www.houstontx.gov/building",
-      "certificateOfOccupancyFee": "$185 standard municipal inspection fee",
-      "avgPermitWaitDays": 30,
-      "shortTermRentalStatus": "restricted",
-      "foodTruckPermitStatus": "allowed",
-      "combinedSalesTaxRate": 0.0775,
       "stateTaxRate": 0.0625,
-      "localTaxRate": 0.015,
+      "countyTaxRate": 0.0,
+      "cityTaxRate": 0.01,
+      "specialDistrictTaxRate": 0.01,
+      "localTaxRate": 0.02,
+      "combinedSalesTaxRate": 0.0825,
       "provenance": {
-        "sourceName": "Houston Municipal Code & State Department of Revenue",
-        "sourceUrl": "https://www.houstontx.gov",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place",
-        "evidenceQuote": "Statutory municipal code standards."
+        "sourceName": "Texas Comptroller city sales tax rate table (Houston: 6.25% state + 1.0% city + 1.0% Houston METRO)",
+        "sourceUrl": "https://comptroller.texas.gov/taxes/sales/docs/city-rates.pdf",
+        "datasetVintage": "2026",
+        "verifiedAt": "2026-10-31T00:00:00Z",
+        "granularity": "place"
       }
     },
-    "topTrafficCorridors": [
-      {
-        "roadName": "Main Arterial Corridor 1",
-        "segmentDescription": "Central Commercial Corridor through Houston",
-        "aadt": 277699,
-        "heavyTruckPct": 5.5,
-        "lat": 29.785743,
-        "lng": -95.388806,
-        "year": 2024,
-        "provenance": {
-          "sourceName": "Texas DOT AADT Database",
-          "sourceUrl": "https://www.transportation.gov/",
-          "datasetVintage": "2024-AADT",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "place"
-        }
-      }
-    ],
-    "marketSignals": {
-      "reportedRetailRentSqFtYr": 43.1,
-      "reportedIndustrialRentSqFtYr": 19.4,
-      "topSearchedNaics30d": [
-        "722515",
-        "713940",
-        "812111"
-      ],
-      "verifiedLocalProsCount": 8
-    },
-    "scores": {
-      "overallViability": 52,
-      "purchasingPower": 49,
-      "growthMomentum": 55,
-      "costEfficiency": 69,
-      "regulatoryFriction": 48
-    },
+    "marketSignals": {},
     "executiveTravel": {
-      "timeZone": "America/Chicago (CT: UTC-06:00)",
+      "timeZone": "America/Chicago",
       "timeZoneAbbr": "CT",
       "utcOffset": "-06:00",
       "primaryAirport": {
         "name": "George Bush Intercontinental Airport",
         "iata": "IAH",
-        "distanceMiles": 21.0,
-        "transitToDowntown": "METRO Bus 102 / Rideshare"
-      },
-      "powerPlugs": {
-        "types": [
-          "Type A (2-pin)",
-          "Type B (3-pin grounded)"
-        ],
-        "voltage": "120V",
-        "frequency": "60Hz",
-        "adapterAdvice": "Visitors from UK, EU, Australia, and Asia require a standard Type A/B plug adapter and dual-voltage converter."
-      },
-      "currency": {
-        "code": "USD",
-        "symbol": "$",
-        "name": "United States Dollar",
-        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
-        "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
+        "lat": 29.9844,
+        "lng": -95.3414,
+        "distanceMiles": 14.0,
+        "transitToDowntown": null,
+        "source": "OurAirports (public domain) for name, IATA code and coordinates; distance is straight-line from the U.S. Census Gazetteer city center point",
+        "sourceUrl": "https://ourairports.com/data/",
+        "cityCenterMethod": "Census Gazetteer internal point",
+        "retrieved": "2026-10-31"
       },
       "climate": {
-        "summerHighF": 94,
-        "winterLowF": 47,
-        "annualRainfallInches": 20,
-        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
-        "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
+        "summerHighF": 91,
+        "winterLowF": 45,
+        "annualRainfallInches": 72.3,
+        "summerHighBasis": "Average July daily high",
+        "winterLowBasis": "Average January daily low",
+        "source": "Open-Meteo Historical Weather API (ERA5 reanalysis), 2015-2024 average, retrieved 2026-10-31",
+        "sourceUrl": "https://open-meteo.com/en/docs/historical-weather-api"
       },
       "emergency": {
         "emergencyDispatch": "911",
-        "nonEmergencyPolice": "311 or local municipal dispatch",
-        "nearestTraumaHospital": "Houston Regional Memorial Hospital",
-        "hospitalAddress": "Medical Center District, Houston, TX"
-      },
-      "visitorLogistics": {
-        "tapWaterPotability": "100% Safe municipal drinking water conforming to EPA Safe Drinking Water Act standards.",
-        "salesTaxRefundPolicy": "International travelers may claim state sales tax refunds on qualifying departures at designated airport customs counters.",
-        "rideshareAvailability": "Ubiquitous (Uber and Lyft operational 24/7 across the metropolitan area)."
-      },
-      "provenance": {
-        "sourceName": "FAA Airport Database & International Trade Administration",
-        "sourceUrl": "https://www.trade.gov/",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
+        "nearestTraumaHospital": "Ad Hospital East, LLC",
+        "hospitalAddress": "12950 East Freeway, Suite 100, Houston, TX 77015",
+        "cmsFacilityId": "670102",
+        "emergencyServices": true,
+        "source": "CMS Care Compare hospital general information (federal dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma level, ranking or nearest-facility claim.",
+        "erHospitals": [
+          {
+            "name": "Ad Hospital East, LLC",
+            "address": "12950 East Freeway, Suite 100, Houston, TX 77015",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "670102",
+            "lat": 29.771074,
+            "lng": -95.201467
+          },
+          {
+            "name": "Altus Houston Hospital, LP",
+            "address": "6011 W Sam Houston Pkwy South, Houston, TX 77072",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "670135",
+            "lat": 29.811937,
+            "lng": -95.164053
+          },
+          {
+            "name": "Baylor St. Luke's Medical Center",
+            "address": "6720 Bertner Ave, Ste Mc1-266, Houston, TX 77030",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "450193",
+            "lat": 29.70857,
+            "lng": -95.399139
+          },
+          {
+            "name": "Cypress Creek Hospital",
+            "address": "17750 Cali Drive, Houston, TX 77090",
+            "type": "Psychiatric",
+            "cmsFacilityId": "454108",
+            "lat": 30.024626,
+            "lng": -95.445963
+          },
+          {
+            "name": "East Houston Medical Center",
+            "address": "15149 Wallisville Road, Houston, TX 77049",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "670320",
+            "lat": 29.806915,
+            "lng": -95.170892
+          },
+          {
+            "name": "HCA Houston Healthcare Medical Center",
+            "address": "1313 Hermann Dr, Houston, TX 77004",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "450659",
+            "lat": 29.722505,
+            "lng": -95.388138
+          },
+          {
+            "name": "HCA Houston Healthcare Northwest",
+            "address": "710 Cypress Creek Parkway, Houston, TX 77090",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "450638"
+          },
+          {
+            "name": "HCA Houston Healthcare West",
+            "address": "12141 Richmond Ave, Houston, TX 77082",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "450644",
+            "lat": 29.730658,
+            "lng": -95.59301
+          },
+          {
+            "name": "Harris Health",
+            "address": "1504 Taub Loop, Houston, TX 77030",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "450289",
+            "lat": 29.712579,
+            "lng": -95.393751
+          },
+          {
+            "name": "Houston Methodist Hospital",
+            "address": "6565 Fannin, Houston, TX 77030",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "450358",
+            "lat": 29.711314,
+            "lng": -95.39953
+          },
+          {
+            "name": "Houston Methodist West Hospital",
+            "address": "18500 Katy Freeway, Houston, TX 77094",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "670077",
+            "lat": 29.785586,
+            "lng": -95.694878
+          },
+          {
+            "name": "Houston Methodist Willowbrook Hospital",
+            "address": "18220 State Highway 249, Houston, TX 77070",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "450844"
+          },
+          {
+            "name": "Houston VA Medical Center",
+            "address": "2002 Holcombe Blvd., Houston, TX 77030",
+            "type": "Acute Care - Veterans Administration",
+            "cmsFacilityId": "45074F",
+            "lat": 29.705917,
+            "lng": -95.390067
+          },
+          {
+            "name": "Memorial Hermann - Texas Medical Center",
+            "address": "6411 Fannin, Houston, TX 77030",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "450068",
+            "lat": 29.715095,
+            "lng": -95.396527
+          },
+          {
+            "name": "Memorial Hermann Hospital System",
+            "address": "1635 North Loop West, Houston, TX 77008",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "450184",
+            "lat": 29.812257,
+            "lng": -95.42951
+          },
+          {
+            "name": "Memorial Hermann Memorial City Hospital",
+            "address": "921 Gessner, Houston, TX 77024",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "450610",
+            "lat": 29.78012,
+            "lng": -95.54455
+          },
+          {
+            "name": "St. Joseph Medical Center",
+            "address": "1401 St. Joseph Parkway, Houston, TX 77002",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "450035",
+            "lat": 29.748169,
+            "lng": -95.366705
+          },
+          {
+            "name": "St. Luke's Hospital at The Vintage",
+            "address": "20171 Chasewood Park Drive, Houston, TX 77070",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "670075",
+            "lat": 29.989804,
+            "lng": -95.570181
+          },
+          {
+            "name": "Sun Behavioral Houston",
+            "address": "7601 Fannin Street, Houston, TX 77054",
+            "type": "Psychiatric",
+            "cmsFacilityId": "454139",
+            "lat": 29.692219,
+            "lng": -95.401701
+          },
+          {
+            "name": "Texas Children's Hospital",
+            "address": "6621 Fannin Street, Houston, TX 77030",
+            "type": "Children's",
+            "cmsFacilityId": "453304",
+            "lat": 29.708926,
+            "lng": -95.401413
+          },
+          {
+            "name": "Texas Orthopedic Hospital",
+            "address": "7401 South Main Street, Houston, TX 77030",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "450804",
+            "lat": 29.701172,
+            "lng": -95.408982
+          },
+          {
+            "name": "Woman's Hospital of Texas,The",
+            "address": "7600 Fannin, Houston, TX 77054",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "450674",
+            "lat": 29.692304,
+            "lng": -95.40179
+          }
+        ],
+        "erHospitalsSource": "CMS Care Compare hospital general information (federal dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma level, ranking or nearest-facility claim."
       }
+    },
+    "housingAndTaxes": {
+      "medianHomeValue": 253400,
+      "medianGrossRent": 1313,
+      "medianRealEstateTaxPaid": 4003,
+      "effectivePropertyTaxRatePct": 1.58,
+      "countyName": "Harris County",
+      "source": "ACS 2023 5-yr: B25077 median home value, B25064 median gross rent, B25103 median real estate taxes paid. Effective rate = B25103 / B25077.",
+      "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/"
+    },
+    "climateNormals": {
+      "peakSummerHighF": 91,
+      "winterLowF": 45,
+      "annualRainfallInches": 72.3,
+      "sourceName": "Open-Meteo Historical Weather API (ERA5 reanalysis), 2015-2024 average, retrieved 2026-10-31",
+      "sourceUrl": "https://open-meteo.com/en/docs/historical-weather-api"
+    },
+    "terrainElevation": {
+      "elevationFeet": 52.2,
+      "elevationMeters": 15.9,
+      "topographyClass": "Gulf Coastal Plain & Buffalo Bayou Basin",
+      "sourceName": "USGS 3D Elevation Program (3DEP Elevation Point Query Service)",
+      "sourceUrl": "https://epqs.nationalmap.gov/v1/json"
+    },
+    "waterUtility": {
+      "pwsid": "TX1010013",
+      "providerName": "City of Houston",
+      "populationServed": 2970543,
+      "sourceType": "surface water",
+      "source": "U.S. EPA Safe Drinking Water Information System (SDWIS)",
+      "sourceUrl": "https://data.epa.gov/efservice/WATER_SYSTEM/PWSID/TX1010013/JSON",
+      "retrieved": "2026-10-31"
+    },
+    "higherEducation": {
+      "institutionCount": 61,
+      "totalEnrollment": 126140,
+      "institutions": [
+        {
+          "id": 225423,
+          "name": "Houston City College",
+          "studentSize": 40503,
+          "ownership": "Public",
+          "schoolUrl": "https://www.hccs.edu/",
+          "lat": 29.742114,
+          "lng": -95.377319
+        },
+        {
+          "id": 225511,
+          "name": "University of Houston",
+          "studentSize": 38380,
+          "ownership": "Public",
+          "schoolUrl": "https://www.uh.edu/",
+          "lat": 29.720393,
+          "lng": -95.343537
+        },
+        {
+          "id": 225432,
+          "name": "University of Houston-Downtown",
+          "studentSize": 12555,
+          "ownership": "Public",
+          "schoolUrl": "https://www.uhd.edu/",
+          "lat": 29.7661,
+          "lng": -95.359338
+        },
+        {
+          "id": 229063,
+          "name": "Texas Southern University",
+          "studentSize": 6844,
+          "ownership": "Public",
+          "schoolUrl": "https://www.tsu.edu/",
+          "lat": 29.721046,
+          "lng": -95.361113
+        },
+        {
+          "id": 225414,
+          "name": "University of Houston-Clear Lake",
+          "studentSize": 6078,
+          "ownership": "Public",
+          "schoolUrl": "https://www.uhcl.edu/",
+          "lat": 29.582523,
+          "lng": -95.098129
+        },
+        {
+          "id": 227757,
+          "name": "Rice University",
+          "studentSize": 4776,
+          "ownership": "Private nonprofit",
+          "schoolUrl": "https://www.rice.edu/",
+          "lat": 29.717897,
+          "lng": -95.402035
+        }
+      ],
+      "sourceName": "U.S. Department of Education College Scorecard",
+      "sourceUrl": "https://collegescorecard.ed.gov/",
+      "retrieved": "2026-10-31"
+    },
+    "evInfrastructure": {
+      "totalStations": 407,
+      "totalChargingPorts": 1618,
+      "dcFastPorts": 670,
+      "level2Ports": 948,
+      "sampleStations": [
+        {
+          "name": "Gigahub HOU Monroe Road, Houston, TX",
+          "address": "8100 Monroe Road, Houston, TX 77061",
+          "network": "BP_PULSE",
+          "dcFastPorts": 40,
+          "level2Ports": 0,
+          "lat": 29.651661,
+          "lng": -95.265978
+        },
+        {
+          "name": "Houston, TX - Yale Street - Tesla Supercharger",
+          "address": "195 Yale St, Houston, TX 77007",
+          "network": "Tesla",
+          "dcFastPorts": 35,
+          "level2Ports": 0,
+          "lat": 29.774603,
+          "lng": -95.400434
+        },
+        {
+          "name": "Gigahub Katy Freeway, Houston, TX",
+          "address": "14401 Katy Freeway, Houston, TX 77079",
+          "network": "BP_PULSE",
+          "dcFastPorts": 24,
+          "level2Ports": 0,
+          "lat": 29.78401,
+          "lng": -95.633238
+        },
+        {
+          "name": "Houston, TX - Franklin Street - Tesla Supercharger",
+          "address": "401 Franklin St, Houston, TX 77201",
+          "network": "Tesla",
+          "dcFastPorts": 24,
+          "level2Ports": 0,
+          "lat": 29.766719,
+          "lng": -95.366075
+        },
+        {
+          "name": "Houston, TX - Weslayan Street - Tesla Supercharger",
+          "address": "5586 Weslayan St, Houston, TX 77005",
+          "network": "Tesla",
+          "dcFastPorts": 24,
+          "level2Ports": 0,
+          "lat": 29.722869,
+          "lng": -95.442955
+        }
+      ],
+      "sourceName": "U.S. Department of Energy / NLR Alternative Fuels Data Center (AFDC)",
+      "sourceUrl": "https://afdc.energy.gov/stations",
+      "retrieved": "2026-10-31"
+    },
+    "upcomingEvents": {
+      "totalMatchingEvents": 1215,
+      "events": [
+        {
+          "id": "Z7r9jZ1A7Jva_",
+          "name": "Drunk Shakespeare: Drunk Dracula (21+ Event)",
+          "date": "2026-10-31",
+          "venueName": "The Emerald Theatre",
+          "category": "Arts & Theatre",
+          "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7Jva_"
+        },
+        {
+          "id": "1718v0G65ICqsCJ",
+          "name": "Steve Byrne",
+          "date": "2026-10-31",
+          "venueName": "Houston Improv",
+          "category": "Arts & Theatre",
+          "url": "https://www.ticketweb.com/event/steve-byrne-houston-improv-tickets/14950003?REFERRAL_ID=tmfeed"
+        },
+        {
+          "id": "LvZ18QlsYJtFz4G8Hnp4p",
+          "name": "FATT MACK - (WAREHOUSE LIVE, MIDTOWN)",
+          "date": "2026-10-31",
+          "venueName": "Warehouse Live Midtown",
+          "category": "Music",
+          "url": "https://www.universe.com/events/fatt-mack-warehouse-live-midtown-tickets-0SWHDR?ref=ticketmaster"
+        },
+        {
+          "id": "G5dIZ_1rKhtOO",
+          "name": "Cameron Whitcomb - Kingdom of Fear Tour",
+          "date": "2026-10-31",
+          "venueName": "House of Blues Houston",
+          "category": "Music",
+          "url": "https://www.ticketmaster.com/cameron-whitcomb-kingdom-of-fear-tour-houston-texas-10-31-2026/event/3A0064A7936E9820"
+        },
+        {
+          "id": "G5dIZ_CO82Nz-",
+          "name": "City of the Sun",
+          "date": "2026-10-31",
+          "venueName": "White Oak Music Hall - Upstairs",
+          "category": "Music",
+          "url": "https://www.ticketmaster.com/city-of-the-sun-houston-texas-10-31-2026/event/3A0064E8103E3E21"
+        }
+      ],
+      "sourceName": "Ticketmaster Discovery API v2",
+      "sourceUrl": "https://developer.ticketmaster.com/",
+      "retrieved": "2026-10-31"
     }
   },
   {
     "slug": "tx/san-antonio",
     "cityId": "4865000",
-    "countyFips": "48650",
+    "countyFips": "48029",
     "name": "San Antonio",
     "stateCode": "tx",
     "stateName": "Texas",
-    "countyName": "San Antonio Metropolitan Area",
+    "countyName": "Bexar County",
     "lat": 29.462809,
     "lng": -98.524635,
     "primaryZips": [
-      "70007"
+      "78216",
+      "78258",
+      "78209",
+      "78217",
+      "78230",
+      "78232",
+      "78249",
+      "78229",
+      "78212",
+      "78238",
+      "78205",
+      "78251"
     ],
     "demographics": {
       "population": 1495295,
-      "popGrowth5YrPct": 3.9,
-      "medianHouseholdIncome": 93774,
-      "perCapitaIncome": 54389,
-      "medianAge": 36.4,
-      "daytimeWorkerPop": 927083,
-      "daytimePopSurgePct": 8.5,
-      "medianGrossRent": 1803,
-      "medianHomeValue": 393851,
+      "medianHouseholdIncome": 62917,
+      "perCapitaIncome": 32983,
+      "medianAge": 34.6,
+      "medianGrossRent": 1258,
+      "medianHomeValue": 219700,
       "provenance": {
-        "sourceName": "US Census Bureau ACS 5-Year (DP03/DP04/DP05) & PopEst",
-        "sourceUrl": "https://api.census.gov/data/2023/acs/acs5",
-        "datasetVintage": "2023-5YR",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "sourceName": "US Census Bureau ACS 5-Year Estimates 2023 (Table-Based Summary File)",
+        "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/",
+        "datasetVintage": "ACS-2023-5YR",
+        "verifiedAt": "2026-10-31T00:00:00Z",
         "granularity": "place"
-      }
-    },
-    "laborAndEconomy": {
-      "unemploymentRatePct": 3.8,
-      "avgWeeklyWageAllIndustries": 1340,
-      "newHousingPermits12Mo": 11215,
-      "permitsPer1kResidents": 7.5,
-      "femaRiskScore": 28.0,
-      "provenance": {
-        "sourceName": "BLS Local Area Unemployment Statistics (LAUS) & Census BPS",
-        "sourceUrl": "https://www.bls.gov/lau/",
-        "datasetVintage": "2024-M08",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
-      }
+      },
+      "popChange2020to2023Pct": 4.3,
+      "popChangeBasis": "Census Population Estimates, April 2020 base to July 2023"
     },
     "industries": [
       {
         "naicsCode": "722515",
         "slug": "coffee-shops",
         "label": "Coffee & Snack Shops",
-        "establishments": 321,
-        "per10kResidents": 2.15,
-        "usAvgPer10k": 2.15,
-        "saturationIndex": 100,
+        "establishments": 343,
+        "per10kResidents": 1.85,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 87,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for San Antonio."
+          "evidenceQuote": "343 employer establishments (NAICS 722515) across 59 ZIP codes whose USPS city is San Antonio, TX; density uses ACS 2023 ZCTA population (1,854,180). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722511",
         "slug": "restaurants",
         "label": "Full-Service Restaurants",
-        "establishments": 1017,
-        "per10kResidents": 6.8,
-        "usAvgPer10k": 6.8,
-        "saturationIndex": 100,
+        "establishments": 1402,
+        "per10kResidents": 7.56,
+        "usAvgPer10k": 7.44,
+        "saturationIndex": 102,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for San Antonio."
+          "evidenceQuote": "1402 employer establishments (NAICS 722511) across 59 ZIP codes whose USPS city is San Antonio, TX; density uses ACS 2023 ZCTA population (1,854,180). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722513",
         "slug": "fast-food",
-        "label": "Fast Food Restaurants",
-        "establishments": 1077,
-        "per10kResidents": 7.2,
-        "usAvgPer10k": 7.2,
-        "saturationIndex": 100,
+        "label": "Limited-Service / Fast Food Restaurants",
+        "establishments": 1489,
+        "per10kResidents": 8.03,
+        "usAvgPer10k": 7.75,
+        "saturationIndex": 104,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for San Antonio."
+          "evidenceQuote": "1489 employer establishments (NAICS 722513) across 59 ZIP codes whose USPS city is San Antonio, TX; density uses ACS 2023 ZCTA population (1,854,180). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722410",
         "slug": "bars-taverns",
-        "label": "Bars & Drinking Places",
-        "establishments": 277,
-        "per10kResidents": 1.85,
-        "usAvgPer10k": 1.85,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Drinking Places (Alcoholic Beverages)",
+        "establishments": 275,
+        "per10kResidents": 1.48,
+        "usAvgPer10k": 0.9,
+        "saturationIndex": 164,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for San Antonio."
-        }
-      },
-      {
-        "naicsCode": "812111",
-        "slug": "barber-shops",
-        "label": "Barber Shops",
-        "establishments": 202,
-        "per10kResidents": 1.35,
-        "usAvgPer10k": 1.35,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for San Antonio."
+          "evidenceQuote": "275 employer establishments (NAICS 722410) across 59 ZIP codes whose USPS city is San Antonio, TX; density uses ACS 2023 ZCTA population (1,854,180). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812112",
         "slug": "beauty-salons",
         "label": "Beauty Salons & Hair Studios",
-        "establishments": 508,
-        "per10kResidents": 3.4,
-        "usAvgPer10k": 3.4,
-        "saturationIndex": 100,
+        "establishments": 414,
+        "per10kResidents": 2.23,
+        "usAvgPer10k": 2.31,
+        "saturationIndex": 97,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for San Antonio."
+          "evidenceQuote": "414 employer establishments (NAICS 812112) across 59 ZIP codes whose USPS city is San Antonio, TX; density uses ACS 2023 ZCTA population (1,854,180). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812113",
         "slug": "nail-salons",
         "label": "Nail Salons",
-        "establishments": 314,
-        "per10kResidents": 2.1,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 66,
+        "per10kResidents": 0.36,
+        "usAvgPer10k": 0.86,
+        "saturationIndex": 41,
+        "status": "underserved",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for San Antonio."
+          "evidenceQuote": "66 employer establishments (NAICS 812113) across 59 ZIP codes whose USPS city is San Antonio, TX; density uses ACS 2023 ZCTA population (1,854,180). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "713940",
         "slug": "gyms-fitness",
-        "label": "Fitness & Recreational Gyms",
-        "establishments": 187,
-        "per10kResidents": 1.25,
-        "usAvgPer10k": 1.25,
-        "saturationIndex": 100,
+        "label": "Fitness & Recreational Sports Centers",
+        "establishments": 195,
+        "per10kResidents": 1.05,
+        "usAvgPer10k": 1.0,
+        "saturationIndex": 106,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for San Antonio."
+          "evidenceQuote": "195 employer establishments (NAICS 713940) across 59 ZIP codes whose USPS city is San Antonio, TX; density uses ACS 2023 ZCTA population (1,854,180). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812910",
         "slug": "pet-care",
-        "label": "Pet Care & Grooming",
-        "establishments": 142,
-        "per10kResidents": 0.95,
-        "usAvgPer10k": 0.95,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Pet Care & Grooming Services",
+        "establishments": 68,
+        "per10kResidents": 0.37,
+        "usAvgPer10k": 0.46,
+        "saturationIndex": 79,
+        "status": "underserved",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for San Antonio."
+          "evidenceQuote": "68 employer establishments (NAICS 812910) across 59 ZIP codes whose USPS city is San Antonio, TX; density uses ACS 2023 ZCTA population (1,854,180). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541940",
         "slug": "veterinary",
-        "label": "Veterinary Services",
-        "establishments": 157,
-        "per10kResidents": 1.05,
-        "usAvgPer10k": 1.05,
-        "saturationIndex": 100,
+        "label": "Veterinary Services & Animal Hospitals",
+        "establishments": 110,
+        "per10kResidents": 0.59,
+        "usAvgPer10k": 0.69,
+        "saturationIndex": 86,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for San Antonio."
+          "evidenceQuote": "110 employer establishments (NAICS 541940) across 59 ZIP codes whose USPS city is San Antonio, TX; density uses ACS 2023 ZCTA population (1,854,180). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "811111",
         "slug": "auto-repair",
         "label": "General Automotive Repair",
-        "establishments": 718,
-        "per10kResidents": 4.8,
-        "usAvgPer10k": 4.8,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 260,
+        "per10kResidents": 1.4,
+        "usAvgPer10k": 2.2,
+        "saturationIndex": 64,
+        "status": "underserved",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for San Antonio."
+          "evidenceQuote": "260 employer establishments (NAICS 811111) across 59 ZIP codes whose USPS city is San Antonio, TX; density uses ACS 2023 ZCTA population (1,854,180). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "811192",
         "slug": "car-washes",
-        "label": "Car Washes & Detailing",
-        "establishments": 97,
-        "per10kResidents": 0.65,
-        "usAvgPer10k": 0.65,
-        "saturationIndex": 100,
+        "label": "Car Washes & Auto Detailing",
+        "establishments": 74,
+        "per10kResidents": 0.4,
+        "usAvgPer10k": 0.35,
+        "saturationIndex": 114,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for San Antonio."
-        }
-      },
-      {
-        "naicsCode": "812310",
-        "slug": "laundromats",
-        "label": "Coin Laundromats",
-        "establishments": 82,
-        "per10kResidents": 0.55,
-        "usAvgPer10k": 0.55,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for San Antonio."
-        }
-      },
-      {
-        "naicsCode": "812320",
-        "slug": "dry-cleaners",
-        "label": "Dry Cleaning & Laundry",
-        "establishments": 127,
-        "per10kResidents": 0.85,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for San Antonio."
+          "evidenceQuote": "74 employer establishments (NAICS 811192) across 59 ZIP codes whose USPS city is San Antonio, TX; density uses ACS 2023 ZCTA population (1,854,180). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621210",
         "slug": "dentists",
         "label": "Offices of Dentists",
-        "establishments": 583,
-        "per10kResidents": 3.9,
-        "usAvgPer10k": 3.9,
-        "saturationIndex": 100,
+        "establishments": 783,
+        "per10kResidents": 4.22,
+        "usAvgPer10k": 3.89,
+        "saturationIndex": 109,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for San Antonio."
+          "evidenceQuote": "783 employer establishments (NAICS 621210) across 59 ZIP codes whose USPS city is San Antonio, TX; density uses ACS 2023 ZCTA population (1,854,180). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621310",
         "slug": "chiropractors",
         "label": "Offices of Chiropractors",
-        "establishments": 209,
-        "per10kResidents": 1.4,
-        "usAvgPer10k": 1.4,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 106,
+        "per10kResidents": 0.57,
+        "usAvgPer10k": 0.97,
+        "saturationIndex": 59,
+        "status": "underserved",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for San Antonio."
+          "evidenceQuote": "106 employer establishments (NAICS 621310) across 59 ZIP codes whose USPS city is San Antonio, TX; density uses ACS 2023 ZCTA population (1,854,180). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621340",
         "slug": "physical-therapy",
-        "label": "Physical Therapy Clinics",
-        "establishments": 232,
-        "per10kResidents": 1.55,
-        "usAvgPer10k": 1.55,
-        "saturationIndex": 100,
+        "label": "Physical, Occupational & Speech Therapists",
+        "establishments": 196,
+        "per10kResidents": 1.06,
+        "usAvgPer10k": 1.3,
+        "saturationIndex": 81,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for San Antonio."
+          "evidenceQuote": "196 employer establishments (NAICS 621340) across 59 ZIP codes whose USPS city is San Antonio, TX; density uses ACS 2023 ZCTA population (1,854,180). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "624410",
         "slug": "daycare",
         "label": "Child Day Care Services",
-        "establishments": 336,
-        "per10kResidents": 2.25,
-        "usAvgPer10k": 2.25,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 289,
+        "per10kResidents": 1.56,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 73,
+        "status": "underserved",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for San Antonio."
+          "evidenceQuote": "289 employer establishments (NAICS 624410) across 59 ZIP codes whose USPS city is San Antonio, TX; density uses ACS 2023 ZCTA population (1,854,180). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "445120",
         "slug": "convenience-stores",
-        "label": "Convenience Stores",
-        "establishments": 292,
-        "per10kResidents": 1.95,
-        "usAvgPer10k": 1.95,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Convenience Retail Stores",
+        "establishments": 196,
+        "per10kResidents": 1.06,
+        "usAvgPer10k": 0.82,
+        "saturationIndex": 129,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for San Antonio."
+          "evidenceQuote": "196 employer establishments (NAICS 445120) across 59 ZIP codes whose USPS city is San Antonio, TX; density uses ACS 2023 ZCTA population (1,854,180). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "448140",
         "slug": "clothing-boutiques",
-        "label": "Family Clothing Stores",
-        "establishments": 247,
-        "per10kResidents": 1.65,
-        "usAvgPer10k": 1.65,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Family Clothing Stores & Boutiques",
+        "establishments": 150,
+        "per10kResidents": 0.81,
+        "usAvgPer10k": 0.65,
+        "saturationIndex": 124,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for San Antonio."
-        }
-      },
-      {
-        "naicsCode": "445291",
-        "slug": "bakeries",
-        "label": "Retail Bakeries",
-        "establishments": 127,
-        "per10kResidents": 0.85,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for San Antonio."
-        }
-      },
-      {
-        "naicsCode": "453110",
-        "slug": "florists",
-        "label": "Florists & Floral Gift",
-        "establishments": 75,
-        "per10kResidents": 0.5,
-        "usAvgPer10k": 0.5,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for San Antonio."
+          "evidenceQuote": "150 employer establishments (NAICS 448140) across 59 ZIP codes whose USPS city is San Antonio, TX; density uses ACS 2023 ZCTA population (1,854,180). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541110",
         "slug": "law-firms",
         "label": "Offices of Lawyers",
-        "establishments": 733,
-        "per10kResidents": 4.9,
-        "usAvgPer10k": 4.9,
-        "saturationIndex": 100,
+        "establishments": 991,
+        "per10kResidents": 5.34,
+        "usAvgPer10k": 4.8,
+        "saturationIndex": 111,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for San Antonio."
+          "evidenceQuote": "991 employer establishments (NAICS 541110) across 59 ZIP codes whose USPS city is San Antonio, TX; density uses ACS 2023 ZCTA population (1,854,180). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541211",
         "slug": "accounting-cpa",
-        "label": "Offices of CPAs",
-        "establishments": 314,
-        "per10kResidents": 2.1,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Offices of Certified Public Accountants",
+        "establishments": 203,
+        "per10kResidents": 1.09,
+        "usAvgPer10k": 1.44,
+        "saturationIndex": 76,
+        "status": "underserved",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for San Antonio."
+          "evidenceQuote": "203 employer establishments (NAICS 541211) across 59 ZIP codes whose USPS city is San Antonio, TX; density uses ACS 2023 ZCTA population (1,854,180). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "531210",
         "slug": "real-estate-agencies",
-        "label": "Real Estate Brokerages",
-        "establishments": 568,
-        "per10kResidents": 3.8,
-        "usAvgPer10k": 3.8,
-        "saturationIndex": 100,
+        "label": "Offices of Real Estate Agents & Brokers",
+        "establishments": 736,
+        "per10kResidents": 3.97,
+        "usAvgPer10k": 4.74,
+        "saturationIndex": 84,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for San Antonio."
+          "evidenceQuote": "736 employer establishments (NAICS 531210) across 59 ZIP codes whose USPS city is San Antonio, TX; density uses ACS 2023 ZCTA population (1,854,180). National benchmark = all US ZIP rows / US population."
         }
       }
     ],
     "permitsAndTax": {
-      "generalBusinessLicenseRequired": false,
-      "businessLicenseFeeSummary": "No general city business license required. State of Texas statutory filings apply.",
-      "businessLicensePortalUrl": "https://www.san-antoniotx.gov/permits",
-      "zoningLookupUrl": "https://www.san-antoniotx.gov/zoning",
-      "buildingPermitPortalUrl": "https://www.san-antoniotx.gov/building",
-      "certificateOfOccupancyFee": "$185 standard municipal inspection fee",
-      "avgPermitWaitDays": 30,
-      "shortTermRentalStatus": "restricted",
-      "foodTruckPermitStatus": "allowed",
-      "combinedSalesTaxRate": 0.0775,
       "stateTaxRate": 0.0625,
-      "localTaxRate": 0.015,
+      "countyTaxRate": 0.0,
+      "cityTaxRate": 0.0125,
+      "specialDistrictTaxRate": 0.0075,
+      "localTaxRate": 0.02,
+      "combinedSalesTaxRate": 0.0825,
       "provenance": {
-        "sourceName": "San Antonio Municipal Code & State Department of Revenue",
-        "sourceUrl": "https://www.san-antoniotx.gov",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place",
-        "evidenceQuote": "Statutory municipal code standards."
+        "sourceName": "Texas Comptroller city sales tax rate table (San Antonio: 6.25% state + 1.25% city + 0.75% San Antonio MTA/ATD)",
+        "sourceUrl": "https://comptroller.texas.gov/taxes/sales/docs/city-rates.pdf",
+        "datasetVintage": "2026",
+        "verifiedAt": "2026-10-31T00:00:00Z",
+        "granularity": "place"
       }
     },
-    "topTrafficCorridors": [
-      {
-        "roadName": "Main Arterial Corridor 1",
-        "segmentDescription": "Central Commercial Corridor through San Antonio",
-        "aadt": 179435,
-        "heavyTruckPct": 5.5,
-        "lat": 29.462809,
-        "lng": -98.524635,
-        "year": 2024,
-        "provenance": {
-          "sourceName": "Texas DOT AADT Database",
-          "sourceUrl": "https://www.transportation.gov/",
-          "datasetVintage": "2024-AADT",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "place"
-        }
-      }
-    ],
-    "marketSignals": {
-      "reportedRetailRentSqFtYr": 45.0,
-      "reportedIndustrialRentSqFtYr": 20.2,
-      "topSearchedNaics30d": [
-        "722515",
-        "713940",
-        "812111"
-      ],
-      "verifiedLocalProsCount": 8
-    },
-    "scores": {
-      "overallViability": 60,
-      "purchasingPower": 57,
-      "growthMomentum": 63,
-      "costEfficiency": 64,
-      "regulatoryFriction": 48
-    },
+    "marketSignals": {},
     "executiveTravel": {
-      "timeZone": "America/Chicago (CT: UTC-06:00)",
+      "timeZone": "America/Chicago",
       "timeZoneAbbr": "CT",
       "utcOffset": "-06:00",
       "primaryAirport": {
         "name": "San Antonio International Airport",
         "iata": "SAT",
-        "distanceMiles": 8.5,
-        "transitToDowntown": "VIA Metropolitan Transit / Rideshare"
-      },
-      "powerPlugs": {
-        "types": [
-          "Type A (2-pin)",
-          "Type B (3-pin grounded)"
-        ],
-        "voltage": "120V",
-        "frequency": "60Hz",
-        "adapterAdvice": "Visitors from UK, EU, Australia, and Asia require a standard Type A/B plug adapter and dual-voltage converter."
-      },
-      "currency": {
-        "code": "USD",
-        "symbol": "$",
-        "name": "United States Dollar",
-        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
-        "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
+        "lat": 29.533701,
+        "lng": -98.469803,
+        "distanceMiles": 5.9,
+        "transitToDowntown": null,
+        "source": "OurAirports (public domain) for name, IATA code and coordinates; distance is straight-line from the U.S. Census Gazetteer city center point",
+        "sourceUrl": "https://ourairports.com/data/",
+        "cityCenterMethod": "Census Gazetteer internal point",
+        "retrieved": "2026-10-31"
       },
       "climate": {
-        "summerHighF": 94,
-        "winterLowF": 47,
-        "annualRainfallInches": 20,
-        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
-        "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
+        "summerHighF": 95,
+        "winterLowF": 44,
+        "annualRainfallInches": 40.5,
+        "summerHighBasis": "Average July daily high",
+        "winterLowBasis": "Average January daily low",
+        "source": "Open-Meteo Historical Weather API (ERA5 reanalysis), 2015-2024 average, retrieved 2026-10-31",
+        "sourceUrl": "https://open-meteo.com/en/docs/historical-weather-api"
       },
       "emergency": {
         "emergencyDispatch": "911",
-        "nonEmergencyPolice": "311 or local municipal dispatch",
-        "nearestTraumaHospital": "San Antonio Regional Memorial Hospital",
-        "hospitalAddress": "Medical Center District, San Antonio, TX"
-      },
-      "visitorLogistics": {
-        "tapWaterPotability": "100% Safe municipal drinking water conforming to EPA Safe Drinking Water Act standards.",
-        "salesTaxRefundPolicy": "International travelers may claim state sales tax refunds on qualifying departures at designated airport customs counters.",
-        "rideshareAvailability": "Ubiquitous (Uber and Lyft operational 24/7 across the metropolitan area)."
-      },
-      "provenance": {
-        "sourceName": "FAA Airport Database & International Trade Administration",
-        "sourceUrl": "https://www.trade.gov/",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
+        "nearestTraumaHospital": "Bandera Family Hospital",
+        "hospitalAddress": "8703 Bandera Rd, San Antonio, TX 78250",
+        "cmsFacilityId": "670336",
+        "emergencyServices": true,
+        "source": "CMS Care Compare hospital general information (federal dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma level, ranking or nearest-facility claim.",
+        "erHospitals": [
+          {
+            "name": "Bandera Family Hospital",
+            "address": "8703 Bandera Rd, San Antonio, TX 78250",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "670336",
+            "lat": 29.524055,
+            "lng": -98.639587
+          },
+          {
+            "name": "Baptist Medical Center",
+            "address": "111 Dallas Street, San Antonio, TX 78205",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "450058",
+            "lat": 29.433049,
+            "lng": -98.49264
+          },
+          {
+            "name": "Baptist Neighborhood Hospital Thousand Oaks",
+            "address": "16088 San Pedro, San Antonio, TX 78232",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "670078",
+            "lat": 29.587709,
+            "lng": -98.474187
+          },
+          {
+            "name": "Cedar Hills Behavioral",
+            "address": "1975 Babcock Rd, San Antonio, TX 78229",
+            "type": "Psychiatric",
+            "cmsFacilityId": "454159",
+            "lat": 29.499173,
+            "lng": -98.577139
+          },
+          {
+            "name": "Children's Hospital of San Antonio",
+            "address": "333 N Santa Rosa St, San Antonio, TX 78207",
+            "type": "Children's",
+            "cmsFacilityId": "453315",
+            "lat": 29.428147,
+            "lng": -98.497816
+          },
+          {
+            "name": "Christus Santa Rosa Medical Center",
+            "address": "11212 State Highway 151, San Antonio, TX 78251",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "450237"
+          },
+          {
+            "name": "Foundation Surgical Hospital of San Antonio",
+            "address": "9522 Huebner Road, San Antonio, TX 78240",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "670054",
+            "lat": 29.531017,
+            "lng": -98.592494
+          },
+          {
+            "name": "Methodist Hospital",
+            "address": "7700 Floyd Curl Dr, San Antonio, TX 78229",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "450388",
+            "lat": 29.507373,
+            "lng": -98.573449
+          },
+          {
+            "name": "Methodist Hospital Stone Oak",
+            "address": "1139 E Sonterra Blvd,, San Antonio, TX 78258",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "670055",
+            "lat": 29.614987,
+            "lng": -98.473745
+          },
+          {
+            "name": "San Antonio VA Medical Center (VA South Texas Healthcare System)",
+            "address": "7400 Merton Minter Blvd., San Antonio, TX 78229",
+            "type": "Acute Care - Veterans Administration",
+            "cmsFacilityId": "45090F",
+            "lat": 29.508351,
+            "lng": -98.580919
+          },
+          {
+            "name": "South Texas Spine and Surgical Hospital",
+            "address": "18600 North Hardy Oak Blvd, San Antonio, TX 78258",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "450856",
+            "lat": 29.61306,
+            "lng": -98.478435
+          },
+          {
+            "name": "University Health System",
+            "address": "4502 Medical Dr, San Antonio, TX 78229",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "450213",
+            "lat": 29.509014,
+            "lng": -98.574034
+          },
+          {
+            "name": "Westover Hills Baptist Hospital",
+            "address": "3011 W Loop 1604 N, San Antonio, TX 78251",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "670333"
+          }
+        ],
+        "erHospitalsSource": "CMS Care Compare hospital general information (federal dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma level, ranking or nearest-facility claim."
       }
+    },
+    "housingAndTaxes": {
+      "medianHomeValue": 219700,
+      "medianGrossRent": 1258,
+      "medianRealEstateTaxPaid": 3983,
+      "effectivePropertyTaxRatePct": 1.81,
+      "countyName": "Bexar County",
+      "source": "ACS 2023 5-yr: B25077 median home value, B25064 median gross rent, B25103 median real estate taxes paid. Effective rate = B25103 / B25077.",
+      "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/"
+    },
+    "climateNormals": {
+      "peakSummerHighF": 95,
+      "winterLowF": 44,
+      "annualRainfallInches": 40.5,
+      "sourceName": "Open-Meteo Historical Weather API (ERA5 reanalysis), 2015-2024 average, retrieved 2026-10-31",
+      "sourceUrl": "https://open-meteo.com/en/docs/historical-weather-api"
+    },
+    "terrainElevation": {
+      "elevationFeet": 721.5,
+      "elevationMeters": 219.9,
+      "topographyClass": "Balcones Escarpment & San Antonio River Basin",
+      "sourceName": "USGS 3D Elevation Program (3DEP Elevation Point Query Service)",
+      "sourceUrl": "https://epqs.nationalmap.gov/v1/json"
+    },
+    "waterUtility": {
+      "pwsid": "TX0150018",
+      "providerName": "San Antonio Water System",
+      "populationServed": 2643729,
+      "sourceType": "surface water",
+      "source": "U.S. EPA Safe Drinking Water Information System (SDWIS)",
+      "sourceUrl": "https://data.epa.gov/efservice/WATER_SYSTEM/PWSID/TX0150018/JSON",
+      "retrieved": "2026-10-31"
+    },
+    "higherEducation": {
+      "institutionCount": 44,
+      "totalEnrollment": 100653,
+      "institutions": [
+        {
+          "id": 229027,
+          "name": "The University of Texas at San Antonio",
+          "studentSize": 30580,
+          "ownership": "Public",
+          "schoolUrl": "https://www.utsa.edu/",
+          "lat": 29.583709,
+          "lng": -98.620657
+        },
+        {
+          "id": 227924,
+          "name": "San Antonio College",
+          "studentSize": 16416,
+          "ownership": "Public",
+          "schoolUrl": "https://www.alamo.edu/sac",
+          "lat": 29.44634,
+          "lng": -98.497647
+        },
+        {
+          "id": 420398,
+          "name": "Northwest Vista College",
+          "studentSize": 13993,
+          "ownership": "Public",
+          "schoolUrl": "https://alamo.edu/nvc/",
+          "lat": 29.471308,
+          "lng": -98.70513
+        },
+        {
+          "id": 227854,
+          "name": "St Philip's College",
+          "studentSize": 12914,
+          "ownership": "Public",
+          "schoolUrl": "https://www.alamo.edu/spc/",
+          "lat": 29.41508,
+          "lng": -98.453285
+        },
+        {
+          "id": 246354,
+          "name": "Palo Alto College",
+          "studentSize": 8801,
+          "ownership": "Public",
+          "schoolUrl": "https://alamo.edu/pac/",
+          "lat": 29.322955,
+          "lng": -98.543468
+        },
+        {
+          "id": 225627,
+          "name": "University of the Incarnate Word",
+          "studentSize": 4440,
+          "ownership": "Private nonprofit",
+          "schoolUrl": "https://www.uiw.edu/",
+          "lat": 29.46708,
+          "lng": -98.46583
+        }
+      ],
+      "sourceName": "U.S. Department of Education College Scorecard",
+      "sourceUrl": "https://collegescorecard.ed.gov/",
+      "retrieved": "2026-10-31"
+    },
+    "evInfrastructure": {
+      "totalStations": 221,
+      "totalChargingPorts": 668,
+      "dcFastPorts": 272,
+      "level2Ports": 396,
+      "sampleStations": [
+        {
+          "name": "San Antonio, TX - Worth Parkway - Tesla Supercharger",
+          "address": "5833 Worth Pkwy, San Antonio, TX 78257",
+          "network": "Tesla",
+          "dcFastPorts": 20,
+          "level2Ports": 0,
+          "lat": 29.612994,
+          "lng": -98.601275
+        },
+        {
+          "name": "San Antonio, TX - Broadway - Tesla Supercharger",
+          "address": "718 Broadway, San Antonio, TX 78215",
+          "network": "Tesla",
+          "dcFastPorts": 16,
+          "level2Ports": 0,
+          "lat": 29.432158,
+          "lng": -98.482699
+        },
+        {
+          "name": "San Antonio, TX - West Loop 1604 North - Tesla Supercharger",
+          "address": "7010 W Loop 1604 N, San Antonio, TX 78254",
+          "network": "Tesla",
+          "dcFastPorts": 16,
+          "level2Ports": 0,
+          "lat": 29.503681,
+          "lng": -98.699296
+        },
+        {
+          "name": "San Antonio, TX - North Loop 1604 East - Tesla Supercharger",
+          "address": "123 North Loop 1604 East, San Antonio, TX 78232",
+          "network": "Tesla",
+          "dcFastPorts": 15,
+          "level2Ports": 0,
+          "lat": 29.610496,
+          "lng": -98.488674
+        },
+        {
+          "name": "San Antonio, TX - East Basse Road - Tesla Supercharger",
+          "address": "255 E Basse Rd, San Antonio, TX 78209",
+          "network": "Tesla",
+          "dcFastPorts": 12,
+          "level2Ports": 0,
+          "lat": 29.49712,
+          "lng": -98.482133
+        }
+      ],
+      "sourceName": "U.S. Department of Energy / NLR Alternative Fuels Data Center (AFDC)",
+      "sourceUrl": "https://afdc.energy.gov/stations",
+      "retrieved": "2026-10-31"
+    },
+    "nationalParks": {
+      "parks": [
+        {
+          "parkCode": "saan",
+          "fullName": "San Antonio Missions National Historical Park",
+          "designation": "National Historical Park",
+          "distanceMiles": 11.9,
+          "description": "Welcome to San Antonio Missions, a National Park Service site and the only UNESCO World Heritage Site in Texas. Each mission in the park is a center of community and has been since the early 1700s. They changed life in this region...",
+          "url": "https://www.nps.gov/saan/index.htm",
+          "lat": 29.312621,
+          "lng": -98.428952
+        },
+        {
+          "parkCode": "lyjo",
+          "fullName": "Lyndon B Johnson National Historical Park",
+          "designation": "National Historical Park",
+          "distanceMiles": 54.7,
+          "description": "Lyndon B. Johnson National Historical Park tells the story of our 36th president beginning with his ancestors until his final resting place on his beloved LBJ Ranch. This entire \"circle of life\" gives the visitor a unique perspective...",
+          "url": "https://www.nps.gov/lyjo/index.htm",
+          "lat": 30.251966,
+          "lng": -98.606924
+        }
+      ],
+      "sourceName": "U.S. National Park Service (NPS) API",
+      "sourceUrl": "https://www.nps.gov/",
+      "retrieved": "2026-10-31"
+    },
+    "upcomingEvents": {
+      "totalMatchingEvents": 936,
+      "events": [
+        {
+          "id": "rZ7HnEZ1Af-_ZN",
+          "name": "La Flor Escondida: Hard Rock Cafe San Antonio's Selena Speakeasy",
+          "date": "2026-05-01",
+          "venueName": "Hard Rock Cafe - San Antonio",
+          "category": "Miscellaneous",
+          "url": "https://www.ticketweb.com/event/la-flor-escondida-hard-rock-hard-rock-cafe-tickets/14859023"
+        },
+        {
+          "id": "rZ7HnEZ1AfGNuf",
+          "name": "Halloween at Hard Rock Cafe!",
+          "date": "2026-10-30",
+          "venueName": "Hard Rock Cafe - San Antonio",
+          "category": "Miscellaneous",
+          "url": "https://www.ticketweb.com/event/halloween-at-hard-rock-cafe-hard-rock-cafe-tickets/14323354"
+        },
+        {
+          "id": "rZ7HnEZ1Afu6o0",
+          "name": "Drag Me to Brunch at Hard Rock Cafe San Antonio!",
+          "date": "2026-10-31",
+          "venueName": "Hard Rock Cafe - San Antonio",
+          "category": "Live Event",
+          "url": "https://www.ticketweb.com/event/drag-me-to-brunch-at-hard-rock-cafe-tickets/14347464"
+        },
+        {
+          "id": "Z7r9jZ1A7-YqV",
+          "name": "Incarnate Word Cardinals Football vs. Northwestern State Demons Football",
+          "date": "2026-10-31",
+          "venueName": "Gayle and Tom Benson Stadium",
+          "category": "Sports",
+          "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7-YqV"
+        },
+        {
+          "id": "Z7r9jZ1AAZA_t",
+          "name": "The Wiz (Touring)",
+          "date": "2026-10-31",
+          "venueName": "Majestic Theatre San Antonio",
+          "category": "Arts & Theatre",
+          "url": "https://www.ticketmaster.com/event/Z7r9jZ1AAZA_t"
+        }
+      ],
+      "sourceName": "Ticketmaster Discovery API v2",
+      "sourceUrl": "https://developer.ticketmaster.com/",
+      "retrieved": "2026-10-31"
     }
   },
   {
     "slug": "tx/dallas",
     "cityId": "4819000",
-    "countyFips": "48190",
+    "countyFips": "48113",
     "name": "Dallas",
     "stateCode": "tx",
     "stateName": "Texas",
-    "countyName": "Dallas Metropolitan Area",
+    "countyName": "Dallas County",
     "lat": 32.793333,
     "lng": -96.766513,
     "primaryZips": [
-      "70009"
+      "75201",
+      "75206",
+      "75234",
+      "75229",
+      "75219",
+      "75225",
+      "75243",
+      "75231",
+      "75240",
+      "75204",
+      "75247",
+      "75230"
     ],
     "demographics": {
       "population": 1302868,
-      "popGrowth5YrPct": -0.0,
-      "medianHouseholdIncome": 88662,
-      "perCapitaIncome": 51424,
-      "medianAge": 36.4,
-      "daytimeWorkerPop": 807778,
-      "daytimePopSurgePct": 8.5,
-      "medianGrossRent": 1705,
-      "medianHomeValue": 372380,
+      "medianHouseholdIncome": 67760,
+      "perCapitaIncome": 44138,
+      "medianAge": 33.4,
+      "medianGrossRent": 1403,
+      "medianHomeValue": 295300,
       "provenance": {
-        "sourceName": "US Census Bureau ACS 5-Year (DP03/DP04/DP05) & PopEst",
-        "sourceUrl": "https://api.census.gov/data/2023/acs/acs5",
-        "datasetVintage": "2023-5YR",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "sourceName": "US Census Bureau ACS 5-Year Estimates 2023 (Table-Based Summary File)",
+        "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/",
+        "datasetVintage": "ACS-2023-5YR",
+        "verifiedAt": "2026-10-31T00:00:00Z",
         "granularity": "place"
-      }
-    },
-    "laborAndEconomy": {
-      "unemploymentRatePct": 3.8,
-      "avgWeeklyWageAllIndustries": 1340,
-      "newHousingPermits12Mo": 9772,
-      "permitsPer1kResidents": 7.5,
-      "femaRiskScore": 28.0,
-      "provenance": {
-        "sourceName": "BLS Local Area Unemployment Statistics (LAUS) & Census BPS",
-        "sourceUrl": "https://www.bls.gov/lau/",
-        "datasetVintage": "2024-M08",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
-      }
+      },
+      "popChange2020to2023Pct": -0.1,
+      "popChangeBasis": "Census Population Estimates, April 2020 base to July 2023"
     },
     "industries": [
       {
         "naicsCode": "722515",
         "slug": "coffee-shops",
         "label": "Coffee & Snack Shops",
-        "establishments": 280,
-        "per10kResidents": 2.15,
-        "usAvgPer10k": 2.15,
-        "saturationIndex": 100,
+        "establishments": 329,
+        "per10kResidents": 2.4,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 113,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Dallas."
+          "evidenceQuote": "329 employer establishments (NAICS 722515) across 48 ZIP codes whose USPS city is Dallas, TX; density uses ACS 2023 ZCTA population (1,372,181). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722511",
         "slug": "restaurants",
         "label": "Full-Service Restaurants",
-        "establishments": 886,
-        "per10kResidents": 6.8,
-        "usAvgPer10k": 6.8,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 1248,
+        "per10kResidents": 9.1,
+        "usAvgPer10k": 7.44,
+        "saturationIndex": 122,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Dallas."
+          "evidenceQuote": "1248 employer establishments (NAICS 722511) across 48 ZIP codes whose USPS city is Dallas, TX; density uses ACS 2023 ZCTA population (1,372,181). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722513",
         "slug": "fast-food",
-        "label": "Fast Food Restaurants",
-        "establishments": 938,
-        "per10kResidents": 7.2,
-        "usAvgPer10k": 7.2,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Limited-Service / Fast Food Restaurants",
+        "establishments": 1316,
+        "per10kResidents": 9.59,
+        "usAvgPer10k": 7.75,
+        "saturationIndex": 124,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Dallas."
+          "evidenceQuote": "1316 employer establishments (NAICS 722513) across 48 ZIP codes whose USPS city is Dallas, TX; density uses ACS 2023 ZCTA population (1,372,181). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722410",
         "slug": "bars-taverns",
-        "label": "Bars & Drinking Places",
-        "establishments": 241,
-        "per10kResidents": 1.85,
-        "usAvgPer10k": 1.85,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Drinking Places (Alcoholic Beverages)",
+        "establishments": 175,
+        "per10kResidents": 1.28,
+        "usAvgPer10k": 0.9,
+        "saturationIndex": 141,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Dallas."
-        }
-      },
-      {
-        "naicsCode": "812111",
-        "slug": "barber-shops",
-        "label": "Barber Shops",
-        "establishments": 176,
-        "per10kResidents": 1.35,
-        "usAvgPer10k": 1.35,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Dallas."
+          "evidenceQuote": "175 employer establishments (NAICS 722410) across 48 ZIP codes whose USPS city is Dallas, TX; density uses ACS 2023 ZCTA population (1,372,181). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812112",
         "slug": "beauty-salons",
         "label": "Beauty Salons & Hair Studios",
-        "establishments": 443,
-        "per10kResidents": 3.4,
-        "usAvgPer10k": 3.4,
-        "saturationIndex": 100,
+        "establishments": 329,
+        "per10kResidents": 2.4,
+        "usAvgPer10k": 2.31,
+        "saturationIndex": 104,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Dallas."
+          "evidenceQuote": "329 employer establishments (NAICS 812112) across 48 ZIP codes whose USPS city is Dallas, TX; density uses ACS 2023 ZCTA population (1,372,181). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812113",
         "slug": "nail-salons",
         "label": "Nail Salons",
-        "establishments": 274,
-        "per10kResidents": 2.1,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 54,
+        "per10kResidents": 0.39,
+        "usAvgPer10k": 0.86,
+        "saturationIndex": 46,
+        "status": "underserved",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Dallas."
+          "evidenceQuote": "54 employer establishments (NAICS 812113) across 48 ZIP codes whose USPS city is Dallas, TX; density uses ACS 2023 ZCTA population (1,372,181). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "713940",
         "slug": "gyms-fitness",
-        "label": "Fitness & Recreational Gyms",
-        "establishments": 163,
-        "per10kResidents": 1.25,
-        "usAvgPer10k": 1.25,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Fitness & Recreational Sports Centers",
+        "establishments": 186,
+        "per10kResidents": 1.36,
+        "usAvgPer10k": 1.0,
+        "saturationIndex": 136,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Dallas."
+          "evidenceQuote": "186 employer establishments (NAICS 713940) across 48 ZIP codes whose USPS city is Dallas, TX; density uses ACS 2023 ZCTA population (1,372,181). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812910",
         "slug": "pet-care",
-        "label": "Pet Care & Grooming",
-        "establishments": 124,
-        "per10kResidents": 0.95,
-        "usAvgPer10k": 0.95,
-        "saturationIndex": 100,
+        "label": "Pet Care & Grooming Services",
+        "establishments": 62,
+        "per10kResidents": 0.45,
+        "usAvgPer10k": 0.46,
+        "saturationIndex": 97,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Dallas."
+          "evidenceQuote": "62 employer establishments (NAICS 812910) across 48 ZIP codes whose USPS city is Dallas, TX; density uses ACS 2023 ZCTA population (1,372,181). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541940",
         "slug": "veterinary",
-        "label": "Veterinary Services",
-        "establishments": 137,
-        "per10kResidents": 1.05,
-        "usAvgPer10k": 1.05,
-        "saturationIndex": 100,
+        "label": "Veterinary Services & Animal Hospitals",
+        "establishments": 91,
+        "per10kResidents": 0.66,
+        "usAvgPer10k": 0.69,
+        "saturationIndex": 96,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Dallas."
+          "evidenceQuote": "91 employer establishments (NAICS 541940) across 48 ZIP codes whose USPS city is Dallas, TX; density uses ACS 2023 ZCTA population (1,372,181). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "811111",
         "slug": "auto-repair",
         "label": "General Automotive Repair",
-        "establishments": 625,
-        "per10kResidents": 4.8,
-        "usAvgPer10k": 4.8,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 221,
+        "per10kResidents": 1.61,
+        "usAvgPer10k": 2.2,
+        "saturationIndex": 73,
+        "status": "underserved",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Dallas."
+          "evidenceQuote": "221 employer establishments (NAICS 811111) across 48 ZIP codes whose USPS city is Dallas, TX; density uses ACS 2023 ZCTA population (1,372,181). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "811192",
         "slug": "car-washes",
-        "label": "Car Washes & Detailing",
-        "establishments": 85,
-        "per10kResidents": 0.65,
-        "usAvgPer10k": 0.65,
-        "saturationIndex": 100,
+        "label": "Car Washes & Auto Detailing",
+        "establishments": 50,
+        "per10kResidents": 0.36,
+        "usAvgPer10k": 0.35,
+        "saturationIndex": 104,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Dallas."
-        }
-      },
-      {
-        "naicsCode": "812310",
-        "slug": "laundromats",
-        "label": "Coin Laundromats",
-        "establishments": 72,
-        "per10kResidents": 0.55,
-        "usAvgPer10k": 0.55,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Dallas."
-        }
-      },
-      {
-        "naicsCode": "812320",
-        "slug": "dry-cleaners",
-        "label": "Dry Cleaning & Laundry",
-        "establishments": 111,
-        "per10kResidents": 0.85,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Dallas."
+          "evidenceQuote": "50 employer establishments (NAICS 811192) across 48 ZIP codes whose USPS city is Dallas, TX; density uses ACS 2023 ZCTA population (1,372,181). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621210",
         "slug": "dentists",
         "label": "Offices of Dentists",
-        "establishments": 508,
-        "per10kResidents": 3.9,
-        "usAvgPer10k": 3.9,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 805,
+        "per10kResidents": 5.87,
+        "usAvgPer10k": 3.89,
+        "saturationIndex": 151,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Dallas."
+          "evidenceQuote": "805 employer establishments (NAICS 621210) across 48 ZIP codes whose USPS city is Dallas, TX; density uses ACS 2023 ZCTA population (1,372,181). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621310",
         "slug": "chiropractors",
         "label": "Offices of Chiropractors",
-        "establishments": 182,
-        "per10kResidents": 1.4,
-        "usAvgPer10k": 1.4,
-        "saturationIndex": 100,
+        "establishments": 124,
+        "per10kResidents": 0.9,
+        "usAvgPer10k": 0.97,
+        "saturationIndex": 93,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Dallas."
+          "evidenceQuote": "124 employer establishments (NAICS 621310) across 48 ZIP codes whose USPS city is Dallas, TX; density uses ACS 2023 ZCTA population (1,372,181). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621340",
         "slug": "physical-therapy",
-        "label": "Physical Therapy Clinics",
-        "establishments": 202,
-        "per10kResidents": 1.55,
-        "usAvgPer10k": 1.55,
-        "saturationIndex": 100,
+        "label": "Physical, Occupational & Speech Therapists",
+        "establishments": 162,
+        "per10kResidents": 1.18,
+        "usAvgPer10k": 1.3,
+        "saturationIndex": 91,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Dallas."
+          "evidenceQuote": "162 employer establishments (NAICS 621340) across 48 ZIP codes whose USPS city is Dallas, TX; density uses ACS 2023 ZCTA population (1,372,181). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "624410",
         "slug": "daycare",
         "label": "Child Day Care Services",
-        "establishments": 293,
-        "per10kResidents": 2.25,
-        "usAvgPer10k": 2.25,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 203,
+        "per10kResidents": 1.48,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 70,
+        "status": "underserved",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Dallas."
+          "evidenceQuote": "203 employer establishments (NAICS 624410) across 48 ZIP codes whose USPS city is Dallas, TX; density uses ACS 2023 ZCTA population (1,372,181). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "445120",
         "slug": "convenience-stores",
-        "label": "Convenience Stores",
-        "establishments": 254,
-        "per10kResidents": 1.95,
-        "usAvgPer10k": 1.95,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Convenience Retail Stores",
+        "establishments": 256,
+        "per10kResidents": 1.87,
+        "usAvgPer10k": 0.82,
+        "saturationIndex": 228,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Dallas."
+          "evidenceQuote": "256 employer establishments (NAICS 445120) across 48 ZIP codes whose USPS city is Dallas, TX; density uses ACS 2023 ZCTA population (1,372,181). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "448140",
         "slug": "clothing-boutiques",
-        "label": "Family Clothing Stores",
-        "establishments": 215,
-        "per10kResidents": 1.65,
-        "usAvgPer10k": 1.65,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Family Clothing Stores & Boutiques",
+        "establishments": 138,
+        "per10kResidents": 1.01,
+        "usAvgPer10k": 0.65,
+        "saturationIndex": 154,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Dallas."
-        }
-      },
-      {
-        "naicsCode": "445291",
-        "slug": "bakeries",
-        "label": "Retail Bakeries",
-        "establishments": 111,
-        "per10kResidents": 0.85,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Dallas."
-        }
-      },
-      {
-        "naicsCode": "453110",
-        "slug": "florists",
-        "label": "Florists & Floral Gift",
-        "establishments": 65,
-        "per10kResidents": 0.5,
-        "usAvgPer10k": 0.5,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Dallas."
+          "evidenceQuote": "138 employer establishments (NAICS 448140) across 48 ZIP codes whose USPS city is Dallas, TX; density uses ACS 2023 ZCTA population (1,372,181). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541110",
         "slug": "law-firms",
         "label": "Offices of Lawyers",
-        "establishments": 638,
-        "per10kResidents": 4.9,
-        "usAvgPer10k": 4.9,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 1869,
+        "per10kResidents": 13.62,
+        "usAvgPer10k": 4.8,
+        "saturationIndex": 284,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Dallas."
+          "evidenceQuote": "1869 employer establishments (NAICS 541110) across 48 ZIP codes whose USPS city is Dallas, TX; density uses ACS 2023 ZCTA population (1,372,181). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541211",
         "slug": "accounting-cpa",
-        "label": "Offices of CPAs",
-        "establishments": 274,
-        "per10kResidents": 2.1,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Offices of Certified Public Accountants",
+        "establishments": 354,
+        "per10kResidents": 2.58,
+        "usAvgPer10k": 1.44,
+        "saturationIndex": 179,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Dallas."
+          "evidenceQuote": "354 employer establishments (NAICS 541211) across 48 ZIP codes whose USPS city is Dallas, TX; density uses ACS 2023 ZCTA population (1,372,181). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "531210",
         "slug": "real-estate-agencies",
-        "label": "Real Estate Brokerages",
-        "establishments": 495,
-        "per10kResidents": 3.8,
-        "usAvgPer10k": 3.8,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Offices of Real Estate Agents & Brokers",
+        "establishments": 942,
+        "per10kResidents": 6.86,
+        "usAvgPer10k": 4.74,
+        "saturationIndex": 145,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Dallas."
+          "evidenceQuote": "942 employer establishments (NAICS 531210) across 48 ZIP codes whose USPS city is Dallas, TX; density uses ACS 2023 ZCTA population (1,372,181). National benchmark = all US ZIP rows / US population."
         }
       }
     ],
     "permitsAndTax": {
-      "generalBusinessLicenseRequired": false,
-      "businessLicenseFeeSummary": "No general city business license required. State of Texas statutory filings apply.",
-      "businessLicensePortalUrl": "https://www.dallastx.gov/permits",
-      "zoningLookupUrl": "https://www.dallastx.gov/zoning",
-      "buildingPermitPortalUrl": "https://www.dallastx.gov/building",
-      "certificateOfOccupancyFee": "$185 standard municipal inspection fee",
-      "avgPermitWaitDays": 30,
-      "shortTermRentalStatus": "restricted",
-      "foodTruckPermitStatus": "allowed",
-      "combinedSalesTaxRate": 0.0775,
       "stateTaxRate": 0.0625,
-      "localTaxRate": 0.015,
+      "countyTaxRate": 0.0,
+      "cityTaxRate": 0.01,
+      "specialDistrictTaxRate": 0.01,
+      "localTaxRate": 0.02,
+      "combinedSalesTaxRate": 0.0825,
       "provenance": {
-        "sourceName": "Dallas Municipal Code & State Department of Revenue",
-        "sourceUrl": "https://www.dallastx.gov",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place",
-        "evidenceQuote": "Statutory municipal code standards."
+        "sourceName": "Texas Comptroller city sales tax rate table (Dallas: 6.25% state + 1.0% city + 1.0% Dallas Area Rapid Transit)",
+        "sourceUrl": "https://comptroller.texas.gov/taxes/sales/docs/city-rates.pdf",
+        "datasetVintage": "2026",
+        "verifiedAt": "2026-10-31T00:00:00Z",
+        "granularity": "place"
       }
     },
-    "topTrafficCorridors": [
-      {
-        "roadName": "Main Arterial Corridor 1",
-        "segmentDescription": "Central Commercial Corridor through Dallas",
-        "aadt": 156344,
-        "heavyTruckPct": 5.5,
-        "lat": 32.793333,
-        "lng": -96.766513,
-        "year": 2024,
-        "provenance": {
-          "sourceName": "Texas DOT AADT Database",
-          "sourceUrl": "https://www.transportation.gov/",
-          "datasetVintage": "2024-AADT",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "place"
-        }
-      }
-    ],
-    "marketSignals": {
-      "reportedRetailRentSqFtYr": 42.2,
-      "reportedIndustrialRentSqFtYr": 19.0,
-      "topSearchedNaics30d": [
-        "722515",
-        "713940",
-        "812111"
-      ],
-      "verifiedLocalProsCount": 8
-    },
-    "scores": {
-      "overallViability": 50,
-      "purchasingPower": 48,
-      "growthMomentum": 52,
-      "costEfficiency": 70,
-      "regulatoryFriction": 48
-    },
+    "marketSignals": {},
     "executiveTravel": {
-      "timeZone": "America/Chicago (CT: UTC-06:00)",
+      "timeZone": "America/Chicago",
       "timeZoneAbbr": "CT",
       "utcOffset": "-06:00",
       "primaryAirport": {
-        "name": "Dallas/Fort Worth International Airport",
+        "name": "Dallas Fort Worth International Airport",
         "iata": "DFW",
-        "distanceMiles": 19.0,
-        "transitToDowntown": "DART Orange Line / Rideshare"
-      },
-      "powerPlugs": {
-        "types": [
-          "Type A (2-pin)",
-          "Type B (3-pin grounded)"
-        ],
-        "voltage": "120V",
-        "frequency": "60Hz",
-        "adapterAdvice": "Visitors from UK, EU, Australia, and Asia require a standard Type A/B plug adapter and dual-voltage converter."
-      },
-      "currency": {
-        "code": "USD",
-        "symbol": "$",
-        "name": "United States Dollar",
-        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
-        "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
+        "lat": 32.896801,
+        "lng": -97.038002,
+        "distanceMiles": 17.3,
+        "transitToDowntown": null,
+        "source": "OurAirports (public domain) for name, IATA code and coordinates; distance is straight-line from the U.S. Census Gazetteer city center point",
+        "sourceUrl": "https://ourairports.com/data/",
+        "cityCenterMethod": "Census Gazetteer internal point",
+        "retrieved": "2026-10-31"
       },
       "climate": {
-        "summerHighF": 94,
-        "winterLowF": 47,
-        "annualRainfallInches": 20,
-        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
-        "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
+        "summerHighF": 95,
+        "winterLowF": 38,
+        "annualRainfallInches": 55.1,
+        "summerHighBasis": "Average July daily high",
+        "winterLowBasis": "Average January daily low",
+        "source": "Open-Meteo Historical Weather API (ERA5 reanalysis), 2015-2024 average, retrieved 2026-10-31",
+        "sourceUrl": "https://open-meteo.com/en/docs/historical-weather-api"
       },
       "emergency": {
         "emergencyDispatch": "911",
-        "nonEmergencyPolice": "311 or local municipal dispatch",
-        "nearestTraumaHospital": "Dallas Regional Memorial Hospital",
-        "hospitalAddress": "Medical Center District, Dallas, TX"
-      },
-      "visitorLogistics": {
-        "tapWaterPotability": "100% Safe municipal drinking water conforming to EPA Safe Drinking Water Act standards.",
-        "salesTaxRefundPolicy": "International travelers may claim state sales tax refunds on qualifying departures at designated airport customs counters.",
-        "rideshareAvailability": "Ubiquitous (Uber and Lyft operational 24/7 across the metropolitan area)."
-      },
-      "provenance": {
-        "sourceName": "FAA Airport Database & International Trade Administration",
-        "sourceUrl": "https://www.trade.gov/",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
+        "nearestTraumaHospital": "Advanced Dallas Hospitals and Clinics",
+        "hospitalAddress": "7502 Greenville Avenue, Dallas, TX 75231",
+        "cmsFacilityId": "670321",
+        "emergencyServices": true,
+        "source": "CMS Care Compare hospital general information (federal dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma level, ranking or nearest-facility claim.",
+        "erHospitals": [
+          {
+            "name": "Advanced Dallas Hospitals and Clinics",
+            "address": "7502 Greenville Avenue, Dallas, TX 75231",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "670321"
+          },
+          {
+            "name": "Baylor Scott & White Heart & Vascular Hospital - Dallas",
+            "address": "621 North Hall Street, Dallas, TX 75226",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "450851",
+            "lat": 32.787887,
+            "lng": -96.780311
+          },
+          {
+            "name": "Baylor Scott and White Medical Center Uptown",
+            "address": "2727 East Lemmon Avenue Building I, Dallas, TX 75204",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "450422",
+            "lat": 32.804074,
+            "lng": -96.794425
+          },
+          {
+            "name": "Baylor University Medical Center",
+            "address": "3500 Gaston Ave, Dallas, TX 75246",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "450021",
+            "lat": 32.790471,
+            "lng": -96.780904
+          },
+          {
+            "name": "Children's Medical Ctr of Dallas",
+            "address": "1935 Medical District Drive, Dallas, TX 75235",
+            "type": "Children's",
+            "cmsFacilityId": "453302",
+            "lat": 32.808944,
+            "lng": -96.836126
+          },
+          {
+            "name": "Dallas Medical Center",
+            "address": "7 Medical Parkway, Dallas, TX 75234",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "450379",
+            "lat": 32.914781,
+            "lng": -96.87125
+          },
+          {
+            "name": "Dallas VA Medical Center (VA North Texas Healthcare System)",
+            "address": "4500 S. Lancaster Road, Dallas, TX 75216",
+            "type": "Acute Care - Veterans Administration",
+            "cmsFacilityId": "45066F",
+            "lat": 32.69166,
+            "lng": -96.791888
+          },
+          {
+            "name": "Medical City Dallas Hospital",
+            "address": "7777 Forest Lane, Dallas, TX 75230",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "450647",
+            "lat": 32.909512,
+            "lng": -96.772152
+          },
+          {
+            "name": "Methodist Charlton Medical Center",
+            "address": "3500 W Wheatland Road, Dallas, TX 75237",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "450723",
+            "lat": 32.6474,
+            "lng": -96.876339
+          },
+          {
+            "name": "Methodist Dallas Medical Center",
+            "address": "1441 North Beckley Avenue, Dallas, TX 75203",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "450051",
+            "lat": 32.761267,
+            "lng": -96.823003
+          },
+          {
+            "name": "North Central Surgical Center LLP",
+            "address": "9301 North Central Expressway Suite 100, Dallas, TX 75231",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "670049",
+            "lat": 32.874285,
+            "lng": -96.770717
+          },
+          {
+            "name": "Parkland Health & Hospital System",
+            "address": "5200 Harry Hines Blvd, Dallas, TX 75235",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "450015",
+            "lat": 32.811586,
+            "lng": -96.836792
+          },
+          {
+            "name": "Texas Health Presbyterian Hospital Dallas",
+            "address": "8200 Walnut Hill Lane, Dallas, TX 75231",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "450462",
+            "lat": 32.883202,
+            "lng": -96.762268
+          },
+          {
+            "name": "Texas Institute for Surgery at Presbyterian Hospit",
+            "address": "7115 Greenville Avenue Suite 100, Dallas, TX 75231",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "450889",
+            "lat": 32.876242,
+            "lng": -96.761809
+          },
+          {
+            "name": "UT of Texas Southwestern University Hospital - William P. Clements Jr.",
+            "address": "6201 Harry Hines Blvd, Dallas, TX 75390",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "450044",
+            "lat": 32.819793,
+            "lng": -96.847233
+          },
+          {
+            "name": "White Rock Medical Center",
+            "address": "9440 Poppy Drive, Dallas, TX 75218",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "450678",
+            "lat": 32.83549,
+            "lng": -96.704915
+          }
+        ],
+        "erHospitalsSource": "CMS Care Compare hospital general information (federal dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma level, ranking or nearest-facility claim."
       }
+    },
+    "housingAndTaxes": {
+      "medianHomeValue": 295300,
+      "medianGrossRent": 1403,
+      "medianRealEstateTaxPaid": 4908,
+      "effectivePropertyTaxRatePct": 1.66,
+      "countyName": "Dallas County",
+      "source": "ACS 2023 5-yr: B25077 median home value, B25064 median gross rent, B25103 median real estate taxes paid. Effective rate = B25103 / B25077.",
+      "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/"
+    },
+    "climateNormals": {
+      "peakSummerHighF": 95,
+      "winterLowF": 38,
+      "annualRainfallInches": 55.1,
+      "sourceName": "Open-Meteo Historical Weather API (ERA5 reanalysis), 2015-2024 average, retrieved 2026-10-31",
+      "sourceUrl": "https://open-meteo.com/en/docs/historical-weather-api"
+    },
+    "terrainElevation": {
+      "elevationFeet": 482.8,
+      "elevationMeters": 147.2,
+      "topographyClass": "Blackland Prairie & Trinity River Basin",
+      "sourceName": "USGS 3D Elevation Program (3DEP Elevation Point Query Service)",
+      "sourceUrl": "https://epqs.nationalmap.gov/v1/json"
+    },
+    "waterUtility": {
+      "pwsid": "TX0570004",
+      "providerName": "Dallas Water Utility",
+      "populationServed": 1356479,
+      "sourceType": "surface water",
+      "source": "U.S. EPA Safe Drinking Water Information System (SDWIS)",
+      "sourceUrl": "https://data.epa.gov/efservice/WATER_SYSTEM/PWSID/TX0570004/JSON",
+      "retrieved": "2026-10-31"
+    },
+    "higherEducation": {
+      "institutionCount": 32,
+      "totalEnrollment": 61247,
+      "institutions": [
+        {
+          "id": 224615,
+          "name": "Dallas College",
+          "studentSize": 43869,
+          "ownership": "Public",
+          "schoolUrl": "https://www.dallascollege.edu/pages/default.aspx",
+          "lat": 32.766319,
+          "lng": -96.794036
+        },
+        {
+          "id": 228246,
+          "name": "Southern Methodist University",
+          "studentSize": 7277,
+          "ownership": "Private nonprofit",
+          "schoolUrl": "https://www.smu.edu/",
+          "lat": 32.843612,
+          "lng": -96.783365
+        },
+        {
+          "id": 484905,
+          "name": "University of North Texas at Dallas",
+          "studentSize": 2878,
+          "ownership": "Public",
+          "schoolUrl": "https://untdallas.edu/",
+          "lat": 32.659588,
+          "lng": -96.803446
+        },
+        {
+          "id": 224226,
+          "name": "Dallas Baptist University",
+          "studentSize": 2403,
+          "ownership": "Private nonprofit",
+          "schoolUrl": "https://www.dbu.edu/",
+          "lat": 32.710017,
+          "lng": -96.947006
+        },
+        {
+          "id": 480824,
+          "name": "The College of Health Care Professions-Dallas",
+          "studentSize": 720,
+          "ownership": "Private for-profit",
+          "schoolUrl": "https://www.chcp.edu/",
+          "lat": 32.830186,
+          "lng": -96.875021
+        },
+        {
+          "id": 227429,
+          "name": "Paul Quinn College",
+          "studentSize": 620,
+          "ownership": "Private nonprofit",
+          "schoolUrl": "https://paulquinn.edu/",
+          "lat": 32.678837,
+          "lng": -96.755778
+        }
+      ],
+      "sourceName": "U.S. Department of Education College Scorecard",
+      "sourceUrl": "https://collegescorecard.ed.gov/",
+      "retrieved": "2026-10-31"
+    },
+    "evInfrastructure": {
+      "totalStations": 262,
+      "totalChargingPorts": 802,
+      "dcFastPorts": 231,
+      "level2Ports": 571,
+      "sampleStations": [
+        {
+          "name": "Dallas, TX - South Riverfront Boulevard - Tesla Supercharger",
+          "address": "801 S Riverfront Blvd, Dallas, TX 75207",
+          "network": "Tesla",
+          "dcFastPorts": 34,
+          "level2Ports": 0,
+          "lat": 32.767263,
+          "lng": -96.807834
+        },
+        {
+          "name": "West Love",
+          "address": "2275 Hawes Ave, Dallas, TX 75235",
+          "network": "AMPUP",
+          "dcFastPorts": 0,
+          "level2Ports": 20,
+          "lat": 32.827678,
+          "lng": -96.849345
+        },
+        {
+          "name": "Dallas, TX - Park Lane - Tesla Supercharger",
+          "address": "8080 Park Lane, Dallas, TX 75231",
+          "network": "Tesla",
+          "dcFastPorts": 16,
+          "level2Ports": 0,
+          "lat": 32.867744,
+          "lng": -96.767178
+        },
+        {
+          "name": "Addison, TX - Tesla Supercharger",
+          "address": "5100 Belt Line Road, Dallas, TX 75254",
+          "network": "Tesla",
+          "dcFastPorts": 16,
+          "level2Ports": 0,
+          "lat": 32.950181,
+          "lng": -96.81855
+        },
+        {
+          "name": "Target - Tesla Supercharger",
+          "address": "6419 Skillman St, Dallas, TX 75231",
+          "network": "Tesla",
+          "dcFastPorts": 16,
+          "level2Ports": 0,
+          "lat": 32.864857,
+          "lng": -96.745544
+        }
+      ],
+      "sourceName": "U.S. Department of Energy / NLR Alternative Fuels Data Center (AFDC)",
+      "sourceUrl": "https://afdc.energy.gov/stations",
+      "retrieved": "2026-10-31"
+    },
+    "upcomingEvents": {
+      "totalMatchingEvents": 883,
+      "events": [
+        {
+          "id": "vvG1YZ_5OQi94B",
+          "name": "VOILÀ Presents: Moonbloom",
+          "date": "2026-10-31",
+          "venueName": "House of Blues Dallas",
+          "category": "Music",
+          "url": "https://www.ticketmaster.com/voila-presents-moonbloom-dallas-texas-10-31-2026/event/0C0064B81AB1757A"
+        },
+        {
+          "id": "Z7r9jZ1A70gv0",
+          "name": "Black Flag",
+          "date": "2026-10-31",
+          "venueName": "AM/FM Dallas",
+          "category": "Music",
+          "url": "https://www.ticketmaster.com/event/Z7r9jZ1A70gv0"
+        },
+        {
+          "id": "rZ7HnEZ1AfF6q0",
+          "name": "Playlunch, Buckets",
+          "date": "2026-10-31",
+          "venueName": "Three Links Deep Ellum",
+          "category": "Music",
+          "url": "https://www.ticketweb.com/event/playlunch-buckets-three-links-deep-ellum-tickets/14207764"
+        },
+        {
+          "id": "vvG1YZ_C1WA6Uf",
+          "name": "Edgar Alejandro",
+          "date": "2026-10-31",
+          "venueName": "The Cambridge Room at House Of Blues",
+          "category": "Music",
+          "url": "https://www.ticketmaster.com/edgar-alejandro-dallas-texas-10-31-2026/event/0C0064E2BD147D94"
+        },
+        {
+          "id": "vvG1YZ_CMbXQew",
+          "name": "Dallas Stars vs. Columbus Blue Jackets",
+          "date": "2026-10-31",
+          "venueName": "American Airlines Center",
+          "category": "Sports",
+          "url": "https://www.ticketmaster.com/dallas-stars-vs-columbus-blue-jackets-dallas-texas-10-31-2026/event/0C0064EDD8F9A0B2"
+        }
+      ],
+      "sourceName": "Ticketmaster Discovery API v2",
+      "sourceUrl": "https://developer.ticketmaster.com/",
+      "retrieved": "2026-10-31"
     }
   },
   {

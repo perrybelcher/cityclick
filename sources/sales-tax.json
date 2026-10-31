@@ -79,5 +79,175 @@
     "source": "Arkansas Dept. of Finance and Administration local sales & use tax table (6.5% state + 1.5% Garland County + 1.5% City of Hot Springs = 9.5%)",
     "url": "https://www.dfa.arkansas.gov/excise-tax/sales-and-use-tax/local-tax-lookup-tools/",
     "asOf": "2026-10-31"
+  },
+  "tx/dallas": {
+    "state": 0.0625,
+    "county": 0.0,
+    "city": 0.01,
+    "specialDistrict": 0.01,
+    "local": 0.02,
+    "source": "Texas Comptroller city sales tax rate table (Dallas: 6.25% state + 1.0% city + 1.0% Dallas Area Rapid Transit)",
+    "url": "https://comptroller.texas.gov/taxes/sales/docs/city-rates.pdf",
+    "asOf": "2026-10-31"
+  },
+  "tx/houston": {
+    "state": 0.0625,
+    "county": 0.0,
+    "city": 0.01,
+    "specialDistrict": 0.01,
+    "local": 0.02,
+    "source": "Texas Comptroller city sales tax rate table (Houston: 6.25% state + 1.0% city + 1.0% Houston METRO)",
+    "url": "https://comptroller.texas.gov/taxes/sales/docs/city-rates.pdf",
+    "asOf": "2026-10-31"
+  },
+  "tx/san-antonio": {
+    "state": 0.0625,
+    "county": 0.0,
+    "city": 0.0125,
+    "specialDistrict": 0.0075,
+    "local": 0.02,
+    "source": "Texas Comptroller city sales tax rate table (San Antonio: 6.25% state + 1.25% city + 0.75% San Antonio MTA/ATD)",
+    "url": "https://comptroller.texas.gov/taxes/sales/docs/city-rates.pdf",
+    "asOf": "2026-10-31"
+  },
+  "az/phoenix": {
+    "state": 0.056,
+    "county": 0.007,
+    "city": 0.028,
+    "specialDistrict": 0.0,
+    "local": 0.035,
+    "source": "City of Phoenix Transaction Privilege Tax schedule (5.6% state + 0.7% Maricopa County + 2.8% City of Phoenix per Ord. G-7369 effective 2025-07-01)",
+    "url": "https://www.phoenix.gov/finance/plt",
+    "asOf": "2026-10-31"
+  },
+  "nc/charlotte": {
+    "state": 0.0475,
+    "county": 0.02,
+    "city": 0.0,
+    "specialDistrict": 0.015,
+    "local": 0.035,
+    "source": "North Carolina Dept. of Revenue Sales and Use Tax Rates (Mecklenburg County effective 2026-07-01: 4.75% state + 2.0% county + 1.5% public transportation)",
+    "url": "https://www.ncdor.gov/taxes-forms/sales-and-use-tax/sales-and-use-tax-rates-other-information",
+    "asOf": "2026-10-31"
+  },
+  "nc/raleigh": {
+    "state": 0.0475,
+    "county": 0.02,
+    "city": 0.0,
+    "specialDistrict": 0.005,
+    "local": 0.025,
+    "source": "North Carolina Dept. of Revenue Sales and Use Tax Rates (Wake County: 4.75% state + 2.0% county + 0.5% Wake public transportation)",
+    "url": "https://www.ncdor.gov/taxes-forms/sales-and-use-tax/sales-and-use-tax-rates-other-information",
+    "asOf": "2026-10-31"
+  },
+  "fl/orlando": {
+    "state": 0.06,
+    "county": 0.005,
+    "city": 0.0,
+    "specialDistrict": 0.0,
+    "local": 0.005,
+    "source": "Florida Dept. of Revenue discretionary sales surtax (6.0% state + 0.5% Orange County)",
+    "url": "https://floridarevenue.com/taxes/taxesfees/Pages/discretionary.aspx",
+    "asOf": "2026-10-31"
+  },
+  "fl/miami": {
+    "state": 0.06,
+    "county": 0.01,
+    "city": 0.0,
+    "specialDistrict": 0.0,
+    "local": 0.01,
+    "source": "Florida Dept. of Revenue discretionary sales surtax (6.0% state + 1.0% Miami-Dade County)",
+    "url": "https://floridarevenue.com/taxes/taxesfees/Pages/discretionary.aspx",
+    "asOf": "2026-10-31"
+  },
+  "fl/jacksonville": {
+    "state": 0.06,
+    "county": 0.015,
+    "city": 0.0,
+    "specialDistrict": 0.0,
+    "local": 0.015,
+    "source": "Florida Dept. of Revenue discretionary sales surtax (6.0% state + 1.5% Duval County)",
+    "url": "https://floridarevenue.com/taxes/taxesfees/Pages/discretionary.aspx",
+    "asOf": "2026-10-31"
+  },
+  "co/denver": {
+    "state": 0.029,
+    "county": 0.0,
+    "city": 0.0515,
+    "specialDistrict": 0.011,
+    "local": 0.0625,
+    "source": "City and County of Denver Treasury sales tax schedule (2.9% Colorado state + 5.15% Denver city + 1.0% RTD + 0.1% SCFD = 9.15%)",
+    "url": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Department-of-Finance/Our-Divisions/Treasury-Division",
+    "asOf": "2026-10-31"
+  },
+  "nv/las-vegas": {
+    "state": 0.0685,
+    "county": 0.01525,
+    "city": 0.0,
+    "specialDistrict": 0.0,
+    "local": 0.01525,
+    "source": "Nevada Dept. of Taxation Sales and Use Tax Rate Map (Clark County: 6.85% state statutory base + 1.525% Clark County option = 8.375%)",
+    "url": "https://tax.nv.gov/tax-types/sales-tax-use-tax/",
+    "asOf": "2026-10-31"
+  },
+  "ut/salt-lake-city": {
+    "state": 0.0485,
+    "county": 0.0195,
+    "city": 0.015,
+    "specialDistrict": 0.0015,
+    "local": 0.036,
+    "source": "Utah State Tax Commission Combined Sales Tax Rate Chart (Salt Lake City loc. 18-122: 4.85% state + 3.60% local/county/transit = 8.45%)",
+    "url": "https://tax.utah.gov/sales/rates",
+    "asOf": "2026-10-31"
+  },
+  "ga/atlanta": {
+    "state": 0.04,
+    "county": 0.03,
+    "city": 0.01,
+    "specialDistrict": 0.009,
+    "local": 0.049,
+    "source": "Georgia Dept. of Revenue Local Sales and Use Tax Rate Chart (City of Atlanta, Fulton County: 4.0% state + 3.0% county/MARTA/ESPLOST + 1.0% Atlanta MOST + 0.9% Atlanta TSPLOST/transit = 8.9%)",
+    "url": "https://dor.georgia.gov/taxes/business-taxes/sales-use-tax/sales-tax-rates-general",
+    "asOf": "2026-10-31"
+  },
+  "ar/little-rock": {
+    "state": 0.065,
+    "county": 0.01,
+    "city": 0.01125,
+    "specialDistrict": 0.0,
+    "local": 0.02125,
+    "source": "Arkansas Dept. of Finance and Administration local sales & use tax table (6.5% state + 1.0% Pulaski County + 1.125% City of Little Rock = 8.625%)",
+    "url": "https://www.dfa.arkansas.gov/excise-tax/sales-and-use-tax/local-tax-lookup-tools/",
+    "asOf": "2026-10-31"
+  },
+  "ar/fayetteville": {
+    "state": 0.065,
+    "county": 0.0125,
+    "city": 0.02,
+    "specialDistrict": 0.0,
+    "local": 0.0325,
+    "source": "Arkansas Dept. of Finance and Administration local sales & use tax table (6.5% state + 1.25% Washington County + 2.0% City of Fayetteville = 9.75%)",
+    "url": "https://www.dfa.arkansas.gov/excise-tax/sales-and-use-tax/local-tax-lookup-tools/",
+    "asOf": "2026-10-31"
+  },
+  "ar/bentonville": {
+    "state": 0.065,
+    "county": 0.01,
+    "city": 0.02,
+    "specialDistrict": 0.0,
+    "local": 0.03,
+    "source": "Arkansas Dept. of Finance and Administration local sales & use tax table (6.5% state + 1.0% Benton County + 2.0% City of Bentonville = 9.5%)",
+    "url": "https://www.dfa.arkansas.gov/excise-tax/sales-and-use-tax/local-tax-lookup-tools/",
+    "asOf": "2026-10-31"
+  },
+  "al/huntsville": {
+    "state": 0.04,
+    "county": 0.005,
+    "city": 0.045,
+    "specialDistrict": 0.0,
+    "local": 0.05,
+    "source": "Alabama Dept. of Revenue Local Tax Rate Schedule (4.0% state + 0.5% Madison County + 4.5% City of Huntsville = 9.0%)",
+    "url": "https://www.revenue.alabama.gov/sales-use/city-and-county-tax-rates/",
+    "asOf": "2026-10-31"
   }
 }

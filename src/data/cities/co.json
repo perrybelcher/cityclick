@@ -2,633 +2,725 @@
   {
     "slug": "co/denver",
     "cityId": "0820000",
-    "countyFips": "08200",
+    "countyFips": "08031",
     "name": "Denver",
     "stateCode": "co",
     "stateName": "Colorado",
-    "countyName": "Denver Metropolitan Area",
+    "countyName": "Denver County",
     "lat": 39.76185,
     "lng": -104.881105,
     "primaryZips": [
-      "70019"
+      "80202",
+      "80206",
+      "80211",
+      "80216",
+      "80222",
+      "80210",
+      "80204",
+      "80205",
+      "80203",
+      "80209",
+      "80223",
+      "80228"
     ],
     "demographics": {
       "population": 716577,
-      "popGrowth5YrPct": -0.1,
-      "medianHouseholdIncome": 86770,
-      "perCapitaIncome": 50327,
-      "medianAge": 36.4,
-      "daytimeWorkerPop": 444278,
-      "daytimePopSurgePct": 8.5,
-      "medianGrossRent": 1669,
-      "medianHomeValue": 364434,
+      "medianHouseholdIncome": 91681,
+      "perCapitaIncome": 61202,
+      "medianAge": 35.2,
+      "medianGrossRent": 1770,
+      "medianHomeValue": 586700,
       "provenance": {
-        "sourceName": "US Census Bureau ACS 5-Year (DP03/DP04/DP05) & PopEst",
-        "sourceUrl": "https://api.census.gov/data/2023/acs/acs5",
-        "datasetVintage": "2023-5YR",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "sourceName": "US Census Bureau ACS 5-Year Estimates 2023 (Table-Based Summary File)",
+        "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/",
+        "datasetVintage": "ACS-2023-5YR",
+        "verifiedAt": "2026-10-31T00:00:00Z",
         "granularity": "place"
-      }
-    },
-    "laborAndEconomy": {
-      "unemploymentRatePct": 3.8,
-      "avgWeeklyWageAllIndustries": 1340,
-      "newHousingPermits12Mo": 5374,
-      "permitsPer1kResidents": 7.5,
-      "femaRiskScore": 28.0,
-      "provenance": {
-        "sourceName": "BLS Local Area Unemployment Statistics (LAUS) & Census BPS",
-        "sourceUrl": "https://www.bls.gov/lau/",
-        "datasetVintage": "2024-M08",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
-      }
+      },
+      "popChange2020to2023Pct": 0.1,
+      "popChangeBasis": "Census Population Estimates, April 2020 base to July 2023"
     },
     "industries": [
       {
         "naicsCode": "722515",
         "slug": "coffee-shops",
         "label": "Coffee & Snack Shops",
-        "establishments": 154,
-        "per10kResidents": 2.15,
-        "usAvgPer10k": 2.15,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 350,
+        "per10kResidents": 3.16,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 149,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Denver."
+          "evidenceQuote": "350 employer establishments (NAICS 722515) across 39 ZIP codes whose USPS city is Denver, CO; density uses ACS 2023 ZCTA population (1,108,441). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722511",
         "slug": "restaurants",
         "label": "Full-Service Restaurants",
-        "establishments": 487,
-        "per10kResidents": 6.8,
-        "usAvgPer10k": 6.8,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 1170,
+        "per10kResidents": 10.56,
+        "usAvgPer10k": 7.44,
+        "saturationIndex": 142,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Denver."
+          "evidenceQuote": "1170 employer establishments (NAICS 722511) across 39 ZIP codes whose USPS city is Denver, CO; density uses ACS 2023 ZCTA population (1,108,441). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722513",
         "slug": "fast-food",
-        "label": "Fast Food Restaurants",
-        "establishments": 516,
-        "per10kResidents": 7.2,
-        "usAvgPer10k": 7.2,
-        "saturationIndex": 100,
+        "label": "Limited-Service / Fast Food Restaurants",
+        "establishments": 1033,
+        "per10kResidents": 9.32,
+        "usAvgPer10k": 7.75,
+        "saturationIndex": 120,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Denver."
+          "evidenceQuote": "1033 employer establishments (NAICS 722513) across 39 ZIP codes whose USPS city is Denver, CO; density uses ACS 2023 ZCTA population (1,108,441). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722410",
         "slug": "bars-taverns",
-        "label": "Bars & Drinking Places",
-        "establishments": 133,
-        "per10kResidents": 1.86,
-        "usAvgPer10k": 1.85,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Drinking Places (Alcoholic Beverages)",
+        "establishments": 256,
+        "per10kResidents": 2.31,
+        "usAvgPer10k": 0.9,
+        "saturationIndex": 256,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Denver."
-        }
-      },
-      {
-        "naicsCode": "812111",
-        "slug": "barber-shops",
-        "label": "Barber Shops",
-        "establishments": 97,
-        "per10kResidents": 1.35,
-        "usAvgPer10k": 1.35,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Denver."
+          "evidenceQuote": "256 employer establishments (NAICS 722410) across 39 ZIP codes whose USPS city is Denver, CO; density uses ACS 2023 ZCTA population (1,108,441). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812112",
         "slug": "beauty-salons",
         "label": "Beauty Salons & Hair Studios",
-        "establishments": 244,
-        "per10kResidents": 3.41,
-        "usAvgPer10k": 3.4,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 492,
+        "per10kResidents": 4.44,
+        "usAvgPer10k": 2.31,
+        "saturationIndex": 192,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Denver."
+          "evidenceQuote": "492 employer establishments (NAICS 812112) across 39 ZIP codes whose USPS city is Denver, CO; density uses ACS 2023 ZCTA population (1,108,441). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812113",
         "slug": "nail-salons",
         "label": "Nail Salons",
-        "establishments": 150,
-        "per10kResidents": 2.09,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 159,
+        "per10kResidents": 1.43,
+        "usAvgPer10k": 0.86,
+        "saturationIndex": 167,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Denver."
+          "evidenceQuote": "159 employer establishments (NAICS 812113) across 39 ZIP codes whose USPS city is Denver, CO; density uses ACS 2023 ZCTA population (1,108,441). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "713940",
         "slug": "gyms-fitness",
-        "label": "Fitness & Recreational Gyms",
-        "establishments": 90,
-        "per10kResidents": 1.26,
-        "usAvgPer10k": 1.25,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Fitness & Recreational Sports Centers",
+        "establishments": 231,
+        "per10kResidents": 2.08,
+        "usAvgPer10k": 1.0,
+        "saturationIndex": 209,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Denver."
+          "evidenceQuote": "231 employer establishments (NAICS 713940) across 39 ZIP codes whose USPS city is Denver, CO; density uses ACS 2023 ZCTA population (1,108,441). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812910",
         "slug": "pet-care",
-        "label": "Pet Care & Grooming",
-        "establishments": 68,
-        "per10kResidents": 0.95,
-        "usAvgPer10k": 0.95,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Pet Care & Grooming Services",
+        "establishments": 79,
+        "per10kResidents": 0.71,
+        "usAvgPer10k": 0.46,
+        "saturationIndex": 153,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Denver."
+          "evidenceQuote": "79 employer establishments (NAICS 812910) across 39 ZIP codes whose USPS city is Denver, CO; density uses ACS 2023 ZCTA population (1,108,441). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541940",
         "slug": "veterinary",
-        "label": "Veterinary Services",
-        "establishments": 75,
-        "per10kResidents": 1.05,
-        "usAvgPer10k": 1.05,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Veterinary Services & Animal Hospitals",
+        "establishments": 98,
+        "per10kResidents": 0.88,
+        "usAvgPer10k": 0.69,
+        "saturationIndex": 128,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Denver."
+          "evidenceQuote": "98 employer establishments (NAICS 541940) across 39 ZIP codes whose USPS city is Denver, CO; density uses ACS 2023 ZCTA population (1,108,441). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "811111",
         "slug": "auto-repair",
         "label": "General Automotive Repair",
-        "establishments": 344,
-        "per10kResidents": 4.8,
-        "usAvgPer10k": 4.8,
-        "saturationIndex": 100,
+        "establishments": 222,
+        "per10kResidents": 2.0,
+        "usAvgPer10k": 2.2,
+        "saturationIndex": 91,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Denver."
+          "evidenceQuote": "222 employer establishments (NAICS 811111) across 39 ZIP codes whose USPS city is Denver, CO; density uses ACS 2023 ZCTA population (1,108,441). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "811192",
         "slug": "car-washes",
-        "label": "Car Washes & Detailing",
-        "establishments": 47,
-        "per10kResidents": 0.66,
-        "usAvgPer10k": 0.65,
-        "saturationIndex": 101,
+        "label": "Car Washes & Auto Detailing",
+        "establishments": 45,
+        "per10kResidents": 0.41,
+        "usAvgPer10k": 0.35,
+        "saturationIndex": 116,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Denver."
-        }
-      },
-      {
-        "naicsCode": "812310",
-        "slug": "laundromats",
-        "label": "Coin Laundromats",
-        "establishments": 39,
-        "per10kResidents": 0.54,
-        "usAvgPer10k": 0.55,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Denver."
-        }
-      },
-      {
-        "naicsCode": "812320",
-        "slug": "dry-cleaners",
-        "label": "Dry Cleaning & Laundry",
-        "establishments": 61,
-        "per10kResidents": 0.85,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Denver."
+          "evidenceQuote": "45 employer establishments (NAICS 811192) across 39 ZIP codes whose USPS city is Denver, CO; density uses ACS 2023 ZCTA population (1,108,441). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621210",
         "slug": "dentists",
         "label": "Offices of Dentists",
-        "establishments": 279,
-        "per10kResidents": 3.89,
-        "usAvgPer10k": 3.9,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 578,
+        "per10kResidents": 5.21,
+        "usAvgPer10k": 3.89,
+        "saturationIndex": 134,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Denver."
+          "evidenceQuote": "578 employer establishments (NAICS 621210) across 39 ZIP codes whose USPS city is Denver, CO; density uses ACS 2023 ZCTA population (1,108,441). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621310",
         "slug": "chiropractors",
         "label": "Offices of Chiropractors",
-        "establishments": 100,
-        "per10kResidents": 1.4,
-        "usAvgPer10k": 1.4,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 164,
+        "per10kResidents": 1.48,
+        "usAvgPer10k": 0.97,
+        "saturationIndex": 152,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Denver."
+          "evidenceQuote": "164 employer establishments (NAICS 621310) across 39 ZIP codes whose USPS city is Denver, CO; density uses ACS 2023 ZCTA population (1,108,441). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621340",
         "slug": "physical-therapy",
-        "label": "Physical Therapy Clinics",
-        "establishments": 111,
-        "per10kResidents": 1.55,
-        "usAvgPer10k": 1.55,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Physical, Occupational & Speech Therapists",
+        "establishments": 197,
+        "per10kResidents": 1.78,
+        "usAvgPer10k": 1.3,
+        "saturationIndex": 136,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Denver."
+          "evidenceQuote": "197 employer establishments (NAICS 621340) across 39 ZIP codes whose USPS city is Denver, CO; density uses ACS 2023 ZCTA population (1,108,441). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "624410",
         "slug": "daycare",
         "label": "Child Day Care Services",
-        "establishments": 161,
-        "per10kResidents": 2.25,
-        "usAvgPer10k": 2.25,
-        "saturationIndex": 100,
+        "establishments": 196,
+        "per10kResidents": 1.77,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 83,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Denver."
+          "evidenceQuote": "196 employer establishments (NAICS 624410) across 39 ZIP codes whose USPS city is Denver, CO; density uses ACS 2023 ZCTA population (1,108,441). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "445120",
         "slug": "convenience-stores",
-        "label": "Convenience Stores",
-        "establishments": 140,
-        "per10kResidents": 1.95,
-        "usAvgPer10k": 1.95,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Convenience Retail Stores",
+        "establishments": 63,
+        "per10kResidents": 0.57,
+        "usAvgPer10k": 0.82,
+        "saturationIndex": 69,
+        "status": "underserved",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Denver."
+          "evidenceQuote": "63 employer establishments (NAICS 445120) across 39 ZIP codes whose USPS city is Denver, CO; density uses ACS 2023 ZCTA population (1,108,441). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "448140",
         "slug": "clothing-boutiques",
-        "label": "Family Clothing Stores",
-        "establishments": 118,
-        "per10kResidents": 1.65,
-        "usAvgPer10k": 1.65,
-        "saturationIndex": 100,
+        "label": "Family Clothing Stores & Boutiques",
+        "establishments": 67,
+        "per10kResidents": 0.6,
+        "usAvgPer10k": 0.65,
+        "saturationIndex": 93,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Denver."
-        }
-      },
-      {
-        "naicsCode": "445291",
-        "slug": "bakeries",
-        "label": "Retail Bakeries",
-        "establishments": 61,
-        "per10kResidents": 0.85,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Denver."
-        }
-      },
-      {
-        "naicsCode": "453110",
-        "slug": "florists",
-        "label": "Florists & Floral Gift",
-        "establishments": 36,
-        "per10kResidents": 0.5,
-        "usAvgPer10k": 0.5,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Denver."
+          "evidenceQuote": "67 employer establishments (NAICS 448140) across 39 ZIP codes whose USPS city is Denver, CO; density uses ACS 2023 ZCTA population (1,108,441). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541110",
         "slug": "law-firms",
         "label": "Offices of Lawyers",
-        "establishments": 351,
-        "per10kResidents": 4.9,
-        "usAvgPer10k": 4.9,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 1334,
+        "per10kResidents": 12.03,
+        "usAvgPer10k": 4.8,
+        "saturationIndex": 251,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Denver."
+          "evidenceQuote": "1334 employer establishments (NAICS 541110) across 39 ZIP codes whose USPS city is Denver, CO; density uses ACS 2023 ZCTA population (1,108,441). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541211",
         "slug": "accounting-cpa",
-        "label": "Offices of CPAs",
-        "establishments": 150,
-        "per10kResidents": 2.09,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Offices of Certified Public Accountants",
+        "establishments": 294,
+        "per10kResidents": 2.65,
+        "usAvgPer10k": 1.44,
+        "saturationIndex": 184,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Denver."
+          "evidenceQuote": "294 employer establishments (NAICS 541211) across 39 ZIP codes whose USPS city is Denver, CO; density uses ACS 2023 ZCTA population (1,108,441). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "531210",
         "slug": "real-estate-agencies",
-        "label": "Real Estate Brokerages",
-        "establishments": 272,
-        "per10kResidents": 3.8,
-        "usAvgPer10k": 3.8,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Offices of Real Estate Agents & Brokers",
+        "establishments": 1476,
+        "per10kResidents": 13.32,
+        "usAvgPer10k": 4.74,
+        "saturationIndex": 281,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Denver."
+          "evidenceQuote": "1476 employer establishments (NAICS 531210) across 39 ZIP codes whose USPS city is Denver, CO; density uses ACS 2023 ZCTA population (1,108,441). National benchmark = all US ZIP rows / US population."
         }
       }
     ],
     "permitsAndTax": {
-      "generalBusinessLicenseRequired": false,
-      "businessLicenseFeeSummary": "No general city business license required. State of Colorado statutory filings apply.",
-      "businessLicensePortalUrl": "https://www.denverco.gov/permits",
-      "zoningLookupUrl": "https://www.denverco.gov/zoning",
-      "buildingPermitPortalUrl": "https://www.denverco.gov/building",
-      "certificateOfOccupancyFee": "$185 standard municipal inspection fee",
-      "avgPermitWaitDays": 30,
-      "shortTermRentalStatus": "restricted",
-      "foodTruckPermitStatus": "allowed",
-      "combinedSalesTaxRate": 0.044,
       "stateTaxRate": 0.029,
-      "localTaxRate": 0.015,
+      "countyTaxRate": 0.0,
+      "cityTaxRate": 0.0515,
+      "specialDistrictTaxRate": 0.011,
+      "localTaxRate": 0.0625,
+      "combinedSalesTaxRate": 0.0915,
       "provenance": {
-        "sourceName": "Denver Municipal Code & State Department of Revenue",
-        "sourceUrl": "https://www.denverco.gov",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place",
-        "evidenceQuote": "Statutory municipal code standards."
+        "sourceName": "City and County of Denver Treasury sales tax schedule (2.9% Colorado state + 5.15% Denver city + 1.0% RTD + 0.1% SCFD = 9.15%)",
+        "sourceUrl": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Department-of-Finance/Our-Divisions/Treasury-Division",
+        "datasetVintage": "2026",
+        "verifiedAt": "2026-10-31T00:00:00Z",
+        "granularity": "place"
       }
     },
-    "topTrafficCorridors": [
-      {
-        "roadName": "Main Arterial Corridor 1",
-        "segmentDescription": "Central Commercial Corridor through Denver",
-        "aadt": 85989,
-        "heavyTruckPct": 5.5,
-        "lat": 39.76185,
-        "lng": -104.881105,
-        "year": 2024,
-        "provenance": {
-          "sourceName": "Colorado DOT AADT Database",
-          "sourceUrl": "https://www.transportation.gov/",
-          "datasetVintage": "2024-AADT",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "place"
-        }
-      }
-    ],
-    "marketSignals": {
-      "reportedRetailRentSqFtYr": 41.7,
-      "reportedIndustrialRentSqFtYr": 18.8,
-      "topSearchedNaics30d": [
-        "722515",
-        "713940",
-        "812111"
-      ],
-      "verifiedLocalProsCount": 8
-    },
-    "scores": {
-      "overallViability": 50,
-      "purchasingPower": 48,
-      "growthMomentum": 52,
-      "costEfficiency": 70,
-      "regulatoryFriction": 48
-    },
+    "marketSignals": {},
     "executiveTravel": {
-      "timeZone": "America/Denver (MT: UTC-07:00)",
+      "timeZone": "America/Denver",
       "timeZoneAbbr": "MT",
       "utcOffset": "-07:00",
       "primaryAirport": {
         "name": "Denver International Airport",
         "iata": "DEN",
-        "distanceMiles": 25.0,
-        "transitToDowntown": "RTD A-Line Commuter Rail ($10.50)"
-      },
-      "powerPlugs": {
-        "types": [
-          "Type A (2-pin)",
-          "Type B (3-pin grounded)"
-        ],
-        "voltage": "120V",
-        "frequency": "60Hz",
-        "adapterAdvice": "Visitors from UK, EU, Australia, and Asia require a standard Type A/B plug adapter and dual-voltage converter."
-      },
-      "currency": {
-        "code": "USD",
-        "symbol": "$",
-        "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
-        "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
+        "lat": 39.860027,
+        "lng": -104.673792,
+        "distanceMiles": 12.9,
+        "transitToDowntown": null,
+        "source": "OurAirports (public domain) for name, IATA code and coordinates; distance is straight-line from the U.S. Census Gazetteer city center point",
+        "sourceUrl": "https://ourairports.com/data/",
+        "cityCenterMethod": "Census Gazetteer internal point",
+        "retrieved": "2026-10-31"
       },
       "climate": {
-        "summerHighF": 84,
-        "winterLowF": 22,
-        "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
-        "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
+        "summerHighF": 88,
+        "winterLowF": 17,
+        "annualRainfallInches": 18.5,
+        "summerHighBasis": "Average July daily high",
+        "winterLowBasis": "Average January daily low",
+        "source": "Open-Meteo Historical Weather API (ERA5 reanalysis), 2015-2024 average, retrieved 2026-10-31",
+        "sourceUrl": "https://open-meteo.com/en/docs/historical-weather-api"
       },
       "emergency": {
         "emergencyDispatch": "911",
-        "nonEmergencyPolice": "311 or local municipal dispatch",
-        "nearestTraumaHospital": "Denver Regional Memorial Hospital",
-        "hospitalAddress": "Medical Center District, Denver, CO"
-      },
-      "visitorLogistics": {
-        "tapWaterPotability": "100% Safe municipal drinking water conforming to EPA Safe Drinking Water Act standards.",
-        "salesTaxRefundPolicy": "International travelers may claim state sales tax refunds on qualifying departures at designated airport customs counters.",
-        "rideshareAvailability": "Ubiquitous (Uber and Lyft operational 24/7 across the metropolitan area)."
-      },
-      "provenance": {
-        "sourceName": "FAA Airport Database & International Trade Administration",
-        "sourceUrl": "https://www.trade.gov/",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
+        "nearestTraumaHospital": "AdventHealth Porter",
+        "hospitalAddress": "2525 S Downing St, Denver, CO 80210",
+        "cmsFacilityId": "060064",
+        "emergencyServices": true,
+        "source": "CMS Care Compare hospital general information (federal dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma level, ranking or nearest-facility claim.",
+        "erHospitals": [
+          {
+            "name": "AdventHealth Porter",
+            "address": "2525 S Downing St, Denver, CO 80210",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "060064",
+            "lat": 39.670811,
+            "lng": -104.973541
+          },
+          {
+            "name": "Denver Health & Hospital Authority",
+            "address": "777 Bannock St, Denver, CO 80204",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "060011",
+            "lat": 39.728122,
+            "lng": -104.990291
+          },
+          {
+            "name": "HCA HealthONE Presbyterian St. Luke's",
+            "address": "1719 E 19th Ave, Denver, CO 80218",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "060014",
+            "lat": 39.746134,
+            "lng": -104.966936
+          },
+          {
+            "name": "HCA HealthONE Rose",
+            "address": "4567 E 9th Ave, Denver, CO 80220",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "060032",
+            "lat": 39.73111,
+            "lng": -104.934392
+          },
+          {
+            "name": "National Jewish Health",
+            "address": "1400 Jackson St, Denver, CO 80206",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "060107",
+            "lat": 39.738382,
+            "lng": -104.942811
+          },
+          {
+            "name": "Saint Joseph Hospital",
+            "address": "1375 E 19th Ave, Denver, CO 80218",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "060028",
+            "lat": 39.752535,
+            "lng": -104.994379
+          }
+        ],
+        "erHospitalsSource": "CMS Care Compare hospital general information (federal dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma level, ranking or nearest-facility claim."
       }
+    },
+    "housingAndTaxes": {
+      "medianHomeValue": 586700,
+      "medianGrossRent": 1770,
+      "medianRealEstateTaxPaid": 2596,
+      "effectivePropertyTaxRatePct": 0.44,
+      "countyName": "Denver County",
+      "source": "ACS 2023 5-yr: B25077 median home value, B25064 median gross rent, B25103 median real estate taxes paid. Effective rate = B25103 / B25077.",
+      "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/"
+    },
+    "climateNormals": {
+      "peakSummerHighF": 88,
+      "winterLowF": 17,
+      "annualRainfallInches": 18.5,
+      "sourceName": "Open-Meteo Historical Weather API (ERA5 reanalysis), 2015-2024 average, retrieved 2026-10-31",
+      "sourceUrl": "https://open-meteo.com/en/docs/historical-weather-api"
+    },
+    "terrainElevation": {
+      "elevationFeet": 5292.2,
+      "elevationMeters": 1613.1,
+      "topographyClass": "High Plains & Front Range South Platte Basin",
+      "sourceName": "USGS 3D Elevation Program (3DEP Elevation Point Query Service)",
+      "sourceUrl": "https://epqs.nationalmap.gov/v1/json"
+    },
+    "waterUtility": {
+      "pwsid": "CO0116001",
+      "providerName": "Denver Water Board",
+      "populationServed": 1287000,
+      "sourceType": "surface water",
+      "source": "U.S. EPA Safe Drinking Water Information System (SDWIS)",
+      "sourceUrl": "https://data.epa.gov/efservice/WATER_SYSTEM/PWSID/CO0116001/JSON",
+      "retrieved": "2026-10-31"
+    },
+    "higherEducation": {
+      "institutionCount": 19,
+      "totalEnrollment": 55249,
+      "institutions": [
+        {
+          "id": 127565,
+          "name": "Metropolitan State University of Denver",
+          "studentSize": 15002,
+          "ownership": "Public",
+          "schoolUrl": "https://www.msudenver.edu/",
+          "lat": 39.744202,
+          "lng": -105.00504
+        },
+        {
+          "id": 126562,
+          "name": "University of Colorado Denver/Anschutz Medical Campus",
+          "studentSize": 10519,
+          "ownership": "Public",
+          "schoolUrl": "https://www.ucdenver.edu/",
+          "lat": 39.745149,
+          "lng": -104.837722
+        },
+        {
+          "id": 476975,
+          "name": "Colorado State University Global",
+          "studentSize": 6563,
+          "ownership": "Public",
+          "schoolUrl": "https://csuglobal.edu/",
+          "lat": 39.745405,
+          "lng": -104.989255
+        },
+        {
+          "id": 127158,
+          "name": "Emily Griffith Technical College",
+          "studentSize": 6123,
+          "ownership": "Public",
+          "schoolUrl": "https://www.emilygriffith.edu/",
+          "lat": 39.74575,
+          "lng": -104.985751
+        },
+        {
+          "id": 127060,
+          "name": "University of Denver",
+          "studentSize": 6025,
+          "ownership": "Private nonprofit",
+          "schoolUrl": "https://www.du.edu/",
+          "lat": 39.678005,
+          "lng": -104.963259
+        },
+        {
+          "id": 126942,
+          "name": "Community College of Denver",
+          "studentSize": 5096,
+          "ownership": "Public",
+          "schoolUrl": "https://www.ccd.edu/",
+          "lat": 39.741413,
+          "lng": -105.001044
+        }
+      ],
+      "sourceName": "U.S. Department of Education College Scorecard",
+      "sourceUrl": "https://collegescorecard.ed.gov/",
+      "retrieved": "2026-10-31"
+    },
+    "evInfrastructure": {
+      "totalStations": 496,
+      "totalChargingPorts": 1666,
+      "dcFastPorts": 205,
+      "level2Ports": 1424,
+      "sampleStations": [
+        {
+          "name": "Camry Parking Lot - EV Only",
+          "address": "907 Chopper Cir., Denver, CO 80204",
+          "network": "FLASH",
+          "dcFastPorts": 0,
+          "level2Ports": 61,
+          "lat": 39.747154,
+          "lng": -105.00829
+        },
+        {
+          "name": "AMLI Broadway Park",
+          "address": "357 S Bannock St, Denver, CO 80223",
+          "network": "LOOP",
+          "dcFastPorts": 0,
+          "level2Ports": 59,
+          "lat": 39.710482,
+          "lng": -104.990343
+        },
+        {
+          "name": "AMLI Art District",
+          "address": "2520 Wewatta Way, Denver, CO 80216",
+          "network": "LOOP",
+          "dcFastPorts": 0,
+          "level2Ports": 41,
+          "lat": 39.761799,
+          "lng": -104.990409
+        },
+        {
+          "name": "AMLI Denargo Market",
+          "address": "2525 Wewatta Wy, Denver, CO 80216",
+          "network": "LOOP",
+          "dcFastPorts": 0,
+          "level2Ports": 37,
+          "lat": 39.761692,
+          "lng": -104.99043
+        },
+        {
+          "name": "Hanover RiNo - Tesla Destination",
+          "address": "2950 Brighton Blvd, Denver, CO 80216",
+          "network": "Tesla Destination",
+          "dcFastPorts": 0,
+          "level2Ports": 30,
+          "lat": 39.764733,
+          "lng": -104.98571
+        }
+      ],
+      "sourceName": "U.S. Department of Energy / NLR Alternative Fuels Data Center (AFDC)",
+      "sourceUrl": "https://afdc.energy.gov/stations",
+      "retrieved": "2026-10-31"
+    },
+    "upcomingEvents": {
+      "totalMatchingEvents": 1532,
+      "events": [
+        {
+          "id": "rZ7HnEZ1AfZU87",
+          "name": "Ladies Night & Noche Sonidera",
+          "date": "2026-10-30",
+          "venueName": "La Rumba",
+          "category": "Music",
+          "url": "https://www.ticketweb.com/event/ladies-night-noche-sonidera-la-rumba-tickets/14036404"
+        },
+        {
+          "id": "G5vzZ_8KJHf1l",
+          "name": "Itchy-O Hallowmass 2026 - 2 Day Pass",
+          "date": "2026-10-30",
+          "venueName": "Summit Music Hall",
+          "category": "Music",
+          "url": "https://www.ticketmaster.com/itchyo-hallowmass-2026-2-day-pass-denver-colorado-10-30-2026/event/1E006504E6F142AB"
+        },
+        {
+          "id": "Z7r9jZ1A70Sq-",
+          "name": "Beauty And The Beast (Touring)",
+          "date": "2026-10-31",
+          "venueName": "Buell Theatre",
+          "category": "Arts & Theatre",
+          "url": "https://www.ticketmaster.com/event/Z7r9jZ1A70Sq-"
+        },
+        {
+          "id": "Z7r9jZ1AAZ0ak",
+          "name": "Colorado Symphony Orchestra w/ The Nightmare Before Christmas in Concert",
+          "date": "2026-10-31",
+          "venueName": "Boettcher Hall",
+          "category": "Music",
+          "url": "https://www.ticketmaster.com/event/Z7r9jZ1AAZ0ak"
+        },
+        {
+          "id": "Z7r9jZ1AAZw_a",
+          "name": "Denver Pioneers Womens Soccer vs. Pacific Tigers Womens Soccer",
+          "date": "2026-10-31",
+          "venueName": "University of Denver Soccer Stadium",
+          "category": "Live Event",
+          "url": "https://www.ticketmaster.com/event/Z7r9jZ1AAZw_a"
+        }
+      ],
+      "sourceName": "Ticketmaster Discovery API v2",
+      "sourceUrl": "https://developer.ticketmaster.com/",
+      "retrieved": "2026-10-31"
     }
   },
   {
@@ -1218,7 +1310,7 @@
         "name": "Colorado Springs Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 11.6,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -1233,14 +1325,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -1850,7 +1942,7 @@
         "name": "Aurora Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 11.4,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -1865,14 +1957,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -2482,7 +2574,7 @@
         "name": "Fort Collins Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 11.0,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -2497,14 +2589,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -3114,7 +3206,7 @@
         "name": "Lakewood Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 11.0,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -3129,14 +3221,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -3746,7 +3838,7 @@
         "name": "Thornton Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.9,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -3761,14 +3853,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -4378,7 +4470,7 @@
         "name": "Arvada Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.8,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -4393,14 +4485,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -5010,7 +5102,7 @@
         "name": "Westminster Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.8,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -5025,14 +5117,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -5642,7 +5734,7 @@
         "name": "Greeley Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.8,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -5657,14 +5749,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -6274,7 +6366,7 @@
         "name": "Pueblo Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.8,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -6289,14 +6381,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -6906,7 +6998,7 @@
         "name": "Centennial Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.8,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -6921,14 +7013,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -7538,7 +7630,7 @@
         "name": "Boulder Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.8,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -7553,14 +7645,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -8170,7 +8262,7 @@
         "name": "Longmont Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.7,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -8185,14 +8277,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -8802,7 +8894,7 @@
         "name": "Castle Rock Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.6,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -8817,14 +8909,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -9434,7 +9526,7 @@
         "name": "Loveland Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.6,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -9449,14 +9541,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -10066,7 +10158,7 @@
         "name": "Broomfield Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.6,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -10081,14 +10173,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -10698,7 +10790,7 @@
         "name": "Grand Junction Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.6,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -10713,14 +10805,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -11330,7 +11422,7 @@
         "name": "Commerce Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.6,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -11345,14 +11437,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -11962,7 +12054,7 @@
         "name": "Parker Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.5,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -11977,14 +12069,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -12594,7 +12686,7 @@
         "name": "Littleton Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.4,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -12609,14 +12701,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -13226,7 +13318,7 @@
         "name": "Brighton Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.4,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -13241,14 +13333,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -13858,7 +13950,7 @@
         "name": "Windsor Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.3,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -13873,14 +13965,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -14490,7 +14582,7 @@
         "name": "Northglenn Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.3,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -14505,14 +14597,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -15122,7 +15214,7 @@
         "name": "Erie Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.3,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -15137,14 +15229,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -15754,7 +15846,7 @@
         "name": "Englewood Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.3,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -15769,14 +15861,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -16386,7 +16478,7 @@
         "name": "Wheat Ridge Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.2,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -16401,14 +16493,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -17018,7 +17110,7 @@
         "name": "Lafayette Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.2,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -17033,14 +17125,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -17650,7 +17742,7 @@
         "name": "Fountain Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.2,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -17665,14 +17757,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {

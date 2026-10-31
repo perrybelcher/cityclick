@@ -2,633 +2,707 @@
   {
     "slug": "al/huntsville",
     "cityId": "0137000",
-    "countyFips": "01370",
+    "countyFips": "01089",
     "name": "Huntsville",
     "stateCode": "al",
     "stateName": "Alabama",
-    "countyName": "Huntsville Metropolitan Area",
+    "countyName": "Madison County",
     "lat": 34.69772,
     "lng": -86.67667,
     "primaryZips": [
-      "70100"
+      "35801",
+      "35806",
+      "35805",
+      "35802",
+      "35816",
+      "35811",
+      "35803",
+      "35810",
+      "35824",
+      "35808",
+      "35896"
     ],
     "demographics": {
       "population": 225564,
-      "popGrowth5YrPct": 4.2,
-      "medianHouseholdIncome": 88923,
-      "perCapitaIncome": 51575,
+      "medianHouseholdIncome": 70778,
+      "perCapitaIncome": 44733,
       "medianAge": 36.4,
-      "daytimeWorkerPop": 139850,
-      "daytimePopSurgePct": 8.5,
-      "medianGrossRent": 1710,
-      "medianHomeValue": 373477,
+      "medianGrossRent": 1078,
+      "medianHomeValue": 263100,
       "provenance": {
-        "sourceName": "US Census Bureau ACS 5-Year (DP03/DP04/DP05) & PopEst",
-        "sourceUrl": "https://api.census.gov/data/2023/acs/acs5",
-        "datasetVintage": "2023-5YR",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "sourceName": "US Census Bureau ACS 5-Year Estimates 2023 (Table-Based Summary File)",
+        "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/",
+        "datasetVintage": "ACS-2023-5YR",
+        "verifiedAt": "2026-10-31T00:00:00Z",
         "granularity": "place"
-      }
-    },
-    "laborAndEconomy": {
-      "unemploymentRatePct": 3.8,
-      "avgWeeklyWageAllIndustries": 1340,
-      "newHousingPermits12Mo": 1692,
-      "permitsPer1kResidents": 7.5,
-      "femaRiskScore": 28.0,
-      "provenance": {
-        "sourceName": "BLS Local Area Unemployment Statistics (LAUS) & Census BPS",
-        "sourceUrl": "https://www.bls.gov/lau/",
-        "datasetVintage": "2024-M08",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
-      }
+      },
+      "popChange2020to2023Pct": 4.9,
+      "popChangeBasis": "Census Population Estimates, April 2020 base to July 2023"
     },
     "industries": [
       {
         "naicsCode": "722515",
         "slug": "coffee-shops",
         "label": "Coffee & Snack Shops",
-        "establishments": 48,
-        "per10kResidents": 2.13,
-        "usAvgPer10k": 2.15,
-        "saturationIndex": 99,
+        "establishments": 51,
+        "per10kResidents": 2.37,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 112,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Huntsville."
+          "evidenceQuote": "51 employer establishments (NAICS 722515) across 11 ZIP codes whose USPS city is Huntsville, AL; density uses ACS 2023 ZCTA population (214,900). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722511",
         "slug": "restaurants",
         "label": "Full-Service Restaurants",
-        "establishments": 153,
-        "per10kResidents": 6.78,
-        "usAvgPer10k": 6.8,
-        "saturationIndex": 100,
+        "establishments": 173,
+        "per10kResidents": 8.05,
+        "usAvgPer10k": 7.44,
+        "saturationIndex": 108,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Huntsville."
+          "evidenceQuote": "173 employer establishments (NAICS 722511) across 11 ZIP codes whose USPS city is Huntsville, AL; density uses ACS 2023 ZCTA population (214,900). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722513",
         "slug": "fast-food",
-        "label": "Fast Food Restaurants",
-        "establishments": 162,
-        "per10kResidents": 7.18,
-        "usAvgPer10k": 7.2,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Limited-Service / Fast Food Restaurants",
+        "establishments": 250,
+        "per10kResidents": 11.63,
+        "usAvgPer10k": 7.75,
+        "saturationIndex": 150,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Huntsville."
+          "evidenceQuote": "250 employer establishments (NAICS 722513) across 11 ZIP codes whose USPS city is Huntsville, AL; density uses ACS 2023 ZCTA population (214,900). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722410",
         "slug": "bars-taverns",
-        "label": "Bars & Drinking Places",
-        "establishments": 42,
-        "per10kResidents": 1.86,
-        "usAvgPer10k": 1.85,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Drinking Places (Alcoholic Beverages)",
+        "establishments": 26,
+        "per10kResidents": 1.21,
+        "usAvgPer10k": 0.9,
+        "saturationIndex": 134,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Huntsville."
-        }
-      },
-      {
-        "naicsCode": "812111",
-        "slug": "barber-shops",
-        "label": "Barber Shops",
-        "establishments": 30,
-        "per10kResidents": 1.33,
-        "usAvgPer10k": 1.35,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Huntsville."
+          "evidenceQuote": "26 employer establishments (NAICS 722410) across 11 ZIP codes whose USPS city is Huntsville, AL; density uses ACS 2023 ZCTA population (214,900). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812112",
         "slug": "beauty-salons",
         "label": "Beauty Salons & Hair Studios",
-        "establishments": 77,
-        "per10kResidents": 3.41,
-        "usAvgPer10k": 3.4,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 62,
+        "per10kResidents": 2.89,
+        "usAvgPer10k": 2.31,
+        "saturationIndex": 125,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Huntsville."
+          "evidenceQuote": "62 employer establishments (NAICS 812112) across 11 ZIP codes whose USPS city is Huntsville, AL; density uses ACS 2023 ZCTA population (214,900). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812113",
         "slug": "nail-salons",
         "label": "Nail Salons",
-        "establishments": 47,
-        "per10kResidents": 2.08,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 10,
+        "per10kResidents": 0.47,
+        "usAvgPer10k": 0.86,
+        "saturationIndex": 54,
+        "status": "underserved",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Huntsville."
+          "evidenceQuote": "10 employer establishments (NAICS 812113) across 11 ZIP codes whose USPS city is Huntsville, AL; density uses ACS 2023 ZCTA population (214,900). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "713940",
         "slug": "gyms-fitness",
-        "label": "Fitness & Recreational Gyms",
-        "establishments": 28,
-        "per10kResidents": 1.24,
-        "usAvgPer10k": 1.25,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Fitness & Recreational Sports Centers",
+        "establishments": 44,
+        "per10kResidents": 2.05,
+        "usAvgPer10k": 1.0,
+        "saturationIndex": 205,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Huntsville."
+          "evidenceQuote": "44 employer establishments (NAICS 713940) across 11 ZIP codes whose USPS city is Huntsville, AL; density uses ACS 2023 ZCTA population (214,900). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812910",
         "slug": "pet-care",
-        "label": "Pet Care & Grooming",
-        "establishments": 21,
-        "per10kResidents": 0.93,
-        "usAvgPer10k": 0.95,
-        "saturationIndex": 98,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Pet Care & Grooming Services",
+        "establishments": 7,
+        "per10kResidents": 0.33,
+        "usAvgPer10k": 0.46,
+        "saturationIndex": 70,
+        "status": "underserved",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Huntsville."
+          "evidenceQuote": "7 employer establishments (NAICS 812910) across 11 ZIP codes whose USPS city is Huntsville, AL; density uses ACS 2023 ZCTA population (214,900). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541940",
         "slug": "veterinary",
-        "label": "Veterinary Services",
-        "establishments": 24,
-        "per10kResidents": 1.06,
-        "usAvgPer10k": 1.05,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Veterinary Services & Animal Hospitals",
+        "establishments": 28,
+        "per10kResidents": 1.3,
+        "usAvgPer10k": 0.69,
+        "saturationIndex": 189,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Huntsville."
+          "evidenceQuote": "28 employer establishments (NAICS 541940) across 11 ZIP codes whose USPS city is Huntsville, AL; density uses ACS 2023 ZCTA population (214,900). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "811111",
         "slug": "auto-repair",
         "label": "General Automotive Repair",
-        "establishments": 108,
-        "per10kResidents": 4.79,
-        "usAvgPer10k": 4.8,
-        "saturationIndex": 100,
+        "establishments": 48,
+        "per10kResidents": 2.23,
+        "usAvgPer10k": 2.2,
+        "saturationIndex": 102,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Huntsville."
+          "evidenceQuote": "48 employer establishments (NAICS 811111) across 11 ZIP codes whose USPS city is Huntsville, AL; density uses ACS 2023 ZCTA population (214,900). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "811192",
         "slug": "car-washes",
-        "label": "Car Washes & Detailing",
-        "establishments": 15,
-        "per10kResidents": 0.66,
-        "usAvgPer10k": 0.65,
-        "saturationIndex": 102,
+        "label": "Car Washes & Auto Detailing",
+        "establishments": 6,
+        "per10kResidents": 0.28,
+        "usAvgPer10k": 0.35,
+        "saturationIndex": 80,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Huntsville."
-        }
-      },
-      {
-        "naicsCode": "812310",
-        "slug": "laundromats",
-        "label": "Coin Laundromats",
-        "establishments": 12,
-        "per10kResidents": 0.53,
-        "usAvgPer10k": 0.55,
-        "saturationIndex": 97,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Huntsville."
-        }
-      },
-      {
-        "naicsCode": "812320",
-        "slug": "dry-cleaners",
-        "label": "Dry Cleaning & Laundry",
-        "establishments": 19,
-        "per10kResidents": 0.84,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Huntsville."
+          "evidenceQuote": "6 employer establishments (NAICS 811192) across 11 ZIP codes whose USPS city is Huntsville, AL; density uses ACS 2023 ZCTA population (214,900). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621210",
         "slug": "dentists",
         "label": "Offices of Dentists",
-        "establishments": 88,
-        "per10kResidents": 3.9,
-        "usAvgPer10k": 3.9,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 104,
+        "per10kResidents": 4.84,
+        "usAvgPer10k": 3.89,
+        "saturationIndex": 125,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Huntsville."
+          "evidenceQuote": "104 employer establishments (NAICS 621210) across 11 ZIP codes whose USPS city is Huntsville, AL; density uses ACS 2023 ZCTA population (214,900). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621310",
         "slug": "chiropractors",
         "label": "Offices of Chiropractors",
-        "establishments": 32,
-        "per10kResidents": 1.42,
-        "usAvgPer10k": 1.4,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 34,
+        "per10kResidents": 1.58,
+        "usAvgPer10k": 0.97,
+        "saturationIndex": 163,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Huntsville."
+          "evidenceQuote": "34 employer establishments (NAICS 621310) across 11 ZIP codes whose USPS city is Huntsville, AL; density uses ACS 2023 ZCTA population (214,900). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621340",
         "slug": "physical-therapy",
-        "label": "Physical Therapy Clinics",
-        "establishments": 35,
-        "per10kResidents": 1.55,
-        "usAvgPer10k": 1.55,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Physical, Occupational & Speech Therapists",
+        "establishments": 44,
+        "per10kResidents": 2.05,
+        "usAvgPer10k": 1.3,
+        "saturationIndex": 157,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Huntsville."
+          "evidenceQuote": "44 employer establishments (NAICS 621340) across 11 ZIP codes whose USPS city is Huntsville, AL; density uses ACS 2023 ZCTA population (214,900). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "624410",
         "slug": "daycare",
         "label": "Child Day Care Services",
-        "establishments": 51,
-        "per10kResidents": 2.26,
-        "usAvgPer10k": 2.25,
-        "saturationIndex": 100,
+        "establishments": 39,
+        "per10kResidents": 1.81,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 86,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Huntsville."
+          "evidenceQuote": "39 employer establishments (NAICS 624410) across 11 ZIP codes whose USPS city is Huntsville, AL; density uses ACS 2023 ZCTA population (214,900). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "445120",
         "slug": "convenience-stores",
-        "label": "Convenience Stores",
-        "establishments": 44,
-        "per10kResidents": 1.95,
-        "usAvgPer10k": 1.95,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Convenience Retail Stores",
+        "establishments": 3,
+        "per10kResidents": 0.14,
+        "usAvgPer10k": 0.82,
+        "saturationIndex": 17,
+        "status": "underserved",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Huntsville."
+          "evidenceQuote": "3 employer establishments (NAICS 445120) across 11 ZIP codes whose USPS city is Huntsville, AL; density uses ACS 2023 ZCTA population (214,900). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "448140",
         "slug": "clothing-boutiques",
-        "label": "Family Clothing Stores",
-        "establishments": 37,
-        "per10kResidents": 1.64,
-        "usAvgPer10k": 1.65,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Family Clothing Stores & Boutiques",
+        "establishments": 28,
+        "per10kResidents": 1.3,
+        "usAvgPer10k": 0.65,
+        "saturationIndex": 200,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Huntsville."
-        }
-      },
-      {
-        "naicsCode": "445291",
-        "slug": "bakeries",
-        "label": "Retail Bakeries",
-        "establishments": 19,
-        "per10kResidents": 0.84,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Huntsville."
-        }
-      },
-      {
-        "naicsCode": "453110",
-        "slug": "florists",
-        "label": "Florists & Floral Gift",
-        "establishments": 11,
-        "per10kResidents": 0.49,
-        "usAvgPer10k": 0.5,
-        "saturationIndex": 98,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Huntsville."
+          "evidenceQuote": "28 employer establishments (NAICS 448140) across 11 ZIP codes whose USPS city is Huntsville, AL; density uses ACS 2023 ZCTA population (214,900). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541110",
         "slug": "law-firms",
         "label": "Offices of Lawyers",
-        "establishments": 111,
-        "per10kResidents": 4.92,
-        "usAvgPer10k": 4.9,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 155,
+        "per10kResidents": 7.21,
+        "usAvgPer10k": 4.8,
+        "saturationIndex": 150,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Huntsville."
+          "evidenceQuote": "155 employer establishments (NAICS 541110) across 11 ZIP codes whose USPS city is Huntsville, AL; density uses ACS 2023 ZCTA population (214,900). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541211",
         "slug": "accounting-cpa",
-        "label": "Offices of CPAs",
-        "establishments": 47,
-        "per10kResidents": 2.08,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Offices of Certified Public Accountants",
+        "establishments": 38,
+        "per10kResidents": 1.77,
+        "usAvgPer10k": 1.44,
+        "saturationIndex": 123,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Huntsville."
+          "evidenceQuote": "38 employer establishments (NAICS 541211) across 11 ZIP codes whose USPS city is Huntsville, AL; density uses ACS 2023 ZCTA population (214,900). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "531210",
         "slug": "real-estate-agencies",
-        "label": "Real Estate Brokerages",
-        "establishments": 86,
-        "per10kResidents": 3.81,
-        "usAvgPer10k": 3.8,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Offices of Real Estate Agents & Brokers",
+        "establishments": 142,
+        "per10kResidents": 6.61,
+        "usAvgPer10k": 4.74,
+        "saturationIndex": 139,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Huntsville."
+          "evidenceQuote": "142 employer establishments (NAICS 531210) across 11 ZIP codes whose USPS city is Huntsville, AL; density uses ACS 2023 ZCTA population (214,900). National benchmark = all US ZIP rows / US population."
         }
       }
     ],
     "permitsAndTax": {
-      "generalBusinessLicenseRequired": false,
-      "businessLicenseFeeSummary": "No general city business license required. State of Alabama statutory filings apply.",
-      "businessLicensePortalUrl": "https://www.huntsvilleal.gov/permits",
-      "zoningLookupUrl": "https://www.huntsvilleal.gov/zoning",
-      "buildingPermitPortalUrl": "https://www.huntsvilleal.gov/building",
-      "certificateOfOccupancyFee": "$185 standard municipal inspection fee",
-      "avgPermitWaitDays": 30,
-      "shortTermRentalStatus": "restricted",
-      "foodTruckPermitStatus": "allowed",
-      "combinedSalesTaxRate": 0.055,
       "stateTaxRate": 0.04,
-      "localTaxRate": 0.015,
+      "countyTaxRate": 0.005,
+      "cityTaxRate": 0.045,
+      "specialDistrictTaxRate": 0.0,
+      "localTaxRate": 0.05,
+      "combinedSalesTaxRate": 0.09,
       "provenance": {
-        "sourceName": "Huntsville Municipal Code & State Department of Revenue",
-        "sourceUrl": "https://www.huntsvilleal.gov",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place",
-        "evidenceQuote": "Statutory municipal code standards."
+        "sourceName": "Alabama Dept. of Revenue Local Tax Rate Schedule (4.0% state + 0.5% Madison County + 4.5% City of Huntsville = 9.0%)",
+        "sourceUrl": "https://www.revenue.alabama.gov/sales-use/city-and-county-tax-rates/",
+        "datasetVintage": "2026",
+        "verifiedAt": "2026-10-31T00:00:00Z",
+        "granularity": "place"
       }
     },
-    "topTrafficCorridors": [
-      {
-        "roadName": "Main Arterial Corridor 1",
-        "segmentDescription": "Central Commercial Corridor through Huntsville",
-        "aadt": 27068,
-        "heavyTruckPct": 5.5,
-        "lat": 34.69772,
-        "lng": -86.67667,
-        "year": 2024,
-        "provenance": {
-          "sourceName": "Alabama DOT AADT Database",
-          "sourceUrl": "https://www.transportation.gov/",
-          "datasetVintage": "2024-AADT",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "place"
-        }
-      }
-    ],
-    "marketSignals": {
-      "reportedRetailRentSqFtYr": 43.9,
-      "reportedIndustrialRentSqFtYr": 19.8,
-      "topSearchedNaics30d": [
-        "722515",
-        "713940",
-        "812111"
-      ],
-      "verifiedLocalProsCount": 8
-    },
-    "scores": {
-      "overallViability": 59,
-      "purchasingPower": 56,
-      "growthMomentum": 62,
-      "costEfficiency": 65,
-      "regulatoryFriction": 48
-    },
+    "marketSignals": {},
     "executiveTravel": {
-      "timeZone": "America/Chicago (CT: UTC-06:00)",
+      "timeZone": "America/Chicago",
       "timeZoneAbbr": "CT",
       "utcOffset": "-06:00",
       "primaryAirport": {
-        "name": "Huntsville Regional / Metropolitan Airport",
-        "iata": null,
-        "distanceMiles": 11.1,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
-      },
-      "powerPlugs": {
-        "types": [
-          "Type A (2-pin)",
-          "Type B (3-pin grounded)"
-        ],
-        "voltage": "120V",
-        "frequency": "60Hz",
-        "adapterAdvice": "Visitors from UK, EU, Australia, and Asia require a standard Type A/B plug adapter and dual-voltage converter."
-      },
-      "currency": {
-        "code": "USD",
-        "symbol": "$",
-        "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
-        "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
+        "name": "Huntsville International Airport",
+        "iata": "HSV",
+        "lat": 34.636244,
+        "lng": -86.774378,
+        "distanceMiles": 7.0,
+        "transitToDowntown": null,
+        "source": "OurAirports (public domain) for name, IATA code and coordinates; distance is straight-line from the U.S. Census Gazetteer city center point",
+        "sourceUrl": "https://ourairports.com/data/",
+        "cityCenterMethod": "Census Gazetteer internal point",
+        "retrieved": "2026-10-31"
       },
       "climate": {
-        "summerHighF": 94,
-        "winterLowF": 47,
-        "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
-        "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
+        "summerHighF": 90,
+        "winterLowF": 34,
+        "annualRainfallInches": 57.5,
+        "summerHighBasis": "Average July daily high",
+        "winterLowBasis": "Average January daily low",
+        "source": "Open-Meteo Historical Weather API (ERA5 reanalysis), 2015-2024 average, retrieved 2026-10-31",
+        "sourceUrl": "https://open-meteo.com/en/docs/historical-weather-api"
       },
       "emergency": {
         "emergencyDispatch": "911",
-        "nonEmergencyPolice": "311 or local municipal dispatch",
-        "nearestTraumaHospital": "Huntsville Regional Memorial Hospital",
-        "hospitalAddress": "Medical Center District, Huntsville, AL"
-      },
-      "visitorLogistics": {
-        "tapWaterPotability": "100% Safe municipal drinking water conforming to EPA Safe Drinking Water Act standards.",
-        "salesTaxRefundPolicy": "International travelers may claim state sales tax refunds on qualifying departures at designated airport customs counters.",
-        "rideshareAvailability": "Ubiquitous (Uber and Lyft operational 24/7 across the metropolitan area)."
-      },
-      "provenance": {
-        "sourceName": "FAA Airport Database & International Trade Administration",
-        "sourceUrl": "https://www.trade.gov/",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
+        "nearestTraumaHospital": "Crestwood Medical Center",
+        "hospitalAddress": "One Hospital Dr SE, Huntsville, AL 35801",
+        "cmsFacilityId": "010131",
+        "emergencyServices": true,
+        "source": "CMS Care Compare hospital general information (federal dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma level, ranking or nearest-facility claim.",
+        "erHospitals": [
+          {
+            "name": "Crestwood Medical Center",
+            "address": "One Hospital Dr SE, Huntsville, AL 35801",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "010131",
+            "lat": 34.692317,
+            "lng": -86.572427
+          },
+          {
+            "name": "Huntsville Hospital",
+            "address": "101 Sivley Rd, Huntsville, AL 35801",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "010039"
+          }
+        ],
+        "erHospitalsSource": "CMS Care Compare hospital general information (federal dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma level, ranking or nearest-facility claim."
       }
+    },
+    "housingAndTaxes": {
+      "medianHomeValue": 263100,
+      "medianGrossRent": 1078,
+      "medianRealEstateTaxPaid": 1259,
+      "effectivePropertyTaxRatePct": 0.48,
+      "countyName": "Madison County",
+      "source": "ACS 2023 5-yr: B25077 median home value, B25064 median gross rent, B25103 median real estate taxes paid. Effective rate = B25103 / B25077.",
+      "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/"
+    },
+    "climateNormals": {
+      "peakSummerHighF": 90,
+      "winterLowF": 34,
+      "annualRainfallInches": 57.5,
+      "sourceName": "Open-Meteo Historical Weather API (ERA5 reanalysis), 2015-2024 average, retrieved 2026-10-31",
+      "sourceUrl": "https://open-meteo.com/en/docs/historical-weather-api"
+    },
+    "terrainElevation": {
+      "elevationFeet": 641.5,
+      "elevationMeters": 195.5,
+      "topographyClass": "Cumberland Plateau & Tennessee River Valley",
+      "sourceName": "USGS 3D Elevation Program (3DEP Elevation Point Query Service)",
+      "sourceUrl": "https://epqs.nationalmap.gov/v1/json"
+    },
+    "waterUtility": {
+      "pwsid": "AL0000882",
+      "providerName": "Huntsville Utilities Water Dept.",
+      "populationServed": 310107,
+      "sourceType": "surface water",
+      "source": "U.S. EPA Safe Drinking Water Information System (SDWIS)",
+      "sourceUrl": "https://data.epa.gov/efservice/WATER_SYSTEM/PWSID/AL0000882/JSON",
+      "retrieved": "2026-10-31"
+    },
+    "higherEducation": {
+      "institutionCount": 6,
+      "totalEnrollment": 8748,
+      "institutions": [
+        {
+          "id": 100706,
+          "name": "University of Alabama in Huntsville",
+          "studentSize": 6591,
+          "ownership": "Public",
+          "schoolUrl": "https://www.uah.edu/",
+          "lat": 34.724557,
+          "lng": -86.640449
+        },
+        {
+          "id": 101912,
+          "name": "Oakwood University",
+          "studentSize": 1153,
+          "ownership": "Private nonprofit",
+          "schoolUrl": "https://www2.oakwood.edu/",
+          "lat": 34.756344,
+          "lng": -86.652705
+        },
+        {
+          "id": 101462,
+          "name": "J. F. Drake State Community and Technical College",
+          "studentSize": 755,
+          "ownership": "Public",
+          "schoolUrl": "https://drakestate.edu/",
+          "lat": 34.771858,
+          "lng": -86.572885
+        },
+        {
+          "id": 486707,
+          "name": "Ross Medical Education Center-Huntsville",
+          "studentSize": 132,
+          "ownership": "Private for-profit",
+          "schoolUrl": "https://rosseducation.edu/",
+          "lat": 34.736871,
+          "lng": -86.661349
+        },
+        {
+          "id": 449348,
+          "name": "Huntsville Bible College",
+          "studentSize": 64,
+          "ownership": "Private nonprofit",
+          "schoolUrl": "https://www.huntsvillebiblecollege.org/",
+          "lat": 34.750363,
+          "lng": -86.594888
+        },
+        {
+          "id": 480976,
+          "name": "The Salon Professional Academy-Huntsville",
+          "studentSize": 53,
+          "ownership": "Private for-profit",
+          "schoolUrl": "https://www.huntsvilletspa.com/",
+          "lat": 34.736145,
+          "lng": -86.655724
+        }
+      ],
+      "sourceName": "U.S. Department of Education College Scorecard",
+      "sourceUrl": "https://collegescorecard.ed.gov/",
+      "retrieved": "2026-10-31"
+    },
+    "evInfrastructure": {
+      "totalStations": 49,
+      "totalChargingPorts": 123,
+      "dcFastPorts": 25,
+      "level2Ports": 98,
+      "sampleStations": [
+        {
+          "name": "Huntsville, AL - Tesla Supercharger",
+          "address": "5909 University Dr, Huntsville, AL 35806",
+          "network": "Tesla",
+          "dcFastPorts": 12,
+          "level2Ports": 0,
+          "lat": 34.739057,
+          "lng": -86.666285
+        },
+        {
+          "name": "The Collins",
+          "address": "1100 Enterprise Way North West, Huntsville, AL 35806",
+          "network": "Blink Network",
+          "dcFastPorts": 0,
+          "level2Ports": 11,
+          "lat": 34.73881,
+          "lng": -86.67732
+        },
+        {
+          "name": "LaQuinta Inn By Wyndham Huntsville Research Park",
+          "address": "4870 University Dr NW, Huntsville, AL 35816",
+          "network": "ENVIROSPARK",
+          "dcFastPorts": 0,
+          "level2Ports": 11,
+          "lat": 34.73853,
+          "lng": -86.65451
+        },
+        {
+          "name": "The Kelvin Apartments",
+          "address": "6170 Kitt Lane NW, Huntsville, AL 35806",
+          "network": "Blink Network",
+          "dcFastPorts": 0,
+          "level2Ports": 6,
+          "lat": 34.7389,
+          "lng": -86.674233
+        },
+        {
+          "name": "Fairfield Inn & Suites Huntsville Redstone",
+          "address": "1700 Rideout Rd SW, Huntsville, AL 35808",
+          "network": "ENVIROSPARK",
+          "dcFastPorts": 0,
+          "level2Ports": 6,
+          "lat": 34.69533,
+          "lng": -86.67236
+        }
+      ],
+      "sourceName": "U.S. Department of Energy / NLR Alternative Fuels Data Center (AFDC)",
+      "sourceUrl": "https://afdc.energy.gov/stations",
+      "retrieved": "2026-10-31"
+    },
+    "nationalParks": {
+      "parks": [
+        {
+          "parkCode": "ruca",
+          "fullName": "Russell Cave National Monument",
+          "designation": "National Monument",
+          "distanceMiles": 52.4,
+          "description": "Russell Cave National Monument is an archeological site with one of the most complete records of prehistoric cultures in the Southeast. In the 1950s, archeologists uncovered a large quantity of artifacts representing 12,000 years of use...",
+          "url": "https://www.nps.gov/ruca/index.htm",
+          "lat": 34.974021,
+          "lng": -85.815603
+        }
+      ],
+      "sourceName": "U.S. National Park Service (NPS) API",
+      "sourceUrl": "https://www.nps.gov/",
+      "retrieved": "2026-10-31"
+    },
+    "upcomingEvents": {
+      "totalMatchingEvents": 222,
+      "events": [
+        {
+          "id": "1AOZkf_Gke-we5K",
+          "name": "Huntsville Havoc Vs. Macon Mayhem",
+          "date": "2026-10-31",
+          "venueName": "Von Braun Center Propst Arena",
+          "category": "Sports",
+          "url": "https://www.ticketmaster.com/huntsville-havoc-vs-macon-mayhem-huntsville-alabama-10-31-2026/event/20006519A1C822D3"
+        },
+        {
+          "id": "rZ7HnEZ1AfuUuf",
+          "name": "Dark & Scary",
+          "date": "2026-10-31",
+          "venueName": "Huntsville Levity Live",
+          "category": "Live Event",
+          "url": "https://www.ticketweb.com/event/dark-scary-huntsville-levity-live-tickets/14376354"
+        },
+        {
+          "id": "rZ7HnEZ1AfaNaf",
+          "name": "Jonnie W",
+          "date": "2026-11-01",
+          "venueName": "Huntsville Levity Live",
+          "category": "Live Event",
+          "url": "https://www.ticketweb.com/event/jonnie-w-huntsville-levity-live-tickets/14263254"
+        },
+        {
+          "id": "1kFZv0fzGA2DNMK",
+          "name": "So Good! The Neil Diamond Experience starring Robert Neary",
+          "date": "2026-11-01",
+          "venueName": "VBC Mars Music Hall",
+          "category": "Music",
+          "url": "https://www.ticketmaster.com/so-good-the-neil-diamond-experience-huntsville-alabama-11-01-2026/event/200064538FEE3DD3"
+        },
+        {
+          "id": "rZ7HnEZ1A4Z-fK",
+          "name": "Randy Feltface: Gimmick",
+          "date": "2026-11-04",
+          "venueName": "Huntsville Levity Live",
+          "category": "Arts & Theatre",
+          "url": "https://www.ticketweb.com/event/randy-feltface-gimmick-huntsville-levity-live-tickets/15021513"
+        }
+      ],
+      "sourceName": "Ticketmaster Discovery API v2",
+      "sourceUrl": "https://developer.ticketmaster.com/",
+      "retrieved": "2026-10-31"
     }
   },
   {
@@ -1218,7 +1292,7 @@
         "name": "Birmingham Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 11.1,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -1233,14 +1307,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -1850,7 +1924,7 @@
         "name": "Montgomery Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 11.1,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -1865,14 +1939,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -2482,7 +2556,7 @@
         "name": "Mobile Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 11.0,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -2497,14 +2571,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -3114,7 +3188,7 @@
         "name": "Tuscaloosa Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.8,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -3129,14 +3203,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -3746,7 +3820,7 @@
         "name": "Hoover Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.7,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -3761,14 +3835,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -4378,7 +4452,7 @@
         "name": "Auburn Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.7,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -4393,14 +4467,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -5010,7 +5084,7 @@
         "name": "Dothan Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.6,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -5025,14 +5099,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -5642,7 +5716,7 @@
         "name": "Madison Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.5,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -5657,14 +5731,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -6274,7 +6348,7 @@
         "name": "Decatur Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.5,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -6289,14 +6363,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -6906,7 +6980,7 @@
         "name": "Florence Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.4,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -6921,14 +6995,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -7538,7 +7612,7 @@
         "name": "Prattville Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.3,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -7553,14 +7627,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -8170,7 +8244,7 @@
         "name": "Phenix Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.3,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -8185,14 +8259,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -8802,7 +8876,7 @@
         "name": "Vestavia Hills Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.3,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -8817,14 +8891,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -9434,7 +9508,7 @@
         "name": "Alabaster Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.3,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -9449,14 +9523,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -10066,7 +10140,7 @@
         "name": "Opelika Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.3,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -10081,14 +10155,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -10698,7 +10772,7 @@
         "name": "Gadsden Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.2,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -10713,14 +10787,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -11330,7 +11404,7 @@
         "name": "Northport Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.2,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -11345,14 +11419,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -11962,7 +12036,7 @@
         "name": "Athens Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.2,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -11977,14 +12051,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -12594,7 +12668,7 @@
         "name": "Daphne Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.2,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -12609,14 +12683,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -13226,7 +13300,7 @@
         "name": "Enterprise Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.2,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -13241,14 +13315,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -13858,7 +13932,7 @@
         "name": "Homewood Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.2,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -13873,14 +13947,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -14490,7 +14564,7 @@
         "name": "Trussville Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.2,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -14505,14 +14579,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {

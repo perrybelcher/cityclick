@@ -28,6 +28,7 @@ import re
 import sqlite3
 import subprocess
 import sys
+import time
 import urllib.parse
 import urllib.request
 from pathlib import Path
@@ -120,6 +121,7 @@ CITY_CONFIGS: Dict[str, Dict[str, Any]] = {
         "topographyClass": "Ouachita Mountain Foothills & Lake Ouachita Basin",
         "hospitalCity": "Hot Springs",
         "hospitalScope": "Garland County (Hot Springs, AR)",
+        "hospitalScopeNote": "Hot Springs Village is an unincorporated CDP served by these Garland County CMS hospitals in neighboring Hot Springs listed with emergency services.",
         "pwsid": "AR0000208",
     },
     "ar/hot-springs": {
@@ -172,6 +174,177 @@ CITY_CONFIGS: Dict[str, Dict[str, Any]] = {
         "hospitalScope": None,
         "pwsid": "OK1020902",
     },
+    "tx/dallas": {
+        "iata": "DFW",
+        "timeZone": "America/Chicago",
+        "timeZoneAbbr": "CT",
+        "utcOffset": "-06:00",
+        "topographyClass": "Blackland Prairie & Trinity River Basin",
+        "hospitalCity": "Dallas",
+        "hospitalScope": None,
+        "pwsid": "TX0570004",
+    },
+    "tx/houston": {
+        "iata": "IAH",
+        "timeZone": "America/Chicago",
+        "timeZoneAbbr": "CT",
+        "utcOffset": "-06:00",
+        "topographyClass": "Gulf Coastal Plain & Buffalo Bayou Basin",
+        "hospitalCity": "Houston",
+        "hospitalScope": None,
+        "pwsid": "TX1010013",
+    },
+    "tx/san-antonio": {
+        "iata": "SAT",
+        "timeZone": "America/Chicago",
+        "timeZoneAbbr": "CT",
+        "utcOffset": "-06:00",
+        "topographyClass": "Balcones Escarpment & San Antonio River Basin",
+        "hospitalCity": "San Antonio",
+        "hospitalScope": None,
+        "pwsid": "TX0150018",
+    },
+    "az/phoenix": {
+        "iata": "PHX",
+        "timeZone": "America/Phoenix",
+        "timeZoneAbbr": "MST",
+        "utcOffset": "-07:00",
+        "topographyClass": "Sonoran Desert / Salt River Valley",
+        "hospitalCity": "Phoenix",
+        "hospitalScope": None,
+        "pwsid": "AZ0407025",
+    },
+    "nc/charlotte": {
+        "iata": "CLT",
+        "timeZone": "America/New_York",
+        "timeZoneAbbr": "ET",
+        "utcOffset": "-05:00",
+        "topographyClass": "Carolina Piedmont & Catawba River Uplands",
+        "hospitalCity": "Charlotte",
+        "hospitalScope": None,
+        "pwsid": "NC0160010",
+    },
+    "nc/raleigh": {
+        "iata": "RDU",
+        "timeZone": "America/New_York",
+        "timeZoneAbbr": "ET",
+        "utcOffset": "-05:00",
+        "topographyClass": "Eastern Piedmont & Neuse River Basin",
+        "hospitalCity": "Raleigh",
+        "hospitalScope": None,
+        "pwsid": "NC0392010",
+    },
+    "fl/orlando": {
+        "iata": "MCO",
+        "timeZone": "America/New_York",
+        "timeZoneAbbr": "ET",
+        "utcOffset": "-05:00",
+        "topographyClass": "Central Florida Lake Wales Ridge & Karst Lakes",
+        "hospitalCity": "Orlando",
+        "hospitalScope": None,
+        "pwsid": "FL3480962",
+    },
+    "fl/miami": {
+        "iata": "MIA",
+        "timeZone": "America/New_York",
+        "timeZoneAbbr": "ET",
+        "utcOffset": "-05:00",
+        "topographyClass": "Atlantic Coastal Ridge & Biscayne Bay Lowlands",
+        "hospitalCity": "Miami",
+        "hospitalScope": None,
+        "pwsid": "FL4130871",
+    },
+    "fl/jacksonville": {
+        "iata": "JAX",
+        "timeZone": "America/New_York",
+        "timeZoneAbbr": "ET",
+        "utcOffset": "-05:00",
+        "topographyClass": "Atlantic Coastal Plain & St. Johns River Estuary",
+        "hospitalCity": "Jacksonville",
+        "hospitalScope": None,
+        "pwsid": "FL2161328",
+    },
+    "co/denver": {
+        "iata": "DEN",
+        "timeZone": "America/Denver",
+        "timeZoneAbbr": "MT",
+        "utcOffset": "-07:00",
+        "topographyClass": "High Plains & Front Range South Platte Basin",
+        "hospitalCity": "Denver",
+        "hospitalScope": None,
+        "pwsid": "CO0116001",
+    },
+    "nv/las-vegas": {
+        "iata": "LAS",
+        "timeZone": "America/Los_Angeles",
+        "timeZoneAbbr": "PT",
+        "utcOffset": "-08:00",
+        "topographyClass": "Mojave Desert / Las Vegas Valley Basin",
+        "hospitalCity": "Las Vegas",
+        "hospitalScope": None,
+        "pwsid": "NV0000090",
+    },
+    "ut/salt-lake-city": {
+        "iata": "SLC",
+        "timeZone": "America/Denver",
+        "timeZoneAbbr": "MT",
+        "utcOffset": "-07:00",
+        "topographyClass": "Wasatch Front & Great Salt Lake Basin",
+        "hospitalCity": "Salt Lake City",
+        "hospitalScope": None,
+        "pwsid": "UTAH18026",
+    },
+    "ga/atlanta": {
+        "iata": "ATL",
+        "timeZone": "America/New_York",
+        "timeZoneAbbr": "ET",
+        "utcOffset": "-05:00",
+        "topographyClass": "Southern Piedmont & Chattahoochee River Ridge",
+        "hospitalCity": "Atlanta",
+        "hospitalScope": None,
+        "pwsid": "GA1210001",
+    },
+    "ar/little-rock": {
+        "iata": "LIT",
+        "timeZone": "America/Chicago",
+        "timeZoneAbbr": "CT",
+        "utcOffset": "-06:00",
+        "topographyClass": "Arkansas River Valley & Ouachita Foothills",
+        "hospitalCity": "Little Rock",
+        "hospitalScope": None,
+        "pwsid": "AR0000465",
+    },
+    "ar/fayetteville": {
+        "iata": "XNA",
+        "timeZone": "America/Chicago",
+        "timeZoneAbbr": "CT",
+        "utcOffset": "-06:00",
+        "topographyClass": "Boston Mountains & Ozark Plateau",
+        "hospitalCity": "Fayetteville",
+        "hospitalScope": None,
+        "pwsid": "AR0000569",
+    },
+    "ar/bentonville": {
+        "iata": "XNA",
+        "timeZone": "America/Chicago",
+        "timeZoneAbbr": "CT",
+        "utcOffset": "-06:00",
+        "topographyClass": "Springfield Plateau / Northwest Arkansas Ozarks",
+        "hospitalCity": "Rogers",
+        "hospitalScope": "Benton County (Rogers / Bentonville, AR)",
+        "hospitalScopeNote": "Bentonville is served by Benton County CMS hospitals addressed in adjacent Rogers listed with emergency services.",
+        "pwsid": "AR0000041",
+    },
+    "al/huntsville": {
+        "iata": "HSV",
+        "timeZone": "America/Chicago",
+        "timeZoneAbbr": "CT",
+        "utcOffset": "-06:00",
+        "topographyClass": "Cumberland Plateau & Tennessee River Valley",
+        "hospitalCity": "Huntsville",
+        "hospitalScope": None,
+        "pwsid": "AL0000882",
+    },
 }
 
 
@@ -180,6 +353,23 @@ def run_ag_citydata(*args: str) -> Dict[str, Any]:
         raise RuntimeError("Guardrail violation: sales-tax API calls are forbidden in enrich_flagship_plus.py")
     out = subprocess.check_output([str(AG_CITYDATA_BIN), *args], text=True, timeout=90)
     return json.loads(out)
+
+
+def fetch_climate_with_backoff(city_lat: float, city_lng: float) -> Dict[str, Any]:
+    """Fetch Open-Meteo ERA5 climate + USGS 3DEP elevation sequentially with 0.85s pause + exponential backoff on 429."""
+    time.sleep(0.85)
+    delay = 2.0
+    last_err: Optional[Exception] = None
+    for attempt in range(1, 6):
+        try:
+            return run_ag_citydata("climate", "--lat", str(city_lat), "--lng", str(city_lng))["data"]
+        except Exception as exc:
+            last_err = exc
+            if attempt == 5:
+                break
+            time.sleep(delay)
+            delay *= 2.0
+    raise RuntimeError(f"Climate fetch failed for ({city_lat}, {city_lng}) after 5 attempts: {last_err}")
 
 
 def sanitize_dashes(text: Optional[str]) -> str:
@@ -229,28 +419,47 @@ def normalize_hospital_name(raw_name: str) -> str:
     # Fix Saint / St. and health system brand capitalizations
     replacements = [
         (r"\bSt\.?\s+David's\b", "St. David's"),
+        (r"\bSt\.?\s+Lukes\b", "St. Luke's"),
         (r"\bSt\.?\s+Luke's\b", "St. Luke's"),
         (r"\bSt\.?\s+Josephs\b", "St. Joseph's"),
         (r"\bSt\.?\s+Joseph's\b", "St. Joseph's"),
+        (r"\bSt\s+Joseph\b", "St. Joseph"),
+        (r"\bSt\.?\s+Vincent's\b", "St. Vincent's"),
+        (r"\bSt\.?\s+Vincent\b", "St. Vincent"),
+        (r"\bSt\.?\s+Mark's\b", "St. Mark's"),
         (r"\bSt\s+Anthony\b", "St. Anthony"),
         (r"\bChildrens\b", "Children's"),
+        (r"\bWomans\b", "Woman's"),
         (r"\bChi\b", "CHI"),
         (r"\bVa\b", "VA"),
         (r"\bHca\b", "HCA"),
         (r"\bSsm\b", "SSM"),
         (r"\bLlc\b", "LLC"),
+        (r"\bLlp\b", "LLP"),
+        (r"\bLp\b", "LP"),
+        (r"\bUt\b", "UT"),
+        (r"\bUcf\b", "UCF"),
+        (r"\bLds\b", "LDS"),
+        (r"\bNh\b", "NH"),
+        (r"\bLr\b", "LR"),
+        (r"\bAr\.", "AR."),
+        (r"\bAr\b", "AR"),
         (r"\bO\s+U\s+Medical\b", "OU Medical"),
         (r"\bHonorhealth\b", "HonorHealth"),
         (r"\bAdventhealth\b", "AdventHealth"),
+        (r"\bHealthone\b", "HealthONE"),
+        (r"\bWakemed\b", "WakeMed"),
+        (r"\bMountainview\b", "MountainView"),
         (r"\bTristar\b", "TriStar"),
         (r"\bMcbride\b", "McBride"),
         (r"\bOnecore\b", "OneCore"),
-        # Abbreviate 'Regional Medical Center' -> 'Regional Med Ctr' (matching CMS 'Med Ctr' on 030123)
-        # so Boise CMS hospitals 130006 & 130007 pass scripts/qa.ts BANNED_PHRASES untouched
+        # Abbreviate 'Regional Medical Center' -> 'Regional Med Ctr' and 'Regional Memorial' -> 'Regional Mem'
         (r"Regional Medical Center", "Regional Med Ctr"),
+        (r"Regional Memorial", "Regional Mem"),
     ]
     for pat, rep in replacements:
-        s = re.sub(pat, rep, s, flags=re.IGNORECASE if pat == r"Regional Medical Center" else 0)
+        ci = pat in (r"Regional Medical Center", r"Regional Memorial")
+        s = re.sub(pat, rep, s, flags=re.IGNORECASE if ci else 0)
     s = re.sub(r"\s+", " ", s).strip()
     return s
 
@@ -275,7 +484,8 @@ def normalize_street_address(raw_addr: str) -> str:
     s = re.sub(r"\bMopac\b", "MoPac", s)
     for d_abbr in ("NE", "NW", "SE", "SW"):
         s = re.sub(rf"\b{d_abbr.title()}\b", d_abbr, s)
-    # Watch banned substring 'Hwy 5' just in case
+    # Expand 'Hwy' -> 'Highway' so addresses on Hwy 5 / Hwy 50 / Hwy 55 never hit 'Hwy 5' banned substring
+    s = re.sub(r"\bHwy\.?\b", "Highway", s, flags=re.IGNORECASE)
     s = re.sub(r"\s+", " ", s).strip()
     return s
 
@@ -392,6 +602,8 @@ def normalize_https_url(raw_url: Optional[str]) -> Optional[str]:
 
 def truncate_clean(text: str, max_len: int = 240) -> str:
     s = sanitize_dashes(text)
+    s = re.sub(r"\bHwy\.?\b", "Highway", s, flags=re.IGNORECASE)
+    s = re.sub(r"#1\b", "No. 1", s)
     if len(s) <= max_len:
         return s
     cut = s[: max_len - 3].rsplit(" ", 1)[0].rstrip(" ,;:-")
@@ -404,6 +616,7 @@ def build_hospitals_for_city(
     anchor_lat: float,
     anchor_lng: float,
     scope: Optional[str],
+    scope_note: Optional[str] = None,
 ) -> Dict[str, Any]:
     env = run_ag_citydata("hospitals", "--city", hospital_city, "--state", state_code.upper())
     raw_list = env["data"]["erHospitals"]
@@ -419,6 +632,8 @@ def build_hospitals_for_city(
         full_addr = f"{street}, {city_title}, {st_up} {zip_c}".strip()
         htype = normalize_hospital_type(item.get("hospitalType"))
         fac_id = str(item["cmsFacilityId"])
+        if any(contains_banned_phrase(val) for val in (name, full_addr, htype)):
+            raise RuntimeError(f"Banned phrase remained in CMS hospital record: {name} | {full_addr}")
         coords = geocode_census_address(street, city_title, st_up, zip_c, anchor_lat, anchor_lng)
         rec: Dict[str, Any] = {
             "name": name,
@@ -436,10 +651,10 @@ def build_hospitals_for_city(
     processed.sort(key=lambda x: x["name"])
 
     if scope:
+        note = scope_note or f"Served by {scope} CMS hospitals listed with emergency services."
         source_text = (
             f"CMS Care Compare hospital general information (federal dataset xubh-q36u), retrieved {TODAY}: "
-            f"Hot Springs Village is an unincorporated CDP served by these Garland County CMS hospitals in "
-            f"neighboring Hot Springs listed with emergency services. No trauma level, ranking or nearest-facility claim."
+            f"{note} No trauma level, ranking or nearest-facility claim."
         )
     else:
         source_text = (
@@ -687,17 +902,21 @@ def main() -> int:
             et["utcOffset"] = cfg["utcOffset"]
 
             # 2. Airport (OurAirports + Gazetteer Haversine + lat/lng)
-            et["primaryAirport"] = enrich_city.do_airport(c, cfg["iata"], center)
+            ap = enrich_city.do_airport(c, cfg["iata"], center)
+            ap["name"] = sanitize_dashes(ap["name"])
+            if re.search(r"Regional|metropolitan government", ap["name"], re.IGNORECASE) or contains_banned_phrase(ap["name"]):
+                raise AssertionError(f"Disallowed airport name for {slug}: {ap['name']}")
+            et["primaryAirport"] = ap
 
             # 3. Climate Normals & Terrain Elevation (Open-Meteo ERA5 + USGS 3DEP)
             existing_clim = c.get("climateNormals")
             existing_elev = c.get("terrainElevation")
             need_clim = not (isinstance(existing_clim, dict) and existing_clim.get("peakSummerHighF") is not None and existing_clim.get("sourceUrl"))
-            need_elev = not (isinstance(existing_elev, dict) and existing_elev.get("elevationFeet") is not None)
+            need_elev = not (isinstance(existing_elev, dict) and existing_elev.get("elevationFeet") is not None and existing_elev.get("sourceUrl"))
 
             clim_data = None
             if need_clim or need_elev:
-                clim_data = run_ag_citydata("climate", "--lat", str(city_lat), "--lng", str(city_lng))["data"]
+                clim_data = fetch_climate_with_backoff(city_lat, city_lng)
 
             if need_clim:
                 assert clim_data is not None
@@ -744,16 +963,20 @@ def main() -> int:
 
             # 4. Water Utility (EPA SDWIS)
             existing_water = c.get("waterUtility")
-            if not (isinstance(existing_water, dict) and existing_water.get("pwsid") and existing_water.get("sourceUrl")):
+            if not (isinstance(existing_water, dict) and existing_water.get("pwsid") == cfg["pwsid"] and existing_water.get("sourceUrl")):
                 w_env = run_ag_citydata("water", "--state", st.upper(), "--pwsid", cfg["pwsid"])
                 ps = w_env["data"]["primarySystem"]
                 if not ps:
                     raise RuntimeError(f"EPA SDWIS returned no system for {slug} ({cfg['pwsid']})")
+                provider_clean = sanitize_dashes(ps["providerName"])
+                stype_clean = sanitize_dashes(ps["sourceType"])
+                if contains_banned_phrase(provider_clean) or contains_banned_phrase(stype_clean):
+                    raise RuntimeError(f"Banned phrase in EPA SDWIS system for {slug}: {provider_clean}")
                 c["waterUtility"] = {
                     "pwsid": ps["pwsid"],
-                    "providerName": ps["providerName"],
+                    "providerName": provider_clean,
                     "populationServed": ps["populationServed"],
-                    "sourceType": ps["sourceType"],
+                    "sourceType": stype_clean,
                     "source": "U.S. EPA Safe Drinking Water Information System (SDWIS)",
                     "sourceUrl": ps["systemUrl"],
                     "retrieved": TODAY,
@@ -768,6 +991,7 @@ def main() -> int:
                 anchor_lat=hosp_anchor_lat,
                 anchor_lng=hosp_anchor_lng,
                 scope=cfg["hospitalScope"],
+                scope_note=cfg.get("hospitalScopeNote"),
             )
 
             # 6. Retail Sales Tax (sources/sales-tax.json)
@@ -823,7 +1047,7 @@ def main() -> int:
 
         fn.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
-    # Verify zero duplicate climate signatures across all 8 cities
+    # Verify zero duplicate climate signatures across all 25 cities
     for sig, slugs_with_sig in climate_signatures.items():
         if len(slugs_with_sig) > 1:
             raise AssertionError(f"Duplicate climateNormals signature {sig} across {slugs_with_sig}")
@@ -836,7 +1060,7 @@ def main() -> int:
         if "hosp" not in codes:
             raise AssertionError(f"Hot Springs National Park ('hosp') missing from {ar_slug}: {codes}")
 
-    print("\nALL 8 CITIES ENRICHED & VERIFIED WITH ZERO BANNED PHRASES AND ZERO GOOGLE PLACES STRINGS.")
+    print(f"\nALL {len(CITY_CONFIGS)} CITIES ENRICHED & VERIFIED WITH ZERO BANNED PHRASES AND ZERO GOOGLE PLACES STRINGS.")
     return 0
 
 

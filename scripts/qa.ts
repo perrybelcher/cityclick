@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import { CERTIFIED_FLAGSHIPS } from '../src/config/flagships';
 
 export function runQA(): boolean {
   console.log("=========================================================");
@@ -12,16 +13,13 @@ export function runQA(): boolean {
     return false;
   }
 
-  // The Top Seven Featured Benchmark Models (Mandatory 100% Pass)
-  const flagships = [
-    { file: 'tx/austin/index.html', slug: 'tx/austin', name: 'Austin', state: 'Texas' },
-    { file: 'ar/hot-springs-village/index.html', slug: 'ar/hot-springs-village', name: 'Hot Springs Village', state: 'Arkansas' },
-    { file: 'ar/hot-springs/index.html', slug: 'ar/hot-springs', name: 'Hot Springs', state: 'Arkansas' },
-    { file: 'id/boise/index.html', slug: 'id/boise', name: 'Boise', state: 'Idaho' },
-    { file: 'fl/tampa/index.html', slug: 'fl/tampa', name: 'Tampa', state: 'Florida' },
-    { file: 'az/scottsdale/index.html', slug: 'az/scottsdale', name: 'Scottsdale', state: 'Arizona' },
-    { file: 'tn/nashville/index.html', slug: 'tn/nashville', name: 'Nashville', state: 'Tennessee' }
-  ];
+  // All Certified Indexable Flagship Guides (Mandatory 100% Pass)
+  const flagships = CERTIFIED_FLAGSHIPS.map((f) => ({
+    file: f.file,
+    slug: f.slug,
+    name: f.name,
+    state: f.state,
+  }));
 
   let errors = 0;
 
@@ -99,7 +97,7 @@ export function runQA(): boolean {
   }
 
   // Rule 5: Non-Flagship Crawl Shield Verification (Ensure non-flagships carry noindex)
-  const nonFlagshipSamples = ['ok/oklahoma-city/index.html', 'ok/tulsa/index.html', 'wy/casper/index.html'];
+  const nonFlagshipSamples = ['ok/tulsa/index.html', 'ok/norman/index.html', 'wy/casper/index.html'];
   for (const nf of nonFlagshipSamples) {
     const p = path.join(distDir, nf);
     if (fs.existsSync(p)) {

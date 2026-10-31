@@ -2,633 +2,774 @@
   {
     "slug": "ga/atlanta",
     "cityId": "1304000",
-    "countyFips": "13040",
+    "countyFips": "13121",
     "name": "Atlanta",
     "stateCode": "ga",
     "stateName": "Georgia",
-    "countyName": "Atlanta Metropolitan Area",
+    "countyName": "Fulton County",
     "lat": 33.762909,
     "lng": -84.422675,
     "primaryZips": [
-      "70037"
+      "30339",
+      "30328",
+      "30305",
+      "30318",
+      "30309",
+      "30326",
+      "30342",
+      "30338",
+      "30341",
+      "30303",
+      "30340",
+      "30308"
     ],
     "demographics": {
       "population": 510823,
-      "popGrowth5YrPct": 2.2,
-      "medianHouseholdIncome": 88595,
-      "perCapitaIncome": 51385,
-      "medianAge": 36.4,
-      "daytimeWorkerPop": 316710,
-      "daytimePopSurgePct": 8.5,
-      "medianGrossRent": 1704,
-      "medianHomeValue": 372099,
+      "medianHouseholdIncome": 81938,
+      "perCapitaIncome": 64063,
+      "medianAge": 34.0,
+      "medianGrossRent": 1617,
+      "medianHomeValue": 420600,
       "provenance": {
-        "sourceName": "US Census Bureau ACS 5-Year (DP03/DP04/DP05) & PopEst",
-        "sourceUrl": "https://api.census.gov/data/2023/acs/acs5",
-        "datasetVintage": "2023-5YR",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "sourceName": "US Census Bureau ACS 5-Year Estimates 2023 (Table-Based Summary File)",
+        "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/",
+        "datasetVintage": "ACS-2023-5YR",
+        "verifiedAt": "2026-10-31T00:00:00Z",
         "granularity": "place"
-      }
-    },
-    "laborAndEconomy": {
-      "unemploymentRatePct": 3.8,
-      "avgWeeklyWageAllIndustries": 1340,
-      "newHousingPermits12Mo": 3831,
-      "permitsPer1kResidents": 7.5,
-      "femaRiskScore": 28.0,
-      "provenance": {
-        "sourceName": "BLS Local Area Unemployment Statistics (LAUS) & Census BPS",
-        "sourceUrl": "https://www.bls.gov/lau/",
-        "datasetVintage": "2024-M08",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
-      }
+      },
+      "popChange2020to2023Pct": 2.4,
+      "popChangeBasis": "Census Population Estimates, April 2020 base to July 2023"
     },
     "industries": [
       {
         "naicsCode": "722515",
         "slug": "coffee-shops",
         "label": "Coffee & Snack Shops",
-        "establishments": 110,
-        "per10kResidents": 2.15,
-        "usAvgPer10k": 2.15,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 323,
+        "per10kResidents": 3.11,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 147,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Atlanta."
+          "evidenceQuote": "323 employer establishments (NAICS 722515) across 39 ZIP codes whose USPS city is Atlanta, GA; density uses ACS 2023 ZCTA population (1,038,385). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722511",
         "slug": "restaurants",
         "label": "Full-Service Restaurants",
-        "establishments": 347,
-        "per10kResidents": 6.79,
-        "usAvgPer10k": 6.8,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 1317,
+        "per10kResidents": 12.68,
+        "usAvgPer10k": 7.44,
+        "saturationIndex": 171,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Atlanta."
+          "evidenceQuote": "1317 employer establishments (NAICS 722511) across 39 ZIP codes whose USPS city is Atlanta, GA; density uses ACS 2023 ZCTA population (1,038,385). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722513",
         "slug": "fast-food",
-        "label": "Fast Food Restaurants",
-        "establishments": 368,
-        "per10kResidents": 7.2,
-        "usAvgPer10k": 7.2,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Limited-Service / Fast Food Restaurants",
+        "establishments": 1227,
+        "per10kResidents": 11.82,
+        "usAvgPer10k": 7.75,
+        "saturationIndex": 152,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Atlanta."
+          "evidenceQuote": "1227 employer establishments (NAICS 722513) across 39 ZIP codes whose USPS city is Atlanta, GA; density uses ACS 2023 ZCTA population (1,038,385). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722410",
         "slug": "bars-taverns",
-        "label": "Bars & Drinking Places",
-        "establishments": 95,
-        "per10kResidents": 1.86,
-        "usAvgPer10k": 1.85,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Drinking Places (Alcoholic Beverages)",
+        "establishments": 124,
+        "per10kResidents": 1.19,
+        "usAvgPer10k": 0.9,
+        "saturationIndex": 132,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Atlanta."
-        }
-      },
-      {
-        "naicsCode": "812111",
-        "slug": "barber-shops",
-        "label": "Barber Shops",
-        "establishments": 69,
-        "per10kResidents": 1.35,
-        "usAvgPer10k": 1.35,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Atlanta."
+          "evidenceQuote": "124 employer establishments (NAICS 722410) across 39 ZIP codes whose USPS city is Atlanta, GA; density uses ACS 2023 ZCTA population (1,038,385). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812112",
         "slug": "beauty-salons",
         "label": "Beauty Salons & Hair Studios",
-        "establishments": 174,
-        "per10kResidents": 3.41,
-        "usAvgPer10k": 3.4,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 501,
+        "per10kResidents": 4.82,
+        "usAvgPer10k": 2.31,
+        "saturationIndex": 209,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Atlanta."
+          "evidenceQuote": "501 employer establishments (NAICS 812112) across 39 ZIP codes whose USPS city is Atlanta, GA; density uses ACS 2023 ZCTA population (1,038,385). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812113",
         "slug": "nail-salons",
         "label": "Nail Salons",
-        "establishments": 107,
-        "per10kResidents": 2.09,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 100,
+        "establishments": 95,
+        "per10kResidents": 0.91,
+        "usAvgPer10k": 0.86,
+        "saturationIndex": 107,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Atlanta."
+          "evidenceQuote": "95 employer establishments (NAICS 812113) across 39 ZIP codes whose USPS city is Atlanta, GA; density uses ACS 2023 ZCTA population (1,038,385). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "713940",
         "slug": "gyms-fitness",
-        "label": "Fitness & Recreational Gyms",
-        "establishments": 64,
-        "per10kResidents": 1.25,
-        "usAvgPer10k": 1.25,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Fitness & Recreational Sports Centers",
+        "establishments": 232,
+        "per10kResidents": 2.23,
+        "usAvgPer10k": 1.0,
+        "saturationIndex": 224,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Atlanta."
+          "evidenceQuote": "232 employer establishments (NAICS 713940) across 39 ZIP codes whose USPS city is Atlanta, GA; density uses ACS 2023 ZCTA population (1,038,385). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812910",
         "slug": "pet-care",
-        "label": "Pet Care & Grooming",
-        "establishments": 49,
-        "per10kResidents": 0.96,
-        "usAvgPer10k": 0.95,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Pet Care & Grooming Services",
+        "establishments": 83,
+        "per10kResidents": 0.8,
+        "usAvgPer10k": 0.46,
+        "saturationIndex": 172,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Atlanta."
+          "evidenceQuote": "83 employer establishments (NAICS 812910) across 39 ZIP codes whose USPS city is Atlanta, GA; density uses ACS 2023 ZCTA population (1,038,385). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541940",
         "slug": "veterinary",
-        "label": "Veterinary Services",
-        "establishments": 54,
-        "per10kResidents": 1.06,
-        "usAvgPer10k": 1.05,
-        "saturationIndex": 101,
+        "label": "Veterinary Services & Animal Hospitals",
+        "establishments": 77,
+        "per10kResidents": 0.74,
+        "usAvgPer10k": 0.69,
+        "saturationIndex": 107,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Atlanta."
+          "evidenceQuote": "77 employer establishments (NAICS 541940) across 39 ZIP codes whose USPS city is Atlanta, GA; density uses ACS 2023 ZCTA population (1,038,385). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "811111",
         "slug": "auto-repair",
         "label": "General Automotive Repair",
-        "establishments": 245,
-        "per10kResidents": 4.8,
-        "usAvgPer10k": 4.8,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 134,
+        "per10kResidents": 1.29,
+        "usAvgPer10k": 2.2,
+        "saturationIndex": 59,
+        "status": "underserved",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Atlanta."
+          "evidenceQuote": "134 employer establishments (NAICS 811111) across 39 ZIP codes whose USPS city is Atlanta, GA; density uses ACS 2023 ZCTA population (1,038,385). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "811192",
         "slug": "car-washes",
-        "label": "Car Washes & Detailing",
-        "establishments": 33,
-        "per10kResidents": 0.65,
-        "usAvgPer10k": 0.65,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Car Washes & Auto Detailing",
+        "establishments": 48,
+        "per10kResidents": 0.46,
+        "usAvgPer10k": 0.35,
+        "saturationIndex": 132,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Atlanta."
-        }
-      },
-      {
-        "naicsCode": "812310",
-        "slug": "laundromats",
-        "label": "Coin Laundromats",
-        "establishments": 28,
-        "per10kResidents": 0.55,
-        "usAvgPer10k": 0.55,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Atlanta."
-        }
-      },
-      {
-        "naicsCode": "812320",
-        "slug": "dry-cleaners",
-        "label": "Dry Cleaning & Laundry",
-        "establishments": 43,
-        "per10kResidents": 0.84,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Atlanta."
+          "evidenceQuote": "48 employer establishments (NAICS 811192) across 39 ZIP codes whose USPS city is Atlanta, GA; density uses ACS 2023 ZCTA population (1,038,385). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621210",
         "slug": "dentists",
         "label": "Offices of Dentists",
-        "establishments": 199,
-        "per10kResidents": 3.9,
-        "usAvgPer10k": 3.9,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 525,
+        "per10kResidents": 5.06,
+        "usAvgPer10k": 3.89,
+        "saturationIndex": 130,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Atlanta."
+          "evidenceQuote": "525 employer establishments (NAICS 621210) across 39 ZIP codes whose USPS city is Atlanta, GA; density uses ACS 2023 ZCTA population (1,038,385). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621310",
         "slug": "chiropractors",
         "label": "Offices of Chiropractors",
-        "establishments": 72,
-        "per10kResidents": 1.41,
-        "usAvgPer10k": 1.4,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 176,
+        "per10kResidents": 1.69,
+        "usAvgPer10k": 0.97,
+        "saturationIndex": 174,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Atlanta."
+          "evidenceQuote": "176 employer establishments (NAICS 621310) across 39 ZIP codes whose USPS city is Atlanta, GA; density uses ACS 2023 ZCTA population (1,038,385). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621340",
         "slug": "physical-therapy",
-        "label": "Physical Therapy Clinics",
-        "establishments": 79,
-        "per10kResidents": 1.55,
-        "usAvgPer10k": 1.55,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Physical, Occupational & Speech Therapists",
+        "establishments": 207,
+        "per10kResidents": 1.99,
+        "usAvgPer10k": 1.3,
+        "saturationIndex": 153,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Atlanta."
+          "evidenceQuote": "207 employer establishments (NAICS 621340) across 39 ZIP codes whose USPS city is Atlanta, GA; density uses ACS 2023 ZCTA population (1,038,385). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "624410",
         "slug": "daycare",
         "label": "Child Day Care Services",
-        "establishments": 115,
-        "per10kResidents": 2.25,
-        "usAvgPer10k": 2.25,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 297,
+        "per10kResidents": 2.86,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 135,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Atlanta."
+          "evidenceQuote": "297 employer establishments (NAICS 624410) across 39 ZIP codes whose USPS city is Atlanta, GA; density uses ACS 2023 ZCTA population (1,038,385). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "445120",
         "slug": "convenience-stores",
-        "label": "Convenience Stores",
-        "establishments": 100,
-        "per10kResidents": 1.96,
-        "usAvgPer10k": 1.95,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Convenience Retail Stores",
+        "establishments": 174,
+        "per10kResidents": 1.68,
+        "usAvgPer10k": 0.82,
+        "saturationIndex": 204,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Atlanta."
+          "evidenceQuote": "174 employer establishments (NAICS 445120) across 39 ZIP codes whose USPS city is Atlanta, GA; density uses ACS 2023 ZCTA population (1,038,385). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "448140",
         "slug": "clothing-boutiques",
-        "label": "Family Clothing Stores",
-        "establishments": 84,
-        "per10kResidents": 1.64,
-        "usAvgPer10k": 1.65,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Family Clothing Stores & Boutiques",
+        "establishments": 126,
+        "per10kResidents": 1.21,
+        "usAvgPer10k": 0.65,
+        "saturationIndex": 186,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Atlanta."
-        }
-      },
-      {
-        "naicsCode": "445291",
-        "slug": "bakeries",
-        "label": "Retail Bakeries",
-        "establishments": 43,
-        "per10kResidents": 0.84,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Atlanta."
-        }
-      },
-      {
-        "naicsCode": "453110",
-        "slug": "florists",
-        "label": "Florists & Floral Gift",
-        "establishments": 26,
-        "per10kResidents": 0.51,
-        "usAvgPer10k": 0.5,
-        "saturationIndex": 102,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Atlanta."
+          "evidenceQuote": "126 employer establishments (NAICS 448140) across 39 ZIP codes whose USPS city is Atlanta, GA; density uses ACS 2023 ZCTA population (1,038,385). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541110",
         "slug": "law-firms",
         "label": "Offices of Lawyers",
-        "establishments": 250,
-        "per10kResidents": 4.89,
-        "usAvgPer10k": 4.9,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 1900,
+        "per10kResidents": 18.3,
+        "usAvgPer10k": 4.8,
+        "saturationIndex": 381,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Atlanta."
+          "evidenceQuote": "1900 employer establishments (NAICS 541110) across 39 ZIP codes whose USPS city is Atlanta, GA; density uses ACS 2023 ZCTA population (1,038,385). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541211",
         "slug": "accounting-cpa",
-        "label": "Offices of CPAs",
-        "establishments": 107,
-        "per10kResidents": 2.09,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Offices of Certified Public Accountants",
+        "establishments": 308,
+        "per10kResidents": 2.97,
+        "usAvgPer10k": 1.44,
+        "saturationIndex": 206,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Atlanta."
+          "evidenceQuote": "308 employer establishments (NAICS 541211) across 39 ZIP codes whose USPS city is Atlanta, GA; density uses ACS 2023 ZCTA population (1,038,385). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "531210",
         "slug": "real-estate-agencies",
-        "label": "Real Estate Brokerages",
-        "establishments": 194,
-        "per10kResidents": 3.8,
-        "usAvgPer10k": 3.8,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Offices of Real Estate Agents & Brokers",
+        "establishments": 1393,
+        "per10kResidents": 13.42,
+        "usAvgPer10k": 4.74,
+        "saturationIndex": 283,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Atlanta."
+          "evidenceQuote": "1393 employer establishments (NAICS 531210) across 39 ZIP codes whose USPS city is Atlanta, GA; density uses ACS 2023 ZCTA population (1,038,385). National benchmark = all US ZIP rows / US population."
         }
       }
     ],
     "permitsAndTax": {
-      "generalBusinessLicenseRequired": false,
-      "businessLicenseFeeSummary": "No general city business license required. State of Georgia statutory filings apply.",
-      "businessLicensePortalUrl": "https://www.atlantaga.gov/permits",
-      "zoningLookupUrl": "https://www.atlantaga.gov/zoning",
-      "buildingPermitPortalUrl": "https://www.atlantaga.gov/building",
-      "certificateOfOccupancyFee": "$185 standard municipal inspection fee",
-      "avgPermitWaitDays": 30,
-      "shortTermRentalStatus": "restricted",
-      "foodTruckPermitStatus": "allowed",
-      "combinedSalesTaxRate": 0.055,
       "stateTaxRate": 0.04,
-      "localTaxRate": 0.015,
+      "countyTaxRate": 0.03,
+      "cityTaxRate": 0.01,
+      "specialDistrictTaxRate": 0.009,
+      "localTaxRate": 0.049,
+      "combinedSalesTaxRate": 0.089,
       "provenance": {
-        "sourceName": "Atlanta Municipal Code & State Department of Revenue",
-        "sourceUrl": "https://www.atlantaga.gov",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place",
-        "evidenceQuote": "Statutory municipal code standards."
+        "sourceName": "Georgia Dept. of Revenue Local Sales and Use Tax Rate Chart (City of Atlanta, Fulton County: 4.0% state + 3.0% county/MARTA/ESPLOST + 1.0% Atlanta MOST + 0.9% Atlanta TSPLOST/transit = 8.9%)",
+        "sourceUrl": "https://dor.georgia.gov/taxes/business-taxes/sales-use-tax/sales-tax-rates-general",
+        "datasetVintage": "2026",
+        "verifiedAt": "2026-10-31T00:00:00Z",
+        "granularity": "place"
       }
     },
-    "topTrafficCorridors": [
-      {
-        "roadName": "Main Arterial Corridor 1",
-        "segmentDescription": "Central Commercial Corridor through Atlanta",
-        "aadt": 61299,
-        "heavyTruckPct": 5.5,
-        "lat": 33.762909,
-        "lng": -84.422675,
-        "year": 2024,
-        "provenance": {
-          "sourceName": "Georgia DOT AADT Database",
-          "sourceUrl": "https://www.transportation.gov/",
-          "datasetVintage": "2024-AADT",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "place"
-        }
-      }
-    ],
-    "marketSignals": {
-      "reportedRetailRentSqFtYr": 43.0,
-      "reportedIndustrialRentSqFtYr": 19.4,
-      "topSearchedNaics30d": [
-        "722515",
-        "713940",
-        "812111"
-      ],
-      "verifiedLocalProsCount": 8
-    },
-    "scores": {
-      "overallViability": 55,
-      "purchasingPower": 52,
-      "growthMomentum": 58,
-      "costEfficiency": 67,
-      "regulatoryFriction": 48
-    },
+    "marketSignals": {},
     "executiveTravel": {
-      "timeZone": "America/New_York (ET: UTC-05:00)",
+      "timeZone": "America/New_York",
       "timeZoneAbbr": "ET",
       "utcOffset": "-05:00",
       "primaryAirport": {
-        "name": "Hartsfield-Jackson Atlanta International Airport",
+        "name": "Hartsfield Jackson Atlanta International Airport",
         "iata": "ATL",
-        "distanceMiles": 10.0,
-        "transitToDowntown": "MARTA Red/Gold Line Direct ($2.50)"
-      },
-      "powerPlugs": {
-        "types": [
-          "Type A (2-pin)",
-          "Type B (3-pin grounded)"
-        ],
-        "voltage": "120V",
-        "frequency": "60Hz",
-        "adapterAdvice": "Visitors from UK, EU, Australia, and Asia require a standard Type A/B plug adapter and dual-voltage converter."
-      },
-      "currency": {
-        "code": "USD",
-        "symbol": "$",
-        "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
-        "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
+        "lat": 33.6367,
+        "lng": -84.428101,
+        "distanceMiles": 8.7,
+        "transitToDowntown": null,
+        "source": "OurAirports (public domain) for name, IATA code and coordinates; distance is straight-line from the U.S. Census Gazetteer city center point",
+        "sourceUrl": "https://ourairports.com/data/",
+        "cityCenterMethod": "Census Gazetteer internal point",
+        "retrieved": "2026-10-31"
       },
       "climate": {
-        "summerHighF": 94,
-        "winterLowF": 47,
-        "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
-        "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
+        "summerHighF": 88,
+        "winterLowF": 35,
+        "annualRainfallInches": 60.9,
+        "summerHighBasis": "Average July daily high",
+        "winterLowBasis": "Average January daily low",
+        "source": "Open-Meteo Historical Weather API (ERA5 reanalysis), 2015-2024 average, retrieved 2026-10-31",
+        "sourceUrl": "https://open-meteo.com/en/docs/historical-weather-api"
       },
       "emergency": {
         "emergencyDispatch": "911",
-        "nonEmergencyPolice": "311 or local municipal dispatch",
-        "nearestTraumaHospital": "Atlanta Regional Memorial Hospital",
-        "hospitalAddress": "Medical Center District, Atlanta, GA"
-      },
-      "visitorLogistics": {
-        "tapWaterPotability": "100% Safe municipal drinking water conforming to EPA Safe Drinking Water Act standards.",
-        "salesTaxRefundPolicy": "International travelers may claim state sales tax refunds on qualifying departures at designated airport customs counters.",
-        "rideshareAvailability": "Ubiquitous (Uber and Lyft operational 24/7 across the metropolitan area)."
-      },
-      "provenance": {
-        "sourceName": "FAA Airport Database & International Trade Administration",
-        "sourceUrl": "https://www.trade.gov/",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
+        "nearestTraumaHospital": "Athur M Blank Hospital",
+        "hospitalAddress": "2220 North Druid Hills Road NE, Atlanta, GA 30329",
+        "cmsFacilityId": "113300",
+        "emergencyServices": true,
+        "source": "CMS Care Compare hospital general information (federal dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma level, ranking or nearest-facility claim.",
+        "erHospitals": [
+          {
+            "name": "Athur M Blank Hospital",
+            "address": "2220 North Druid Hills Road NE, Atlanta, GA 30329",
+            "type": "Children's",
+            "cmsFacilityId": "113300"
+          },
+          {
+            "name": "Children's Healthcare of Atlanta at Scottish Rite",
+            "address": "1001 Johnson Ferry Road, Atlanta, GA 30342",
+            "type": "Children's",
+            "cmsFacilityId": "113301",
+            "lat": 33.90782,
+            "lng": -84.354913
+          },
+          {
+            "name": "Emory University Hospital",
+            "address": "1364 Clifton Road, NE, Atlanta, GA 30322",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "110010"
+          },
+          {
+            "name": "Emory University Hospital Midtown",
+            "address": "550 Peachtree Street, NE, Atlanta, GA 30308",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "110078",
+            "lat": 33.76968,
+            "lng": -84.385223
+          },
+          {
+            "name": "Grady Memorial Hospital",
+            "address": "80 Jesse Hill, Jr Drive SE, Atlanta, GA 30303",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "110079",
+            "lat": 33.754209,
+            "lng": -84.380393
+          },
+          {
+            "name": "Northside Hospital",
+            "address": "1000 Johnson Ferry Road, NE, Atlanta, GA 30342",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "110161",
+            "lat": 33.907935,
+            "lng": -84.354917
+          },
+          {
+            "name": "Peachford Behavioral Health System of Atlanta",
+            "address": "2151 Peachford Road, Atlanta, GA 30338",
+            "type": "Psychiatric",
+            "cmsFacilityId": "114010",
+            "lat": 33.923282,
+            "lng": -84.305217
+          },
+          {
+            "name": "Saint Joseph's Hospital of Atlanta, Inc",
+            "address": "5665 Peachtree Dunwoody Road, Atlanta, GA 30342",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "110082",
+            "lat": 33.908368,
+            "lng": -84.351786
+          }
+        ],
+        "erHospitalsSource": "CMS Care Compare hospital general information (federal dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma level, ranking or nearest-facility claim."
       }
+    },
+    "housingAndTaxes": {
+      "medianHomeValue": 420600,
+      "medianGrossRent": 1617,
+      "medianRealEstateTaxPaid": 4061,
+      "effectivePropertyTaxRatePct": 0.97,
+      "countyName": "Fulton County",
+      "source": "ACS 2023 5-yr: B25077 median home value, B25064 median gross rent, B25103 median real estate taxes paid. Effective rate = B25103 / B25077.",
+      "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/"
+    },
+    "climateNormals": {
+      "peakSummerHighF": 88,
+      "winterLowF": 35,
+      "annualRainfallInches": 60.9,
+      "sourceName": "Open-Meteo Historical Weather API (ERA5 reanalysis), 2015-2024 average, retrieved 2026-10-31",
+      "sourceUrl": "https://open-meteo.com/en/docs/historical-weather-api"
+    },
+    "terrainElevation": {
+      "elevationFeet": 956.0,
+      "elevationMeters": 291.4,
+      "topographyClass": "Southern Piedmont & Chattahoochee River Ridge",
+      "sourceName": "USGS 3D Elevation Program (3DEP Elevation Point Query Service)",
+      "sourceUrl": "https://epqs.nationalmap.gov/v1/json"
+    },
+    "waterUtility": {
+      "pwsid": "GA1210001",
+      "providerName": "Atlanta",
+      "populationServed": 1089893,
+      "sourceType": "surface water",
+      "source": "U.S. EPA Safe Drinking Water Information System (SDWIS)",
+      "sourceUrl": "https://data.epa.gov/efservice/WATER_SYSTEM/PWSID/GA1210001/JSON",
+      "retrieved": "2026-10-31"
+    },
+    "higherEducation": {
+      "institutionCount": 29,
+      "totalEnrollment": 85633,
+      "institutions": [
+        {
+          "id": 139940,
+          "name": "Georgia State University",
+          "studentSize": 26623,
+          "ownership": "Public",
+          "schoolUrl": "https://www.gsu.edu/",
+          "lat": 33.7527,
+          "lng": -84.38667
+        },
+        {
+          "id": 139755,
+          "name": "Georgia Institute of Technology-Main Campus",
+          "studentSize": 18785,
+          "ownership": "Public",
+          "schoolUrl": "https://www.gatech.edu/",
+          "lat": 33.77242,
+          "lng": -84.394832
+        },
+        {
+          "id": 244437,
+          "name": "Georgia State University-Perimeter College",
+          "studentSize": 13693,
+          "ownership": "Public",
+          "schoolUrl": "https://perimeter.gsu.edu/",
+          "lat": 33.7527,
+          "lng": -84.38667
+        },
+        {
+          "id": 139658,
+          "name": "Emory University",
+          "studentSize": 7298,
+          "ownership": "Private nonprofit",
+          "schoolUrl": "https://www.emory.edu/",
+          "lat": 33.790183,
+          "lng": -84.325512
+        },
+        {
+          "id": 138840,
+          "name": "Atlanta Technical College",
+          "studentSize": 3875,
+          "ownership": "Public",
+          "schoolUrl": "https://atlantatech.edu/",
+          "lat": 33.712009,
+          "lng": -84.404995
+        },
+        {
+          "id": 138947,
+          "name": "Clark Atlanta University",
+          "studentSize": 3603,
+          "ownership": "Private nonprofit",
+          "schoolUrl": "https://www.cau.edu/",
+          "lat": 33.747628,
+          "lng": -84.412584
+        }
+      ],
+      "sourceName": "U.S. Department of Education College Scorecard",
+      "sourceUrl": "https://collegescorecard.ed.gov/",
+      "retrieved": "2026-10-31"
+    },
+    "evInfrastructure": {
+      "totalStations": 756,
+      "totalChargingPorts": 2419,
+      "dcFastPorts": 194,
+      "level2Ports": 2152,
+      "sampleStations": [
+        {
+          "name": "Peachy Airport Parking",
+          "address": "3025 Sylvan Rd, Atlanta, GA 30354",
+          "network": "Non-Networked",
+          "dcFastPorts": 0,
+          "level2Ports": 0,
+          "lat": 33.669868,
+          "lng": -84.418478
+        },
+        {
+          "name": "Electric Owl Holdings",
+          "address": "3963 Redan Rd, Atlanta, GA 30083",
+          "network": "ENVIROSPARK",
+          "dcFastPorts": 0,
+          "level2Ports": 48,
+          "lat": 33.76295,
+          "lng": -84.22911
+        },
+        {
+          "name": "Truist Headquarters Garage",
+          "address": "800 Battery Ave. SE, Atlanta, GA 30339",
+          "network": "FLASH",
+          "dcFastPorts": 0,
+          "level2Ports": 42,
+          "lat": 33.89269,
+          "lng": -84.467146
+        },
+        {
+          "name": "Allora Eastland",
+          "address": "1296 Moreland Avenue Southeast, Atlanta, GA 30316",
+          "network": "Blink Network",
+          "dcFastPorts": 0,
+          "level2Ports": 40,
+          "lat": 33.715603,
+          "lng": -84.349356
+        },
+        {
+          "name": "Bellamy Executive Park",
+          "address": "50 Executive Park South, Atlanta, GA 30329",
+          "network": "Blink Network",
+          "dcFastPorts": 0,
+          "level2Ports": 32,
+          "lat": 33.827582,
+          "lng": -84.341155
+        }
+      ],
+      "sourceName": "U.S. Department of Energy / NLR Alternative Fuels Data Center (AFDC)",
+      "sourceUrl": "https://afdc.energy.gov/stations",
+      "retrieved": "2026-10-31"
+    },
+    "nationalParks": {
+      "parks": [
+        {
+          "parkCode": "malu",
+          "fullName": "Martin Luther King, Jr. National Historical Park",
+          "designation": "National Historical Park",
+          "distanceMiles": 2.9,
+          "description": "Welcome to Martin Luther King, Jr. National Historical Park & Preservation District where a young boy grows up in a time of segregation. He was moved by destiny to lead the modern civil rights movement. This was Martin Luther King, Jr....",
+          "url": "https://www.nps.gov/malu/index.htm",
+          "lat": 33.756182,
+          "lng": -84.372568
+        },
+        {
+          "parkCode": "kemo",
+          "fullName": "Kennesaw Mountain National Battlefield Park",
+          "designation": "National Battlefield Park",
+          "distanceMiles": 16.4,
+          "description": "Kennesaw Mountain National Battlefield Park is a 2,965 acre National Battlefield that preserves a Civil War battleground of the Atlanta Campaign. Opposing forces maneuvered and fought here from June 19, 1864 until July 2, 1864. Although...",
+          "url": "https://www.nps.gov/kemo/index.htm",
+          "lat": 33.953707,
+          "lng": -84.592142
+        },
+        {
+          "parkCode": "chat",
+          "fullName": "Chattahoochee River National Recreation Area",
+          "designation": "National Recreation Area",
+          "distanceMiles": 17.9,
+          "description": "Today the river valley attracts us for so many reasons. Take a solitary walk to enjoy nature’s display, raft leisurely through the rocky shoals with friends, fish the misty waters as the sun comes up, or have a picnic on a Sunday...",
+          "url": "https://www.nps.gov/chat/index.htm",
+          "lat": 33.996983,
+          "lng": -84.289532
+        }
+      ],
+      "sourceName": "U.S. National Park Service (NPS) API",
+      "sourceUrl": "https://www.nps.gov/",
+      "retrieved": "2026-10-31"
+    },
+    "upcomingEvents": {
+      "totalMatchingEvents": 1452,
+      "events": [
+        {
+          "id": "rZ7HnEZ1A4ZxpK",
+          "name": "Knightly Pass",
+          "date": "2026-09-03",
+          "venueName": "Midtown High School Theater",
+          "category": "Live Event",
+          "url": "https://www.ticketweb.com/event/knightly-pass-midtown-high-school-theater-tickets/15022593"
+        },
+        {
+          "id": "rZ7HnEZ1A4Zxpd",
+          "name": "Season Pass",
+          "date": "2026-09-03",
+          "venueName": "Midtown High School Theater",
+          "category": "Live Event",
+          "url": "https://www.ticketweb.com/event/season-pass-midtown-high-school-theater-tickets/15022583"
+        },
+        {
+          "id": "Z7r9jZ1A70MQZ",
+          "name": "Like Father",
+          "date": "2026-10-31",
+          "venueName": "Alliance Theatre",
+          "category": "Live Event",
+          "url": "https://www.ticketmaster.com/event/Z7r9jZ1A70MQZ"
+        },
+        {
+          "id": "Z7r9jZ1A7OSZw",
+          "name": "Buena Vista Social Club",
+          "date": "2026-10-31",
+          "venueName": "Fox Theatre - Atlanta",
+          "category": "Live Event",
+          "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7OSZw"
+        },
+        {
+          "id": "vvG1zZ_ok4vp5Y",
+          "name": "Tours: Truist Park",
+          "date": "2026-10-31",
+          "venueName": "Truist Park",
+          "category": "Sports",
+          "url": "https://www.ticketmaster.com/tours-truist-park-atlanta-georgia-10-31-2026/event/0E006511950562F0"
+        }
+      ],
+      "sourceName": "Ticketmaster Discovery API v2",
+      "sourceUrl": "https://developer.ticketmaster.com/",
+      "retrieved": "2026-10-31"
     }
   },
   {
@@ -1218,7 +1359,7 @@
         "name": "Columbus Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 11.1,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -1233,14 +1374,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -1850,7 +1991,7 @@
         "name": "Augusta-Richmond County consolidated government Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 11.1,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -1865,14 +2006,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -2482,7 +2623,7 @@
         "name": "Macon-Bibb County Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 11.0,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -2497,14 +2638,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -3114,7 +3255,7 @@
         "name": "Savannah Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.9,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -3129,14 +3270,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -3746,7 +3887,7 @@
         "name": "Athens-Clarke County unified government Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.9,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -3761,14 +3902,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -4378,7 +4519,7 @@
         "name": "South Fulton Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.8,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -4393,14 +4534,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -5010,7 +5151,7 @@
         "name": "Sandy Springs Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.8,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -5025,14 +5166,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -5642,7 +5783,7 @@
         "name": "Roswell Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.7,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -5657,14 +5798,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -6274,7 +6415,7 @@
         "name": "Warner Robins Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.7,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -6289,14 +6430,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -6906,7 +7047,7 @@
         "name": "Johns Creek Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.6,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -6921,14 +7062,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -7538,7 +7679,7 @@
         "name": "Alpharetta Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.6,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -7553,14 +7694,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -8170,7 +8311,7 @@
         "name": "Albany Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.6,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -8185,14 +8326,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -8802,7 +8943,7 @@
         "name": "Marietta Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.5,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -8817,14 +8958,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -9434,7 +9575,7 @@
         "name": "Stonecrest Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.5,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -9449,14 +9590,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -10066,7 +10207,7 @@
         "name": "Brookhaven Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.5,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -10081,14 +10222,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -10698,7 +10839,7 @@
         "name": "Smyrna Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.5,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -10713,14 +10854,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -11330,7 +11471,7 @@
         "name": "Valdosta Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.5,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -11345,14 +11486,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -11962,7 +12103,7 @@
         "name": "Dunwoody Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.4,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -11977,14 +12118,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -12594,7 +12735,7 @@
         "name": "Gainesville Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.4,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -12609,14 +12750,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -13226,7 +13367,7 @@
         "name": "Newnan Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.4,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -13241,14 +13382,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -13858,7 +13999,7 @@
         "name": "Peachtree Corners Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.4,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -13873,14 +14014,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -14490,7 +14631,7 @@
         "name": "Milton Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.3,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -14505,14 +14646,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -15122,7 +15263,7 @@
         "name": "Peachtree Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.3,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -15137,14 +15278,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -15754,7 +15895,7 @@
         "name": "Douglasville Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.3,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -15769,14 +15910,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -16386,7 +16527,7 @@
         "name": "Woodstock Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.3,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -16401,14 +16542,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -17018,7 +17159,7 @@
         "name": "East Point Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.3,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -17033,14 +17174,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -17650,7 +17791,7 @@
         "name": "Rome Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.3,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -17665,14 +17806,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -18282,7 +18423,7 @@
         "name": "Tucker Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.3,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -18297,14 +18438,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -18914,7 +19055,7 @@
         "name": "Canton Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.3,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -18929,14 +19070,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -19546,7 +19687,7 @@
         "name": "Hinesville Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.3,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -19561,14 +19702,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -20178,7 +20319,7 @@
         "name": "Stockbridge Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.3,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -20193,14 +20334,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -20810,7 +20951,7 @@
         "name": "Kennesaw Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.3,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -20825,14 +20966,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -21442,7 +21583,7 @@
         "name": "Dalton Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.3,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -21457,14 +21598,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -22074,7 +22215,7 @@
         "name": "Statesboro Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.3,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -22089,14 +22230,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -22706,7 +22847,7 @@
         "name": "Duluth Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.2,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -22721,14 +22862,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -23338,7 +23479,7 @@
         "name": "LaGrange Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.2,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -23353,14 +23494,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -23970,7 +24111,7 @@
         "name": "McDonough Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.2,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -23985,14 +24126,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -24602,7 +24743,7 @@
         "name": "Chamblee Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.2,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -24617,14 +24758,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -25234,7 +25375,7 @@
         "name": "Lawrenceville Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.2,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -25249,14 +25390,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -25866,7 +26007,7 @@
         "name": "Pooler Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.2,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -25881,14 +26022,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -26498,7 +26639,7 @@
         "name": "Union Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.2,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -26513,14 +26654,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -27130,7 +27271,7 @@
         "name": "Carrollton Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.2,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -27145,14 +27286,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 94,
         "winterLowF": 47,
         "annualRainfallInches": 42,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {

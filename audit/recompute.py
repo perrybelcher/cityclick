@@ -7,11 +7,33 @@ sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'
 from census_env import resolve_census_dir
 D=resolve_census_dir(need_acs=True, need_popest=True)
 base=sys.argv[sys.argv.index('--base')+1] if '--base' in sys.argv else 'https://cityclick.com'
-CITIES={'tx/austin':('1600000US4805000','48','Austin city'),'ar/hot-springs-village':('1600000US0533482','05',None),
+CITIES={
+ 'tx/austin':('1600000US4805000','48','Austin city'),
+ 'ar/hot-springs-village':('1600000US0533482','05',None),
  'ar/hot-springs':('1600000US0533400','05','Hot Springs city'),
- 'id/boise':('1600000US1608830','16','Boise City city'),'fl/tampa':('1600000US1271000','12','Tampa city'),
- 'az/scottsdale':('1600000US0465000','04','Scottsdale city'),'tn/nashville':('1600000US4752006','47','Nashville-Davidson metropolitan government (balance)'),
- 'ok/oklahoma-city':('1600000US4055000','40','Oklahoma City city')}
+ 'id/boise':('1600000US1608830','16','Boise City city'),
+ 'fl/tampa':('1600000US1271000','12','Tampa city'),
+ 'az/scottsdale':('1600000US0465000','04','Scottsdale city'),
+ 'tn/nashville':('1600000US4752006','47','Nashville-Davidson metropolitan government (balance)'),
+ 'ok/oklahoma-city':('1600000US4055000','40','Oklahoma City city'),
+ 'tx/dallas':('1600000US4819000','48','Dallas city'),
+ 'tx/houston':('1600000US4835000','48','Houston city'),
+ 'tx/san-antonio':('1600000US4865000','48','San Antonio city'),
+ 'az/phoenix':('1600000US0455000','04','Phoenix city'),
+ 'nc/charlotte':('1600000US3712000','37','Charlotte city'),
+ 'nc/raleigh':('1600000US3755000','37','Raleigh city'),
+ 'fl/orlando':('1600000US1253000','12','Orlando city'),
+ 'fl/miami':('1600000US1245000','12','Miami city'),
+ 'fl/jacksonville':('1600000US1235000','12','Jacksonville city'),
+ 'co/denver':('1600000US0820000','08','Denver city'),
+ 'nv/las-vegas':('1600000US3240000','32','Las Vegas city'),
+ 'ut/salt-lake-city':('1600000US4967000','49','Salt Lake City city'),
+ 'ga/atlanta':('1600000US1304000','13','Atlanta city'),
+ 'ar/little-rock':('1600000US0541000','05','Little Rock city'),
+ 'ar/fayetteville':('1600000US0523290','05','Fayetteville city'),
+ 'ar/bentonville':('1600000US0505320','05','Bentonville city'),
+ 'al/huntsville':('1600000US0137000','01','Huntsville city'),
+}
 def tab(t):
     d={}
     for l in open(D+f'23_{t}.dat'):

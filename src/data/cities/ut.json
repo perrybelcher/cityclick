@@ -1,634 +1,741 @@
 [
   {
-    "slug": "ut/salt-lake",
+    "slug": "ut/salt-lake-city",
     "cityId": "4967000",
-    "countyFips": "49670",
-    "name": "Salt Lake",
+    "countyFips": "49035",
+    "name": "Salt Lake City",
     "stateCode": "ut",
     "stateName": "Utah",
-    "countyName": "Salt Lake Metropolitan Area",
+    "countyName": "Salt Lake County",
     "lat": 40.776928,
     "lng": -111.930991,
     "primaryZips": [
-      "70114"
+      "84107",
+      "84115",
+      "84121",
+      "84104",
+      "84111",
+      "84101",
+      "84106",
+      "84117",
+      "84123",
+      "84116",
+      "84124",
+      "84102"
     ],
     "demographics": {
       "population": 209593,
-      "popGrowth5YrPct": 4.5,
-      "medianHouseholdIncome": 89109,
-      "perCapitaIncome": 51683,
-      "medianAge": 36.4,
-      "daytimeWorkerPop": 129948,
-      "daytimePopSurgePct": 8.5,
-      "medianGrossRent": 1714,
-      "medianHomeValue": 374258,
+      "medianHouseholdIncome": 74925,
+      "perCapitaIncome": 49642,
+      "medianAge": 33.0,
+      "medianGrossRent": 1343,
+      "medianHomeValue": 495700,
       "provenance": {
-        "sourceName": "US Census Bureau ACS 5-Year (DP03/DP04/DP05) & PopEst",
-        "sourceUrl": "https://api.census.gov/data/2023/acs/acs5",
-        "datasetVintage": "2023-5YR",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "sourceName": "US Census Bureau ACS 5-Year Estimates 2023 (Table-Based Summary File)",
+        "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/",
+        "datasetVintage": "ACS-2023-5YR",
+        "verifiedAt": "2026-10-31T00:00:00Z",
         "granularity": "place"
-      }
-    },
-    "laborAndEconomy": {
-      "unemploymentRatePct": 3.8,
-      "avgWeeklyWageAllIndustries": 1340,
-      "newHousingPermits12Mo": 1572,
-      "permitsPer1kResidents": 7.5,
-      "femaRiskScore": 28.0,
-      "provenance": {
-        "sourceName": "BLS Local Area Unemployment Statistics (LAUS) & Census BPS",
-        "sourceUrl": "https://www.bls.gov/lau/",
-        "datasetVintage": "2024-M08",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
-      }
+      },
+      "popChange2020to2023Pct": 4.9,
+      "popChangeBasis": "Census Population Estimates, April 2020 base to July 2023"
     },
     "industries": [
       {
         "naicsCode": "722515",
         "slug": "coffee-shops",
         "label": "Coffee & Snack Shops",
-        "establishments": 45,
-        "per10kResidents": 2.15,
-        "usAvgPer10k": 2.15,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 158,
+        "per10kResidents": 3.14,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 148,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Salt Lake."
+          "evidenceQuote": "158 employer establishments (NAICS 722515) across 21 ZIP codes whose USPS city is Salt Lake City, UT; density uses ACS 2023 ZCTA population (502,532). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722511",
         "slug": "restaurants",
         "label": "Full-Service Restaurants",
-        "establishments": 143,
-        "per10kResidents": 6.82,
-        "usAvgPer10k": 6.8,
-        "saturationIndex": 100,
+        "establishments": 415,
+        "per10kResidents": 8.26,
+        "usAvgPer10k": 7.44,
+        "saturationIndex": 111,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Salt Lake."
+          "evidenceQuote": "415 employer establishments (NAICS 722511) across 21 ZIP codes whose USPS city is Salt Lake City, UT; density uses ACS 2023 ZCTA population (502,532). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722513",
         "slug": "fast-food",
-        "label": "Fast Food Restaurants",
-        "establishments": 151,
-        "per10kResidents": 7.2,
-        "usAvgPer10k": 7.2,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Limited-Service / Fast Food Restaurants",
+        "establishments": 511,
+        "per10kResidents": 10.17,
+        "usAvgPer10k": 7.75,
+        "saturationIndex": 131,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Salt Lake."
+          "evidenceQuote": "511 employer establishments (NAICS 722513) across 21 ZIP codes whose USPS city is Salt Lake City, UT; density uses ACS 2023 ZCTA population (502,532). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722410",
         "slug": "bars-taverns",
-        "label": "Bars & Drinking Places",
-        "establishments": 39,
-        "per10kResidents": 1.86,
-        "usAvgPer10k": 1.85,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Drinking Places (Alcoholic Beverages)",
+        "establishments": 63,
+        "per10kResidents": 1.25,
+        "usAvgPer10k": 0.9,
+        "saturationIndex": 139,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Salt Lake."
-        }
-      },
-      {
-        "naicsCode": "812111",
-        "slug": "barber-shops",
-        "label": "Barber Shops",
-        "establishments": 28,
-        "per10kResidents": 1.34,
-        "usAvgPer10k": 1.35,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Salt Lake."
+          "evidenceQuote": "63 employer establishments (NAICS 722410) across 21 ZIP codes whose USPS city is Salt Lake City, UT; density uses ACS 2023 ZCTA population (502,532). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812112",
         "slug": "beauty-salons",
         "label": "Beauty Salons & Hair Studios",
-        "establishments": 71,
-        "per10kResidents": 3.39,
-        "usAvgPer10k": 3.4,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 186,
+        "per10kResidents": 3.7,
+        "usAvgPer10k": 2.31,
+        "saturationIndex": 160,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Salt Lake."
+          "evidenceQuote": "186 employer establishments (NAICS 812112) across 21 ZIP codes whose USPS city is Salt Lake City, UT; density uses ACS 2023 ZCTA population (502,532). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812113",
         "slug": "nail-salons",
         "label": "Nail Salons",
-        "establishments": 44,
-        "per10kResidents": 2.1,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 100,
+        "establishments": 41,
+        "per10kResidents": 0.82,
+        "usAvgPer10k": 0.86,
+        "saturationIndex": 95,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Salt Lake."
+          "evidenceQuote": "41 employer establishments (NAICS 812113) across 21 ZIP codes whose USPS city is Salt Lake City, UT; density uses ACS 2023 ZCTA population (502,532). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "713940",
         "slug": "gyms-fitness",
-        "label": "Fitness & Recreational Gyms",
-        "establishments": 26,
-        "per10kResidents": 1.24,
-        "usAvgPer10k": 1.25,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Fitness & Recreational Sports Centers",
+        "establishments": 68,
+        "per10kResidents": 1.35,
+        "usAvgPer10k": 1.0,
+        "saturationIndex": 136,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Salt Lake."
+          "evidenceQuote": "68 employer establishments (NAICS 713940) across 21 ZIP codes whose USPS city is Salt Lake City, UT; density uses ACS 2023 ZCTA population (502,532). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812910",
         "slug": "pet-care",
-        "label": "Pet Care & Grooming",
-        "establishments": 20,
-        "per10kResidents": 0.95,
-        "usAvgPer10k": 0.95,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Pet Care & Grooming Services",
+        "establishments": 49,
+        "per10kResidents": 0.98,
+        "usAvgPer10k": 0.46,
+        "saturationIndex": 210,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Salt Lake."
+          "evidenceQuote": "49 employer establishments (NAICS 812910) across 21 ZIP codes whose USPS city is Salt Lake City, UT; density uses ACS 2023 ZCTA population (502,532). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541940",
         "slug": "veterinary",
-        "label": "Veterinary Services",
-        "establishments": 22,
-        "per10kResidents": 1.05,
-        "usAvgPer10k": 1.05,
-        "saturationIndex": 100,
+        "label": "Veterinary Services & Animal Hospitals",
+        "establishments": 37,
+        "per10kResidents": 0.74,
+        "usAvgPer10k": 0.69,
+        "saturationIndex": 107,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Salt Lake."
+          "evidenceQuote": "37 employer establishments (NAICS 541940) across 21 ZIP codes whose USPS city is Salt Lake City, UT; density uses ACS 2023 ZCTA population (502,532). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "811111",
         "slug": "auto-repair",
         "label": "General Automotive Repair",
-        "establishments": 101,
-        "per10kResidents": 4.82,
-        "usAvgPer10k": 4.8,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 134,
+        "per10kResidents": 2.67,
+        "usAvgPer10k": 2.2,
+        "saturationIndex": 121,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Salt Lake."
+          "evidenceQuote": "134 employer establishments (NAICS 811111) across 21 ZIP codes whose USPS city is Salt Lake City, UT; density uses ACS 2023 ZCTA population (502,532). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "811192",
         "slug": "car-washes",
-        "label": "Car Washes & Detailing",
-        "establishments": 14,
-        "per10kResidents": 0.67,
-        "usAvgPer10k": 0.65,
-        "saturationIndex": 103,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Car Washes & Auto Detailing",
+        "establishments": 38,
+        "per10kResidents": 0.76,
+        "usAvgPer10k": 0.35,
+        "saturationIndex": 216,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Salt Lake."
-        }
-      },
-      {
-        "naicsCode": "812310",
-        "slug": "laundromats",
-        "label": "Coin Laundromats",
-        "establishments": 12,
-        "per10kResidents": 0.57,
-        "usAvgPer10k": 0.55,
-        "saturationIndex": 104,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Salt Lake."
-        }
-      },
-      {
-        "naicsCode": "812320",
-        "slug": "dry-cleaners",
-        "label": "Dry Cleaning & Laundry",
-        "establishments": 18,
-        "per10kResidents": 0.86,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Salt Lake."
+          "evidenceQuote": "38 employer establishments (NAICS 811192) across 21 ZIP codes whose USPS city is Salt Lake City, UT; density uses ACS 2023 ZCTA population (502,532). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621210",
         "slug": "dentists",
         "label": "Offices of Dentists",
-        "establishments": 82,
-        "per10kResidents": 3.91,
-        "usAvgPer10k": 3.9,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 306,
+        "per10kResidents": 6.09,
+        "usAvgPer10k": 3.89,
+        "saturationIndex": 157,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Salt Lake."
+          "evidenceQuote": "306 employer establishments (NAICS 621210) across 21 ZIP codes whose USPS city is Salt Lake City, UT; density uses ACS 2023 ZCTA population (502,532). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621310",
         "slug": "chiropractors",
         "label": "Offices of Chiropractors",
-        "establishments": 29,
-        "per10kResidents": 1.38,
-        "usAvgPer10k": 1.4,
-        "saturationIndex": 99,
+        "establishments": 54,
+        "per10kResidents": 1.07,
+        "usAvgPer10k": 0.97,
+        "saturationIndex": 111,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Salt Lake."
+          "evidenceQuote": "54 employer establishments (NAICS 621310) across 21 ZIP codes whose USPS city is Salt Lake City, UT; density uses ACS 2023 ZCTA population (502,532). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621340",
         "slug": "physical-therapy",
-        "label": "Physical Therapy Clinics",
-        "establishments": 32,
-        "per10kResidents": 1.53,
-        "usAvgPer10k": 1.55,
-        "saturationIndex": 99,
+        "label": "Physical, Occupational & Speech Therapists",
+        "establishments": 59,
+        "per10kResidents": 1.17,
+        "usAvgPer10k": 1.3,
+        "saturationIndex": 90,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Salt Lake."
+          "evidenceQuote": "59 employer establishments (NAICS 621340) across 21 ZIP codes whose USPS city is Salt Lake City, UT; density uses ACS 2023 ZCTA population (502,532). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "624410",
         "slug": "daycare",
         "label": "Child Day Care Services",
-        "establishments": 47,
-        "per10kResidents": 2.24,
-        "usAvgPer10k": 2.25,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 146,
+        "per10kResidents": 2.91,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 137,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Salt Lake."
+          "evidenceQuote": "146 employer establishments (NAICS 624410) across 21 ZIP codes whose USPS city is Salt Lake City, UT; density uses ACS 2023 ZCTA population (502,532). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "445120",
         "slug": "convenience-stores",
-        "label": "Convenience Stores",
-        "establishments": 41,
-        "per10kResidents": 1.96,
-        "usAvgPer10k": 1.95,
-        "saturationIndex": 100,
+        "label": "Convenience Retail Stores",
+        "establishments": 35,
+        "per10kResidents": 0.7,
+        "usAvgPer10k": 0.82,
+        "saturationIndex": 85,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Salt Lake."
+          "evidenceQuote": "35 employer establishments (NAICS 445120) across 21 ZIP codes whose USPS city is Salt Lake City, UT; density uses ACS 2023 ZCTA population (502,532). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "448140",
         "slug": "clothing-boutiques",
-        "label": "Family Clothing Stores",
-        "establishments": 35,
-        "per10kResidents": 1.67,
-        "usAvgPer10k": 1.65,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Family Clothing Stores & Boutiques",
+        "establishments": 44,
+        "per10kResidents": 0.88,
+        "usAvgPer10k": 0.65,
+        "saturationIndex": 134,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Salt Lake."
-        }
-      },
-      {
-        "naicsCode": "445291",
-        "slug": "bakeries",
-        "label": "Retail Bakeries",
-        "establishments": 18,
-        "per10kResidents": 0.86,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Salt Lake."
-        }
-      },
-      {
-        "naicsCode": "453110",
-        "slug": "florists",
-        "label": "Florists & Floral Gift",
-        "establishments": 10,
-        "per10kResidents": 0.48,
-        "usAvgPer10k": 0.5,
-        "saturationIndex": 96,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Salt Lake."
+          "evidenceQuote": "44 employer establishments (NAICS 448140) across 21 ZIP codes whose USPS city is Salt Lake City, UT; density uses ACS 2023 ZCTA population (502,532). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541110",
         "slug": "law-firms",
         "label": "Offices of Lawyers",
-        "establishments": 103,
-        "per10kResidents": 4.91,
-        "usAvgPer10k": 4.9,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 523,
+        "per10kResidents": 10.41,
+        "usAvgPer10k": 4.8,
+        "saturationIndex": 217,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Salt Lake."
+          "evidenceQuote": "523 employer establishments (NAICS 541110) across 21 ZIP codes whose USPS city is Salt Lake City, UT; density uses ACS 2023 ZCTA population (502,532). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541211",
         "slug": "accounting-cpa",
-        "label": "Offices of CPAs",
-        "establishments": 44,
-        "per10kResidents": 2.1,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Offices of Certified Public Accountants",
+        "establishments": 131,
+        "per10kResidents": 2.61,
+        "usAvgPer10k": 1.44,
+        "saturationIndex": 181,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Salt Lake."
+          "evidenceQuote": "131 employer establishments (NAICS 541211) across 21 ZIP codes whose USPS city is Salt Lake City, UT; density uses ACS 2023 ZCTA population (502,532). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "531210",
         "slug": "real-estate-agencies",
-        "label": "Real Estate Brokerages",
-        "establishments": 80,
-        "per10kResidents": 3.82,
-        "usAvgPer10k": 3.8,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Offices of Real Estate Agents & Brokers",
+        "establishments": 583,
+        "per10kResidents": 11.6,
+        "usAvgPer10k": 4.74,
+        "saturationIndex": 245,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Salt Lake."
+          "evidenceQuote": "583 employer establishments (NAICS 531210) across 21 ZIP codes whose USPS city is Salt Lake City, UT; density uses ACS 2023 ZCTA population (502,532). National benchmark = all US ZIP rows / US population."
         }
       }
     ],
     "permitsAndTax": {
-      "generalBusinessLicenseRequired": false,
-      "businessLicenseFeeSummary": "No general city business license required. State of Utah statutory filings apply.",
-      "businessLicensePortalUrl": "https://www.salt-lakeut.gov/permits",
-      "zoningLookupUrl": "https://www.salt-lakeut.gov/zoning",
-      "buildingPermitPortalUrl": "https://www.salt-lakeut.gov/building",
-      "certificateOfOccupancyFee": "$185 standard municipal inspection fee",
-      "avgPermitWaitDays": 30,
-      "shortTermRentalStatus": "restricted",
-      "foodTruckPermitStatus": "allowed",
-      "combinedSalesTaxRate": 0.076,
-      "stateTaxRate": 0.061,
-      "localTaxRate": 0.015,
+      "stateTaxRate": 0.0485,
+      "countyTaxRate": 0.0195,
+      "cityTaxRate": 0.015,
+      "specialDistrictTaxRate": 0.0015,
+      "localTaxRate": 0.036,
+      "combinedSalesTaxRate": 0.0845,
       "provenance": {
-        "sourceName": "Salt Lake Municipal Code & State Department of Revenue",
-        "sourceUrl": "https://www.salt-lakeut.gov",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place",
-        "evidenceQuote": "Statutory municipal code standards."
+        "sourceName": "Utah State Tax Commission Combined Sales Tax Rate Chart (Salt Lake City loc. 18-122: 4.85% state + 3.60% local/county/transit = 8.45%)",
+        "sourceUrl": "https://tax.utah.gov/sales/rates",
+        "datasetVintage": "2026",
+        "verifiedAt": "2026-10-31T00:00:00Z",
+        "granularity": "place"
       }
     },
-    "topTrafficCorridors": [
-      {
-        "roadName": "Main Arterial Corridor 1",
-        "segmentDescription": "Central Commercial Corridor through Salt Lake",
-        "aadt": 25151,
-        "heavyTruckPct": 5.5,
-        "lat": 40.776928,
-        "lng": -111.930991,
-        "year": 2024,
-        "provenance": {
-          "sourceName": "Utah DOT AADT Database",
-          "sourceUrl": "https://www.transportation.gov/",
-          "datasetVintage": "2024-AADT",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "place"
-        }
-      }
-    ],
-    "marketSignals": {
-      "reportedRetailRentSqFtYr": 44.1,
-      "reportedIndustrialRentSqFtYr": 19.8,
-      "topSearchedNaics30d": [
-        "722515",
-        "713940",
-        "812111"
-      ],
-      "verifiedLocalProsCount": 8
-    },
-    "scores": {
-      "overallViability": 59,
-      "purchasingPower": 56,
-      "growthMomentum": 62,
-      "costEfficiency": 65,
-      "regulatoryFriction": 48
-    },
+    "marketSignals": {},
     "executiveTravel": {
-      "timeZone": "America/Denver (MT: UTC-07:00)",
+      "timeZone": "America/Denver",
       "timeZoneAbbr": "MT",
       "utcOffset": "-07:00",
       "primaryAirport": {
         "name": "Salt Lake City International Airport",
         "iata": "SLC",
-        "distanceMiles": 6.0,
-        "transitToDowntown": "TRAX Green Line Light Rail ($2.50)"
-      },
-      "powerPlugs": {
-        "types": [
-          "Type A (2-pin)",
-          "Type B (3-pin grounded)"
-        ],
-        "voltage": "120V",
-        "frequency": "60Hz",
-        "adapterAdvice": "Visitors from UK, EU, Australia, and Asia require a standard Type A/B plug adapter and dual-voltage converter."
-      },
-      "currency": {
-        "code": "USD",
-        "symbol": "$",
-        "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
-        "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
+        "lat": 40.78886,
+        "lng": -111.979866,
+        "distanceMiles": 2.7,
+        "transitToDowntown": null,
+        "source": "OurAirports (public domain) for name, IATA code and coordinates; distance is straight-line from the U.S. Census Gazetteer city center point",
+        "sourceUrl": "https://ourairports.com/data/",
+        "cityCenterMethod": "Census Gazetteer internal point",
+        "retrieved": "2026-10-31"
       },
       "climate": {
-        "summerHighF": 84,
-        "winterLowF": 22,
-        "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
-        "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
+        "summerHighF": 94,
+        "winterLowF": 23,
+        "annualRainfallInches": 21.2,
+        "summerHighBasis": "Average July daily high",
+        "winterLowBasis": "Average January daily low",
+        "source": "Open-Meteo Historical Weather API (ERA5 reanalysis), 2015-2024 average, retrieved 2026-10-31",
+        "sourceUrl": "https://open-meteo.com/en/docs/historical-weather-api"
       },
       "emergency": {
         "emergencyDispatch": "911",
-        "nonEmergencyPolice": "311 or local municipal dispatch",
-        "nearestTraumaHospital": "Salt Lake Regional Memorial Hospital",
-        "hospitalAddress": "Medical Center District, Salt Lake, UT"
-      },
-      "visitorLogistics": {
-        "tapWaterPotability": "100% Safe municipal drinking water conforming to EPA Safe Drinking Water Act standards.",
-        "salesTaxRefundPolicy": "International travelers may claim state sales tax refunds on qualifying departures at designated airport customs counters.",
-        "rideshareAvailability": "Ubiquitous (Uber and Lyft operational 24/7 across the metropolitan area)."
-      },
-      "provenance": {
-        "sourceName": "FAA Airport Database & International Trade Administration",
-        "sourceUrl": "https://www.trade.gov/",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
+        "nearestTraumaHospital": "Holy Cross Hospital - Salt Lake",
+        "hospitalAddress": "1050 East South Temple, Salt Lake City, UT 84102",
+        "cmsFacilityId": "460003",
+        "emergencyServices": true,
+        "source": "CMS Care Compare hospital general information (federal dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma level, ranking or nearest-facility claim.",
+        "erHospitals": [
+          {
+            "name": "Holy Cross Hospital - Salt Lake",
+            "address": "1050 East South Temple, Salt Lake City, UT 84102",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "460003",
+            "lat": 40.769296,
+            "lng": -111.860978
+          },
+          {
+            "name": "LDS Hospital",
+            "address": "8th Avenue And C Street, Salt Lake City, UT 84143",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "460006",
+            "lat": 40.778512,
+            "lng": -111.880555
+          },
+          {
+            "name": "Primary Children's Hospital",
+            "address": "100 North Mario Capecchi Drive, Salt Lake City, UT 84113",
+            "type": "Children's",
+            "cmsFacilityId": "463301"
+          },
+          {
+            "name": "St. Mark's Hospital",
+            "address": "1200 East 3900 South, Salt Lake City, UT 84124",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "460047",
+            "lat": 40.686997,
+            "lng": -111.85706
+          },
+          {
+            "name": "University of Utah Hospital and Clinics",
+            "address": "50 North Medical Drive, Salt Lake City, UT 84132",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "460009",
+            "lat": 40.768884,
+            "lng": -111.83749
+          },
+          {
+            "name": "VA Salt Lake City Healthcare - George E. Wahlen VA Medical Center",
+            "address": "500 Foothill Blvd., Salt Lake City, UT 84148",
+            "type": "Acute Care - Veterans Administration",
+            "cmsFacilityId": "46002F",
+            "lat": 40.756176,
+            "lng": -111.834687
+          }
+        ],
+        "erHospitalsSource": "CMS Care Compare hospital general information (federal dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma level, ranking or nearest-facility claim."
       }
+    },
+    "housingAndTaxes": {
+      "medianHomeValue": 495700,
+      "medianGrossRent": 1343,
+      "medianRealEstateTaxPaid": 2628,
+      "effectivePropertyTaxRatePct": 0.53,
+      "countyName": "Salt Lake County",
+      "source": "ACS 2023 5-yr: B25077 median home value, B25064 median gross rent, B25103 median real estate taxes paid. Effective rate = B25103 / B25077.",
+      "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/"
+    },
+    "climateNormals": {
+      "peakSummerHighF": 94,
+      "winterLowF": 23,
+      "annualRainfallInches": 21.2,
+      "sourceName": "Open-Meteo Historical Weather API (ERA5 reanalysis), 2015-2024 average, retrieved 2026-10-31",
+      "sourceUrl": "https://open-meteo.com/en/docs/historical-weather-api"
+    },
+    "terrainElevation": {
+      "elevationFeet": 4223.2,
+      "elevationMeters": 1287.2,
+      "topographyClass": "Wasatch Front & Great Salt Lake Basin",
+      "sourceName": "USGS 3D Elevation Program (3DEP Elevation Point Query Service)",
+      "sourceUrl": "https://epqs.nationalmap.gov/v1/json"
+    },
+    "waterUtility": {
+      "pwsid": "UTAH18026",
+      "providerName": "Salt Lake City Water System",
+      "populationServed": 383612,
+      "sourceType": "surface water",
+      "source": "U.S. EPA Safe Drinking Water Information System (SDWIS)",
+      "sourceUrl": "https://data.epa.gov/efservice/WATER_SYSTEM/PWSID/UTAH18026/JSON",
+      "retrieved": "2026-10-31"
+    },
+    "higherEducation": {
+      "institutionCount": 11,
+      "totalEnrollment": 216095,
+      "institutions": [
+        {
+          "id": 433387,
+          "name": "Western Governors University",
+          "studentSize": 155088,
+          "ownership": "Private nonprofit",
+          "schoolUrl": "https://www.wgu.edu/",
+          "lat": 40.68481,
+          "lng": -111.869752
+        },
+        {
+          "id": 230764,
+          "name": "University of Utah",
+          "studentSize": 27264,
+          "ownership": "Public",
+          "schoolUrl": "https://www.utah.edu/",
+          "lat": 40.762484,
+          "lng": -111.846044
+        },
+        {
+          "id": 230746,
+          "name": "Salt Lake Community College",
+          "studentSize": 18136,
+          "ownership": "Public",
+          "schoolUrl": "https://www.slcc.edu/",
+          "lat": 40.671575,
+          "lng": -111.942809
+        },
+        {
+          "id": 230418,
+          "name": "Ensign College",
+          "studentSize": 7568,
+          "ownership": "Private nonprofit",
+          "schoolUrl": "https://www.ensign.edu/",
+          "lat": 40.77113,
+          "lng": -111.9002
+        },
+        {
+          "id": 444787,
+          "name": "Nightingale College",
+          "studentSize": 5986,
+          "ownership": "Private for-profit",
+          "schoolUrl": "https://www.nightingale.edu/",
+          "lat": 40.767465,
+          "lng": -111.887917
+        },
+        {
+          "id": 230807,
+          "name": "Westminster University",
+          "studentSize": 823,
+          "ownership": "Private nonprofit",
+          "schoolUrl": "https://www.westminsteru.edu/",
+          "lat": 40.730779,
+          "lng": -111.855757
+        }
+      ],
+      "sourceName": "U.S. Department of Education College Scorecard",
+      "sourceUrl": "https://collegescorecard.ed.gov/",
+      "retrieved": "2026-10-31"
+    },
+    "evInfrastructure": {
+      "totalStations": 198,
+      "totalChargingPorts": 617,
+      "dcFastPorts": 109,
+      "level2Ports": 508,
+      "sampleStations": [
+        {
+          "name": "Avia - The Exchange Apartments - SLC",
+          "address": "330 E 400 S, Salt Lake City, UT 84111",
+          "network": "OpConnect",
+          "dcFastPorts": 0,
+          "level2Ports": 38,
+          "lat": 40.76004,
+          "lng": -111.88142
+        },
+        {
+          "name": "Gigahub SLC S 2400 W, Salt Lake City, UT",
+          "address": "15 S 2400 W, Salt Lake City, UT 84116",
+          "network": "BP_PULSE",
+          "dcFastPorts": 24,
+          "level2Ports": 0,
+          "lat": 40.768816,
+          "lng": -111.957783
+        },
+        {
+          "name": "The Worthington Residences",
+          "address": "275 S 200 E, Salt Lake City, UT 84111",
+          "network": "NOODOE",
+          "dcFastPorts": 0,
+          "level2Ports": 15,
+          "lat": 40.7634,
+          "lng": -111.883834
+        },
+        {
+          "name": "Smith's 845 E 4500 S Slc 133",
+          "address": "845 E 4500 S, Salt Lake City, UT 84107",
+          "network": "eVgo Network",
+          "dcFastPorts": 12,
+          "level2Ports": 0,
+          "lat": 40.67521,
+          "lng": -111.86722
+        },
+        {
+          "name": "Walmart EV Charging",
+          "address": "4627 S 900 E, Salt Lake City, UT 84117",
+          "network": "WALMART",
+          "dcFastPorts": 12,
+          "level2Ports": 0,
+          "lat": 40.669882,
+          "lng": -111.863553
+        }
+      ],
+      "sourceName": "U.S. Department of Energy / NLR Alternative Fuels Data Center (AFDC)",
+      "sourceUrl": "https://afdc.energy.gov/stations",
+      "retrieved": "2026-10-31"
+    },
+    "nationalParks": {
+      "parks": [
+        {
+          "parkCode": "tica",
+          "fullName": "Timpanogos Cave National Monument",
+          "designation": "National Monument",
+          "distanceMiles": 26.0,
+          "description": "The visitor center, caves, and cave tours have not yet opened for the 2026 season. Hike your way past stunning vistas to explore a hidden underground world. Taste the thrill of caving as you twist and bend to enter beautifully decorated...",
+          "url": "https://www.nps.gov/tica/index.htm",
+          "lat": 40.440397,
+          "lng": -111.709394
+        }
+      ],
+      "sourceName": "U.S. National Park Service (NPS) API",
+      "sourceUrl": "https://www.nps.gov/",
+      "retrieved": "2026-10-31"
+    },
+    "upcomingEvents": {
+      "totalMatchingEvents": 488,
+      "events": [
+        {
+          "id": "Z7r9jZ1AAZIZK",
+          "name": "Utah Jazz vs. Portland Trail Blazers",
+          "date": "2026-10-31",
+          "venueName": "Delta Center",
+          "category": "Sports",
+          "url": "https://www.ticketmaster.com/event/Z7r9jZ1AAZIZK"
+        },
+        {
+          "id": "Z7r9jZ1AAvb4a",
+          "name": "Ballet West presents Dracula",
+          "date": "2026-10-31",
+          "venueName": "Janet Quinney Lawson Capitol Theatre",
+          "category": "Arts & Theatre",
+          "url": "https://www.ticketmaster.com/event/Z7r9jZ1AAvb4a"
+        },
+        {
+          "id": "Z7r9jZ1AAvgP6",
+          "name": "Zeds Dead (21 and Over)",
+          "date": "2026-10-31",
+          "venueName": "Granary Live",
+          "category": "Music",
+          "url": "https://www.ticketmaster.com/event/Z7r9jZ1AAvgP6"
+        },
+        {
+          "id": "Z7r9jZ1A70Aob",
+          "name": "Icon for Hire w/ Elijah",
+          "date": "2026-10-31",
+          "venueName": "Soundwell",
+          "category": "Music",
+          "url": "https://www.ticketmaster.com/event/Z7r9jZ1A70Aob"
+        },
+        {
+          "id": "Z7r9jZ1AAvFaa",
+          "name": "Greg Freeman w/ Trinity Ace",
+          "date": "2026-10-31",
+          "venueName": "Kilby Court",
+          "category": "Live Event",
+          "url": "https://www.ticketmaster.com/event/Z7r9jZ1AAvFaa"
+        }
+      ],
+      "sourceName": "Ticketmaster Discovery API v2",
+      "sourceUrl": "https://developer.ticketmaster.com/",
+      "retrieved": "2026-10-31"
     }
   },
   {
@@ -1218,7 +1325,7 @@
         "name": "West Valley Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.9,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -1233,14 +1340,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -1850,7 +1957,7 @@
         "name": "West Jordan Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.8,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -1865,14 +1972,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -2482,7 +2589,7 @@
         "name": "Provo Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.8,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -2497,14 +2604,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -3114,7 +3221,7 @@
         "name": "St. George Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.8,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -3129,14 +3236,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -3746,7 +3853,7 @@
         "name": "Orem Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.7,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -3761,14 +3868,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -4378,7 +4485,7 @@
         "name": "Sandy Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.7,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -4393,14 +4500,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -5010,7 +5117,7 @@
         "name": "Lehi Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.7,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -5025,14 +5132,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -5642,7 +5749,7 @@
         "name": "Ogden Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.7,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -5657,14 +5764,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -6274,7 +6381,7 @@
         "name": "South Jordan Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.7,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -6289,14 +6396,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -6906,7 +7013,7 @@
         "name": "Layton Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.7,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -6921,14 +7028,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -7538,7 +7645,7 @@
         "name": "Millcreek Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.5,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -7553,14 +7660,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -8170,7 +8277,7 @@
         "name": "Herriman Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.5,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -8185,14 +8292,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -8802,7 +8909,7 @@
         "name": "Taylorsville Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.5,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -8817,14 +8924,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -9434,7 +9541,7 @@
         "name": "Eagle Mountain Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.5,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -9449,14 +9556,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -10066,7 +10173,7 @@
         "name": "Logan Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.5,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -10081,14 +10188,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -10698,7 +10805,7 @@
         "name": "Saratoga Springs Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.4,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -10713,14 +10820,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -11330,7 +11437,7 @@
         "name": "Draper Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.4,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -11345,14 +11452,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -11962,7 +12069,7 @@
         "name": "Murray Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.4,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -11977,14 +12084,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -12594,7 +12701,7 @@
         "name": "Spanish Fork Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.4,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -12609,14 +12716,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -13226,7 +13333,7 @@
         "name": "Riverton Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.4,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -13241,14 +13348,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -13858,7 +13965,7 @@
         "name": "Bountiful Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.4,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -13873,14 +13980,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -14490,7 +14597,7 @@
         "name": "Cedar Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.3,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -14505,14 +14612,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -15122,7 +15229,7 @@
         "name": "Tooele Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.3,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -15137,14 +15244,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -15754,7 +15861,7 @@
         "name": "Roy Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.3,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -15769,14 +15876,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -16386,7 +16493,7 @@
         "name": "American Fork Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.3,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -16401,14 +16508,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -17018,7 +17125,7 @@
         "name": "Kearns metro township Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.3,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -17033,14 +17140,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -17650,7 +17757,7 @@
         "name": "Pleasant Grove Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.3,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -17665,14 +17772,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -18282,7 +18389,7 @@
         "name": "Syracuse Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.3,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -18297,14 +18404,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -18914,7 +19021,7 @@
         "name": "Midvale Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.3,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -18929,14 +19036,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -19546,7 +19653,7 @@
         "name": "Springville Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.3,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -19561,14 +19668,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -20178,7 +20285,7 @@
         "name": "Clearfield Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.3,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -20193,14 +20300,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -20810,7 +20917,7 @@
         "name": "Washington Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.3,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -20825,14 +20932,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -21442,7 +21549,7 @@
         "name": "Kaysville Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.2,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -21457,14 +21564,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -22074,7 +22181,7 @@
         "name": "Cottonwood Heights Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.2,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -22089,14 +22196,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -22706,7 +22813,7 @@
         "name": "Holladay Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.2,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -22721,14 +22828,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {
@@ -23338,7 +23445,7 @@
         "name": "Magna metro township Regional / Metropolitan Airport",
         "iata": null,
         "distanceMiles": 10.2,
-        "transitToDowntown": "15\u201330 min via regional highway corridor / rideshare"
+        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
       },
       "powerPlugs": {
         "types": [
@@ -23353,14 +23460,14 @@
         "code": "USD",
         "symbol": "$",
         "name": "United States Dollar",
-        "tippingCustoms": "18%\u201320% standard in restaurants and bars. $2\u2013$5/bag for bellhops. 15%\u201320% for rideshares.",
+        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
         "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
       },
       "climate": {
         "summerHighF": 84,
         "winterLowF": 22,
         "annualRainfallInches": 20,
-        "bestVisitMonths": "April\u2013May and September\u2013October for ideal scouting weather",
+        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
         "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
       },
       "emergency": {

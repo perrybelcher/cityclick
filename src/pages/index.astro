@@ -1,75 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import manifest from '../data/index-manifest.json';
+import { CERTIFIED_FLAGSHIPS, CERTIFIED_FLAGSHIP_SET, UNVERIFIED_REVIEW_COUNT } from '../config/flagships';
 
-// Curated 7 Certified Flagship Hubs with Primary-Sourced Data & Photography
-const FEATURED_CITIES = [
-  {
-    slug: 'tx/austin',
-    name: 'Austin',
-    state: 'Texas',
-    stateCode: 'TX',
-    image: '/images/austin-skyline.jpg',
-    appeal: 'Census demographics, housing costs, Open-Meteo climate, CMS emergency hospitals, colleges, EV charging, and sales-tax data for Austin, Texas.',
-    tagline: 'Texas Capital'
-  },
-  {
-    slug: 'tn/nashville',
-    name: 'Nashville',
-    state: 'Tennessee',
-    stateCode: 'TN',
-    image: '/images/nashville-hero.jpg',
-    appeal: 'Primary-sourced population, housing, elevation, airport, CMS hospital, university, and NAICS trade density guide for Nashville, Tennessee.',
-    tagline: 'Middle Tennessee'
-  },
-  {
-    slug: 'ar/hot-springs',
-    name: 'Hot Springs',
-    state: 'Arkansas',
-    stateCode: 'AR',
-    image: '/images/hot-springs-hero.jpg',
-    appeal: 'Verified Census housing, Hot Springs National Park access, municipal water, CMS hospitals, and retail sales-tax guide for Hot Springs, Arkansas.',
-    tagline: 'National Park City'
-  },
-  {
-    slug: 'ar/hot-springs-village',
-    name: 'Hot Springs Village',
-    state: 'Arkansas',
-    stateCode: 'AR',
-    image: '/images/hsv-hero.jpg',
-    appeal: 'Census ACS demographics, housing values, Ouachita foothills elevation, and Garland County infrastructure guide for Hot Springs Village, Arkansas.',
-    tagline: 'Ouachita Foothills'
-  },
-  {
-    slug: 'id/boise',
-    name: 'Boise',
-    state: 'Idaho',
-    stateCode: 'ID',
-    image: '/images/boise-hero.jpg',
-    appeal: 'Primary-sourced demographics, Boise Airport proximity, USGS elevation, universities, and small-business trade counts for Boise, Idaho.',
-    tagline: 'Mountain West'
-  },
-  {
-    slug: 'fl/tampa',
-    name: 'Tampa',
-    state: 'Florida',
-    stateCode: 'FL',
-    image: '/images/tampa-hero.jpg',
-    appeal: 'Verified Census housing, Tampa International Airport distance, Gulf Coast climate averages, and NAICS trade density for Tampa, Florida.',
-    tagline: 'Gulf Coast'
-  },
-  {
-    slug: 'az/scottsdale',
-    name: 'Scottsdale',
-    state: 'Arizona',
-    stateCode: 'AZ',
-    image: '/images/scottsdale-hero.jpg',
-    appeal: 'Census income and home values, Sonoran Desert climate and elevation, CMS hospitals, and retail tax breakdown for Scottsdale, Arizona.',
-    tagline: 'Sonoran Desert'
-  }
-];
-
-const CERTIFIED_SET = new Set(FEATURED_CITIES.map((c) => c.slug));
+const FEATURED_CITIES = CERTIFIED_FLAGSHIPS;
+const CERTIFIED_SET = CERTIFIED_FLAGSHIP_SET;
+const QUICK_PILL_CITIES = CERTIFIED_FLAGSHIPS.slice(0, 10);
 
 // Lightweight search index for all 1,501 cities (fast, client-side, zero lag)
 const searchIndex = manifest.map((c: any) => ({
@@ -93,7 +29,7 @@ const statesList = Object.values(stateCounts).sort((a, b) => a.name.localeCompar
 
 <Layout
   title="CityClick — Get to know your next city"
-  description="Plan a visit, find a place to live, or research your next business location. Primary-sourced guides for seven verified US cities, with 1,494 more in review."
+  description={`Plan a visit, find a place to live, or research your next business location. Primary-sourced guides for ${FEATURED_CITIES.length} verified US cities, with ${UNVERIFIED_REVIEW_COUNT.toLocaleString('en-US')} more in review.`}
   image="https://cityclick.com/images/og-cityclick.jpg"
 >
   <!-- Hero Section -->
@@ -104,7 +40,7 @@ const statesList = Object.values(stateCounts).sort((a, b) => a.name.localeCompar
         <div class="lg:col-span-7 space-y-6">
           <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-xs font-bold text-[#1D68F2]">
             <span class="w-2 h-2 rounded-full bg-[#1D68F2] animate-pulse"></span>
-            7 verified city guides · 1,494 more in review, added as each passes our data checks
+            {FEATURED_CITIES.length} verified city guides · {UNVERIFIED_REVIEW_COUNT.toLocaleString('en-US')} more in review, added as each passes our data checks
           </div>
 
           <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-[#152438] tracking-tight leading-[1.12]">
@@ -158,13 +94,20 @@ const statesList = Object.values(stateCounts).sort((a, b) => a.name.localeCompar
           <!-- Featured Cities Quick Links -->
           <div class="flex items-center gap-2 text-xs text-slate-500 pt-1 flex-wrap">
             <span class="font-bold text-slate-400 uppercase tracking-wider text-[10px]">Verified guides:</span>
-            <a href="/tx/austin/" class="px-2.5 py-1 rounded-lg bg-white border border-slate-200 hover:border-blue-400 hover:text-[#1D68F2] transition font-semibold">Austin, TX</a>
-            <a href="/tn/nashville/" class="px-2.5 py-1 rounded-lg bg-white border border-slate-200 hover:border-blue-400 hover:text-[#1D68F2] transition font-semibold">Nashville, TN</a>
-            <a href="/ar/hot-springs/" class="px-2.5 py-1 rounded-lg bg-white border border-slate-200 hover:border-blue-400 hover:text-[#1D68F2] transition font-semibold">Hot Springs, AR</a>
-            <a href="/ar/hot-springs-village/" class="px-2.5 py-1 rounded-lg bg-white border border-slate-200 hover:border-blue-400 hover:text-[#1D68F2] transition font-semibold">Hot Springs Village, AR</a>
-            <a href="/id/boise/" class="px-2.5 py-1 rounded-lg bg-white border border-slate-200 hover:border-blue-400 hover:text-[#1D68F2] transition font-semibold">Boise, ID</a>
-            <a href="/fl/tampa/" class="px-2.5 py-1 rounded-lg bg-white border border-slate-200 hover:border-blue-400 hover:text-[#1D68F2] transition font-semibold">Tampa, FL</a>
-            <a href="/az/scottsdale/" class="px-2.5 py-1 rounded-lg bg-white border border-slate-200 hover:border-blue-400 hover:text-[#1D68F2] transition font-semibold">Scottsdale, AZ</a>
+            {QUICK_PILL_CITIES.map((fc) => (
+              <a
+                href={`/${fc.slug}/`}
+                class="px-2.5 py-1 rounded-lg bg-white border border-slate-200 hover:border-blue-400 hover:text-[#1D68F2] transition font-semibold"
+              >
+                {fc.name}, {fc.stateCode}
+              </a>
+            ))}
+            <a
+              href="/#featured"
+              class="px-2.5 py-1 rounded-lg bg-blue-50 border border-blue-200 text-[#1D68F2] hover:bg-blue-100 transition font-bold"
+            >
+              All {FEATURED_CITIES.length} Verified Guides ↓
+            </a>
           </div>
         </div>
 
@@ -231,7 +174,7 @@ const statesList = Object.values(stateCounts).sort((a, b) => a.name.localeCompar
           </p>
         </div>
         <div class="mt-4 md:mt-0 text-xs font-bold text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
-          7 Certified Cities
+          {FEATURED_CITIES.length} Certified Cities
         </div>
       </div>
 

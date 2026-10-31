@@ -15,7 +15,7 @@ Before editing any data, template, script, or SEO surface, read and strictly obe
   1. **Austin, TX** (`/tx/austin/` — reference flagship)
   2. **Nashville, TN** (`/tn/nashville/` — certified flagship)
   3. **Hot Springs, AR** (`/ar/hot-springs/` — certified flagship #7) & **Hot Springs Village, AR** (`/ar/hot-springs-village/` — certified CDP flagship)
-- **Current 7 Indexable Flagships (`scripts/qa.ts`):** `tx/austin`, `tn/nashville`, `ar/hot-springs`, `ar/hot-springs-village`, `id/boise`, `fl/tampa`, `az/scottsdale`. All other ~1,494 cities MUST remain `noindex, follow` and excluded from `sitemap.xml` until rebuilt from primary sources and added to `CERTIFIED_FLAGSHIP_SLUGS`.
+- **Current 25 Indexable Flagships (`src/config/flagships.ts` / `scripts/qa.ts`):** `tx/austin`, `tn/nashville`, `ar/hot-springs`, `ar/hot-springs-village`, `id/boise`, `fl/tampa`, `az/scottsdale`, `tx/dallas`, `tx/houston`, `tx/san-antonio`, `az/phoenix`, `nc/charlotte`, `nc/raleigh`, `fl/orlando`, `fl/miami`, `fl/jacksonville`, `co/denver`, `nv/las-vegas`, `ut/salt-lake-city`, `ga/atlanta`, `ok/oklahoma-city`, `ar/little-rock`, `ar/fayetteville`, `ar/bentonville`, `al/huntsville`. All other ~1,476 cities MUST remain `noindex, follow` and excluded from `sitemap.xml` until rebuilt from primary sources and added to `CERTIFIED_FLAGSHIPS`.
 
 ---
 

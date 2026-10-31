@@ -2,1002 +2,1055 @@
   {
     "slug": "ar/little-rock",
     "cityId": "0541000",
-    "countyFips": "05410",
+    "countyFips": "05119",
     "name": "Little Rock",
     "stateCode": "ar",
     "stateName": "Arkansas",
-    "countyName": "Little Rock Metropolitan Area",
+    "countyName": "Pulaski County",
     "lat": 34.725393,
     "lng": -92.358556,
     "primaryZips": [
-      "70119"
+      "72205",
+      "72211",
+      "72201",
+      "72223",
+      "72209",
+      "72204",
+      "72212",
+      "72202",
+      "72206",
+      "72207",
+      "72210",
+      "72227"
     ],
     "demographics": {
       "population": 203842,
-      "popGrowth5YrPct": 0.6,
-      "medianHouseholdIncome": 84364,
-      "perCapitaIncome": 48931,
+      "medianHouseholdIncome": 60583,
+      "perCapitaIncome": 43242,
       "medianAge": 36.4,
-      "daytimeWorkerPop": 126382,
-      "daytimePopSurgePct": 8.5,
-      "medianGrossRent": 1622,
-      "medianHomeValue": 354329,
+      "medianGrossRent": 1067,
+      "medianHomeValue": 221200,
       "provenance": {
-        "sourceName": "US Census Bureau ACS 5-Year (DP03/DP04/DP05) & PopEst",
-        "sourceUrl": "https://api.census.gov/data/2023/acs/acs5",
-        "datasetVintage": "2023-5YR",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "sourceName": "US Census Bureau ACS 5-Year Estimates 2023 (Table-Based Summary File)",
+        "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/",
+        "datasetVintage": "ACS-2023-5YR",
+        "verifiedAt": "2026-10-31T00:00:00Z",
         "granularity": "place"
-      }
-    },
-    "laborAndEconomy": {
-      "unemploymentRatePct": 3.8,
-      "avgWeeklyWageAllIndustries": 1340,
-      "newHousingPermits12Mo": 1529,
-      "permitsPer1kResidents": 7.5,
-      "femaRiskScore": 28.0,
-      "provenance": {
-        "sourceName": "BLS Local Area Unemployment Statistics (LAUS) & Census BPS",
-        "sourceUrl": "https://www.bls.gov/lau/",
-        "datasetVintage": "2024-M08",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
-      }
+      },
+      "popChange2020to2023Pct": 0.6,
+      "popChangeBasis": "Census Population Estimates, April 2020 base to July 2023"
     },
     "industries": [
       {
         "naicsCode": "722515",
         "slug": "coffee-shops",
         "label": "Coffee & Snack Shops",
-        "establishments": 44,
-        "per10kResidents": 2.16,
-        "usAvgPer10k": 2.15,
-        "saturationIndex": 100,
+        "establishments": 50,
+        "per10kResidents": 2.29,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 108,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Little Rock."
+          "evidenceQuote": "50 employer establishments (NAICS 722515) across 12 ZIP codes whose USPS city is Little Rock, AR; density uses ACS 2023 ZCTA population (218,724). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722511",
         "slug": "restaurants",
         "label": "Full-Service Restaurants",
-        "establishments": 139,
-        "per10kResidents": 6.82,
-        "usAvgPer10k": 6.8,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 241,
+        "per10kResidents": 11.02,
+        "usAvgPer10k": 7.44,
+        "saturationIndex": 148,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Little Rock."
+          "evidenceQuote": "241 employer establishments (NAICS 722511) across 12 ZIP codes whose USPS city is Little Rock, AR; density uses ACS 2023 ZCTA population (218,724). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722513",
         "slug": "fast-food",
-        "label": "Fast Food Restaurants",
-        "establishments": 147,
-        "per10kResidents": 7.21,
-        "usAvgPer10k": 7.2,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Limited-Service / Fast Food Restaurants",
+        "establishments": 235,
+        "per10kResidents": 10.74,
+        "usAvgPer10k": 7.75,
+        "saturationIndex": 139,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Little Rock."
+          "evidenceQuote": "235 employer establishments (NAICS 722513) across 12 ZIP codes whose USPS city is Little Rock, AR; density uses ACS 2023 ZCTA population (218,724). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722410",
         "slug": "bars-taverns",
-        "label": "Bars & Drinking Places",
-        "establishments": 38,
-        "per10kResidents": 1.86,
-        "usAvgPer10k": 1.85,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Drinking Places (Alcoholic Beverages)",
+        "establishments": 9,
+        "per10kResidents": 0.41,
+        "usAvgPer10k": 0.9,
+        "saturationIndex": 46,
+        "status": "underserved",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Little Rock."
-        }
-      },
-      {
-        "naicsCode": "812111",
-        "slug": "barber-shops",
-        "label": "Barber Shops",
-        "establishments": 28,
-        "per10kResidents": 1.37,
-        "usAvgPer10k": 1.35,
-        "saturationIndex": 102,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Little Rock."
+          "evidenceQuote": "9 employer establishments (NAICS 722410) across 12 ZIP codes whose USPS city is Little Rock, AR; density uses ACS 2023 ZCTA population (218,724). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812112",
         "slug": "beauty-salons",
         "label": "Beauty Salons & Hair Studios",
-        "establishments": 69,
-        "per10kResidents": 3.38,
-        "usAvgPer10k": 3.4,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 65,
+        "per10kResidents": 2.97,
+        "usAvgPer10k": 2.31,
+        "saturationIndex": 129,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Little Rock."
+          "evidenceQuote": "65 employer establishments (NAICS 812112) across 12 ZIP codes whose USPS city is Little Rock, AR; density uses ACS 2023 ZCTA population (218,724). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812113",
         "slug": "nail-salons",
         "label": "Nail Salons",
-        "establishments": 43,
-        "per10kResidents": 2.11,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 4,
+        "per10kResidents": 0.18,
+        "usAvgPer10k": 0.86,
+        "saturationIndex": 21,
+        "status": "underserved",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Little Rock."
+          "evidenceQuote": "4 employer establishments (NAICS 812113) across 12 ZIP codes whose USPS city is Little Rock, AR; density uses ACS 2023 ZCTA population (218,724). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "713940",
         "slug": "gyms-fitness",
-        "label": "Fitness & Recreational Gyms",
-        "establishments": 25,
-        "per10kResidents": 1.23,
-        "usAvgPer10k": 1.25,
-        "saturationIndex": 98,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Fitness & Recreational Sports Centers",
+        "establishments": 33,
+        "per10kResidents": 1.51,
+        "usAvgPer10k": 1.0,
+        "saturationIndex": 151,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Little Rock."
+          "evidenceQuote": "33 employer establishments (NAICS 713940) across 12 ZIP codes whose USPS city is Little Rock, AR; density uses ACS 2023 ZCTA population (218,724). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812910",
         "slug": "pet-care",
-        "label": "Pet Care & Grooming",
-        "establishments": 19,
-        "per10kResidents": 0.93,
-        "usAvgPer10k": 0.95,
-        "saturationIndex": 98,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Pet Care & Grooming Services",
+        "establishments": 3,
+        "per10kResidents": 0.14,
+        "usAvgPer10k": 0.46,
+        "saturationIndex": 30,
+        "status": "underserved",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Little Rock."
+          "evidenceQuote": "3 employer establishments (NAICS 812910) across 12 ZIP codes whose USPS city is Little Rock, AR; density uses ACS 2023 ZCTA population (218,724). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541940",
         "slug": "veterinary",
-        "label": "Veterinary Services",
-        "establishments": 21,
-        "per10kResidents": 1.03,
-        "usAvgPer10k": 1.05,
-        "saturationIndex": 98,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Veterinary Services & Animal Hospitals",
+        "establishments": 23,
+        "per10kResidents": 1.05,
+        "usAvgPer10k": 0.69,
+        "saturationIndex": 152,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Little Rock."
+          "evidenceQuote": "23 employer establishments (NAICS 541940) across 12 ZIP codes whose USPS city is Little Rock, AR; density uses ACS 2023 ZCTA population (218,724). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "811111",
         "slug": "auto-repair",
         "label": "General Automotive Repair",
-        "establishments": 98,
-        "per10kResidents": 4.81,
-        "usAvgPer10k": 4.8,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 21,
+        "per10kResidents": 0.96,
+        "usAvgPer10k": 2.2,
+        "saturationIndex": 44,
+        "status": "underserved",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Little Rock."
+          "evidenceQuote": "21 employer establishments (NAICS 811111) across 12 ZIP codes whose USPS city is Little Rock, AR; density uses ACS 2023 ZCTA population (218,724). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "811192",
         "slug": "car-washes",
-        "label": "Car Washes & Detailing",
-        "establishments": 13,
-        "per10kResidents": 0.64,
-        "usAvgPer10k": 0.65,
-        "saturationIndex": 98,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Car Washes & Auto Detailing",
+        "establishments": 16,
+        "per10kResidents": 0.73,
+        "usAvgPer10k": 0.35,
+        "saturationIndex": 209,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Little Rock."
-        }
-      },
-      {
-        "naicsCode": "812310",
-        "slug": "laundromats",
-        "label": "Coin Laundromats",
-        "establishments": 11,
-        "per10kResidents": 0.54,
-        "usAvgPer10k": 0.55,
-        "saturationIndex": 98,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Little Rock."
-        }
-      },
-      {
-        "naicsCode": "812320",
-        "slug": "dry-cleaners",
-        "label": "Dry Cleaning & Laundry",
-        "establishments": 17,
-        "per10kResidents": 0.83,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 98,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Little Rock."
+          "evidenceQuote": "16 employer establishments (NAICS 811192) across 12 ZIP codes whose USPS city is Little Rock, AR; density uses ACS 2023 ZCTA population (218,724). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621210",
         "slug": "dentists",
         "label": "Offices of Dentists",
-        "establishments": 79,
-        "per10kResidents": 3.88,
-        "usAvgPer10k": 3.9,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 116,
+        "per10kResidents": 5.3,
+        "usAvgPer10k": 3.89,
+        "saturationIndex": 136,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Little Rock."
+          "evidenceQuote": "116 employer establishments (NAICS 621210) across 12 ZIP codes whose USPS city is Little Rock, AR; density uses ACS 2023 ZCTA population (218,724). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621310",
         "slug": "chiropractors",
         "label": "Offices of Chiropractors",
-        "establishments": 29,
-        "per10kResidents": 1.42,
-        "usAvgPer10k": 1.4,
-        "saturationIndex": 102,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 30,
+        "per10kResidents": 1.37,
+        "usAvgPer10k": 0.97,
+        "saturationIndex": 141,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Little Rock."
+          "evidenceQuote": "30 employer establishments (NAICS 621310) across 12 ZIP codes whose USPS city is Little Rock, AR; density uses ACS 2023 ZCTA population (218,724). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621340",
         "slug": "physical-therapy",
-        "label": "Physical Therapy Clinics",
-        "establishments": 32,
-        "per10kResidents": 1.57,
-        "usAvgPer10k": 1.55,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Physical, Occupational & Speech Therapists",
+        "establishments": 49,
+        "per10kResidents": 2.24,
+        "usAvgPer10k": 1.3,
+        "saturationIndex": 172,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Little Rock."
+          "evidenceQuote": "49 employer establishments (NAICS 621340) across 12 ZIP codes whose USPS city is Little Rock, AR; density uses ACS 2023 ZCTA population (218,724). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "624410",
         "slug": "daycare",
         "label": "Child Day Care Services",
-        "establishments": 46,
-        "per10kResidents": 2.26,
-        "usAvgPer10k": 2.25,
-        "saturationIndex": 100,
+        "establishments": 49,
+        "per10kResidents": 2.24,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 106,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Little Rock."
+          "evidenceQuote": "49 employer establishments (NAICS 624410) across 12 ZIP codes whose USPS city is Little Rock, AR; density uses ACS 2023 ZCTA population (218,724). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "445120",
         "slug": "convenience-stores",
-        "label": "Convenience Stores",
-        "establishments": 40,
-        "per10kResidents": 1.96,
-        "usAvgPer10k": 1.95,
-        "saturationIndex": 101,
+        "label": "Convenience Retail Stores",
+        "establishments": 18,
+        "per10kResidents": 0.82,
+        "usAvgPer10k": 0.82,
+        "saturationIndex": 100,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Little Rock."
+          "evidenceQuote": "18 employer establishments (NAICS 445120) across 12 ZIP codes whose USPS city is Little Rock, AR; density uses ACS 2023 ZCTA population (218,724). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "448140",
         "slug": "clothing-boutiques",
-        "label": "Family Clothing Stores",
-        "establishments": 34,
-        "per10kResidents": 1.67,
-        "usAvgPer10k": 1.65,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Family Clothing Stores & Boutiques",
+        "establishments": 26,
+        "per10kResidents": 1.19,
+        "usAvgPer10k": 0.65,
+        "saturationIndex": 182,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Little Rock."
-        }
-      },
-      {
-        "naicsCode": "445291",
-        "slug": "bakeries",
-        "label": "Retail Bakeries",
-        "establishments": 17,
-        "per10kResidents": 0.83,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 98,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Little Rock."
-        }
-      },
-      {
-        "naicsCode": "453110",
-        "slug": "florists",
-        "label": "Florists & Floral Gift",
-        "establishments": 10,
-        "per10kResidents": 0.49,
-        "usAvgPer10k": 0.5,
-        "saturationIndex": 98,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Little Rock."
+          "evidenceQuote": "26 employer establishments (NAICS 448140) across 12 ZIP codes whose USPS city is Little Rock, AR; density uses ACS 2023 ZCTA population (218,724). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541110",
         "slug": "law-firms",
         "label": "Offices of Lawyers",
-        "establishments": 100,
-        "per10kResidents": 4.91,
-        "usAvgPer10k": 4.9,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 377,
+        "per10kResidents": 17.24,
+        "usAvgPer10k": 4.8,
+        "saturationIndex": 359,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Little Rock."
+          "evidenceQuote": "377 employer establishments (NAICS 541110) across 12 ZIP codes whose USPS city is Little Rock, AR; density uses ACS 2023 ZCTA population (218,724). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541211",
         "slug": "accounting-cpa",
-        "label": "Offices of CPAs",
-        "establishments": 43,
-        "per10kResidents": 2.11,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Offices of Certified Public Accountants",
+        "establishments": 81,
+        "per10kResidents": 3.7,
+        "usAvgPer10k": 1.44,
+        "saturationIndex": 257,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Little Rock."
+          "evidenceQuote": "81 employer establishments (NAICS 541211) across 12 ZIP codes whose USPS city is Little Rock, AR; density uses ACS 2023 ZCTA population (218,724). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "531210",
         "slug": "real-estate-agencies",
-        "label": "Real Estate Brokerages",
-        "establishments": 77,
-        "per10kResidents": 3.78,
-        "usAvgPer10k": 3.8,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Offices of Real Estate Agents & Brokers",
+        "establishments": 134,
+        "per10kResidents": 6.13,
+        "usAvgPer10k": 4.74,
+        "saturationIndex": 129,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Little Rock."
+          "evidenceQuote": "134 employer establishments (NAICS 531210) across 12 ZIP codes whose USPS city is Little Rock, AR; density uses ACS 2023 ZCTA population (218,724). National benchmark = all US ZIP rows / US population."
         }
       }
     ],
     "permitsAndTax": {
-      "generalBusinessLicenseRequired": false,
-      "businessLicenseFeeSummary": "No general city business license required. State of Arkansas statutory filings apply.",
-      "businessLicensePortalUrl": "https://www.little-rockar.gov/permits",
-      "zoningLookupUrl": "https://www.little-rockar.gov/zoning",
-      "buildingPermitPortalUrl": "https://www.little-rockar.gov/building",
-      "certificateOfOccupancyFee": "$185 standard municipal inspection fee",
-      "avgPermitWaitDays": 30,
-      "shortTermRentalStatus": "restricted",
-      "foodTruckPermitStatus": "allowed",
-      "combinedSalesTaxRate": 0.08,
       "stateTaxRate": 0.065,
-      "localTaxRate": 0.015,
+      "countyTaxRate": 0.01,
+      "cityTaxRate": 0.01125,
+      "specialDistrictTaxRate": 0.0,
+      "localTaxRate": 0.02125,
+      "combinedSalesTaxRate": 0.08625,
       "provenance": {
-        "sourceName": "Little Rock Municipal Code & State Department of Revenue",
-        "sourceUrl": "https://www.little-rockar.gov",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place",
-        "evidenceQuote": "Statutory municipal code standards."
+        "sourceName": "Arkansas Dept. of Finance and Administration local sales & use tax table (6.5% state + 1.0% Pulaski County + 1.125% City of Little Rock = 8.625%)",
+        "sourceUrl": "https://www.dfa.arkansas.gov/excise-tax/sales-and-use-tax/local-tax-lookup-tools/",
+        "datasetVintage": "2026",
+        "verifiedAt": "2026-10-31T00:00:00Z",
+        "granularity": "place"
       }
     },
-    "topTrafficCorridors": [
-      {
-        "roadName": "Main Arterial Corridor 1",
-        "segmentDescription": "Central Commercial Corridor through Little Rock",
-        "aadt": 24461,
-        "heavyTruckPct": 5.5,
-        "lat": 34.725393,
-        "lng": -92.358556,
-        "year": 2024,
-        "provenance": {
-          "sourceName": "Arkansas DOT AADT Database",
-          "sourceUrl": "https://www.transportation.gov/",
-          "datasetVintage": "2024-AADT",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "place"
-        }
-      }
-    ],
-    "marketSignals": {
-      "reportedRetailRentSqFtYr": 41.3,
-      "reportedIndustrialRentSqFtYr": 18.6,
-      "topSearchedNaics30d": [
-        "722515",
-        "713940",
-        "812111"
-      ],
-      "verifiedLocalProsCount": 8
-    },
-    "scores": {
-      "overallViability": 50,
-      "purchasingPower": 48,
-      "growthMomentum": 52,
-      "costEfficiency": 70,
-      "regulatoryFriction": 48
-    },
+    "marketSignals": {},
     "executiveTravel": {
-      "timeZone": "America/Chicago (CT: UTC-06:00)",
+      "timeZone": "America/Chicago",
       "timeZoneAbbr": "CT",
       "utcOffset": "-06:00",
       "primaryAirport": {
-        "name": "Little Rock Regional / Metropolitan Airport",
-        "iata": null,
-        "distanceMiles": 11.1,
-        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
-      },
-      "powerPlugs": {
-        "types": [
-          "Type A (2-pin)",
-          "Type B (3-pin grounded)"
-        ],
-        "voltage": "120V",
-        "frequency": "60Hz",
-        "adapterAdvice": "Visitors from UK, EU, Australia, and Asia require a standard Type A/B plug adapter and dual-voltage converter."
-      },
-      "currency": {
-        "code": "USD",
-        "symbol": "$",
-        "name": "United States Dollar",
-        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
-        "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
+        "name": "Bill & Hillary Clinton National Airport/Adams Field",
+        "iata": "LIT",
+        "lat": 34.729222,
+        "lng": -92.223591,
+        "distanceMiles": 7.7,
+        "transitToDowntown": null,
+        "source": "OurAirports (public domain) for name, IATA code and coordinates; distance is straight-line from the U.S. Census Gazetteer city center point",
+        "sourceUrl": "https://ourairports.com/data/",
+        "cityCenterMethod": "Census Gazetteer internal point",
+        "retrieved": "2026-10-31"
       },
       "climate": {
-        "summerHighF": 94,
-        "winterLowF": 47,
-        "annualRainfallInches": 20,
-        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
-        "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
+        "summerHighF": 92,
+        "winterLowF": 34,
+        "annualRainfallInches": 53.4,
+        "summerHighBasis": "Average July daily high",
+        "winterLowBasis": "Average January daily low",
+        "source": "Open-Meteo Historical Weather API (ERA5 reanalysis), 2015-2024 average, retrieved 2026-10-31",
+        "sourceUrl": "https://open-meteo.com/en/docs/historical-weather-api"
       },
       "emergency": {
         "emergencyDispatch": "911",
-        "nonEmergencyPolice": "311 or local municipal dispatch",
-        "nearestTraumaHospital": "Little Rock Regional Memorial Hospital",
-        "hospitalAddress": "Medical Center District, Little Rock, AR"
-      },
-      "visitorLogistics": {
-        "tapWaterPotability": "100% Safe municipal drinking water conforming to EPA Safe Drinking Water Act standards.",
-        "salesTaxRefundPolicy": "International travelers may claim state sales tax refunds on qualifying departures at designated airport customs counters.",
-        "rideshareAvailability": "Ubiquitous (Uber and Lyft operational 24/7 across the metropolitan area)."
-      },
-      "provenance": {
-        "sourceName": "FAA Airport Database & International Trade Administration",
-        "sourceUrl": "https://www.trade.gov/",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
+        "nearestTraumaHospital": "Arkansas Children's Hospital",
+        "hospitalAddress": "1 Children'S Way, Slot 301, Little Rock, AR 72202",
+        "cmsFacilityId": "043300",
+        "emergencyServices": true,
+        "source": "CMS Care Compare hospital general information (federal dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma level, ranking or nearest-facility claim.",
+        "erHospitals": [
+          {
+            "name": "Arkansas Children's Hospital",
+            "address": "1 Children'S Way, Slot 301, Little Rock, AR 72202",
+            "type": "Children's",
+            "cmsFacilityId": "043300",
+            "lat": 34.743478,
+            "lng": -92.291528
+          },
+          {
+            "name": "Arkansas Heart Hospital, LLC",
+            "address": "1701 S Shackleford Road, Little Rock, AR 72211",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "040134",
+            "lat": 34.739521,
+            "lng": -92.394377
+          },
+          {
+            "name": "Arkansas State Hospital",
+            "address": "305 S Palm Street, Little Rock, AR 72205",
+            "type": "Psychiatric",
+            "cmsFacilityId": "044011",
+            "lat": 34.751583,
+            "lng": -92.325012
+          },
+          {
+            "name": "Baptist Health Medical Center-Little Rock",
+            "address": "9601 Baptist Health Drive, Little Rock, AR 72205",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "040114"
+          },
+          {
+            "name": "CHI-St. Vincent Infirmary",
+            "address": "Two St Vincent Circle, Little Rock, AR 72205",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "040007"
+          },
+          {
+            "name": "University of Arkansas Medical Sciences",
+            "address": "4301 West Markham Street Mail Slot 612, Little Rock, AR 72205",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "040016",
+            "lat": 34.751479,
+            "lng": -92.319956
+          },
+          {
+            "name": "VA Central AR. Veterans Healthcare System LR",
+            "address": "4300 West Seventh Street, Little Rock, AR 72205",
+            "type": "Acute Care - Veterans Administration",
+            "cmsFacilityId": "04010F",
+            "lat": 34.744937,
+            "lng": -92.321176
+          }
+        ],
+        "erHospitalsSource": "CMS Care Compare hospital general information (federal dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma level, ranking or nearest-facility claim."
       }
+    },
+    "housingAndTaxes": {
+      "medianHomeValue": 221200,
+      "medianGrossRent": 1067,
+      "medianRealEstateTaxPaid": 1859,
+      "effectivePropertyTaxRatePct": 0.84,
+      "countyName": "Pulaski County",
+      "source": "ACS 2023 5-yr: B25077 median home value, B25064 median gross rent, B25103 median real estate taxes paid. Effective rate = B25103 / B25077.",
+      "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/"
+    },
+    "climateNormals": {
+      "peakSummerHighF": 92,
+      "winterLowF": 34,
+      "annualRainfallInches": 53.4,
+      "sourceName": "Open-Meteo Historical Weather API (ERA5 reanalysis), 2015-2024 average, retrieved 2026-10-31",
+      "sourceUrl": "https://open-meteo.com/en/docs/historical-weather-api"
+    },
+    "terrainElevation": {
+      "elevationFeet": 278.7,
+      "elevationMeters": 84.9,
+      "topographyClass": "Arkansas River Valley & Ouachita Foothills",
+      "sourceName": "USGS 3D Elevation Program (3DEP Elevation Point Query Service)",
+      "sourceUrl": "https://epqs.nationalmap.gov/v1/json"
+    },
+    "waterUtility": {
+      "pwsid": "AR0000465",
+      "providerName": "Central Arkansas Water",
+      "populationServed": 368455,
+      "sourceType": "surface water",
+      "source": "U.S. EPA Safe Drinking Water Information System (SDWIS)",
+      "sourceUrl": "https://data.epa.gov/efservice/WATER_SYSTEM/PWSID/AR0000465/JSON",
+      "retrieved": "2026-10-31"
+    },
+    "higherEducation": {
+      "institutionCount": 12,
+      "totalEnrollment": 11899,
+      "institutions": [
+        {
+          "id": 106245,
+          "name": "University of Arkansas at Little Rock",
+          "studentSize": 4949,
+          "ownership": "Public",
+          "schoolUrl": "https://ualr.edu/",
+          "lat": 34.723254,
+          "lng": -92.339778
+        },
+        {
+          "id": 442569,
+          "name": "University of Arkansas Grantham",
+          "studentSize": 2833,
+          "ownership": "Public",
+          "schoolUrl": "https://www.uagrantham.edu/",
+          "lat": 34.775996,
+          "lng": -92.343582
+        },
+        {
+          "id": 106263,
+          "name": "University of Arkansas for Medical Sciences",
+          "studentSize": 1571,
+          "ownership": "Public",
+          "schoolUrl": "https://www.uams.edu/",
+          "lat": 34.750152,
+          "lng": -92.322348
+        },
+        {
+          "id": 107600,
+          "name": "Philander Smith University",
+          "studentSize": 751,
+          "ownership": "Private nonprofit",
+          "schoolUrl": "https://www.philander.edu/",
+          "lat": 34.737131,
+          "lng": -92.283015
+        },
+        {
+          "id": 458885,
+          "name": "Strayer University-Arkansas",
+          "studentSize": 695,
+          "ownership": "Private for-profit",
+          "schoolUrl": "https://www.strayer.edu/campus-locations/arkansas/little-rock",
+          "lat": 34.745489,
+          "lng": -92.271192
+        },
+        {
+          "id": 106546,
+          "name": "Baptist Health College Little Rock",
+          "studentSize": 569,
+          "ownership": "Private nonprofit",
+          "schoolUrl": "https://www.bhclr.edu/",
+          "lat": 34.713115,
+          "lng": -92.40692
+        }
+      ],
+      "sourceName": "U.S. Department of Education College Scorecard",
+      "sourceUrl": "https://collegescorecard.ed.gov/",
+      "retrieved": "2026-10-31"
+    },
+    "evInfrastructure": {
+      "totalStations": 85,
+      "totalChargingPorts": 221,
+      "dcFastPorts": 35,
+      "level2Ports": 186,
+      "sampleStations": [
+        {
+          "name": "Embassy Suites by Hilton Little Rock - Tesla Destination",
+          "address": "11301 Financial Centre Pkwy, Little Rock, AR 72211",
+          "network": "Tesla Destination",
+          "dcFastPorts": 0,
+          "level2Ports": 12,
+          "lat": 34.746203,
+          "lng": -92.400096
+        },
+        {
+          "name": "Little Rock, AR - Tesla Supercharger",
+          "address": "11201 Bass Pro Parkway, Little Rock, AR 72210",
+          "network": "Tesla",
+          "dcFastPorts": 10,
+          "level2Ports": 0,
+          "lat": 34.66146,
+          "lng": -92.410336
+        },
+        {
+          "name": "Walmart 124 (Little Rock, AR)",
+          "address": "8801 Baseline Road, Little Rock, AR 72209",
+          "network": "Electrify America",
+          "dcFastPorts": 8,
+          "level2Ports": 0,
+          "lat": 34.66868,
+          "lng": -92.37668
+        },
+        {
+          "name": "Little Rock, AR Rechargery Relay @ Casey's - Stagecoach Rd",
+          "address": "8101 Stagecoach Rd, Little Rock, AR 72210",
+          "network": "IONNA",
+          "dcFastPorts": 8,
+          "level2Ports": 0,
+          "lat": 34.676106,
+          "lng": -92.409414
+        },
+        {
+          "name": "Wingate by Wyndham Little Rock - Tesla Destination",
+          "address": "1212 S Shackleford Rd, Little Rock, AR 72211",
+          "network": "Tesla Destination",
+          "dcFastPorts": 0,
+          "level2Ports": 8,
+          "lat": 34.742121,
+          "lng": -92.394751
+        }
+      ],
+      "sourceName": "U.S. Department of Energy / NLR Alternative Fuels Data Center (AFDC)",
+      "sourceUrl": "https://afdc.energy.gov/stations",
+      "retrieved": "2026-10-31"
+    },
+    "nationalParks": {
+      "parks": [
+        {
+          "parkCode": "chsc",
+          "fullName": "Little Rock Central High School National Historic Site",
+          "designation": "National Historic Site",
+          "distanceMiles": 3.4,
+          "description": "In 1957, Little Rock Central High School was the epicenter of confrontation and a catalyst for change as the fundamental test for the United States to enforce African American civil rights following Brown v. Board of Education. Learn...",
+          "url": "https://www.nps.gov/chsc/index.htm",
+          "lat": 34.736947,
+          "lng": -92.299879
+        },
+        {
+          "parkCode": "hosp",
+          "fullName": "Hot Springs National Park",
+          "designation": "National Park",
+          "distanceMiles": 42.4,
+          "description": "Hot Springs National Park has a rich cultural past. The grand architecture of our historic bathhouses is equally matched by the natural curiosities that have been drawing people here for hundreds of years. Ancient thermal springs...",
+          "url": "https://www.nps.gov/hosp/index.htm",
+          "lat": 34.524144,
+          "lng": -93.063329
+        }
+      ],
+      "sourceName": "U.S. National Park Service (NPS) API",
+      "sourceUrl": "https://www.nps.gov/",
+      "retrieved": "2026-10-31"
+    },
+    "upcomingEvents": {
+      "totalMatchingEvents": 51,
+      "events": [
+        {
+          "id": "G5viZ_FJNtmyR",
+          "name": "Simmons Bank Championship: Good Any One Day Admission",
+          "date": "2026-10-30",
+          "venueName": "Pleasant Valley Country Club",
+          "category": "Sports",
+          "url": "https://www.ticketmaster.com/simmons-bank-championship-good-any-one-little-rock-arkansas-10-30-2026/event/1B006489A3A6EE6F"
+        },
+        {
+          "id": "G5viZ_oj2vgjl",
+          "name": "Beetlejuice (Touring)",
+          "date": "2026-10-31",
+          "venueName": "Robinson Center",
+          "category": "Arts & Theatre",
+          "url": "https://www.ticketmaster.com/beetlejuice-touring-little-rock-arkansas-10-31-2026/event/1B0065170F07572B"
+        },
+        {
+          "id": "rZ7HnEZ1Af0eGN",
+          "name": "Micro Wrestling",
+          "date": "2026-10-31",
+          "venueName": "The Hall",
+          "category": "Sports",
+          "url": "https://www.ticketweb.com/event/micro-wrestling-the-hall-tickets/14902323"
+        },
+        {
+          "id": "G5viZ_FJNEryp",
+          "name": "Simmons Bank Championship: Saturday Admission",
+          "date": "2026-10-31",
+          "venueName": "Pleasant Valley Country Club",
+          "category": "Sports",
+          "url": "https://www.ticketmaster.com/simmons-bank-championship-saturday-admission-little-rock-arkansas-10-31-2026/event/1B006489A39DEE56"
+        },
+        {
+          "id": "rZ7HnEZ1AfPzkK",
+          "name": "The Brook & The Bluff - The Werewolf Tour",
+          "date": "2026-11-01",
+          "venueName": "The Hall",
+          "category": "Music",
+          "url": "https://www.ticketweb.com/event/the-brook-the-bluff-the-hall-tickets/14978193"
+        }
+      ],
+      "sourceName": "Ticketmaster Discovery API v2",
+      "sourceUrl": "https://developer.ticketmaster.com/",
+      "retrieved": "2026-10-31"
     }
   },
   {
     "slug": "ar/fayetteville",
     "cityId": "0523290",
-    "countyFips": "05232",
+    "countyFips": "05143",
     "name": "Fayetteville",
     "stateCode": "ar",
     "stateName": "Arkansas",
-    "countyName": "Fayetteville Metropolitan Area",
+    "countyName": "Washington County",
     "lat": 36.071455,
     "lng": -94.166564,
     "primaryZips": [
-      "70323"
+      "72703",
+      "72701",
+      "72704"
     ],
     "demographics": {
       "population": 101680,
-      "popGrowth5YrPct": 7.3,
-      "medianHouseholdIncome": 90854,
-      "perCapitaIncome": 52695,
-      "medianAge": 36.4,
-      "daytimeWorkerPop": 63042,
-      "daytimePopSurgePct": 8.5,
-      "medianGrossRent": 1747,
-      "medianHomeValue": 381587,
+      "medianHouseholdIncome": 59074,
+      "perCapitaIncome": 37885,
+      "medianAge": 28.7,
+      "medianGrossRent": 1003,
+      "medianHomeValue": 322500,
       "provenance": {
-        "sourceName": "US Census Bureau ACS 5-Year (DP03/DP04/DP05) & PopEst",
-        "sourceUrl": "https://api.census.gov/data/2023/acs/acs5",
-        "datasetVintage": "2023-5YR",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "sourceName": "US Census Bureau ACS 5-Year Estimates 2023 (Table-Based Summary File)",
+        "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/",
+        "datasetVintage": "ACS-2023-5YR",
+        "verifiedAt": "2026-10-31T00:00:00Z",
         "granularity": "place"
-      }
-    },
-    "laborAndEconomy": {
-      "unemploymentRatePct": 3.8,
-      "avgWeeklyWageAllIndustries": 1340,
-      "newHousingPermits12Mo": 763,
-      "permitsPer1kResidents": 7.5,
-      "femaRiskScore": 28.0,
-      "provenance": {
-        "sourceName": "BLS Local Area Unemployment Statistics (LAUS) & Census BPS",
-        "sourceUrl": "https://www.bls.gov/lau/",
-        "datasetVintage": "2024-M08",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
-      }
+      },
+      "popChange2020to2023Pct": 7.8,
+      "popChangeBasis": "Census Population Estimates, April 2020 base to July 2023"
     },
     "industries": [
       {
         "naicsCode": "722515",
         "slug": "coffee-shops",
         "label": "Coffee & Snack Shops",
-        "establishments": 22,
-        "per10kResidents": 2.16,
-        "usAvgPer10k": 2.15,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 46,
+        "per10kResidents": 4.02,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 189,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Fayetteville."
+          "evidenceQuote": "46 employer establishments (NAICS 722515) across 3 ZIP codes whose USPS city is Fayetteville, AR; density uses ACS 2023 ZCTA population (114,403). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722511",
         "slug": "restaurants",
         "label": "Full-Service Restaurants",
-        "establishments": 69,
-        "per10kResidents": 6.79,
-        "usAvgPer10k": 6.8,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 126,
+        "per10kResidents": 11.01,
+        "usAvgPer10k": 7.44,
+        "saturationIndex": 148,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Fayetteville."
+          "evidenceQuote": "126 employer establishments (NAICS 722511) across 3 ZIP codes whose USPS city is Fayetteville, AR; density uses ACS 2023 ZCTA population (114,403). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722513",
         "slug": "fast-food",
-        "label": "Fast Food Restaurants",
-        "establishments": 73,
-        "per10kResidents": 7.18,
-        "usAvgPer10k": 7.2,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Limited-Service / Fast Food Restaurants",
+        "establishments": 127,
+        "per10kResidents": 11.1,
+        "usAvgPer10k": 7.75,
+        "saturationIndex": 143,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Fayetteville."
+          "evidenceQuote": "127 employer establishments (NAICS 722513) across 3 ZIP codes whose USPS city is Fayetteville, AR; density uses ACS 2023 ZCTA population (114,403). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722410",
         "slug": "bars-taverns",
-        "label": "Bars & Drinking Places",
-        "establishments": 19,
-        "per10kResidents": 1.87,
-        "usAvgPer10k": 1.85,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Drinking Places (Alcoholic Beverages)",
+        "establishments": 26,
+        "per10kResidents": 2.27,
+        "usAvgPer10k": 0.9,
+        "saturationIndex": 252,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Fayetteville."
-        }
-      },
-      {
-        "naicsCode": "812111",
-        "slug": "barber-shops",
-        "label": "Barber Shops",
-        "establishments": 14,
-        "per10kResidents": 1.38,
-        "usAvgPer10k": 1.35,
-        "saturationIndex": 102,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Fayetteville."
+          "evidenceQuote": "26 employer establishments (NAICS 722410) across 3 ZIP codes whose USPS city is Fayetteville, AR; density uses ACS 2023 ZCTA population (114,403). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812112",
         "slug": "beauty-salons",
         "label": "Beauty Salons & Hair Studios",
-        "establishments": 35,
-        "per10kResidents": 3.44,
-        "usAvgPer10k": 3.4,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 42,
+        "per10kResidents": 3.67,
+        "usAvgPer10k": 2.31,
+        "saturationIndex": 159,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Fayetteville."
+          "evidenceQuote": "42 employer establishments (NAICS 812112) across 3 ZIP codes whose USPS city is Fayetteville, AR; density uses ACS 2023 ZCTA population (114,403). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812113",
         "slug": "nail-salons",
         "label": "Nail Salons",
-        "establishments": 21,
-        "per10kResidents": 2.07,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 98,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 0,
+        "per10kResidents": 0.0,
+        "usAvgPer10k": 0.86,
+        "saturationIndex": 0,
+        "status": "underserved",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Fayetteville."
+          "evidenceQuote": "0 employer establishments (NAICS 812113) across 3 ZIP codes whose USPS city is Fayetteville, AR; density uses ACS 2023 ZCTA population (114,403). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "713940",
         "slug": "gyms-fitness",
-        "label": "Fitness & Recreational Gyms",
-        "establishments": 13,
-        "per10kResidents": 1.28,
-        "usAvgPer10k": 1.25,
-        "saturationIndex": 102,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Fitness & Recreational Sports Centers",
+        "establishments": 24,
+        "per10kResidents": 2.1,
+        "usAvgPer10k": 1.0,
+        "saturationIndex": 210,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Fayetteville."
+          "evidenceQuote": "24 employer establishments (NAICS 713940) across 3 ZIP codes whose USPS city is Fayetteville, AR; density uses ACS 2023 ZCTA population (114,403). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812910",
         "slug": "pet-care",
-        "label": "Pet Care & Grooming",
-        "establishments": 10,
-        "per10kResidents": 0.98,
-        "usAvgPer10k": 0.95,
-        "saturationIndex": 103,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Pet Care & Grooming Services",
+        "establishments": 15,
+        "per10kResidents": 1.31,
+        "usAvgPer10k": 0.46,
+        "saturationIndex": 282,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Fayetteville."
+          "evidenceQuote": "15 employer establishments (NAICS 812910) across 3 ZIP codes whose USPS city is Fayetteville, AR; density uses ACS 2023 ZCTA population (114,403). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541940",
         "slug": "veterinary",
-        "label": "Veterinary Services",
-        "establishments": 11,
-        "per10kResidents": 1.08,
-        "usAvgPer10k": 1.05,
-        "saturationIndex": 103,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Veterinary Services & Animal Hospitals",
+        "establishments": 16,
+        "per10kResidents": 1.4,
+        "usAvgPer10k": 0.69,
+        "saturationIndex": 203,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Fayetteville."
+          "evidenceQuote": "16 employer establishments (NAICS 541940) across 3 ZIP codes whose USPS city is Fayetteville, AR; density uses ACS 2023 ZCTA population (114,403). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "811111",
         "slug": "auto-repair",
         "label": "General Automotive Repair",
-        "establishments": 49,
-        "per10kResidents": 4.82,
-        "usAvgPer10k": 4.8,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 13,
+        "per10kResidents": 1.14,
+        "usAvgPer10k": 2.2,
+        "saturationIndex": 52,
+        "status": "underserved",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Fayetteville."
+          "evidenceQuote": "13 employer establishments (NAICS 811111) across 3 ZIP codes whose USPS city is Fayetteville, AR; density uses ACS 2023 ZCTA population (114,403). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "811192",
         "slug": "car-washes",
-        "label": "Car Washes & Detailing",
-        "establishments": 7,
-        "per10kResidents": 0.69,
-        "usAvgPer10k": 0.65,
-        "saturationIndex": 105,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Car Washes & Auto Detailing",
+        "establishments": 3,
+        "per10kResidents": 0.26,
+        "usAvgPer10k": 0.35,
+        "saturationIndex": 75,
+        "status": "underserved",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Fayetteville."
-        }
-      },
-      {
-        "naicsCode": "812310",
-        "slug": "laundromats",
-        "label": "Coin Laundromats",
-        "establishments": 6,
-        "per10kResidents": 0.59,
-        "usAvgPer10k": 0.55,
-        "saturationIndex": 107,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Fayetteville."
-        }
-      },
-      {
-        "naicsCode": "812320",
-        "slug": "dry-cleaners",
-        "label": "Dry Cleaning & Laundry",
-        "establishments": 9,
-        "per10kResidents": 0.89,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 104,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Fayetteville."
+          "evidenceQuote": "3 employer establishments (NAICS 811192) across 3 ZIP codes whose USPS city is Fayetteville, AR; density uses ACS 2023 ZCTA population (114,403). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621210",
         "slug": "dentists",
         "label": "Offices of Dentists",
-        "establishments": 40,
-        "per10kResidents": 3.93,
-        "usAvgPer10k": 3.9,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 61,
+        "per10kResidents": 5.33,
+        "usAvgPer10k": 3.89,
+        "saturationIndex": 137,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Fayetteville."
+          "evidenceQuote": "61 employer establishments (NAICS 621210) across 3 ZIP codes whose USPS city is Fayetteville, AR; density uses ACS 2023 ZCTA population (114,403). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621310",
         "slug": "chiropractors",
         "label": "Offices of Chiropractors",
-        "establishments": 14,
-        "per10kResidents": 1.38,
-        "usAvgPer10k": 1.4,
-        "saturationIndex": 98,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 34,
+        "per10kResidents": 2.97,
+        "usAvgPer10k": 0.97,
+        "saturationIndex": 306,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Fayetteville."
+          "evidenceQuote": "34 employer establishments (NAICS 621310) across 3 ZIP codes whose USPS city is Fayetteville, AR; density uses ACS 2023 ZCTA population (114,403). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621340",
         "slug": "physical-therapy",
-        "label": "Physical Therapy Clinics",
-        "establishments": 16,
-        "per10kResidents": 1.57,
-        "usAvgPer10k": 1.55,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Physical, Occupational & Speech Therapists",
+        "establishments": 23,
+        "per10kResidents": 2.01,
+        "usAvgPer10k": 1.3,
+        "saturationIndex": 154,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Fayetteville."
+          "evidenceQuote": "23 employer establishments (NAICS 621340) across 3 ZIP codes whose USPS city is Fayetteville, AR; density uses ACS 2023 ZCTA population (114,403). National benchmark = all US ZIP rows / US population."
         }
       },
       {
@@ -1005,262 +1058,383 @@
         "slug": "daycare",
         "label": "Child Day Care Services",
         "establishments": 23,
-        "per10kResidents": 2.26,
-        "usAvgPer10k": 2.25,
-        "saturationIndex": 100,
+        "per10kResidents": 2.01,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 95,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Fayetteville."
+          "evidenceQuote": "23 employer establishments (NAICS 624410) across 3 ZIP codes whose USPS city is Fayetteville, AR; density uses ACS 2023 ZCTA population (114,403). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "445120",
         "slug": "convenience-stores",
-        "label": "Convenience Stores",
-        "establishments": 20,
-        "per10kResidents": 1.97,
-        "usAvgPer10k": 1.95,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Convenience Retail Stores",
+        "establishments": 0,
+        "per10kResidents": 0.0,
+        "usAvgPer10k": 0.82,
+        "saturationIndex": 0,
+        "status": "underserved",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Fayetteville."
+          "evidenceQuote": "0 employer establishments (NAICS 445120) across 3 ZIP codes whose USPS city is Fayetteville, AR; density uses ACS 2023 ZCTA population (114,403). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "448140",
         "slug": "clothing-boutiques",
-        "label": "Family Clothing Stores",
-        "establishments": 17,
-        "per10kResidents": 1.67,
-        "usAvgPer10k": 1.65,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Family Clothing Stores & Boutiques",
+        "establishments": 21,
+        "per10kResidents": 1.84,
+        "usAvgPer10k": 0.65,
+        "saturationIndex": 281,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Fayetteville."
-        }
-      },
-      {
-        "naicsCode": "445291",
-        "slug": "bakeries",
-        "label": "Retail Bakeries",
-        "establishments": 9,
-        "per10kResidents": 0.89,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 104,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Fayetteville."
-        }
-      },
-      {
-        "naicsCode": "453110",
-        "slug": "florists",
-        "label": "Florists & Floral Gift",
-        "establishments": 5,
-        "per10kResidents": 0.49,
-        "usAvgPer10k": 0.5,
-        "saturationIndex": 98,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Fayetteville."
+          "evidenceQuote": "21 employer establishments (NAICS 448140) across 3 ZIP codes whose USPS city is Fayetteville, AR; density uses ACS 2023 ZCTA population (114,403). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541110",
         "slug": "law-firms",
         "label": "Offices of Lawyers",
-        "establishments": 50,
-        "per10kResidents": 4.92,
-        "usAvgPer10k": 4.9,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 120,
+        "per10kResidents": 10.49,
+        "usAvgPer10k": 4.8,
+        "saturationIndex": 218,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Fayetteville."
+          "evidenceQuote": "120 employer establishments (NAICS 541110) across 3 ZIP codes whose USPS city is Fayetteville, AR; density uses ACS 2023 ZCTA population (114,403). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541211",
         "slug": "accounting-cpa",
-        "label": "Offices of CPAs",
-        "establishments": 21,
-        "per10kResidents": 2.07,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 98,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Offices of Certified Public Accountants",
+        "establishments": 34,
+        "per10kResidents": 2.97,
+        "usAvgPer10k": 1.44,
+        "saturationIndex": 206,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Fayetteville."
+          "evidenceQuote": "34 employer establishments (NAICS 541211) across 3 ZIP codes whose USPS city is Fayetteville, AR; density uses ACS 2023 ZCTA population (114,403). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "531210",
         "slug": "real-estate-agencies",
-        "label": "Real Estate Brokerages",
-        "establishments": 39,
-        "per10kResidents": 3.84,
-        "usAvgPer10k": 3.8,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Offices of Real Estate Agents & Brokers",
+        "establishments": 107,
+        "per10kResidents": 9.35,
+        "usAvgPer10k": 4.74,
+        "saturationIndex": 197,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Fayetteville."
+          "evidenceQuote": "107 employer establishments (NAICS 531210) across 3 ZIP codes whose USPS city is Fayetteville, AR; density uses ACS 2023 ZCTA population (114,403). National benchmark = all US ZIP rows / US population."
         }
       }
     ],
     "permitsAndTax": {
-      "generalBusinessLicenseRequired": false,
-      "businessLicenseFeeSummary": "No general city business license required. State of Arkansas statutory filings apply.",
-      "businessLicensePortalUrl": "https://www.fayettevillear.gov/permits",
-      "zoningLookupUrl": "https://www.fayettevillear.gov/zoning",
-      "buildingPermitPortalUrl": "https://www.fayettevillear.gov/building",
-      "certificateOfOccupancyFee": "$185 standard municipal inspection fee",
-      "avgPermitWaitDays": 30,
-      "shortTermRentalStatus": "restricted",
-      "foodTruckPermitStatus": "allowed",
-      "combinedSalesTaxRate": 0.08,
       "stateTaxRate": 0.065,
-      "localTaxRate": 0.015,
+      "countyTaxRate": 0.0125,
+      "cityTaxRate": 0.02,
+      "specialDistrictTaxRate": 0.0,
+      "localTaxRate": 0.0325,
+      "combinedSalesTaxRate": 0.0975,
       "provenance": {
-        "sourceName": "Fayetteville Municipal Code & State Department of Revenue",
-        "sourceUrl": "https://www.fayettevillear.gov",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place",
-        "evidenceQuote": "Statutory municipal code standards."
+        "sourceName": "Arkansas Dept. of Finance and Administration local sales & use tax table (6.5% state + 1.25% Washington County + 2.0% City of Fayetteville = 9.75%)",
+        "sourceUrl": "https://www.dfa.arkansas.gov/excise-tax/sales-and-use-tax/local-tax-lookup-tools/",
+        "datasetVintage": "2026",
+        "verifiedAt": "2026-10-31T00:00:00Z",
+        "granularity": "place"
       }
     },
-    "topTrafficCorridors": [
-      {
-        "roadName": "Main Arterial Corridor 1",
-        "segmentDescription": "Central Commercial Corridor through Fayetteville",
-        "aadt": 12202,
-        "heavyTruckPct": 5.5,
-        "lat": 36.071455,
-        "lng": -94.166564,
-        "year": 2024,
-        "provenance": {
-          "sourceName": "Arkansas DOT AADT Database",
-          "sourceUrl": "https://www.transportation.gov/",
-          "datasetVintage": "2024-AADT",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "place"
-        }
-      }
-    ],
-    "marketSignals": {
-      "reportedRetailRentSqFtYr": 45.6,
-      "reportedIndustrialRentSqFtYr": 20.5,
-      "topSearchedNaics30d": [
-        "722515",
-        "713940",
-        "812111"
-      ],
-      "verifiedLocalProsCount": 8
-    },
-    "scores": {
-      "overallViability": 66,
-      "purchasingPower": 63,
-      "growthMomentum": 69,
-      "costEfficiency": 60,
-      "regulatoryFriction": 48
-    },
+    "marketSignals": {},
     "executiveTravel": {
-      "timeZone": "America/Chicago (CT: UTC-06:00)",
+      "timeZone": "America/Chicago",
       "timeZoneAbbr": "CT",
       "utcOffset": "-06:00",
       "primaryAirport": {
-        "name": "Fayetteville Regional / Metropolitan Airport",
-        "iata": null,
-        "distanceMiles": 10.8,
-        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
-      },
-      "powerPlugs": {
-        "types": [
-          "Type A (2-pin)",
-          "Type B (3-pin grounded)"
-        ],
-        "voltage": "120V",
-        "frequency": "60Hz",
-        "adapterAdvice": "Visitors from UK, EU, Australia, and Asia require a standard Type A/B plug adapter and dual-voltage converter."
-      },
-      "currency": {
-        "code": "USD",
-        "symbol": "$",
-        "name": "United States Dollar",
-        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
-        "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
+        "name": "Northwest Arkansas National Airport",
+        "iata": "XNA",
+        "lat": 36.281898,
+        "lng": -94.306801,
+        "distanceMiles": 16.5,
+        "transitToDowntown": null,
+        "source": "OurAirports (public domain) for name, IATA code and coordinates; distance is straight-line from the U.S. Census Gazetteer city center point",
+        "sourceUrl": "https://ourairports.com/data/",
+        "cityCenterMethod": "Census Gazetteer internal point",
+        "retrieved": "2026-10-31"
       },
       "climate": {
-        "summerHighF": 84,
-        "winterLowF": 22,
-        "annualRainfallInches": 20,
-        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
-        "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
+        "summerHighF": 89,
+        "winterLowF": 29,
+        "annualRainfallInches": 47.7,
+        "summerHighBasis": "Average July daily high",
+        "winterLowBasis": "Average January daily low",
+        "source": "Open-Meteo Historical Weather API (ERA5 reanalysis), 2015-2024 average, retrieved 2026-10-31",
+        "sourceUrl": "https://open-meteo.com/en/docs/historical-weather-api"
       },
       "emergency": {
         "emergencyDispatch": "911",
-        "nonEmergencyPolice": "311 or local municipal dispatch",
-        "nearestTraumaHospital": "Fayetteville Regional Memorial Hospital",
-        "hospitalAddress": "Medical Center District, Fayetteville, AR"
-      },
-      "visitorLogistics": {
-        "tapWaterPotability": "100% Safe municipal drinking water conforming to EPA Safe Drinking Water Act standards.",
-        "salesTaxRefundPolicy": "International travelers may claim state sales tax refunds on qualifying departures at designated airport customs counters.",
-        "rideshareAvailability": "Ubiquitous (Uber and Lyft operational 24/7 across the metropolitan area)."
-      },
-      "provenance": {
-        "sourceName": "FAA Airport Database & International Trade Administration",
-        "sourceUrl": "https://www.trade.gov/",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
+        "nearestTraumaHospital": "Fayetteville AR VA Medical Center",
+        "hospitalAddress": "1100 N. College Avenue, Fayetteville, AR 72703",
+        "cmsFacilityId": "04009F",
+        "emergencyServices": true,
+        "source": "CMS Care Compare hospital general information (federal dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma level, ranking or nearest-facility claim.",
+        "erHospitals": [
+          {
+            "name": "Fayetteville AR VA Medical Center",
+            "address": "1100 N. College Avenue, Fayetteville, AR 72703",
+            "type": "Acute Care - Veterans Administration",
+            "cmsFacilityId": "04009F",
+            "lat": 36.052383,
+            "lng": -94.158171
+          },
+          {
+            "name": "Washington Regional Med Ctr",
+            "address": "3215 N North Hills Boulevard, Fayetteville, AR 72703",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "040004",
+            "lat": 36.108014,
+            "lng": -94.155843
+          }
+        ],
+        "erHospitalsSource": "CMS Care Compare hospital general information (federal dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma level, ranking or nearest-facility claim."
       }
+    },
+    "housingAndTaxes": {
+      "medianHomeValue": 322500,
+      "medianGrossRent": 1003,
+      "medianRealEstateTaxPaid": 1895,
+      "effectivePropertyTaxRatePct": 0.59,
+      "countyName": "Washington County",
+      "source": "ACS 2023 5-yr: B25077 median home value, B25064 median gross rent, B25103 median real estate taxes paid. Effective rate = B25103 / B25077.",
+      "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/"
+    },
+    "climateNormals": {
+      "peakSummerHighF": 89,
+      "winterLowF": 29,
+      "annualRainfallInches": 47.7,
+      "sourceName": "Open-Meteo Historical Weather API (ERA5 reanalysis), 2015-2024 average, retrieved 2026-10-31",
+      "sourceUrl": "https://open-meteo.com/en/docs/historical-weather-api"
+    },
+    "terrainElevation": {
+      "elevationFeet": 1374.8,
+      "elevationMeters": 419.0,
+      "topographyClass": "Boston Mountains & Ozark Plateau",
+      "sourceName": "USGS 3D Elevation Program (3DEP Elevation Point Query Service)",
+      "sourceUrl": "https://epqs.nationalmap.gov/v1/json"
+    },
+    "waterUtility": {
+      "pwsid": "AR0000569",
+      "providerName": "Fayetteville Waterworks",
+      "populationServed": 116398,
+      "sourceType": "surface water",
+      "source": "U.S. EPA Safe Drinking Water Information System (SDWIS)",
+      "sourceUrl": "https://data.epa.gov/efservice/WATER_SYSTEM/PWSID/AR0000569/JSON",
+      "retrieved": "2026-10-31"
+    },
+    "higherEducation": {
+      "institutionCount": 3,
+      "totalEnrollment": 28776,
+      "institutions": [
+        {
+          "id": 106397,
+          "name": "University of Arkansas",
+          "studentSize": 28677,
+          "ownership": "Public",
+          "schoolUrl": "https://www.uark.edu/",
+          "lat": 36.070009,
+          "lng": -94.176981
+        },
+        {
+          "id": 107789,
+          "name": "Paul Mitchell the School-Arkansas",
+          "studentSize": 99,
+          "ownership": "Private for-profit",
+          "schoolUrl": "https://paulmitchell.edu/arkansas/",
+          "lat": 36.126373,
+          "lng": -94.153892
+        },
+        {
+          "id": 10722003,
+          "name": "Career Academy of Hair Design-Fayetteville",
+          "studentSize": null,
+          "ownership": "Private for-profit",
+          "schoolUrl": "https://www.beautynwa.com/",
+          "lat": null,
+          "lng": null
+        }
+      ],
+      "sourceName": "U.S. Department of Education College Scorecard",
+      "sourceUrl": "https://collegescorecard.ed.gov/",
+      "retrieved": "2026-10-31"
+    },
+    "evInfrastructure": {
+      "totalStations": 26,
+      "totalChargingPorts": 87,
+      "dcFastPorts": 4,
+      "level2Ports": 83,
+      "sampleStations": [
+        {
+          "name": "Lewis Automotive",
+          "address": "2479 North Shiloh Drive, Fayetteville, AR 72704",
+          "network": "NOODOE",
+          "dcFastPorts": 4,
+          "level2Ports": 20,
+          "lat": 36.096893,
+          "lng": -94.189235
+        },
+        {
+          "name": "Lewis Ford Sales",
+          "address": "3373 N College Ave, Fayetteville, AR 72703",
+          "network": "Blink Network",
+          "dcFastPorts": 0,
+          "level2Ports": 8,
+          "lat": 36.112298,
+          "lng": -94.146018
+        },
+        {
+          "name": "Lewis CDJR",
+          "address": "2447 North Shiloh Drive, Fayetteville, AR 72704",
+          "network": "Blink Network",
+          "dcFastPorts": 0,
+          "level2Ports": 6,
+          "lat": 36.111655,
+          "lng": -94.146218
+        },
+        {
+          "name": "Dickson Street Parking",
+          "address": "195 E Dickson St, Fayetteville, AR 72701",
+          "network": "Non-Networked",
+          "dcFastPorts": 0,
+          "level2Ports": 4,
+          "lat": 36.066155,
+          "lng": -94.155161
+        },
+        {
+          "name": "Fayetteville Town Center",
+          "address": "15 West Mountain Street, Fayetteville, AR 72701",
+          "network": "Blink Network",
+          "dcFastPorts": 0,
+          "level2Ports": 4,
+          "lat": 36.061299,
+          "lng": -94.160135
+        }
+      ],
+      "sourceName": "U.S. Department of Energy / NLR Alternative Fuels Data Center (AFDC)",
+      "sourceUrl": "https://afdc.energy.gov/stations",
+      "retrieved": "2026-10-31"
+    },
+    "nationalParks": {
+      "parks": [
+        {
+          "parkCode": "peri",
+          "fullName": "Pea Ridge National Military Park",
+          "designation": "National Military Park",
+          "distanceMiles": 27.5,
+          "description": "On March 7-8, 1862, over 23,000 soldiers fought here to decide the fate of Missouri which was a turning point of the war in the Trans-Mississippi. This 4,400-acre battlefield honors those who fought and died on these hallowed grounds....",
+          "url": "https://www.nps.gov/peri/index.htm",
+          "lat": 36.45438,
+          "lng": -94.034684
+        },
+        {
+          "parkCode": "fosm",
+          "fullName": "Fort Smith National Historic Site",
+          "designation": "National Historic Site",
+          "distanceMiles": 49.5,
+          "description": "Explore life on the edge of frontier and Indian Territory through the stories of soldiers, the Trail of Tears, scandals, outlaws, and lawmen who pursued them. From the establishment of the first Fort Smith on December 25, 1817, to the...",
+          "url": "https://www.nps.gov/fosm/index.htm",
+          "lat": 35.388347,
+          "lng": -94.431291
+        }
+      ],
+      "sourceName": "U.S. National Park Service (NPS) API",
+      "sourceUrl": "https://www.nps.gov/",
+      "retrieved": "2026-10-31"
+    },
+    "upcomingEvents": {
+      "totalMatchingEvents": 39,
+      "events": [
+        {
+          "id": "Z7r9jZ1A7O6fN",
+          "name": "Arkansas Razorbacks Football vs. Missouri Tigers Football",
+          "date": "2026-10-31",
+          "venueName": "Donald W. Reynolds Razorback Stadium",
+          "category": "Sports",
+          "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7O6fN"
+        },
+        {
+          "id": "Z7r9jZ1AAvzZ4",
+          "name": "Arkansas Razorbacks Mens Basketball vs. Arkansas Pine Bluff Golden Lions Mens Basketball",
+          "date": "2026-11-03",
+          "venueName": "Bud Walton Arena",
+          "category": "Sports",
+          "url": "https://www.ticketmaster.com/event/Z7r9jZ1AAvzZ4"
+        },
+        {
+          "id": "Z7r9jZ1AAvzZp",
+          "name": "Arkansas Razorbacks Mens Basketball vs. Robert Morris Colonials Mens Basketball",
+          "date": "2026-11-11",
+          "venueName": "Bud Walton Arena",
+          "category": "Sports",
+          "url": "https://www.ticketmaster.com/event/Z7r9jZ1AAvzZp"
+        },
+        {
+          "id": "Z7r9jZ1AAZk-P",
+          "name": "Paul Oakenfold w/ Crystal Method",
+          "date": "2026-11-12",
+          "venueName": "Ozark Music Hall",
+          "category": "Music",
+          "url": "https://www.ticketmaster.com/event/Z7r9jZ1AAZk-P"
+        },
+        {
+          "id": "Z7r9jZ1AAvzZ9",
+          "name": "Arkansas Razorbacks Mens Basketball vs. Central Arkansas Bears Mens Basketball",
+          "date": "2026-11-13",
+          "venueName": "Bud Walton Arena",
+          "category": "Sports",
+          "url": "https://www.ticketmaster.com/event/Z7r9jZ1AAvzZ9"
+        }
+      ],
+      "sourceName": "Ticketmaster Discovery API v2",
+      "sourceUrl": "https://developer.ticketmaster.com/",
+      "retrieved": "2026-10-31"
     }
   },
   {
@@ -5058,633 +5232,624 @@
   {
     "slug": "ar/bentonville",
     "cityId": "0505320",
-    "countyFips": "05053",
+    "countyFips": "05007",
     "name": "Bentonville",
     "stateCode": "ar",
     "stateName": "Arkansas",
-    "countyName": "Bentonville Metropolitan Area",
+    "countyName": "Benton County",
     "lat": 36.352662,
     "lng": -94.231181,
     "primaryZips": [
-      "70658"
+      "72712",
+      "72713"
     ],
     "demographics": {
       "population": 59471,
-      "popGrowth5YrPct": 8.5,
-      "medianHouseholdIncome": 91204,
-      "perCapitaIncome": 52898,
-      "medianAge": 36.4,
-      "daytimeWorkerPop": 36872,
-      "daytimePopSurgePct": 8.5,
-      "medianGrossRent": 1754,
-      "medianHomeValue": 383057,
+      "medianHouseholdIncome": 108465,
+      "perCapitaIncome": 55695,
+      "medianAge": 31.9,
+      "medianGrossRent": 1238,
+      "medianHomeValue": 370700,
       "provenance": {
-        "sourceName": "US Census Bureau ACS 5-Year (DP03/DP04/DP05) & PopEst",
-        "sourceUrl": "https://api.census.gov/data/2023/acs/acs5",
-        "datasetVintage": "2023-5YR",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "sourceName": "US Census Bureau ACS 5-Year Estimates 2023 (Table-Based Summary File)",
+        "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/",
+        "datasetVintage": "ACS-2023-5YR",
+        "verifiedAt": "2026-10-31T00:00:00Z",
         "granularity": "place"
-      }
-    },
-    "laborAndEconomy": {
-      "unemploymentRatePct": 3.8,
-      "avgWeeklyWageAllIndustries": 1340,
-      "newHousingPermits12Mo": 446,
-      "permitsPer1kResidents": 7.5,
-      "femaRiskScore": 28.0,
-      "provenance": {
-        "sourceName": "BLS Local Area Unemployment Statistics (LAUS) & Census BPS",
-        "sourceUrl": "https://www.bls.gov/lau/",
-        "datasetVintage": "2024-M08",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
-      }
+      },
+      "popChange2020to2023Pct": 9.7,
+      "popChangeBasis": "Census Population Estimates, April 2020 base to July 2023"
     },
     "industries": [
       {
         "naicsCode": "722515",
         "slug": "coffee-shops",
         "label": "Coffee & Snack Shops",
-        "establishments": 13,
-        "per10kResidents": 2.19,
-        "usAvgPer10k": 2.15,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 18,
+        "per10kResidents": 2.8,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 132,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Bentonville."
+          "evidenceQuote": "18 employer establishments (NAICS 722515) across 2 ZIP codes whose USPS city is Bentonville, AR; density uses ACS 2023 ZCTA population (64,365). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722511",
         "slug": "restaurants",
         "label": "Full-Service Restaurants",
-        "establishments": 40,
-        "per10kResidents": 6.73,
-        "usAvgPer10k": 6.8,
-        "saturationIndex": 99,
+        "establishments": 52,
+        "per10kResidents": 8.08,
+        "usAvgPer10k": 7.44,
+        "saturationIndex": 109,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Bentonville."
+          "evidenceQuote": "52 employer establishments (NAICS 722511) across 2 ZIP codes whose USPS city is Bentonville, AR; density uses ACS 2023 ZCTA population (64,365). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722513",
         "slug": "fast-food",
-        "label": "Fast Food Restaurants",
-        "establishments": 43,
-        "per10kResidents": 7.23,
-        "usAvgPer10k": 7.2,
-        "saturationIndex": 100,
+        "label": "Limited-Service / Fast Food Restaurants",
+        "establishments": 58,
+        "per10kResidents": 9.01,
+        "usAvgPer10k": 7.75,
+        "saturationIndex": 116,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Bentonville."
+          "evidenceQuote": "58 employer establishments (NAICS 722513) across 2 ZIP codes whose USPS city is Bentonville, AR; density uses ACS 2023 ZCTA population (64,365). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722410",
         "slug": "bars-taverns",
-        "label": "Bars & Drinking Places",
-        "establishments": 11,
-        "per10kResidents": 1.85,
-        "usAvgPer10k": 1.85,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Drinking Places (Alcoholic Beverages)",
+        "establishments": 4,
+        "per10kResidents": 0.62,
+        "usAvgPer10k": 0.9,
+        "saturationIndex": 69,
+        "status": "underserved",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Bentonville."
-        }
-      },
-      {
-        "naicsCode": "812111",
-        "slug": "barber-shops",
-        "label": "Barber Shops",
-        "establishments": 8,
-        "per10kResidents": 1.35,
-        "usAvgPer10k": 1.35,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Bentonville."
+          "evidenceQuote": "4 employer establishments (NAICS 722410) across 2 ZIP codes whose USPS city is Bentonville, AR; density uses ACS 2023 ZCTA population (64,365). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812112",
         "slug": "beauty-salons",
         "label": "Beauty Salons & Hair Studios",
-        "establishments": 20,
-        "per10kResidents": 3.36,
-        "usAvgPer10k": 3.4,
-        "saturationIndex": 99,
+        "establishments": 16,
+        "per10kResidents": 2.49,
+        "usAvgPer10k": 2.31,
+        "saturationIndex": 108,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Bentonville."
+          "evidenceQuote": "16 employer establishments (NAICS 812112) across 2 ZIP codes whose USPS city is Bentonville, AR; density uses ACS 2023 ZCTA population (64,365). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812113",
         "slug": "nail-salons",
         "label": "Nail Salons",
-        "establishments": 12,
-        "per10kResidents": 2.02,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 97,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 4,
+        "per10kResidents": 0.62,
+        "usAvgPer10k": 0.86,
+        "saturationIndex": 72,
+        "status": "underserved",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Bentonville."
+          "evidenceQuote": "4 employer establishments (NAICS 812113) across 2 ZIP codes whose USPS city is Bentonville, AR; density uses ACS 2023 ZCTA population (64,365). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "713940",
         "slug": "gyms-fitness",
-        "label": "Fitness & Recreational Gyms",
+        "label": "Fitness & Recreational Sports Centers",
         "establishments": 7,
-        "per10kResidents": 1.18,
-        "usAvgPer10k": 1.25,
-        "saturationIndex": 95,
+        "per10kResidents": 1.09,
+        "usAvgPer10k": 1.0,
+        "saturationIndex": 109,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Bentonville."
+          "evidenceQuote": "7 employer establishments (NAICS 713940) across 2 ZIP codes whose USPS city is Bentonville, AR; density uses ACS 2023 ZCTA population (64,365). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812910",
         "slug": "pet-care",
-        "label": "Pet Care & Grooming",
-        "establishments": 6,
-        "per10kResidents": 1.01,
-        "usAvgPer10k": 0.95,
-        "saturationIndex": 105,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Pet Care & Grooming Services",
+        "establishments": 8,
+        "per10kResidents": 1.24,
+        "usAvgPer10k": 0.46,
+        "saturationIndex": 268,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Bentonville."
+          "evidenceQuote": "8 employer establishments (NAICS 812910) across 2 ZIP codes whose USPS city is Bentonville, AR; density uses ACS 2023 ZCTA population (64,365). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541940",
         "slug": "veterinary",
-        "label": "Veterinary Services",
-        "establishments": 6,
-        "per10kResidents": 1.01,
-        "usAvgPer10k": 1.05,
-        "saturationIndex": 97,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Veterinary Services & Animal Hospitals",
+        "establishments": 12,
+        "per10kResidents": 1.86,
+        "usAvgPer10k": 0.69,
+        "saturationIndex": 270,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Bentonville."
+          "evidenceQuote": "12 employer establishments (NAICS 541940) across 2 ZIP codes whose USPS city is Bentonville, AR; density uses ACS 2023 ZCTA population (64,365). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "811111",
         "slug": "auto-repair",
         "label": "General Automotive Repair",
-        "establishments": 29,
-        "per10kResidents": 4.88,
-        "usAvgPer10k": 4.8,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 4,
+        "per10kResidents": 0.62,
+        "usAvgPer10k": 2.2,
+        "saturationIndex": 28,
+        "status": "underserved",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Bentonville."
+          "evidenceQuote": "4 employer establishments (NAICS 811111) across 2 ZIP codes whose USPS city is Bentonville, AR; density uses ACS 2023 ZCTA population (64,365). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "811192",
         "slug": "car-washes",
-        "label": "Car Washes & Detailing",
-        "establishments": 4,
-        "per10kResidents": 0.67,
-        "usAvgPer10k": 0.65,
-        "saturationIndex": 103,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Car Washes & Auto Detailing",
+        "establishments": 6,
+        "per10kResidents": 0.93,
+        "usAvgPer10k": 0.35,
+        "saturationIndex": 266,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Bentonville."
-        }
-      },
-      {
-        "naicsCode": "812310",
-        "slug": "laundromats",
-        "label": "Coin Laundromats",
-        "establishments": 3,
-        "per10kResidents": 0.5,
-        "usAvgPer10k": 0.55,
-        "saturationIndex": 93,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Bentonville."
-        }
-      },
-      {
-        "naicsCode": "812320",
-        "slug": "dry-cleaners",
-        "label": "Dry Cleaning & Laundry",
-        "establishments": 5,
-        "per10kResidents": 0.84,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Bentonville."
+          "evidenceQuote": "6 employer establishments (NAICS 811192) across 2 ZIP codes whose USPS city is Bentonville, AR; density uses ACS 2023 ZCTA population (64,365). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621210",
         "slug": "dentists",
         "label": "Offices of Dentists",
-        "establishments": 23,
-        "per10kResidents": 3.87,
-        "usAvgPer10k": 3.9,
-        "saturationIndex": 99,
+        "establishments": 22,
+        "per10kResidents": 3.42,
+        "usAvgPer10k": 3.89,
+        "saturationIndex": 88,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Bentonville."
+          "evidenceQuote": "22 employer establishments (NAICS 621210) across 2 ZIP codes whose USPS city is Bentonville, AR; density uses ACS 2023 ZCTA population (64,365). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621310",
         "slug": "chiropractors",
         "label": "Offices of Chiropractors",
-        "establishments": 8,
-        "per10kResidents": 1.35,
-        "usAvgPer10k": 1.4,
-        "saturationIndex": 97,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 18,
+        "per10kResidents": 2.8,
+        "usAvgPer10k": 0.97,
+        "saturationIndex": 288,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Bentonville."
+          "evidenceQuote": "18 employer establishments (NAICS 621310) across 2 ZIP codes whose USPS city is Bentonville, AR; density uses ACS 2023 ZCTA population (64,365). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621340",
         "slug": "physical-therapy",
-        "label": "Physical Therapy Clinics",
-        "establishments": 9,
-        "per10kResidents": 1.51,
-        "usAvgPer10k": 1.55,
-        "saturationIndex": 98,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Physical, Occupational & Speech Therapists",
+        "establishments": 18,
+        "per10kResidents": 2.8,
+        "usAvgPer10k": 1.3,
+        "saturationIndex": 215,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Bentonville."
+          "evidenceQuote": "18 employer establishments (NAICS 621340) across 2 ZIP codes whose USPS city is Bentonville, AR; density uses ACS 2023 ZCTA population (64,365). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "624410",
         "slug": "daycare",
         "label": "Child Day Care Services",
-        "establishments": 13,
-        "per10kResidents": 2.19,
-        "usAvgPer10k": 2.25,
-        "saturationIndex": 98,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 22,
+        "per10kResidents": 3.42,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 161,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Bentonville."
+          "evidenceQuote": "22 employer establishments (NAICS 624410) across 2 ZIP codes whose USPS city is Bentonville, AR; density uses ACS 2023 ZCTA population (64,365). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "445120",
         "slug": "convenience-stores",
-        "label": "Convenience Stores",
-        "establishments": 12,
-        "per10kResidents": 2.02,
-        "usAvgPer10k": 1.95,
-        "saturationIndex": 103,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Convenience Retail Stores",
+        "establishments": 0,
+        "per10kResidents": 0.0,
+        "usAvgPer10k": 0.82,
+        "saturationIndex": 0,
+        "status": "underserved",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Bentonville."
+          "evidenceQuote": "0 employer establishments (NAICS 445120) across 2 ZIP codes whose USPS city is Bentonville, AR; density uses ACS 2023 ZCTA population (64,365). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "448140",
         "slug": "clothing-boutiques",
-        "label": "Family Clothing Stores",
-        "establishments": 10,
-        "per10kResidents": 1.68,
-        "usAvgPer10k": 1.65,
-        "saturationIndex": 102,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Family Clothing Stores & Boutiques",
+        "establishments": 0,
+        "per10kResidents": 0.0,
+        "usAvgPer10k": 0.65,
+        "saturationIndex": 0,
+        "status": "underserved",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Bentonville."
-        }
-      },
-      {
-        "naicsCode": "445291",
-        "slug": "bakeries",
-        "label": "Retail Bakeries",
-        "establishments": 5,
-        "per10kResidents": 0.84,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Bentonville."
-        }
-      },
-      {
-        "naicsCode": "453110",
-        "slug": "florists",
-        "label": "Florists & Floral Gift",
-        "establishments": 3,
-        "per10kResidents": 0.5,
-        "usAvgPer10k": 0.5,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Bentonville."
+          "evidenceQuote": "0 employer establishments (NAICS 448140) across 2 ZIP codes whose USPS city is Bentonville, AR; density uses ACS 2023 ZCTA population (64,365). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541110",
         "slug": "law-firms",
         "label": "Offices of Lawyers",
-        "establishments": 29,
-        "per10kResidents": 4.88,
-        "usAvgPer10k": 4.9,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 24,
+        "per10kResidents": 3.73,
+        "usAvgPer10k": 4.8,
+        "saturationIndex": 78,
+        "status": "underserved",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Bentonville."
+          "evidenceQuote": "24 employer establishments (NAICS 541110) across 2 ZIP codes whose USPS city is Bentonville, AR; density uses ACS 2023 ZCTA population (64,365). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541211",
         "slug": "accounting-cpa",
-        "label": "Offices of CPAs",
-        "establishments": 12,
-        "per10kResidents": 2.02,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 97,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Offices of Certified Public Accountants",
+        "establishments": 15,
+        "per10kResidents": 2.33,
+        "usAvgPer10k": 1.44,
+        "saturationIndex": 162,
+        "status": "saturated",
+        "smallSample": true,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Bentonville."
+          "evidenceQuote": "15 employer establishments (NAICS 541211) across 2 ZIP codes whose USPS city is Bentonville, AR; density uses ACS 2023 ZCTA population (64,365). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "531210",
         "slug": "real-estate-agencies",
-        "label": "Real Estate Brokerages",
-        "establishments": 23,
-        "per10kResidents": 3.87,
-        "usAvgPer10k": 3.8,
-        "saturationIndex": 102,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Offices of Real Estate Agents & Brokers",
+        "establishments": 81,
+        "per10kResidents": 12.58,
+        "usAvgPer10k": 4.74,
+        "saturationIndex": 265,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Bentonville."
+          "evidenceQuote": "81 employer establishments (NAICS 531210) across 2 ZIP codes whose USPS city is Bentonville, AR; density uses ACS 2023 ZCTA population (64,365). National benchmark = all US ZIP rows / US population."
         }
       }
     ],
     "permitsAndTax": {
-      "generalBusinessLicenseRequired": false,
-      "businessLicenseFeeSummary": "No general city business license required. State of Arkansas statutory filings apply.",
-      "businessLicensePortalUrl": "https://www.bentonvillear.gov/permits",
-      "zoningLookupUrl": "https://www.bentonvillear.gov/zoning",
-      "buildingPermitPortalUrl": "https://www.bentonvillear.gov/building",
-      "certificateOfOccupancyFee": "$185 standard municipal inspection fee",
-      "avgPermitWaitDays": 30,
-      "shortTermRentalStatus": "restricted",
-      "foodTruckPermitStatus": "allowed",
-      "combinedSalesTaxRate": 0.08,
       "stateTaxRate": 0.065,
-      "localTaxRate": 0.015,
+      "countyTaxRate": 0.01,
+      "cityTaxRate": 0.02,
+      "specialDistrictTaxRate": 0.0,
+      "localTaxRate": 0.03,
+      "combinedSalesTaxRate": 0.095,
       "provenance": {
-        "sourceName": "Bentonville Municipal Code & State Department of Revenue",
-        "sourceUrl": "https://www.bentonvillear.gov",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place",
-        "evidenceQuote": "Statutory municipal code standards."
+        "sourceName": "Arkansas Dept. of Finance and Administration local sales & use tax table (6.5% state + 1.0% Benton County + 2.0% City of Bentonville = 9.5%)",
+        "sourceUrl": "https://www.dfa.arkansas.gov/excise-tax/sales-and-use-tax/local-tax-lookup-tools/",
+        "datasetVintage": "2026",
+        "verifiedAt": "2026-10-31T00:00:00Z",
+        "granularity": "place"
       }
     },
-    "topTrafficCorridors": [
-      {
-        "roadName": "Main Arterial Corridor 1",
-        "segmentDescription": "Central Commercial Corridor through Bentonville",
-        "aadt": 7137,
-        "heavyTruckPct": 5.5,
-        "lat": 36.352662,
-        "lng": -94.231181,
-        "year": 2024,
-        "provenance": {
-          "sourceName": "Arkansas DOT AADT Database",
-          "sourceUrl": "https://www.transportation.gov/",
-          "datasetVintage": "2024-AADT",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "place"
-        }
-      }
-    ],
-    "marketSignals": {
-      "reportedRetailRentSqFtYr": 46.2,
-      "reportedIndustrialRentSqFtYr": 20.8,
-      "topSearchedNaics30d": [
-        "722515",
-        "713940",
-        "812111"
-      ],
-      "verifiedLocalProsCount": 8
-    },
-    "scores": {
-      "overallViability": 68,
-      "purchasingPower": 65,
-      "growthMomentum": 71,
-      "costEfficiency": 59,
-      "regulatoryFriction": 48
-    },
+    "marketSignals": {},
     "executiveTravel": {
-      "timeZone": "America/Chicago (CT: UTC-06:00)",
+      "timeZone": "America/Chicago",
       "timeZoneAbbr": "CT",
       "utcOffset": "-06:00",
       "primaryAirport": {
-        "name": "Bentonville Regional / Metropolitan Airport",
-        "iata": null,
-        "distanceMiles": 10.5,
-        "transitToDowntown": "15–30 min via regional highway corridor / rideshare"
-      },
-      "powerPlugs": {
-        "types": [
-          "Type A (2-pin)",
-          "Type B (3-pin grounded)"
-        ],
-        "voltage": "120V",
-        "frequency": "60Hz",
-        "adapterAdvice": "Visitors from UK, EU, Australia, and Asia require a standard Type A/B plug adapter and dual-voltage converter."
-      },
-      "currency": {
-        "code": "USD",
-        "symbol": "$",
-        "name": "United States Dollar",
-        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
-        "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
+        "name": "Northwest Arkansas National Airport",
+        "iata": "XNA",
+        "lat": 36.281898,
+        "lng": -94.306801,
+        "distanceMiles": 6.5,
+        "transitToDowntown": null,
+        "source": "OurAirports (public domain) for name, IATA code and coordinates; distance is straight-line from the U.S. Census Gazetteer city center point",
+        "sourceUrl": "https://ourairports.com/data/",
+        "cityCenterMethod": "Census Gazetteer internal point",
+        "retrieved": "2026-10-31"
       },
       "climate": {
-        "summerHighF": 84,
-        "winterLowF": 22,
-        "annualRainfallInches": 20,
-        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
-        "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
+        "summerHighF": 89,
+        "winterLowF": 28,
+        "annualRainfallInches": 46.9,
+        "summerHighBasis": "Average July daily high",
+        "winterLowBasis": "Average January daily low",
+        "source": "Open-Meteo Historical Weather API (ERA5 reanalysis), 2015-2024 average, retrieved 2026-10-31",
+        "sourceUrl": "https://open-meteo.com/en/docs/historical-weather-api"
       },
       "emergency": {
         "emergencyDispatch": "911",
-        "nonEmergencyPolice": "311 or local municipal dispatch",
-        "nearestTraumaHospital": "Bentonville Regional Memorial Hospital",
-        "hospitalAddress": "Medical Center District, Bentonville, AR"
-      },
-      "visitorLogistics": {
-        "tapWaterPotability": "100% Safe municipal drinking water conforming to EPA Safe Drinking Water Act standards.",
-        "salesTaxRefundPolicy": "International travelers may claim state sales tax refunds on qualifying departures at designated airport customs counters.",
-        "rideshareAvailability": "Ubiquitous (Uber and Lyft operational 24/7 across the metropolitan area)."
-      },
-      "provenance": {
-        "sourceName": "FAA Airport Database & International Trade Administration",
-        "sourceUrl": "https://www.trade.gov/",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
+        "nearestTraumaHospital": "Mercy Hospital Northwest Arkansas",
+        "hospitalAddress": "2710 South Rife Medical Lane, Rogers, AR 72758",
+        "cmsFacilityId": "040010",
+        "emergencyServices": true,
+        "source": "CMS Care Compare hospital general information (federal dataset xubh-q36u), retrieved 2026-10-31: Bentonville is served by Benton County CMS hospitals addressed in adjacent Rogers listed with emergency services. No trauma level, ranking or nearest-facility claim.",
+        "erHospitals": [
+          {
+            "name": "Mercy Hospital Northwest Arkansas",
+            "address": "2710 South Rife Medical Lane, Rogers, AR 72758",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "040010",
+            "lat": 36.311224,
+            "lng": -94.184483
+          }
+        ],
+        "erHospitalsSource": "CMS Care Compare hospital general information (federal dataset xubh-q36u), retrieved 2026-10-31: Bentonville is served by Benton County CMS hospitals addressed in adjacent Rogers listed with emergency services. No trauma level, ranking or nearest-facility claim.",
+        "erHospitalsScope": "Benton County (Rogers / Bentonville, AR)"
       }
+    },
+    "housingAndTaxes": {
+      "medianHomeValue": 370700,
+      "medianGrossRent": 1238,
+      "medianRealEstateTaxPaid": 2701,
+      "effectivePropertyTaxRatePct": 0.73,
+      "countyName": "Benton County",
+      "source": "ACS 2023 5-yr: B25077 median home value, B25064 median gross rent, B25103 median real estate taxes paid. Effective rate = B25103 / B25077.",
+      "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/"
+    },
+    "climateNormals": {
+      "peakSummerHighF": 89,
+      "winterLowF": 28,
+      "annualRainfallInches": 46.9,
+      "sourceName": "Open-Meteo Historical Weather API (ERA5 reanalysis), 2015-2024 average, retrieved 2026-10-31",
+      "sourceUrl": "https://open-meteo.com/en/docs/historical-weather-api"
+    },
+    "terrainElevation": {
+      "elevationFeet": 1265.5,
+      "elevationMeters": 385.7,
+      "topographyClass": "Springfield Plateau / Northwest Arkansas Ozarks",
+      "sourceName": "USGS 3D Elevation Program (3DEP Elevation Point Query Service)",
+      "sourceUrl": "https://epqs.nationalmap.gov/v1/json"
+    },
+    "waterUtility": {
+      "pwsid": "AR0000041",
+      "providerName": "Bentonville Water Utilities",
+      "populationServed": 51250,
+      "sourceType": "surface water",
+      "source": "U.S. EPA Safe Drinking Water Information System (SDWIS)",
+      "sourceUrl": "https://data.epa.gov/efservice/WATER_SYSTEM/PWSID/AR0000041/JSON",
+      "retrieved": "2026-10-31"
+    },
+    "higherEducation": {
+      "institutionCount": 1,
+      "totalEnrollment": 4953,
+      "institutions": [
+        {
+          "id": 367459,
+          "name": "NorthWest Arkansas Community College",
+          "studentSize": 4953,
+          "ownership": "Public",
+          "schoolUrl": "https://www.nwacc.edu/",
+          "lat": 36.357704,
+          "lng": -94.17289
+        }
+      ],
+      "sourceName": "U.S. Department of Education College Scorecard",
+      "sourceUrl": "https://collegescorecard.ed.gov/",
+      "retrieved": "2026-10-31"
+    },
+    "evInfrastructure": {
+      "totalStations": 30,
+      "totalChargingPorts": 131,
+      "dcFastPorts": 36,
+      "level2Ports": 95,
+      "sampleStations": [
+        {
+          "name": "NARA Parking Deck",
+          "address": "1 Airport Blvd, Bentonville, AR 72712",
+          "network": "Non-Networked",
+          "dcFastPorts": 0,
+          "level2Ports": 24,
+          "lat": 36.274067,
+          "lng": -94.297166
+        },
+        {
+          "name": "Midtown Lane Parking Garage - Tesla Destination",
+          "address": "216 NW A St, Bentonville, AR 72712",
+          "network": "Tesla Destination",
+          "dcFastPorts": 0,
+          "level2Ports": 9,
+          "lat": 36.374237,
+          "lng": -94.209331
+        },
+        {
+          "name": "Walmart EV Charging",
+          "address": "1400 N Walton Blvd, Bentonville, AR 72712",
+          "network": "WALMART",
+          "dcFastPorts": 8,
+          "level2Ports": 0,
+          "lat": 36.389152,
+          "lng": -94.219316
+        },
+        {
+          "name": "Walmart EV Charging",
+          "address": "906 SW Regional Airport Blvd, Bentonville, AR 72712",
+          "network": "WALMART",
+          "dcFastPorts": 8,
+          "level2Ports": 0,
+          "lat": 36.337252,
+          "lng": -94.223909
+        },
+        {
+          "name": "Walmart EV Charging",
+          "address": "3510 SE 14th St, Bentonville, AR 72712",
+          "network": "WALMART",
+          "dcFastPorts": 8,
+          "level2Ports": 0,
+          "lat": 36.354293,
+          "lng": -94.171088
+        }
+      ],
+      "sourceName": "U.S. Department of Energy / NLR Alternative Fuels Data Center (AFDC)",
+      "sourceUrl": "https://afdc.energy.gov/stations",
+      "retrieved": "2026-10-31"
+    },
+    "nationalParks": {
+      "parks": [
+        {
+          "parkCode": "peri",
+          "fullName": "Pea Ridge National Military Park",
+          "designation": "National Military Park",
+          "distanceMiles": 13.0,
+          "description": "On March 7-8, 1862, over 23,000 soldiers fought here to decide the fate of Missouri which was a turning point of the war in the Trans-Mississippi. This 4,400-acre battlefield honors those who fought and died on these hallowed grounds....",
+          "url": "https://www.nps.gov/peri/index.htm",
+          "lat": 36.45438,
+          "lng": -94.034684
+        }
+      ],
+      "sourceName": "U.S. National Park Service (NPS) API",
+      "sourceUrl": "https://www.nps.gov/",
+      "retrieved": "2026-10-31"
+    },
+    "upcomingEvents": {
+      "totalMatchingEvents": 2,
+      "events": [
+        {
+          "id": "Z7r9jZ1AAvUjS",
+          "name": "Los Lobos",
+          "date": "2026-12-06",
+          "venueName": "The Momentary - AR",
+          "category": "Music",
+          "url": "https://www.ticketmaster.com/event/Z7r9jZ1AAvUjS"
+        },
+        {
+          "id": "Z7r9jZ1AA7Kxb",
+          "name": "Winona Fighter",
+          "date": "2027-01-21",
+          "venueName": "The Momentary - AR",
+          "category": "Music",
+          "url": "https://www.ticketmaster.com/event/Z7r9jZ1AA7Kxb"
+        }
+      ],
+      "sourceName": "Ticketmaster Discovery API v2",
+      "sourceUrl": "https://developer.ticketmaster.com/",
+      "retrieved": "2026-10-31"
     }
   },
   {

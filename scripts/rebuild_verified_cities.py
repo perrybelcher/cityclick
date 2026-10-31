@@ -53,6 +53,74 @@ CITIES = {
         'ar', 'HOT SPRINGS NATIONAL PARK', 'AR', '1600000US0533400', '05', 'Hot Springs city',
         'Hot Springs', '05051', 'Garland County',
     ),
+    'tx/dallas': (
+        'tx', 'DALLAS', 'TX', '1600000US4819000', '48', 'Dallas city',
+        'Dallas', '48113', 'Dallas County',
+    ),
+    'tx/houston': (
+        'tx', 'HOUSTON', 'TX', '1600000US4835000', '48', 'Houston city',
+        'Houston', '48201', 'Harris County',
+    ),
+    'tx/san-antonio': (
+        'tx', 'SAN ANTONIO', 'TX', '1600000US4865000', '48', 'San Antonio city',
+        'San Antonio', '48029', 'Bexar County',
+    ),
+    'az/phoenix': (
+        'az', 'PHOENIX', 'AZ', '1600000US0455000', '04', 'Phoenix city',
+        'Phoenix', '04013', 'Maricopa County',
+    ),
+    'nc/charlotte': (
+        'nc', 'CHARLOTTE', 'NC', '1600000US3712000', '37', 'Charlotte city',
+        'Charlotte', '37119', 'Mecklenburg County',
+    ),
+    'nc/raleigh': (
+        'nc', 'RALEIGH', 'NC', '1600000US3755000', '37', 'Raleigh city',
+        'Raleigh', '37183', 'Wake County',
+    ),
+    'fl/orlando': (
+        'fl', 'ORLANDO', 'FL', '1600000US1253000', '12', 'Orlando city',
+        'Orlando', '12095', 'Orange County',
+    ),
+    'fl/miami': (
+        'fl', 'MIAMI', 'FL', '1600000US1245000', '12', 'Miami city',
+        'Miami', '12086', 'Miami-Dade County',
+    ),
+    'fl/jacksonville': (
+        'fl', 'JACKSONVILLE', 'FL', '1600000US1235000', '12', 'Jacksonville city',
+        'Jacksonville', '12031', 'Duval County',
+    ),
+    'co/denver': (
+        'co', 'DENVER', 'CO', '1600000US0820000', '08', 'Denver city',
+        'Denver', '08031', 'Denver County',
+    ),
+    'nv/las-vegas': (
+        'nv', 'LAS VEGAS', 'NV', '1600000US3240000', '32', 'Las Vegas city',
+        'Las Vegas', '32003', 'Clark County',
+    ),
+    'ut/salt-lake-city': (
+        'ut', 'SALT LAKE CITY', 'UT', '1600000US4967000', '49', 'Salt Lake City city',
+        'Salt Lake City', '49035', 'Salt Lake County',
+    ),
+    'ga/atlanta': (
+        'ga', 'ATLANTA', 'GA', '1600000US1304000', '13', 'Atlanta city',
+        'Atlanta', '13121', 'Fulton County',
+    ),
+    'ar/little-rock': (
+        'ar', 'LITTLE ROCK', 'AR', '1600000US0541000', '05', 'Little Rock city',
+        'Little Rock', '05119', 'Pulaski County',
+    ),
+    'ar/fayetteville': (
+        'ar', 'FAYETTEVILLE', 'AR', '1600000US0523290', '05', 'Fayetteville city',
+        'Fayetteville', '05143', 'Washington County',
+    ),
+    'ar/bentonville': (
+        'ar', 'BENTONVILLE', 'AR', '1600000US0505320', '05', 'Bentonville city',
+        'Bentonville', '05007', 'Benton County',
+    ),
+    'al/huntsville': (
+        'al', 'HUNTSVILLE', 'AL', '1600000US0137000', '01', 'Huntsville city',
+        'Huntsville', '01089', 'Madison County',
+    ),
 }
 
 
@@ -117,10 +185,14 @@ for slug, (st, nm, ab, gid, fips, pname, display_name, county_fips, county_name)
     fn = os.path.join(ROOT, 'src', 'data', 'cities', f'{st}.json')
     with open(fn, encoding='utf-8') as fh:
         data = json.load(fh)
-    c = [x for x in data if x['slug'] == slug][0]
+    place_geoid = gid.split('US')[1]
+    matches = [x for x in data if x.get('slug') == slug or str(x.get('cityId', '')).zfill(7) == place_geoid]
+    if not matches:
+        raise RuntimeError(f"City record not found for {slug} ({place_geoid}) in {fn}")
+    c = matches[0]
 
     # 1. Core normalized identity & Census 2023 Gazetteer coordinates
-    place_geoid = gid.split('US')[1]
+    c['slug'] = slug
     c['cityId'] = place_geoid
     c['name'] = display_name
     c['stateCode'] = st

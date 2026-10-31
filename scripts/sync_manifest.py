@@ -32,9 +32,31 @@ CERTIFIED_SLUGS = {
     "fl/tampa",
     "az/scottsdale",
     "tn/nashville",
+    "ok/oklahoma-city",
+    "tx/dallas",
+    "tx/houston",
+    "tx/san-antonio",
+    "az/phoenix",
+    "nc/charlotte",
+    "nc/raleigh",
+    "fl/orlando",
+    "fl/miami",
+    "fl/jacksonville",
+    "co/denver",
+    "nv/las-vegas",
+    "ut/salt-lake-city",
+    "ga/atlanta",
+    "ar/little-rock",
+    "ar/fayetteville",
+    "ar/bentonville",
+    "al/huntsville",
 }
 
-REBUILT_SLUGS = CERTIFIED_SLUGS | {"ok/oklahoma-city"}
+REBUILT_SLUGS = set(CERTIFIED_SLUGS)
+
+SLUG_MIGRATIONS = {
+    "ut/salt-lake": "ut/salt-lake-city",
+}
 
 FABRICATED_V1_MANIFEST_KEYS = (
     "reportedRetailRentSqFtYr",
@@ -76,6 +98,9 @@ def main() -> int:
 
     for entry in manifest:
         slug = str(entry.get("slug") or "")
+        if slug in SLUG_MIGRATIONS and slug not in city_map and SLUG_MIGRATIONS[slug] in city_map:
+            slug = SLUG_MIGRATIONS[slug]
+            entry["slug"] = slug
         seen_slugs.add(slug)
         c = city_map.get(slug)
         is_certified = slug in CERTIFIED_SLUGS

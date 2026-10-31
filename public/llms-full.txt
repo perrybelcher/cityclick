@@ -3,7 +3,7 @@
 ## 1. Platform Scope & Crawl Shield Governance
 CityClick publishes US municipal guides built strictly from traceable federal and state primary datasets for visitors, relocating households, and local business founders.
 - Prime Directive: A blank or omitted block is always chosen over an estimated, defaulted, or unverified figure.
-- Certified Indexable Flagship Guides (7 cities passing primary-source audit and rendered HTML quality checks):
+- Certified Indexable Flagship Guides (25 cities passing primary-source audit and rendered HTML quality checks):
   1. Austin, Texas: https://cityclick.com/tx/austin/
   2. Nashville, Tennessee: https://cityclick.com/tn/nashville/
   3. Hot Springs, Arkansas: https://cityclick.com/ar/hot-springs/
@@ -11,7 +11,25 @@ CityClick publishes US municipal guides built strictly from traceable federal an
   5. Boise, Idaho: https://cityclick.com/id/boise/
   6. Tampa, Florida: https://cityclick.com/fl/tampa/
   7. Scottsdale, Arizona: https://cityclick.com/az/scottsdale/
-- Additional Rebuilt & Preview Catalog: `ok/oklahoma-city` is rebuilt in audit review, while ~1,494 additional US municipal entries carry `<meta name="robots" content="noindex, follow">` and remain excluded from `sitemap.xml` until verified from primary sources.
+  8. Dallas, Texas: https://cityclick.com/tx/dallas/
+  9. Houston, Texas: https://cityclick.com/tx/houston/
+  10. San Antonio, Texas: https://cityclick.com/tx/san-antonio/
+  11. Phoenix, Arizona: https://cityclick.com/az/phoenix/
+  12. Charlotte, North Carolina: https://cityclick.com/nc/charlotte/
+  13. Raleigh, North Carolina: https://cityclick.com/nc/raleigh/
+  14. Orlando, Florida: https://cityclick.com/fl/orlando/
+  15. Miami, Florida: https://cityclick.com/fl/miami/
+  16. Jacksonville, Florida: https://cityclick.com/fl/jacksonville/
+  17. Denver, Colorado: https://cityclick.com/co/denver/
+  18. Las Vegas, Nevada: https://cityclick.com/nv/las-vegas/
+  19. Salt Lake City, Utah: https://cityclick.com/ut/salt-lake-city/
+  20. Atlanta, Georgia: https://cityclick.com/ga/atlanta/
+  21. Oklahoma City, Oklahoma: https://cityclick.com/ok/oklahoma-city/
+  22. Little Rock, Arkansas: https://cityclick.com/ar/little-rock/
+  23. Fayetteville, Arkansas: https://cityclick.com/ar/fayetteville/
+  24. Bentonville, Arkansas: https://cityclick.com/ar/bentonville/
+  25. Huntsville, Alabama: https://cityclick.com/al/huntsville/
+- Remaining Preview Catalog: ~1,476 additional US municipal entries carry `<meta name="robots" content="noindex, follow">` and remain excluded from `sitemap.xml` until verified from primary sources.
 - Canonical URL Rule: All HTML page routes use a trailing slash (e.g., `https://cityclick.com/tx/austin/`, `https://cityclick.com/methodology/`). API routes (`/api/v1/...`) and static asset files (`.json`, `.txt`, `.pdf`) do not use a trailing slash.
 
 ## 2. Primary Federal & State Data Sources
@@ -42,7 +60,7 @@ CityClick publishes US municipal guides built strictly from traceable federal an
   - `saturationIndex < 80`: `underserved`
   - `80 <= saturationIndex <= 120`: `balanced`
   - `saturationIndex > 120`: `saturated`
-- Noise Filter: Any NAICS category with `usAvgPer10k < 0.3` or expected city establishments `(usAvgPer10k * ZCTA_Pop / 10000) < 10` is omitted rather than extrapolated.
+- Noise Filter: Any NAICS category with `usAvgPer10k < 0.3` or expected city establishments `(usAvgPer10k * ZCTA_Pop / 10000) < 2.0` is omitted rather than extrapolated.
 
 ### 2.3 Verified U.S. National ZBP Benchmarks (`usAvgPer10k`, Vintage ZBP-2022 / ACS-2023)
 - `722515` | Coffee & Snack Shops: 2.12 establishments per 10,000 residents

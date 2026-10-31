@@ -3,31 +3,19 @@ export const prerender = false;
 
 import Layout from '../../layouts/Layout.astro';
 import manifest from '../../data/index-manifest.json';
+import { CERTIFIED_FLAGSHIP_SET, CERTIFIED_FLAGSHIP_SLUGS } from '../../config/flagships';
 
 Astro.response.headers.set('Cache-Control', 'public, s-maxage=86400, stale-while-revalidate=604800');
 
 const { cityA, cityB } = Astro.params;
 
-const INDEXABLE_FLAGSHIPS = [
-  'tx/austin',
-  'tn/nashville',
-  'ar/hot-springs',
-  'ar/hot-springs-village',
-  'id/boise',
-  'fl/tampa',
-  'az/scottsdale',
-];
-const INDEXABLE_SET = new Set(INDEXABLE_FLAGSHIPS);
-
-const ALLOWED_COMPARE_SLUGS = [...INDEXABLE_FLAGSHIPS, 'ok/oklahoma-city'];
-
-const allowedCities = ALLOWED_COMPARE_SLUGS.map((slug) => manifest.find((c: any) => c.slug === slug)).filter(Boolean) as any[];
-const certifiedCities = INDEXABLE_FLAGSHIPS.map((slug) => manifest.find((c: any) => c.slug === slug)).filter(Boolean) as any[];
+const INDEXABLE_SET = CERTIFIED_FLAGSHIP_SET;
+const certifiedCities = CERTIFIED_FLAGSHIP_SLUGS.map((slug) => manifest.find((c: any) => c.slug === slug)).filter(Boolean) as any[];
 
 let recordA: any = null;
 let recordB: any = null;
 
-for (const c of allowedCities) {
+for (const c of certifiedCities) {
   const slugKey = c.slug.replace('/', '-');
   if (slugKey === cityA || c.slug === cityA) recordA = c;
   if (slugKey === cityB || c.slug === cityB) recordB = c;

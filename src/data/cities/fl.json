@@ -2,1265 +2,1541 @@
   {
     "slug": "fl/jacksonville",
     "cityId": "1235000",
-    "countyFips": "12350",
+    "countyFips": "12031",
     "name": "Jacksonville",
     "stateCode": "fl",
     "stateName": "Florida",
-    "countyName": "Jacksonville Metropolitan Area",
+    "countyName": "Duval County",
     "lat": 30.336864,
     "lng": -81.661603,
     "primaryZips": [
-      "70010"
+      "32256",
+      "32216",
+      "32207",
+      "32246",
+      "32225",
+      "32257",
+      "32218",
+      "32210",
+      "32258",
+      "32224",
+      "32202",
+      "32205"
     ],
     "demographics": {
       "population": 985843,
-      "popGrowth5YrPct": 3.6,
-      "medianHouseholdIncome": 92136,
-      "perCapitaIncome": 53439,
+      "medianHouseholdIncome": 66981,
+      "perCapitaIncome": 37269,
       "medianAge": 36.4,
-      "daytimeWorkerPop": 611223,
-      "daytimePopSurgePct": 8.5,
-      "medianGrossRent": 1772,
-      "medianHomeValue": 386971,
+      "medianGrossRent": 1375,
+      "medianHomeValue": 266100,
       "provenance": {
-        "sourceName": "US Census Bureau ACS 5-Year (DP03/DP04/DP05) & PopEst",
-        "sourceUrl": "https://api.census.gov/data/2023/acs/acs5",
-        "datasetVintage": "2023-5YR",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "sourceName": "US Census Bureau ACS 5-Year Estimates 2023 (Table-Based Summary File)",
+        "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/",
+        "datasetVintage": "ACS-2023-5YR",
+        "verifiedAt": "2026-10-31T00:00:00Z",
         "granularity": "place"
-      }
-    },
-    "laborAndEconomy": {
-      "unemploymentRatePct": 3.8,
-      "avgWeeklyWageAllIndustries": 1340,
-      "newHousingPermits12Mo": 7394,
-      "permitsPer1kResidents": 7.5,
-      "femaRiskScore": 28.0,
-      "provenance": {
-        "sourceName": "BLS Local Area Unemployment Statistics (LAUS) & Census BPS",
-        "sourceUrl": "https://www.bls.gov/lau/",
-        "datasetVintage": "2024-M08",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
-      }
+      },
+      "popChange2020to2023Pct": 3.8,
+      "popChangeBasis": "Census Population Estimates, April 2020 base to July 2023"
     },
     "industries": [
       {
         "naicsCode": "722515",
         "slug": "coffee-shops",
         "label": "Coffee & Snack Shops",
-        "establishments": 212,
-        "per10kResidents": 2.15,
-        "usAvgPer10k": 2.15,
-        "saturationIndex": 100,
+        "establishments": 170,
+        "per10kResidents": 1.8,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 85,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Jacksonville."
+          "evidenceQuote": "170 employer establishments (NAICS 722515) across 31 ZIP codes whose USPS city is Jacksonville, FL; density uses ACS 2023 ZCTA population (945,632). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722511",
         "slug": "restaurants",
         "label": "Full-Service Restaurants",
-        "establishments": 670,
-        "per10kResidents": 6.8,
-        "usAvgPer10k": 6.8,
-        "saturationIndex": 100,
+        "establishments": 658,
+        "per10kResidents": 6.96,
+        "usAvgPer10k": 7.44,
+        "saturationIndex": 94,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Jacksonville."
+          "evidenceQuote": "658 employer establishments (NAICS 722511) across 31 ZIP codes whose USPS city is Jacksonville, FL; density uses ACS 2023 ZCTA population (945,632). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722513",
         "slug": "fast-food",
-        "label": "Fast Food Restaurants",
-        "establishments": 710,
-        "per10kResidents": 7.2,
-        "usAvgPer10k": 7.2,
-        "saturationIndex": 100,
+        "label": "Limited-Service / Fast Food Restaurants",
+        "establishments": 794,
+        "per10kResidents": 8.4,
+        "usAvgPer10k": 7.75,
+        "saturationIndex": 108,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Jacksonville."
+          "evidenceQuote": "794 employer establishments (NAICS 722513) across 31 ZIP codes whose USPS city is Jacksonville, FL; density uses ACS 2023 ZCTA population (945,632). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722410",
         "slug": "bars-taverns",
-        "label": "Bars & Drinking Places",
-        "establishments": 182,
-        "per10kResidents": 1.85,
-        "usAvgPer10k": 1.85,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Drinking Places (Alcoholic Beverages)",
+        "establishments": 30,
+        "per10kResidents": 0.32,
+        "usAvgPer10k": 0.9,
+        "saturationIndex": 35,
+        "status": "underserved",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Jacksonville."
-        }
-      },
-      {
-        "naicsCode": "812111",
-        "slug": "barber-shops",
-        "label": "Barber Shops",
-        "establishments": 133,
-        "per10kResidents": 1.35,
-        "usAvgPer10k": 1.35,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Jacksonville."
+          "evidenceQuote": "30 employer establishments (NAICS 722410) across 31 ZIP codes whose USPS city is Jacksonville, FL; density uses ACS 2023 ZCTA population (945,632). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812112",
         "slug": "beauty-salons",
         "label": "Beauty Salons & Hair Studios",
-        "establishments": 335,
-        "per10kResidents": 3.4,
-        "usAvgPer10k": 3.4,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 270,
+        "per10kResidents": 2.86,
+        "usAvgPer10k": 2.31,
+        "saturationIndex": 124,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Jacksonville."
+          "evidenceQuote": "270 employer establishments (NAICS 812112) across 31 ZIP codes whose USPS city is Jacksonville, FL; density uses ACS 2023 ZCTA population (945,632). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812113",
         "slug": "nail-salons",
         "label": "Nail Salons",
-        "establishments": 207,
-        "per10kResidents": 2.1,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 149,
+        "per10kResidents": 1.58,
+        "usAvgPer10k": 0.86,
+        "saturationIndex": 183,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Jacksonville."
+          "evidenceQuote": "149 employer establishments (NAICS 812113) across 31 ZIP codes whose USPS city is Jacksonville, FL; density uses ACS 2023 ZCTA population (945,632). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "713940",
         "slug": "gyms-fitness",
-        "label": "Fitness & Recreational Gyms",
-        "establishments": 123,
-        "per10kResidents": 1.25,
-        "usAvgPer10k": 1.25,
-        "saturationIndex": 100,
+        "label": "Fitness & Recreational Sports Centers",
+        "establishments": 96,
+        "per10kResidents": 1.02,
+        "usAvgPer10k": 1.0,
+        "saturationIndex": 102,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Jacksonville."
+          "evidenceQuote": "96 employer establishments (NAICS 713940) across 31 ZIP codes whose USPS city is Jacksonville, FL; density uses ACS 2023 ZCTA population (945,632). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812910",
         "slug": "pet-care",
-        "label": "Pet Care & Grooming",
-        "establishments": 94,
-        "per10kResidents": 0.95,
-        "usAvgPer10k": 0.95,
-        "saturationIndex": 100,
+        "label": "Pet Care & Grooming Services",
+        "establishments": 39,
+        "per10kResidents": 0.41,
+        "usAvgPer10k": 0.46,
+        "saturationIndex": 89,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Jacksonville."
+          "evidenceQuote": "39 employer establishments (NAICS 812910) across 31 ZIP codes whose USPS city is Jacksonville, FL; density uses ACS 2023 ZCTA population (945,632). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541940",
         "slug": "veterinary",
-        "label": "Veterinary Services",
-        "establishments": 104,
-        "per10kResidents": 1.05,
-        "usAvgPer10k": 1.05,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Veterinary Services & Animal Hospitals",
+        "establishments": 87,
+        "per10kResidents": 0.92,
+        "usAvgPer10k": 0.69,
+        "saturationIndex": 133,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Jacksonville."
+          "evidenceQuote": "87 employer establishments (NAICS 541940) across 31 ZIP codes whose USPS city is Jacksonville, FL; density uses ACS 2023 ZCTA population (945,632). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "811111",
         "slug": "auto-repair",
         "label": "General Automotive Repair",
-        "establishments": 473,
-        "per10kResidents": 4.8,
-        "usAvgPer10k": 4.8,
-        "saturationIndex": 100,
+        "establishments": 200,
+        "per10kResidents": 2.11,
+        "usAvgPer10k": 2.2,
+        "saturationIndex": 96,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Jacksonville."
+          "evidenceQuote": "200 employer establishments (NAICS 811111) across 31 ZIP codes whose USPS city is Jacksonville, FL; density uses ACS 2023 ZCTA population (945,632). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "811192",
         "slug": "car-washes",
-        "label": "Car Washes & Detailing",
-        "establishments": 64,
-        "per10kResidents": 0.65,
-        "usAvgPer10k": 0.65,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Car Washes & Auto Detailing",
+        "establishments": 59,
+        "per10kResidents": 0.62,
+        "usAvgPer10k": 0.35,
+        "saturationIndex": 178,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Jacksonville."
-        }
-      },
-      {
-        "naicsCode": "812310",
-        "slug": "laundromats",
-        "label": "Coin Laundromats",
-        "establishments": 54,
-        "per10kResidents": 0.55,
-        "usAvgPer10k": 0.55,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Jacksonville."
-        }
-      },
-      {
-        "naicsCode": "812320",
-        "slug": "dry-cleaners",
-        "label": "Dry Cleaning & Laundry",
-        "establishments": 84,
-        "per10kResidents": 0.85,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Jacksonville."
+          "evidenceQuote": "59 employer establishments (NAICS 811192) across 31 ZIP codes whose USPS city is Jacksonville, FL; density uses ACS 2023 ZCTA population (945,632). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621210",
         "slug": "dentists",
         "label": "Offices of Dentists",
-        "establishments": 384,
-        "per10kResidents": 3.9,
-        "usAvgPer10k": 3.9,
-        "saturationIndex": 100,
+        "establishments": 311,
+        "per10kResidents": 3.29,
+        "usAvgPer10k": 3.89,
+        "saturationIndex": 85,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Jacksonville."
+          "evidenceQuote": "311 employer establishments (NAICS 621210) across 31 ZIP codes whose USPS city is Jacksonville, FL; density uses ACS 2023 ZCTA population (945,632). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621310",
         "slug": "chiropractors",
         "label": "Offices of Chiropractors",
-        "establishments": 138,
-        "per10kResidents": 1.4,
-        "usAvgPer10k": 1.4,
-        "saturationIndex": 100,
+        "establishments": 89,
+        "per10kResidents": 0.94,
+        "usAvgPer10k": 0.97,
+        "saturationIndex": 97,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Jacksonville."
+          "evidenceQuote": "89 employer establishments (NAICS 621310) across 31 ZIP codes whose USPS city is Jacksonville, FL; density uses ACS 2023 ZCTA population (945,632). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621340",
         "slug": "physical-therapy",
-        "label": "Physical Therapy Clinics",
-        "establishments": 153,
-        "per10kResidents": 1.55,
-        "usAvgPer10k": 1.55,
-        "saturationIndex": 100,
+        "label": "Physical, Occupational & Speech Therapists",
+        "establishments": 109,
+        "per10kResidents": 1.15,
+        "usAvgPer10k": 1.3,
+        "saturationIndex": 88,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Jacksonville."
+          "evidenceQuote": "109 employer establishments (NAICS 621340) across 31 ZIP codes whose USPS city is Jacksonville, FL; density uses ACS 2023 ZCTA population (945,632). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "624410",
         "slug": "daycare",
         "label": "Child Day Care Services",
-        "establishments": 222,
-        "per10kResidents": 2.25,
-        "usAvgPer10k": 2.25,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 247,
+        "per10kResidents": 2.61,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 123,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Jacksonville."
+          "evidenceQuote": "247 employer establishments (NAICS 624410) across 31 ZIP codes whose USPS city is Jacksonville, FL; density uses ACS 2023 ZCTA population (945,632). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "445120",
         "slug": "convenience-stores",
-        "label": "Convenience Stores",
-        "establishments": 192,
-        "per10kResidents": 1.95,
-        "usAvgPer10k": 1.95,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Convenience Retail Stores",
+        "establishments": 175,
+        "per10kResidents": 1.85,
+        "usAvgPer10k": 0.82,
+        "saturationIndex": 226,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Jacksonville."
+          "evidenceQuote": "175 employer establishments (NAICS 445120) across 31 ZIP codes whose USPS city is Jacksonville, FL; density uses ACS 2023 ZCTA population (945,632). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "448140",
         "slug": "clothing-boutiques",
-        "label": "Family Clothing Stores",
-        "establishments": 163,
-        "per10kResidents": 1.65,
-        "usAvgPer10k": 1.65,
-        "saturationIndex": 100,
+        "label": "Family Clothing Stores & Boutiques",
+        "establishments": 64,
+        "per10kResidents": 0.68,
+        "usAvgPer10k": 0.65,
+        "saturationIndex": 104,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Jacksonville."
-        }
-      },
-      {
-        "naicsCode": "445291",
-        "slug": "bakeries",
-        "label": "Retail Bakeries",
-        "establishments": 84,
-        "per10kResidents": 0.85,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Jacksonville."
-        }
-      },
-      {
-        "naicsCode": "453110",
-        "slug": "florists",
-        "label": "Florists & Floral Gift",
-        "establishments": 49,
-        "per10kResidents": 0.5,
-        "usAvgPer10k": 0.5,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Jacksonville."
+          "evidenceQuote": "64 employer establishments (NAICS 448140) across 31 ZIP codes whose USPS city is Jacksonville, FL; density uses ACS 2023 ZCTA population (945,632). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541110",
         "slug": "law-firms",
         "label": "Offices of Lawyers",
-        "establishments": 483,
-        "per10kResidents": 4.9,
-        "usAvgPer10k": 4.9,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 626,
+        "per10kResidents": 6.62,
+        "usAvgPer10k": 4.8,
+        "saturationIndex": 138,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Jacksonville."
+          "evidenceQuote": "626 employer establishments (NAICS 541110) across 31 ZIP codes whose USPS city is Jacksonville, FL; density uses ACS 2023 ZCTA population (945,632). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541211",
         "slug": "accounting-cpa",
-        "label": "Offices of CPAs",
-        "establishments": 207,
-        "per10kResidents": 2.1,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 100,
+        "label": "Offices of Certified Public Accountants",
+        "establishments": 159,
+        "per10kResidents": 1.68,
+        "usAvgPer10k": 1.44,
+        "saturationIndex": 117,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Jacksonville."
+          "evidenceQuote": "159 employer establishments (NAICS 541211) across 31 ZIP codes whose USPS city is Jacksonville, FL; density uses ACS 2023 ZCTA population (945,632). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "531210",
         "slug": "real-estate-agencies",
-        "label": "Real Estate Brokerages",
-        "establishments": 375,
-        "per10kResidents": 3.8,
-        "usAvgPer10k": 3.8,
-        "saturationIndex": 100,
+        "label": "Offices of Real Estate Agents & Brokers",
+        "establishments": 540,
+        "per10kResidents": 5.71,
+        "usAvgPer10k": 4.74,
+        "saturationIndex": 120,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Jacksonville."
+          "evidenceQuote": "540 employer establishments (NAICS 531210) across 31 ZIP codes whose USPS city is Jacksonville, FL; density uses ACS 2023 ZCTA population (945,632). National benchmark = all US ZIP rows / US population."
         }
       }
     ],
     "permitsAndTax": {
-      "generalBusinessLicenseRequired": false,
-      "businessLicenseFeeSummary": "No general city business license required. State of Florida statutory filings apply.",
-      "businessLicensePortalUrl": "https://www.jacksonvillefl.gov/permits",
-      "zoningLookupUrl": "https://www.jacksonvillefl.gov/zoning",
-      "buildingPermitPortalUrl": "https://www.jacksonvillefl.gov/building",
-      "certificateOfOccupancyFee": "$185 standard municipal inspection fee",
-      "avgPermitWaitDays": 30,
-      "shortTermRentalStatus": "restricted",
-      "foodTruckPermitStatus": "allowed",
-      "combinedSalesTaxRate": 0.075,
       "stateTaxRate": 0.06,
+      "countyTaxRate": 0.015,
+      "cityTaxRate": 0.0,
+      "specialDistrictTaxRate": 0.0,
       "localTaxRate": 0.015,
+      "combinedSalesTaxRate": 0.075,
       "provenance": {
-        "sourceName": "Jacksonville Municipal Code & State Department of Revenue",
-        "sourceUrl": "https://www.jacksonvillefl.gov",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place",
-        "evidenceQuote": "Statutory municipal code standards."
+        "sourceName": "Florida Dept. of Revenue discretionary sales surtax (6.0% state + 1.5% Duval County)",
+        "sourceUrl": "https://floridarevenue.com/taxes/taxesfees/Pages/discretionary.aspx",
+        "datasetVintage": "2026",
+        "verifiedAt": "2026-10-31T00:00:00Z",
+        "granularity": "place"
       }
     },
-    "topTrafficCorridors": [
-      {
-        "roadName": "Main Arterial Corridor 1",
-        "segmentDescription": "Central Commercial Corridor through Jacksonville",
-        "aadt": 118301,
-        "heavyTruckPct": 5.5,
-        "lat": 30.336864,
-        "lng": -81.661603,
-        "year": 2024,
-        "provenance": {
-          "sourceName": "Florida DOT AADT Database",
-          "sourceUrl": "https://www.transportation.gov/",
-          "datasetVintage": "2024-AADT",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "place"
-        }
-      }
-    ],
-    "marketSignals": {
-      "reportedRetailRentSqFtYr": 44.5,
-      "reportedIndustrialRentSqFtYr": 20.0,
-      "topSearchedNaics30d": [
-        "722515",
-        "713940",
-        "812111"
-      ],
-      "verifiedLocalProsCount": 8
-    },
-    "scores": {
-      "overallViability": 59,
-      "purchasingPower": 56,
-      "growthMomentum": 62,
-      "costEfficiency": 65,
-      "regulatoryFriction": 48
-    },
+    "marketSignals": {},
     "executiveTravel": {
-      "timeZone": "America/New_York (ET: UTC-05:00)",
+      "timeZone": "America/New_York",
       "timeZoneAbbr": "ET",
       "utcOffset": "-05:00",
       "primaryAirport": {
         "name": "Jacksonville International Airport",
         "iata": "JAX",
-        "distanceMiles": 14.0,
-        "transitToDowntown": "JTA Route 1 / Rideshare"
-      },
-      "powerPlugs": {
-        "types": [
-          "Type A (2-pin)",
-          "Type B (3-pin grounded)"
-        ],
-        "voltage": "120V",
-        "frequency": "60Hz",
-        "adapterAdvice": "Visitors from UK, EU, Australia, and Asia require a standard Type A/B plug adapter and dual-voltage converter."
-      },
-      "currency": {
-        "code": "USD",
-        "symbol": "$",
-        "name": "United States Dollar",
-        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
-        "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
+        "lat": 30.492469,
+        "lng": -81.687813,
+        "distanceMiles": 10.9,
+        "transitToDowntown": null,
+        "source": "OurAirports (public domain) for name, IATA code and coordinates; distance is straight-line from the U.S. Census Gazetteer city center point",
+        "sourceUrl": "https://ourairports.com/data/",
+        "cityCenterMethod": "Census Gazetteer internal point",
+        "retrieved": "2026-10-31"
       },
       "climate": {
-        "summerHighF": 94,
-        "winterLowF": 47,
-        "annualRainfallInches": 42,
-        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
-        "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
+        "summerHighF": 89,
+        "winterLowF": 48,
+        "annualRainfallInches": 50.7,
+        "summerHighBasis": "Average July daily high",
+        "winterLowBasis": "Average January daily low",
+        "source": "Open-Meteo Historical Weather API (ERA5 reanalysis), 2015-2024 average, retrieved 2026-10-31",
+        "sourceUrl": "https://open-meteo.com/en/docs/historical-weather-api"
       },
       "emergency": {
         "emergencyDispatch": "911",
-        "nonEmergencyPolice": "311 or local municipal dispatch",
-        "nearestTraumaHospital": "Jacksonville Regional Memorial Hospital",
-        "hospitalAddress": "Medical Center District, Jacksonville, FL"
-      },
-      "visitorLogistics": {
-        "tapWaterPotability": "100% Safe municipal drinking water conforming to EPA Safe Drinking Water Act standards.",
-        "salesTaxRefundPolicy": "International travelers may claim state sales tax refunds on qualifying departures at designated airport customs counters.",
-        "rideshareAvailability": "Ubiquitous (Uber and Lyft operational 24/7 across the metropolitan area)."
-      },
-      "provenance": {
-        "sourceName": "FAA Airport Database & International Trade Administration",
-        "sourceUrl": "https://www.trade.gov/",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
+        "nearestTraumaHospital": "Ascension St. Vincent's Riverside",
+        "hospitalAddress": "1 Shircliff Way, Jacksonville, FL 32204",
+        "cmsFacilityId": "100040",
+        "emergencyServices": true,
+        "source": "CMS Care Compare hospital general information (federal dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma level, ranking or nearest-facility claim.",
+        "erHospitals": [
+          {
+            "name": "Ascension St. Vincent's Riverside",
+            "address": "1 Shircliff Way, Jacksonville, FL 32204",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "100040"
+          },
+          {
+            "name": "Ascension St. Vincent's Southside",
+            "address": "4201 Belfort Rd, Jacksonville, FL 32216",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "100307",
+            "lat": 30.256094,
+            "lng": -81.582408
+          },
+          {
+            "name": "Baptist Health Medical Center - Jacksonville",
+            "address": "800 Prudential Dr, Jacksonville, FL 32207",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "100088",
+            "lat": 30.316225,
+            "lng": -81.664352
+          },
+          {
+            "name": "HCA Florida Memorial Hospital",
+            "address": "3625 University Blvd S, Jacksonville, FL 32216",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "100179",
+            "lat": 30.287399,
+            "lng": -81.602362
+          },
+          {
+            "name": "Mayo Clinic",
+            "address": "4500 San Pablo Rd, Jacksonville, FL 32224",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "100151",
+            "lat": 30.264982,
+            "lng": -81.437573
+          },
+          {
+            "name": "NH Jacksonville",
+            "address": "2080 Child St, Jacksonville, FL 32214",
+            "type": "Acute Care - Department of Defense",
+            "cmsFacilityId": "10013F",
+            "lat": 30.228414,
+            "lng": -81.693262
+          },
+          {
+            "name": "Shands Jacksonville",
+            "address": "655 W 8th St, Jacksonville, FL 32209",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "100001",
+            "lat": 30.346761,
+            "lng": -81.664328
+          }
+        ],
+        "erHospitalsSource": "CMS Care Compare hospital general information (federal dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma level, ranking or nearest-facility claim."
       }
+    },
+    "housingAndTaxes": {
+      "medianHomeValue": 266100,
+      "medianGrossRent": 1375,
+      "medianRealEstateTaxPaid": 2053,
+      "effectivePropertyTaxRatePct": 0.77,
+      "countyName": "Duval County",
+      "source": "ACS 2023 5-yr: B25077 median home value, B25064 median gross rent, B25103 median real estate taxes paid. Effective rate = B25103 / B25077.",
+      "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/"
+    },
+    "climateNormals": {
+      "peakSummerHighF": 89,
+      "winterLowF": 48,
+      "annualRainfallInches": 50.7,
+      "sourceName": "Open-Meteo Historical Weather API (ERA5 reanalysis), 2015-2024 average, retrieved 2026-10-31",
+      "sourceUrl": "https://open-meteo.com/en/docs/historical-weather-api"
+    },
+    "terrainElevation": {
+      "elevationFeet": 4.0,
+      "elevationMeters": 1.2,
+      "topographyClass": "Atlantic Coastal Plain & St. Johns River Estuary",
+      "sourceName": "USGS 3D Elevation Program (3DEP Elevation Point Query Service)",
+      "sourceUrl": "https://epqs.nationalmap.gov/v1/json"
+    },
+    "waterUtility": {
+      "pwsid": "FL2161328",
+      "providerName": "Jea Major Grid",
+      "populationServed": 826664,
+      "sourceType": "groundwater",
+      "source": "U.S. EPA Safe Drinking Water Information System (SDWIS)",
+      "sourceUrl": "https://data.epa.gov/efservice/WATER_SYSTEM/PWSID/FL2161328/JSON",
+      "retrieved": "2026-10-31"
+    },
+    "higherEducation": {
+      "institutionCount": 21,
+      "totalEnrollment": 41036,
+      "institutions": [
+        {
+          "id": 133702,
+          "name": "Florida State College at Jacksonville",
+          "studentSize": 19648,
+          "ownership": "Public",
+          "schoolUrl": "https://www.fscj.edu/",
+          "lat": 30.334918,
+          "lng": -81.659901
+        },
+        {
+          "id": 136172,
+          "name": "University of North Florida",
+          "studentSize": 13359,
+          "ownership": "Public",
+          "schoolUrl": "https://www.unf.edu/",
+          "lat": 30.27194,
+          "lng": -81.509144
+        },
+        {
+          "id": 134945,
+          "name": "Jacksonville University",
+          "studentSize": 2930,
+          "ownership": "Private nonprofit",
+          "schoolUrl": "https://www.ju.edu/index.php",
+          "lat": 30.353227,
+          "lng": -81.60458
+        },
+        {
+          "id": 133526,
+          "name": "Edward Waters University",
+          "studentSize": 1087,
+          "ownership": "Private nonprofit",
+          "schoolUrl": "https://www.ew.edu/",
+          "lat": 30.34479,
+          "lng": -81.684879
+        },
+        {
+          "id": 442329,
+          "name": "Tulsa Welding School-Jacksonville",
+          "studentSize": 968,
+          "ownership": "Private for-profit",
+          "schoolUrl": "https://www.tws.edu/",
+          "lat": 30.282647,
+          "lng": -81.560428
+        },
+        {
+          "id": 457129,
+          "name": "Chamberlain University-Florida",
+          "studentSize": 821,
+          "ownership": "Private for-profit",
+          "schoolUrl": "https://www.chamberlain.edu/",
+          "lat": 30.243517,
+          "lng": -81.586421
+        }
+      ],
+      "sourceName": "U.S. Department of Education College Scorecard",
+      "sourceUrl": "https://collegescorecard.ed.gov/",
+      "retrieved": "2026-10-31"
+    },
+    "evInfrastructure": {
+      "totalStations": 179,
+      "totalChargingPorts": 610,
+      "dcFastPorts": 269,
+      "level2Ports": 341,
+      "sampleStations": [
+        {
+          "name": "Jacksonville, FL - City Center Boulevard - Tesla Supercharger",
+          "address": "13221 City Center Blvd, Jacksonville, FL 32218",
+          "network": "Tesla",
+          "dcFastPorts": 16,
+          "level2Ports": 0,
+          "lat": 30.47967,
+          "lng": -81.637631
+        },
+        {
+          "name": "Jacksonville, FL - Phillips Highway - Tesla Supercharger",
+          "address": "5735 Philips Highway, Jacksonville, FL 32216",
+          "network": "Tesla",
+          "dcFastPorts": 12,
+          "level2Ports": 0,
+          "lat": 30.265795,
+          "lng": -81.616656
+        },
+        {
+          "name": "Jacksonville, FL - Sago Avenue West - Tesla Supercharger",
+          "address": "12333 Sago Ave W, Jacksonville, FL 32218",
+          "network": "Tesla",
+          "dcFastPorts": 12,
+          "level2Ports": 0,
+          "lat": 30.461208,
+          "lng": -81.633059
+        },
+        {
+          "name": "Jacksonville, FL - Edgewood Avenue North - Tesla Supercharger",
+          "address": "1004 Edgewood Ave N, Jacksonville, FL 32204",
+          "network": "Tesla",
+          "dcFastPorts": 12,
+          "level2Ports": 0,
+          "lat": 30.336717,
+          "lng": -81.732236
+        },
+        {
+          "name": "TA County Road 210, Jacksonville, FL",
+          "address": "1650 County Road 210, Jacksonville, FL 32259",
+          "network": "BP_PULSE",
+          "dcFastPorts": 12,
+          "level2Ports": 0,
+          "lat": 30.065935,
+          "lng": -81.49671
+        }
+      ],
+      "sourceName": "U.S. Department of Energy / NLR Alternative Fuels Data Center (AFDC)",
+      "sourceUrl": "https://afdc.energy.gov/stations",
+      "retrieved": "2026-10-31"
+    },
+    "nationalParks": {
+      "parks": [
+        {
+          "parkCode": "timu",
+          "fullName": "Timucuan Ecological & Historic Preserve",
+          "designation": "Ecological & Historic Preserve",
+          "distanceMiles": 13.5,
+          "description": "Visit one of the last unspoiled coastal wetlands on the Atlantic Coast. Discover 6,000 years of human history and experience the beauty of salt marshes, coastal dunes, and hardwood hammocks. The Timucuan Preserve includes Fort Caroline...",
+          "url": "https://www.nps.gov/timu/index.htm",
+          "lat": 30.472519,
+          "lng": -81.499501
+        },
+        {
+          "parkCode": "casa",
+          "fullName": "Castillo de San Marcos National Monument",
+          "designation": "National Monument",
+          "distanceMiles": 36.8,
+          "description": "Built by the Spanish in St. Augustine to defend Florida and the Atlantic trade route, Castillo de San Marcos National Monument preserves the oldest masonry fortification in the continental United States and interprets more than 450...",
+          "url": "https://www.nps.gov/casa/index.htm",
+          "lat": 29.897857,
+          "lng": -81.312172
+        },
+        {
+          "parkCode": "foma",
+          "fullName": "Fort Matanzas National Monument",
+          "designation": "National Monument",
+          "distanceMiles": 50.1,
+          "description": "Fort Matanzas National Monument preserves the fortified coquina watchtower, completed in 1742, which defended the southern approach to the Spanish military settlement of St. Augustine. It also protects approximately 300 acres of Florida...",
+          "url": "https://www.nps.gov/foma/index.htm",
+          "lat": 29.712149,
+          "lng": -81.235675
+        }
+      ],
+      "sourceName": "U.S. National Park Service (NPS) API",
+      "sourceUrl": "https://www.nps.gov/",
+      "retrieved": "2026-10-31"
+    },
+    "upcomingEvents": {
+      "totalMatchingEvents": 394,
+      "events": [
+        {
+          "id": "1AxZkfNGkdEjEyX",
+          "name": "Jacksonville Icemen vs Atlanta Gladiators - Halloween",
+          "date": "2026-10-31",
+          "venueName": "VyStar Veterans Memorial Arena",
+          "category": "Sports",
+          "url": "https://www.ticketmaster.com/jacksonville-icemen-vs-atlanta-gladiators-halloween-jacksonville-florida-10-31-2026/event/22006523E7727E7E"
+        },
+        {
+          "id": "1AeFZ_kGknoDfgw",
+          "name": "Jacksonville Jaguars vs. Indianapolis Colts",
+          "date": "2026-11-01",
+          "venueName": "EverBank Stadium",
+          "category": "Sports",
+          "url": "https://www.ticketmaster.com/jacksonville-jaguars-vs-indianapolis-colts-jacksonville-florida-11-01-2026/event/2200646A91ED4D72"
+        },
+        {
+          "id": "1AxZkf-GkdEyk5L",
+          "name": "Standing Room Only - Jacksonville Jaguars v Indianapolis Colts",
+          "date": "2026-11-01",
+          "venueName": "EverBank Stadium",
+          "category": "Sports",
+          "url": "https://www.ticketmaster.com/standing-room-only-jacksonville-jaguars-v-jacksonville-florida-11-01-2026/event/22006521E7E462DF"
+        },
+        {
+          "id": "1AxZkfNGkdEi6BX",
+          "name": "Jacksonville Icemen vs Savannah Ghost Pirates - School Day",
+          "date": "2026-11-03",
+          "venueName": "VyStar Veterans Memorial Arena",
+          "category": "Sports",
+          "url": "https://www.ticketmaster.com/jacksonville-icemen-vs-savannah-ghost-pirates-jacksonville-florida-11-03-2026/event/22006523E7B07EBE"
+        },
+        {
+          "id": "17FOv0G652264lw",
+          "name": "Watsky x Infinity 10th Anniversary Screening Tour",
+          "date": "2026-11-04",
+          "venueName": "Ritz Theatre",
+          "category": "Film",
+          "url": "https://www.ticketmaster.com/watsky-x-infinity-10th-anniversary-screening-jacksonville-florida-11-04-2026/event/220064B3CF1D5AF2"
+        }
+      ],
+      "sourceName": "Ticketmaster Discovery API v2",
+      "sourceUrl": "https://developer.ticketmaster.com/",
+      "retrieved": "2026-10-31"
     }
   },
   {
     "slug": "fl/miami",
     "cityId": "1245000",
-    "countyFips": "12450",
+    "countyFips": "12086",
     "name": "Miami",
     "stateCode": "fl",
     "stateName": "Florida",
-    "countyName": "Miami Metropolitan Area",
+    "countyName": "Miami-Dade County",
     "lat": 25.775163,
     "lng": -80.208615,
     "primaryZips": [
-      "70042"
+      "33166",
+      "33131",
+      "33134",
+      "33186",
+      "33178",
+      "33172",
+      "33180",
+      "33126",
+      "33155",
+      "33156",
+      "33176",
+      "33157"
     ],
     "demographics": {
       "population": 455924,
-      "popGrowth5YrPct": 3.0,
-      "medianHouseholdIncome": 89251,
-      "perCapitaIncome": 51766,
-      "medianAge": 36.4,
-      "daytimeWorkerPop": 282673,
-      "daytimePopSurgePct": 8.5,
-      "medianGrossRent": 1716,
-      "medianHomeValue": 374854,
+      "medianHouseholdIncome": 59390,
+      "perCapitaIncome": 42528,
+      "medianAge": 39.7,
+      "medianGrossRent": 1657,
+      "medianHomeValue": 475200,
       "provenance": {
-        "sourceName": "US Census Bureau ACS 5-Year (DP03/DP04/DP05) & PopEst",
-        "sourceUrl": "https://api.census.gov/data/2023/acs/acs5",
-        "datasetVintage": "2023-5YR",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "sourceName": "US Census Bureau ACS 5-Year Estimates 2023 (Table-Based Summary File)",
+        "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/",
+        "datasetVintage": "ACS-2023-5YR",
+        "verifiedAt": "2026-10-31T00:00:00Z",
         "granularity": "place"
-      }
-    },
-    "laborAndEconomy": {
-      "unemploymentRatePct": 3.8,
-      "avgWeeklyWageAllIndustries": 1340,
-      "newHousingPermits12Mo": 3419,
-      "permitsPer1kResidents": 7.5,
-      "femaRiskScore": 28.0,
-      "provenance": {
-        "sourceName": "BLS Local Area Unemployment Statistics (LAUS) & Census BPS",
-        "sourceUrl": "https://www.bls.gov/lau/",
-        "datasetVintage": "2024-M08",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
-      }
+      },
+      "popChange2020to2023Pct": 3.1,
+      "popChangeBasis": "Census Population Estimates, April 2020 base to July 2023"
     },
     "industries": [
       {
         "naicsCode": "722515",
         "slug": "coffee-shops",
         "label": "Coffee & Snack Shops",
-        "establishments": 98,
-        "per10kResidents": 2.15,
-        "usAvgPer10k": 2.15,
-        "saturationIndex": 100,
+        "establishments": 424,
+        "per10kResidents": 2.29,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 108,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Miami."
+          "evidenceQuote": "424 employer establishments (NAICS 722515) across 55 ZIP codes whose USPS city is Miami, FL; density uses ACS 2023 ZCTA population (1,849,309). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722511",
         "slug": "restaurants",
         "label": "Full-Service Restaurants",
-        "establishments": 310,
-        "per10kResidents": 6.8,
-        "usAvgPer10k": 6.8,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 1706,
+        "per10kResidents": 9.23,
+        "usAvgPer10k": 7.44,
+        "saturationIndex": 124,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Miami."
+          "evidenceQuote": "1706 employer establishments (NAICS 722511) across 55 ZIP codes whose USPS city is Miami, FL; density uses ACS 2023 ZCTA population (1,849,309). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722513",
         "slug": "fast-food",
-        "label": "Fast Food Restaurants",
-        "establishments": 328,
-        "per10kResidents": 7.19,
-        "usAvgPer10k": 7.2,
-        "saturationIndex": 100,
+        "label": "Limited-Service / Fast Food Restaurants",
+        "establishments": 1337,
+        "per10kResidents": 7.23,
+        "usAvgPer10k": 7.75,
+        "saturationIndex": 93,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Miami."
+          "evidenceQuote": "1337 employer establishments (NAICS 722513) across 55 ZIP codes whose USPS city is Miami, FL; density uses ACS 2023 ZCTA population (1,849,309). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722410",
         "slug": "bars-taverns",
-        "label": "Bars & Drinking Places",
-        "establishments": 84,
-        "per10kResidents": 1.84,
-        "usAvgPer10k": 1.85,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Drinking Places (Alcoholic Beverages)",
+        "establishments": 76,
+        "per10kResidents": 0.41,
+        "usAvgPer10k": 0.9,
+        "saturationIndex": 46,
+        "status": "underserved",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Miami."
-        }
-      },
-      {
-        "naicsCode": "812111",
-        "slug": "barber-shops",
-        "label": "Barber Shops",
-        "establishments": 62,
-        "per10kResidents": 1.36,
-        "usAvgPer10k": 1.35,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Miami."
+          "evidenceQuote": "76 employer establishments (NAICS 722410) across 55 ZIP codes whose USPS city is Miami, FL; density uses ACS 2023 ZCTA population (1,849,309). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812112",
         "slug": "beauty-salons",
         "label": "Beauty Salons & Hair Studios",
-        "establishments": 155,
-        "per10kResidents": 3.4,
-        "usAvgPer10k": 3.4,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 680,
+        "per10kResidents": 3.68,
+        "usAvgPer10k": 2.31,
+        "saturationIndex": 159,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Miami."
+          "evidenceQuote": "680 employer establishments (NAICS 812112) across 55 ZIP codes whose USPS city is Miami, FL; density uses ACS 2023 ZCTA population (1,849,309). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812113",
         "slug": "nail-salons",
         "label": "Nail Salons",
-        "establishments": 96,
-        "per10kResidents": 2.11,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 99,
+        "per10kResidents": 0.54,
+        "usAvgPer10k": 0.86,
+        "saturationIndex": 62,
+        "status": "underserved",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Miami."
+          "evidenceQuote": "99 employer establishments (NAICS 812113) across 55 ZIP codes whose USPS city is Miami, FL; density uses ACS 2023 ZCTA population (1,849,309). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "713940",
         "slug": "gyms-fitness",
-        "label": "Fitness & Recreational Gyms",
-        "establishments": 57,
-        "per10kResidents": 1.25,
-        "usAvgPer10k": 1.25,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Fitness & Recreational Sports Centers",
+        "establishments": 286,
+        "per10kResidents": 1.55,
+        "usAvgPer10k": 1.0,
+        "saturationIndex": 155,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Miami."
+          "evidenceQuote": "286 employer establishments (NAICS 713940) across 55 ZIP codes whose USPS city is Miami, FL; density uses ACS 2023 ZCTA population (1,849,309). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812910",
         "slug": "pet-care",
-        "label": "Pet Care & Grooming",
-        "establishments": 43,
-        "per10kResidents": 0.94,
-        "usAvgPer10k": 0.95,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Pet Care & Grooming Services",
+        "establishments": 109,
+        "per10kResidents": 0.59,
+        "usAvgPer10k": 0.46,
+        "saturationIndex": 127,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Miami."
+          "evidenceQuote": "109 employer establishments (NAICS 812910) across 55 ZIP codes whose USPS city is Miami, FL; density uses ACS 2023 ZCTA population (1,849,309). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541940",
         "slug": "veterinary",
-        "label": "Veterinary Services",
-        "establishments": 48,
-        "per10kResidents": 1.05,
-        "usAvgPer10k": 1.05,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Veterinary Services & Animal Hospitals",
+        "establishments": 185,
+        "per10kResidents": 1.0,
+        "usAvgPer10k": 0.69,
+        "saturationIndex": 145,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Miami."
+          "evidenceQuote": "185 employer establishments (NAICS 541940) across 55 ZIP codes whose USPS city is Miami, FL; density uses ACS 2023 ZCTA population (1,849,309). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "811111",
         "slug": "auto-repair",
         "label": "General Automotive Repair",
-        "establishments": 219,
-        "per10kResidents": 4.8,
-        "usAvgPer10k": 4.8,
-        "saturationIndex": 100,
+        "establishments": 400,
+        "per10kResidents": 2.16,
+        "usAvgPer10k": 2.2,
+        "saturationIndex": 98,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Miami."
+          "evidenceQuote": "400 employer establishments (NAICS 811111) across 55 ZIP codes whose USPS city is Miami, FL; density uses ACS 2023 ZCTA population (1,849,309). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "811192",
         "slug": "car-washes",
-        "label": "Car Washes & Detailing",
-        "establishments": 30,
-        "per10kResidents": 0.66,
-        "usAvgPer10k": 0.65,
-        "saturationIndex": 101,
+        "label": "Car Washes & Auto Detailing",
+        "establishments": 58,
+        "per10kResidents": 0.31,
+        "usAvgPer10k": 0.35,
+        "saturationIndex": 90,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Miami."
-        }
-      },
-      {
-        "naicsCode": "812310",
-        "slug": "laundromats",
-        "label": "Coin Laundromats",
-        "establishments": 25,
-        "per10kResidents": 0.55,
-        "usAvgPer10k": 0.55,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Miami."
-        }
-      },
-      {
-        "naicsCode": "812320",
-        "slug": "dry-cleaners",
-        "label": "Dry Cleaning & Laundry",
-        "establishments": 39,
-        "per10kResidents": 0.86,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Miami."
+          "evidenceQuote": "58 employer establishments (NAICS 811192) across 55 ZIP codes whose USPS city is Miami, FL; density uses ACS 2023 ZCTA population (1,849,309). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621210",
         "slug": "dentists",
         "label": "Offices of Dentists",
-        "establishments": 178,
-        "per10kResidents": 3.9,
-        "usAvgPer10k": 3.9,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 1138,
+        "per10kResidents": 6.15,
+        "usAvgPer10k": 3.89,
+        "saturationIndex": 158,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Miami."
+          "evidenceQuote": "1138 employer establishments (NAICS 621210) across 55 ZIP codes whose USPS city is Miami, FL; density uses ACS 2023 ZCTA population (1,849,309). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621310",
         "slug": "chiropractors",
         "label": "Offices of Chiropractors",
-        "establishments": 64,
-        "per10kResidents": 1.4,
-        "usAvgPer10k": 1.4,
-        "saturationIndex": 100,
+        "establishments": 144,
+        "per10kResidents": 0.78,
+        "usAvgPer10k": 0.97,
+        "saturationIndex": 80,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Miami."
+          "evidenceQuote": "144 employer establishments (NAICS 621310) across 55 ZIP codes whose USPS city is Miami, FL; density uses ACS 2023 ZCTA population (1,849,309). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621340",
         "slug": "physical-therapy",
-        "label": "Physical Therapy Clinics",
-        "establishments": 71,
-        "per10kResidents": 1.56,
-        "usAvgPer10k": 1.55,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Physical, Occupational & Speech Therapists",
+        "establishments": 600,
+        "per10kResidents": 3.24,
+        "usAvgPer10k": 1.3,
+        "saturationIndex": 249,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Miami."
+          "evidenceQuote": "600 employer establishments (NAICS 621340) across 55 ZIP codes whose USPS city is Miami, FL; density uses ACS 2023 ZCTA population (1,849,309). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "624410",
         "slug": "daycare",
         "label": "Child Day Care Services",
-        "establishments": 103,
-        "per10kResidents": 2.26,
-        "usAvgPer10k": 2.25,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 496,
+        "per10kResidents": 2.68,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 126,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Miami."
+          "evidenceQuote": "496 employer establishments (NAICS 624410) across 55 ZIP codes whose USPS city is Miami, FL; density uses ACS 2023 ZCTA population (1,849,309). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "445120",
         "slug": "convenience-stores",
-        "label": "Convenience Stores",
-        "establishments": 89,
-        "per10kResidents": 1.95,
-        "usAvgPer10k": 1.95,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Convenience Retail Stores",
+        "establishments": 298,
+        "per10kResidents": 1.61,
+        "usAvgPer10k": 0.82,
+        "saturationIndex": 197,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Miami."
+          "evidenceQuote": "298 employer establishments (NAICS 445120) across 55 ZIP codes whose USPS city is Miami, FL; density uses ACS 2023 ZCTA population (1,849,309). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "448140",
         "slug": "clothing-boutiques",
-        "label": "Family Clothing Stores",
-        "establishments": 75,
-        "per10kResidents": 1.65,
-        "usAvgPer10k": 1.65,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Family Clothing Stores & Boutiques",
+        "establishments": 249,
+        "per10kResidents": 1.35,
+        "usAvgPer10k": 0.65,
+        "saturationIndex": 206,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Miami."
-        }
-      },
-      {
-        "naicsCode": "445291",
-        "slug": "bakeries",
-        "label": "Retail Bakeries",
-        "establishments": 39,
-        "per10kResidents": 0.86,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Miami."
-        }
-      },
-      {
-        "naicsCode": "453110",
-        "slug": "florists",
-        "label": "Florists & Floral Gift",
-        "establishments": 23,
-        "per10kResidents": 0.5,
-        "usAvgPer10k": 0.5,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Miami."
+          "evidenceQuote": "249 employer establishments (NAICS 448140) across 55 ZIP codes whose USPS city is Miami, FL; density uses ACS 2023 ZCTA population (1,849,309). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541110",
         "slug": "law-firms",
         "label": "Offices of Lawyers",
-        "establishments": 223,
-        "per10kResidents": 4.89,
-        "usAvgPer10k": 4.9,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 3654,
+        "per10kResidents": 19.76,
+        "usAvgPer10k": 4.8,
+        "saturationIndex": 411,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Miami."
+          "evidenceQuote": "3654 employer establishments (NAICS 541110) across 55 ZIP codes whose USPS city is Miami, FL; density uses ACS 2023 ZCTA population (1,849,309). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541211",
         "slug": "accounting-cpa",
-        "label": "Offices of CPAs",
-        "establishments": 96,
-        "per10kResidents": 2.11,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Offices of Certified Public Accountants",
+        "establishments": 677,
+        "per10kResidents": 3.66,
+        "usAvgPer10k": 1.44,
+        "saturationIndex": 254,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Miami."
+          "evidenceQuote": "677 employer establishments (NAICS 541211) across 55 ZIP codes whose USPS city is Miami, FL; density uses ACS 2023 ZCTA population (1,849,309). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "531210",
         "slug": "real-estate-agencies",
-        "label": "Real Estate Brokerages",
-        "establishments": 173,
-        "per10kResidents": 3.79,
-        "usAvgPer10k": 3.8,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Offices of Real Estate Agents & Brokers",
+        "establishments": 1913,
+        "per10kResidents": 10.34,
+        "usAvgPer10k": 4.74,
+        "saturationIndex": 218,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Miami."
+          "evidenceQuote": "1913 employer establishments (NAICS 531210) across 55 ZIP codes whose USPS city is Miami, FL; density uses ACS 2023 ZCTA population (1,849,309). National benchmark = all US ZIP rows / US population."
         }
       }
     ],
     "permitsAndTax": {
-      "generalBusinessLicenseRequired": false,
-      "businessLicenseFeeSummary": "No general city business license required. State of Florida statutory filings apply.",
-      "businessLicensePortalUrl": "https://www.miamifl.gov/permits",
-      "zoningLookupUrl": "https://www.miamifl.gov/zoning",
-      "buildingPermitPortalUrl": "https://www.miamifl.gov/building",
-      "certificateOfOccupancyFee": "$185 standard municipal inspection fee",
-      "avgPermitWaitDays": 30,
-      "shortTermRentalStatus": "restricted",
-      "foodTruckPermitStatus": "allowed",
-      "combinedSalesTaxRate": 0.075,
       "stateTaxRate": 0.06,
-      "localTaxRate": 0.015,
+      "countyTaxRate": 0.01,
+      "cityTaxRate": 0.0,
+      "specialDistrictTaxRate": 0.0,
+      "localTaxRate": 0.01,
+      "combinedSalesTaxRate": 0.07,
       "provenance": {
-        "sourceName": "Miami Municipal Code & State Department of Revenue",
-        "sourceUrl": "https://www.miamifl.gov",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place",
-        "evidenceQuote": "Statutory municipal code standards."
+        "sourceName": "Florida Dept. of Revenue discretionary sales surtax (6.0% state + 1.0% Miami-Dade County)",
+        "sourceUrl": "https://floridarevenue.com/taxes/taxesfees/Pages/discretionary.aspx",
+        "datasetVintage": "2026",
+        "verifiedAt": "2026-10-31T00:00:00Z",
+        "granularity": "place"
       }
     },
-    "topTrafficCorridors": [
-      {
-        "roadName": "Main Arterial Corridor 1",
-        "segmentDescription": "Central Commercial Corridor through Miami",
-        "aadt": 54711,
-        "heavyTruckPct": 5.5,
-        "lat": 25.775163,
-        "lng": -80.208615,
-        "year": 2024,
-        "provenance": {
-          "sourceName": "Florida DOT AADT Database",
-          "sourceUrl": "https://www.transportation.gov/",
-          "datasetVintage": "2024-AADT",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "place"
-        }
-      }
-    ],
-    "marketSignals": {
-      "reportedRetailRentSqFtYr": 43.5,
-      "reportedIndustrialRentSqFtYr": 19.6,
-      "topSearchedNaics30d": [
-        "722515",
-        "713940",
-        "812111"
-      ],
-      "verifiedLocalProsCount": 8
-    },
-    "scores": {
-      "overallViability": 57,
-      "purchasingPower": 54,
-      "growthMomentum": 60,
-      "costEfficiency": 66,
-      "regulatoryFriction": 48
-    },
+    "marketSignals": {},
     "executiveTravel": {
-      "timeZone": "America/New_York (ET: UTC-05:00)",
+      "timeZone": "America/New_York",
       "timeZoneAbbr": "ET",
       "utcOffset": "-05:00",
       "primaryAirport": {
         "name": "Miami International Airport",
         "iata": "MIA",
-        "distanceMiles": 7.5,
-        "transitToDowntown": "Metrorail Orange Line Direct ($2.25)"
-      },
-      "powerPlugs": {
-        "types": [
-          "Type A (2-pin)",
-          "Type B (3-pin grounded)"
-        ],
-        "voltage": "120V",
-        "frequency": "60Hz",
-        "adapterAdvice": "Visitors from UK, EU, Australia, and Asia require a standard Type A/B plug adapter and dual-voltage converter."
-      },
-      "currency": {
-        "code": "USD",
-        "symbol": "$",
-        "name": "United States Dollar",
-        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
-        "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
+        "lat": 25.796011,
+        "lng": -80.289751,
+        "distanceMiles": 5.2,
+        "transitToDowntown": null,
+        "source": "OurAirports (public domain) for name, IATA code and coordinates; distance is straight-line from the U.S. Census Gazetteer city center point",
+        "sourceUrl": "https://ourairports.com/data/",
+        "cityCenterMethod": "Census Gazetteer internal point",
+        "retrieved": "2026-10-31"
       },
       "climate": {
-        "summerHighF": 94,
-        "winterLowF": 47,
-        "annualRainfallInches": 42,
-        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
-        "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
+        "summerHighF": 87,
+        "winterLowF": 63,
+        "annualRainfallInches": 59.3,
+        "summerHighBasis": "Average July daily high",
+        "winterLowBasis": "Average January daily low",
+        "source": "Open-Meteo Historical Weather API (ERA5 reanalysis), 2015-2024 average, retrieved 2026-10-31",
+        "sourceUrl": "https://open-meteo.com/en/docs/historical-weather-api"
       },
       "emergency": {
         "emergencyDispatch": "911",
-        "nonEmergencyPolice": "311 or local municipal dispatch",
-        "nearestTraumaHospital": "Miami Regional Memorial Hospital",
-        "hospitalAddress": "Medical Center District, Miami, FL"
-      },
-      "visitorLogistics": {
-        "tapWaterPotability": "100% Safe municipal drinking water conforming to EPA Safe Drinking Water Act standards.",
-        "salesTaxRefundPolicy": "International travelers may claim state sales tax refunds on qualifying departures at designated airport customs counters.",
-        "rideshareAvailability": "Ubiquitous (Uber and Lyft operational 24/7 across the metropolitan area)."
-      },
-      "provenance": {
-        "sourceName": "FAA Airport Database & International Trade Administration",
-        "sourceUrl": "https://www.trade.gov/",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
+        "nearestTraumaHospital": "Baptist Hospital of Miami",
+        "hospitalAddress": "8900 N Kendall Dr, Miami, FL 33176",
+        "cmsFacilityId": "100008",
+        "emergencyServices": true,
+        "source": "CMS Care Compare hospital general information (federal dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma level, ranking or nearest-facility claim.",
+        "erHospitals": [
+          {
+            "name": "Baptist Hospital of Miami",
+            "address": "8900 N Kendall Dr, Miami, FL 33176",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "100008",
+            "lat": 25.687874,
+            "lng": -80.336577
+          },
+          {
+            "name": "HCA Florida Kendall Hospital",
+            "address": "11750 Bird Rd, Miami, FL 33175",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "100209"
+          },
+          {
+            "name": "Jackson Health System",
+            "address": "1611 NW 12th Ave, Miami, FL 33136",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "100022",
+            "lat": 25.790604,
+            "lng": -80.214984
+          },
+          {
+            "name": "Keralty Hospital",
+            "address": "2500 SW 75th Ave, Miami, FL 33155",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "100284",
+            "lat": 25.74804,
+            "lng": -80.317299
+          },
+          {
+            "name": "Miami VA Medical Center",
+            "address": "1201 N W 16th Street, Miami, FL 33125",
+            "type": "Acute Care - Veterans Administration",
+            "cmsFacilityId": "10064F",
+            "lat": 25.790514,
+            "lng": -80.215139
+          },
+          {
+            "name": "Nicklaus Children's Hospital",
+            "address": "3100 SW 62nd Ave, Miami, FL 33155",
+            "type": "Children's",
+            "cmsFacilityId": "103301",
+            "lat": 25.742537,
+            "lng": -80.295213
+          },
+          {
+            "name": "North Shore Medical Center",
+            "address": "1100 NW 95th St, Miami, FL 33150",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "100029",
+            "lat": 25.861586,
+            "lng": -80.214767
+          },
+          {
+            "name": "South Miami Hospital",
+            "address": "6200 SW 73rd St, Miami, FL 33143",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "100154",
+            "lat": 25.702965,
+            "lng": -80.293428
+          },
+          {
+            "name": "West Kendall Baptist Hospital",
+            "address": "9555 SW 162 Ave, Miami, FL 33196",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "100314",
+            "lat": 25.677607,
+            "lng": -80.457326
+          }
+        ],
+        "erHospitalsSource": "CMS Care Compare hospital general information (federal dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma level, ranking or nearest-facility claim."
       }
+    },
+    "housingAndTaxes": {
+      "medianHomeValue": 475200,
+      "medianGrossRent": 1657,
+      "medianRealEstateTaxPaid": 4203,
+      "effectivePropertyTaxRatePct": 0.88,
+      "countyName": "Miami-Dade County",
+      "source": "ACS 2023 5-yr: B25077 median home value, B25064 median gross rent, B25103 median real estate taxes paid. Effective rate = B25103 / B25077.",
+      "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/"
+    },
+    "climateNormals": {
+      "peakSummerHighF": 87,
+      "winterLowF": 63,
+      "annualRainfallInches": 59.3,
+      "sourceName": "Open-Meteo Historical Weather API (ERA5 reanalysis), 2015-2024 average, retrieved 2026-10-31",
+      "sourceUrl": "https://open-meteo.com/en/docs/historical-weather-api"
+    },
+    "terrainElevation": {
+      "elevationFeet": 6.5,
+      "elevationMeters": 2.0,
+      "topographyClass": "Atlantic Coastal Ridge & Biscayne Bay Lowlands",
+      "sourceName": "USGS 3D Elevation Program (3DEP Elevation Point Query Service)",
+      "sourceUrl": "https://epqs.nationalmap.gov/v1/json"
+    },
+    "waterUtility": {
+      "pwsid": "FL4130871",
+      "providerName": "Mdwasa - Main System",
+      "populationServed": 2377460,
+      "sourceType": "groundwater",
+      "source": "U.S. EPA Safe Drinking Water Information System (SDWIS)",
+      "sourceUrl": "https://data.epa.gov/efservice/WATER_SYSTEM/PWSID/FL4130871/JSON",
+      "retrieved": "2026-10-31"
+    },
+    "higherEducation": {
+      "institutionCount": 41,
+      "totalEnrollment": 105381,
+      "institutions": [
+        {
+          "id": 135717,
+          "name": "Miami Dade College",
+          "studentSize": 46182,
+          "ownership": "Public",
+          "schoolUrl": "https://www.mdc.edu/",
+          "lat": 25.777717,
+          "lng": -80.190856
+        },
+        {
+          "id": 133951,
+          "name": "Florida International University",
+          "studentSize": 39508,
+          "ownership": "Public",
+          "schoolUrl": "https://www.fiu.edu/",
+          "lat": 25.75732,
+          "lng": -80.373928
+        },
+        {
+          "id": 443252,
+          "name": "South Florida Institute of Technology",
+          "studentSize": 9747,
+          "ownership": "Private for-profit",
+          "schoolUrl": "https://www.sf-institute.com/",
+          "lat": 25.780018,
+          "lng": -80.239586
+        },
+        {
+          "id": 132471,
+          "name": "Barry University",
+          "studentSize": 2212,
+          "ownership": "Private nonprofit",
+          "schoolUrl": "https://www.barry.edu/",
+          "lat": 25.878908,
+          "lng": -80.198925
+        },
+        {
+          "id": 136826,
+          "name": "Robert Morgan Educational Center and Technical College",
+          "studentSize": 1045,
+          "ownership": "Public",
+          "schoolUrl": "https://www.robertmorgantech.edu/",
+          "lat": 25.599247,
+          "lng": -80.390054
+        },
+        {
+          "id": 134307,
+          "name": "George T Baker Aviation Technical College",
+          "studentSize": 1040,
+          "ownership": "Public",
+          "schoolUrl": "https://www.bakeraviationtechcollege.com/",
+          "lat": 25.804092,
+          "lng": -80.263591
+        }
+      ],
+      "sourceName": "U.S. Department of Education College Scorecard",
+      "sourceUrl": "https://collegescorecard.ed.gov/",
+      "retrieved": "2026-10-31"
+    },
+    "evInfrastructure": {
+      "totalStations": 384,
+      "totalChargingPorts": 1347,
+      "dcFastPorts": 271,
+      "level2Ports": 1076,
+      "sampleStations": [
+        {
+          "name": "AMLI Midtown Miami",
+          "address": "3000 NE 2nd Ave, Miami, FL 33137",
+          "network": "LOOP",
+          "dcFastPorts": 0,
+          "level2Ports": 38,
+          "lat": 25.806607,
+          "lng": -80.191528
+        },
+        {
+          "name": "Miami, FL - SW 124th Avenue - Tesla Supercharger",
+          "address": "8659 Southwest 124th Avenue, Miami, FL 33183",
+          "network": "Tesla",
+          "dcFastPorts": 30,
+          "level2Ports": 0,
+          "lat": 25.689294,
+          "lng": -80.393767
+        },
+        {
+          "name": "Grove Central Residences - Tesla Destination",
+          "address": "2800 SW 27th Terrace, Miami, FL 33133",
+          "network": "Tesla Destination",
+          "dcFastPorts": 0,
+          "level2Ports": 25,
+          "lat": 25.740568,
+          "lng": -80.239347
+        },
+        {
+          "name": "Miami Link Tower 2 Trustee",
+          "address": "3050 Southwest 37th Avenue, Miami, FL 33146",
+          "network": "Blink Network",
+          "dcFastPorts": 0,
+          "level2Ports": 24,
+          "lat": 25.733818,
+          "lng": -80.254551
+        },
+        {
+          "name": "Avalon S Miami",
+          "address": "7350 SW 58th Ct, Miami, FL 33143",
+          "network": "LOOP",
+          "dcFastPorts": 0,
+          "level2Ports": 24,
+          "lat": 25.703079,
+          "lng": -80.288863
+        }
+      ],
+      "sourceName": "U.S. Department of Energy / NLR Alternative Fuels Data Center (AFDC)",
+      "sourceUrl": "https://afdc.energy.gov/stations",
+      "retrieved": "2026-10-31"
+    },
+    "nationalParks": {
+      "parks": [
+        {
+          "parkCode": "bisc",
+          "fullName": "Biscayne National Park",
+          "designation": "National Park",
+          "distanceMiles": 19.7,
+          "description": "Within sight of Miami, yet worlds away, Biscayne protects a rare combination of aquamarine waters, emerald islands, and fish-bejeweled coral reefs. Evidence of 10,000 years of human history is here too; from prehistoric tribes to...",
+          "url": "https://www.nps.gov/bisc/index.htm",
+          "lat": 25.490587,
+          "lng": -80.210239
+        },
+        {
+          "parkCode": "ever",
+          "fullName": "Everglades National Park",
+          "designation": "National Park",
+          "distanceMiles": 50.3,
+          "description": "Established in 1947 as the first national park created for its biodiversity, Everglades National Park protects 1.5 million acres of wetland, forest, and marine habitats and the native plants and animals that call it home. With several...",
+          "url": "https://www.nps.gov/ever/index.htm",
+          "lat": 25.372942,
+          "lng": -80.882003
+        }
+      ],
+      "sourceName": "U.S. National Park Service (NPS) API",
+      "sourceUrl": "https://www.nps.gov/",
+      "retrieved": "2026-10-31"
+    },
+    "upcomingEvents": {
+      "totalMatchingEvents": 985,
+      "events": [
+        {
+          "id": "Z7r9jZ1AAZKvd",
+          "name": "Hocus Pocus - 3 Day Pass",
+          "date": "2026-10-30",
+          "venueName": "Factory Town",
+          "category": "Live Event",
+          "url": "https://www.ticketmaster.com/event/Z7r9jZ1AAZKvd"
+        },
+        {
+          "id": "vvG1VZ_2kz1zF_",
+          "name": "Hablando Huevadas - US Tour 2026",
+          "date": "2026-10-31",
+          "venueName": "James L Knight Center",
+          "category": "Arts & Theatre",
+          "url": "https://www.ticketmaster.com/hablando-huevadas-us-tour-2026-miami-florida-10-31-2026/event/0D0064F1B82B8219"
+        },
+        {
+          "id": "rZ7HnEZ1AfGE_f",
+          "name": "The BIG Show Improv Comedy Miami",
+          "date": "2026-10-31",
+          "venueName": "Just the Funny",
+          "category": "Arts & Theatre",
+          "url": "https://www.ticketweb.com/event/the-big-show-improv-comedy-just-the-funny-tickets/14327654"
+        },
+        {
+          "id": "rZ7HnEZ1Afuouf",
+          "name": "The Improvised Horror Movie",
+          "date": "2026-10-31",
+          "venueName": "Just the Funny",
+          "category": "Arts & Theatre",
+          "url": "https://www.ticketweb.com/event/the-improvised-horror-movie-just-the-funny-tickets/14351354"
+        },
+        {
+          "id": "vvG1VZ_kSJ_spd",
+          "name": "Luxury & Suites: Miami Dolphins v New England Patriots",
+          "date": "2026-11-01",
+          "venueName": "Hard Rock Stadium",
+          "category": "Sports",
+          "url": "https://www.ticketmaster.com/luxury-suites-miami-dolphins-v-new-miami-florida-11-01-2026/event/0D00646CE6671583"
+        }
+      ],
+      "sourceName": "Ticketmaster Discovery API v2",
+      "sourceUrl": "https://developer.ticketmaster.com/",
+      "retrieved": "2026-10-31"
     }
   },
   {
@@ -1730,14 +2006,14 @@
       "emergency": {
         "emergencyDispatch": "911",
         "nearestTraumaHospital": "AdventHealth Carrollwood",
-        "hospitalAddress": "7171 N Dale Mabry Hwy, Tampa, FL 33614",
+        "hospitalAddress": "7171 N Dale Mabry Highway, Tampa, FL 33614",
         "cmsFacilityId": "100069",
         "emergencyServices": true,
         "source": "CMS Care Compare hospital general information (federal dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma level, ranking or nearest-facility claim.",
         "erHospitals": [
           {
             "name": "AdventHealth Carrollwood",
-            "address": "7171 N Dale Mabry Hwy, Tampa, FL 33614",
+            "address": "7171 N Dale Mabry Highway, Tampa, FL 33614",
             "type": "Acute Care Hospitals",
             "cmsFacilityId": "100069",
             "lat": 28.014047,
@@ -2005,633 +2281,734 @@
   {
     "slug": "fl/orlando",
     "cityId": "1253000",
-    "countyFips": "12530",
+    "countyFips": "12095",
     "name": "Orlando",
     "stateCode": "fl",
     "stateName": "Florida",
-    "countyName": "Orlando Metropolitan Area",
+    "countyName": "Orange County",
     "lat": 28.40865,
     "lng": -81.254805,
     "primaryZips": [
-      "70058"
+      "32819",
+      "32801",
+      "32809",
+      "32803",
+      "32837",
+      "32804",
+      "32822",
+      "32824",
+      "32806",
+      "32828",
+      "32835",
+      "32810"
     ],
     "demographics": {
       "population": 320742,
-      "popGrowth5YrPct": 4.2,
-      "medianHouseholdIncome": 89784,
-      "perCapitaIncome": 52075,
-      "medianAge": 36.4,
-      "daytimeWorkerPop": 198860,
-      "daytimePopSurgePct": 8.5,
-      "medianGrossRent": 1727,
-      "medianHomeValue": 377093,
+      "medianHouseholdIncome": 69268,
+      "perCapitaIncome": 41985,
+      "medianAge": 35.1,
+      "medianGrossRent": 1650,
+      "medianHomeValue": 359000,
       "provenance": {
-        "sourceName": "US Census Bureau ACS 5-Year (DP03/DP04/DP05) & PopEst",
-        "sourceUrl": "https://api.census.gov/data/2023/acs/acs5",
-        "datasetVintage": "2023-5YR",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
+        "sourceName": "US Census Bureau ACS 5-Year Estimates 2023 (Table-Based Summary File)",
+        "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/",
+        "datasetVintage": "ACS-2023-5YR",
+        "verifiedAt": "2026-10-31T00:00:00Z",
         "granularity": "place"
-      }
-    },
-    "laborAndEconomy": {
-      "unemploymentRatePct": 3.8,
-      "avgWeeklyWageAllIndustries": 1340,
-      "newHousingPermits12Mo": 2406,
-      "permitsPer1kResidents": 7.5,
-      "femaRiskScore": 28.0,
-      "provenance": {
-        "sourceName": "BLS Local Area Unemployment Statistics (LAUS) & Census BPS",
-        "sourceUrl": "https://www.bls.gov/lau/",
-        "datasetVintage": "2024-M08",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
-      }
+      },
+      "popChange2020to2023Pct": 4.2,
+      "popChangeBasis": "Census Population Estimates, April 2020 base to July 2023"
     },
     "industries": [
       {
         "naicsCode": "722515",
         "slug": "coffee-shops",
         "label": "Coffee & Snack Shops",
-        "establishments": 69,
-        "per10kResidents": 2.15,
-        "usAvgPer10k": 2.15,
-        "saturationIndex": 100,
+        "establishments": 258,
+        "per10kResidents": 2.4,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 113,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Orlando."
+          "evidenceQuote": "258 employer establishments (NAICS 722515) across 33 ZIP codes whose USPS city is Orlando, FL; density uses ACS 2023 ZCTA population (1,072,954). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722511",
         "slug": "restaurants",
         "label": "Full-Service Restaurants",
-        "establishments": 218,
-        "per10kResidents": 6.8,
-        "usAvgPer10k": 6.8,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 1044,
+        "per10kResidents": 9.73,
+        "usAvgPer10k": 7.44,
+        "saturationIndex": 131,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Orlando."
+          "evidenceQuote": "1044 employer establishments (NAICS 722511) across 33 ZIP codes whose USPS city is Orlando, FL; density uses ACS 2023 ZCTA population (1,072,954). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722513",
         "slug": "fast-food",
-        "label": "Fast Food Restaurants",
-        "establishments": 231,
-        "per10kResidents": 7.2,
-        "usAvgPer10k": 7.2,
-        "saturationIndex": 100,
+        "label": "Limited-Service / Fast Food Restaurants",
+        "establishments": 998,
+        "per10kResidents": 9.3,
+        "usAvgPer10k": 7.75,
+        "saturationIndex": 120,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Orlando."
+          "evidenceQuote": "998 employer establishments (NAICS 722513) across 33 ZIP codes whose USPS city is Orlando, FL; density uses ACS 2023 ZCTA population (1,072,954). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "722410",
         "slug": "bars-taverns",
-        "label": "Bars & Drinking Places",
-        "establishments": 59,
-        "per10kResidents": 1.84,
-        "usAvgPer10k": 1.85,
-        "saturationIndex": 99,
+        "label": "Drinking Places (Alcoholic Beverages)",
+        "establishments": 106,
+        "per10kResidents": 0.99,
+        "usAvgPer10k": 0.9,
+        "saturationIndex": 110,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Orlando."
-        }
-      },
-      {
-        "naicsCode": "812111",
-        "slug": "barber-shops",
-        "label": "Barber Shops",
-        "establishments": 43,
-        "per10kResidents": 1.34,
-        "usAvgPer10k": 1.35,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Orlando."
+          "evidenceQuote": "106 employer establishments (NAICS 722410) across 33 ZIP codes whose USPS city is Orlando, FL; density uses ACS 2023 ZCTA population (1,072,954). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812112",
         "slug": "beauty-salons",
         "label": "Beauty Salons & Hair Studios",
-        "establishments": 109,
-        "per10kResidents": 3.4,
-        "usAvgPer10k": 3.4,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 299,
+        "per10kResidents": 2.79,
+        "usAvgPer10k": 2.31,
+        "saturationIndex": 121,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Orlando."
+          "evidenceQuote": "299 employer establishments (NAICS 812112) across 33 ZIP codes whose USPS city is Orlando, FL; density uses ACS 2023 ZCTA population (1,072,954). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812113",
         "slug": "nail-salons",
         "label": "Nail Salons",
-        "establishments": 67,
-        "per10kResidents": 2.09,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 41,
+        "per10kResidents": 0.38,
+        "usAvgPer10k": 0.86,
+        "saturationIndex": 44,
+        "status": "underserved",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Orlando."
+          "evidenceQuote": "41 employer establishments (NAICS 812113) across 33 ZIP codes whose USPS city is Orlando, FL; density uses ACS 2023 ZCTA population (1,072,954). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "713940",
         "slug": "gyms-fitness",
-        "label": "Fitness & Recreational Gyms",
-        "establishments": 40,
-        "per10kResidents": 1.25,
-        "usAvgPer10k": 1.25,
+        "label": "Fitness & Recreational Sports Centers",
+        "establishments": 107,
+        "per10kResidents": 1.0,
+        "usAvgPer10k": 1.0,
         "saturationIndex": 100,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Orlando."
+          "evidenceQuote": "107 employer establishments (NAICS 713940) across 33 ZIP codes whose USPS city is Orlando, FL; density uses ACS 2023 ZCTA population (1,072,954). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "812910",
         "slug": "pet-care",
-        "label": "Pet Care & Grooming",
-        "establishments": 30,
-        "per10kResidents": 0.94,
-        "usAvgPer10k": 0.95,
-        "saturationIndex": 99,
+        "label": "Pet Care & Grooming Services",
+        "establishments": 52,
+        "per10kResidents": 0.48,
+        "usAvgPer10k": 0.46,
+        "saturationIndex": 104,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Orlando."
+          "evidenceQuote": "52 employer establishments (NAICS 812910) across 33 ZIP codes whose USPS city is Orlando, FL; density uses ACS 2023 ZCTA population (1,072,954). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541940",
         "slug": "veterinary",
-        "label": "Veterinary Services",
-        "establishments": 34,
-        "per10kResidents": 1.06,
-        "usAvgPer10k": 1.05,
-        "saturationIndex": 101,
+        "label": "Veterinary Services & Animal Hospitals",
+        "establishments": 64,
+        "per10kResidents": 0.6,
+        "usAvgPer10k": 0.69,
+        "saturationIndex": 86,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Orlando."
+          "evidenceQuote": "64 employer establishments (NAICS 541940) across 33 ZIP codes whose USPS city is Orlando, FL; density uses ACS 2023 ZCTA population (1,072,954). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "811111",
         "slug": "auto-repair",
         "label": "General Automotive Repair",
-        "establishments": 154,
-        "per10kResidents": 4.8,
-        "usAvgPer10k": 4.8,
-        "saturationIndex": 100,
+        "establishments": 253,
+        "per10kResidents": 2.36,
+        "usAvgPer10k": 2.2,
+        "saturationIndex": 107,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Orlando."
+          "evidenceQuote": "253 employer establishments (NAICS 811111) across 33 ZIP codes whose USPS city is Orlando, FL; density uses ACS 2023 ZCTA population (1,072,954). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "811192",
         "slug": "car-washes",
-        "label": "Car Washes & Detailing",
-        "establishments": 21,
-        "per10kResidents": 0.65,
-        "usAvgPer10k": 0.65,
-        "saturationIndex": 101,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Car Washes & Auto Detailing",
+        "establishments": 96,
+        "per10kResidents": 0.89,
+        "usAvgPer10k": 0.35,
+        "saturationIndex": 256,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Orlando."
-        }
-      },
-      {
-        "naicsCode": "812310",
-        "slug": "laundromats",
-        "label": "Coin Laundromats",
-        "establishments": 18,
-        "per10kResidents": 0.56,
-        "usAvgPer10k": 0.55,
-        "saturationIndex": 102,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Orlando."
-        }
-      },
-      {
-        "naicsCode": "812320",
-        "slug": "dry-cleaners",
-        "label": "Dry Cleaning & Laundry",
-        "establishments": 27,
-        "per10kResidents": 0.84,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Orlando."
+          "evidenceQuote": "96 employer establishments (NAICS 811192) across 33 ZIP codes whose USPS city is Orlando, FL; density uses ACS 2023 ZCTA population (1,072,954). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621210",
         "slug": "dentists",
         "label": "Offices of Dentists",
-        "establishments": 125,
-        "per10kResidents": 3.9,
-        "usAvgPer10k": 3.9,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 323,
+        "per10kResidents": 3.01,
+        "usAvgPer10k": 3.89,
+        "saturationIndex": 77,
+        "status": "underserved",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Orlando."
+          "evidenceQuote": "323 employer establishments (NAICS 621210) across 33 ZIP codes whose USPS city is Orlando, FL; density uses ACS 2023 ZCTA population (1,072,954). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621310",
         "slug": "chiropractors",
         "label": "Offices of Chiropractors",
-        "establishments": 45,
-        "per10kResidents": 1.4,
-        "usAvgPer10k": 1.4,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 135,
+        "per10kResidents": 1.26,
+        "usAvgPer10k": 0.97,
+        "saturationIndex": 129,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Orlando."
+          "evidenceQuote": "135 employer establishments (NAICS 621310) across 33 ZIP codes whose USPS city is Orlando, FL; density uses ACS 2023 ZCTA population (1,072,954). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "621340",
         "slug": "physical-therapy",
-        "label": "Physical Therapy Clinics",
-        "establishments": 50,
-        "per10kResidents": 1.56,
-        "usAvgPer10k": 1.55,
-        "saturationIndex": 101,
+        "label": "Physical, Occupational & Speech Therapists",
+        "establishments": 117,
+        "per10kResidents": 1.09,
+        "usAvgPer10k": 1.3,
+        "saturationIndex": 84,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Orlando."
+          "evidenceQuote": "117 employer establishments (NAICS 621340) across 33 ZIP codes whose USPS city is Orlando, FL; density uses ACS 2023 ZCTA population (1,072,954). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "624410",
         "slug": "daycare",
         "label": "Child Day Care Services",
-        "establishments": 72,
-        "per10kResidents": 2.24,
-        "usAvgPer10k": 2.25,
-        "saturationIndex": 100,
+        "establishments": 269,
+        "per10kResidents": 2.51,
+        "usAvgPer10k": 2.12,
+        "saturationIndex": 118,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Orlando."
+          "evidenceQuote": "269 employer establishments (NAICS 624410) across 33 ZIP codes whose USPS city is Orlando, FL; density uses ACS 2023 ZCTA population (1,072,954). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "445120",
         "slug": "convenience-stores",
-        "label": "Convenience Stores",
-        "establishments": 63,
-        "per10kResidents": 1.96,
-        "usAvgPer10k": 1.95,
-        "saturationIndex": 101,
+        "label": "Convenience Retail Stores",
+        "establishments": 102,
+        "per10kResidents": 0.95,
+        "usAvgPer10k": 0.82,
+        "saturationIndex": 116,
         "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Orlando."
+          "evidenceQuote": "102 employer establishments (NAICS 445120) across 33 ZIP codes whose USPS city is Orlando, FL; density uses ACS 2023 ZCTA population (1,072,954). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "448140",
         "slug": "clothing-boutiques",
-        "label": "Family Clothing Stores",
-        "establishments": 53,
-        "per10kResidents": 1.65,
-        "usAvgPer10k": 1.65,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Family Clothing Stores & Boutiques",
+        "establishments": 211,
+        "per10kResidents": 1.97,
+        "usAvgPer10k": 0.65,
+        "saturationIndex": 301,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Orlando."
-        }
-      },
-      {
-        "naicsCode": "445291",
-        "slug": "bakeries",
-        "label": "Retail Bakeries",
-        "establishments": 27,
-        "per10kResidents": 0.84,
-        "usAvgPer10k": 0.85,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Orlando."
-        }
-      },
-      {
-        "naicsCode": "453110",
-        "slug": "florists",
-        "label": "Florists & Floral Gift",
-        "establishments": 16,
-        "per10kResidents": 0.5,
-        "usAvgPer10k": 0.5,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
-        "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Orlando."
+          "evidenceQuote": "211 employer establishments (NAICS 448140) across 33 ZIP codes whose USPS city is Orlando, FL; density uses ACS 2023 ZCTA population (1,072,954). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541110",
         "slug": "law-firms",
         "label": "Offices of Lawyers",
-        "establishments": 157,
-        "per10kResidents": 4.89,
-        "usAvgPer10k": 4.9,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "establishments": 925,
+        "per10kResidents": 8.62,
+        "usAvgPer10k": 4.8,
+        "saturationIndex": 179,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Orlando."
+          "evidenceQuote": "925 employer establishments (NAICS 541110) across 33 ZIP codes whose USPS city is Orlando, FL; density uses ACS 2023 ZCTA population (1,072,954). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "541211",
         "slug": "accounting-cpa",
-        "label": "Offices of CPAs",
-        "establishments": 67,
-        "per10kResidents": 2.09,
-        "usAvgPer10k": 2.1,
-        "saturationIndex": 99,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Offices of Certified Public Accountants",
+        "establishments": 191,
+        "per10kResidents": 1.78,
+        "usAvgPer10k": 1.44,
+        "saturationIndex": 124,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Orlando."
+          "evidenceQuote": "191 employer establishments (NAICS 541211) across 33 ZIP codes whose USPS city is Orlando, FL; density uses ACS 2023 ZCTA population (1,072,954). National benchmark = all US ZIP rows / US population."
         }
       },
       {
         "naicsCode": "531210",
         "slug": "real-estate-agencies",
-        "label": "Real Estate Brokerages",
-        "establishments": 122,
-        "per10kResidents": 3.8,
-        "usAvgPer10k": 3.8,
-        "saturationIndex": 100,
-        "status": "balanced",
-        "annualPayrollAvgUsd": 46500,
+        "label": "Offices of Real Estate Agents & Brokers",
+        "establishments": 1122,
+        "per10kResidents": 10.46,
+        "usAvgPer10k": 4.74,
+        "saturationIndex": 220,
+        "status": "saturated",
+        "smallSample": false,
         "provenance": {
-          "sourceName": "US Census Bureau ZBP (Zip Codes Business Patterns)",
-          "sourceUrl": "https://api.census.gov/data/zbp",
-          "datasetVintage": "2022-ZBP",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
+          "sourceName": "US Census Bureau ZIP Code Business Patterns 2022",
+          "sourceUrl": "https://www2.census.gov/programs-surveys/cbp/datasets/2022/zbp22detail.zip",
+          "datasetVintage": "ZBP-2022",
+          "verifiedAt": "2026-10-31T00:00:00Z",
           "granularity": "zcta_aggregated",
-          "evidenceQuote": "Aggregated establishment counts across primary ZCTAs for Orlando."
+          "evidenceQuote": "1122 employer establishments (NAICS 531210) across 33 ZIP codes whose USPS city is Orlando, FL; density uses ACS 2023 ZCTA population (1,072,954). National benchmark = all US ZIP rows / US population."
         }
       }
     ],
     "permitsAndTax": {
-      "generalBusinessLicenseRequired": false,
-      "businessLicenseFeeSummary": "No general city business license required. State of Florida statutory filings apply.",
-      "businessLicensePortalUrl": "https://www.orlandofl.gov/permits",
-      "zoningLookupUrl": "https://www.orlandofl.gov/zoning",
-      "buildingPermitPortalUrl": "https://www.orlandofl.gov/building",
-      "certificateOfOccupancyFee": "$185 standard municipal inspection fee",
-      "avgPermitWaitDays": 30,
-      "shortTermRentalStatus": "restricted",
-      "foodTruckPermitStatus": "allowed",
-      "combinedSalesTaxRate": 0.075,
       "stateTaxRate": 0.06,
-      "localTaxRate": 0.015,
+      "countyTaxRate": 0.005,
+      "cityTaxRate": 0.0,
+      "specialDistrictTaxRate": 0.0,
+      "localTaxRate": 0.005,
+      "combinedSalesTaxRate": 0.065,
       "provenance": {
-        "sourceName": "Orlando Municipal Code & State Department of Revenue",
-        "sourceUrl": "https://www.orlandofl.gov",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place",
-        "evidenceQuote": "Statutory municipal code standards."
+        "sourceName": "Florida Dept. of Revenue discretionary sales surtax (6.0% state + 0.5% Orange County)",
+        "sourceUrl": "https://floridarevenue.com/taxes/taxesfees/Pages/discretionary.aspx",
+        "datasetVintage": "2026",
+        "verifiedAt": "2026-10-31T00:00:00Z",
+        "granularity": "place"
       }
     },
-    "topTrafficCorridors": [
-      {
-        "roadName": "Main Arterial Corridor 1",
-        "segmentDescription": "Central Commercial Corridor through Orlando",
-        "aadt": 38489,
-        "heavyTruckPct": 5.5,
-        "lat": 28.40865,
-        "lng": -81.254805,
-        "year": 2024,
-        "provenance": {
-          "sourceName": "Florida DOT AADT Database",
-          "sourceUrl": "https://www.transportation.gov/",
-          "datasetVintage": "2024-AADT",
-          "verifiedAt": "2026-10-18T12:33:28.810283Z",
-          "granularity": "place"
-        }
-      }
-    ],
-    "marketSignals": {
-      "reportedRetailRentSqFtYr": 44.1,
-      "reportedIndustrialRentSqFtYr": 19.8,
-      "topSearchedNaics30d": [
-        "722515",
-        "713940",
-        "812111"
-      ],
-      "verifiedLocalProsCount": 8
-    },
-    "scores": {
-      "overallViability": 59,
-      "purchasingPower": 56,
-      "growthMomentum": 62,
-      "costEfficiency": 65,
-      "regulatoryFriction": 48
-    },
+    "marketSignals": {},
     "executiveTravel": {
-      "timeZone": "America/New_York (ET: UTC-05:00)",
+      "timeZone": "America/New_York",
       "timeZoneAbbr": "ET",
       "utcOffset": "-05:00",
       "primaryAirport": {
         "name": "Orlando International Airport",
         "iata": "MCO",
-        "distanceMiles": 12.0,
-        "transitToDowntown": "Lynx Route 11 / Rideshare"
-      },
-      "powerPlugs": {
-        "types": [
-          "Type A (2-pin)",
-          "Type B (3-pin grounded)"
-        ],
-        "voltage": "120V",
-        "frequency": "60Hz",
-        "adapterAdvice": "Visitors from UK, EU, Australia, and Asia require a standard Type A/B plug adapter and dual-voltage converter."
-      },
-      "currency": {
-        "code": "USD",
-        "symbol": "$",
-        "name": "United States Dollar",
-        "tippingCustoms": "18%–20% standard in restaurants and bars. $2–$5/bag for bellhops. 15%–20% for rideshares.",
-        "paymentMethods": "Contactless chip cards, Apple Pay, and Google Pay accepted universally. Cashless venues common."
+        "lat": 28.429399,
+        "lng": -81.308998,
+        "distanceMiles": 3.6,
+        "transitToDowntown": null,
+        "source": "OurAirports (public domain) for name, IATA code and coordinates; distance is straight-line from the U.S. Census Gazetteer city center point",
+        "sourceUrl": "https://ourairports.com/data/",
+        "cityCenterMethod": "Census Gazetteer internal point",
+        "retrieved": "2026-10-31"
       },
       "climate": {
-        "summerHighF": 94,
-        "winterLowF": 47,
-        "annualRainfallInches": 42,
-        "bestVisitMonths": "April–May and September–October for ideal scouting weather",
-        "weatherSummary": "Temperate seasonal climate favorable for commercial site inspections and pedestrian retail scouting."
+        "summerHighF": 89,
+        "winterLowF": 52,
+        "annualRainfallInches": 62.6,
+        "summerHighBasis": "Average July daily high",
+        "winterLowBasis": "Average January daily low",
+        "source": "Open-Meteo Historical Weather API (ERA5 reanalysis), 2015-2024 average, retrieved 2026-10-31",
+        "sourceUrl": "https://open-meteo.com/en/docs/historical-weather-api"
       },
       "emergency": {
         "emergencyDispatch": "911",
-        "nonEmergencyPolice": "311 or local municipal dispatch",
-        "nearestTraumaHospital": "Orlando Regional Memorial Hospital",
-        "hospitalAddress": "Medical Center District, Orlando, FL"
-      },
-      "visitorLogistics": {
-        "tapWaterPotability": "100% Safe municipal drinking water conforming to EPA Safe Drinking Water Act standards.",
-        "salesTaxRefundPolicy": "International travelers may claim state sales tax refunds on qualifying departures at designated airport customs counters.",
-        "rideshareAvailability": "Ubiquitous (Uber and Lyft operational 24/7 across the metropolitan area)."
-      },
-      "provenance": {
-        "sourceName": "FAA Airport Database & International Trade Administration",
-        "sourceUrl": "https://www.trade.gov/",
-        "datasetVintage": "2026-Q1",
-        "verifiedAt": "2026-10-18T12:33:28.810283Z",
-        "granularity": "place"
+        "nearestTraumaHospital": "AdventHealth Orlando",
+        "hospitalAddress": "601 E Rollins St, Orlando, FL 32803",
+        "cmsFacilityId": "100007",
+        "emergencyServices": true,
+        "source": "CMS Care Compare hospital general information (federal dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma level, ranking or nearest-facility claim.",
+        "erHospitals": [
+          {
+            "name": "AdventHealth Orlando",
+            "address": "601 E Rollins St, Orlando, FL 32803",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "100007",
+            "lat": 28.574161,
+            "lng": -81.371169
+          },
+          {
+            "name": "Nemours Children's Hospital, Florida",
+            "address": "6535 Nemours Pkwy, Orlando, FL 32827",
+            "type": "Children's",
+            "cmsFacilityId": "103304",
+            "lat": 28.375068,
+            "lng": -81.274475
+          },
+          {
+            "name": "Orlando Health",
+            "address": "52 W Underwood St, Orlando, FL 32806",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "100006",
+            "lat": 28.52683,
+            "lng": -81.378012
+          },
+          {
+            "name": "Orlando VA Medical Center",
+            "address": "13800 Veterans Way, Orlando, FL 32827",
+            "type": "Acute Care - Veterans Administration",
+            "cmsFacilityId": "10099F",
+            "lat": 28.365787,
+            "lng": -81.273022
+          },
+          {
+            "name": "UCF Lake Nona Hospital",
+            "address": "6700 Lake Nona Blvd, Orlando, FL 32827",
+            "type": "Acute Care Hospitals",
+            "cmsFacilityId": "100350",
+            "lat": 28.369304,
+            "lng": -81.286195
+          }
+        ],
+        "erHospitalsSource": "CMS Care Compare hospital general information (federal dataset xubh-q36u), retrieved 2026-10-31: hospitals listed with emergency services. No trauma level, ranking or nearest-facility claim."
       }
+    },
+    "housingAndTaxes": {
+      "medianHomeValue": 359000,
+      "medianGrossRent": 1650,
+      "medianRealEstateTaxPaid": 2922,
+      "effectivePropertyTaxRatePct": 0.81,
+      "countyName": "Orange County",
+      "source": "ACS 2023 5-yr: B25077 median home value, B25064 median gross rent, B25103 median real estate taxes paid. Effective rate = B25103 / B25077.",
+      "sourceUrl": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/"
+    },
+    "climateNormals": {
+      "peakSummerHighF": 89,
+      "winterLowF": 52,
+      "annualRainfallInches": 62.6,
+      "sourceName": "Open-Meteo Historical Weather API (ERA5 reanalysis), 2015-2024 average, retrieved 2026-10-31",
+      "sourceUrl": "https://open-meteo.com/en/docs/historical-weather-api"
+    },
+    "terrainElevation": {
+      "elevationFeet": 79.5,
+      "elevationMeters": 24.2,
+      "topographyClass": "Central Florida Lake Wales Ridge & Karst Lakes",
+      "sourceName": "USGS 3D Elevation Program (3DEP Elevation Point Query Service)",
+      "sourceUrl": "https://epqs.nationalmap.gov/v1/json"
+    },
+    "waterUtility": {
+      "pwsid": "FL3480962",
+      "providerName": "Orlando Utilities Commission",
+      "populationServed": 536466,
+      "sourceType": "groundwater",
+      "source": "U.S. EPA Safe Drinking Water Information System (SDWIS)",
+      "sourceUrl": "https://data.epa.gov/efservice/WATER_SYSTEM/PWSID/FL3480962/JSON",
+      "retrieved": "2026-10-31"
+    },
+    "higherEducation": {
+      "institutionCount": 23,
+      "totalEnrollment": 110503,
+      "institutions": [
+        {
+          "id": 132903,
+          "name": "University of Central Florida",
+          "studentSize": 59146,
+          "ownership": "Public",
+          "schoolUrl": "https://www.ucf.edu/",
+          "lat": 28.602159,
+          "lng": -81.200889
+        },
+        {
+          "id": 138187,
+          "name": "Valencia College",
+          "studentSize": 39486,
+          "ownership": "Public",
+          "schoolUrl": "https://valenciacollege.edu/",
+          "lat": 28.520783,
+          "lng": -81.464275
+        },
+        {
+          "id": 483595,
+          "name": "Ana G. Mendez University",
+          "studentSize": 4763,
+          "ownership": "Private nonprofit",
+          "schoolUrl": "https://www.agmu.edu/",
+          "lat": 28.482195,
+          "lng": -81.30843
+        },
+        {
+          "id": 446552,
+          "name": "Southern Technical College",
+          "studentSize": 1875,
+          "ownership": "Private for-profit",
+          "schoolUrl": "https://www.southerntech.edu/",
+          "lat": 28.44862,
+          "lng": -81.399661
+        },
+        {
+          "id": 133872,
+          "name": "AdventHealth University",
+          "studentSize": 1361,
+          "ownership": "Private nonprofit",
+          "schoolUrl": "https://www.ahu.edu/",
+          "lat": 28.576142,
+          "lng": -81.367687
+        },
+        {
+          "id": 135735,
+          "name": "Orange Technical College-South Campus",
+          "studentSize": 1124,
+          "ownership": "Public",
+          "schoolUrl": "https://www.orangetechcollege.net/",
+          "lat": 28.471695,
+          "lng": -81.415996
+        }
+      ],
+      "sourceName": "U.S. Department of Education College Scorecard",
+      "sourceUrl": "https://collegescorecard.ed.gov/",
+      "retrieved": "2026-10-31"
+    },
+    "evInfrastructure": {
+      "totalStations": 328,
+      "totalChargingPorts": 1446,
+      "dcFastPorts": 399,
+      "level2Ports": 1047,
+      "sampleStations": [
+        {
+          "name": "Hyatt Regency",
+          "address": "9801 International Dr, Orlando, FL 32819",
+          "network": "Non-Networked",
+          "dcFastPorts": 0,
+          "level2Ports": 60,
+          "lat": 28.426947,
+          "lng": -81.468171
+        },
+        {
+          "name": "Epic Guest Lot (40- NBC)",
+          "address": "3980 Desintation Parkway, Orlando, FL 32819",
+          "network": "CHARGEUP",
+          "dcFastPorts": 0,
+          "level2Ports": 40,
+          "lat": 28.432234,
+          "lng": -81.44127
+        },
+        {
+          "name": "Orlando International Airport - Garage C",
+          "address": "1 Jeff Fuqua Blvd, Orlando, FL 32827",
+          "network": "Non-Networked",
+          "dcFastPorts": 0,
+          "level2Ports": 32,
+          "lat": 28.413123,
+          "lng": -81.309848
+        },
+        {
+          "name": "Mission Pointe Project Owner, LLC - Tesla Destination",
+          "address": "12231 Pioneers Way, Orlando, FL 32832",
+          "network": "Tesla Destination",
+          "dcFastPorts": 0,
+          "level2Ports": 27,
+          "lat": 28.386271,
+          "lng": -81.240743
+        },
+        {
+          "name": "Mission Pointe II LLC - Tesla Destination",
+          "address": "12341 Pioneers Way, Orlando, FL 32832",
+          "network": "Tesla Destination",
+          "dcFastPorts": 0,
+          "level2Ports": 26,
+          "lat": 28.385206,
+          "lng": -81.241203
+        }
+      ],
+      "sourceName": "U.S. Department of Energy / NLR Alternative Fuels Data Center (AFDC)",
+      "sourceUrl": "https://afdc.energy.gov/stations",
+      "retrieved": "2026-10-31"
+    },
+    "nationalParks": {
+      "parks": [
+        {
+          "parkCode": "cana",
+          "fullName": "Canaveral National Seashore",
+          "designation": "National Seashore",
+          "distanceMiles": 40.0,
+          "description": "Discover a dynamic barrier island shaped by dunes, coastal hammocks, and Mosquito Lagoon. Walk among ancient Timucua shell mounds and connect with thousands of years of human history. Immerse yourself in a protected sanctuary where...",
+          "url": "https://www.nps.gov/cana/index.htm",
+          "lat": 28.786375,
+          "lng": -80.754196
+        }
+      ],
+      "sourceName": "U.S. National Park Service (NPS) API",
+      "sourceUrl": "https://www.nps.gov/",
+      "retrieved": "2026-10-31"
+    },
+    "upcomingEvents": {
+      "totalMatchingEvents": 1734,
+      "events": [
+        {
+          "id": "Z7r9jZ1A7PP7K",
+          "name": "Cirque du Soleil: Drawn to Life",
+          "date": "2026-10-31",
+          "venueName": "Walt Disney World",
+          "category": "Arts & Theatre",
+          "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7PP7K"
+        },
+        {
+          "id": "Z7r9jZ1A7-bPx",
+          "name": "Blue Man Group",
+          "date": "2026-10-31",
+          "venueName": "ICON Park",
+          "category": "Arts & Theatre",
+          "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7-bPx"
+        },
+        {
+          "id": "17FOv0G6GG71ptf",
+          "name": "Magnolia Park - Halloween Fest presented by WJRR",
+          "date": "2026-10-31",
+          "venueName": "House of Blues Orlando",
+          "category": "Music",
+          "url": "https://www.ticketmaster.com/magnolia-park-halloween-fest-presented-by-orlando-florida-10-31-2026/event/220064C304296A54"
+        },
+        {
+          "id": "Z7r9jZ1AAvxbt",
+          "name": "The Rocky Horror Picture Show (18 and Over)",
+          "date": "2026-10-31",
+          "venueName": "Plaza Live - Orlando",
+          "category": "Arts & Theatre",
+          "url": "https://www.ticketmaster.com/event/Z7r9jZ1AAvxbt"
+        },
+        {
+          "id": "Z7r9jZ1A707j-",
+          "name": "Earthquake",
+          "date": "2026-10-31",
+          "venueName": "Funny Bone Comedy Club - Orlando",
+          "category": "Arts & Theatre",
+          "url": "https://www.ticketmaster.com/event/Z7r9jZ1A707j-"
+        }
+      ],
+      "sourceName": "Ticketmaster Discovery API v2",
+      "sourceUrl": "https://developer.ticketmaster.com/",
+      "retrieved": "2026-10-31"
     }
   },
   {

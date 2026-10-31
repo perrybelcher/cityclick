@@ -5,7 +5,7 @@
 CityClick publishes primary-sourced municipal guides for visitors, relocating households, and small-business founders. Every quantitative metric rendered on a certified guide is ingested directly from an official federal or state dataset with recorded source provenance and vintage. If a primary record is unavailable for a field, that UI block is omitted rather than estimated or filled with a placeholder.
 
 ## Certified Indexable Flagship City Guides
-CityClick maintains 7 primary-source certified flagship guides (plus `ok/oklahoma-city` rebuilt in audit review, while ~1,494 additional US municipal entries remain in review with `noindex, follow`):
+CityClick maintains 25 primary-source certified flagship guides (while ~1,476 additional US municipal entries remain in review with `noindex, follow`):
 - Austin, TX: https://cityclick.com/tx/austin/
 - Nashville, TN: https://cityclick.com/tn/nashville/
 - Hot Springs, AR: https://cityclick.com/ar/hot-springs/
@@ -13,6 +13,24 @@ CityClick maintains 7 primary-source certified flagship guides (plus `ok/oklahom
 - Boise, ID: https://cityclick.com/id/boise/
 - Tampa, FL: https://cityclick.com/fl/tampa/
 - Scottsdale, AZ: https://cityclick.com/az/scottsdale/
+- Dallas, TX: https://cityclick.com/tx/dallas/
+- Houston, TX: https://cityclick.com/tx/houston/
+- San Antonio, TX: https://cityclick.com/tx/san-antonio/
+- Phoenix, AZ: https://cityclick.com/az/phoenix/
+- Charlotte, NC: https://cityclick.com/nc/charlotte/
+- Raleigh, NC: https://cityclick.com/nc/raleigh/
+- Orlando, FL: https://cityclick.com/fl/orlando/
+- Miami, FL: https://cityclick.com/fl/miami/
+- Jacksonville, FL: https://cityclick.com/fl/jacksonville/
+- Denver, CO: https://cityclick.com/co/denver/
+- Las Vegas, NV: https://cityclick.com/nv/las-vegas/
+- Salt Lake City, UT: https://cityclick.com/ut/salt-lake-city/
+- Atlanta, GA: https://cityclick.com/ga/atlanta/
+- Oklahoma City, OK: https://cityclick.com/ok/oklahoma-city/
+- Little Rock, AR: https://cityclick.com/ar/little-rock/
+- Fayetteville, AR: https://cityclick.com/ar/fayetteville/
+- Bentonville, AR: https://cityclick.com/ar/bentonville/
+- Huntsville, AL: https://cityclick.com/al/huntsville/
 
 ## Primary Data Sources & Methodology
 - Demographics, Housing & Effective Property Tax:
