@@ -164,6 +164,7 @@ export function generateSeoGraph({ city, canonicalUrl }: SeoGraphOptions) {
         '@id': `${cleanCanonical}#webpage`,
         url: cleanCanonical,
         name: `${city.name}, ${city.stateCode.toUpperCase()} Cost of Living, Taxes and Business Guide`,
+        dateModified: '2026-11-08',
         speakable: {
           '@type': 'SpeakableSpecification',
           cssSelector: ['h1', '#key-facts'],

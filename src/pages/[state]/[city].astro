@@ -275,11 +275,75 @@ const taxPct = (r: number) =>
   `${Number((r * 100).toFixed(3)).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 3 })}%`;
 const verifiedTax =
   city.permitsAndTax?.combinedSalesTaxRate != null && city.permitsAndTax?.provenance ? city.permitsAndTax : null;
+
+// Deterministic FNV-1a pathname hash + bounded O(N) linear-probing slice for 1-Hop Spider Mesh
+function fnv1aHash(str: string): number {
+  let h = 2166136261;
+  for (let i = 0; i < str.length; i++) {
+    h ^= str.charCodeAt(i);
+    h = Math.imul(h, 16777619);
+  }
+  return h >>> 0;
+}
+
+function rotateSlice<T>(pool: T[], seed: number, count: number, stride = 7): T[] {
+  const len = pool.length;
+  if (len === 0) return [];
+  const limit = Math.min(count, len);
+  const out: T[] = [];
+  const used = new Set<number>();
+  for (let i = 0; i < limit; i++) {
+    let idx = (seed + i * stride) % len;
+    let probes = 0;
+    while (used.has(idx) && probes < len) {
+      idx = (idx + 1) % len;
+      probes++;
+    }
+    if (!used.has(idx)) {
+      used.add(idx);
+      const item = pool[idx];
+      if (item !== undefined) out.push(item);
+    }
+  }
+  return out;
+}
+
+const spiderSeed = fnv1aHash(`/${city.slug}/`);
+const sameStatePool = ALL_CITIES.filter((c) => c.stateCode === city.stateCode && c.slug !== city.slug);
+const nationalPool = ALL_CITIES.filter((c) => c.stateCode !== city.stateCode);
+const sameStateSpiderLinks = rotateSlice(sameStatePool, spiderSeed, 8, 5);
+const nationalSpiderLinks = rotateSlice(nationalPool, spiderSeed, 8, 17);
+
+// SERP CTR-Optimized 4-Part Title (<= 58 chars) & Open-Loop Meta Description from verified city fields
+const stUpper = city.stateCode.toUpperCase();
+const factCount = keyFacts.length;
+const baseTitleCandidate = `${city.name}, ${stUpper} (2027): ${factCount} Verified Facts [Cost + Tax]`;
+const pageTitle =
+  baseTitleCandidate.length <= 58
+    ? baseTitleCandidate
+    : `${city.name}, ${stUpper} Guide: ${factCount} Facts [2027 Data]`.slice(0, 58);
+
+const homeValStr =
+  city.housingAndTaxes?.medianHomeValue != null
+    ? `$${city.housingAndTaxes.medianHomeValue.toLocaleString('en-US')} median home value`
+    : null;
+const rentStr =
+  city.housingAndTaxes?.medianGrossRent != null
+    ? `$${city.housingAndTaxes.medianGrossRent.toLocaleString('en-US')}/mo rent`
+    : null;
+const propTaxStr =
+  city.housingAndTaxes?.effectivePropertyTaxRatePct != null
+    ? `${city.housingAndTaxes.effectivePropertyTaxRatePct}% property tax`
+    : null;
+const pageDescription =
+  homeValStr && rentStr && propTaxStr
+    ? `We compiled ${factCount} verified 2027 records for ${city.name}, ${stUpper}: ${homeValStr}, ${rentStr}, and ${propTaxStr}. See the full data.`
+    : `We compiled ${factCount} verified 2027 civic records for ${city.name}, ${stUpper}: Census housing, taxes, climate normals & ER hospitals. See the data.`;
 ---
 
 <Layout
-  title={`${city.name}, ${city.stateCode.toUpperCase()}: Cost of Living, Taxes and Business Data — CityClick`}
-  description={`Explore ${city.name}, ${city.stateName}. Primary-sourced municipal guide covering cost of living, housing, taxes, climate, hospitals, and small-business trade density.`}
+  title={pageTitle}
+  description={pageDescription}
   image={heroImage ? `https://cityclick.com${heroImage}` : 'https://cityclick.com/images/og-cityclick.jpg'}
   robots={robotsDirective}
 >
@@ -1300,6 +1364,56 @@ const verifiedTax =
             </div>
           </section>
         )}
+
+        <!-- 1-HOP DETERMINISTIC SPIDER MESH: Pathname-seeded peer guides in state & nationwide -->
+        <section class="bg-white p-6 sm:p-7 rounded-3xl border border-slate-200/80 shadow-[0_4px_20px_-2px_rgba(0,0,0,0.06)] space-y-5">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3 border-b border-slate-100">
+            <div>
+              <h2 class="text-lg font-black text-[#152438]">Explore More {city.stateName} &amp; U.S. City Guides</h2>
+              <p class="text-xs text-slate-500 mt-0.5">
+                Compare verified Census housing, property tax, climate normals, and infrastructure across <a href={`/${city.stateCode}/`} class="text-[#1D68F2] font-semibold hover:underline">{city.stateName}</a> and peer U.S. municipalities.
+              </p>
+            </div>
+            <a
+              href={`/${city.stateCode}/`}
+              class="text-xs font-bold text-[#1D68F2] hover:underline shrink-0"
+            >
+              All {city.stateName} Cities →
+            </a>
+          </div>
+
+          {sameStateSpiderLinks.length > 0 && (
+            <div class="space-y-2">
+              <div class="text-[11px] font-bold uppercase tracking-wider text-slate-400">More in {city.stateName}</div>
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs">
+                {sameStateSpiderLinks.map((peer) => (
+                  <a
+                    href={`/${peer.slug}/`}
+                    class="px-3 py-2 rounded-xl bg-[#F8FAFC] hover:bg-blue-50 border border-slate-200/80 hover:border-blue-300 font-semibold text-slate-700 hover:text-[#1D68F2] transition truncate"
+                  >
+                    {peer.name}, {peer.stateCode.toUpperCase()}
+                  </a>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {nationalSpiderLinks.length > 0 && (
+            <div class="space-y-2">
+              <div class="text-[11px] font-bold uppercase tracking-wider text-slate-400">National Peer Guides</div>
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs">
+                {nationalSpiderLinks.map((peer) => (
+                  <a
+                    href={`/${peer.slug}/`}
+                    class="px-3 py-2 rounded-xl bg-[#F8FAFC] hover:bg-blue-50 border border-slate-200/80 hover:border-blue-300 font-semibold text-slate-700 hover:text-[#1D68F2] transition truncate"
+                  >
+                    {peer.name}, {peer.stateCode.toUpperCase()}
+                  </a>
+                ))}
+              </div>
+            </div>
+          )}
+        </section>
 
       </div>
 

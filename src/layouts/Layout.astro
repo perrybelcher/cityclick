@@ -14,8 +14,11 @@ const {
   title = SITE.title,
   description = SITE.description,
   image = SITE.ogImage,
-  robots = 'index, follow',
+  robots = 'index, follow, max-image-preview:large',
 } = Astro.props;
+
+const effectiveRobots =
+  robots === 'index, follow' ? 'index, follow, max-image-preview:large' : robots;
 
 // Ensure strict trailing slash on canonicals
 const pathname = Astro.url.pathname;
@@ -38,7 +41,7 @@ const cleanTitle = title.replace(/&amp;/g, 'and').replace(/&/g, 'and');
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{cleanTitle}</title>
     <meta name="description" content={description} />
-    <meta name="robots" content={robots} />
+    <meta name="robots" content={effectiveRobots} />
     <meta name="msvalidate.01" content="6C6D52BA896C6F8DE2350FA9B9BCBA49" />
     <link rel="canonical" href={canonical} />
 
