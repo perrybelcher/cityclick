@@ -314,6 +314,25 @@ const nationalPool = ALL_CITIES.filter((c) => c.stateCode !== city.stateCode);
 const sameStateSpiderLinks = rotateSlice(sameStatePool, spiderSeed, 8, 5);
 const nationalSpiderLinks = rotateSlice(nationalPool, spiderSeed, 8, 17);
 
+const compareOptionsMap = new Map<string, { slugDash: string; label: string }>();
+const defaultPeerCity = ALL_CITIES.find((c) => c.slug.replace('/', '-') === compareTargetSlug);
+if (defaultPeerCity) {
+  compareOptionsMap.set(compareTargetSlug, {
+    slugDash: compareTargetSlug,
+    label: `${defaultPeerCity.name}, ${defaultPeerCity.stateCode.toUpperCase()}`,
+  });
+}
+for (const p of [...sameStateSpiderLinks, ...nationalSpiderLinks]) {
+  const dash = p.slug.replace('/', '-');
+  if (p.slug !== city.slug && !compareOptionsMap.has(dash)) {
+    compareOptionsMap.set(dash, {
+      slugDash: dash,
+      label: `${p.name}, ${p.stateCode.toUpperCase()}`,
+    });
+  }
+}
+const sidebarCompareOptions = Array.from(compareOptionsMap.values()).slice(0, 14);
+
 // SERP CTR-Optimized 4-Part Title (<= 58 chars) & Open-Loop Meta Description from verified city fields
 const stUpper = city.stateCode.toUpperCase();
 const factCount = keyFacts.length;
@@ -357,29 +376,29 @@ const pageDescription =
   <section class="bg-white border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-6">
       <!-- Breadcrumbs + Updated Timestamp + Jump-Link TOC -->
-      <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
-        <nav class="flex items-center gap-2 text-xs font-semibold text-slate-400 tracking-wide uppercase">
-          <a href="/" class="hover:text-blue-600 transition">Cities</a>
+      <div class="flex flex-wrap items-center justify-between gap-2 mb-3 sm:mb-4">
+        <nav class="flex flex-wrap items-center gap-1 text-xs font-semibold text-slate-400 tracking-wide uppercase">
+          <a href="/" class="inline-flex items-center min-h-[36px] px-2 py-1 rounded-lg hover:bg-slate-100 hover:text-blue-600 transition">Cities</a>
           <span>/</span>
-          <a href={`/${city.stateCode}/`} class="hover:text-blue-600 transition">{city.stateName}</a>
+          <a href={`/${city.stateCode}/`} class="inline-flex items-center min-h-[36px] px-2 py-1 rounded-lg hover:bg-slate-100 hover:text-blue-600 transition">{city.stateName}</a>
           <span>/</span>
-          <span class="text-slate-800">{city.name}</span>
+          <span class="text-slate-800 px-1.5">{city.name}</span>
           <span class="text-slate-300">·</span>
-          <time datetime="2026-11-09" class="text-slate-500 normal-case font-medium">Updated Nov 2026</time>
+          <time datetime="2026-11-09" class="text-slate-500 normal-case font-medium px-1">Updated Nov 2026</time>
         </nav>
-        <div class="flex flex-wrap items-center gap-3 text-xs font-semibold text-slate-500">
-          <a href="#pillar-travel" class="hover:text-[#1D68F2] transition">Visiting Guide</a>
-          <span>·</span>
-          <a href="#pillar-moving" class="hover:text-[#1D68F2] transition">Housing &amp; Taxes</a>
-          <span>·</span>
-          <a href="#pillar-business" class="hover:text-[#1D68F2] transition">Business Data</a>
-          <span>·</span>
-          <a href="#key-facts" class="hover:text-[#1D68F2] transition">Key Facts FAQ</a>
+        <div class="flex flex-wrap items-center gap-1 text-xs font-semibold text-slate-500">
+          <a href="#pillar-travel" data-jump-pillar="pillar-travel" class="toc-jump-link inline-flex items-center min-h-[36px] px-2.5 py-1 rounded-lg hover:bg-blue-50 hover:text-[#1D68F2] transition">Visiting Guide</a>
+          <span class="text-slate-300">·</span>
+          <a href="#pillar-moving" data-jump-pillar="pillar-moving" class="toc-jump-link inline-flex items-center min-h-[36px] px-2.5 py-1 rounded-lg hover:bg-blue-50 hover:text-[#1D68F2] transition">Housing &amp; Taxes</a>
+          <span class="text-slate-300">·</span>
+          <a href="#pillar-business" data-jump-pillar="pillar-business" class="toc-jump-link inline-flex items-center min-h-[36px] px-2.5 py-1 rounded-lg hover:bg-blue-50 hover:text-[#1D68F2] transition">Business Data</a>
+          <span class="text-slate-300">·</span>
+          <a href="#key-facts" class="inline-flex items-center min-h-[36px] px-2.5 py-1 rounded-lg hover:bg-blue-50 hover:text-[#1D68F2] transition">Key Facts FAQ</a>
         </div>
       </div>
 
       <!-- Skyline / Scenic Hero Card -->
-      <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-800 mb-6 min-h-[340px] flex flex-col justify-between p-8 sm:p-10 text-white">
+      <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-800 mb-4 sm:mb-6 min-h-[220px] sm:min-h-[330px] flex flex-col justify-between p-5 sm:p-10 text-white">
         {heroImage && (
           <img
             src={heroImage}
@@ -397,36 +416,36 @@ const pageDescription =
         <div class="absolute inset-0 bg-gradient-to-t from-[#0B1120] via-[#0B1120]/75 to-transparent"></div>
 
         <!-- Hero Content -->
-        <div class="relative z-10 flex flex-col lg:flex-row lg:items-end justify-between gap-6">
-          <div class="space-y-3 max-w-2xl">
-            <div class="flex items-center gap-2.5 flex-wrap">
-              <span class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-white/20 text-white border border-white/30 backdrop-blur-md">
+        <div class="relative z-10 flex flex-col lg:flex-row lg:items-end justify-between gap-4 sm:gap-6">
+          <div class="space-y-2.5 sm:space-y-3 max-w-2xl">
+            <div class="flex items-center gap-2 flex-wrap">
+              <span class="px-2.5 py-1 rounded-full text-[11px] sm:text-xs font-bold uppercase tracking-wider bg-white/20 text-white border border-white/30 backdrop-blur-md">
                 {city.stateName} · USA
               </span>
-              <span class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-blue-500/30 text-blue-200 border border-blue-400/40 backdrop-blur-md">
+              <span class="px-2.5 py-1 rounded-full text-[11px] sm:text-xs font-bold uppercase tracking-wider bg-blue-500/30 text-blue-200 border border-blue-400/40 backdrop-blur-md">
                 {(city.demographics.population / 1000).toFixed(0)}K Residents
               </span>
               {city.climateNormals?.peakSummerHighF != null && (
-                <span class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-500/30 text-emerald-200 border border-emerald-400/40 backdrop-blur-md flex items-center gap-1.5">
+                <span class="px-2.5 py-1 rounded-full text-[11px] sm:text-xs font-bold uppercase tracking-wider bg-emerald-500/30 text-emerald-200 border border-emerald-400/40 backdrop-blur-md flex items-center gap-1.5">
                   <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
                   Avg July High {city.climateNormals.peakSummerHighF}°F
                 </span>
               )}
             </div>
 
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white drop-shadow-md">
+            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white drop-shadow-md">
               {city.name}, {city.stateName}
             </h1>
-            <p class="text-base sm:text-lg text-slate-200 leading-relaxed drop-shadow-sm max-w-xl">
+            <p class="text-sm sm:text-lg text-slate-200 leading-relaxed drop-shadow-sm max-w-xl">
               Plan a visit, explore neighborhoods to live, or research small-business location metrics in {city.name}.
             </p>
           </div>
 
           <!-- Action Buttons -->
-          <div class="flex items-center gap-3 shrink-0">
+          <div class="flex items-center gap-2.5 sm:gap-3 shrink-0">
             <a
               href={compareHref}
-              class="px-5 py-3 rounded-2xl bg-slate-900/80 hover:bg-slate-800 border border-white/20 text-white font-bold text-xs transition backdrop-blur-md flex items-center gap-2 shadow-lg"
+              class="min-h-[40px] px-4 sm:px-5 py-2.5 sm:py-3 rounded-2xl bg-slate-900/80 hover:bg-slate-800 border border-white/20 text-white font-bold text-xs transition backdrop-blur-md flex items-center gap-2 shadow-lg"
             >
               <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
               Compare
@@ -436,7 +455,7 @@ const pageDescription =
               data-slug={city.slug}
               data-name={city.name}
               data-state={city.stateCode.toUpperCase()}
-              class="px-5 py-3 rounded-2xl bg-slate-900/80 hover:bg-slate-800 border border-white/20 text-white font-bold text-xs transition backdrop-blur-md flex items-center gap-2 shadow-lg cursor-pointer"
+              class="min-h-[40px] px-4 sm:px-5 py-2.5 sm:py-3 rounded-2xl bg-slate-900/80 hover:bg-slate-800 border border-white/20 text-white font-bold text-xs transition backdrop-blur-md flex items-center gap-2 shadow-lg cursor-pointer"
             >
               <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path></svg>
               <span id="save-city-label">Save city</span>
@@ -446,41 +465,41 @@ const pageDescription =
       </div>
 
       <!-- PRIMARY INTENT GATE: WHAT BRINGS YOU TO CITY? -->
-      <div class="mb-6">
-        <div class="flex items-center justify-between mb-3 px-1">
+      <div class="mb-4 sm:mb-6">
+        <div class="flex items-center justify-between mb-2.5 px-1">
           <div class="flex items-center gap-2">
             <span class="text-xs font-black uppercase tracking-wider text-slate-700">What brings you to {city.name}?</span>
             <span class="text-[11px] text-slate-400 hidden sm:inline">· Choose an objective to personalize your guide and metrics</span>
           </div>
         </div>
 
-        <!-- 3 Tactile Intent Selector Cards -->
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4" id="triad-cards">
+        <!-- 3 Tactile Intent Selector Cards (Compact 3-col bar on mobile, spacious cards on desktop) -->
+        <div class="grid grid-cols-3 gap-2 sm:gap-4" id="triad-cards">
           <!-- 1. Traveling -->
           <button
             data-pillar="pillar-travel"
-            class="pillar-btn text-left p-4 sm:p-5 rounded-2xl border-2 transition-all cursor-pointer flex items-center justify-between border-[#1D68F2] bg-blue-50/70 shadow-sm"
+            class="pillar-btn text-left p-2.5 sm:p-5 rounded-2xl border-2 transition-all cursor-pointer flex items-center justify-between border-[#1D68F2] bg-blue-50/70 shadow-sm min-h-[54px]"
           >
-            <div class="flex items-center gap-3.5">
-              <span class="text-2xl sm:text-3xl p-2.5 rounded-xl bg-white shadow-xs border border-blue-100">✈️</span>
-              <div>
-                <div class="font-black text-sm sm:text-base text-[#152438]">Visiting {city.name}</div>
-                <div class="text-[11px] text-slate-500">Airport distance, climate, parks & water</div>
+            <div class="flex items-center gap-2 sm:gap-3.5">
+              <span class="text-lg sm:text-3xl p-1.5 sm:p-2.5 rounded-xl bg-white shadow-xs border border-blue-100 shrink-0">✈️</span>
+              <div class="min-w-0">
+                <div class="font-black text-xs sm:text-base text-[#152438] leading-tight">Visiting <span class="hidden sm:inline">{city.name}</span></div>
+                <div class="text-[11px] text-slate-500 hidden sm:block">Airport distance, climate, parks & water</div>
               </div>
             </div>
-            <span class="pillar-arrow text-sm font-black text-[#1D68F2]">→</span>
+            <span class="pillar-arrow text-sm font-black text-[#1D68F2] hidden sm:inline">→</span>
           </button>
 
           <!-- 2. Moving -->
           <button
             data-pillar="pillar-moving"
-            class="pillar-btn text-left p-4 sm:p-5 rounded-2xl border-2 transition-all cursor-pointer flex items-center justify-between border-slate-200 bg-white hover:border-slate-300"
+            class="pillar-btn text-left p-2.5 sm:p-5 rounded-2xl border-2 transition-all cursor-pointer flex items-center justify-between border-slate-200 bg-white hover:border-slate-300 min-h-[54px]"
           >
-            <div class="flex items-center gap-3.5">
-              <span class="text-2xl sm:text-3xl p-2.5 rounded-xl bg-slate-50 shadow-xs border border-slate-200">🏡</span>
-              <div>
-                <div class="font-black text-sm sm:text-base text-[#152438]">Moving to {city.name}</div>
-                <div class="text-[11px] text-slate-500">Living costs, housing, hospitals & colleges</div>
+            <div class="flex items-center gap-2 sm:gap-3.5">
+              <span class="text-lg sm:text-3xl p-1.5 sm:p-2.5 rounded-xl bg-slate-50 shadow-xs border border-slate-200 shrink-0">🏡</span>
+              <div class="min-w-0">
+                <div class="font-black text-xs sm:text-base text-[#152438] leading-tight">Moving <span class="hidden sm:inline">to {city.name}</span></div>
+                <div class="text-[11px] text-slate-500 hidden sm:block">Living costs, housing, hospitals & colleges</div>
               </div>
             </div>
             <span class="pillar-arrow text-sm font-black text-slate-300 hidden">→</span>
@@ -489,13 +508,13 @@ const pageDescription =
           <!-- 3. Doing Business -->
           <button
             data-pillar="pillar-business"
-            class="pillar-btn text-left p-4 sm:p-5 rounded-2xl border-2 transition-all cursor-pointer flex items-center justify-between border-slate-200 bg-white hover:border-slate-300"
+            class="pillar-btn text-left p-2.5 sm:p-5 rounded-2xl border-2 transition-all cursor-pointer flex items-center justify-between border-slate-200 bg-white hover:border-slate-300 min-h-[54px]"
           >
-            <div class="flex items-center gap-3.5">
-              <span class="text-2xl sm:text-3xl p-2.5 rounded-xl bg-slate-50 shadow-xs border border-slate-200">💼</span>
-              <div>
-                <div class="font-black text-sm sm:text-base text-[#152438]">Doing Business in {city.name}</div>
-                <div class="text-[11px] text-slate-500">Trade density, retail tax & EV infrastructure</div>
+            <div class="flex items-center gap-2 sm:gap-3.5">
+              <span class="text-lg sm:text-3xl p-1.5 sm:p-2.5 rounded-xl bg-slate-50 shadow-xs border border-slate-200 shrink-0">💼</span>
+              <div class="min-w-0">
+                <div class="font-black text-xs sm:text-base text-[#152438] leading-tight">Business <span class="hidden sm:inline">in {city.name}</span></div>
+                <div class="text-[11px] text-slate-500 hidden sm:block">Trade density, retail tax & EV infrastructure</div>
               </div>
             </div>
             <span class="pillar-arrow text-sm font-black text-slate-300 hidden">→</span>
@@ -655,6 +674,46 @@ const pageDescription =
           </div>
         </div>
       )}
+
+      <!-- THE SHORT ANSWER: Cross-Pillar At-a-Glance Summary (Unhides Housing, Income, Tax & Climate for Fast Skimmers) -->
+      <div class="bg-[#F8FAFC] border border-slate-200/90 rounded-2xl p-4 sm:p-5">
+        <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+          <div class="flex items-center gap-2">
+            <span class="px-2 py-0.5 rounded-md bg-blue-100 text-[#1D68F2] font-black text-[10px] uppercase tracking-wider">The Short Answer</span>
+            <h2 class="text-xs sm:text-sm font-black text-[#152438]">{city.name}, {city.stateCode.toUpperCase()} Key Takeaways at a Glance</h2>
+          </div>
+          <span class="text-[11px] text-slate-400 font-medium">Primary Federal &amp; State Records</span>
+        </div>
+        <ul class="grid grid-cols-1 md:grid-cols-3 gap-2.5 sm:gap-4 text-xs text-slate-700 list-disc pl-4">
+          <li class="leading-relaxed">
+            <strong>Population &amp; income:</strong> {city.demographics.population.toLocaleString('en-US')} residents{city.demographics.popChange2020to2023Pct != null ? ` (${city.demographics.popChange2020to2023Pct > 0 ? '+' : ''}${city.demographics.popChange2020to2023Pct}% since 2020)` : ''} with a ${city.demographics.medianHouseholdIncome.toLocaleString('en-US')} median household income.
+          </li>
+          {(city.housingAndTaxes?.medianHomeValue != null || city.housingAndTaxes?.medianGrossRent != null) && (
+            <li class="leading-relaxed">
+              <strong>Housing &amp; property tax:</strong>{' '}
+              {[
+                city.housingAndTaxes?.medianHomeValue != null ? `$${city.housingAndTaxes.medianHomeValue.toLocaleString('en-US')} median home value` : null,
+                city.housingAndTaxes?.medianGrossRent != null ? `$${city.housingAndTaxes.medianGrossRent.toLocaleString('en-US')}/mo rent` : null,
+                city.housingAndTaxes?.effectivePropertyTaxRatePct != null ? `${city.housingAndTaxes.effectivePropertyTaxRatePct.toFixed(2)}% property tax` : null,
+              ]
+                .filter(Boolean)
+                .join(', ')}.
+            </li>
+          )}
+          {(city.climateNormals?.peakSummerHighF != null || verifiedTax) && (
+            <li class="leading-relaxed">
+              <strong>Climate, transit &amp; tax:</strong>{' '}
+              {[
+                city.climateNormals?.peakSummerHighF != null ? `${city.climateNormals.peakSummerHighF}°F July high` : null,
+                sourcedAirport?.distanceMiles != null ? `${sourcedAirport.distanceMiles} mi to ${sourcedAirport.iata ?? sourcedAirport.name}` : null,
+                verifiedTax ? `${taxPct(verifiedTax.combinedSalesTaxRate)} combined sales tax` : null,
+              ]
+                .filter(Boolean)
+                .join(', ')}.
+            </li>
+          )}
+        </ul>
+      </div>
 
       {hasVerifiedDispatches && dispatches && (
         <div class="bg-[#0B1120] rounded-2xl border border-slate-800 p-4 sm:p-5 text-white shadow-xl"></div>
@@ -1305,13 +1364,30 @@ const pageDescription =
             <h2 class="font-black text-xl text-[#152438]">{city.name} Key Facts & FAQ</h2>
             <p class="text-xs text-slate-500">Each answer lists its primary source and the period it covers.</p>
             <div class="space-y-4">
-              {keyFacts.map((f) => (
-                <div class="border-t border-slate-100 pt-4">
-                  <h3 class="font-bold text-sm text-[#152438]">{f.q}</h3>
-                  <p class="text-sm text-slate-700 mt-1 leading-relaxed">{f.a}</p>
-                  <p class="text-[11px] text-slate-400 mt-1">Source: {f.source} · As of: {f.asOf}</p>
-                </div>
-              ))}
+              {keyFacts.map((f) => {
+                const isLongHospitalList = f.a.includes('; ') && f.a.split(/\s+/).length > 60;
+                const colonIdx = isLongHospitalList ? f.a.indexOf(': ') : -1;
+                const leadSentence = colonIdx > 0 ? `${f.a.slice(0, colonIdx)}:` : null;
+                const items = colonIdx > 0 ? f.a.slice(colonIdx + 2).replace(/\.$/, '').split('; ') : [];
+                return (
+                  <div class="border-t border-slate-100 pt-4">
+                    <h3 class="font-bold text-sm text-[#152438]">{f.q}</h3>
+                    {leadSentence && items.length > 1 ? (
+                      <div class="mt-1 space-y-1.5">
+                        <p class="text-sm text-slate-700 leading-relaxed">{leadSentence}</p>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-1.5 text-xs text-slate-700 list-disc pl-5">
+                          {items.map((item) => (
+                            <li class="leading-snug">{item}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    ) : (
+                      <p class="text-sm text-slate-700 mt-1 leading-relaxed">{f.a}</p>
+                    )}
+                    <p class="text-[11px] text-slate-400 mt-1">Source: {f.source} · As of: {f.asOf}</p>
+                  </div>
+                );
+              })}
             </div>
           </section>
         )}
@@ -1434,6 +1510,42 @@ const pageDescription =
 
       <!-- Right Column: Audience-Adaptive Dynamic Sidebar (4 cols) -->
       <div class="lg:col-span-4 space-y-6 sticky top-20">
+
+        <!-- PERSISTENT INTERACTIVE CITY COMPARISON CARD (Top CRO Action Across All Intents) -->
+        {sidebarCompareOptions.length > 0 && (
+          <div class="bg-white rounded-3xl p-5 sm:p-6 border border-slate-200/90 shadow-[0_4px_25px_-2px_rgba(0,0,0,0.08)] space-y-3.5">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-0.5 rounded-md bg-blue-50 text-[#1D68F2] border border-blue-200 font-black text-[10px] uppercase tracking-wider">Side-by-Side Tool</span>
+              <span class="text-[11px] text-slate-400 font-semibold">Housing · Taxes · Climate</span>
+            </div>
+            <div>
+              <h3 class="text-lg font-black text-[#152438]">Compare {city.name} With Another City</h3>
+              <p class="text-xs text-slate-500 mt-0.5 leading-relaxed">
+                Benchmark {city.name} home prices, monthly rent, tax rates, and trade density against a peer market.
+              </p>
+            </div>
+            <div class="space-y-2.5">
+              <label for="sidebar-compare-select" class="sr-only">Choose second city to compare with {city.name}</label>
+              <select
+                id="sidebar-compare-select"
+                data-base-slug={city.slug.replace('/', '-')}
+                class="w-full px-3.5 py-3 rounded-2xl bg-[#F8FAFC] hover:bg-white text-slate-900 font-bold text-xs border border-slate-300 focus:border-[#1D68F2] focus:ring-2 focus:ring-blue-100 outline-none cursor-pointer transition"
+              >
+                {sidebarCompareOptions.map((opt) => (
+                  <option value={opt.slugDash}>{city.name}, {city.stateCode.toUpperCase()} vs. {opt.label}</option>
+                ))}
+              </select>
+              <a
+                id="sidebar-compare-go"
+                href={compareHref}
+                class="w-full text-center py-3.5 px-4 rounded-2xl bg-[#1D68F2] hover:bg-[#1555C7] text-white font-extrabold text-xs sm:text-sm shadow-md hover:shadow-lg transition flex items-center justify-center gap-2"
+              >
+                <span>Compare Cities Side-by-Side</span>
+                <span>→</span>
+              </a>
+            </div>
+          </div>
+        )}
 
         <!-- SIDEBAR 1: VISITING (Default Active) -->
         <div id="sidebar-travel" class="sidebar-panel space-y-6">
@@ -1702,7 +1814,7 @@ const pageDescription =
             b.classList.add('border-slate-200', 'bg-white');
             const arrow = b.querySelector('.pillar-arrow');
             if (arrow) {
-              arrow.classList.remove('text-[#1D68F2]');
+              arrow.classList.remove('text-[#1D68F2]', 'sm:inline');
               arrow.classList.add('text-slate-300', 'hidden');
             }
           });
@@ -1711,8 +1823,8 @@ const pageDescription =
           btn.classList.remove('border-slate-200', 'bg-white');
           const activeArrow = btn.querySelector('.pillar-arrow');
           if (activeArrow) {
-            activeArrow.classList.add('text-[#1D68F2]');
-            activeArrow.classList.remove('text-slate-300', 'hidden');
+            activeArrow.classList.add('text-[#1D68F2]', 'sm:inline');
+            activeArrow.classList.remove('text-slate-300');
           }
 
           pillarPanels.forEach((p) => p.classList.add('hidden'));
@@ -1750,6 +1862,36 @@ const pageDescription =
           }
         });
       });
+
+      // 1b. Jump-Link TOC & Hash Auto-Switch
+      document.querySelectorAll('.toc-jump-link').forEach((link) => {
+        link.addEventListener('click', () => {
+          const pillarId = link.getAttribute('data-jump-pillar');
+          if (pillarId) {
+            const matchBtn = document.querySelector(`.pillar-btn[data-pillar="${pillarId}"]`);
+            if (matchBtn) matchBtn.click();
+          }
+        });
+      });
+
+      const initialHash = window.location.hash.replace('#', '');
+      if (initialHash === 'pillar-moving' || initialHash === 'pillar-business' || initialHash === 'pillar-travel') {
+        const hashBtn = document.querySelector(`.pillar-btn[data-pillar="${initialHash}"]`);
+        if (hashBtn) hashBtn.click();
+      }
+
+      // 1c. Sidebar Compare Picker
+      const compareSelect = document.getElementById('sidebar-compare-select');
+      const compareGo = document.getElementById('sidebar-compare-go');
+      if (compareSelect && compareGo) {
+        const baseSlug = compareSelect.getAttribute('data-base-slug');
+        compareSelect.addEventListener('change', () => {
+          const targetSlug = compareSelect.value;
+          if (baseSlug && targetSlug) {
+            compareGo.setAttribute('href', `/compare/${baseSlug}-vs-${targetSlug}/`);
+          }
+        });
+      }
 
       // 2. Multi-Audience Leaflet Map Initialization
       const mapEl = document.getElementById('city-leaflet-map');
