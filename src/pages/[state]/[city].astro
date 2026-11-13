@@ -364,11 +364,9 @@ const pageDescription =
   title={pageTitle}
   description={pageDescription}
   image={heroImage ? `https://cityclick.com${heroImage}` : 'https://cityclick.com/images/og-cityclick.jpg'}
+  preloadImage={heroImage || undefined}
   robots={robotsDirective}
 >
-  <!-- Leaflet Map CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
-
   <!-- Inject Structured Schemas -->
   <script type="application/ld+json" set:html={JSON.stringify(seoGraph)} />
 
@@ -1797,6 +1795,7 @@ const pageDescription =
   </div>
 
   <!-- Interactive Scripts (Pillars, Multi-Layer Map, Trade Switcher, Local Shortlist) -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" is:inline></script>
 
   <script is:inline>

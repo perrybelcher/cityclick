@@ -7,6 +7,7 @@ interface Props {
   description?: string;
   canonical?: string;
   image?: string;
+  preloadImage?: string;
   robots?: string;
 }
 
@@ -14,6 +15,7 @@ const {
   title = SITE.title,
   description = SITE.description,
   image = SITE.ogImage,
+  preloadImage,
   robots = 'index, follow, max-image-preview:large',
 } = Astro.props;
 
@@ -44,6 +46,7 @@ const cleanTitle = title.replace(/&amp;/g, 'and').replace(/&/g, 'and');
     <meta name="robots" content={effectiveRobots} />
     <meta name="msvalidate.01" content="6C6D52BA896C6F8DE2350FA9B9BCBA49" />
     <link rel="canonical" href={canonical} />
+    {preloadImage && <link rel="preload" as="image" href={preloadImage} fetchpriority="high" />}
 
     <!-- OpenGraph -->
     <meta property="og:title" content={cleanTitle} />
