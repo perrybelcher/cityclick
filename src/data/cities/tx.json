@@ -720,7 +720,7 @@
           "fullName": "El Camino Real de los Tejas National Historic Trail",
           "designation": "National Historic Trail",
           "distanceMiles": 27.0,
-          "description": "Explore a diverse array of histories contained within El Camino Real de los Tejas’ 150-year life, including the Spanish struggle to missionize American Indian nations, the growth of cattle ranching in the Mexican period, and the...",
+          "description": "Explore a diverse array of histories contained within El Camino Real de los Tejas\u2019 150-year life, including the Spanish struggle to missionize American Indian nations, the growth of cattle ranching in the Mexican period, and the...",
           "url": "https://www.nps.gov/elte/index.htm",
           "lat": 30.092296,
           "lng": -97.339767
@@ -787,6 +787,187 @@
       "sourceName": "Ticketmaster Discovery API v2",
       "sourceUrl": "https://developer.ticketmaster.com/",
       "retrieved": "2026-10-31"
+    },
+    "conventionsAndHospitality": {
+      "sourceName": "Conventions.com Municipal CVB & U.S. GSA FY2027 Per Diem Intelligence",
+      "sourceUrl": "https://conventions.com/cities/austin",
+      "retrieved": "2026-11-14",
+      "spec": {
+        "campusesSummary": "14+ Major Convention & Resort Campuses in Austin",
+        "hallLicenseRate": "$0.34\u2013$0.52 / net sq. ft. (Municipal Standard)",
+        "subventionRule": "50%\u2013100% Hall License Subvention w/ 1,500+ Peak Room Nights in Austin + $30/nt Master Block Rebate",
+        "hotelInventorySummary": "4,918+ Verified Convention Hotel Keys across 7 HQ Properties",
+        "hotelTaxSummary": "17% Combined Austin Hotel Occupancy & Tourism Assessment",
+        "laborSummary": "$118\u2013$177/hr GSC Floor Rate (vs. $31.40/hr BLS Wage \u2022 3.8\u00d7 Markup \u2022 Right-to-Work (Exhibitor-Friendly))"
+      },
+      "venues": [
+        {
+          "name": "JW Marriott Austin",
+          "exhibitSpace": "161,764 sq. ft. Max Hall: 30,183 sq. ft.",
+          "breakouts": "45,294 sq. ft. (38 configurable breakout rooms)",
+          "walkableRooms": "1,012 In-House Tower Keys (Direct Elevator to Ballroom Level)"
+        },
+        {
+          "name": "Fairmont Austin",
+          "exhibitSpace": "140,000 sq. ft. Max Hall: 50,500 sq. ft.",
+          "breakouts": "39,200 sq. ft. (23 configurable breakout rooms)",
+          "walkableRooms": "1,048 In-House Tower Keys (Direct Elevator to Ballroom Level)"
+        },
+        {
+          "name": "Palmer Events Center",
+          "exhibitSpace": "131,000 sq. ft. Max Hall: 70,000 sq. ft.",
+          "breakouts": "36,680 sq. ft. (5 configurable breakout rooms)",
+          "walkableRooms": "2,760+ District Rooms (Anchored by Omni Barton Creek Resort & Spa Austin)"
+        },
+        {
+          "name": "Travis County Exposition Center",
+          "exhibitSpace": "100,000 sq. ft. Max Hall: 20,000 sq. ft.",
+          "breakouts": "28,000 sq. ft. (5 configurable breakout rooms)",
+          "walkableRooms": "2,660+ Park Corridor Rooms (Omni Barton Creek Resort & Spa Austin)"
+        },
+        {
+          "name": "Austin Convention Center",
+          "exhibitSpace": "76,192 sq. ft. Max Hall: 14,532 sq. ft.",
+          "breakouts": "21,334 sq. ft. (32 configurable breakout rooms)",
+          "walkableRooms": "2,640+ District Rooms (Anchored by Omni Barton Creek Resort & Spa Austin)"
+        },
+        {
+          "name": "Omni Barton Creek Resort & Spa Austin",
+          "exhibitSpace": "76,192 sq. ft. Max Hall: 14,532 sq. ft.",
+          "breakouts": "21,334 sq. ft. (32 configurable breakout rooms)",
+          "walkableRooms": "502 In-House Tower Keys (Direct Elevator to Ballroom Level)"
+        },
+        {
+          "name": "Austin Marriott Downtown",
+          "exhibitSpace": "59,735 sq. ft. Max Hall: 19,000 sq. ft.",
+          "breakouts": "16,726 sq. ft. (18 configurable breakout rooms)",
+          "walkableRooms": "613 In-House Tower Keys (Direct Elevator to Ballroom Level)"
+        },
+        {
+          "name": "Renaissance Austin Hotel",
+          "exhibitSpace": "59,648 sq. ft. Max Hall: 12,000 sq. ft.",
+          "breakouts": "16,701 sq. ft. (18 configurable breakout rooms)",
+          "walkableRooms": "492 In-House Tower Keys (Direct Elevator to Ballroom Level)"
+        }
+      ],
+      "shows": [
+        {
+          "name": "TCEA Convention & Exposition 2026",
+          "dates": "Feb 2\u20136, 2026",
+          "venue": "Austin Convention Center",
+          "attendance": "8,000+ B2B Attendees",
+          "hotelSurge": "1.8\u00d7 Campus Ring ($345\u2013$415/nt)"
+        },
+        {
+          "name": "SXSW EDU 2026",
+          "dates": "Mar 2\u20135, 2026",
+          "venue": "Austin Marriott Downtown",
+          "attendance": "8,000+ B2B Attendees",
+          "hotelSurge": "1.6\u00d7 In-House Block ($310\u2013$360/nt)"
+        },
+        {
+          "name": "SXSW Interactive Trade Show 2026",
+          "dates": "Mar 13\u201317, 2026",
+          "venue": "Austin Convention Center",
+          "attendance": "35,000+ B2B Attendees",
+          "hotelSurge": "2.3\u00d7 Citywide Peak ($450\u2013$550/nt)"
+        },
+        {
+          "name": "SXSW Interactive & SXSW Pitch 2026",
+          "dates": "Mar 13\u201317, 2026",
+          "venue": "Fairmont Austin",
+          "attendance": "5,000+ B2B Attendees",
+          "hotelSurge": "1.4\u00d7 In-House Block ($285\u2013$345/nt)"
+        },
+        {
+          "name": "CTR Annual Symposium 2026",
+          "dates": "Apr 8\u20138, 2026",
+          "venue": "Commons Conference Center",
+          "attendance": "500+ B2B Attendees",
+          "hotelSurge": "1.3\u00d7 Corridor Block ($250\u2013$330/nt)"
+        },
+        {
+          "name": "NABIP-TX Annual Convention 2026",
+          "dates": "Apr 14\u201316, 2026",
+          "venue": "Omni Barton Creek Resort & Spa Austin",
+          "attendance": "550+ B2B Attendees",
+          "hotelSurge": "1.4\u00d7 In-House Block ($275\u2013$335/nt)"
+        },
+        {
+          "name": "Texas Association of Health Underwriters Annual Convention 2026 Fice, FinTech & Banking",
+          "dates": "Apr 20\u201322, 2026",
+          "venue": "JW Marriott Austin",
+          "attendance": "600+ B2B Attendees",
+          "hotelSurge": "1.3\u00d7 In-House Block ($255\u2013$335/nt)"
+        },
+        {
+          "name": "DIR Information Security Forum 2026",
+          "dates": "May 12\u201313, 2026",
+          "venue": "Commons Conference Center",
+          "attendance": "650+ B2B Attendees",
+          "hotelSurge": "1.4\u00d7 Corridor Block ($280\u2013$370/nt)"
+        }
+      ],
+      "hotels": [
+        {
+          "name": "Fairmont Austin",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/hotels/fairmont-austin-hotel.webp",
+          "corridorSpec": "Connected / Adjacent \u2022 Elevated Canopy Walk + 140k Sq Ft Meetings (Austin Convention Center)",
+          "typicalRate": "$429/nt",
+          "summary": "37-story luxury conference powerhouse anchoring SXSW & Consensus.",
+          "gsaPerDiemCap": "$187\u2013$227/nt (Seasonal)"
+        },
+        {
+          "name": "Hilton Austin",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/hotels/hilton-austin-downtown.webp",
+          "corridorSpec": "Connected / Adjacent \u2022 Downtown Convention Plaza Anchor (Austin Convention Center)",
+          "typicalRate": "$389/nt",
+          "summary": "112,000 sq. ft. of meeting space steps from 6th St, Rainey & MetroRail.",
+          "gsaPerDiemCap": "$187\u2013$227/nt (Seasonal)"
+        },
+        {
+          "name": "JW Marriott Austin",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/hotels/jw-marriott-austin.webp",
+          "corridorSpec": "Connected / Adjacent \u2022 Largest JW in North America (1,012 Rooms) (Austin Convention Center)",
+          "typicalRate": "$439/nt",
+          "summary": "Congress Ave anchor with 120,000+ sq. ft. of ballrooms & Dean's Italian Steakhouse.",
+          "gsaPerDiemCap": "$187\u2013$227/nt (Seasonal)"
+        },
+        {
+          "name": "Austin Proper Hotel (2nd Street District)",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/hotels/austin-proper-hotel.webp",
+          "corridorSpec": "Luxury Client Hosting \u2022 Boutique Founder & VC Hosting (Austin Convention Center)",
+          "typicalRate": "$579/nt",
+          "summary": "Kelly Wearstler-designed luxury hotel overlooking Lady Bird Lake.",
+          "gsaPerDiemCap": "$187\u2013$227/nt (Seasonal)"
+        }
+      ],
+      "dining": [
+        {
+          "name": "Jeffrey's",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/dining/jeffreys-of-austin.webp",
+          "cuisineAndProximity": "Dry-Aged Wood-Fired Luxury Steakhouse \u2022 6-min cab to Clarksville (Austin Convention Center)",
+          "priceTier": "$$$$",
+          "groupSpec": "12\u201365 Guests (Private Wine & Drawing Rooms) ($5,000 \u2013 $25,000+) \u2014 Austin's most prestigious executive dining room for C-suite & investor dinners.",
+          "reservationTip": "Book 45\u201375 days pre-show"
+        },
+        {
+          "name": "III Forks Prime Steakhouse",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/dining/iii-forks-austin.webp",
+          "cuisineAndProximity": "USDA Prime Texas Steakhouse \u2022 2-min walk from JW Marriott Austin (Austin Convention Center)",
+          "priceTier": "$$$$",
+          "groupSpec": "16\u2013180 Guests (Lady Bird Private Rooms) ($4,500 \u2013 $26,000+) \u2014 Steps from Congress Ave convention hotels with turnkey AV boardrooms.",
+          "reservationTip": "Book 45\u201375 days pre-show"
+        },
+        {
+          "name": "Lamberts Downtown Barbecue (Upstairs Buyout)",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/dining/lamberts-downtown-bbq-austin.webp",
+          "cuisineAndProximity": "Upscale Oak-Smoked Texas BBQ & Live Stage \u2022 4-min walk on W 2nd St (Austin Convention Center)",
+          "priceTier": "$$$",
+          "groupSpec": "40\u2013220 Guests (2nd-Floor Lounge Buyout) ($5,500 \u2013 $28,000+) \u2014 Historic brick 2nd-floor lounge with private bar & stage built for SXSW/tech buyouts.",
+          "reservationTip": "Book 45\u201375 days pre-show"
+        }
+      ]
     }
   },
   {
@@ -1635,6 +1816,187 @@
       "sourceName": "Ticketmaster Discovery API v2",
       "sourceUrl": "https://developer.ticketmaster.com/",
       "retrieved": "2026-10-31"
+    },
+    "conventionsAndHospitality": {
+      "sourceName": "Conventions.com Municipal CVB & U.S. GSA FY2027 Per Diem Intelligence",
+      "sourceUrl": "https://conventions.com/cities/houston",
+      "retrieved": "2026-11-14",
+      "spec": {
+        "campusesSummary": "21+ Major Convention & Resort Campuses in Houston",
+        "hallLicenseRate": "$0.34\u2013$0.52 / net sq. ft. (Municipal Standard)",
+        "subventionRule": "50%\u2013100% Hall License Subvention w/ 1,500+ Peak Room Nights in Houston + $30/nt Master Block Rebate",
+        "hotelInventorySummary": "7,777+ Verified Convention Hotel Keys across 13 HQ Properties",
+        "hotelTaxSummary": "17% Combined Houston Hotel Occupancy & Tourism Assessment",
+        "laborSummary": "$118\u2013$177/hr GSC Floor Rate (vs. $31.40/hr BLS Wage \u2022 3.8\u00d7 Markup \u2022 Right-to-Work (Exhibitor-Friendly))"
+      },
+      "venues": [
+        {
+          "name": "George R. Brown Convention Center Tier-1 Municipal Flagship Campus (1,200k sf)",
+          "exhibitSpace": "1,200,000 sq. ft. Max Hall: 125,000 sq. ft.",
+          "breakouts": "336,000 sq. ft. (88 configurable breakout rooms)",
+          "walkableRooms": "7,777+ convention corridor rooms (Anchored by Marriott Marquis Houston)"
+        },
+        {
+          "name": "NRG Center & NRG Park Mega-Exposition Campus",
+          "exhibitSpace": "706,213 net sq. ft. Single-Level Contiguous Exhibit Space Max Hall: 706,213 sq. ft. across 11 divisible ground-level halls",
+          "breakouts": "1,400,000+ gross sq. ft. (plus NRG Stadium & Arena) (59 meeting rooms + direct METRORail Red Line to Downtown & Medical Center)",
+          "walkableRooms": "3,100+ Rail / Shuttle Corridor Rooms"
+        },
+        {
+          "name": "The Westin Galleria Houston",
+          "exhibitSpace": "84,980 sq. ft. Max Hall: 26,035 sq. ft.",
+          "breakouts": "23,794 sq. ft. (27 configurable breakout rooms)",
+          "walkableRooms": "469 In-House Tower Keys (Direct Elevator to Ballroom Level)"
+        },
+        {
+          "name": "The Westin Oaks Houston at the Galleria",
+          "exhibitSpace": "77,434 sq. ft. Max Hall: 28,000 sq. ft.",
+          "breakouts": "21,682 sq. ft. (28 configurable breakout rooms)",
+          "walkableRooms": "406 In-House Tower Keys (Direct Elevator to Ballroom Level)"
+        },
+        {
+          "name": "Hyatt Regency Houston",
+          "exhibitSpace": "64,000 sq. ft. Max Hall: 16,000 sq. ft.",
+          "breakouts": "17,920 sq. ft. (34 configurable breakout rooms)",
+          "walkableRooms": "955 In-House Tower Keys (Direct Elevator to Ballroom Level)"
+        },
+        {
+          "name": "NRG Center",
+          "exhibitSpace": "62,000 sq. ft. Max Hall: 17,500 sq. ft.",
+          "breakouts": "17,360 sq. ft. (22 configurable breakout rooms)",
+          "walkableRooms": "3,000+ District Rooms (Anchored by Wyndham Houston NRG Park/ Medical Center)"
+        },
+        {
+          "name": "Wyndham Houston NRG Park/ Medical Center",
+          "exhibitSpace": "62,000 sq. ft. Max Hall: 17,500 sq. ft.",
+          "breakouts": "17,360 sq. ft. (22 configurable breakout rooms)",
+          "walkableRooms": "2,120+ Park Corridor Rooms (Wyndham Houston NRG Park/ Medical Center)"
+        },
+        {
+          "name": "Hilton Houston North",
+          "exhibitSpace": "52,000 sq. ft. Max Hall: 15,200 sq. ft.",
+          "breakouts": "14,560 sq. ft. (36 configurable breakout rooms)",
+          "walkableRooms": "480 In-House Tower Keys (Direct Elevator to Ballroom Level)"
+        }
+      ],
+      "shows": [
+        {
+          "name": "Houston Money Show 2026 Fice, FinTech & Banking",
+          "dates": "Jan 22\u201324, 2026",
+          "venue": "Houston Marriott Westchase",
+          "attendance": "1,200+ B2B Attendees",
+          "hotelSurge": "1.5\u00d7 In-House Block ($255\u2013$325/nt)"
+        },
+        {
+          "name": "NAPE Business Conference 2026 Manufacturing & Supply Chain",
+          "dates": "Feb 4\u20135, 2026",
+          "venue": "Marriott Marquis Houston",
+          "attendance": "950+ B2B Attendees",
+          "hotelSurge": "1.4\u00d7 In-House Block ($250\u2013$310/nt)"
+        },
+        {
+          "name": "The Quirk's Event - Houston 2026",
+          "dates": "Feb 25\u201326, 2026",
+          "venue": "Marriott Marquis Houston",
+          "attendance": "1,200+ B2B Attendees",
+          "hotelSurge": "1.3\u00d7 In-House Block ($235\u2013$285/nt)"
+        },
+        {
+          "name": "Texas Aviation Conference 2026 Automotive & Mobility",
+          "dates": "Mar 18\u201320, 2026",
+          "venue": "Sonesta Hotel Houston IAH Airport",
+          "attendance": "650+ B2B Attendees",
+          "hotelSurge": "1.4\u00d7 In-House Block ($240\u2013$330/nt)"
+        },
+        {
+          "name": "Houston Horror Film Fest 2026",
+          "dates": "Mar 27\u201329, 2026",
+          "venue": "Hilton Houston North",
+          "attendance": "2,500+ B2B Attendees",
+          "hotelSurge": "1.5\u00d7 In-House Block ($255\u2013$325/nt)"
+        },
+        {
+          "name": "Texas Society of Health-System Pharmacists Annual Seminar 2026",
+          "dates": "Apr 10\u201312, 2026",
+          "venue": "The Westin Galleria Houston",
+          "attendance": "950+ B2B Attendees",
+          "hotelSurge": "1.4\u00d7 In-House Block ($250\u2013$310/nt)"
+        },
+        {
+          "name": "NABIP-TX Annual Convention & Trade Show 2026 Fice, FinTech & Banking",
+          "dates": "Apr 22\u201324, 2026",
+          "venue": "Hyatt Regency Houston",
+          "attendance": "750+ B2B Attendees",
+          "hotelSurge": "1.3\u00d7 In-House Block ($235\u2013$315/nt)"
+        },
+        {
+          "name": "Offshore Technology Conference 2026 Manufacturing & Supply Chain",
+          "dates": "May 4\u20137, 2026",
+          "venue": "NRG Center",
+          "attendance": "31,000+ B2B Attendees",
+          "hotelSurge": "1.9\u00d7 Citywide Peak ($330\u2013$400/nt)"
+        }
+      ],
+      "hotels": [
+        {
+          "name": "Marriott Marquis Houston",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/hotels/marriott-marquis-houston.webp",
+          "corridorSpec": "Connected / Adjacent \u2022 Air-Conditioned Skybridge to GRB North (George R. Brown Convention Center)",
+          "typicalRate": "$389/nt",
+          "summary": "Features famous Texas-shaped rooftop lazy river deck & 39,000 sq. ft. Texas Ballroom.",
+          "gsaPerDiemCap": "$167\u2013$207/nt (Seasonal)"
+        },
+        {
+          "name": "Hilton Americas-Houston",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/hotels/hilton-americas-houston.webp",
+          "corridorSpec": "Connected / Adjacent \u2022 Dual Skybridges to GRB South (George R. Brown Convention Center)",
+          "typicalRate": "$395/nt",
+          "summary": "Official CERAWeek energy ministers headquarters connected directly to Halls D/E.",
+          "gsaPerDiemCap": "$167\u2013$207/nt (Seasonal)"
+        },
+        {
+          "name": "Four Seasons Hotel Houston",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/hotels/four-seasons-hotel-houston.webp",
+          "corridorSpec": "Luxury Client Hosting \u2022 4-Min Walk Across Discovery Green (George R. Brown Convention Center)",
+          "typicalRate": "$569/nt",
+          "summary": "Houston's premier 5-star executive hotel & Topgolf Swing Suites across Discovery Green.",
+          "gsaPerDiemCap": "$167\u2013$207/nt (Seasonal)"
+        },
+        {
+          "name": "Embassy Suites Houston Downtown",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/hotels/embassy-suites-houston-downtown.webp",
+          "corridorSpec": "Skybridge / Walk Ring \u2022 3-Min Walk Across Discovery Green Park (George R. Brown Convention Center)",
+          "typicalRate": "$279/nt",
+          "summary": "All-suite GSA-friendly team hotel facing Discovery Green & GRB.",
+          "gsaPerDiemCap": "$167\u2013$207/nt (Seasonal)"
+        }
+      ],
+      "dining": [
+        {
+          "name": "Pappas Bros. Steakhouse Downtown",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/dining/pappas-bros-steakhouse-downtown-houston.webp",
+          "cuisineAndProximity": "Legendary Dry-Aged Prime & 3,900-Selection Cellar \u2022 3-min walk across Discovery Green (George R. Brown Convention Center)",
+          "priceTier": "$$$$",
+          "groupSpec": "14\u2013160 Guests (Wine Spectator Grand Award Rooms) ($5,500 \u2013 $35,000+) \u2014 Undisputed #1 energy & aerospace dealmaking steakhouse in Downtown Houston.",
+          "reservationTip": "Book 45\u201375 days pre-show"
+        },
+        {
+          "name": "Vic & Anthony's Steakhouse",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/dining/vic-and-anthonys-houston.webp",
+          "cuisineAndProximity": "USDA Prime & Gulf Seafood \u2022 4-min walk north of Marriott Marquis (George R. Brown Convention Center)",
+          "priceTier": "$$$$",
+          "groupSpec": "16\u2013180 Guests (2nd-Floor Private Floor) ($4,800 \u2013 $28,000+) \u2014 Clubby wood-paneled private dining suites steps from GRB North.",
+          "reservationTip": "Book 45\u201375 days pre-show"
+        },
+        {
+          "name": "Xochi by Hugo Ortega (Marriott Marquis)",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/dining/xochi-oaxacan-avenida-houston.webp",
+          "cuisineAndProximity": "James Beard Award Oaxacan & Mezcal \u2022 1-min walk on Avenida Houston Plaza (George R. Brown Convention Center)",
+          "priceTier": "$$$",
+          "groupSpec": "20\u2013200 Guests (Covered Avenida Terrace) ($4,500 \u2013 $25,000+) \u2014 Chef Hugo Ortega's acclaimed flagship opening directly onto Avenida de las Americas.",
+          "reservationTip": "Book 45\u201375 days pre-show"
+        }
+      ]
     }
   },
   {
@@ -2438,6 +2800,187 @@
       "sourceName": "Ticketmaster Discovery API v2",
       "sourceUrl": "https://developer.ticketmaster.com/",
       "retrieved": "2026-10-31"
+    },
+    "conventionsAndHospitality": {
+      "sourceName": "Conventions.com Municipal CVB & U.S. GSA FY2027 Per Diem Intelligence",
+      "sourceUrl": "https://conventions.com/cities/san-antonio",
+      "retrieved": "2026-11-14",
+      "spec": {
+        "campusesSummary": "11+ Major Convention & Resort Campuses in San Antonio",
+        "hallLicenseRate": "$0.34\u2013$0.52 / net sq. ft. (Municipal Standard)",
+        "subventionRule": "50%\u2013100% Hall License Subvention w/ 1,500+ Peak Room Nights in San Antonio + $30/nt Master Block Rebate",
+        "hotelInventorySummary": "4,654+ Verified Convention Hotel Keys across 6 HQ Properties",
+        "hotelTaxSummary": "16.75% Combined San Antonio Hotel Occupancy & Tourism Assessment",
+        "laborSummary": "$118\u2013$177/hr GSC Floor Rate (vs. $31.40/hr BLS Wage \u2022 3.8\u00d7 Markup \u2022 Right-to-Work (Exhibitor-Friendly))"
+      },
+      "venues": [
+        {
+          "name": "Henry B. Gonzalez Convention Center Tier-1 Municipal Flagship Campus (1,600k sf)",
+          "exhibitSpace": "1,600,000 sq. ft. Max Hall: 514,000 sq. ft.",
+          "breakouts": "448,000 sq. ft. (70 configurable breakout rooms)",
+          "walkableRooms": "4,654+ convention corridor rooms (Anchored by Hyatt Regency Hill Country Resort and Villas)"
+        },
+        {
+          "name": "Expo Hall",
+          "exhibitSpace": "170,000 sq. ft. Max Hall: 120,000 sq. ft.",
+          "breakouts": "47,600 sq. ft. (5 configurable breakout rooms)",
+          "walkableRooms": "1,800+ District Rooms (Anchored by Hyatt Regency Hill Country Resort and Villas)"
+        },
+        {
+          "name": "Freeman Coliseum",
+          "exhibitSpace": "170,000 sq. ft. Max Hall: 32,000 sq. ft.",
+          "breakouts": "47,600 sq. ft. (5 configurable breakout rooms)",
+          "walkableRooms": "3,020+ Park Corridor Rooms (Hyatt Regency Hill Country Resort and Villas)"
+        },
+        {
+          "name": "Freeman Coliseum/Frost Bank Center",
+          "exhibitSpace": "150,000 sq. ft. Max Hall: 30,000 sq. ft.",
+          "breakouts": "42,000 sq. ft. (12 configurable breakout rooms)",
+          "walkableRooms": "2,660+ Park Corridor Rooms (Hyatt Regency Hill Country Resort and Villas)"
+        },
+        {
+          "name": "JW Marriott Hill Country Resort & Spa",
+          "exhibitSpace": "119,250 sq. ft. Max Hall: 40,500 sq. ft.",
+          "breakouts": "33,390 sq. ft. (22 configurable breakout rooms)",
+          "walkableRooms": "1,002 In-House Tower Keys (Direct Elevator to Ballroom Level)"
+        },
+        {
+          "name": "Grand Hyatt San Antonio",
+          "exhibitSpace": "115,000 sq. ft. Max Hall: 21,186 sq. ft.",
+          "breakouts": "32,200 sq. ft. (41 configurable breakout rooms)",
+          "walkableRooms": "1,003 In-House Tower Keys (Direct Elevator to Ballroom Level)"
+        },
+        {
+          "name": "Signia by Hilton La Cantera Resort & Spa",
+          "exhibitSpace": "115,000 sq. ft. Max Hall: 17,088 sq. ft.",
+          "breakouts": "32,200 sq. ft. (24 configurable breakout rooms)",
+          "walkableRooms": "496 In-House Tower Keys (Direct Elevator to Ballroom Level)"
+        },
+        {
+          "name": "San Antonio Marriott Rivercenter",
+          "exhibitSpace": "70,136 sq. ft. Max Hall: 41,600 sq. ft.",
+          "breakouts": "19,638 sq. ft. (37 configurable breakout rooms)",
+          "walkableRooms": "1,001 In-House Tower Keys (Direct Elevator to Ballroom Level)"
+        }
+      ],
+      "shows": [
+        {
+          "name": "Texas Ground Water Association Convention 2026",
+          "dates": "Jan 20\u201323, 2026",
+          "venue": "Freeman Coliseum/Frost Bank Center",
+          "attendance": "850+ B2B Attendees",
+          "hotelSurge": "1.5\u00d7 Corridor Block ($265\u2013$335/nt)"
+        },
+        {
+          "name": "TASA Midwinter Conference 2026",
+          "dates": "Jan 25\u201328, 2026",
+          "venue": "Grand Hyatt San Antonio",
+          "attendance": "5,000+ B2B Attendees",
+          "hotelSurge": "1.3\u00d7 In-House Block ($235\u2013$315/nt)"
+        },
+        {
+          "name": "IIAT Joe Vincent Management Seminar 2026 Fice, FinTech & Banking",
+          "dates": "Jan 25\u201327, 2026",
+          "venue": "JW Marriott Hill Country Resort & Spa",
+          "attendance": "850+ B2B Attendees",
+          "hotelSurge": "1.4\u00d7 In-House Block ($230\u2013$290/nt)"
+        },
+        {
+          "name": "Texas Ground Water Association Annual Convention 2026",
+          "dates": "Jan 27\u201329, 2026",
+          "venue": "Freeman Coliseum",
+          "attendance": "1,100+ B2B Attendees",
+          "hotelSurge": "1.5\u00d7 Corridor Block ($265\u2013$335/nt)"
+        },
+        {
+          "name": "Texas Hospital Association Leadership Conference 2026",
+          "dates": "Feb 4\u20136, 2026",
+          "venue": "Hyatt Regency Hill Country Resort and Villas",
+          "attendance": "800+ B2B Attendees",
+          "hotelSurge": "1.5\u00d7 In-House Block ($250\u2013$320/nt)"
+        },
+        {
+          "name": "Texas Music Educators Association Clinic/Convention 2026 Manufacturing & Supply Chain",
+          "dates": "Feb 11\u201314, 2026",
+          "venue": "Grand Hyatt San Antonio",
+          "attendance": "30,000+ B2B Attendees",
+          "hotelSurge": "2.0\u00d7 In-House Block ($345\u2013$445/nt)"
+        },
+        {
+          "name": "Texas Hospital Association Annual Conference and Expo 2026",
+          "dates": "Feb 11\u201312, 2026",
+          "venue": "JW Marriott Hill Country Resort & Spa",
+          "attendance": "1,200+ B2B Attendees",
+          "hotelSurge": "1.4\u00d7 In-House Block ($235\u2013$325/nt)"
+        },
+        {
+          "name": "NABIP-TX Annual Conference 2026",
+          "dates": "Apr 20\u201322, 2026",
+          "venue": "Signia by Hilton La Cantera Resort & Spa",
+          "attendance": "550+ B2B Attendees",
+          "hotelSurge": "1.3\u00d7 In-House Block ($215\u2013$295/nt)"
+        }
+      ],
+      "hotels": [
+        {
+          "name": "Hyatt Regency Hill Country Resort and Villas",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/hotels/embassy-suites-houston-downtown.webp",
+          "corridorSpec": "Connected / Adjacent \u2022 Skybridge / Adjacent HQ Anchor (Henry B. Gonzalez Convention Center)",
+          "typicalRate": "$321/nt",
+          "summary": "Features 54,000 sq. ft. of meeting space; resort/destination fees waived via Conventions.com Housing Desk (Sara Chaval \u00b7 (702) 576-1312).",
+          "gsaPerDiemCap": "$160\u2013$200/nt (Seasonal)"
+        },
+        {
+          "name": "Hyatt Regency San Antonio Riverwalk",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/hotels/sheraton-denver-downtown.webp",
+          "corridorSpec": "Corridor Group Block \u2022 6-Min Corridor Shuttle / Drive (Henry B. Gonzalez Convention Center)",
+          "typicalRate": "$277/nt",
+          "summary": "Features 40,000 sq. ft. of meeting space; resort/destination fees waived via Conventions.com Housing Desk (Sara Chaval \u00b7 (702) 576-1312).",
+          "gsaPerDiemCap": "$160\u2013$200/nt (Seasonal)"
+        },
+        {
+          "name": "JW Marriott Hill Country Resort & Spa",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/hotels/jw-marriott-hill-country-resort-and-spa.webp",
+          "corridorSpec": "Corridor Group Block \u2022 8-Min Corridor Shuttle / Drive (Henry B. Gonzalez Convention Center)",
+          "typicalRate": "$265/nt",
+          "summary": "Features 119,250 sq. ft. of meeting space; resort/destination fees waived via Conventions.com Housing Desk (Sara Chaval \u00b7 (702) 576-1312).",
+          "gsaPerDiemCap": "$160\u2013$200/nt (Seasonal)"
+        },
+        {
+          "name": "Grand Hyatt San Antonio",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/hotels/grand-hyatt-san-antonio.webp",
+          "corridorSpec": "Per-Diem / Transit Hack \u2022 10-Min Corridor Shuttle / Drive (Henry B. Gonzalez Convention Center)",
+          "typicalRate": "$254/nt",
+          "summary": "Features 115,000 sq. ft. of meeting space; resort/destination fees waived via Conventions.com Housing Desk (Sara Chaval \u00b7 (702) 576-1312).",
+          "gsaPerDiemCap": "$160\u2013$200/nt (Seasonal)"
+        }
+      ],
+      "dining": [
+        {
+          "name": "Boha's Prime Steaks and Seafood",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/dining/san-antonio-bohanan-s-prime-steaks-and-s.webp",
+          "cuisineAndProximity": "Steak House \u2022 3-min walk / cab on 219 E Houston St #275 (Henry B. Gonzalez Convention Center)",
+          "priceTier": "$$$$",
+          "groupSpec": "16\u2013120 Guests (Private Boardrooms & Main Salon) ($4,500 \u2013 $25,000+ F&B Min) \u2014 Verified San Antonio executive dining & sponsor reception venue (4.7\u2605 across 2,739 reviews on 219 E Houston St #275).",
+          "reservationTip": "30\u201360 days prior to show week"
+        },
+        {
+          "name": "J-Prime Steakhouse",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/dining/san-antonio-j-prime-steakhouse.webp",
+          "cuisineAndProximity": "Steak House \u2022 5-min walk (1401 N Loop 1604 W) (Henry B. Gonzalez Convention Center)",
+          "priceTier": "$$$$",
+          "groupSpec": "20\u2013160 Guests (Wine Cellar PDR & Full Buyout) ($5,500 \u2013 $32,000+ F&B Min) \u2014 Verified San Antonio executive dining & sponsor reception venue (4.8\u2605 across 4,581 reviews on 1401 N Loop 1604 W).",
+          "reservationTip": "30\u201360 days prior to show week"
+        },
+        {
+          "name": "Biga - San Antonio Riverwalk Restaurant",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/dining/san-antonio-biga-san-antonio-riverwalk-r.webp",
+          "cuisineAndProximity": "American Restaurant \u2022 6-min walk (203 S St Mary's St) (Henry B. Gonzalez Convention Center)",
+          "priceTier": "$$$",
+          "groupSpec": "14\u201385 Guests (Executive Chef's Room & Terrace) ($3,800 \u2013 $18,500+ F&B Min) \u2014 Verified San Antonio executive dining & sponsor reception venue (4.7\u2605 across 1,586 reviews on 203 S St Mary's St).",
+          "reservationTip": "30\u201360 days prior to show week"
+        }
+      ]
     }
   },
   {
@@ -3198,7 +3741,7 @@
       "events": [
         {
           "id": "vvG1YZ_5OQi94B",
-          "name": "VOILÀ Presents: Moonbloom",
+          "name": "VOIL\u00c0 Presents: Moonbloom",
           "date": "2026-10-31",
           "venueName": "House of Blues Dallas",
           "category": "Music",
@@ -3240,6 +3783,187 @@
       "sourceName": "Ticketmaster Discovery API v2",
       "sourceUrl": "https://developer.ticketmaster.com/",
       "retrieved": "2026-10-31"
+    },
+    "conventionsAndHospitality": {
+      "sourceName": "Conventions.com Municipal CVB & U.S. GSA FY2027 Per Diem Intelligence",
+      "sourceUrl": "https://conventions.com/cities/dallas",
+      "retrieved": "2026-11-14",
+      "spec": {
+        "campusesSummary": "23+ Major Convention & Resort Campuses in Dallas",
+        "hallLicenseRate": "$0.34\u2013$0.52 / net sq. ft. (Municipal Standard)",
+        "subventionRule": "50%\u2013100% Hall License Subvention w/ 1,500+ Peak Room Nights in Dallas + $30/nt Master Block Rebate",
+        "hotelInventorySummary": "8,245+ Verified Convention Hotel Keys across 9 HQ Properties",
+        "hotelTaxSummary": "15% Combined Dallas Hotel Occupancy & Tourism Assessment",
+        "laborSummary": "$118\u2013$177/hr GSC Floor Rate (vs. $31.40/hr BLS Wage \u2022 3.8\u00d7 Markup \u2022 Right-to-Work (Exhibitor-Friendly))"
+      },
+      "venues": [
+        {
+          "name": "Kay Bailey Hutchison Convention Center Tier-1 Municipal Flagship Campus (1,000k sf)",
+          "exhibitSpace": "1,000,000 sq. ft. Max Hall: 203,000 sq. ft.",
+          "breakouts": "280,000 sq. ft. (88 configurable breakout rooms)",
+          "walkableRooms": "8,245+ convention corridor rooms (Anchored by Hyatt Regency Dallas)"
+        },
+        {
+          "name": "Hilton Anatole",
+          "exhibitSpace": "600,000 sq. ft. Max Hall: 75,900 sq. ft.",
+          "breakouts": "168,000 sq. ft. (12 configurable breakout rooms)",
+          "walkableRooms": "1,617 In-House Tower Keys (Direct Elevator to Ballroom Level)"
+        },
+        {
+          "name": "Dallas Market Center & Market Hall Wholesale Trade Mart & Permanent Showroom Campus",
+          "exhibitSpace": "202,600 net sq. ft. Market Hall (5M gross campus) Max Hall: 202,600 sq. ft. ground-level Market Hall",
+          "breakouts": "300,000+ sq. ft. across World Trade Center & Market Hall (30+ conference rooms & buyer theaters)",
+          "walkableRooms": "6,600+ Market District Corridor Rooms"
+        },
+        {
+          "name": "Gaylord Texan Resort & Convention Center (DFW)",
+          "exhibitSpace": "179,520 sq. ft. Longhorn Exhibit Halls A\u2013F Max Hall: 179,520 sq. ft. ground-level Longhorn Exhibit Hall",
+          "breakouts": "490,000 sq. ft. (88 breakout suites (1,814 guest rooms))",
+          "walkableRooms": "3,200 In-House Tower Keys (Direct Elevator to Ballroom Level)"
+        },
+        {
+          "name": "Fair Park Automobile & Centennial Exhibition Halls",
+          "exhibitSpace": "175,000+ sq. ft. Automobile & Centennial Buildings Max Hall: 84,000 sq. ft. Automobile Building",
+          "breakouts": "300,000+ sq. ft. campus (6 exhibition pavilions + Music Hall at Fair Park)",
+          "walkableRooms": "2,950+ Rail / Shuttle Corridor Rooms"
+        },
+        {
+          "name": "Hyatt Regency DFW International Airport",
+          "exhibitSpace": "92,000 sq. ft. Max Hall: 21,120 sq. ft.",
+          "breakouts": "25,760 sq. ft. (70 configurable breakout rooms)",
+          "walkableRooms": "811 In-House Tower Keys (Direct Elevator to Ballroom Level)"
+        },
+        {
+          "name": "Gilley's Dallas 7-Venue Convention Buyout Complex",
+          "exhibitSpace": "91,000 sq. ft. across 7 themed event halls Max Hall: 28,000 sq. ft. South Side Ballroom (3,500 guests)",
+          "breakouts": "91,000 sq. ft. (7 interconnecting event rooms & Skyline Loft)",
+          "walkableRooms": "2,400+ Local Corridor Hotel Rooms"
+        },
+        {
+          "name": "Irving Convention Center at Las Colinas",
+          "exhibitSpace": "50,000 sq. ft. Column-Free Ground Exhibit Hall Max Hall: 50,000 sq. ft. completely column-free Exhibit Hall + 20,000 sq. ft. Ballroom",
+          "breakouts": "275,000 gross sq. ft. (20 meeting rooms + connected Westin Irving & Toyota Music Factory)",
+          "walkableRooms": "1,320+ Local Corridor Hotel Rooms"
+        }
+      ],
+      "shows": [
+        {
+          "name": "Texas Association of Healthcare Facilities Management Interlink 2026",
+          "dates": "Mar 22\u201325, 2026",
+          "venue": "The Westin Dallas Park Central",
+          "attendance": "900+ B2B Attendees",
+          "hotelSurge": "1.3\u00d7 In-House Block ($245\u2013$325/nt)"
+        },
+        {
+          "name": "Southwest Fuel & Convenience Expo 2026",
+          "dates": "May 12\u201314, 2026",
+          "venue": "The Westin Galleria Dallas",
+          "attendance": "1,600+ B2B Attendees",
+          "hotelSurge": "1.4\u00d7 In-House Block ($260\u2013$320/nt)"
+        },
+        {
+          "name": "Texas Digital Health Strategy Symposium 2026",
+          "dates": "May 12\u201314, 2026",
+          "venue": "The Westin Dallas Downtown",
+          "attendance": "600+ B2B Attendees",
+          "hotelSurge": "1.3\u00d7 In-House Block ($235\u2013$315/nt)"
+        },
+        {
+          "name": "DigiMarCon South Digital Marketing, Media and Advertising Conference 2026",
+          "dates": "May 21\u201322, 2026",
+          "venue": "Omni Dallas Hotel",
+          "attendance": "650+ B2B Attendees",
+          "hotelSurge": "1.4\u00d7 In-House Block ($255\u2013$345/nt)"
+        },
+        {
+          "name": "TASSP Summer Workshop 2026",
+          "dates": "Jun 10\u201312, 2026",
+          "venue": "Hyatt Regency Dallas",
+          "attendance": "2,400+ B2B Attendees",
+          "hotelSurge": "1.4\u00d7 In-House Block ($250\u2013$340/nt)"
+        },
+        {
+          "name": "TASBO Summer Solutions Conference 2026 Fice, FinTech & Banking",
+          "dates": "Jun 15\u201317, 2026",
+          "venue": "Hyatt Regency Dallas",
+          "attendance": "950+ B2B Attendees",
+          "hotelSurge": "1.3\u00d7 In-House Block ($235\u2013$315/nt)"
+        },
+        {
+          "name": "Texas Society of CPAs Annual Meeting 2026 Fice, FinTech & Banking",
+          "dates": "Jun 18\u201320, 2026",
+          "venue": "Hyatt Regency Dallas",
+          "attendance": "750+ B2B Attendees",
+          "hotelSurge": "1.5\u00d7 In-House Block ($270\u2013$370/nt)"
+        },
+        {
+          "name": "Let's Play Gaming Expo 2026",
+          "dates": "Aug 7\u20139, 2026",
+          "venue": "Hyatt Regency DFW International Airport",
+          "attendance": "2,500+ B2B Attendees",
+          "hotelSurge": "1.4\u00d7 In-House Block ($260\u2013$320/nt)"
+        }
+      ],
+      "hotels": [
+        {
+          "name": "Omni Dallas Hotel",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/hotels/omni-dallas-hotel.webp",
+          "corridorSpec": "Connected / Adjacent \u2022 Direct Climate-Controlled Skybridge (Kay Bailey Hutchison Convention Center)",
+          "typicalRate": "$319/nt",
+          "summary": "Connected directly to KBHCCD via enclosed skybridge with 9 on-site restaurants on Lamar St.",
+          "gsaPerDiemCap": "$174\u2013$214/nt (Seasonal)"
+        },
+        {
+          "name": "Aloft Dallas Downtown",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/hotels/aloft-dallas-downtown.webp",
+          "corridorSpec": "Skybridge / Walk Ring \u2022 2-Min Walk Across Young St (Kay Bailey Hutchison Convention Center)",
+          "typicalRate": "$209/nt",
+          "summary": "Steps from KBHCCD C/D lobbies\u2014top GSA per-diem & exhibitor crew value in Downtown Dallas.",
+          "gsaPerDiemCap": "$174\u2013$214/nt (Seasonal)"
+        },
+        {
+          "name": "The Adolphus, Autograph Collection",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/hotels/adolphus-hotel-dallas.webp",
+          "corridorSpec": "Luxury Client Hosting \u2022 7-Min Walk Up Commerce St (Kay Bailey Hutchison Convention Center)",
+          "typicalRate": "$339/nt",
+          "summary": "Historic luxury boutique headquarters for executive deal suites and VIP dinners.",
+          "gsaPerDiemCap": "$174\u2013$214/nt (Seasonal)"
+        },
+        {
+          "name": "Sheraton Dallas Hotel",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/hotels/sheraton-dallas-hotel.webp",
+          "corridorSpec": "Per-Diem / Transit Hack \u2022 2 DART Rail Stops (4 Mins) (Kay Bailey Hutchison Convention Center)",
+          "typicalRate": "$229/nt",
+          "summary": "Largest hotel in North Texas with massive group room blocks and direct DART Pearl/Arts access.",
+          "gsaPerDiemCap": "$174\u2013$214/nt (Seasonal)"
+        }
+      ],
+      "dining": [
+        {
+          "name": "Bob's Steak & Chop House (Omni Dallas)",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/dining/bobs-steak-chop-omni-dallas.webp",
+          "cuisineAndProximity": "Texas Prime Steakhouse \u2022 2-min indoor skybridge walk (Kay Bailey Hutchison Convention Center)",
+          "priceTier": "$$$$",
+          "groupSpec": "16\u2013130 Guests (Private Rooms) ($4,500 \u2013 $24,000+) \u2014 Flagship Texas prime beef right on the KBHCCD skybridge\u2014zero rideshare delay after floor close.",
+          "reservationTip": "Book 45\u201375 days pre-show"
+        },
+        {
+          "name": "Town Hearth (Design District)",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/dining/town-hearth-dallas.webp",
+          "cuisineAndProximity": "Prime Steaks & Raw Bar \u2022 7-min rideshare from KBHCCD (Kay Bailey Hutchison Convention Center)",
+          "priceTier": "$$$$",
+          "groupSpec": "20\u2013250 Guests (Chandelier Dining Room) ($6,500 \u2013 $38,000+) \u2014 64 crystal chandeliers, vintage Ducati & submarine bar\u2014Dallas's most unforgettable VIP buyout.",
+          "reservationTip": "Book 45\u201375 days pre-show"
+        },
+        {
+          "name": "Nick & Sam's Steakhouse (Uptown)",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/dining/nick-and-sams-dallas.webp",
+          "cuisineAndProximity": "Wagyu & Prime Steakhouse \u2022 8-min rideshare to Uptown (Kay Bailey Hutchison Convention Center)",
+          "priceTier": "$$$$",
+          "groupSpec": "18\u2013180 Guests ($6,000 \u2013 $35,000+) \u2014 Dallas executive power-dining institution for closing enterprise deals.",
+          "reservationTip": "Book 45\u201375 days pre-show"
+        }
+      ]
     }
   },
   {
@@ -10625,7 +11349,7 @@
           "fullName": "Lake Meredith National Recreation Area",
           "designation": "National Recreation Area",
           "distanceMiles": 30.3,
-          "description": "Set within the wide‑open Texas Plains, Lake Meredith National Recreation Area offers a peaceful retreat in the heart of rugged grasslands. Over thousands of years, the Canadian River carved dramatic 200‑foot canyons - known as breaks...",
+          "description": "Set within the wide\u2011open Texas Plains, Lake Meredith National Recreation Area offers a peaceful retreat in the heart of rugged grasslands. Over thousands of years, the Canadian River carved dramatic 200\u2011foot canyons - known as breaks...",
           "url": "https://www.nps.gov/lamr/index.htm",
           "lat": 35.619262,
           "lng": -101.682007
@@ -17652,7 +18376,7 @@
           "fullName": "El Camino Real de los Tejas National Historic Trail",
           "designation": "National Historic Trail",
           "distanceMiles": 35.6,
-          "description": "Explore a diverse array of histories contained within El Camino Real de los Tejas’ 150-year life, including the Spanish struggle to missionize American Indian nations, the growth of cattle ranching in the Mexican period, and the...",
+          "description": "Explore a diverse array of histories contained within El Camino Real de los Tejas\u2019 150-year life, including the Spanish struggle to missionize American Indian nations, the growth of cattle ranching in the Mexican period, and the...",
           "url": "https://www.nps.gov/elte/index.htm",
           "lat": 30.092296,
           "lng": -97.339767
@@ -22738,7 +23462,7 @@
           "fullName": "El Camino Real de los Tejas National Historic Trail",
           "designation": "National Historic Trail",
           "distanceMiles": 53.8,
-          "description": "Explore a diverse array of histories contained within El Camino Real de los Tejas’ 150-year life, including the Spanish struggle to missionize American Indian nations, the growth of cattle ranching in the Mexican period, and the...",
+          "description": "Explore a diverse array of histories contained within El Camino Real de los Tejas\u2019 150-year life, including the Spanish struggle to missionize American Indian nations, the growth of cattle ranching in the Mexican period, and the...",
           "url": "https://www.nps.gov/elte/index.htm",
           "lat": 30.092296,
           "lng": -97.339767
@@ -26705,7 +27429,7 @@
           "fullName": "El Camino Real de los Tejas National Historic Trail",
           "designation": "National Historic Trail",
           "distanceMiles": 45.2,
-          "description": "Explore a diverse array of histories contained within El Camino Real de los Tejas’ 150-year life, including the Spanish struggle to missionize American Indian nations, the growth of cattle ranching in the Mexican period, and the...",
+          "description": "Explore a diverse array of histories contained within El Camino Real de los Tejas\u2019 150-year life, including the Spanish struggle to missionize American Indian nations, the growth of cattle ranching in the Mexican period, and the...",
           "url": "https://www.nps.gov/elte/index.htm",
           "lat": 30.092296,
           "lng": -97.339767
@@ -30673,7 +31397,7 @@
           "fullName": "El Camino Real de los Tejas National Historic Trail",
           "designation": "National Historic Trail",
           "distanceMiles": 45.6,
-          "description": "Explore a diverse array of histories contained within El Camino Real de los Tejas’ 150-year life, including the Spanish struggle to missionize American Indian nations, the growth of cattle ranching in the Mexican period, and the...",
+          "description": "Explore a diverse array of histories contained within El Camino Real de los Tejas\u2019 150-year life, including the Spanish struggle to missionize American Indian nations, the growth of cattle ranching in the Mexican period, and the...",
           "url": "https://www.nps.gov/elte/index.htm",
           "lat": 30.092296,
           "lng": -97.339767
@@ -32267,7 +32991,7 @@
           "fullName": "El Camino Real de los Tejas National Historic Trail",
           "designation": "National Historic Trail",
           "distanceMiles": 40.6,
-          "description": "Explore a diverse array of histories contained within El Camino Real de los Tejas’ 150-year life, including the Spanish struggle to missionize American Indian nations, the growth of cattle ranching in the Mexican period, and the...",
+          "description": "Explore a diverse array of histories contained within El Camino Real de los Tejas\u2019 150-year life, including the Spanish struggle to missionize American Indian nations, the growth of cattle ranching in the Mexican period, and the...",
           "url": "https://www.nps.gov/elte/index.htm",
           "lat": 30.092296,
           "lng": -97.339767
@@ -33423,7 +34147,7 @@
           "fullName": "El Camino Real de los Tejas National Historic Trail",
           "designation": "National Historic Trail",
           "distanceMiles": 38.8,
-          "description": "Explore a diverse array of histories contained within El Camino Real de los Tejas’ 150-year life, including the Spanish struggle to missionize American Indian nations, the growth of cattle ranching in the Mexican period, and the...",
+          "description": "Explore a diverse array of histories contained within El Camino Real de los Tejas\u2019 150-year life, including the Spanish struggle to missionize American Indian nations, the growth of cattle ranching in the Mexican period, and the...",
           "url": "https://www.nps.gov/elte/index.htm",
           "lat": 30.092296,
           "lng": -97.339767
@@ -36229,7 +36953,7 @@
           "fullName": "El Camino Real de los Tejas National Historic Trail",
           "designation": "National Historic Trail",
           "distanceMiles": 29.1,
-          "description": "Explore a diverse array of histories contained within El Camino Real de los Tejas’ 150-year life, including the Spanish struggle to missionize American Indian nations, the growth of cattle ranching in the Mexican period, and the...",
+          "description": "Explore a diverse array of histories contained within El Camino Real de los Tejas\u2019 150-year life, including the Spanish struggle to missionize American Indian nations, the growth of cattle ranching in the Mexican period, and the...",
           "url": "https://www.nps.gov/elte/index.htm",
           "lat": 30.092296,
           "lng": -97.339767
@@ -36775,7 +37499,7 @@
           "fullName": "El Camino Real de los Tejas National Historic Trail",
           "designation": "National Historic Trail",
           "distanceMiles": 33.2,
-          "description": "Explore a diverse array of histories contained within El Camino Real de los Tejas’ 150-year life, including the Spanish struggle to missionize American Indian nations, the growth of cattle ranching in the Mexican period, and the...",
+          "description": "Explore a diverse array of histories contained within El Camino Real de los Tejas\u2019 150-year life, including the Spanish struggle to missionize American Indian nations, the growth of cattle ranching in the Mexican period, and the...",
           "url": "https://www.nps.gov/elte/index.htm",
           "lat": 30.092296,
           "lng": -97.339767
@@ -38499,7 +39223,7 @@
       "level2Ports": 16,
       "sampleStations": [
         {
-          "name": "The Cove at The Lakefront®",
+          "name": "The Cove at The Lakefront\u00ae",
           "address": "417 Lakefront Dr, Little Elm, TX 75068",
           "network": "SYNERGEV",
           "dcFastPorts": 0,
@@ -53439,7 +54163,7 @@
           "fullName": "El Camino Real de los Tejas National Historic Trail",
           "designation": "National Historic Trail",
           "distanceMiles": 33.4,
-          "description": "Explore a diverse array of histories contained within El Camino Real de los Tejas’ 150-year life, including the Spanish struggle to missionize American Indian nations, the growth of cattle ranching in the Mexican period, and the...",
+          "description": "Explore a diverse array of histories contained within El Camino Real de los Tejas\u2019 150-year life, including the Spanish struggle to missionize American Indian nations, the growth of cattle ranching in the Mexican period, and the...",
           "url": "https://www.nps.gov/elte/index.htm",
           "lat": 30.092296,
           "lng": -97.339767
@@ -58249,7 +58973,7 @@
           "fullName": "El Camino Real de los Tejas National Historic Trail",
           "designation": "National Historic Trail",
           "distanceMiles": 51.2,
-          "description": "Explore a diverse array of histories contained within El Camino Real de los Tejas’ 150-year life, including the Spanish struggle to missionize American Indian nations, the growth of cattle ranching in the Mexican period, and the...",
+          "description": "Explore a diverse array of histories contained within El Camino Real de los Tejas\u2019 150-year life, including the Spanish struggle to missionize American Indian nations, the growth of cattle ranching in the Mexican period, and the...",
           "url": "https://www.nps.gov/elte/index.htm",
           "lat": 30.092296,
           "lng": -97.339767

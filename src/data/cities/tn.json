@@ -746,6 +746,187 @@
       "sourceName": "Ticketmaster Discovery API v2",
       "sourceUrl": "https://developer.ticketmaster.com/",
       "retrieved": "2026-10-31"
+    },
+    "conventionsAndHospitality": {
+      "sourceName": "Conventions.com Municipal CVB & U.S. GSA FY2027 Per Diem Intelligence",
+      "sourceUrl": "https://conventions.com/cities/nashville",
+      "retrieved": "2026-11-14",
+      "spec": {
+        "campusesSummary": "14+ Major Convention & Resort Campuses in Nashville",
+        "hallLicenseRate": "$0.34\u2013$0.52 / net sq. ft. (Municipal Standard)",
+        "subventionRule": "50%\u2013100% Hall License Subvention w/ 1,500+ Peak Room Nights in Nashville + $30/nt Master Block Rebate",
+        "hotelInventorySummary": "6,793+ Verified Convention Hotel Keys across 8 HQ Properties",
+        "hotelTaxSummary": "16.75% Combined Nashville Hotel Occupancy & Tourism Assessment",
+        "laborSummary": "$118\u2013$177/hr GSC Floor Rate (vs. $31.40/hr BLS Wage \u2022 3.8\u00d7 Markup \u2022 Right-to-Work (Exhibitor-Friendly))"
+      },
+      "venues": [
+        {
+          "name": "Gaylord Opryland Resort & Convention Ctr",
+          "exhibitSpace": "469,904 sq. ft. Max Hall: 182,773 sq. ft.",
+          "breakouts": "131,573 sq. ft. (61 configurable breakout rooms)",
+          "walkableRooms": "2,888 In-House Tower Keys (Direct Elevator to Ballroom Level)"
+        },
+        {
+          "name": "Gaylord Opryland Resort & Convention Center",
+          "exhibitSpace": "263,772 sq. ft. Ryman Exhibit Halls Max Hall: 263,772 sq. ft. Ryman Hall + 55,000 sq. ft. Delta Ballroom",
+          "breakouts": "750,000+ sq. ft. (110+ breakout rooms (2,888 guest rooms across 9 acres of indoor atriums))",
+          "walkableRooms": "3,200 In-House Tower Keys (Direct Elevator to Ballroom Level)"
+        },
+        {
+          "name": "Grand Hyatt Nashville",
+          "exhibitSpace": "84,000 sq. ft. Max Hall: 13,000 sq. ft.",
+          "breakouts": "23,520 sq. ft. (34 configurable breakout rooms)",
+          "walkableRooms": "591 In-House Tower Keys (Direct Elevator to Ballroom Level)"
+        },
+        {
+          "name": "JW Marriott Nashville",
+          "exhibitSpace": "79,000 sq. ft. Max Hall: 17,000 sq. ft.",
+          "breakouts": "22,120 sq. ft. (1 configurable breakout rooms)",
+          "walkableRooms": "533 In-House Tower Keys (Direct Elevator to Ballroom Level)"
+        },
+        {
+          "name": "Renaissance Nashville Hotel",
+          "exhibitSpace": "72,994 sq. ft. Max Hall: 17,877 sq. ft.",
+          "breakouts": "20,438 sq. ft. (24 configurable breakout rooms)",
+          "walkableRooms": "673 In-House Tower Keys (Direct Elevator to Ballroom Level)"
+        },
+        {
+          "name": "Embassy Suites Nashville Downtown Regional Event & Conference Facility (35k sf)",
+          "exhibitSpace": "35,349 sq. ft. Max Hall: 12,500 sq. ft.",
+          "breakouts": "9,898 sq. ft. (26 configurable breakout rooms)",
+          "walkableRooms": "300+ District Rooms (Anchored by Embassy Suites Nashville Downtown)"
+        },
+        {
+          "name": "Sonesta Nashville Airport Regional Event & Conference Facility (35k sf)",
+          "exhibitSpace": "35,000 sq. ft. Max Hall: 12,500 sq. ft.",
+          "breakouts": "9,800 sq. ft. (22 configurable breakout rooms)",
+          "walkableRooms": "500+ District Rooms (Anchored by Sonesta Nashville Airport)"
+        },
+        {
+          "name": "Music City Center Regional Event & Conference Facility (33k sf)",
+          "exhibitSpace": "32,592 sq. ft. Max Hall: 12,000 sq. ft.",
+          "breakouts": "9,126 sq. ft. (14 configurable breakout rooms)",
+          "walkableRooms": "500+ District Rooms (Anchored by Sheraton Music City Nashville Airport)"
+        }
+      ],
+      "shows": [
+        {
+          "name": "NACWA Winter Conference 2026 Manufacturing & Supply Chain",
+          "dates": "Feb 1\u20134, 2026",
+          "venue": "Renaissance Nashville Hotel",
+          "attendance": "650+ B2B Attendees",
+          "hotelSurge": "1.4\u00d7 In-House Block ($330\u2013$420/nt)"
+        },
+        {
+          "name": "TASBO Annual Conference 2026 Fice, FinTech & Banking",
+          "dates": "Feb 24\u201327, 2026",
+          "venue": "Sonesta Nashville Airport",
+          "attendance": "650+ B2B Attendees",
+          "hotelSurge": "1.5\u00d7 Corridor Block ($330\u2013$400/nt)"
+        },
+        {
+          "name": "AEMP CONNECT Conference 2026",
+          "dates": "Mar 10\u201312, 2026",
+          "venue": "Renaissance Nashville Hotel",
+          "attendance": "550+ B2B Attendees",
+          "hotelSurge": "1.5\u00d7 In-House Block ($335\u2013$435/nt)"
+        },
+        {
+          "name": "Health Evolution Summit 2026",
+          "dates": "Apr 8\u201310, 2026",
+          "venue": "JW Marriott Nashville",
+          "attendance": "950+ B2B Attendees",
+          "hotelSurge": "1.4\u00d7 In-House Block ($320\u2013$380/nt)"
+        },
+        {
+          "name": "Music City Dental Conference (TDA Annual Session) 2026 Dental & Orthodontics",
+          "dates": "May 7\u20139, 2026",
+          "venue": "Gaylord Opryland Resort & Convention Center",
+          "attendance": "3,000+ B2B Attendees",
+          "hotelSurge": "1.5\u00d7 In-House Block ($335\u2013$405/nt)"
+        },
+        {
+          "name": "Digital Insurance Summit 2026 Fice, FinTech & Banking",
+          "dates": "May 11\u201313, 2026",
+          "venue": "Grand Hyatt Nashville",
+          "attendance": "650+ B2B Attendees",
+          "hotelSurge": "1.5\u00d7 In-House Block ($340\u2013$410/nt)"
+        },
+        {
+          "name": "NAST Treasury Management Training Symposium 2026 Fice, FinTech & Banking",
+          "dates": "May 19\u201322, 2026",
+          "venue": "Grand Hyatt Nashville",
+          "attendance": "800+ B2B Attendees",
+          "hotelSurge": "1.5\u00d7 In-House Block ($335\u2013$405/nt)"
+        },
+        {
+          "name": "THCA/TNCAL Annual Convention & Trade Show 2026",
+          "dates": "Aug 16\u201319, 2026",
+          "venue": "Sheraton Music City Nashville Airport",
+          "attendance": "1,100+ B2B Attendees",
+          "hotelSurge": "1.5\u00d7 In-House Block ($340\u2013$410/nt)"
+        }
+      ],
+      "hotels": [
+        {
+          "name": "Omni Nashville Hotel",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/hotels/omni-nashville-hotel.webp",
+          "corridorSpec": "Connected / Adjacent \u2022 Direct Indoor Connector to MCC (Music City Center)",
+          "typicalRate": "$399/nt",
+          "summary": "Physically integrated with Music City Center & Country Music Hall of Fame.",
+          "gsaPerDiemCap": "$220\u2013$260/nt (Seasonal)"
+        },
+        {
+          "name": "JW Marriott Nashville",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/hotels/jw-marriott-nashville.webp",
+          "corridorSpec": "Luxury Client Hosting \u2022 60-Second Walk Across 8th Ave S (Music City Center)",
+          "typicalRate": "$449/nt",
+          "summary": "SoBro's luxury glass tower with 34th-floor Bourbon Steak overlooking all of Nashville.",
+          "gsaPerDiemCap": "$220\u2013$260/nt (Seasonal)"
+        },
+        {
+          "name": "The Westin Nashville",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/hotels/westin-nashville-sobro.webp",
+          "corridorSpec": "Connected / Adjacent \u2022 Across the Street from MCC West (Music City Center)",
+          "typicalRate": "$379/nt",
+          "summary": "Features L27 Rooftop Lounge & Oak Steakhouse right outside MCC West doors.",
+          "gsaPerDiemCap": "$220\u2013$260/nt (Seasonal)"
+        },
+        {
+          "name": "Hilton Nashville Downtown",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/hotels/hilton-nashville-downtown.webp",
+          "corridorSpec": "Connected / Adjacent \u2022 Across Walk of Fame Park (2 Mins) (Music City Center)",
+          "typicalRate": "$385/nt",
+          "summary": "All-suite convention hotel bridging Music City Center and Lower Broadway.",
+          "gsaPerDiemCap": "$220\u2013$260/nt (Seasonal)"
+        }
+      ],
+      "dining": [
+        {
+          "name": "Bourbon Steak by Michael Mina (34th Floor)",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/dining/bourbon-steak-nashville.webp",
+          "cuisineAndProximity": "Skyline Wagyu & Prime Steakhouse \u2022 1-min walk to JW Marriott 34th floor (Music City Center)",
+          "priceTier": "$$$$",
+          "groupSpec": "14\u201390 Guests (Skyline Private Rooms) ($5,500 \u2013 $30,000+) \u2014 Nashville's #1 executive view dining room directly across from Music City Center.",
+          "reservationTip": "Book 45\u201375 days pre-show"
+        },
+        {
+          "name": "Kayne Prime (The Gulch)",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/dining/kayne-prime-nashville.webp",
+          "cuisineAndProximity": "Modern Boutique Farm-to-Table Steakhouse \u2022 6-min walk / 2-min cab to The Gulch (Music City Center)",
+          "priceTier": "$$$$",
+          "groupSpec": "16\u2013130 Guests ($5,000 \u2013 $28,000+) \u2014 Beloved Nashville culinary steakhouse with soundproof private sommelier rooms.",
+          "reservationTip": "Book 45\u201375 days pre-show"
+        },
+        {
+          "name": "Acme Feed & Seed (4-Floor Broadway Buyout)",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/dining/acme-feed-seed-broadway-buyout.webp",
+          "cuisineAndProximity": "Southern Culinary, Live Stage & Rooftop \u2022 5-min walk to 1st & Broadway (Music City Center)",
+          "priceTier": "$$$",
+          "groupSpec": "50\u2013900 Guests (Multi-Floor / Rooftop) ($8,000 \u2013 $55,000+) \u2014 Turnkey 4-story Lower Broadway live-music & Cumberland River rooftop convention buyout.",
+          "reservationTip": "Book 45\u201375 days pre-show"
+        }
+      ]
     }
   },
   {

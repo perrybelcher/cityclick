@@ -257,6 +257,67 @@ export const UpcomingEventsSchema = z.object({
   retrieved: z.string(),
 });
 
+export const ConventionsAndHospitalitySchema = z.object({
+  sourceName: z.string(),
+  sourceUrl: z.string(),
+  retrieved: z.string(),
+  spec: z
+    .object({
+      campusesSummary: z.string().optional(),
+      hallLicenseRate: z.string().optional(),
+      subventionRule: z.string().optional(),
+      hotelInventorySummary: z.string().optional(),
+      hotelTaxSummary: z.string().optional(),
+      laborSummary: z.string().optional(),
+    })
+    .optional(),
+  venues: z
+    .array(
+      z.object({
+        name: z.string(),
+        exhibitSpace: z.string(),
+        breakouts: z.string(),
+        walkableRooms: z.string(),
+      })
+    )
+    .optional(),
+  shows: z
+    .array(
+      z.object({
+        name: z.string(),
+        dates: z.string(),
+        venue: z.string(),
+        attendance: z.string(),
+        hotelSurge: z.string(),
+      })
+    )
+    .optional(),
+  hotels: z
+    .array(
+      z.object({
+        name: z.string(),
+        imageUrl: z.string().optional(),
+        corridorSpec: z.string(),
+        typicalRate: z.string(),
+        summary: z.string(),
+        gsaPerDiemCap: z.string(),
+      })
+    )
+    .optional(),
+  dining: z
+    .array(
+      z.object({
+        name: z.string(),
+        imageUrl: z.string().optional(),
+        cuisineAndProximity: z.string(),
+        priceTier: z.string(),
+        groupSpec: z.string(),
+        reservationTip: z.string(),
+      })
+    )
+    .optional(),
+});
+
 export const CityRecordSchema = z.object({
   slug: z.string().regex(/^[a-z]{2}\/[a-z0-9-]+$/),
   cityId: z.string().regex(/^\d{5,7}$/),
@@ -290,6 +351,7 @@ export const CityRecordSchema = z.object({
   evInfrastructure: EvInfrastructureSchema.optional(),
   nationalParks: NationalParksSchema.optional(),
   upcomingEvents: UpcomingEventsSchema.optional(),
+  conventionsAndHospitality: ConventionsAndHospitalitySchema.optional(),
   laborAndEconomy: z
     .object({
       unemploymentRatePct: z.number().min(0).max(40),

@@ -162,6 +162,33 @@ export function buildFacts(city: CityRecord): Fact[] {
       asOf: `Retrieved ${parks.retrieved}`,
     });
   }
+  const conv = city.conventionsAndHospitality;
+  if (conv && conv.venues && conv.venues.length > 0) {
+    const venueList = conv.venues
+      .slice(0, 5)
+      .map((v) => `${v.name} (${v.exhibitSpace})`)
+      .join('; ');
+    const hotelSummary = conv.spec?.hotelInventorySummary ? ` ${conv.spec.hotelInventorySummary}.` : '';
+    const taxSummary = conv.spec?.hotelTaxSummary ? ` Combined hotel occupancy tax load: ${conv.spec.hotelTaxSummary}.` : '';
+    out.push({
+      q: `What are the major convention centers and conference venues in ${n}?`,
+      a: `Major convention and conference campuses in ${n} include ${venueList}.${hotelSummary}${taxSummary}`,
+      source: conv.sourceName,
+      asOf: `Retrieved ${conv.retrieved}`,
+    });
+  }
+  if (conv && conv.hotels && conv.hotels.length > 0) {
+    const hotelList = conv.hotels
+      .slice(0, 4)
+      .map((h) => `${h.name} (typical show-week rate ${h.typicalRate}; FY27 GSA cap ${h.gsaPerDiemCap})`)
+      .join('; ');
+    out.push({
+      q: `What are the flagship convention hotels and federal GSA lodging rates in ${n}?`,
+      a: `Flagship convention corridor hotels in ${n} include ${hotelList}.`,
+      source: conv.sourceName,
+      asOf: `FY2026–2027 Schedule (${conv.retrieved})`,
+    });
+  }
   const ind = city.industries ?? [];
   if (ind.length) {
     const und = ind

@@ -738,6 +738,187 @@
       "sourceName": "Ticketmaster Discovery API v2",
       "sourceUrl": "https://developer.ticketmaster.com/",
       "retrieved": "2026-10-31"
+    },
+    "conventionsAndHospitality": {
+      "sourceName": "Conventions.com Municipal CVB & U.S. GSA FY2027 Per Diem Intelligence",
+      "sourceUrl": "https://conventions.com/cities/charlotte",
+      "retrieved": "2026-11-14",
+      "spec": {
+        "campusesSummary": "7+ Major Convention & Resort Campuses in Charlotte",
+        "hallLicenseRate": "$0.34\u2013$0.52 / net sq. ft. (Municipal Standard)",
+        "subventionRule": "50%\u2013100% Hall License Subvention w/ 1,500+ Peak Room Nights in Charlotte + $30/nt Master Block Rebate",
+        "hotelInventorySummary": "1,705+ Verified Convention Hotel Keys across 4 HQ Properties",
+        "hotelTaxSummary": "13.5% Combined Charlotte Hotel Occupancy & Tourism Assessment",
+        "laborSummary": "$118\u2013$177/hr GSC Floor Rate (vs. $31.40/hr BLS Wage \u2022 3.8\u00d7 Markup \u2022 Right-to-Work State (Exhibitor-Friendly Self-Install))"
+      },
+      "venues": [
+        {
+          "name": "The Park Expo & Conference Center",
+          "exhibitSpace": "224,000 sq. ft. Max Hall: 100,000 sq. ft.",
+          "breakouts": "62,720 sq. ft. (10 configurable breakout rooms)",
+          "walkableRooms": "2,640+ District Rooms (Anchored by Sheraton Charlotte Hotel)"
+        },
+        {
+          "name": "Charlotte Convention Center",
+          "exhibitSpace": "66,737 sq. ft. Max Hall: 16,001 sq. ft.",
+          "breakouts": "18,686 sq. ft. (29 configurable breakout rooms)",
+          "walkableRooms": "3,120+ District Rooms (Anchored by Sheraton Charlotte Hotel)"
+        },
+        {
+          "name": "Sheraton Charlotte Hotel",
+          "exhibitSpace": "66,737 sq. ft. Max Hall: 16,001 sq. ft.",
+          "breakouts": "18,686 sq. ft. (29 configurable breakout rooms)",
+          "walkableRooms": "305 In-House Tower Keys (Direct Elevator to Ballroom Level)"
+        },
+        {
+          "name": "Le Meridien Charlotte",
+          "exhibitSpace": "51,774 sq. ft. Max Hall: 16,116 sq. ft.",
+          "breakouts": "14,497 sq. ft. (29 configurable breakout rooms)",
+          "walkableRooms": "2,880+ District Rooms (Anchored by Le Meridien Charlotte)"
+        },
+        {
+          "name": "The Westin Charlotte",
+          "exhibitSpace": "45,780 sq. ft. Max Hall: 16,276 sq. ft.",
+          "breakouts": "12,818 sq. ft. (19 configurable breakout rooms)",
+          "walkableRooms": "700 In-House Tower Keys (Direct Elevator to Ballroom Level)"
+        },
+        {
+          "name": "Hilton Charlotte Uptown",
+          "exhibitSpace": "30,000 sq. ft. Max Hall: 12,000 sq. ft.",
+          "breakouts": "8,400 sq. ft. (21 configurable breakout rooms)",
+          "walkableRooms": "400 In-House Tower Keys (Direct Elevator to Ballroom Level)"
+        },
+        {
+          "name": "Novant Health Conference Center Regional Event & Conference Facility (25k sf)",
+          "exhibitSpace": "25,000 sq. ft. Max Hall: 12,000 sq. ft.",
+          "breakouts": "7,000 sq. ft. (6 configurable breakout rooms)",
+          "walkableRooms": "250+ District Rooms (Anchored by Sheraton Charlotte Hotel)"
+        },
+        {
+          "name": "Charlotte Convention Center Tier-1 Municipal Flagship Campus",
+          "exhibitSpace": "600,000 sq. ft. Max Hall: 280,000 sq. ft.",
+          "breakouts": "55 Meeting & Breakout Rooms",
+          "walkableRooms": "1,705+ Verified Convention Hotel Keys across 4 HQ Properties"
+        }
+      ],
+      "shows": [
+        {
+          "name": "Southeastern Foot and Ankle Conference (The Super Conference) 2026",
+          "dates": "Jan 29 \u2013 Feb 1, 2026",
+          "venue": "The Westin Charlotte",
+          "attendance": "850+ B2B Attendees",
+          "hotelSurge": "1.5\u00d7 In-House Block ($310\u2013$410/nt)"
+        },
+        {
+          "name": "Southern Farm Show 2026 Manufacturing & Supply Chain",
+          "dates": "Feb 4\u20136, 2026",
+          "venue": "The Park Expo & Conference Center",
+          "attendance": "30,000+ B2B Attendees",
+          "hotelSurge": "2.2\u00d7 Citywide Peak ($455\u2013$515/nt)"
+        },
+        {
+          "name": "Carolinas Credit Union League LAUNCH Conference 2026 Fice, FinTech & Banking",
+          "dates": "Feb 4\u20135, 2026",
+          "venue": "The Westin Charlotte",
+          "attendance": "550+ B2B Attendees",
+          "hotelSurge": "1.4\u00d7 In-House Block ($280\u2013$340/nt)"
+        },
+        {
+          "name": "Carolinas Credit Union League Annual Meeting 2026 Fice, FinTech & Banking",
+          "dates": "Jun 7\u20139, 2026",
+          "venue": "Hilton Charlotte Uptown",
+          "attendance": "650+ B2B Attendees",
+          "hotelSurge": "1.4\u00d7 In-House Block ($285\u2013$375/nt)"
+        },
+        {
+          "name": "Carolinas Roofing & Sheet Metal Contractors Association Annual Convention 2026",
+          "dates": "Jun 16\u201318, 2026",
+          "venue": "Le Meridien Charlotte",
+          "attendance": "650+ B2B Attendees",
+          "hotelSurge": "1.3\u00d7 Corridor Block ($255\u2013$305/nt)"
+        },
+        {
+          "name": "North Carolina SHRM State Conference 2026",
+          "dates": "Sep 23\u201325, 2026",
+          "venue": "Le Meridien Charlotte",
+          "attendance": "950+ B2B Attendees",
+          "hotelSurge": "1.3\u00d7 Corridor Block ($270\u2013$320/nt)"
+        },
+        {
+          "name": "Novant Health Nursing Symposium 2026",
+          "dates": "Oct 14\u201315, 2026",
+          "venue": "Novant Health Conference Center",
+          "attendance": "550+ B2B Attendees",
+          "hotelSurge": "1.5\u00d7 Corridor Block ($315\u2013$385/nt)"
+        },
+        {
+          "name": "NCACPA Professional Development Strategy Conference 2026 Fice, FinTech & Banking",
+          "dates": "Nov 16\u201318, 2026",
+          "venue": "Sheraton Charlotte Hotel",
+          "attendance": "700+ B2B Attendees",
+          "hotelSurge": "1.5\u00d7 In-House Block ($300\u2013$400/nt)"
+        }
+      ],
+      "hotels": [
+        {
+          "name": "Sheraton Charlotte Hotel",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/hotels/encore-las-vegas.webp",
+          "corridorSpec": "Primary Corridor HQ Anchor \u2022 Nearest Corridor HQ (2\u20134 Min Transfer) (Charlotte Convention Center)",
+          "typicalRate": "$351/nt",
+          "summary": "Features 66,737 sq. ft. of meeting space; resort/destination fees waived via Conventions.com Housing Desk (Sara Chaval \u00b7 (702) 576-1312).",
+          "gsaPerDiemCap": "$197\u2013$237/nt (Seasonal)"
+        },
+        {
+          "name": "Le Meridien Charlotte",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/hotels/wynn-las-vegas.webp",
+          "corridorSpec": "Corridor Group Block \u2022 6-Min Corridor Shuttle / Drive (Charlotte Convention Center)",
+          "typicalRate": "$314/nt",
+          "summary": "Features 51,774 sq. ft. of meeting space; resort/destination fees waived via Conventions.com Housing Desk (Sara Chaval \u00b7 (702) 576-1312).",
+          "gsaPerDiemCap": "$197\u2013$237/nt (Seasonal)"
+        },
+        {
+          "name": "The Westin Charlotte",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/hotels/mandalay-bay-resort-and-casino.webp",
+          "corridorSpec": "Corridor Group Block \u2022 8-Min Corridor Shuttle / Drive (Charlotte Convention Center)",
+          "typicalRate": "$300/nt",
+          "summary": "Features 45,780 sq. ft. of meeting space; resort/destination fees waived via Conventions.com Housing Desk (Sara Chaval \u00b7 (702) 576-1312).",
+          "gsaPerDiemCap": "$197\u2013$237/nt (Seasonal)"
+        },
+        {
+          "name": "Hilton Charlotte Uptown",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/hotels/hilton-anatole.webp",
+          "corridorSpec": "Per-Diem / Transit Hack \u2022 10-Min Corridor Shuttle / Drive (Charlotte Convention Center)",
+          "typicalRate": "$288/nt",
+          "summary": "Features 30,000 sq. ft. of meeting space; resort/destination fees waived via Conventions.com Housing Desk (Sara Chaval \u00b7 (702) 576-1312).",
+          "gsaPerDiemCap": "$197\u2013$237/nt (Seasonal)"
+        }
+      ],
+      "dining": [
+        {
+          "name": "Dean's Italian Steakhouse",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/dining/charlotte-dean-s-italian-steakhouse.webp",
+          "cuisineAndProximity": "Restaurant \u2022 3-min walk / cab on 128 E Brooklyn Vlg Ave (Charlotte Convention Center)",
+          "priceTier": "$$$$",
+          "groupSpec": "16\u2013120 Guests (Private Boardrooms & Main Salon) ($4,500 \u2013 $25,000+ F&B Min) \u2014 Verified Charlotte executive dining & sponsor reception venue (4.9\u2605 across 11,497 reviews on 128 E Brooklyn Vlg Ave).",
+          "reservationTip": "30\u201360 days prior to show week"
+        },
+        {
+          "name": "Dressler's",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/dining/charlotte-dressler-s.webp",
+          "cuisineAndProximity": "Steak House \u2022 5-min walk (1100 Metropolitan Ave Unit 125) (Charlotte Convention Center)",
+          "priceTier": "$$$",
+          "groupSpec": "20\u2013160 Guests (Wine Cellar PDR & Full Buyout) ($5,500 \u2013 $32,000+ F&B Min) \u2014 Verified Charlotte executive dining & sponsor reception venue (4.6\u2605 across 1,387 reviews on 1100 Metropolitan Ave Unit 125).",
+          "reservationTip": "30\u201360 days prior to show week"
+        },
+        {
+          "name": "Steak 48",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/dining/charlotte-steak-48.webp",
+          "cuisineAndProximity": "Steak House \u2022 6-min walk (4425 Sharon Rd) (Charlotte Convention Center)",
+          "priceTier": "$$$$",
+          "groupSpec": "14\u201385 Guests (Executive Chef's Room & Terrace) ($3,800 \u2013 $18,500+ F&B Min) \u2014 Verified Charlotte executive dining & sponsor reception venue (4.6\u2605 across 2,182 reviews on 4425 Sharon Rd).",
+          "reservationTip": "30\u201360 days prior to show week"
+        }
+      ]
     }
   },
   {
@@ -1430,6 +1611,151 @@
       "sourceName": "Ticketmaster Discovery API v2",
       "sourceUrl": "https://developer.ticketmaster.com/",
       "retrieved": "2026-10-31"
+    },
+    "conventionsAndHospitality": {
+      "sourceName": "Conventions.com Municipal CVB & U.S. GSA FY2027 Per Diem Intelligence",
+      "sourceUrl": "https://conventions.com/cities/raleigh",
+      "retrieved": "2026-11-14",
+      "spec": {
+        "campusesSummary": "2+ Major Convention & Resort Campuses in Raleigh",
+        "hallLicenseRate": "$0.34\u2013$0.52 / net sq. ft. (Municipal Standard)",
+        "subventionRule": "50%\u2013100% Hall License Subvention w/ 1,500+ Peak Room Nights in Raleigh + $30/nt Master Block Rebate",
+        "hotelInventorySummary": "4,500+ Walkable Convention Corridor Hotel Rooms",
+        "hotelTaxSummary": "13.5% Combined Raleigh Hotel Occupancy & Tourism Assessment",
+        "laborSummary": "$118\u2013$177/hr GSC Floor Rate (vs. $31.40/hr BLS Wage \u2022 3.8\u00d7 Markup \u2022 Right-to-Work State (Exhibitor-Friendly Self-Install))"
+      },
+      "venues": [
+        {
+          "name": "Raleigh Convention Center Tier-1 Municipal Flagship Campus (500k sf)",
+          "exhibitSpace": "500,000 sq. ft. Max Hall: 150,000 sq. ft.",
+          "breakouts": "140,000 sq. ft. (20 configurable breakout rooms)",
+          "walkableRooms": "2,500+ convention corridor rooms (Anchored by Courtyard by Marriott Raleigh)"
+        },
+        {
+          "name": "Atlantic Union Bank Convention Center",
+          "exhibitSpace": "85,000 sq. ft. Max Hall: 46,750 sq. ft.",
+          "breakouts": "23,800 sq. ft. (16 configurable breakout rooms)",
+          "walkableRooms": "1,800+ District Rooms (Anchored by Courtyard by Marriott Raleigh)"
+        },
+        {
+          "name": "Raleigh Convention Center Tier-1 Municipal Flagship Campus",
+          "exhibitSpace": "500,000 sq. ft. Max Hall: 150,000 sq. ft.",
+          "breakouts": "20 Meeting & Breakout Rooms",
+          "walkableRooms": "4,500+ Walkable Convention Corridor Hotel Rooms"
+        },
+        {
+          "name": "Labor Regime & Carpenter Scale",
+          "exhibitSpace": "NV Union Contracts \u2022 $148\u2013$225/hr GSC (vs. $34.18 BLS)",
+          "breakouts": "AZ Right-to-Work \u2022 $108\u2013$134/hr GSC (vs. $31.40 BLS)",
+          "walkableRooms": "$118\u2013$177/hr GSC Floor Rate (vs. $31.40/hr BLS Wage \u2022 3.8\u00d7 Markup \u2022 Right-to-Work State (Exhibitor-Friendly Self-Install))"
+        },
+        {
+          "name": "Exhibitor Self-Install Rights",
+          "exhibitSpace": "Pop-Up Only (<100 sf) \u2022 Strict Teamsters 631 Dock",
+          "breakouts": "Full Self-Install & Hand-Carry Allowed",
+          "walkableRooms": "Standard Hand-Carry & Pop-Up Permitted"
+        },
+        {
+          "name": "Hall License & Subvention",
+          "exhibitSpace": "$0.37\u2013$0.55/sf (LVCC) or $0 w/ Resort Block",
+          "breakouts": "$0.32\u2013$0.48/sf (50%\u2013100% CVB Subvention)",
+          "walkableRooms": "$0.34\u2013$0.52 / net sq. ft. (Municipal Standard)"
+        },
+        {
+          "name": "Hotel Room & Banquet Tax Load",
+          "exhibitSpace": "13.38% Room Tax + $48 Resort Fee \u2022 33.4% BEO Load",
+          "breakouts": "12.57% Room Tax ($0 Resort Fee) \u2022 33.6% BEO Load",
+          "walkableRooms": "13.5% Combined Raleigh Hotel Occupancy & Tourism Assessment"
+        },
+        {
+          "name": "20A Electrical Floor Drop",
+          "exhibitSpace": "$385\u2013$445 (48\u00d7 Grid)",
+          "breakouts": "$295\u2013$385 (42\u00d7 Grid)",
+          "walkableRooms": "$315\u2013$420 / 20A Floor Drop (42\u00d7 Grid)"
+        }
+      ],
+      "shows": [
+        {
+          "name": "North Carolina Veterinary Conference 2026",
+          "dates": "Nov 7\u20138, 2026",
+          "venue": "Raleigh Convention Center",
+          "attendance": "1,200+ B2B Attendees",
+          "hotelSurge": "1.3\u00d7 Corridor Block ($265\u2013$345/nt)"
+        },
+        {
+          "name": "2026 NSBP - NSHP Joint Conference 2026",
+          "dates": "Nov 17\u201321, 2026",
+          "venue": "Raleigh Convention Center",
+          "attendance": "1,000+ B2B Attendees",
+          "hotelSurge": "1.5\u00d7 Corridor Block ($300\u2013$370/nt)"
+        },
+        {
+          "name": "A Shopping Spree! 2026",
+          "dates": "Nov 20\u201322, 2026",
+          "venue": "Atlantic Union Bank Convention Center",
+          "attendance": "8,000+ B2B Attendees",
+          "hotelSurge": "1.7\u00d7 Campus Ring ($340\u2013$430/nt)"
+        },
+        {
+          "name": "2026 Women Lead NC: Raleigh 2026",
+          "dates": "Dec 2\u20132, 2026",
+          "venue": "Atlantic Union Bank Convention Center",
+          "attendance": "950+ B2B Attendees",
+          "hotelSurge": "1.3\u00d7 Corridor Block ($270\u2013$350/nt)"
+        }
+      ],
+      "hotels": [
+        {
+          "name": "Courtyard by Marriott Raleigh",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/hotels/austin-proper-hotel.webp",
+          "corridorSpec": "Primary Corridor HQ Anchor \u2022 Nearest Corridor HQ (2\u20134 Min Transfer) (Raleigh Convention Center)",
+          "typicalRate": "$346/nt",
+          "summary": "Features 6,500 sq. ft. of meeting space; resort/destination fees waived via Conventions.com Housing Desk (Sara Chaval \u00b7 (702) 576-1312).",
+          "gsaPerDiemCap": "$197\u2013$237/nt (Seasonal)"
+        },
+        {
+          "name": "Hampton Inn & Suites by Hilton Raleigh",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/hotels/jw-marriott-austin.webp",
+          "corridorSpec": "Corridor Group Block \u2022 6-Min Corridor Shuttle / Drive (Raleigh Convention Center)",
+          "typicalRate": "$324/nt",
+          "summary": "Features 3,200 sq. ft. of meeting space; resort/destination fees waived via Conventions.com Housing Desk (Sara Chaval \u00b7 (702) 576-1312).",
+          "gsaPerDiemCap": "$197\u2013$237/nt (Seasonal)"
+        },
+        {
+          "name": "Holiday Inn Express & Suites Raleigh",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/hotels/marriott-marquis-houston.webp",
+          "corridorSpec": "Corridor Group Block \u2022 8-Min Corridor Shuttle / Drive (Raleigh Convention Center)",
+          "typicalRate": "$300/nt",
+          "summary": "Features 2,400 sq. ft. of meeting space; resort/destination fees waived via Conventions.com Housing Desk (Sara Chaval \u00b7 (702) 576-1312).",
+          "gsaPerDiemCap": "$197\u2013$237/nt (Seasonal)"
+        }
+      ],
+      "dining": [
+        {
+          "name": "Second Empire Restaurant and Tavern",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/dining/raleigh-second-empire-restaurant-and.webp",
+          "cuisineAndProximity": "American Restaurant \u2022 3-min walk / cab on 330 Hillsborough St (Raleigh Convention Center)",
+          "priceTier": "$$$$",
+          "groupSpec": "16\u2013120 Guests (Private Boardrooms & Main Salon) ($4,500 \u2013 $25,000+ F&B Min) \u2014 Verified Raleigh executive dining & sponsor reception venue (4.8\u2605 across 1,948 reviews on 330 Hillsborough St).",
+          "reservationTip": "30\u201360 days prior to show week"
+        },
+        {
+          "name": "The Capital Grille",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/dining/raleigh-the-capital-grille.webp",
+          "cuisineAndProximity": "Fine Dining Restaurant \u2022 5-min walk (4242 Six Forks Rd) (Raleigh Convention Center)",
+          "priceTier": "$$$$",
+          "groupSpec": "20\u2013160 Guests (Wine Cellar PDR & Full Buyout) ($5,500 \u2013 $32,000+ F&B Min) \u2014 Verified Raleigh executive dining & sponsor reception venue (4.6\u2605 across 2,309 reviews on 4242 Six Forks Rd).",
+          "reservationTip": "30\u201360 days prior to show week"
+        },
+        {
+          "name": "Sullivan's Steakhouse",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/dining/raleigh-sullivan-s-steakhouse.webp",
+          "cuisineAndProximity": "Steak House \u2022 6-min walk (410 Glenwood Ave #100) (Raleigh Convention Center)",
+          "priceTier": "$$$$",
+          "groupSpec": "14\u201385 Guests (Executive Chef's Room & Terrace) ($3,800 \u2013 $18,500+ F&B Min) \u2014 Verified Raleigh executive dining & sponsor reception venue (4.7\u2605 across 10,073 reviews on 410 Glenwood Ave #100).",
+          "reservationTip": "30\u201360 days prior to show week"
+        }
+      ]
     }
   },
   {
@@ -4411,7 +4737,7 @@
         },
         {
           "name": "Parkside Town Commons Cary MB.HPC",
-          "address": "7129 O’Kelly Chapel Road, Cary, NC 27519",
+          "address": "7129 O\u2019Kelly Chapel Road, Cary, NC 27519",
           "network": "MERCEDES_BENZ",
           "dcFastPorts": 9,
           "level2Ports": 0,
@@ -19021,7 +19347,7 @@
           "fullName": "Cape Lookout National Seashore",
           "designation": "National Seashore",
           "distanceMiles": 45.2,
-          "description": "A boat ride three miles off-shore brings you to the barrier islands of Cape Lookout National Seashore. Horse watching, shelling, fishing, birding, camping, lighthouse climbing, and touring historic villages--there’s something for...",
+          "description": "A boat ride three miles off-shore brings you to the barrier islands of Cape Lookout National Seashore. Horse watching, shelling, fishing, birding, camping, lighthouse climbing, and touring historic villages--there\u2019s something for...",
           "url": "https://www.nps.gov/calo/index.htm",
           "lat": 34.826796,
           "lng": -76.343191
@@ -22700,7 +23026,7 @@
           "lng": -80.11198
         },
         {
-          "name": "Carmine’s Import Service - Tesla Destination",
+          "name": "Carmine\u2019s Import Service - Tesla Destination",
           "address": "318 W Mountain St, Kernersville, NC 27284",
           "network": "Tesla Destination",
           "dcFastPorts": 0,

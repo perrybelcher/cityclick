@@ -721,6 +721,187 @@
       "sourceName": "Ticketmaster Discovery API v2",
       "sourceUrl": "https://developer.ticketmaster.com/",
       "retrieved": "2026-10-31"
+    },
+    "conventionsAndHospitality": {
+      "sourceName": "Conventions.com Municipal CVB & U.S. GSA FY2027 Per Diem Intelligence",
+      "sourceUrl": "https://conventions.com/cities/denver",
+      "retrieved": "2026-11-14",
+      "spec": {
+        "campusesSummary": "11+ Major Convention & Resort Campuses in Denver",
+        "hallLicenseRate": "$0.34\u2013$0.52 / net sq. ft. (Municipal Standard)",
+        "subventionRule": "50%\u2013100% Hall License Subvention w/ 1,500+ Peak Room Nights in Denver + $30/nt Master Block Rebate",
+        "hotelInventorySummary": "4,742+ Verified Convention Hotel Keys across 7 HQ Properties",
+        "hotelTaxSummary": "15.75% Combined Denver Hotel Occupancy & Tourism Assessment",
+        "laborSummary": "$118\u2013$177/hr GSC Floor Rate (vs. $31.40/hr BLS Wage \u2022 3.8\u00d7 Markup \u2022 Hybrid Union / Right-to-Work (IATSE Local 7))"
+      },
+      "venues": [
+        {
+          "name": "Gaylord Rockies Resort & Convention Center (DEN Airport)",
+          "exhibitSpace": "175,000 sq. ft. Aurora Exhibit Hall Max Hall: 175,000 sq. ft. column-free hall + 60,000 sq. ft. Colorado Ballroom",
+          "breakouts": "500,000+ sq. ft. (80+ breakout rooms (1,501 guest rooms))",
+          "walkableRooms": "3,200 In-House Tower Keys (Direct Elevator to Ballroom Level)"
+        },
+        {
+          "name": "Sheraton Denver Downtown Hotel",
+          "exhibitSpace": "131,670 sq. ft. Max Hall: 28,001 sq. ft.",
+          "breakouts": "36,868 sq. ft. (52 configurable breakout rooms)",
+          "walkableRooms": "1,238 In-House Tower Keys (Direct Elevator to Ballroom Level)"
+        },
+        {
+          "name": "Colorado Convention Center",
+          "exhibitSpace": "60,600 sq. ft. Max Hall: 31,000 sq. ft.",
+          "breakouts": "16,968 sq. ft. (35 configurable breakout rooms)",
+          "walkableRooms": "3,240+ District Rooms (Anchored by Hyatt Regency Denver at Colorado ConvCtr)"
+        },
+        {
+          "name": "Hyatt Regency Denver at Colorado ConvCtr",
+          "exhibitSpace": "60,600 sq. ft. Max Hall: 31,000 sq. ft.",
+          "breakouts": "16,968 sq. ft. (35 configurable breakout rooms)",
+          "walkableRooms": "1,100 In-House Tower Keys (Direct Elevator to Ballroom Level)"
+        },
+        {
+          "name": "Grand Hyatt Denver",
+          "exhibitSpace": "52,600 sq. ft. Max Hall: 19,000 sq. ft.",
+          "breakouts": "14,728 sq. ft. (25 configurable breakout rooms)",
+          "walkableRooms": "516 In-House Tower Keys (Direct Elevator to Ballroom Level)"
+        },
+        {
+          "name": "Denver Marriott Tech Center",
+          "exhibitSpace": "51,794 sq. ft. Max Hall: 12,240 sq. ft.",
+          "breakouts": "14,502 sq. ft. (28 configurable breakout rooms)",
+          "walkableRooms": "605 In-House Tower Keys (Direct Elevator to Ballroom Level)"
+        },
+        {
+          "name": "Renaissance Denver Central Park Hotel",
+          "exhibitSpace": "42,522 sq. ft. Max Hall: 15,500 sq. ft.",
+          "breakouts": "11,906 sq. ft. (22 configurable breakout rooms)",
+          "walkableRooms": "400 In-House Tower Keys (Direct Elevator to Ballroom Level)"
+        },
+        {
+          "name": "The Westin Denver Downtown",
+          "exhibitSpace": "31,197 sq. ft. Max Hall: 12,000 sq. ft.",
+          "breakouts": "8,735 sq. ft. (18 configurable breakout rooms)",
+          "walkableRooms": "432 In-House Tower Keys (Direct Elevator to Ballroom Level)"
+        }
+      ],
+      "shows": [
+        {
+          "name": "79th Society for Range Management Annual Meeting 2026 Manufacturing & Supply Chain",
+          "dates": "Feb 8\u201312, 2026",
+          "venue": "Sheraton Denver Downtown Hotel",
+          "attendance": "1,500+ B2B Attendees",
+          "hotelSurge": "1.3\u00d7 In-House Block ($265\u2013$345/nt)"
+        },
+        {
+          "name": "Colorado Rural Electric Association Annual Meeting 2026 Manufacturing & Supply Chain",
+          "dates": "Feb 8\u201310, 2026",
+          "venue": "Renaissance Denver Central Park Hotel",
+          "attendance": "550+ B2B Attendees",
+          "hotelSurge": "1.5\u00d7 In-House Block ($320\u2013$420/nt)"
+        },
+        {
+          "name": "CASB Winter Legislative Conference 2026 Fice, FinTech & Banking",
+          "dates": "Feb 26\u201327, 2026",
+          "venue": "Renaissance Denver Central Park Hotel",
+          "attendance": "650+ B2B Attendees",
+          "hotelSurge": "1.4\u00d7 In-House Block ($290\u2013$350/nt)"
+        },
+        {
+          "name": "3D Seismic Symposium 2026 Manufacturing & Supply Chain",
+          "dates": "Mar 10\u201311, 2026",
+          "venue": "Grand Hyatt Denver",
+          "attendance": "550+ B2B Attendees",
+          "hotelSurge": "1.4\u00d7 In-House Block ($285\u2013$345/nt)"
+        },
+        {
+          "name": "Rocky Mountain Information Security Conference 2026",
+          "dates": "Jun 9\u201311, 2026",
+          "venue": "Hyatt Regency Denver at Colorado ConvCtr",
+          "attendance": "950+ B2B Attendees",
+          "hotelSurge": "1.3\u00d7 In-House Block ($255\u2013$305/nt)"
+        },
+        {
+          "name": "Colorado Healthcare Association Annual Fall Conference 2026",
+          "dates": "Sep 21\u201323, 2026",
+          "venue": "Hyatt Regency Denver at Colorado ConvCtr",
+          "attendance": "650+ B2B Attendees",
+          "hotelSurge": "1.3\u00d7 In-House Block ($270\u2013$320/nt)"
+        },
+        {
+          "name": "COCPA Annual Summit 2026 Fice, FinTech & Banking",
+          "dates": "Sep 22\u201323, 2026",
+          "venue": "Grand Hyatt Denver",
+          "attendance": "500+ B2B Attendees",
+          "hotelSurge": "1.4\u00d7 In-House Block ($280\u2013$340/nt)"
+        },
+        {
+          "name": "CO-ALAS Annual Convention 2026",
+          "dates": "Oct 8\u201310, 2026",
+          "venue": "Hyatt Regency Denver Tech Center",
+          "attendance": "650+ B2B Attendees",
+          "hotelSurge": "1.5\u00d7 In-House Block ($315\u2013$415/nt)"
+        }
+      ],
+      "hotels": [
+        {
+          "name": "Hyatt Regency Denver at Colorado Convention Center",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/hotels/hyatt-regency-denver-ccc.webp",
+          "corridorSpec": "Connected / Adjacent \u2022 Directly Across 14th St from Blue Bear (Colorado Convention Center)",
+          "typicalRate": "$329/nt",
+          "summary": "Official headquarters tower 60 seconds from CCC lobby with 27th-floor Peaks Lounge.",
+          "gsaPerDiemCap": "$197\u2013$237/nt (Seasonal)"
+        },
+        {
+          "name": "Embassy Suites Denver Downtown Convention Center",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/hotels/embassy-suites-denver-downtown-ccc.webp",
+          "corridorSpec": "Connected / Adjacent \u2022 Directly Across Stout/14th St (60 Secs) (Colorado Convention Center)",
+          "typicalRate": "$289/nt",
+          "summary": "Closest all-suite hotel to CCC main doors with complimentary cooked-to-order breakfast.",
+          "gsaPerDiemCap": "$197\u2013$237/nt (Seasonal)"
+        },
+        {
+          "name": "Le M\u00e9ridien Denver Downtown",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/hotels/le-meridien-ac-denver-downtown.webp",
+          "corridorSpec": "Luxury Client Hosting \u2022 2-Min Walk + 54thirty Open-Air Rooftop (Colorado Convention Center)",
+          "typicalRate": "$349/nt",
+          "summary": "Features Denver's highest open-air rooftop bar (54thirty) 1 block from CCC.",
+          "gsaPerDiemCap": "$197\u2013$237/nt (Seasonal)"
+        },
+        {
+          "name": "Sheraton Denver Downtown Hotel",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/hotels/sheraton-denver-downtown.webp",
+          "corridorSpec": "Skybridge / Walk Ring \u2022 6-Min Walk Along 15th/16th St (Colorado Convention Center)",
+          "typicalRate": "$299/nt",
+          "summary": "Renovated 1,238-room convention block powerhouse on 16th Street Mall.",
+          "gsaPerDiemCap": "$197\u2013$237/nt (Seasonal)"
+        }
+      ],
+      "dining": [
+        {
+          "name": "Guard and Grace",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/dining/guard-and-grace-denver.webp",
+          "cuisineAndProximity": "Modern Oak-Fired Prime Steakhouse \u2022 6-min walk north on 14th/California (Colorado Convention Center)",
+          "priceTier": "$$$$",
+          "groupSpec": "16\u2013200 Guests (Glass Wine Rooms & Patio) ($5,000 \u2013 $32,000+) \u2014 Chef Troy Guard's airy 9,000 sq. ft. contemporary steakhouse\u2014#1 corporate dinner venue in Downtown Denver.",
+          "reservationTip": "Book 45\u201375 days pre-show"
+        },
+        {
+          "name": "Ocean Prime (Larimer Square)",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/dining/ocean-prime-larimer-square.webp",
+          "cuisineAndProximity": "Prime Steaks & Fresh Seafood \u2022 6-min walk to historic Larimer Square (Colorado Convention Center)",
+          "priceTier": "$$$$",
+          "groupSpec": "14\u2013120 Guests ($4,500 \u2013 $24,000+) \u2014 String-lit Larimer Square corner anchor with dedicated AV boardrooms.",
+          "reservationTip": "Book 45\u201375 days pre-show"
+        },
+        {
+          "name": "The Capital Grille Denver",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/dining/capital-grille-larimer-denver.webp",
+          "cuisineAndProximity": "Dry-Aged Prime Steakhouse \u2022 6-min walk on Larimer St (Colorado Convention Center)",
+          "priceTier": "$$$$",
+          "groupSpec": "14\u201390 Guests ($4,200 \u2013 $22,000+) \u2014 Reliable executive boardroom hospitality 4 blocks from CCC.",
+          "reservationTip": "Book 45\u201375 days pre-show"
+        }
+      ]
     }
   },
   {

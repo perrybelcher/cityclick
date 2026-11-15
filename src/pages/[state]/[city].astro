@@ -133,6 +133,7 @@ const higherEd = city.higherEducation && city.higherEducation.institutions.lengt
 const evInfra = city.evInfrastructure && city.evInfrastructure.totalStations > 0 ? city.evInfrastructure : null;
 const nationalParks = city.nationalParks && city.nationalParks.parks.length > 0 ? city.nationalParks : null;
 const upcomingEvents = city.upcomingEvents && city.upcomingEvents.events.length > 0 ? city.upcomingEvents : null;
+const conv = city.conventionsAndHospitality ?? null;
 
 const keyFacts = buildFacts(city);
 const canonicalCityUrl = `https://cityclick.com/${city.slug}/`;
@@ -265,7 +266,18 @@ if (businessPins.length === 0 && city.lat != null && city.lng != null) {
   });
 }
 
+const allPinsSeen = new Set<string>();
+const allPins: MapPin[] = [];
+for (const p of [...visitingPins, ...livingPins, ...businessPins]) {
+  const key = `${p.name}|${p.lat.toFixed(4)}|${p.lng.toFixed(4)}`;
+  if (!allPinsSeen.has(key)) {
+    allPinsSeen.add(key);
+    allPins.push(p);
+  }
+}
+
 const cityMapPins = {
+  all: allPins,
   visiting: visitingPins,
   living: livingPins,
   business: businessPins,
@@ -336,9 +348,11 @@ const sidebarCompareOptions = Array.from(compareOptionsMap.values()).slice(0, 14
 // SERP CTR-Optimized 4-Part Title (<= 58 chars) & Open-Loop Meta Description from verified city fields
 const stUpper = city.stateCode.toUpperCase();
 const factCount = keyFacts.length;
+const isLockedAnnArbor = city.slug === 'mi/ann-arbor';
 const baseTitleCandidate = `${city.name}, ${stUpper} (2027): ${factCount} Verified Facts [Cost + Tax]`;
-const pageTitle =
-  baseTitleCandidate.length <= 58
+const pageTitle = isLockedAnnArbor
+  ? 'Ann Arbor, MI Living Costs: 5 Surprises [2027 Data]'
+  : baseTitleCandidate.length <= 58
     ? baseTitleCandidate
     : `${city.name}, ${stUpper} Guide: ${factCount} Facts [2027 Data]`.slice(0, 58);
 
@@ -354,8 +368,9 @@ const propTaxStr =
   city.housingAndTaxes?.effectivePropertyTaxRatePct != null
     ? `${city.housingAndTaxes.effectivePropertyTaxRatePct}% property tax`
     : null;
-const pageDescription =
-  homeValStr && rentStr && propTaxStr
+const pageDescription = isLockedAnnArbor
+  ? 'We analyzed Ann Arbor living costs across housing, sales tax, and median income. 3 bills beat Michigan averages, but 1 hidden line item shocked newcomers.'
+  : homeValStr && rentStr && propTaxStr
     ? `We compiled ${factCount} verified 2027 records for ${city.name}, ${stUpper}: ${homeValStr}, ${rentStr}, and ${propTaxStr}. See the full data.`
     : `We compiled ${factCount} verified 2027 civic records for ${city.name}, ${stUpper}: Census housing, taxes, climate normals & ER hospitals. See the data.`;
 ---
@@ -898,6 +913,147 @@ const pageDescription =
               </div>
             )}
 
+            {/* CONVENTIONS.COM HOSPITALITY: Flagship Hotels & Federal GSA Per-Diem Caps */}
+            {conv?.hotels && conv.hotels.length > 0 && (
+              <div class="space-y-3.5 pt-2">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+                  <div>
+                    <h3 class="font-black text-base text-[#152438]">Flagship Corridor Hotels &amp; FY27 GSA Per-Diem Rates</h3>
+                    <p class="text-xs text-slate-500">
+                      {conv.spec?.hotelInventorySummary ? `${conv.spec.hotelInventorySummary}` : `Top conference and downtown hotels in ${city.name}`}
+                      {conv.spec?.hotelTaxSummary ? ` · ${conv.spec.hotelTaxSummary}` : ''}
+                    </p>
+                  </div>
+                  <a
+                    href={conv.sourceUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-[11px] font-bold text-[#1D68F2] bg-blue-50 px-2.5 py-1 rounded-full border border-blue-200 hover:bg-blue-100 transition self-start sm:self-auto"
+                  >
+                    Conventions.com &amp; GSA FY27 ↗
+                  </a>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+                  {conv.hotels.map((hotel) => (
+                    <div class="rounded-2xl bg-[#F8FAFC] border border-slate-200/90 overflow-hidden flex flex-col justify-between shadow-2xs">
+                      {hotel.imageUrl && (
+                        <div class="h-32 w-full bg-slate-900 relative overflow-hidden">
+                          <img
+                            src={hotel.imageUrl}
+                            alt={`${hotel.name} in ${city.name}`}
+                            loading="lazy"
+                            decoding="async"
+                            class="w-full h-full object-cover"
+                          />
+                          <span class="absolute top-2.5 right-2.5 px-2.5 py-1 rounded-lg bg-slate-900/85 backdrop-blur-md text-emerald-300 font-extrabold text-xs border border-white/15">
+                            {hotel.typicalRate}
+                          </span>
+                        </div>
+                      )}
+                      <div class="p-4 flex-1 flex flex-col justify-between space-y-2">
+                        <div>
+                          <div class="flex items-start justify-between gap-2">
+                            <h4 class="font-extrabold text-sm text-[#152438]">{hotel.name}</h4>
+                            {!hotel.imageUrl && (
+                              <span class="px-2 py-0.5 rounded bg-emerald-50 text-emerald-700 font-extrabold text-xs shrink-0">{hotel.typicalRate}</span>
+                            )}
+                          </div>
+                          <div class="text-[11px] font-semibold text-slate-500 mt-0.5">{hotel.corridorSpec}</div>
+                          <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">{hotel.summary}</p>
+                        </div>
+                        <div class="pt-2 border-t border-slate-200/70 flex items-center justify-between text-[11px]">
+                          <span class="font-semibold text-slate-500">FY27 GSA Cap: <strong class="text-slate-800">{hotel.gsaPerDiemCap}</strong></span>
+                          <span class="text-[#1D68F2] font-bold">HQ Hotel</span>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* CONVENTIONS.COM HOSPITALITY: Executive Power Dining & Group Buyout Venues */}
+            {conv?.dining && conv.dining.length > 0 && (
+              <div class="space-y-3.5 pt-2">
+                <div class="flex items-center justify-between">
+                  <div>
+                    <h3 class="font-black text-base text-[#152438]">Power Dining, Steakhouses &amp; Group Buyouts</h3>
+                    <p class="text-xs text-slate-500">Iconic local dining rooms and private group buyout capacity near downtown {city.name}</p>
+                  </div>
+                  <span class="text-[11px] font-bold text-amber-800 bg-amber-50 px-2.5 py-0.5 rounded-full border border-amber-200">Executive Dining</span>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+                  {conv.dining.map((spot) => (
+                    <div class="rounded-2xl bg-[#F8FAFC] border border-slate-200/90 overflow-hidden flex flex-col justify-between shadow-2xs">
+                      {spot.imageUrl && (
+                        <div class="h-28 w-full bg-slate-900 relative overflow-hidden">
+                          <img
+                            src={spot.imageUrl}
+                            alt={`${spot.name} in ${city.name}`}
+                            loading="lazy"
+                            decoding="async"
+                            class="w-full h-full object-cover"
+                          />
+                          <span class="absolute top-2 right-2 px-2 py-0.5 rounded bg-slate-900/85 text-amber-300 font-extrabold text-[11px]">
+                            {spot.priceTier}
+                          </span>
+                        </div>
+                      )}
+                      <div class="p-3.5 flex-1 flex flex-col justify-between space-y-2">
+                        <div>
+                          <h4 class="font-extrabold text-sm text-[#152438]">{spot.name}</h4>
+                          <div class="text-[11px] font-semibold text-slate-500 mt-0.5">{spot.cuisineAndProximity}</div>
+                          <p class="text-[11px] text-slate-600 mt-1.5 leading-relaxed">
+                            <strong>Group Capacity:</strong> {spot.groupSpec}
+                          </p>
+                        </div>
+                        <div class="text-[10px] font-semibold text-amber-900 bg-amber-50/90 border border-amber-200/70 rounded-lg px-2.5 py-1">
+                          <strong>Booking Tip:</strong> {spot.reservationTip}
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* CONVENTIONS.COM HOSPITALITY: 2026–2027 Major Trade Shows & Hotel Surge Calendar */}
+            {conv?.shows && conv.shows.length > 0 && (
+              <div class="space-y-3 pt-2">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+                  <div>
+                    <h3 class="font-black text-base text-[#152438]">2026–2027 Major Conferences &amp; Hotel Surge Calendar</h3>
+                    <p class="text-xs text-slate-500">High-attendance conventions and peak citywide hotel compression dates in {city.name}</p>
+                  </div>
+                  <span class="text-[11px] text-slate-400">Source: Conventions.com Event Registry</span>
+                </div>
+                <div class="overflow-x-auto rounded-2xl border border-slate-200 bg-[#F8FAFC]">
+                  <table class="w-full text-left text-xs">
+                    <thead>
+                      <tr class="border-b border-slate-200 text-slate-400 font-bold uppercase tracking-wider text-[10px] bg-white">
+                        <th class="py-2.5 px-3.5">Conference / Trade Show</th>
+                        <th class="py-2.5 px-3">Dates</th>
+                        <th class="py-2.5 px-3">Host Campus</th>
+                        <th class="py-2.5 px-3">Est. Attendance</th>
+                        <th class="py-2.5 px-3.5">Hotel Rate Surge</th>
+                      </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-200/70">
+                      {conv.shows.map((sh) => (
+                        <tr class="hover:bg-blue-50/50 transition">
+                          <td class="py-2.5 px-3.5 font-bold text-slate-800">{sh.name}</td>
+                          <td class="py-2.5 px-3 font-semibold text-slate-600 whitespace-nowrap">{sh.dates}</td>
+                          <td class="py-2.5 px-3 text-slate-600">{sh.venue}</td>
+                          <td class="py-2.5 px-3 font-semibold text-[#1D68F2]">{sh.attendance}</td>
+                          <td class="py-2.5 px-3.5 text-amber-800 font-semibold">{sh.hotelSurge}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            )}
+
             {(city.waterUtility || city.climateNormals) && (
               <div class="rounded-3xl p-6 sm:p-7 bg-[#F8FAFC] border-2 border-blue-200/80 shadow-xs space-y-5">
                 <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3 border-b border-slate-200">
@@ -1089,6 +1245,91 @@ const pageDescription =
                   <p class="text-[11px] text-slate-500">
                     {city.housingAndTaxes.homesteadExemptionNote}
                   </p>
+                )}
+
+                {/* INTERACTIVE SALARY, RENT & MORTGAGE PURCHASING POWER CALCULATOR */}
+                {city.housingAndTaxes?.medianHomeValue != null && city.housingAndTaxes?.medianGrossRent != null && (
+                  <div
+                    id="salary-purchasing-calculator"
+                    data-median-income={city.demographics.medianHouseholdIncome}
+                    data-median-home={city.housingAndTaxes.medianHomeValue}
+                    data-median-rent={city.housingAndTaxes.medianGrossRent}
+                    data-prop-tax-pct={city.housingAndTaxes.effectivePropertyTaxRatePct ?? 1.1}
+                    class="mt-4 p-5 sm:p-6 rounded-2xl bg-gradient-to-br from-[#F8FAFC] to-emerald-50/40 border border-emerald-200/80 space-y-4"
+                  >
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                      <div>
+                        <div class="flex items-center gap-2">
+                          <span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-black text-[10px] uppercase tracking-wider">Interactive Calculator</span>
+                          <h4 class="font-black text-sm sm:text-base text-[#152438]">What Does Your Salary Buy in {city.name}?</h4>
+                        </div>
+                        <p class="text-xs text-slate-600 mt-0.5">
+                          Slide or enter your household income to test rent burden and median-home mortgage affordability in {city.name}.
+                        </p>
+                      </div>
+                      <div class="flex items-center gap-2 shrink-0">
+                        <label for="salary-calc-input" class="text-xs font-bold text-slate-500">Annual Income:</label>
+                        <div class="relative">
+                          <span class="absolute left-3 top-1/2 -translate-y-1/2 text-xs font-bold text-slate-400">$</span>
+                          <input
+                            id="salary-calc-input"
+                            type="number"
+                            min="25000"
+                            max="500000"
+                            step="2500"
+                            value={city.demographics.medianHouseholdIncome}
+                            class="w-32 pl-6 pr-2.5 py-2 rounded-xl bg-white border border-slate-300 font-extrabold text-xs text-[#152438] focus:border-[#1D68F2] outline-none"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="space-y-1">
+                      <input
+                        id="salary-calc-slider"
+                        type="range"
+                        min="30000"
+                        max="350000"
+                        step="2500"
+                        value={Math.min(350000, Math.max(30000, city.demographics.medianHouseholdIncome))}
+                        aria-label={`Adjust annual household income for ${city.name} housing calculator`}
+                        class="w-full accent-[#1D68F2] cursor-pointer h-2 rounded-lg bg-slate-200"
+                      />
+                      <div class="flex justify-between text-[10px] font-semibold text-slate-400">
+                        <span>$30,000/yr</span>
+                        <span>{city.name} Median: ${city.demographics.medianHouseholdIncome.toLocaleString('en-US')}/yr</span>
+                        <span>$350,000/yr</span>
+                      </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs pt-1">
+                      <div class="bg-white p-3.5 rounded-xl border border-slate-200/90 shadow-2xs">
+                        <span class="text-[11px] font-semibold text-slate-500 block">28% Max Housing Budget</span>
+                        <div id="calc-max-housing" class="text-lg font-black text-[#152438] mt-0.5">
+                          ${Math.round((city.demographics.medianHouseholdIncome / 12) * 0.28).toLocaleString('en-US')}/mo
+                        </div>
+                        <span class="text-[10px] text-slate-400">Standard front-end DTI ceiling</span>
+                      </div>
+                      <div class="bg-white p-3.5 rounded-xl border border-slate-200/90 shadow-2xs">
+                        <span class="text-[11px] font-semibold text-slate-500 block">{city.name} Median Rent Share</span>
+                        <div id="calc-rent-share" class="text-lg font-black text-emerald-700 mt-0.5">
+                          {(((city.housingAndTaxes.medianGrossRent * 12) / city.demographics.medianHouseholdIncome) * 100).toFixed(1)}% of income
+                        </div>
+                        <span id="calc-rent-verdict" class="text-[10px] font-bold text-emerald-700">
+                          Based on ${city.housingAndTaxes.medianGrossRent.toLocaleString('en-US')}/mo median rent
+                        </span>
+                      </div>
+                      <div class="bg-white p-3.5 rounded-xl border border-slate-200/90 shadow-2xs">
+                        <span class="text-[11px] font-semibold text-slate-500 block">Est. Max Home Price (20% Down)</span>
+                        <div id="calc-max-home" class="text-lg font-black text-[#152438] mt-0.5">
+                          ${Math.round(city.demographics.medianHouseholdIncome * 3.8).toLocaleString('en-US')}
+                        </div>
+                        <span id="calc-home-gap" class="text-[10px] text-slate-500">
+                          Median home: ${city.housingAndTaxes.medianHomeValue.toLocaleString('en-US')}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
                 )}
               </div>
             )}
@@ -1354,6 +1595,69 @@ const pageDescription =
               </div>
             </section>
           )}
+
+          {/* CONVENTIONS.COM COMMERCIAL INFRASTRUCTURE: Convention Campuses, Subvention & Labor Scale */}
+          {conv?.venues && conv.venues.length > 0 && (
+            <section class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-[0_4px_20px_-2px_rgba(0,0,0,0.06)] space-y-5">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                <div>
+                  <h2 class="text-xl font-black text-[#152438]">{city.name} Convention Campuses &amp; B2B Event Infrastructure</h2>
+                  <p class="text-xs text-slate-500 mt-0.5">
+                    {conv.spec?.campusesSummary ?? `Major trade show and conference campuses in ${city.name}`}
+                    {conv.spec?.hallLicenseRate ? ` · Hall license: ${conv.spec.hallLicenseRate}` : ''}
+                  </p>
+                </div>
+                <a
+                  href={conv.sourceUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-[11px] font-bold text-[#1D68F2] bg-blue-50 px-3 py-1.5 rounded-full border border-blue-200 hover:bg-blue-100 transition self-start sm:self-auto"
+                >
+                  Full {city.name} Venue Specs ↗
+                </a>
+              </div>
+
+              {(conv.spec?.subventionRule || conv.spec?.laborSummary) && (
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+                  {conv.spec?.subventionRule && (
+                    <div class="p-4 rounded-2xl bg-[#F8FAFC] border border-slate-200 space-y-1">
+                      <span class="text-[10px] font-black uppercase tracking-wider text-[#1D68F2]">CVB Hall Subvention &amp; Room Block Rule</span>
+                      <p class="text-slate-700 font-semibold leading-relaxed">{conv.spec.subventionRule}</p>
+                    </div>
+                  )}
+                  {conv.spec?.laborSummary && (
+                    <div class="p-4 rounded-2xl bg-[#F8FAFC] border border-slate-200 space-y-1">
+                      <span class="text-[10px] font-black uppercase tracking-wider text-emerald-700">Show-Floor Labor &amp; BLS Base Scale</span>
+                      <p class="text-slate-700 font-semibold leading-relaxed">{conv.spec.laborSummary}</p>
+                    </div>
+                  )}
+                </div>
+              )}
+
+              <div class="overflow-x-auto rounded-2xl border border-slate-200 bg-[#F8FAFC]">
+                <table class="w-full text-left text-xs">
+                  <thead>
+                    <tr class="border-b border-slate-200 text-slate-400 font-bold uppercase tracking-wider text-[10px] bg-white">
+                      <th class="py-2.5 px-3.5">Convention / Conference Campus</th>
+                      <th class="py-2.5 px-3">Exhibit &amp; Max Hall</th>
+                      <th class="py-2.5 px-3">Ballrooms &amp; Breakouts</th>
+                      <th class="py-2.5 px-3.5">Walkable / In-House Rooms</th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-slate-200/70">
+                    {conv.venues.map((v) => (
+                      <tr class="hover:bg-blue-50/50 transition">
+                        <td class="py-2.5 px-3.5 font-bold text-slate-800">{v.name}</td>
+                        <td class="py-2.5 px-3 font-semibold text-slate-700">{v.exhibitSpace}</td>
+                        <td class="py-2.5 px-3 text-slate-600">{v.breakouts}</td>
+                        <td class="py-2.5 px-3.5 text-slate-600">{v.walkableRooms}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </section>
+          )}
         </div>
 
         <!-- KEY FACTS & FAQ: plain sentences, each with source and as-of date (feeds FAQPage JSON-LD) -->
@@ -1403,11 +1707,19 @@ const pageDescription =
               </div>
 
               <!-- Audience Layer Toggles -->
-              <div class="inline-flex p-1 bg-slate-100 rounded-2xl border border-slate-200/80 text-xs font-bold shadow-2xs">
+              <div class="inline-flex flex-wrap p-1 bg-slate-100 rounded-2xl border border-slate-200/80 text-xs font-bold shadow-2xs gap-1">
+                <button
+                  type="button"
+                  id="map-layer-all"
+                  class="map-layer-btn px-3 py-1.5 rounded-xl transition cursor-pointer bg-[#1D68F2] text-white shadow-xs"
+                  data-layer="all"
+                >
+                  🌟 All ({allPins.length})
+                </button>
                 <button
                   type="button"
                   id="map-layer-visiting"
-                  class="map-layer-btn px-3.5 py-1.5 rounded-xl transition cursor-pointer bg-[#1D68F2] text-white shadow-xs"
+                  class="map-layer-btn px-3 py-1.5 rounded-xl transition cursor-pointer text-slate-600 hover:text-slate-900"
                   data-layer="visiting"
                 >
                   ✈️ Visiting
@@ -1415,7 +1727,7 @@ const pageDescription =
                 <button
                   type="button"
                   id="map-layer-living"
-                  class="map-layer-btn px-3.5 py-1.5 rounded-xl transition cursor-pointer text-slate-600 hover:text-slate-900"
+                  class="map-layer-btn px-3 py-1.5 rounded-xl transition cursor-pointer text-slate-600 hover:text-slate-900"
                   data-layer="living"
                 >
                   🏡 Living
@@ -1423,7 +1735,7 @@ const pageDescription =
                 <button
                   type="button"
                   id="map-layer-business"
-                  class="map-layer-btn px-3.5 py-1.5 rounded-xl transition cursor-pointer text-slate-600 hover:text-slate-900"
+                  class="map-layer-btn px-3 py-1.5 rounded-xl transition cursor-pointer text-slate-600 hover:text-slate-900"
                   data-layer="business"
                 >
                   💼 Business
@@ -1444,11 +1756,11 @@ const pageDescription =
               ></div>
               <div class="absolute top-3 left-3 z-10 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-xl border border-slate-200 text-xs font-bold text-slate-800 shadow-md flex items-center gap-2">
                 <span id="map-ping-indicator" class="w-2.5 h-2.5 rounded-full bg-[#1D68F2]"></span>
-                <span id="map-pin-status">{visitingPins.length} verified places mapped</span>
+                <span id="map-pin-status">{allPins.length} verified places mapped</span>
               </div>
               <div class="absolute bottom-3 left-3 z-10 bg-slate-900/85 backdrop-blur-md px-3 py-1.5 rounded-xl text-[11px] font-semibold text-white shadow-lg flex items-center gap-2">
                 <span id="map-layer-legend-dot" class="w-2.5 h-2.5 rounded-full bg-[#1D68F2]"></span>
-                <span id="map-layer-legend-text">Airport, National Parks & municipal center</span>
+                <span id="map-layer-legend-text">Airport, National Parks, CMS ER Hospitals, Universities &amp; EV Hubs</span>
               </div>
             </div>
           </section>
@@ -1918,6 +2230,7 @@ const pageDescription =
         const cityData = JSON.parse(mapEl.getAttribute('data-map-pins') || '{"visiting":[],"living":[],"business":[]}');
 
         function switchMapLayer(layer) {
+          const btnAll = document.getElementById('map-layer-all');
           const btnVisiting = document.getElementById('map-layer-visiting');
           const btnLiving = document.getElementById('map-layer-living');
           const btnBusiness = document.getElementById('map-layer-business');
@@ -1926,9 +2239,9 @@ const pageDescription =
           const legendText = document.getElementById('map-layer-legend-text');
           const pingIndicator = document.getElementById('map-ping-indicator');
 
-          [btnVisiting, btnLiving, btnBusiness].forEach((btn) => {
+          [btnAll, btnVisiting, btnLiving, btnBusiness].forEach((btn) => {
             if (btn) {
-              btn.className = 'map-layer-btn px-3.5 py-1.5 rounded-xl transition cursor-pointer text-slate-600 hover:text-slate-900';
+              btn.className = 'map-layer-btn px-3 py-1.5 rounded-xl transition cursor-pointer text-slate-600 hover:text-slate-900';
             }
           });
 
@@ -1938,16 +2251,20 @@ const pageDescription =
           let color = '#1D68F2';
           let label = 'Airport, National Parks & municipal center';
 
-          if (layer === 'living') {
+          if (layer === 'all') {
+            color = '#1D68F2';
+            label = 'Airport, National Parks, CMS ER Hospitals, Universities & EV Hubs';
+            if (btnAll) btnAll.className = 'map-layer-btn px-3 py-1.5 rounded-xl transition cursor-pointer bg-[#1D68F2] text-white shadow-xs';
+          } else if (layer === 'living') {
             color = '#059669';
             label = 'CMS emergency hospitals & colleges';
-            if (btnLiving) btnLiving.className = 'map-layer-btn px-3.5 py-1.5 rounded-xl transition cursor-pointer bg-emerald-600 text-white shadow-xs';
+            if (btnLiving) btnLiving.className = 'map-layer-btn px-3 py-1.5 rounded-xl transition cursor-pointer bg-emerald-600 text-white shadow-xs';
           } else if (layer === 'business') {
             color = '#7C3AED';
             label = 'Public EV charging hubs & campus anchors';
-            if (btnBusiness) btnBusiness.className = 'map-layer-btn px-3.5 py-1.5 rounded-xl transition cursor-pointer bg-purple-600 text-white shadow-xs';
+            if (btnBusiness) btnBusiness.className = 'map-layer-btn px-3 py-1.5 rounded-xl transition cursor-pointer bg-purple-600 text-white shadow-xs';
           } else {
-            if (btnVisiting) btnVisiting.className = 'map-layer-btn px-3.5 py-1.5 rounded-xl transition cursor-pointer bg-[#1D68F2] text-white shadow-xs';
+            if (btnVisiting) btnVisiting.className = 'map-layer-btn px-3 py-1.5 rounded-xl transition cursor-pointer bg-[#1D68F2] text-white shadow-xs';
           }
 
           if (legendDot) legendDot.style.backgroundColor = color;
@@ -2006,13 +2323,82 @@ const pageDescription =
           }
         }
 
-        switchMapLayer('visiting');
+        switchMapLayer('all');
 
+        document.getElementById('map-layer-all')?.addEventListener('click', () => switchMapLayer('all'));
         document.getElementById('map-layer-visiting')?.addEventListener('click', () => switchMapLayer('visiting'));
         document.getElementById('map-layer-living')?.addEventListener('click', () => switchMapLayer('living'));
         document.getElementById('map-layer-business')?.addEventListener('click', () => switchMapLayer('business'));
 
         window.switchCityMapLayer = switchMapLayer;
+      }
+
+      // 2b. Interactive Salary, Rent & Mortgage Purchasing Power Calculator
+      const salaryBox = document.getElementById('salary-purchasing-calculator');
+      if (salaryBox) {
+        const salaryInput = document.getElementById('salary-calc-input');
+        const salarySlider = document.getElementById('salary-calc-slider');
+        const maxHousingEl = document.getElementById('calc-max-housing');
+        const rentShareEl = document.getElementById('calc-rent-share');
+        const rentVerdictEl = document.getElementById('calc-rent-verdict');
+        const maxHomeEl = document.getElementById('calc-max-home');
+        const homeGapEl = document.getElementById('calc-home-gap');
+
+        const medianHome = parseFloat(salaryBox.getAttribute('data-median-home') || '0');
+        const medianRent = parseFloat(salaryBox.getAttribute('data-median-rent') || '0');
+        const propTaxPct = parseFloat(salaryBox.getAttribute('data-prop-tax-pct') || '1.1') / 100;
+
+        function updateSalaryCalc(income) {
+          const safeIncome = Math.max(15000, income || 0);
+          const monthlyGross = safeIncome / 12;
+          const maxHousing = Math.round(monthlyGross * 0.28);
+          if (maxHousingEl) maxHousingEl.innerText = '$' + maxHousing.toLocaleString('en-US') + '/mo';
+
+          if (medianRent > 0 && rentShareEl && rentVerdictEl) {
+            const rentPct = (medianRent / monthlyGross) * 100;
+            rentShareEl.innerText = rentPct.toFixed(1) + '% of income';
+            if (rentPct <= 25) {
+              rentShareEl.className = 'text-lg font-black text-emerald-700 mt-0.5';
+              rentVerdictEl.className = 'text-[10px] font-bold text-emerald-700';
+              rentVerdictEl.innerText = 'Comfortable (<25% of gross income)';
+            } else if (rentPct <= 32) {
+              rentShareEl.className = 'text-lg font-black text-amber-700 mt-0.5';
+              rentVerdictEl.className = 'text-[10px] font-bold text-amber-700';
+              rentVerdictEl.innerText = 'Moderate burden (25–32% of income)';
+            } else {
+              rentShareEl.className = 'text-lg font-black text-rose-700 mt-0.5';
+              rentVerdictEl.className = 'text-[10px] font-bold text-rose-700';
+              rentVerdictEl.innerText = 'Stretched (>32% of gross income)';
+            }
+          }
+
+          if (maxHomeEl && homeGapEl && medianHome > 0) {
+            // Estimate max home price assuming 20% down, 6.5% 30-yr fixed (0.00632 monthly factor on 80% loan = 0.005056/mo of price) + monthly property tax + 0.35% insurance
+            const monthlyFactorPerDollar = 0.005056 + (propTaxPct / 12) + (0.0035 / 12);
+            const maxHome = Math.round(maxHousing / monthlyFactorPerDollar);
+            maxHomeEl.innerText = '$' + maxHome.toLocaleString('en-US');
+            const diff = maxHome - medianHome;
+            if (diff >= 0) {
+              homeGapEl.className = 'text-[10px] font-bold text-emerald-700';
+              homeGapEl.innerText = '+$' + Math.round(diff).toLocaleString('en-US') + ' above local median ($' + medianHome.toLocaleString('en-US') + ')';
+            } else {
+              homeGapEl.className = 'text-[10px] font-semibold text-amber-800';
+              homeGapEl.innerText = '$' + Math.round(Math.abs(diff)).toLocaleString('en-US') + ' below local median ($' + medianHome.toLocaleString('en-US') + ')';
+            }
+          }
+        }
+
+        salarySlider?.addEventListener('input', (e) => {
+          const val = parseInt(e.target.value, 10);
+          if (salaryInput) salaryInput.value = val.toString();
+          updateSalaryCalc(val);
+        });
+        salaryInput?.addEventListener('input', (e) => {
+          const val = parseInt(e.target.value, 10);
+          if (salarySlider && val >= 30000 && val <= 350000) salarySlider.value = val.toString();
+          updateSalaryCalc(val);
+        });
+        updateSalaryCalc(parseFloat(salaryBox.getAttribute('data-median-income') || '75000'));
       }
 
       // 3. Video Player Activation

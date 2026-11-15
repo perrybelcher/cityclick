@@ -772,6 +772,183 @@
       "sourceName": "Ticketmaster Discovery API v2",
       "sourceUrl": "https://developer.ticketmaster.com/",
       "retrieved": "2026-10-31"
+    },
+    "conventionsAndHospitality": {
+      "sourceName": "Conventions.com Municipal CVB & U.S. GSA FY2027 Per Diem Intelligence",
+      "sourceUrl": "https://conventions.com/cities/las-vegas",
+      "retrieved": "2026-11-14",
+      "spec": {
+        "hallLicenseRate": "$0.37\u2013$0.55/net sf (LVCC) vs. $0 Waived Resort Rental",
+        "subventionRule": "LVCVA waives 50%\u2013100% of LVCC hall rental w/ 2,500+ peak rooms; Venetian, Mandalay Bay, Caesars Forum & MGM waive 100% of hall rental w/ master block & F&B minimum + $30/nt rebate"
+      },
+      "venues": [
+        {
+          "name": "Las Vegas Convention Center (LVCC \u2014 North, Central, South & West Halls) North/Central Strip Municipal Mega-Campus (LVCVA)",
+          "exhibitSpace": "2,542,591 net exhibit sq. ft. (4.6M gross) Max Hall: 904,000 sq. ft. (South Level 1 & 2)",
+          "breakouts": "225 Meeting Rooms \u2022 underground Tesla Vegas Loop",
+          "walkableRooms": "18,500+ (Fontainebleau, Westgate, Renaissance + Monorail)"
+        },
+        {
+          "name": "The Venetian Expo & Convention Center (Sands / Palazzo Campus) Mid-Strip Integrated Luxury Resort Campus",
+          "exhibitSpace": "1,035,000 net exhibit sq. ft. (2.25M gross) Max Hall: 640,300 sq. ft. (Level 2 Halls A\u2013D)",
+          "breakouts": "174+ Breakout Rooms & 4 Pillarless Ballrooms",
+          "walkableRooms": "7,100 Suites Under One Roof (32,000+ Mid-Strip Walk Ring)"
+        },
+        {
+          "name": "Mandalay Bay Convention Center (Shoreline & Bayside Halls) South-Strip MGM Integrated Resort Powerhouse",
+          "exhibitSpace": "1,000,000 net exhibit sq. ft. (2.1M gross) Max Hall: 861,231 sq. ft. (Bayside + Shoreline Contiguous)",
+          "breakouts": "120+ Breakout Rooms & 4 Pillarless Ballrooms (100k sf Mega-Ballroom)",
+          "walkableRooms": "11,200 Connected via Indoor Tram (Mandalay, Delano, Luxor, Excalibur)"
+        },
+        {
+          "name": "CAESARS FORUM & Caesars Palace Conference Center Mid-Strip Pillarless Ballroom & Executive Campus",
+          "exhibitSpace": "550,000 sq. ft. Conference & Exhibit Space Max Hall: 110,000 sq. ft. (Two 110,000 sf Pillarless Ballrooms \u2014 Largest in World)",
+          "breakouts": "100+ Divisible Breakout Rooms + Direct Venetian Skybridge",
+          "walkableRooms": "8,500 Direct Bridge (Harrah's, The LINQ, Flamingo, Caesars)"
+        },
+        {
+          "name": "The Expo at World Market Center Las Vegas (WMCLV) Downtown Las Vegas High-Value Expo Campus",
+          "exhibitSpace": "315,000 sq. ft. Exhibit (Inside 5M sq. ft. WMCLV Campus) Max Hall: 200,000 sq. ft. (Street-Level North & South Halls)",
+          "breakouts": "40+ Showroom & Breakout Suites \u2022 Zero Strip Congestion",
+          "walkableRooms": "6,800+ Downtown / Symphony Park / Circa Hotel Ring"
+        },
+        {
+          "name": "MGM Grand Conference Center & Grand Garden Arena South-Strip STAY WELL Corporate Conference Campus",
+          "exhibitSpace": "850,000 sq. ft. Conference, Exhibit & Arena Space Max Hall: 92,000 sq. ft. Marquee Ballroom + 60,000 sq. ft. Grand Ballroom",
+          "breakouts": "80+ Breakout Rooms \u2022 STAY WELL Wellness Air Filtration",
+          "walkableRooms": "6,852 On-Property Rooms + Direct Las Vegas Monorail Station"
+        },
+        {
+          "name": "Wynn Las Vegas & Encore Convention Center North-Strip Ultra-Luxury Waterfront Pavilion & Ballroom Campus",
+          "exhibitSpace": "560,000 sq. ft. Luxury Pavilion, Promenade & Ballroom Space Max Hall: 83,000 sq. ft. Lafite Ballroom + 50,000 sq. ft. Cristal Ballroom",
+          "breakouts": "57+ Boardrooms & Breakout Suites + 20,000 sf Event Lawn",
+          "walkableRooms": "4,748 Five-Star Suites + Pedestrian Bridge to Venetian & LVCC West"
+        },
+        {
+          "name": "Labor Regime & Carpenter Scale",
+          "exhibitSpace": "NV Union Contracts \u2022 $148\u2013$225/hr GSC (vs. $34.18 BLS)",
+          "breakouts": "AZ Right-to-Work \u2022 $108\u2013$134/hr GSC (vs. $31.40 BLS)",
+          "walkableRooms": "Strict Multi-Union \u2022 $168\u2013$245/hr GSC"
+        }
+      ],
+      "shows": [
+        {
+          "name": "SEMA Show 2026 Automotive & Mobility",
+          "dates": "Nov 3 \u2013 Nov 6, 2026",
+          "venue": "Las Vegas Convention Center (All Halls)",
+          "attendance": "160,000+ Automotive Pros",
+          "hotelSurge": "2.4\u00d7 Surge ($389\u2013$549/nt)"
+        },
+        {
+          "name": "AAPEX 2026 (Automotive Aftermarket Products Expo) Automotive & Mobility",
+          "dates": "Nov 3 \u2013 Nov 5, 2026",
+          "venue": "The Venetian Expo & CAESARS FORUM",
+          "attendance": "49,000+ Buyers & Exhibitors",
+          "hotelSurge": "2.4\u00d7 Surge ($389\u2013$549/nt)"
+        },
+        {
+          "name": "RE+ (Clean Energy & Solar Power International) 2026 Energy & Utilities",
+          "dates": "Nov 16 \u2013 Nov 19, 2026",
+          "venue": "The Venetian Expo & CAESARS FORUM",
+          "attendance": "40,000+ Energy Leaders",
+          "hotelSurge": "1.9\u00d7 Surge ($299\u2013$429/nt)"
+        },
+        {
+          "name": "AWS re:Invent 2026 Technology & AI",
+          "dates": "Nov 30 \u2013 Dec 4, 2026",
+          "venue": "The Venetian Expo, CAESARS FORUM, Mandalay Bay & Wynn",
+          "attendance": "60,000+ Cloud Engineers & Execs",
+          "hotelSurge": "2.6\u00d7 Surge ($429\u2013$649/nt)"
+        },
+        {
+          "name": "MJBizCon 2026 Agriculture & Botanical",
+          "dates": "Dec 1 \u2013 Dec 4, 2026",
+          "venue": "Las Vegas Convention Center (North & Central Halls)",
+          "attendance": "30,000+ Industry Executives",
+          "hotelSurge": "1.7\u00d7 Surge ($249\u2013$369/nt)"
+        },
+        {
+          "name": "LDI Show (Live Design International) 2026 Media & Entertainment",
+          "dates": "Dec 6 \u2013 Dec 8, 2026",
+          "venue": "Las Vegas Convention Center (West Hall)",
+          "attendance": "16,500+ Live Production Pros",
+          "hotelSurge": "1.6\u00d7 Surge ($239\u2013$339/nt)"
+        },
+        {
+          "name": "CES 2027 (Consumer Electronics Show) Technology & AI",
+          "dates": "Jan 6 \u2013 Jan 9, 2027",
+          "venue": "LVCC, The Venetian Expo & Aria/C-Space",
+          "attendance": "138,000+ Global Tech Leaders",
+          "hotelSurge": "3.1\u00d7 Peak Surge ($489\u2013$799/nt)"
+        },
+        {
+          "name": "The PPAI Expo 2027 Retail & Merchandising",
+          "dates": "Jan 12 \u2013 Jan 14, 2027",
+          "venue": "Mandalay Bay Convention Center",
+          "attendance": "16,000+ Promotional Distributors",
+          "hotelSurge": "1.6\u00d7 Surge ($249\u2013$349/nt)"
+        }
+      ],
+      "hotels": [
+        {
+          "name": "Westgate Las Vegas Resort & Casino",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/hotels/westgate.webp",
+          "corridorSpec": "Connected / Adjacent \u2022 Direct Walk + Monorail + Vegas Loop (LVCC Las Vegas)",
+          "typicalRate": "$329/nt",
+          "summary": "Touches LVCC North Hall edge (4-min walk) with its own Monorail and Vegas Loop station\u2014zero street traffic delays.",
+          "gsaPerDiemCap": "$120\u2013$173/nt (Seasonal)"
+        },
+        {
+          "name": "Renaissance Las Vegas Hotel (Non-Gaming Marriott)",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/hotels/renaissance-lv.webp",
+          "corridorSpec": "Connected / Adjacent \u2022 3-Min Walk to South Hall + Monorail (LVCC Las Vegas)",
+          "typicalRate": "$419/nt",
+          "summary": "Non-gaming executive favorite directly outside LVCC South Hall and Boingo Monorail Station; quiet lobby lounge for client meetings.",
+          "gsaPerDiemCap": "$120\u2013$173/nt (Seasonal)"
+        },
+        {
+          "name": "Residence Inn Las Vegas Convention Center",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/hotels/residence-inn-cc.webp",
+          "corridorSpec": "Connected / Adjacent \u2022 5-Min Walk Across Paradise Rd (LVCC Las Vegas)",
+          "typicalRate": "$379/nt",
+          "summary": "Full kitchens and complimentary hot breakfast directly across from LVCC West and North Halls; ideal for 4-night exhibitor booth crews.",
+          "gsaPerDiemCap": "$120\u2013$173/nt (Seasonal)"
+        },
+        {
+          "name": "Courtyard by Marriott Las Vegas Convention Center",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/hotels/courtyard-cc.webp",
+          "corridorSpec": "Connected / Adjacent \u2022 6-Min Walk to West & Central (LVCC Las Vegas)",
+          "typicalRate": "$359/nt",
+          "summary": "Non-gaming 60-second commute across Paradise Rd; 5-minute walk to Boingo Monorail for mid-Strip meetings.",
+          "gsaPerDiemCap": "$120\u2013$173/nt (Seasonal)"
+        }
+      ],
+      "dining": [
+        {
+          "name": "Piero's Italian Cuisine",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/dining/pieros.webp",
+          "cuisineAndProximity": "Classic Executive Italian \u2022 4-min walk across Convention Center Dr (LVCC Las Vegas)",
+          "priceTier": "$$$",
+          "groupSpec": "6 Private Rooms (12\u201390) \u2022 345 Full Buyout ($2,500\u2013$9,500 PDR \u2022 $42,000+ Full Buyout) \u2014 Iconic Las Vegas convention deal-making institution directly across from LVCC\u2014zero Strip rideshare delays, dedicated private doors, and full presentation AV.",
+          "reservationTip": "Book 60\u201390 days ahead for peak show weeks"
+        },
+        {
+          "name": "Siegel's Bagelmania (Convention Center Flagship)",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/dining/siegels-bagelmania.webp",
+          "cuisineAndProximity": "NY Deli & Executive Breakfast Buyouts \u2022 2-min walk adjacent to LVCC West Hall (LVCC Las Vegas)",
+          "priceTier": "$$",
+          "groupSpec": "Private Room (20\u201345) \u2022 Patio \u2022 220 Full Buyout ($1,400\u2013$3,800 Breakfast PDR \u2022 $15,000+ Buyout) \u2014 10,000 sq. ft. flagship steps from West Hall\u2014top choice for 7:15 AM pre-floor investor breakfasts, press briefings, and midday sponsor hospitality.",
+          "reservationTip": "30\u201345 days ahead"
+        },
+        {
+          "name": "Don's Prime (Fontainebleau Las Vegas)",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/dining/dons-prime.webp",
+          "cuisineAndProximity": "Prime Steakhouse \u2022 7-min walk / Vegas Loop from LVCC West (LVCC Las Vegas)",
+          "priceTier": "$$$$",
+          "groupSpec": "Private Dining Room (10\u201324) \u2022 176 Full Buyout ($4,500\u2013$7,500 Board PDR \u2022 $48,000+ Buyout) \u2014 Refined mid-century steakhouse with tableside prime trolleys and hushed acoustics for C-suite closing dinners after West Hall sessions.",
+          "reservationTip": "60\u201390 days ahead"
+        }
+      ]
     }
   },
   {

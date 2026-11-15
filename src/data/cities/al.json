@@ -703,6 +703,135 @@
       "sourceName": "Ticketmaster Discovery API v2",
       "sourceUrl": "https://developer.ticketmaster.com/",
       "retrieved": "2026-10-31"
+    },
+    "conventionsAndHospitality": {
+      "sourceName": "Conventions.com Municipal CVB & U.S. GSA FY2027 Per Diem Intelligence",
+      "sourceUrl": "https://conventions.com/cities/huntsville",
+      "retrieved": "2026-11-14",
+      "spec": {
+        "campusesSummary": "2+ Major Convention & Resort Campuses in Huntsville",
+        "hallLicenseRate": "$0.34\u2013$0.52 / net sq. ft. (Municipal Standard)",
+        "subventionRule": "50%\u2013100% Hall License Subvention w/ 1,500+ Peak Room Nights in Huntsville + $30/nt Master Block Rebate",
+        "hotelInventorySummary": "400+ Verified Convention Hotel Keys across 1 HQ Properties",
+        "hotelTaxSummary": "16.5% Combined Huntsville Hotel Occupancy & Tourism Assessment",
+        "laborSummary": "$118\u2013$177/hr GSC Floor Rate (vs. $31.40/hr BLS Wage \u2022 3.8\u00d7 Markup \u2022 Canadian Provincial Labour Code (Union Stage & Drayage))"
+      },
+      "venues": [
+        {
+          "name": "Von Braun Center",
+          "exhibitSpace": "170,000 sq. ft. Max Hall: 100,000 sq. ft.",
+          "breakouts": "47,600 sq. ft. (20 configurable breakout rooms)",
+          "walkableRooms": "1,440+ District Rooms (Anchored by Deerhurst Resort)"
+        },
+        {
+          "name": "Deerhurst Resort",
+          "exhibitSpace": "40,000 sq. ft. Max Hall: 14,500 sq. ft.",
+          "breakouts": "11,200 sq. ft. (26 configurable breakout rooms)",
+          "walkableRooms": "400 In-House Tower Keys (Direct Elevator to Ballroom Level)"
+        },
+        {
+          "name": "Labor Regime & Carpenter Scale",
+          "exhibitSpace": "NV Union Contracts \u2022 $148\u2013$225/hr GSC (vs. $34.18 BLS)",
+          "breakouts": "AZ Right-to-Work \u2022 $108\u2013$134/hr GSC (vs. $31.40 BLS)",
+          "walkableRooms": "$118\u2013$177/hr GSC Floor Rate (vs. $31.40/hr BLS Wage \u2022 3.8\u00d7 Markup \u2022 Canadian Provincial Labour Code (Union Stage & Drayage))"
+        },
+        {
+          "name": "Exhibitor Self-Install Rights",
+          "exhibitSpace": "Pop-Up Only (<100 sf) \u2022 Strict Teamsters 631 Dock",
+          "breakouts": "Full Self-Install & Hand-Carry Allowed",
+          "walkableRooms": "Standard Hand-Carry & Pop-Up Permitted"
+        },
+        {
+          "name": "Hall License & Subvention",
+          "exhibitSpace": "$0.37\u2013$0.55/sf (LVCC) or $0 w/ Resort Block",
+          "breakouts": "$0.32\u2013$0.48/sf (50%\u2013100% CVB Subvention)",
+          "walkableRooms": "$0.34\u2013$0.52 / net sq. ft. (Municipal Standard)"
+        },
+        {
+          "name": "Hotel Room & Banquet Tax Load",
+          "exhibitSpace": "13.38% Room Tax + $48 Resort Fee \u2022 33.4% BEO Load",
+          "breakouts": "12.57% Room Tax ($0 Resort Fee) \u2022 33.6% BEO Load",
+          "walkableRooms": "16.5% Combined Huntsville Hotel Occupancy & Tourism Assessment"
+        },
+        {
+          "name": "20A Electrical Floor Drop",
+          "exhibitSpace": "$385\u2013$445 (48\u00d7 Grid)",
+          "breakouts": "$295\u2013$385 (42\u00d7 Grid)",
+          "walkableRooms": "$315\u2013$420 / 20A Floor Drop (42\u00d7 Grid)"
+        },
+        {
+          "name": "Walkable Corridor Hotel Rooms",
+          "exhibitSpace": "150,000+ Rooms (48,500+ Connected)",
+          "breakouts": "6,000+ Copper Square Walkable Rooms",
+          "walkableRooms": "400+ Verified Convention Hotel Keys across 1 HQ Properties"
+        }
+      ],
+      "shows": [
+        {
+          "name": "ORFA Professional Development Expo 2026 Manufacturing & Supply Chain",
+          "dates": "Apr 27\u201330, 2026",
+          "venue": "Deerhurst Resort",
+          "attendance": "650+ B2B Attendees",
+          "hotelSurge": "1.3\u00d7 In-House Block ($170\u2013$250/nt)"
+        },
+        {
+          "name": "Alabama League of Municipalities Convention 2026",
+          "dates": "May 13\u201316, 2026",
+          "venue": "Von Braun Center",
+          "attendance": "1,200+ B2B Attendees",
+          "hotelSurge": "1.5\u00d7 Corridor Block ($190\u2013$260/nt)"
+        },
+        {
+          "name": "Space & Missile Defense Symposium 2026",
+          "dates": "Aug 11\u201313, 2026",
+          "venue": "Von Braun Center",
+          "attendance": "6,500+ B2B Attendees",
+          "hotelSurge": "1.7\u00d7 Corridor Block ($230\u2013$290/nt)"
+        },
+        {
+          "name": "OBOA Annual Meeting and Training Sessions 2026",
+          "dates": "Sep 27\u201330, 2026",
+          "venue": "Deerhurst Resort",
+          "attendance": "750+ B2B Attendees",
+          "hotelSurge": "1.3\u00d7 In-House Block ($160\u2013$210/nt)"
+        }
+      ],
+      "hotels": [
+        {
+          "name": "Deerhurst Resort",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/hotels/conrad-las-vegas-at-resorts-world.webp",
+          "corridorSpec": "Primary Corridor HQ Anchor \u2022 Nearest Corridor HQ (2\u20134 Min Transfer) (Von Braun Center)",
+          "typicalRate": "$276/nt",
+          "summary": "Features 40,000 sq. ft. of meeting space; resort/destination fees waived via Conventions.com Housing Desk (Sara Chaval \u00b7 (702) 576-1312).",
+          "gsaPerDiemCap": "$117\u2013$157/nt (Seasonal)"
+        }
+      ],
+      "dining": [
+        {
+          "name": "Cotton Row",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/dining/huntsville-cotton-row.webp",
+          "cuisineAndProximity": "American Restaurant \u2022 3-min walk / cab (100 Southside Square) (Von Braun Center)",
+          "priceTier": "$$$",
+          "groupSpec": "16\u2013120 Guests (Private Boardrooms & Main Salon) ($4,500 \u2013 $24,000+ F&B Min) \u2014 Verified Huntsville executive dining & sponsor reception venue (4.4\u2605 across 1,089 Google reviews on 100 Southside Square).",
+          "reservationTip": "30\u201360 days prior to show week"
+        },
+        {
+          "name": "116 Noble",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/dining/huntsville-116-noble.webp",
+          "cuisineAndProximity": "Fine Dining Restaurant \u2022 5-min walk (2007 Memorial Pkwy NW) (Von Braun Center)",
+          "priceTier": "$$$",
+          "groupSpec": "20\u2013160 Guests (Wine Cellar PDR & Full Buyout) ($5,500 \u2013 $30,000+ F&B Min) \u2014 Verified Huntsville executive dining & sponsor reception venue (4.7\u2605 across 32 Google reviews on 2007 Memorial Pkwy NW).",
+          "reservationTip": "30\u201360 days prior to show week"
+        },
+        {
+          "name": "Purveyor",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/dining/huntsville-purveyor.webp",
+          "cuisineAndProximity": "American Restaurant \u2022 6-min walk (201 Jefferson St N) (Von Braun Center)",
+          "priceTier": "$$$",
+          "groupSpec": "14\u201385 Guests (Executive Chef's Room & Terrace) ($3,800 \u2013 $18,500+ F&B Min) \u2014 Verified Huntsville executive dining & sponsor reception venue (4.6\u2605 across 898 Google reviews on 201 Jefferson St N).",
+          "reservationTip": "30\u201360 days prior to show week"
+        }
+      ]
     }
   },
   {
@@ -2034,7 +2163,7 @@
           "fullName": "Horseshoe Bend National Military Park",
           "designation": "National Military Park",
           "distanceMiles": 53.3,
-          "description": "On March 27, 1814, Major General Andrew Jackson ‘s army of 3,300 men attacked Chief Menawa’s 1,000 Red Stick Creek warriors fortified in a horseshoe shaped bend of the Tallapoosa River. Over 800 Red Sticks died that day. This battle...",
+          "description": "On March 27, 1814, Major General Andrew Jackson \u2018s army of 3,300 men attacked Chief Menawa\u2019s 1,000 Red Stick Creek warriors fortified in a horseshoe shaped bend of the Tallapoosa River. Over 800 Red Sticks died that day. This battle...",
           "url": "https://www.nps.gov/hobe/index.htm",
           "lat": 32.976689,
           "lng": -85.734136
@@ -4489,7 +4618,7 @@
           "fullName": "Horseshoe Bend National Military Park",
           "designation": "National Military Park",
           "distanceMiles": 29.0,
-          "description": "On March 27, 1814, Major General Andrew Jackson ‘s army of 3,300 men attacked Chief Menawa’s 1,000 Red Stick Creek warriors fortified in a horseshoe shaped bend of the Tallapoosa River. Over 800 Red Sticks died that day. This battle...",
+          "description": "On March 27, 1814, Major General Andrew Jackson \u2018s army of 3,300 men attacked Chief Menawa\u2019s 1,000 Red Stick Creek warriors fortified in a horseshoe shaped bend of the Tallapoosa River. Over 800 Red Sticks died that day. This battle...",
           "url": "https://www.nps.gov/hobe/index.htm",
           "lat": 32.976689,
           "lng": -85.734136
@@ -7850,7 +7979,7 @@
           "fullName": "Horseshoe Bend National Military Park",
           "designation": "National Military Park",
           "distanceMiles": 54.6,
-          "description": "On March 27, 1814, Major General Andrew Jackson ‘s army of 3,300 men attacked Chief Menawa’s 1,000 Red Stick Creek warriors fortified in a horseshoe shaped bend of the Tallapoosa River. Over 800 Red Sticks died that day. This battle...",
+          "description": "On March 27, 1814, Major General Andrew Jackson \u2018s army of 3,300 men attacked Chief Menawa\u2019s 1,000 Red Stick Creek warriors fortified in a horseshoe shaped bend of the Tallapoosa River. Over 800 Red Sticks died that day. This battle...",
           "url": "https://www.nps.gov/hobe/index.htm",
           "lat": 32.976689,
           "lng": -85.734136
@@ -9479,7 +9608,7 @@
           "fullName": "Horseshoe Bend National Military Park",
           "designation": "National Military Park",
           "distanceMiles": 30.0,
-          "description": "On March 27, 1814, Major General Andrew Jackson ‘s army of 3,300 men attacked Chief Menawa’s 1,000 Red Stick Creek warriors fortified in a horseshoe shaped bend of the Tallapoosa River. Over 800 Red Sticks died that day. This battle...",
+          "description": "On March 27, 1814, Major General Andrew Jackson \u2018s army of 3,300 men attacked Chief Menawa\u2019s 1,000 Red Stick Creek warriors fortified in a horseshoe shaped bend of the Tallapoosa River. Over 800 Red Sticks died that day. This battle...",
           "url": "https://www.nps.gov/hobe/index.htm",
           "lat": 32.976689,
           "lng": -85.734136

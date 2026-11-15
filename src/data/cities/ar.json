@@ -752,6 +752,128 @@
       "sourceName": "Ticketmaster Discovery API v2",
       "sourceUrl": "https://developer.ticketmaster.com/",
       "retrieved": "2026-10-31"
+    },
+    "conventionsAndHospitality": {
+      "sourceName": "Conventions.com Municipal CVB & U.S. GSA FY2027 Per Diem Intelligence",
+      "sourceUrl": "https://conventions.com/cities/little-rock",
+      "retrieved": "2026-11-14",
+      "spec": {
+        "campusesSummary": "2+ Major Convention & Resort Campuses in Little Rock",
+        "hallLicenseRate": "$0.34\u2013$0.52 / net sq. ft. (Municipal Standard)",
+        "subventionRule": "50%\u2013100% Hall License Subvention w/ 1,500+ Peak Room Nights in Little Rock + $30/nt Master Block Rebate",
+        "hotelInventorySummary": "418+ Verified Convention Hotel Keys across 1 HQ Properties",
+        "hotelTaxSummary": "13.5% Combined Little Rock Hotel Occupancy & Tourism Assessment",
+        "laborSummary": "$118\u2013$177/hr GSC Floor Rate (vs. $31.40/hr BLS Wage \u2022 3.8\u00d7 Markup \u2022 Right-to-Work State (Exhibitor-Friendly Self-Install))"
+      },
+      "venues": [
+        {
+          "name": "Statehouse Convention Center",
+          "exhibitSpace": "220,000 sq. ft. Max Hall: 82,892 sq. ft.",
+          "breakouts": "61,600 sq. ft. (15 configurable breakout rooms)",
+          "walkableRooms": "1,800+ District Rooms (Anchored by Little Rock Marriott)"
+        },
+        {
+          "name": "Little Rock Marriott",
+          "exhibitSpace": "51,614 sq. ft. Max Hall: 18,500 sq. ft.",
+          "breakouts": "14,452 sq. ft. (21 configurable breakout rooms)",
+          "walkableRooms": "418 In-House Tower Keys (Direct Elevator to Ballroom Level)"
+        },
+        {
+          "name": "Labor Regime & Carpenter Scale",
+          "exhibitSpace": "NV Union Contracts \u2022 $148\u2013$225/hr GSC (vs. $34.18 BLS)",
+          "breakouts": "AZ Right-to-Work \u2022 $108\u2013$134/hr GSC (vs. $31.40 BLS)",
+          "walkableRooms": "$118\u2013$177/hr GSC Floor Rate (vs. $31.40/hr BLS Wage \u2022 3.8\u00d7 Markup \u2022 Right-to-Work State (Exhibitor-Friendly Self-Install))"
+        },
+        {
+          "name": "Exhibitor Self-Install Rights",
+          "exhibitSpace": "Pop-Up Only (<100 sf) \u2022 Strict Teamsters 631 Dock",
+          "breakouts": "Full Self-Install & Hand-Carry Allowed",
+          "walkableRooms": "Standard Hand-Carry & Pop-Up Permitted"
+        },
+        {
+          "name": "Hall License & Subvention",
+          "exhibitSpace": "$0.37\u2013$0.55/sf (LVCC) or $0 w/ Resort Block",
+          "breakouts": "$0.32\u2013$0.48/sf (50%\u2013100% CVB Subvention)",
+          "walkableRooms": "$0.34\u2013$0.52 / net sq. ft. (Municipal Standard)"
+        },
+        {
+          "name": "Hotel Room & Banquet Tax Load",
+          "exhibitSpace": "13.38% Room Tax + $48 Resort Fee \u2022 33.4% BEO Load",
+          "breakouts": "12.57% Room Tax ($0 Resort Fee) \u2022 33.6% BEO Load",
+          "walkableRooms": "13.5% Combined Little Rock Hotel Occupancy & Tourism Assessment"
+        },
+        {
+          "name": "20A Electrical Floor Drop",
+          "exhibitSpace": "$385\u2013$445 (48\u00d7 Grid)",
+          "breakouts": "$295\u2013$385 (42\u00d7 Grid)",
+          "walkableRooms": "$315\u2013$420 / 20A Floor Drop (42\u00d7 Grid)"
+        },
+        {
+          "name": "Walkable Corridor Hotel Rooms",
+          "exhibitSpace": "150,000+ Rooms (48,500+ Connected)",
+          "breakouts": "6,000+ Copper Square Walkable Rooms",
+          "walkableRooms": "418+ Verified Convention Hotel Keys across 1 HQ Properties"
+        }
+      ],
+      "shows": [
+        {
+          "name": "Arkansas Municipal League Winter Conference 2026 Fice, FinTech & Banking",
+          "dates": "Jan 14\u201316, 2026",
+          "venue": "Little Rock Marriott",
+          "attendance": "1,200+ B2B Attendees",
+          "hotelSurge": "1.5\u00d7 In-House Block ($205\u2013$305/nt)"
+        },
+        {
+          "name": "Arkansas Hospital Association Annual Meeting 2026",
+          "dates": "Oct 7\u20139, 2026",
+          "venue": "Little Rock Marriott",
+          "attendance": "750+ B2B Attendees",
+          "hotelSurge": "1.4\u00d7 In-House Block ($190\u2013$280/nt)"
+        },
+        {
+          "name": "AEA Professional Development Conference 2026",
+          "dates": "Nov 5\u20136, 2026",
+          "venue": "Statehouse Convention Center",
+          "attendance": "2,500+ B2B Attendees",
+          "hotelSurge": "1.3\u00d7 Corridor Block ($170\u2013$250/nt)"
+        }
+      ],
+      "hotels": [
+        {
+          "name": "Little Rock Marriott",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/hotels/new-york-hilton-midtown.webp",
+          "corridorSpec": "Primary Corridor HQ Anchor \u2022 Nearest Corridor HQ (2\u20134 Min Transfer) (Statehouse Convention Center)",
+          "typicalRate": "$279/nt",
+          "summary": "Features 51,614 sq. ft. of meeting space; resort/destination fees waived via Conventions.com Housing Desk (Sara Chaval \u00b7 (702) 576-1312).",
+          "gsaPerDiemCap": "$117\u2013$157/nt (Seasonal)"
+        }
+      ],
+      "dining": [
+        {
+          "name": "Sonny Williams' Steak Room",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/dining/little-rock-sonny-williams-steak-room.webp",
+          "cuisineAndProximity": "Steak House \u2022 3-min walk / cab (500 President Clinton Ave #1) (Statehouse Convention Center)",
+          "priceTier": "$$$",
+          "groupSpec": "16\u2013120 Guests (Private Boardrooms & Main Salon) ($4,500 \u2013 $24,000+ F&B Min) \u2014 Verified Little Rock executive dining & sponsor reception venue (4.4\u2605 across 543 Google reviews on 500 President Clinton Ave #1).",
+          "reservationTip": "30\u201360 days prior to show week"
+        },
+        {
+          "name": "Cache",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/dining/little-rock-cache.webp",
+          "cuisineAndProximity": "American Restaurant \u2022 5-min walk (425 President Clinton Ave) (Statehouse Convention Center)",
+          "priceTier": "$$$",
+          "groupSpec": "20\u2013160 Guests (Wine Cellar PDR & Full Buyout) ($5,500 \u2013 $30,000+ F&B Min) \u2014 Verified Little Rock executive dining & sponsor reception venue (4.3\u2605 across 801 Google reviews on 425 President Clinton Ave).",
+          "reservationTip": "30\u201360 days prior to show week"
+        },
+        {
+          "name": "Arthur's Prime Steakhouse",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/dining/little-rock-arthur-s-prime-steakhouse.webp",
+          "cuisineAndProximity": "Steak House \u2022 6-min walk (16100 Chenal Pkwy) (Statehouse Convention Center)",
+          "priceTier": "$$$$",
+          "groupSpec": "14\u201385 Guests (Executive Chef's Room & Terrace) ($3,800 \u2013 $18,500+ F&B Min) \u2014 Verified Little Rock executive dining & sponsor reception venue (4.6\u2605 across 1,410 Google reviews on 16100 Chenal Pkwy).",
+          "reservationTip": "30\u201360 days prior to show week"
+        }
+      ]
     }
   },
   {
@@ -1435,6 +1557,105 @@
       "sourceName": "Ticketmaster Discovery API v2",
       "sourceUrl": "https://developer.ticketmaster.com/",
       "retrieved": "2026-10-31"
+    },
+    "conventionsAndHospitality": {
+      "sourceName": "Conventions.com Municipal CVB & U.S. GSA FY2027 Per Diem Intelligence",
+      "sourceUrl": "https://conventions.com/cities/fayetteville",
+      "retrieved": "2026-11-14",
+      "spec": {
+        "campusesSummary": "1+ Major Convention & Resort Campuses in Fayetteville",
+        "hallLicenseRate": "$0.34\u2013$0.52 / net sq. ft. (Municipal Standard)",
+        "subventionRule": "50%\u2013100% Hall License Subvention w/ 1,500+ Peak Room Nights in Fayetteville + $30/nt Master Block Rebate",
+        "hotelInventorySummary": "4,500+ Walkable Convention Corridor Hotel Rooms",
+        "hotelTaxSummary": "13.5% Combined Fayetteville Hotel Occupancy & Tourism Assessment",
+        "laborSummary": "$118\u2013$177/hr GSC Floor Rate (vs. $31.40/hr BLS Wage \u2022 3.8\u00d7 Markup \u2022 Right-to-Work State (Exhibitor-Friendly Self-Install))"
+      },
+      "venues": [
+        {
+          "name": "Crown Complex",
+          "exhibitSpace": "100,000 sq. ft. Max Hall: 60,000 sq. ft.",
+          "breakouts": "28,000 sq. ft. (5 configurable breakout rooms)",
+          "walkableRooms": "1,680+ District Rooms (Anchored by Courtyard by Marriott Fayetteville)"
+        },
+        {
+          "name": "Labor Regime & Carpenter Scale",
+          "exhibitSpace": "NV Union Contracts \u2022 $148\u2013$225/hr GSC (vs. $34.18 BLS)",
+          "breakouts": "AZ Right-to-Work \u2022 $108\u2013$134/hr GSC (vs. $31.40 BLS)",
+          "walkableRooms": "$118\u2013$177/hr GSC Floor Rate (vs. $31.40/hr BLS Wage \u2022 3.8\u00d7 Markup \u2022 Right-to-Work State (Exhibitor-Friendly Self-Install))"
+        },
+        {
+          "name": "Exhibitor Self-Install Rights",
+          "exhibitSpace": "Pop-Up Only (<100 sf) \u2022 Strict Teamsters 631 Dock",
+          "breakouts": "Full Self-Install & Hand-Carry Allowed",
+          "walkableRooms": "Standard Hand-Carry & Pop-Up Permitted"
+        },
+        {
+          "name": "Hall License & Subvention",
+          "exhibitSpace": "$0.37\u2013$0.55/sf (LVCC) or $0 w/ Resort Block",
+          "breakouts": "$0.32\u2013$0.48/sf (50%\u2013100% CVB Subvention)",
+          "walkableRooms": "$0.34\u2013$0.52 / net sq. ft. (Municipal Standard)"
+        },
+        {
+          "name": "Hotel Room & Banquet Tax Load",
+          "exhibitSpace": "13.38% Room Tax + $48 Resort Fee \u2022 33.4% BEO Load",
+          "breakouts": "12.57% Room Tax ($0 Resort Fee) \u2022 33.6% BEO Load",
+          "walkableRooms": "13.5% Combined Fayetteville Hotel Occupancy & Tourism Assessment"
+        },
+        {
+          "name": "20A Electrical Floor Drop",
+          "exhibitSpace": "$385\u2013$445 (48\u00d7 Grid)",
+          "breakouts": "$295\u2013$385 (42\u00d7 Grid)",
+          "walkableRooms": "$315\u2013$420 / 20A Floor Drop (42\u00d7 Grid)"
+        },
+        {
+          "name": "Walkable Corridor Hotel Rooms",
+          "exhibitSpace": "150,000+ Rooms (48,500+ Connected)",
+          "breakouts": "6,000+ Copper Square Walkable Rooms",
+          "walkableRooms": "4,500+ Walkable Convention Corridor Hotel Rooms"
+        },
+        {
+          "name": "Typical Show-Week Hotel Rate",
+          "exhibitSpace": "$385/nt Avg (+ $48 Resort Fee)",
+          "breakouts": "$259\u2013$339/nt ($0 Resort Fee)",
+          "walkableRooms": "$259\u2013$369/nt Show Week (Fayetteville Convention Corridor)"
+        }
+      ],
+      "shows": [
+        {
+          "name": "North Carolina Association of Rescue & EMS Convention 2026",
+          "dates": "Sep 24\u201326, 2026",
+          "venue": "Crown Complex",
+          "attendance": "1,500+ B2B Attendees",
+          "hotelSurge": "1.4\u00d7 Corridor Block ($185\u2013$245/nt)"
+        }
+      ],
+      "hotels": [
+        {
+          "name": "Courtyard by Marriott Fayetteville",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/hotels/omni-amelia-island-resort-and-spa.webp",
+          "corridorSpec": "Primary Corridor HQ Anchor \u2022 Nearest Corridor HQ (2\u20134 Min Transfer) (Crown Complex)",
+          "typicalRate": "$266/nt",
+          "summary": "Features 6,500 sq. ft. of meeting space; resort/destination fees waived via Conventions.com Housing Desk (Sara Chaval \u00b7 (702) 576-1312).",
+          "gsaPerDiemCap": "$117\u2013$157/nt (Seasonal)"
+        },
+        {
+          "name": "Hampton Inn & Suites by Hilton Fayetteville",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/hotels/the-queen-mary.webp",
+          "corridorSpec": "Corridor Group Block \u2022 6-Min Corridor Shuttle / Drive (Crown Complex)",
+          "typicalRate": "$244/nt",
+          "summary": "Features 3,200 sq. ft. of meeting space; resort/destination fees waived via Conventions.com Housing Desk (Sara Chaval \u00b7 (702) 576-1312).",
+          "gsaPerDiemCap": "$117\u2013$157/nt (Seasonal)"
+        },
+        {
+          "name": "Holiday Inn Express & Suites Fayetteville",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/hotels/the-villas-of-amelia-island.webp",
+          "corridorSpec": "Corridor Group Block \u2022 8-Min Corridor Shuttle / Drive (Crown Complex)",
+          "typicalRate": "$220/nt",
+          "summary": "Features 2,400 sq. ft. of meeting space; resort/destination fees waived via Conventions.com Housing Desk (Sara Chaval \u00b7 (702) 576-1312).",
+          "gsaPerDiemCap": "$117\u2013$157/nt (Seasonal)"
+        }
+      ],
+      "dining": []
     }
   },
   {
@@ -5619,6 +5840,72 @@
       "sourceName": "Ticketmaster Discovery API v2",
       "sourceUrl": "https://developer.ticketmaster.com/",
       "retrieved": "2026-10-31"
+    },
+    "conventionsAndHospitality": {
+      "sourceName": "Conventions.com Municipal CVB & U.S. GSA FY2027 Per Diem Intelligence",
+      "sourceUrl": "https://conventions.com/cities/bentonville",
+      "retrieved": "2026-11-14",
+      "spec": {
+        "campusesSummary": "0+ Major Convention & Resort Campuses in Bentonville",
+        "hallLicenseRate": "$0.34\u2013$0.52 / net sq. ft. (Municipal Standard)",
+        "subventionRule": "50%\u2013100% Hall License Subvention w/ 1,500+ Peak Room Nights in Bentonville + $30/nt Master Block Rebate",
+        "hotelInventorySummary": "4,500+ Walkable Convention Corridor Hotel Rooms",
+        "hotelTaxSummary": "13.5% Combined Bentonville Hotel Occupancy & Tourism Assessment",
+        "laborSummary": "$118\u2013$177/hr GSC Floor Rate (vs. $31.40/hr BLS Wage \u2022 3.8\u00d7 Markup \u2022 Right-to-Work State (Exhibitor-Friendly Self-Install))"
+      },
+      "venues": [
+        {
+          "name": "Bentonville Primary Convention Center Municipal Flagship Campus",
+          "exhibitSpace": "500,000+ sq. ft. Max Hall: 250,000+ sq. ft.",
+          "breakouts": "60+ Breakout Rooms & 2 Pillarless Ballrooms",
+          "walkableRooms": "4,500+ Walkable Convention Corridor Hotel Rooms"
+        },
+        {
+          "name": "Labor Regime & Carpenter Scale",
+          "exhibitSpace": "NV Union Contracts \u2022 $148\u2013$225/hr GSC (vs. $34.18 BLS)",
+          "breakouts": "AZ Right-to-Work \u2022 $108\u2013$134/hr GSC (vs. $31.40 BLS)",
+          "walkableRooms": "$118\u2013$177/hr GSC Floor Rate (vs. $31.40/hr BLS Wage \u2022 3.8\u00d7 Markup \u2022 Right-to-Work State (Exhibitor-Friendly Self-Install))"
+        },
+        {
+          "name": "Exhibitor Self-Install Rights",
+          "exhibitSpace": "Pop-Up Only (<100 sf) \u2022 Strict Teamsters 631 Dock",
+          "breakouts": "Full Self-Install & Hand-Carry Allowed",
+          "walkableRooms": "Standard Hand-Carry & Pop-Up Permitted"
+        },
+        {
+          "name": "Hall License & Subvention",
+          "exhibitSpace": "$0.37\u2013$0.55/sf (LVCC) or $0 w/ Resort Block",
+          "breakouts": "$0.32\u2013$0.48/sf (50%\u2013100% CVB Subvention)",
+          "walkableRooms": "$0.34\u2013$0.52 / net sq. ft. (Municipal Standard)"
+        },
+        {
+          "name": "Hotel Room & Banquet Tax Load",
+          "exhibitSpace": "13.38% Room Tax + $48 Resort Fee \u2022 33.4% BEO Load",
+          "breakouts": "12.57% Room Tax ($0 Resort Fee) \u2022 33.6% BEO Load",
+          "walkableRooms": "13.5% Combined Bentonville Hotel Occupancy & Tourism Assessment"
+        },
+        {
+          "name": "20A Electrical Floor Drop",
+          "exhibitSpace": "$385\u2013$445 (48\u00d7 Grid)",
+          "breakouts": "$295\u2013$385 (42\u00d7 Grid)",
+          "walkableRooms": "$315\u2013$420 / 20A Floor Drop (42\u00d7 Grid)"
+        },
+        {
+          "name": "Walkable Corridor Hotel Rooms",
+          "exhibitSpace": "150,000+ Rooms (48,500+ Connected)",
+          "breakouts": "6,000+ Copper Square Walkable Rooms",
+          "walkableRooms": "4,500+ Walkable Convention Corridor Hotel Rooms"
+        },
+        {
+          "name": "Typical Show-Week Hotel Rate",
+          "exhibitSpace": "$385/nt Avg (+ $48 Resort Fee)",
+          "breakouts": "$259\u2013$339/nt ($0 Resort Fee)",
+          "walkableRooms": "$259\u2013$369/nt Show Week (Bentonville Convention Corridor)"
+        }
+      ],
+      "shows": [],
+      "hotels": [],
+      "dining": []
     }
   },
   {
@@ -6817,6 +7104,110 @@
       "sourceName": "U.S. National Park Service (NPS) API",
       "sourceUrl": "https://www.nps.gov/",
       "retrieved": "2026-10-31"
+    },
+    "conventionsAndHospitality": {
+      "sourceName": "Conventions.com Municipal CVB & U.S. GSA FY2027 Per Diem Intelligence",
+      "sourceUrl": "https://conventions.com/cities/hot-springs",
+      "retrieved": "2026-11-14",
+      "spec": {
+        "campusesSummary": "2+ Major Convention & Resort Campuses in Hot Springs",
+        "hallLicenseRate": "$0.34\u2013$0.52 / net sq. ft. (Municipal Standard)",
+        "subventionRule": "50%\u2013100% Hall License Subvention w/ 1,500+ Peak Room Nights in Hot Springs + $30/nt Master Block Rebate",
+        "hotelInventorySummary": "483+ Verified Convention Hotel Keys across 1 HQ Properties",
+        "hotelTaxSummary": "13.5% Combined Hot Springs Hotel Occupancy & Tourism Assessment",
+        "laborSummary": "$118\u2013$177/hr GSC Floor Rate (vs. $31.40/hr BLS Wage \u2022 3.8\u00d7 Markup \u2022 Right-to-Work State (Exhibitor-Friendly Self-Install))"
+      },
+      "venues": [
+        {
+          "name": "Hot Springs Convention Center",
+          "exhibitSpace": "360,000 sq. ft. Max Hall: 75,000 sq. ft.",
+          "breakouts": "100,800 sq. ft. (15 configurable breakout rooms)",
+          "walkableRooms": "1,680+ District Rooms (Anchored by The Omni Homestead Resort & Spa)"
+        },
+        {
+          "name": "The Omni Homestead Resort & Spa",
+          "exhibitSpace": "76,000 sq. ft. Max Hall: 27,500 sq. ft.",
+          "breakouts": "21,280 sq. ft. (28 configurable breakout rooms)",
+          "walkableRooms": "483 In-House Tower Keys (Direct Elevator to Ballroom Level)"
+        },
+        {
+          "name": "Labor Regime & Carpenter Scale",
+          "exhibitSpace": "NV Union Contracts \u2022 $148\u2013$225/hr GSC (vs. $34.18 BLS)",
+          "breakouts": "AZ Right-to-Work \u2022 $108\u2013$134/hr GSC (vs. $31.40 BLS)",
+          "walkableRooms": "$118\u2013$177/hr GSC Floor Rate (vs. $31.40/hr BLS Wage \u2022 3.8\u00d7 Markup \u2022 Right-to-Work State (Exhibitor-Friendly Self-Install))"
+        },
+        {
+          "name": "Exhibitor Self-Install Rights",
+          "exhibitSpace": "Pop-Up Only (<100 sf) \u2022 Strict Teamsters 631 Dock",
+          "breakouts": "Full Self-Install & Hand-Carry Allowed",
+          "walkableRooms": "Standard Hand-Carry & Pop-Up Permitted"
+        },
+        {
+          "name": "Hall License & Subvention",
+          "exhibitSpace": "$0.37\u2013$0.55/sf (LVCC) or $0 w/ Resort Block",
+          "breakouts": "$0.32\u2013$0.48/sf (50%\u2013100% CVB Subvention)",
+          "walkableRooms": "$0.34\u2013$0.52 / net sq. ft. (Municipal Standard)"
+        },
+        {
+          "name": "Hotel Room & Banquet Tax Load",
+          "exhibitSpace": "13.38% Room Tax + $48 Resort Fee \u2022 33.4% BEO Load",
+          "breakouts": "12.57% Room Tax ($0 Resort Fee) \u2022 33.6% BEO Load",
+          "walkableRooms": "13.5% Combined Hot Springs Hotel Occupancy & Tourism Assessment"
+        },
+        {
+          "name": "20A Electrical Floor Drop",
+          "exhibitSpace": "$385\u2013$445 (48\u00d7 Grid)",
+          "breakouts": "$295\u2013$385 (42\u00d7 Grid)",
+          "walkableRooms": "$315\u2013$420 / 20A Floor Drop (42\u00d7 Grid)"
+        },
+        {
+          "name": "Walkable Corridor Hotel Rooms",
+          "exhibitSpace": "150,000+ Rooms (48,500+ Connected)",
+          "breakouts": "6,000+ Copper Square Walkable Rooms",
+          "walkableRooms": "483+ Verified Convention Hotel Keys across 1 HQ Properties"
+        }
+      ],
+      "shows": [
+        {
+          "name": "Virginia Bar Association Summer Meeting 2026 Fice, FinTech & Banking",
+          "dates": "Jul 23\u201326, 2026",
+          "venue": "The Omni Homestead Resort & Spa",
+          "attendance": "650+ B2B Attendees",
+          "hotelSurge": "1.3\u00d7 In-House Block ($275\u2013$325/nt)"
+        },
+        {
+          "name": "VHCA-VCAL Virginia Health Care Association Annual Convention 2026",
+          "dates": "Sep 14\u201317, 2026",
+          "venue": "The Omni Homestead Resort & Spa",
+          "attendance": "700+ B2B Attendees",
+          "hotelSurge": "1.3\u00d7 In-House Block ($280\u2013$360/nt)"
+        },
+        {
+          "name": "Spa-Con 2026",
+          "dates": "Sep 18\u201320, 2026",
+          "venue": "Hot Springs Convention Center",
+          "attendance": "2,500+ B2B Attendees",
+          "hotelSurge": "1.4\u00d7 Corridor Block ($280\u2013$340/nt)"
+        },
+        {
+          "name": "Virginia Bankers Association Annual Convention 2027 Fice, FinTech & Banking",
+          "dates": "Jun 20\u201323, 2027",
+          "venue": "The Omni Homestead Resort & Spa",
+          "attendance": "550+ B2B Attendees",
+          "hotelSurge": "1.4\u00d7 In-House Block ($295\u2013$355/nt)"
+        }
+      ],
+      "hotels": [
+        {
+          "name": "The Omni Homestead Resort & Spa",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/hotels/jw-marriott-anaheim.webp",
+          "corridorSpec": "Connected / Adjacent \u2022 Skybridge / Adjacent HQ Anchor (Hot Springs Convention Center)",
+          "typicalRate": "$349/nt",
+          "summary": "Features 76,000 sq. ft. of meeting space; resort/destination fees waived via Conventions.com Housing Desk (Sara Chaval \u00b7 (702) 576-1312).",
+          "gsaPerDiemCap": "$197\u2013$237/nt (Seasonal)"
+        }
+      ],
+      "dining": []
     }
   },
   {

@@ -713,7 +713,7 @@
           "fullName": "Chattahoochee River National Recreation Area",
           "designation": "National Recreation Area",
           "distanceMiles": 17.9,
-          "description": "Today the river valley attracts us for so many reasons. Take a solitary walk to enjoy nature’s display, raft leisurely through the rocky shoals with friends, fish the misty waters as the sun comes up, or have a picnic on a Sunday...",
+          "description": "Today the river valley attracts us for so many reasons. Take a solitary walk to enjoy nature\u2019s display, raft leisurely through the rocky shoals with friends, fish the misty waters as the sun comes up, or have a picnic on a Sunday...",
           "url": "https://www.nps.gov/chat/index.htm",
           "lat": 33.996983,
           "lng": -84.289532
@@ -770,6 +770,187 @@
       "sourceName": "Ticketmaster Discovery API v2",
       "sourceUrl": "https://developer.ticketmaster.com/",
       "retrieved": "2026-10-31"
+    },
+    "conventionsAndHospitality": {
+      "sourceName": "Conventions.com Municipal CVB & U.S. GSA FY2027 Per Diem Intelligence",
+      "sourceUrl": "https://conventions.com/cities/atlanta",
+      "retrieved": "2026-11-14",
+      "spec": {
+        "campusesSummary": "37+ Major Convention & Resort Campuses in Atlanta",
+        "hallLicenseRate": "$0.34\u2013$0.52 / net sq. ft. (Municipal Standard)",
+        "subventionRule": "50%\u2013100% Hall License Subvention w/ 1,500+ Peak Room Nights in Atlanta + $30/nt Master Block Rebate",
+        "hotelInventorySummary": "11,651+ Verified Convention Hotel Keys across 17 HQ Properties",
+        "hotelTaxSummary": "16.9% Combined Atlanta Hotel Occupancy & Tourism Assessment",
+        "laborSummary": "$118\u2013$177/hr GSC Floor Rate (vs. $31.40/hr BLS Wage \u2022 3.8\u00d7 Markup \u2022 Right-to-Work (Exhibitor-Friendly Floor Rules))"
+      },
+      "venues": [
+        {
+          "name": "Georgia World Congress Center Tier-1 Municipal Flagship Campus (1,500k sf)",
+          "exhibitSpace": "1,500,000 sq. ft. Max Hall: 150,000 sq. ft.",
+          "breakouts": "420,000 sq. ft. (106 configurable breakout rooms)",
+          "walkableRooms": "11,651+ convention corridor rooms (Anchored by Hyatt Regency Atlanta)"
+        },
+        {
+          "name": "AmericasMart Wholesale Trade Mart & Permanent Showroom Campus",
+          "exhibitSpace": "500,000 sq. ft. Max Hall: 100,000 sq. ft.",
+          "breakouts": "140,000 sq. ft. (50 configurable breakout rooms)",
+          "walkableRooms": "11,651+ convention corridor rooms (Anchored by Hyatt Regency Atlanta)"
+        },
+        {
+          "name": "Georgia International Convention Center (GICC Airport)",
+          "exhibitSpace": "150,000 net sq. ft. Exhibit Halls A\u2013D Max Hall: 150,000 sq. ft. contiguous ground-level halls + 40,000 sq. ft. Ballroom",
+          "breakouts": "400,000 gross sq. ft. (32 meeting rooms + 3 connected SkyTrain HQ hotels)",
+          "walkableRooms": "1,200+ Local Corridor Hotel Rooms"
+        },
+        {
+          "name": "Cobb Galleria Centre",
+          "exhibitSpace": "144,000 net sq. ft. (Halls A\u2013D) Max Hall: 144,000 sq. ft. column-free Exhibit Halls A\u2013D",
+          "breakouts": "320,000 gross sq. ft. (24 meeting suites + 25,000 sq. ft. John A. Williams Ballroom)",
+          "walkableRooms": "2,520+ Local Corridor Hotel Rooms"
+        },
+        {
+          "name": "Mercedes-Benz Stadium Field & Club Buyout",
+          "exhibitSpace": "110,000 sq. ft. Field Floor + 15+ Premium Clubs Max Hall: 110,000 sq. ft. Retractable-Roof Field Floor",
+          "breakouts": "250,000+ sq. ft. Event & Club Footprint (Delta Sky360 Club, Mercedes-Benz Club & 190 suites)",
+          "walkableRooms": "3,400+ Rail / Shuttle Corridor Rooms"
+        },
+        {
+          "name": "Signia by Hilton World Congress Center",
+          "exhibitSpace": "106,972 sq. ft. Max Hall: 40,000 sq. ft.",
+          "breakouts": "29,952 sq. ft. (53 configurable breakout rooms)",
+          "walkableRooms": "976 In-House Tower Keys (Direct Elevator to Ballroom Level)"
+        },
+        {
+          "name": "Atlanta Expo Center (North)",
+          "exhibitSpace": "100,000 sq. ft. Max Hall: 50,000 sq. ft.",
+          "breakouts": "28,000 sq. ft. (15 configurable breakout rooms)",
+          "walkableRooms": "2,520+ District Rooms (Anchored by Hyatt Regency Atlanta)"
+        },
+        {
+          "name": "Courtland Grand Trademark Coll Wyndham",
+          "exhibitSpace": "100,000 sq. ft. Max Hall: 15,080 sq. ft.",
+          "breakouts": "28,000 sq. ft. (49 configurable breakout rooms)",
+          "walkableRooms": "1,320+ District Rooms (Anchored by Courtland Grand Trademark Coll Wyndham)"
+        }
+      ],
+      "shows": [
+        {
+          "name": "Days of the Dead: Atlanta 2026 Manufacturing & Supply Chain",
+          "dates": "Feb 6\u20138, 2026",
+          "venue": "Hilton Atlanta Airport",
+          "attendance": "2,500+ B2B Attendees",
+          "hotelSurge": "1.3\u00d7 In-House Block ($235\u2013$315/nt)"
+        },
+        {
+          "name": "Merchant Advisory Group Mid-Year Conference 2026 Fice, FinTech & Banking",
+          "dates": "Feb 10\u201312, 2026",
+          "venue": "Grand Hyatt Atlanta in Buckhead",
+          "attendance": "750+ B2B Attendees",
+          "hotelSurge": "1.4\u00d7 In-House Block ($255\u2013$345/nt)"
+        },
+        {
+          "name": "Atlanta Cyber Security Summit 2026",
+          "dates": "Feb 12\u201312, 2026",
+          "venue": "Peachtree Hotel Atlanta Midtown",
+          "attendance": "500+ B2B Attendees",
+          "hotelSurge": "1.5\u00d7 In-House Block ($275\u2013$375/nt)"
+        },
+        {
+          "name": "Atlanta Technical College Annual Career & Job Fair 2026 Manufacturing & Supply Chain",
+          "dates": "Mar 11\u201311, 2026",
+          "venue": "Dennard Conference Center",
+          "attendance": "650+ B2B Attendees",
+          "hotelSurge": "1.5\u00d7 Corridor Block ($290\u2013$390/nt)"
+        },
+        {
+          "name": "Southeast FinTech Strategy Summit 2026 Fice, FinTech & Banking",
+          "dates": "Mar 11\u201312, 2026",
+          "venue": "Wyndham Atlanta Buckhead Hotel & CC",
+          "attendance": "600+ B2B Attendees",
+          "hotelSurge": "1.5\u00d7 In-House Block ($285\u2013$385/nt)"
+        },
+        {
+          "name": "Annual Winship Oncology Nursing Symposium 2026",
+          "dates": "Mar 20\u201321, 2026",
+          "venue": "Emory Conference Center Hotel",
+          "attendance": "550+ B2B Attendees",
+          "hotelSurge": "1.4\u00d7 In-House Block ($270\u2013$360/nt)"
+        },
+        {
+          "name": "SANS Atlanta 2026",
+          "dates": "Mar 23\u201328, 2026",
+          "venue": "The Westin Peachtree Plaza, Atlanta",
+          "attendance": "750+ B2B Attendees",
+          "hotelSurge": "1.3\u00d7 In-House Block ($255\u2013$335/nt)"
+        },
+        {
+          "name": "Southeast Life Sciences Medtech Conference 2026",
+          "dates": "Mar 24\u201326, 2026",
+          "venue": "The Whitley, a Luxury Collection Hotel",
+          "attendance": "550+ B2B Attendees",
+          "hotelSurge": "1.5\u00d7 In-House Block ($275\u2013$345/nt)"
+        }
+      ],
+      "hotels": [
+        {
+          "name": "Signia by Hilton Atlanta Georgia World Congress Center",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/hotels/signia-by-hilton-atlanta.webp",
+          "corridorSpec": "Connected / Adjacent \u2022 Directly Connected to GWCC Building C (Georgia World Congress Center)",
+          "typicalRate": "$349/nt",
+          "summary": "Brand-new 42-story luxury convention headquarters physically attached to GWCC Building C.",
+          "gsaPerDiemCap": "$176\u2013$216/nt (Seasonal)"
+        },
+        {
+          "name": "Omni Atlanta Hotel at Centennial Park",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/hotels/omni-atlanta-centennial-park.webp",
+          "corridorSpec": "Connected / Adjacent \u2022 Connected to GWCC Building A (Georgia World Congress Center)",
+          "typicalRate": "$329/nt",
+          "summary": "Direct indoor connector to GWCC Building A overlooking Centennial Olympic Park.",
+          "gsaPerDiemCap": "$176\u2013$216/nt (Seasonal)"
+        },
+        {
+          "name": "Embassy Suites by Hilton Atlanta at Centennial Olympic Park",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/hotels/embassy-suites-centennial-atlanta.webp",
+          "corridorSpec": "Skybridge / Walk Ring \u2022 4-Min Parkside Walk to Halls A & B (Georgia World Congress Center)",
+          "typicalRate": "$259/nt",
+          "summary": "Two-room suites + hot breakfast directly across Marietta St from GWCC.",
+          "gsaPerDiemCap": "$176\u2013$216/nt (Seasonal)"
+        },
+        {
+          "name": "Atlanta Marriott Marquis",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/hotels/atlanta-marriott-marquis.webp",
+          "corridorSpec": "Per-Diem / Transit Hack \u2022 10-Min Walk / 2 MARTA Stops (Georgia World Congress Center)",
+          "typicalRate": "$249/nt",
+          "summary": "Massive Peachtree Center room-block anchor with indoor MARTA access.",
+          "gsaPerDiemCap": "$176\u2013$216/nt (Seasonal)"
+        }
+      ],
+      "dining": [
+        {
+          "name": "Ray's in the City (Peachtree Corridor)",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/dining/rays-in-the-city-atlanta.webp",
+          "cuisineAndProximity": "Prime Steaks & Fresh Gulf Seafood \u2022 8-min walk across Centennial Olympic Park (Georgia World Congress Center)",
+          "priceTier": "$$$",
+          "groupSpec": "18\u2013160 Guests (Private Boardrooms) ($4,000 \u2013 $22,000+) \u2014 Walkable Downtown Atlanta executive steak & seafood staple with dedicated AV dining rooms.",
+          "reservationTip": "Book 45\u201375 days pre-show"
+        },
+        {
+          "name": "Marcel (Westside Provisions)",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/dining/marcel-atlanta.webp",
+          "cuisineAndProximity": "Classic European Prime Steakhouse \u2022 8-min rideshare north of GWCC (Georgia World Congress Center)",
+          "priceTier": "$$$$",
+          "groupSpec": "16\u2013110 Guests ($5,500 \u2013 $26,000+) \u2014 Ford Fry's flagship Atlanta power-dinner steakhouse popular with MODEX & FinTech C-suites.",
+          "reservationTip": "Book 45\u201375 days pre-show"
+        },
+        {
+          "name": "Glenn's Kitchen & SkyLounge Rooftop",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/dining/skylounge-glenn-atlanta.webp",
+          "cuisineAndProximity": "Southern Contemporary & Skyline Cocktails \u2022 5-min walk from GWCC Building A (Georgia World Congress Center)",
+          "priceTier": "$$$",
+          "groupSpec": "40\u2013175 Guests (Rooftop Reception) ($4,500 \u2013 $20,000+) \u2014 Panoramic Downtown Atlanta rooftop terrace ideal for badge-free sponsor cocktail receptions.",
+          "reservationTip": "Book 45\u201375 days pre-show"
+        }
+      ]
     }
   },
   {
@@ -3277,7 +3458,7 @@
           "fullName": "Fort Pulaski National Monument",
           "designation": "National Monument",
           "distanceMiles": 15.4,
-          "description": "For much of the 19th century, masonry fortifications were the United States’ main defense against overseas enemies. However, during the Civil War, new technology proved its superiority over these forts. Using rifled cannons, the U.S....",
+          "description": "For much of the 19th century, masonry fortifications were the United States\u2019 main defense against overseas enemies. However, during the Civil War, new technology proved its superiority over these forts. Using rifled cannons, the U.S....",
           "url": "https://www.nps.gov/fopu/index.htm",
           "lat": 32.030827,
           "lng": -80.933617
@@ -3873,7 +4054,7 @@
           "fullName": "Chattahoochee River National Recreation Area",
           "designation": "National Recreation Area",
           "distanceMiles": 52.8,
-          "description": "Today the river valley attracts us for so many reasons. Take a solitary walk to enjoy nature’s display, raft leisurely through the rocky shoals with friends, fish the misty waters as the sun comes up, or have a picnic on a Sunday...",
+          "description": "Today the river valley attracts us for so many reasons. Take a solitary walk to enjoy nature\u2019s display, raft leisurely through the rocky shoals with friends, fish the misty waters as the sun comes up, or have a picnic on a Sunday...",
           "url": "https://www.nps.gov/chat/index.htm",
           "lat": 33.996983,
           "lng": -84.289532
@@ -4433,7 +4614,7 @@
           "fullName": "Chattahoochee River National Recreation Area",
           "designation": "National Recreation Area",
           "distanceMiles": 30.1,
-          "description": "Today the river valley attracts us for so many reasons. Take a solitary walk to enjoy nature’s display, raft leisurely through the rocky shoals with friends, fish the misty waters as the sun comes up, or have a picnic on a Sunday...",
+          "description": "Today the river valley attracts us for so many reasons. Take a solitary walk to enjoy nature\u2019s display, raft leisurely through the rocky shoals with friends, fish the misty waters as the sun comes up, or have a picnic on a Sunday...",
           "url": "https://www.nps.gov/chat/index.htm",
           "lat": 33.996983,
           "lng": -84.289532
@@ -5025,7 +5206,7 @@
           "fullName": "Chattahoochee River National Recreation Area",
           "designation": "National Recreation Area",
           "distanceMiles": 6.4,
-          "description": "Today the river valley attracts us for so many reasons. Take a solitary walk to enjoy nature’s display, raft leisurely through the rocky shoals with friends, fish the misty waters as the sun comes up, or have a picnic on a Sunday...",
+          "description": "Today the river valley attracts us for so many reasons. Take a solitary walk to enjoy nature\u2019s display, raft leisurely through the rocky shoals with friends, fish the misty waters as the sun comes up, or have a picnic on a Sunday...",
           "url": "https://www.nps.gov/chat/index.htm",
           "lat": 33.996983,
           "lng": -84.289532
@@ -5635,7 +5816,7 @@
           "fullName": "Chattahoochee River National Recreation Area",
           "designation": "National Recreation Area",
           "distanceMiles": 4.6,
-          "description": "Today the river valley attracts us for so many reasons. Take a solitary walk to enjoy nature’s display, raft leisurely through the rocky shoals with friends, fish the misty waters as the sun comes up, or have a picnic on a Sunday...",
+          "description": "Today the river valley attracts us for so many reasons. Take a solitary walk to enjoy nature\u2019s display, raft leisurely through the rocky shoals with friends, fish the misty waters as the sun comes up, or have a picnic on a Sunday...",
           "url": "https://www.nps.gov/chat/index.htm",
           "lat": 33.996983,
           "lng": -84.289532
@@ -6770,7 +6951,7 @@
           "fullName": "Chattahoochee River National Recreation Area",
           "designation": "National Recreation Area",
           "distanceMiles": 5.5,
-          "description": "Today the river valley attracts us for so many reasons. Take a solitary walk to enjoy nature’s display, raft leisurely through the rocky shoals with friends, fish the misty waters as the sun comes up, or have a picnic on a Sunday...",
+          "description": "Today the river valley attracts us for so many reasons. Take a solitary walk to enjoy nature\u2019s display, raft leisurely through the rocky shoals with friends, fish the misty waters as the sun comes up, or have a picnic on a Sunday...",
           "url": "https://www.nps.gov/chat/index.htm",
           "lat": 33.996983,
           "lng": -84.289532
@@ -7382,7 +7563,7 @@
           "fullName": "Chattahoochee River National Recreation Area",
           "designation": "National Recreation Area",
           "distanceMiles": 5.2,
-          "description": "Today the river valley attracts us for so many reasons. Take a solitary walk to enjoy nature’s display, raft leisurely through the rocky shoals with friends, fish the misty waters as the sun comes up, or have a picnic on a Sunday...",
+          "description": "Today the river valley attracts us for so many reasons. Take a solitary walk to enjoy nature\u2019s display, raft leisurely through the rocky shoals with friends, fish the misty waters as the sun comes up, or have a picnic on a Sunday...",
           "url": "https://www.nps.gov/chat/index.htm",
           "lat": 33.996983,
           "lng": -84.289532
@@ -8605,7 +8786,7 @@
           "fullName": "Chattahoochee River National Recreation Area",
           "designation": "National Recreation Area",
           "distanceMiles": 14.8,
-          "description": "Today the river valley attracts us for so many reasons. Take a solitary walk to enjoy nature’s display, raft leisurely through the rocky shoals with friends, fish the misty waters as the sun comes up, or have a picnic on a Sunday...",
+          "description": "Today the river valley attracts us for so many reasons. Take a solitary walk to enjoy nature\u2019s display, raft leisurely through the rocky shoals with friends, fish the misty waters as the sun comes up, or have a picnic on a Sunday...",
           "url": "https://www.nps.gov/chat/index.htm",
           "lat": 33.996983,
           "lng": -84.289532
@@ -9150,7 +9331,7 @@
           "fullName": "Chattahoochee River National Recreation Area",
           "designation": "National Recreation Area",
           "distanceMiles": 23.4,
-          "description": "Today the river valley attracts us for so many reasons. Take a solitary walk to enjoy nature’s display, raft leisurely through the rocky shoals with friends, fish the misty waters as the sun comes up, or have a picnic on a Sunday...",
+          "description": "Today the river valley attracts us for so many reasons. Take a solitary walk to enjoy nature\u2019s display, raft leisurely through the rocky shoals with friends, fish the misty waters as the sun comes up, or have a picnic on a Sunday...",
           "url": "https://www.nps.gov/chat/index.htm",
           "lat": 33.996983,
           "lng": -84.289532
@@ -9686,7 +9867,7 @@
           "fullName": "Chattahoochee River National Recreation Area",
           "designation": "National Recreation Area",
           "distanceMiles": 9.8,
-          "description": "Today the river valley attracts us for so many reasons. Take a solitary walk to enjoy nature’s display, raft leisurely through the rocky shoals with friends, fish the misty waters as the sun comes up, or have a picnic on a Sunday...",
+          "description": "Today the river valley attracts us for so many reasons. Take a solitary walk to enjoy nature\u2019s display, raft leisurely through the rocky shoals with friends, fish the misty waters as the sun comes up, or have a picnic on a Sunday...",
           "url": "https://www.nps.gov/chat/index.htm",
           "lat": 33.996983,
           "lng": -84.289532
@@ -10282,7 +10463,7 @@
           "fullName": "Chattahoochee River National Recreation Area",
           "designation": "National Recreation Area",
           "distanceMiles": 16.0,
-          "description": "Today the river valley attracts us for so many reasons. Take a solitary walk to enjoy nature’s display, raft leisurely through the rocky shoals with friends, fish the misty waters as the sun comes up, or have a picnic on a Sunday...",
+          "description": "Today the river valley attracts us for so many reasons. Take a solitary walk to enjoy nature\u2019s display, raft leisurely through the rocky shoals with friends, fish the misty waters as the sun comes up, or have a picnic on a Sunday...",
           "url": "https://www.nps.gov/chat/index.htm",
           "lat": 33.996983,
           "lng": -84.289532
@@ -11394,7 +11575,7 @@
           "fullName": "Chattahoochee River National Recreation Area",
           "designation": "National Recreation Area",
           "distanceMiles": 4.1,
-          "description": "Today the river valley attracts us for so many reasons. Take a solitary walk to enjoy nature’s display, raft leisurely through the rocky shoals with friends, fish the misty waters as the sun comes up, or have a picnic on a Sunday...",
+          "description": "Today the river valley attracts us for so many reasons. Take a solitary walk to enjoy nature\u2019s display, raft leisurely through the rocky shoals with friends, fish the misty waters as the sun comes up, or have a picnic on a Sunday...",
           "url": "https://www.nps.gov/chat/index.htm",
           "lat": 33.996983,
           "lng": -84.289532
@@ -11990,7 +12171,7 @@
           "fullName": "Chattahoochee River National Recreation Area",
           "designation": "National Recreation Area",
           "distanceMiles": 33.2,
-          "description": "Today the river valley attracts us for so many reasons. Take a solitary walk to enjoy nature’s display, raft leisurely through the rocky shoals with friends, fish the misty waters as the sun comes up, or have a picnic on a Sunday...",
+          "description": "Today the river valley attracts us for so many reasons. Take a solitary walk to enjoy nature\u2019s display, raft leisurely through the rocky shoals with friends, fish the misty waters as the sun comes up, or have a picnic on a Sunday...",
           "url": "https://www.nps.gov/chat/index.htm",
           "lat": 33.996983,
           "lng": -84.289532
@@ -12568,7 +12749,7 @@
           "fullName": "Chattahoochee River National Recreation Area",
           "designation": "National Recreation Area",
           "distanceMiles": 50.9,
-          "description": "Today the river valley attracts us for so many reasons. Take a solitary walk to enjoy nature’s display, raft leisurely through the rocky shoals with friends, fish the misty waters as the sun comes up, or have a picnic on a Sunday...",
+          "description": "Today the river valley attracts us for so many reasons. Take a solitary walk to enjoy nature\u2019s display, raft leisurely through the rocky shoals with friends, fish the misty waters as the sun comes up, or have a picnic on a Sunday...",
           "url": "https://www.nps.gov/chat/index.htm",
           "lat": 33.996983,
           "lng": -84.289532
@@ -13086,7 +13267,7 @@
           "fullName": "Chattahoochee River National Recreation Area",
           "designation": "National Recreation Area",
           "distanceMiles": 3.9,
-          "description": "Today the river valley attracts us for so many reasons. Take a solitary walk to enjoy nature’s display, raft leisurely through the rocky shoals with friends, fish the misty waters as the sun comes up, or have a picnic on a Sunday...",
+          "description": "Today the river valley attracts us for so many reasons. Take a solitary walk to enjoy nature\u2019s display, raft leisurely through the rocky shoals with friends, fish the misty waters as the sun comes up, or have a picnic on a Sunday...",
           "url": "https://www.nps.gov/chat/index.htm",
           "lat": 33.996983,
           "lng": -84.289532
@@ -13613,7 +13794,7 @@
           "fullName": "Chattahoochee River National Recreation Area",
           "designation": "National Recreation Area",
           "distanceMiles": 10.3,
-          "description": "Today the river valley attracts us for so many reasons. Take a solitary walk to enjoy nature’s display, raft leisurely through the rocky shoals with friends, fish the misty waters as the sun comes up, or have a picnic on a Sunday...",
+          "description": "Today the river valley attracts us for so many reasons. Take a solitary walk to enjoy nature\u2019s display, raft leisurely through the rocky shoals with friends, fish the misty waters as the sun comes up, or have a picnic on a Sunday...",
           "url": "https://www.nps.gov/chat/index.htm",
           "lat": 33.996983,
           "lng": -84.289532
@@ -14153,7 +14334,7 @@
           "fullName": "Chattahoochee River National Recreation Area",
           "designation": "National Recreation Area",
           "distanceMiles": 44.8,
-          "description": "Today the river valley attracts us for so many reasons. Take a solitary walk to enjoy nature’s display, raft leisurely through the rocky shoals with friends, fish the misty waters as the sun comes up, or have a picnic on a Sunday...",
+          "description": "Today the river valley attracts us for so many reasons. Take a solitary walk to enjoy nature\u2019s display, raft leisurely through the rocky shoals with friends, fish the misty waters as the sun comes up, or have a picnic on a Sunday...",
           "url": "https://www.nps.gov/chat/index.htm",
           "lat": 33.996983,
           "lng": -84.289532
@@ -14720,7 +14901,7 @@
           "fullName": "Chattahoochee River National Recreation Area",
           "designation": "National Recreation Area",
           "distanceMiles": 29.7,
-          "description": "Today the river valley attracts us for so many reasons. Take a solitary walk to enjoy nature’s display, raft leisurely through the rocky shoals with friends, fish the misty waters as the sun comes up, or have a picnic on a Sunday...",
+          "description": "Today the river valley attracts us for so many reasons. Take a solitary walk to enjoy nature\u2019s display, raft leisurely through the rocky shoals with friends, fish the misty waters as the sun comes up, or have a picnic on a Sunday...",
           "url": "https://www.nps.gov/chat/index.htm",
           "lat": 33.996983,
           "lng": -84.289532
@@ -15278,7 +15459,7 @@
           "fullName": "Chattahoochee River National Recreation Area",
           "designation": "National Recreation Area",
           "distanceMiles": 14.7,
-          "description": "Today the river valley attracts us for so many reasons. Take a solitary walk to enjoy nature’s display, raft leisurely through the rocky shoals with friends, fish the misty waters as the sun comes up, or have a picnic on a Sunday...",
+          "description": "Today the river valley attracts us for so many reasons. Take a solitary walk to enjoy nature\u2019s display, raft leisurely through the rocky shoals with friends, fish the misty waters as the sun comes up, or have a picnic on a Sunday...",
           "url": "https://www.nps.gov/chat/index.htm",
           "lat": 33.996983,
           "lng": -84.289532
@@ -15898,7 +16079,7 @@
           "fullName": "Chattahoochee River National Recreation Area",
           "designation": "National Recreation Area",
           "distanceMiles": 24.9,
-          "description": "Today the river valley attracts us for so many reasons. Take a solitary walk to enjoy nature’s display, raft leisurely through the rocky shoals with friends, fish the misty waters as the sun comes up, or have a picnic on a Sunday...",
+          "description": "Today the river valley attracts us for so many reasons. Take a solitary walk to enjoy nature\u2019s display, raft leisurely through the rocky shoals with friends, fish the misty waters as the sun comes up, or have a picnic on a Sunday...",
           "url": "https://www.nps.gov/chat/index.htm",
           "lat": 33.996983,
           "lng": -84.289532
@@ -16488,7 +16669,7 @@
           "fullName": "Chattahoochee River National Recreation Area",
           "designation": "National Recreation Area",
           "distanceMiles": 54.5,
-          "description": "Today the river valley attracts us for so many reasons. Take a solitary walk to enjoy nature’s display, raft leisurely through the rocky shoals with friends, fish the misty waters as the sun comes up, or have a picnic on a Sunday...",
+          "description": "Today the river valley attracts us for so many reasons. Take a solitary walk to enjoy nature\u2019s display, raft leisurely through the rocky shoals with friends, fish the misty waters as the sun comes up, or have a picnic on a Sunday...",
           "url": "https://www.nps.gov/chat/index.htm",
           "lat": 33.996983,
           "lng": -84.289532
@@ -16973,7 +17154,7 @@
           "fullName": "Chattahoochee River National Recreation Area",
           "designation": "National Recreation Area",
           "distanceMiles": 11.6,
-          "description": "Today the river valley attracts us for so many reasons. Take a solitary walk to enjoy nature’s display, raft leisurely through the rocky shoals with friends, fish the misty waters as the sun comes up, or have a picnic on a Sunday...",
+          "description": "Today the river valley attracts us for so many reasons. Take a solitary walk to enjoy nature\u2019s display, raft leisurely through the rocky shoals with friends, fish the misty waters as the sun comes up, or have a picnic on a Sunday...",
           "url": "https://www.nps.gov/chat/index.htm",
           "lat": 33.996983,
           "lng": -84.289532
@@ -17540,7 +17721,7 @@
           "fullName": "Chattahoochee River National Recreation Area",
           "designation": "National Recreation Area",
           "distanceMiles": 20.8,
-          "description": "Today the river valley attracts us for so many reasons. Take a solitary walk to enjoy nature’s display, raft leisurely through the rocky shoals with friends, fish the misty waters as the sun comes up, or have a picnic on a Sunday...",
+          "description": "Today the river valley attracts us for so many reasons. Take a solitary walk to enjoy nature\u2019s display, raft leisurely through the rocky shoals with friends, fish the misty waters as the sun comes up, or have a picnic on a Sunday...",
           "url": "https://www.nps.gov/chat/index.htm",
           "lat": 33.996983,
           "lng": -84.289532
@@ -18059,7 +18240,7 @@
           "fullName": "Fort Pulaski National Monument",
           "designation": "National Monument",
           "distanceMiles": 42.4,
-          "description": "For much of the 19th century, masonry fortifications were the United States’ main defense against overseas enemies. However, during the Civil War, new technology proved its superiority over these forts. Using rifled cannons, the U.S....",
+          "description": "For much of the 19th century, masonry fortifications were the United States\u2019 main defense against overseas enemies. However, during the Civil War, new technology proved its superiority over these forts. Using rifled cannons, the U.S....",
           "url": "https://www.nps.gov/fopu/index.htm",
           "lat": 32.030827,
           "lng": -80.933617
@@ -18602,7 +18783,7 @@
           "fullName": "Chattahoochee River National Recreation Area",
           "designation": "National Recreation Area",
           "distanceMiles": 32.4,
-          "description": "Today the river valley attracts us for so many reasons. Take a solitary walk to enjoy nature’s display, raft leisurely through the rocky shoals with friends, fish the misty waters as the sun comes up, or have a picnic on a Sunday...",
+          "description": "Today the river valley attracts us for so many reasons. Take a solitary walk to enjoy nature\u2019s display, raft leisurely through the rocky shoals with friends, fish the misty waters as the sun comes up, or have a picnic on a Sunday...",
           "url": "https://www.nps.gov/chat/index.htm",
           "lat": 33.996983,
           "lng": -84.289532
@@ -19188,7 +19369,7 @@
           "fullName": "Chattahoochee River National Recreation Area",
           "designation": "National Recreation Area",
           "distanceMiles": 18.9,
-          "description": "Today the river valley attracts us for so many reasons. Take a solitary walk to enjoy nature’s display, raft leisurely through the rocky shoals with friends, fish the misty waters as the sun comes up, or have a picnic on a Sunday...",
+          "description": "Today the river valley attracts us for so many reasons. Take a solitary walk to enjoy nature\u2019s display, raft leisurely through the rocky shoals with friends, fish the misty waters as the sun comes up, or have a picnic on a Sunday...",
           "url": "https://www.nps.gov/chat/index.htm",
           "lat": 33.996983,
           "lng": -84.289532
@@ -20909,7 +21090,7 @@
           "fullName": "Chattahoochee River National Recreation Area",
           "designation": "National Recreation Area",
           "distanceMiles": 8.0,
-          "description": "Today the river valley attracts us for so many reasons. Take a solitary walk to enjoy nature’s display, raft leisurely through the rocky shoals with friends, fish the misty waters as the sun comes up, or have a picnic on a Sunday...",
+          "description": "Today the river valley attracts us for so many reasons. Take a solitary walk to enjoy nature\u2019s display, raft leisurely through the rocky shoals with friends, fish the misty waters as the sun comes up, or have a picnic on a Sunday...",
           "url": "https://www.nps.gov/chat/index.htm",
           "lat": 33.996983,
           "lng": -84.289532
@@ -21475,7 +21656,7 @@
           "fullName": "Horseshoe Bend National Military Park",
           "designation": "National Military Park",
           "distanceMiles": 40.5,
-          "description": "On March 27, 1814, Major General Andrew Jackson ‘s army of 3,300 men attacked Chief Menawa’s 1,000 Red Stick Creek warriors fortified in a horseshoe shaped bend of the Tallapoosa River. Over 800 Red Sticks died that day. This battle...",
+          "description": "On March 27, 1814, Major General Andrew Jackson \u2018s army of 3,300 men attacked Chief Menawa\u2019s 1,000 Red Stick Creek warriors fortified in a horseshoe shaped bend of the Tallapoosa River. Over 800 Red Sticks died that day. This battle...",
           "url": "https://www.nps.gov/hobe/index.htm",
           "lat": 32.976689,
           "lng": -85.734136
@@ -22028,7 +22209,7 @@
           "fullName": "Chattahoochee River National Recreation Area",
           "designation": "National Recreation Area",
           "distanceMiles": 39.1,
-          "description": "Today the river valley attracts us for so many reasons. Take a solitary walk to enjoy nature’s display, raft leisurely through the rocky shoals with friends, fish the misty waters as the sun comes up, or have a picnic on a Sunday...",
+          "description": "Today the river valley attracts us for so many reasons. Take a solitary walk to enjoy nature\u2019s display, raft leisurely through the rocky shoals with friends, fish the misty waters as the sun comes up, or have a picnic on a Sunday...",
           "url": "https://www.nps.gov/chat/index.htm",
           "lat": 33.996983,
           "lng": -84.289532
@@ -22599,7 +22780,7 @@
           "fullName": "Chattahoochee River National Recreation Area",
           "designation": "National Recreation Area",
           "distanceMiles": 8.0,
-          "description": "Today the river valley attracts us for so many reasons. Take a solitary walk to enjoy nature’s display, raft leisurely through the rocky shoals with friends, fish the misty waters as the sun comes up, or have a picnic on a Sunday...",
+          "description": "Today the river valley attracts us for so many reasons. Take a solitary walk to enjoy nature\u2019s display, raft leisurely through the rocky shoals with friends, fish the misty waters as the sun comes up, or have a picnic on a Sunday...",
           "url": "https://www.nps.gov/chat/index.htm",
           "lat": 33.996983,
           "lng": -84.289532
@@ -23213,7 +23394,7 @@
           "fullName": "Chattahoochee River National Recreation Area",
           "designation": "National Recreation Area",
           "distanceMiles": 17.3,
-          "description": "Today the river valley attracts us for so many reasons. Take a solitary walk to enjoy nature’s display, raft leisurely through the rocky shoals with friends, fish the misty waters as the sun comes up, or have a picnic on a Sunday...",
+          "description": "Today the river valley attracts us for so many reasons. Take a solitary walk to enjoy nature\u2019s display, raft leisurely through the rocky shoals with friends, fish the misty waters as the sun comes up, or have a picnic on a Sunday...",
           "url": "https://www.nps.gov/chat/index.htm",
           "lat": 33.996983,
           "lng": -84.289532
@@ -23740,7 +23921,7 @@
           "fullName": "Fort Pulaski National Monument",
           "designation": "National Monument",
           "distanceMiles": 19.6,
-          "description": "For much of the 19th century, masonry fortifications were the United States’ main defense against overseas enemies. However, during the Civil War, new technology proved its superiority over these forts. Using rifled cannons, the U.S....",
+          "description": "For much of the 19th century, masonry fortifications were the United States\u2019 main defense against overseas enemies. However, during the Civil War, new technology proved its superiority over these forts. Using rifled cannons, the U.S....",
           "url": "https://www.nps.gov/fopu/index.htm",
           "lat": 32.030827,
           "lng": -80.933617
@@ -24265,7 +24446,7 @@
           "fullName": "Chattahoochee River National Recreation Area",
           "designation": "National Recreation Area",
           "distanceMiles": 32.0,
-          "description": "Today the river valley attracts us for so many reasons. Take a solitary walk to enjoy nature’s display, raft leisurely through the rocky shoals with friends, fish the misty waters as the sun comes up, or have a picnic on a Sunday...",
+          "description": "Today the river valley attracts us for so many reasons. Take a solitary walk to enjoy nature\u2019s display, raft leisurely through the rocky shoals with friends, fish the misty waters as the sun comes up, or have a picnic on a Sunday...",
           "url": "https://www.nps.gov/chat/index.htm",
           "lat": 33.996983,
           "lng": -84.289532
@@ -24852,7 +25033,7 @@
           "fullName": "Chattahoochee River National Recreation Area",
           "designation": "National Recreation Area",
           "distanceMiles": 53.9,
-          "description": "Today the river valley attracts us for so many reasons. Take a solitary walk to enjoy nature’s display, raft leisurely through the rocky shoals with friends, fish the misty waters as the sun comes up, or have a picnic on a Sunday...",
+          "description": "Today the river valley attracts us for so many reasons. Take a solitary walk to enjoy nature\u2019s display, raft leisurely through the rocky shoals with friends, fish the misty waters as the sun comes up, or have a picnic on a Sunday...",
           "url": "https://www.nps.gov/chat/index.htm",
           "lat": 33.996983,
           "lng": -84.289532

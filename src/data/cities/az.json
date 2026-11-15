@@ -776,6 +776,187 @@
       "sourceName": "Ticketmaster Discovery API v2",
       "sourceUrl": "https://developer.ticketmaster.com/",
       "retrieved": "2026-10-31"
+    },
+    "conventionsAndHospitality": {
+      "sourceName": "Conventions.com Municipal CVB & U.S. GSA FY2027 Per Diem Intelligence",
+      "sourceUrl": "https://conventions.com/cities/phoenix",
+      "retrieved": "2026-11-14",
+      "spec": {
+        "campusesSummary": "646,500 sq. ft. PCC Exhibit + 1.2M+ sq. ft. Valley Resort Space",
+        "hallLicenseRate": "$0.32\u2013$0.48 / net sq. ft. (50%\u2013100% Subvention Eligible)",
+        "subventionRule": "Visit Phoenix & City of Phoenix waive 50%\u2013100% of PCC hall rental w/ 1,500+ peak room nights + $30/nt promoter rebate on contracted master blocks",
+        "hotelInventorySummary": "6,000+ Walkable Copper Square Rooms \u2022 12.57% Hotel Tax",
+        "hotelTaxSummary": "Sheraton Phoenix Downtown (1,003 rooms, 1 block) + Hyatt Regency (693 rooms, across street) \u2022 $0 resort fees at downtown business hotels",
+        "laborSummary": "Arizona Right-to-Work \u2022 Full Exhibitor Self-Install"
+      },
+      "venues": [
+        {
+          "name": "Phoenix Convention Center (West, North & South Buildings) Municipal Downtown Campus (Copper Square)",
+          "exhibitSpace": "646,500 sq. ft. Exhibit (900,000+ Total Mtg) Max Hall: 312,500 sq. ft. (Lower Halls A\u2013F)",
+          "breakouts": "99 Breakout Rooms \u2022 3 Ballrooms \u2022 2,312-Seat Symphony Hall",
+          "walkableRooms": "6,000+ (Sheraton 1,003 & Hyatt 693 Direct)"
+        },
+        {
+          "name": "JW Marriott Phoenix Desert Ridge Resort & Spa North Phoenix Luxury Conference Resort",
+          "exhibitSpace": "240,000 sq. ft. Indoor/Outdoor Event Space Max Hall: 33,000 sq. ft. Grand Canyon Ballroom",
+          "breakouts": "41 Breakout Rooms & Outdoor Vernadero Lawn",
+          "walkableRooms": "950 On-Property Suites & Rooms"
+        },
+        {
+          "name": "Sheraton Phoenix Downtown Conference Center Downtown",
+          "exhibitSpace": "110,000 sq. ft. Meeting & Ballroom Space Max Hall: 29,000 sq. ft. Phoenix Ballroom",
+          "breakouts": "26 Divisible Breakout Rooms + Valley Overlook Terrace",
+          "walkableRooms": "1,003 On-Property (6,000+ in Copper Square Ring)"
+        },
+        {
+          "name": "WestWorld of Scottsdale & Scottsdale Resort Corridor Scottsdale Expo & Five-Star Resort Corridor",
+          "exhibitSpace": "300,000+ sq. ft. (Tony Nelssen Equidome + Fairmont Palomino/Princess) Max Hall: 117,000 sq. ft. Climate-Controlled North Hall",
+          "breakouts": "50+ Resort Ballrooms & Breakout Suites Across Scottsdale",
+          "walkableRooms": "750 On-Property at Fairmont (4,500+ Kierland/Scottsdale Airpark)"
+        },
+        {
+          "name": "Labor Regime & Carpenter Scale",
+          "exhibitSpace": "NV Union Contracts \u2022 $148\u2013$225/hr GSC (vs. $34.18 BLS)",
+          "breakouts": "AZ Right-to-Work \u2022 $108\u2013$134/hr GSC (vs. $31.40 BLS)",
+          "walkableRooms": "Strict Multi-Union \u2022 $168\u2013$245/hr GSC"
+        },
+        {
+          "name": "Exhibitor Self-Install Rights",
+          "exhibitSpace": "Pop-Up Only (<100 sf) \u2022 Strict Teamsters 631 Dock",
+          "breakouts": "Full Self-Install & Hand-Carry Allowed",
+          "walkableRooms": "30-Min Limit (<300 sf) \u2022 Mandatory Union Rigging"
+        },
+        {
+          "name": "Hall License & Subvention",
+          "exhibitSpace": "$0.37\u2013$0.55/sf (LVCC) or $0 w/ Resort Block",
+          "breakouts": "$0.32\u2013$0.48/sf (50%\u2013100% CVB Subvention)",
+          "walkableRooms": "$0.42\u2013$0.62/sf (MPEA Incentive Eligible)"
+        },
+        {
+          "name": "Hotel Room & Banquet Tax Load",
+          "exhibitSpace": "13.38% Room Tax + $48 Resort Fee \u2022 33.4% BEO Load",
+          "breakouts": "12.57% Room Tax ($0 Resort Fee) \u2022 33.6% BEO Load",
+          "walkableRooms": "17.40% Room Tax \u2022 36.75% Banquet BEO Load"
+        }
+      ],
+      "shows": [
+        {
+          "name": "Arizona Real Estate Professional Development Series 2026 Real Estate & PropTech",
+          "dates": "Jan 20\u201321, 2026",
+          "venue": "GreenTree Conference Center",
+          "attendance": "500+ B2B Attendees",
+          "hotelSurge": "1.5\u00d7 Corridor Block ($270\u2013$370/nt)"
+        },
+        {
+          "name": "Western Regional Dental Experience 2026 Dental & Orthodontics",
+          "dates": "Mar 5\u20137, 2026",
+          "venue": "Sheraton Phoenix Downtown",
+          "attendance": "2,800+ B2B Attendees",
+          "hotelSurge": "1.4\u00d7 In-House Block ($240\u2013$300/nt)"
+        },
+        {
+          "name": "Arizona REALTORS Convention 2026 Fice, FinTech & Banking",
+          "dates": "Mar 23\u201326, 2026",
+          "venue": "The Peak Phoenix, a Hilton Resort",
+          "attendance": "600+ B2B Attendees",
+          "hotelSurge": "1.3\u00d7 In-House Block ($220\u2013$270/nt)"
+        },
+        {
+          "name": "NAPA 401(k) Summit 2026 Fice, FinTech & Banking",
+          "dates": "Apr 12\u201314, 2026",
+          "venue": "JW Marriott Phx Desert Ridge Resort& Spa",
+          "attendance": "2,200+ B2B Attendees",
+          "hotelSurge": "1.5\u00d7 In-House Block ($270\u2013$340/nt)"
+        },
+        {
+          "name": "NASPO Reach 2026 Fice, FinTech & Banking",
+          "dates": "Apr 12\u201315, 2026",
+          "venue": "Sheraton Grand at Wild Horse Pass",
+          "attendance": "650+ B2B Attendees",
+          "hotelSurge": "1.3\u00d7 In-House Block ($220\u2013$300/nt)"
+        },
+        {
+          "name": "NARPM Broker/Owner Conference & Expo 2026 Fice, FinTech & Banking",
+          "dates": "Apr 20\u201323, 2026",
+          "venue": "Arizona Grand Resort",
+          "attendance": "850+ B2B Attendees",
+          "hotelSurge": "1.3\u00d7 In-House Block ($240\u2013$320/nt)"
+        },
+        {
+          "name": "NACDS Annual Meeting 2026",
+          "dates": "Apr 25\u201328, 2026",
+          "venue": "JW Marriott Phx Desert Ridge Resort& Spa",
+          "attendance": "3,000+ B2B Attendees",
+          "hotelSurge": "1.5\u00d7 In-House Block ($265\u2013$335/nt)"
+        },
+        {
+          "name": "State Bar of Arizona Annual Convention 2026 Fice, FinTech & Banking",
+          "dates": "Jun 10\u201312, 2026",
+          "venue": "Hyatt Regency Phoenix",
+          "attendance": "1,800+ B2B Attendees",
+          "hotelSurge": "1.5\u00d7 In-House Block ($260\u2013$360/nt)"
+        }
+      ],
+      "hotels": [
+        {
+          "name": "Sheraton Phoenix Downtown",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/hotels/sheraton-phoenix-downtown.webp",
+          "corridorSpec": "Connected / Adjacent \u2022 1 Block North of PCC North Building (Phoenix Convention Center)",
+          "typicalRate": "$339/nt",
+          "summary": "Arizona's largest hotel (1,003 rooms) 120 yards from PCC North registration.",
+          "gsaPerDiemCap": "$165\u2013$198/nt (Seasonal)"
+        },
+        {
+          "name": "Hyatt Regency Phoenix",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/hotels/hyatt-regency-phoenix.webp",
+          "corridorSpec": "Connected / Adjacent \u2022 Directly Across 2nd St from PCC West (Phoenix Convention Center)",
+          "typicalRate": "$325/nt",
+          "summary": "60-second walk across 2nd St to PCC West & Symphony Hall.",
+          "gsaPerDiemCap": "$165\u2013$198/nt (Seasonal)"
+        },
+        {
+          "name": "Renaissance Phoenix Downtown Hotel",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/hotels/renaissance-phoenix-downtown.webp",
+          "corridorSpec": "Connected / Adjacent \u2022 3-Min Walk West on Adams St (Phoenix Convention Center)",
+          "typicalRate": "$335/nt",
+          "summary": "Stylish urban convention hotel with rooftop pool & Dust Cutter saloon buyouts.",
+          "gsaPerDiemCap": "$165\u2013$198/nt (Seasonal)"
+        },
+        {
+          "name": "Kimpton Hotel Palomar Phoenix (CityScape)",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/hotels/kimpton-hotel-palomar-phoenix.webp",
+          "corridorSpec": "Luxury Client Hosting \u2022 4-Min Walk + Eden Rooftop Lounge (Phoenix Convention Center)",
+          "typicalRate": "$359/nt",
+          "summary": "Anchors CityScape dining plaza with open-air rooftop lounge.",
+          "gsaPerDiemCap": "$165\u2013$198/nt (Seasonal)"
+        }
+      ],
+      "dining": [
+        {
+          "name": "Wren & Wolf",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/dining/wren-and-wolf-phoenix.webp",
+          "cuisineAndProximity": "Modern Wood-Fired Prime Steakhouse & Cocktail Den \u2022 3-min walk from PCC West Building (Phoenix Convention Center)",
+          "priceTier": "$$$$",
+          "groupSpec": "16\u2013160 Guests (Trophy Room & Buyout) ($5,000 \u2013 $30,000+) \u2014 Downtown Phoenix's hottest executive steakhouse & cocktail den\u2014prime SEMICON West dinner HQ.",
+          "reservationTip": "Book 45\u201375 days pre-show"
+        },
+        {
+          "name": "Mancuso's Restaurant (Collier Center)",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/dining/mancusos-restaurant-phoenix.webp",
+          "cuisineAndProximity": "Prime Steaks & Classic Italian \u2022 2-min walk across Washington St (Phoenix Convention Center)",
+          "priceTier": "$$$",
+          "groupSpec": "18\u2013140 Guests ($3,800 \u2013 $20,000+) \u2014 Castle-inspired fine dining steps from PCC South & West lobbies.",
+          "reservationTip": "Book 45\u201375 days pre-show"
+        },
+        {
+          "name": "The Arrogant Butcher (CityScape)",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/dining/arrosta-and-arrogant-butcher-phoenix.webp",
+          "cuisineAndProximity": "Chophouse, Raw Bar & Covered Patio \u2022 3-min walk to CityScape Plaza (Phoenix Convention Center)",
+          "priceTier": "$$$",
+          "groupSpec": "25\u2013220 Guests (Indoor/Patio Buyout) ($4,500 \u2013 $24,000+) \u2014 Sam Fox's bustling convention chophouse built for 30\u2013200 person exhibitor receptions.",
+          "reservationTip": "Book 45\u201375 days pre-show"
+        }
+      ]
     }
   },
   {
@@ -1442,10 +1623,10 @@
         },
         {
           "parkCode": "tuma",
-          "fullName": "Tumacácori National Historical Park",
+          "fullName": "Tumac\u00e1cori National Historical Park",
           "designation": "National Historical Park",
           "distanceMiles": 41.8,
-          "description": "Tumacácori sits at a cultural crossroads in the Santa Cruz River valley. Here O’odham, Yaqui, and Apache people met and mingled with European Jesuit and Franciscan missionaries, settlers, and soldiers, sometimes in conflict and...",
+          "description": "Tumac\u00e1cori sits at a cultural crossroads in the Santa Cruz River valley. Here O\u2019odham, Yaqui, and Apache people met and mingled with European Jesuit and Franciscan missionaries, settlers, and soldiers, sometimes in conflict and...",
           "url": "https://www.nps.gov/tuma/index.htm",
           "lat": 31.567824,
           "lng": -111.051223
@@ -4639,6 +4820,187 @@
       "sourceName": "Ticketmaster Discovery API v2",
       "sourceUrl": "https://developer.ticketmaster.com/",
       "retrieved": "2026-10-31"
+    },
+    "conventionsAndHospitality": {
+      "sourceName": "Conventions.com Municipal CVB & U.S. GSA FY2027 Per Diem Intelligence",
+      "sourceUrl": "https://conventions.com/cities/scottsdale",
+      "retrieved": "2026-11-14",
+      "spec": {
+        "campusesSummary": "11+ Major Convention & Resort Campuses in Scottsdale",
+        "hallLicenseRate": "$0.34\u2013$0.52 / net sq. ft. (Municipal Standard)",
+        "subventionRule": "50%\u2013100% Hall License Subvention w/ 1,500+ Peak Room Nights in Scottsdale + $30/nt Master Block Rebate",
+        "hotelInventorySummary": "4,231+ Verified Convention Hotel Keys across 8 HQ Properties",
+        "hotelTaxSummary": "14.02% Combined Scottsdale Hotel Occupancy & Tourism Assessment",
+        "laborSummary": "$118\u2013$177/hr GSC Floor Rate (vs. $31.40/hr BLS Wage \u2022 3.8\u00d7 Markup \u2022 Right-to-Work (Exhibitor-Friendly))"
+      },
+      "venues": [
+        {
+          "name": "WestWorld of Scottsdale",
+          "exhibitSpace": "300,000 sq. ft. Max Hall: 120,000 sq. ft.",
+          "breakouts": "84,000 sq. ft. (10 configurable breakout rooms)",
+          "walkableRooms": "1,920+ District Rooms (Anchored by Fairmont Scottsdale Princess)"
+        },
+        {
+          "name": "Fairmont Scottsdale Princess",
+          "exhibitSpace": "156,000 sq. ft. Max Hall: 56,000 sq. ft.",
+          "breakouts": "43,680 sq. ft. (47 configurable breakout rooms)",
+          "walkableRooms": "750 In-House Tower Keys (Direct Elevator to Ballroom Level)"
+        },
+        {
+          "name": "Princess Ballroom & Conference Center",
+          "exhibitSpace": "150,000 sq. ft. Max Hall: 22,500 sq. ft.",
+          "breakouts": "42,000 sq. ft. (47 configurable breakout rooms)",
+          "walkableRooms": "2,520+ District Rooms (Anchored by Fairmont Scottsdale Princess)"
+        },
+        {
+          "name": "JW Marriott Camelback Inn Resort & Spa",
+          "exhibitSpace": "132,099 sq. ft. Max Hall: 19,968 sq. ft.",
+          "breakouts": "36,988 sq. ft. (26 configurable breakout rooms)",
+          "walkableRooms": "453 In-House Tower Keys (Direct Elevator to Ballroom Level)"
+        },
+        {
+          "name": "Palomino Ballroom & Conference Center",
+          "exhibitSpace": "108,000 sq. ft. Max Hall: 23,000 sq. ft.",
+          "breakouts": "30,240 sq. ft. (20 configurable breakout rooms)",
+          "walkableRooms": "1,320+ District Rooms (Anchored by Fairmont Scottsdale Princess)"
+        },
+        {
+          "name": "Grand Hyatt Scottsdale Resort",
+          "exhibitSpace": "90,000 sq. ft. Max Hall: 14,280 sq. ft.",
+          "breakouts": "25,200 sq. ft. (48 configurable breakout rooms)",
+          "walkableRooms": "496 In-House Tower Keys (Direct Elevator to Ballroom Level)"
+        },
+        {
+          "name": "The Phoenician, Luxury Collection Resort",
+          "exhibitSpace": "78,666 sq. ft. Max Hall: 22,487 sq. ft.",
+          "breakouts": "22,026 sq. ft. (32 configurable breakout rooms)",
+          "walkableRooms": "585 In-House Tower Keys (Direct Elevator to Ballroom Level)"
+        },
+        {
+          "name": "The Westin Kierland Resort & Spa",
+          "exhibitSpace": "65,429 sq. ft. Max Hall: 24,542 sq. ft.",
+          "breakouts": "18,320 sq. ft. (18 configurable breakout rooms)",
+          "walkableRooms": "735 In-House Tower Keys (Direct Elevator to Ballroom Level)"
+        }
+      ],
+      "shows": [
+        {
+          "name": "Scottsdale Interdisciplinary Dental Symposium 2026 Dental & Orthodontics",
+          "dates": "Jan 22\u201324, 2026",
+          "venue": "Kimpton Miralina Resort & Villas",
+          "attendance": "750+ B2B Attendees",
+          "hotelSurge": "1.3\u00d7 In-House Block ($270\u2013$350/nt)"
+        },
+        {
+          "name": "Scottsdale Interventional Forum 2026",
+          "dates": "Mar 4\u20137, 2026",
+          "venue": "JW Marriott Camelback Inn Resort & Spa",
+          "attendance": "750+ B2B Attendees",
+          "hotelSurge": "1.5\u00d7 In-House Block ($310\u2013$410/nt)"
+        },
+        {
+          "name": "AACD 2026 Scottsdale 2026 Dental & Orthodontics",
+          "dates": "Apr 15\u201318, 2026",
+          "venue": "The Westin Kierland Resort & Spa",
+          "attendance": "1,400+ B2B Attendees",
+          "hotelSurge": "1.5\u00d7 In-House Block ($305\u2013$375/nt)"
+        },
+        {
+          "name": "NABL Essentials: The Fundamentals of Municipal Bond Law 2026 Fice, FinTech & Banking",
+          "dates": "Apr 22\u201324, 2026",
+          "venue": "JW Marriott Camelback Inn Resort & Spa",
+          "attendance": "550+ B2B Attendees",
+          "hotelSurge": "1.4\u00d7 In-House Block ($305\u2013$395/nt)"
+        },
+        {
+          "name": "NACDS Annual Meeting 2026",
+          "dates": "Apr 25\u201328, 2026",
+          "venue": "Fairmont Scottsdale Princess",
+          "attendance": "2,500+ B2B Attendees",
+          "hotelSurge": "1.3\u00d7 In-House Block ($265\u2013$345/nt)"
+        },
+        {
+          "name": "Executive War College on Laboratory and Pathology Management 2026",
+          "dates": "Apr 28\u201329, 2026",
+          "venue": "Grand Hyatt Scottsdale Resort",
+          "attendance": "850+ B2B Attendees",
+          "hotelSurge": "1.3\u00d7 In-House Block ($260\u2013$310/nt)"
+        },
+        {
+          "name": "T3 Sixty Real Estate Tech Summit 2026 Real Estate & PropTech",
+          "dates": "May 4\u20136, 2026",
+          "venue": "Palomino Ballroom & Conference Center",
+          "attendance": "850+ B2B Attendees",
+          "hotelSurge": "1.4\u00d7 Corridor Block ($285\u2013$375/nt)"
+        },
+        {
+          "name": "Arizona Mortgage s Association Annual Conference 2026 Fice, FinTech & Banking",
+          "dates": "Aug 27\u201328, 2026",
+          "venue": "Talking Stick Resort",
+          "attendance": "500+ B2B Attendees",
+          "hotelSurge": "1.3\u00d7 In-House Block ($260\u2013$310/nt)"
+        }
+      ],
+      "hotels": [
+        {
+          "name": "Sheraton Phoenix Downtown",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/hotels/sheraton-phoenix-downtown.webp",
+          "corridorSpec": "Connected / Adjacent \u2022 1 Block North of PCC North Building (WestWorld of Scottsdale)",
+          "typicalRate": "$339/nt",
+          "summary": "Arizona's largest hotel (1,003 rooms) 120 yards from PCC North registration.",
+          "gsaPerDiemCap": "$200\u2013$240/nt (Seasonal)"
+        },
+        {
+          "name": "Hyatt Regency Phoenix",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/hotels/hyatt-regency-phoenix.webp",
+          "corridorSpec": "Connected / Adjacent \u2022 Directly Across 2nd St from PCC West (WestWorld of Scottsdale)",
+          "typicalRate": "$325/nt",
+          "summary": "60-second walk across 2nd St to PCC West & Symphony Hall.",
+          "gsaPerDiemCap": "$200\u2013$240/nt (Seasonal)"
+        },
+        {
+          "name": "Renaissance Phoenix Downtown Hotel",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/hotels/renaissance-phoenix-downtown.webp",
+          "corridorSpec": "Connected / Adjacent \u2022 3-Min Walk West on Adams St (WestWorld of Scottsdale)",
+          "typicalRate": "$335/nt",
+          "summary": "Stylish urban convention hotel with rooftop pool & Dust Cutter saloon buyouts.",
+          "gsaPerDiemCap": "$200\u2013$240/nt (Seasonal)"
+        },
+        {
+          "name": "Kimpton Hotel Palomar Phoenix (CityScape)",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/hotels/kimpton-hotel-palomar-phoenix.webp",
+          "corridorSpec": "Luxury Client Hosting \u2022 4-Min Walk + Eden Rooftop Lounge (WestWorld of Scottsdale)",
+          "typicalRate": "$359/nt",
+          "summary": "Anchors CityScape dining plaza with open-air rooftop lounge.",
+          "gsaPerDiemCap": "$200\u2013$240/nt (Seasonal)"
+        }
+      ],
+      "dining": [
+        {
+          "name": "Wren & Wolf",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/dining/wren-and-wolf-phoenix.webp",
+          "cuisineAndProximity": "Modern Wood-Fired Prime Steakhouse & Cocktail Den \u2022 3-min walk from PCC West Building (WestWorld of Scottsdale)",
+          "priceTier": "$$$$",
+          "groupSpec": "16\u2013160 Guests (Trophy Room & Buyout) ($5,000 \u2013 $30,000+) \u2014 Downtown Phoenix's hottest executive steakhouse & cocktail den\u2014prime SEMICON West dinner HQ.",
+          "reservationTip": "Book 45\u201375 days pre-show"
+        },
+        {
+          "name": "Mancuso's Restaurant (Collier Center)",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/dining/mancusos-restaurant-phoenix.webp",
+          "cuisineAndProximity": "Prime Steaks & Classic Italian \u2022 2-min walk across Washington St (WestWorld of Scottsdale)",
+          "priceTier": "$$$",
+          "groupSpec": "18\u2013140 Guests ($3,800 \u2013 $20,000+) \u2014 Castle-inspired fine dining steps from PCC South & West lobbies.",
+          "reservationTip": "Book 45\u201375 days pre-show"
+        },
+        {
+          "name": "The Arrogant Butcher (CityScape)",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/dining/arrosta-and-arrogant-butcher-phoenix.webp",
+          "cuisineAndProximity": "Chophouse, Raw Bar & Covered Patio \u2022 3-min walk to CityScape Plaza (WestWorld of Scottsdale)",
+          "priceTier": "$$$",
+          "groupSpec": "25\u2013220 Guests (Indoor/Patio Buyout) ($4,500 \u2013 $24,000+) \u2014 Sam Fox's bustling convention chophouse built for 30\u2013200 person exhibitor receptions.",
+          "reservationTip": "Book 45\u201375 days pre-show"
+        }
+      ]
     }
   },
   {
@@ -9449,7 +9811,7 @@
           "fullName": "Walnut Canyon National Monument",
           "designation": "National Monument",
           "distanceMiles": 6.8,
-          "description": "Since time immemorial, Indigenous Peoples have lived and traveled throughout Walnut Canyon’s dynamic landscape. Vibrant communities built their homes in the cliffs and farmed along the canyon’s rim. Today the park preserves this...",
+          "description": "Since time immemorial, Indigenous Peoples have lived and traveled throughout Walnut Canyon\u2019s dynamic landscape. Vibrant communities built their homes in the cliffs and farmed along the canyon\u2019s rim. Today the park preserves this...",
           "url": "https://www.nps.gov/waca/index.htm",
           "lat": 35.16823,
           "lng": -111.502424
@@ -14497,10 +14859,10 @@
         },
         {
           "parkCode": "tuma",
-          "fullName": "Tumacácori National Historical Park",
+          "fullName": "Tumac\u00e1cori National Historical Park",
           "designation": "National Historical Park",
           "distanceMiles": 43.4,
-          "description": "Tumacácori sits at a cultural crossroads in the Santa Cruz River valley. Here O’odham, Yaqui, and Apache people met and mingled with European Jesuit and Franciscan missionaries, settlers, and soldiers, sometimes in conflict and...",
+          "description": "Tumac\u00e1cori sits at a cultural crossroads in the Santa Cruz River valley. Here O\u2019odham, Yaqui, and Apache people met and mingled with European Jesuit and Franciscan missionaries, settlers, and soldiers, sometimes in conflict and...",
           "url": "https://www.nps.gov/tuma/index.htm",
           "lat": 31.567824,
           "lng": -111.051223
@@ -16459,10 +16821,10 @@
         },
         {
           "parkCode": "tuma",
-          "fullName": "Tumacácori National Historical Park",
+          "fullName": "Tumac\u00e1cori National Historical Park",
           "designation": "National Historical Park",
           "distanceMiles": 25.7,
-          "description": "Tumacácori sits at a cultural crossroads in the Santa Cruz River valley. Here O’odham, Yaqui, and Apache people met and mingled with European Jesuit and Franciscan missionaries, settlers, and soldiers, sometimes in conflict and...",
+          "description": "Tumac\u00e1cori sits at a cultural crossroads in the Santa Cruz River valley. Here O\u2019odham, Yaqui, and Apache people met and mingled with European Jesuit and Franciscan missionaries, settlers, and soldiers, sometimes in conflict and...",
           "url": "https://www.nps.gov/tuma/index.htm",
           "lat": 31.567824,
           "lng": -111.051223

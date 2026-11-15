@@ -764,6 +764,125 @@
       "sourceName": "Ticketmaster Discovery API v2",
       "sourceUrl": "https://developer.ticketmaster.com/",
       "retrieved": "2026-10-31"
+    },
+    "conventionsAndHospitality": {
+      "sourceName": "Conventions.com Municipal CVB & U.S. GSA FY2027 Per Diem Intelligence",
+      "sourceUrl": "https://conventions.com/cities/jacksonville",
+      "retrieved": "2026-11-14",
+      "spec": {
+        "campusesSummary": "3+ Major Convention & Resort Campuses in Jacksonville",
+        "hallLicenseRate": "$0.34\u2013$0.52 / net sq. ft. (Municipal Standard)",
+        "subventionRule": "50%\u2013100% Hall License Subvention w/ 1,500+ Peak Room Nights in Jacksonville + $30/nt Master Block Rebate",
+        "hotelInventorySummary": "1,273+ Verified Convention Hotel Keys across 2 HQ Properties",
+        "hotelTaxSummary": "13.5% Combined Jacksonville Hotel Occupancy & Tourism Assessment",
+        "laborSummary": "$118\u2013$177/hr GSC Floor Rate (vs. $31.40/hr BLS Wage \u2022 3.8\u00d7 Markup \u2022 Right-to-Work State (Exhibitor-Friendly Self-Install))"
+      },
+      "venues": [
+        {
+          "name": "Hyatt Regency Jacksonville Riverfront",
+          "exhibitSpace": "110,000 sq. ft. Max Hall: 27,720 sq. ft.",
+          "breakouts": "30,800 sq. ft. (30 configurable breakout rooms)",
+          "walkableRooms": "951 In-House Tower Keys (Direct Elevator to Ballroom Level)"
+        },
+        {
+          "name": "Prime F. Osborn III Convention Center",
+          "exhibitSpace": "100,000 sq. ft. Max Hall: 78,500 sq. ft.",
+          "breakouts": "28,000 sq. ft. (22 configurable breakout rooms)",
+          "walkableRooms": "1,800+ District Rooms (Anchored by Hyatt Regency Jacksonville Riverfront)"
+        },
+        {
+          "name": "Southbank Hotel Jacksonville Riverwalk",
+          "exhibitSpace": "39,425 sq. ft. Max Hall: 14,000 sq. ft.",
+          "breakouts": "11,039 sq. ft. (22 configurable breakout rooms)",
+          "walkableRooms": "322 In-House Tower Keys (Direct Elevator to Ballroom Level)"
+        },
+        {
+          "name": "Labor Regime & Carpenter Scale",
+          "exhibitSpace": "NV Union Contracts \u2022 $148\u2013$225/hr GSC (vs. $34.18 BLS)",
+          "breakouts": "AZ Right-to-Work \u2022 $108\u2013$134/hr GSC (vs. $31.40 BLS)",
+          "walkableRooms": "$118\u2013$177/hr GSC Floor Rate (vs. $31.40/hr BLS Wage \u2022 3.8\u00d7 Markup \u2022 Right-to-Work State (Exhibitor-Friendly Self-Install))"
+        },
+        {
+          "name": "Exhibitor Self-Install Rights",
+          "exhibitSpace": "Pop-Up Only (<100 sf) \u2022 Strict Teamsters 631 Dock",
+          "breakouts": "Full Self-Install & Hand-Carry Allowed",
+          "walkableRooms": "Standard Hand-Carry & Pop-Up Permitted"
+        },
+        {
+          "name": "Hall License & Subvention",
+          "exhibitSpace": "$0.37\u2013$0.55/sf (LVCC) or $0 w/ Resort Block",
+          "breakouts": "$0.32\u2013$0.48/sf (50%\u2013100% CVB Subvention)",
+          "walkableRooms": "$0.34\u2013$0.52 / net sq. ft. (Municipal Standard)"
+        },
+        {
+          "name": "Hotel Room & Banquet Tax Load",
+          "exhibitSpace": "13.38% Room Tax + $48 Resort Fee \u2022 33.4% BEO Load",
+          "breakouts": "12.57% Room Tax ($0 Resort Fee) \u2022 33.6% BEO Load",
+          "walkableRooms": "13.5% Combined Jacksonville Hotel Occupancy & Tourism Assessment"
+        },
+        {
+          "name": "20A Electrical Floor Drop",
+          "exhibitSpace": "$385\u2013$445 (48\u00d7 Grid)",
+          "breakouts": "$295\u2013$385 (42\u00d7 Grid)",
+          "walkableRooms": "$315\u2013$420 / 20A Floor Drop (42\u00d7 Grid)"
+        }
+      ],
+      "shows": [
+        {
+          "name": "Jacksonville Home + Patio Show (Spring) 2026",
+          "dates": "Mar 5\u20138, 2026",
+          "venue": "Prime F. Osborn III Convention Center",
+          "attendance": "18,000+ B2B Attendees",
+          "hotelSurge": "2.1\u00d7 Campus Ring ($280\u2013$330/nt)"
+        },
+        {
+          "name": "Florida Library Association Annual Conference 2026",
+          "dates": "May 13\u201315, 2026",
+          "venue": "Hyatt Regency Jacksonville Riverfront",
+          "attendance": "750+ B2B Attendees",
+          "hotelSurge": "1.3\u00d7 In-House Block ($165\u2013$245/nt)"
+        },
+        {
+          "name": "Florida Association of Counties Annual Conference & Educational Exhibition 2026 Fice, FinTech & Banking",
+          "dates": "Jun 23\u201326, 2026",
+          "venue": "Hyatt Regency Jacksonville Riverfront",
+          "attendance": "1,200+ B2B Attendees",
+          "hotelSurge": "1.5\u00d7 In-House Block ($205\u2013$275/nt)"
+        },
+        {
+          "name": "FAPSC Annual Conference 2026",
+          "dates": "Jul 22\u201324, 2026",
+          "venue": "Southbank Hotel Jacksonville Riverwalk",
+          "attendance": "550+ B2B Attendees",
+          "hotelSurge": "1.4\u00d7 In-House Block ($185\u2013$245/nt)"
+        },
+        {
+          "name": "Florida Association of Code Enforcement Annual Educational Conference 2027",
+          "dates": "Jun 8\u201311, 2027",
+          "venue": "Southbank Hotel Jacksonville Riverwalk",
+          "attendance": "500+ B2B Attendees",
+          "hotelSurge": "1.3\u00d7 In-House Block ($180\u2013$260/nt)"
+        }
+      ],
+      "hotels": [
+        {
+          "name": "Hyatt Regency Jacksonville Riverfront",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/hotels/hyatt-regency-jacksonville-riverfront.webp",
+          "corridorSpec": "Connected / Adjacent \u2022 Skybridge / Adjacent HQ Anchor (Prime F. Osborn III Convention Center)",
+          "typicalRate": "$272/nt",
+          "summary": "Features 110,000 sq. ft. of meeting space; resort/destination fees waived via Conventions.com Housing Desk (Sara Chaval \u00b7 (702) 576-1312).",
+          "gsaPerDiemCap": "$117\u2013$157/nt (Seasonal)"
+        },
+        {
+          "name": "Southbank Hotel Jacksonville Riverwalk",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/hotels/westin-boston-seaport-district.webp",
+          "corridorSpec": "Corridor Group Block \u2022 6-Min Corridor Shuttle / Drive (Prime F. Osborn III Convention Center)",
+          "typicalRate": "$241/nt",
+          "summary": "Features 39,425 sq. ft. of meeting space; resort/destination fees waived via Conventions.com Housing Desk (Sara Chaval \u00b7 (702) 576-1312).",
+          "gsaPerDiemCap": "$117\u2013$157/nt (Seasonal)"
+        }
+      ],
+      "dining": []
     }
   },
   {
@@ -1537,6 +1656,187 @@
       "sourceName": "Ticketmaster Discovery API v2",
       "sourceUrl": "https://developer.ticketmaster.com/",
       "retrieved": "2026-10-31"
+    },
+    "conventionsAndHospitality": {
+      "sourceName": "Conventions.com Municipal CVB & U.S. GSA FY2027 Per Diem Intelligence",
+      "sourceUrl": "https://conventions.com/cities/miami",
+      "retrieved": "2026-11-14",
+      "spec": {
+        "campusesSummary": "10+ Major Convention & Resort Campuses in Miami",
+        "hallLicenseRate": "$0.34\u2013$0.52 / net sq. ft. (Municipal Standard)",
+        "subventionRule": "50%\u2013100% Hall License Subvention w/ 1,500+ Peak Room Nights in Miami + $30/nt Master Block Rebate",
+        "hotelInventorySummary": "2,859+ Verified Convention Hotel Keys across 6 HQ Properties",
+        "hotelTaxSummary": "13% Combined Miami Hotel Occupancy & Tourism Assessment",
+        "laborSummary": "$118\u2013$177/hr GSC Floor Rate (vs. $31.40/hr BLS Wage \u2022 3.8\u00d7 Markup \u2022 Right-to-Work (IATSE Local 500 Rigging))"
+      },
+      "venues": [
+        {
+          "name": "Miami Airport Convention Center",
+          "exhibitSpace": "172,000 sq. ft. Max Hall: 111,340 sq. ft.",
+          "breakouts": "48,160 sq. ft. (44 configurable breakout rooms)",
+          "walkableRooms": "1,800+ District Rooms (Anchored by Doubletree Miami Airport Convention Ctr)"
+        },
+        {
+          "name": "Miami Convention Center",
+          "exhibitSpace": "172,000 sq. ft. Max Hall: 111,340 sq. ft.",
+          "breakouts": "48,160 sq. ft. (44 configurable breakout rooms)",
+          "walkableRooms": "1,680+ District Rooms (Anchored by Doubletree Miami Airport Convention Ctr)"
+        },
+        {
+          "name": "Doubletree Miami Airport Convention Ctr",
+          "exhibitSpace": "172,000 sq. ft. Max Hall: 111,340 sq. ft.",
+          "breakouts": "48,160 sq. ft. (44 configurable breakout rooms)",
+          "walkableRooms": "2,280+ District Rooms (Anchored by Doubletree Miami Airport Convention Ctr)"
+        },
+        {
+          "name": "InterContinental Miami",
+          "exhibitSpace": "135,000 sq. ft. Max Hall: 48,500 sq. ft.",
+          "breakouts": "37,800 sq. ft. (35 configurable breakout rooms)",
+          "walkableRooms": "652 In-House Tower Keys (Direct Elevator to Ballroom Level)"
+        },
+        {
+          "name": "Hyatt Regency Miami",
+          "exhibitSpace": "110,000 sq. ft. Max Hall: 28,000 sq. ft.",
+          "breakouts": "30,800 sq. ft. (40 configurable breakout rooms)",
+          "walkableRooms": "615 In-House Tower Keys (Direct Elevator to Ballroom Level)"
+        },
+        {
+          "name": "Fair Expo Center",
+          "exhibitSpace": "100,000 sq. ft. Max Hall: 50,000 sq. ft.",
+          "breakouts": "28,000 sq. ft. (4 configurable breakout rooms)",
+          "walkableRooms": "1,680+ District Rooms (Anchored by Doubletree Miami Airport Convention Ctr)"
+        },
+        {
+          "name": "Trump National Doral Miami",
+          "exhibitSpace": "100,000 sq. ft. Max Hall: 24,079 sq. ft.",
+          "breakouts": "28,000 sq. ft. (35 configurable breakout rooms)",
+          "walkableRooms": "1,200+ District Rooms (Anchored by Trump National Doral Miami)"
+        },
+        {
+          "name": "JW Marriott Marquis Miami",
+          "exhibitSpace": "41,364 sq. ft. Max Hall: 18,426 sq. ft.",
+          "breakouts": "11,582 sq. ft. (14 configurable breakout rooms)",
+          "walkableRooms": "313 In-House Tower Keys (Direct Elevator to Ballroom Level)"
+        }
+      ],
+      "shows": [
+        {
+          "name": "The North American Bitcoin Conference 2026 Fice, FinTech & Banking",
+          "dates": "Jan 21\u201323, 2026",
+          "venue": "Hyatt Regency Miami",
+          "attendance": "3,000+ B2B Attendees",
+          "hotelSurge": "1.3\u00d7 In-House Block ($290\u2013$370/nt)"
+        },
+        {
+          "name": "PEI CFOs & COOs Forum Miami 2026 Fice, FinTech & Banking",
+          "dates": "Jan 21\u201322, 2026",
+          "venue": "JW Marriott Marquis Miami",
+          "attendance": "750+ B2B Attendees",
+          "hotelSurge": "1.3\u00d7 In-House Block ($300\u2013$350/nt)"
+        },
+        {
+          "name": "MFA Network 2026 Fice, FinTech & Banking",
+          "dates": "Jan 26\u201328, 2026",
+          "venue": "InterContinental Miami",
+          "attendance": "850+ B2B Attendees",
+          "hotelSurge": "1.5\u00d7 In-House Block ($340\u2013$410/nt)"
+        },
+        {
+          "name": "Graphics Pro Expo Miami 2026 Manufacturing & Supply Chain",
+          "dates": "Feb 12\u201313, 2026",
+          "venue": "Miami Airport Convention Center",
+          "attendance": "1,500+ B2B Attendees",
+          "hotelSurge": "1.3\u00d7 Corridor Block ($290\u2013$370/nt)"
+        },
+        {
+          "name": "Baptist Health South Florida Cardiovascular Symposium 2026",
+          "dates": "Feb 12\u201314, 2026",
+          "venue": "Marriott Miami Dadeland",
+          "attendance": "650+ B2B Attendees",
+          "hotelSurge": "1.3\u00d7 In-House Block ($290\u2013$340/nt)"
+        },
+        {
+          "name": "The Franchise Show Miami 2026 Fice, FinTech & Banking",
+          "dates": "Mar 21\u201322, 2026",
+          "venue": "Miami Airport Convention Center",
+          "attendance": "1,200+ B2B Attendees",
+          "hotelSurge": "1.4\u00d7 Corridor Block ($320\u2013$410/nt)"
+        },
+        {
+          "name": "Marine Hotel Association Conference & Trade Show 2026",
+          "dates": "Apr 12\u201314, 2026",
+          "venue": "Hyatt Regency Miami",
+          "attendance": "750+ B2B Attendees",
+          "hotelSurge": "1.5\u00d7 In-House Block ($335\u2013$435/nt)"
+        },
+        {
+          "name": "Infrastructure Investor Network North American Forum 2026 Fice, FinTech & Banking",
+          "dates": "May 13\u201314, 2026",
+          "venue": "InterContinental Miami",
+          "attendance": "600+ B2B Attendees",
+          "hotelSurge": "1.5\u00d7 In-House Block ($340\u2013$410/nt)"
+        }
+      ],
+      "hotels": [
+        {
+          "name": "Loews Miami Beach Hotel",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/hotels/loews-miami-beach-hotel.webp",
+          "corridorSpec": "Connected / Adjacent \u2022 5-Min Walk to MBCC South Lobby (Miami Airport Convention Center)",
+          "typicalRate": "$489/nt",
+          "summary": "Premier oceanfront convention headquarters 2 blocks east of MBCC.",
+          "gsaPerDiemCap": "$221\u2013$261/nt (Seasonal)"
+        },
+        {
+          "name": "W South Beach",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/hotels/w-south-beach-miami.webp",
+          "corridorSpec": "Luxury Client Hosting \u2022 6-Min Walk Across Collins Park (Miami Airport Convention Center)",
+          "typicalRate": "$699/nt",
+          "summary": "All-suite oceanfront luxury property anchoring Art Basel & FinTech VIP hospitality.",
+          "gsaPerDiemCap": "$221\u2013$261/nt (Seasonal)"
+        },
+        {
+          "name": "The Ritz-Carlton, South Beach",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/hotels/ritz-carlton-south-beach.webp",
+          "corridorSpec": "Luxury Client Hosting \u2022 5-Min Walk Along 17th St (Miami Airport Convention Center)",
+          "typicalRate": "$589/nt",
+          "summary": "Restored Morris Lapidus Art Deco landmark at Lincoln Road & Ocean.",
+          "gsaPerDiemCap": "$221\u2013$261/nt (Seasonal)"
+        },
+        {
+          "name": "Kimpton Surfcomber Hotel",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/hotels/kimpton-surfcomber-south-beach.webp",
+          "corridorSpec": "Skybridge / Walk Ring \u2022 5-Min Walk to Hall B/C (Miami Airport Convention Center)",
+          "typicalRate": "$369/nt",
+          "summary": "Boutique Collins Ave palm-court pool deck popular for sponsor happy-hour buyouts.",
+          "gsaPerDiemCap": "$221\u2013$261/nt (Seasonal)"
+        }
+      ],
+      "dining": [
+        {
+          "name": "Prime 112 & Prime Private",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/dining/prime-112-miami-beach.webp",
+          "cuisineAndProximity": "Boutique Dry-Aged Steakhouse \u2022 7-min rideshare to South of Fifth (Miami Airport Convention Center)",
+          "priceTier": "$$$$",
+          "groupSpec": "20\u2013150 Guests (Dedicated Prime Private) ($7,500 \u2013 $45,000+) \u2014 Miami Beach's most sought-after high-profile steakhouse with a dedicated private-events mansion across the street.",
+          "reservationTip": "Book 45\u201375 days pre-show"
+        },
+        {
+          "name": "Papi Steak (Groot Hospitality)",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/dining/papi-steak-miami-beach.webp",
+          "cuisineAndProximity": "High-Energy Kosher-Style Prime Steakhouse \u2022 6-min cab south (Miami Airport Convention Center)",
+          "priceTier": "$$$$",
+          "groupSpec": "24\u2013110 Guests (Full Venue Buyout) ($8,500 \u2013 $50,000+) \u2014 Unmatched Miami theatrical steakhouse energy for crypto, tech & executive VIP buyouts.",
+          "reservationTip": "Book 45\u201375 days pre-show"
+        },
+        {
+          "name": "MILA Miami (Lincoln Road Rooftop)",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/dining/mila-rooftop-miami-beach.webp",
+          "cuisineAndProximity": "MediterrAsian Open-Air Rooftop \u2022 4-min walk from MBCC South Entrance (Miami Airport Convention Center)",
+          "priceTier": "$$$$",
+          "groupSpec": "20\u2013250 Guests (Rooftop Terrace) ($8,000 \u2013 $55,000+) \u2014 Steps from the convention center on Lincoln Road with fire-dancer courtyard & private lounge.",
+          "reservationTip": "Book 45\u201375 days pre-show"
+        }
+      ]
     }
   },
   {
@@ -2219,7 +2519,7 @@
           "fullName": "De Soto National Memorial",
           "designation": "National Memorial",
           "distanceMiles": 32.3,
-          "description": "In May 1539, Conquistador Hernando de Soto’s army of soldiers, hired mercenaries, craftsmen, and clergy made landfall in Tampa Bay. They were met with fierce resistance of indigenous people protecting their homelands. De Soto’s quest...",
+          "description": "In May 1539, Conquistador Hernando de Soto\u2019s army of soldiers, hired mercenaries, craftsmen, and clergy made landfall in Tampa Bay. They were met with fierce resistance of indigenous people protecting their homelands. De Soto\u2019s quest...",
           "url": "https://www.nps.gov/deso/index.htm",
           "lat": 27.522726,
           "lng": -82.643354
@@ -2276,6 +2576,158 @@
       "sourceName": "Ticketmaster Discovery API v2",
       "sourceUrl": "https://developer.ticketmaster.com/",
       "retrieved": "2026-10-31"
+    },
+    "conventionsAndHospitality": {
+      "sourceName": "Conventions.com Municipal CVB & U.S. GSA FY2027 Per Diem Intelligence",
+      "sourceUrl": "https://conventions.com/cities/tampa",
+      "retrieved": "2026-11-14",
+      "spec": {
+        "campusesSummary": "4+ Major Convention & Resort Campuses in Tampa",
+        "hallLicenseRate": "$0.34\u2013$0.52 / net sq. ft. (Municipal Standard)",
+        "subventionRule": "50%\u2013100% Hall License Subvention w/ 1,500+ Peak Room Nights in Tampa + $30/nt Master Block Rebate",
+        "hotelInventorySummary": "1,766+ Verified Convention Hotel Keys across 3 HQ Properties",
+        "hotelTaxSummary": "13.5% Combined Tampa Hotel Occupancy & Tourism Assessment",
+        "laborSummary": "$118\u2013$177/hr GSC Floor Rate (vs. $31.40/hr BLS Wage \u2022 3.8\u00d7 Markup \u2022 Right-to-Work State (Exhibitor-Friendly Self-Install))"
+      },
+      "venues": [
+        {
+          "name": "Tampa Convention Center",
+          "exhibitSpace": "89,757 sq. ft. Max Hall: 29,100 sq. ft.",
+          "breakouts": "25,132 sq. ft. (46 configurable breakout rooms)",
+          "walkableRooms": "2,160+ District Rooms (Anchored by JW Marriott Tampa Water Street)"
+        },
+        {
+          "name": "JW Marriott Tampa Water Street",
+          "exhibitSpace": "89,757 sq. ft. Max Hall: 29,100 sq. ft.",
+          "breakouts": "25,132 sq. ft. (46 configurable breakout rooms)",
+          "walkableRooms": "519 In-House Tower Keys (Direct Elevator to Ballroom Level)"
+        },
+        {
+          "name": "Tampa Marriott Water Street",
+          "exhibitSpace": "86,909 sq. ft. Max Hall: 31,500 sq. ft.",
+          "breakouts": "24,335 sq. ft. (45 configurable breakout rooms)",
+          "walkableRooms": "727 In-House Tower Keys (Direct Elevator to Ballroom Level)"
+        },
+        {
+          "name": "Hilton Tampa Downtown",
+          "exhibitSpace": "30,714 sq. ft. Max Hall: 14,550 sq. ft.",
+          "breakouts": "8,600 sq. ft. (30 configurable breakout rooms)",
+          "walkableRooms": "520 In-House Tower Keys (Direct Elevator to Ballroom Level)"
+        },
+        {
+          "name": "Tampa Convention Center Tier-1 Municipal Flagship Campus",
+          "exhibitSpace": "600,000 sq. ft. Max Hall: 200,000 sq. ft.",
+          "breakouts": "36 Meeting & Breakout Rooms",
+          "walkableRooms": "1,766+ Verified Convention Hotel Keys across 3 HQ Properties"
+        },
+        {
+          "name": "Labor Regime & Carpenter Scale",
+          "exhibitSpace": "NV Union Contracts \u2022 $148\u2013$225/hr GSC (vs. $34.18 BLS)",
+          "breakouts": "AZ Right-to-Work \u2022 $108\u2013$134/hr GSC (vs. $31.40 BLS)",
+          "walkableRooms": "$118\u2013$177/hr GSC Floor Rate (vs. $31.40/hr BLS Wage \u2022 3.8\u00d7 Markup \u2022 Right-to-Work State (Exhibitor-Friendly Self-Install))"
+        },
+        {
+          "name": "Exhibitor Self-Install Rights",
+          "exhibitSpace": "Pop-Up Only (<100 sf) \u2022 Strict Teamsters 631 Dock",
+          "breakouts": "Full Self-Install & Hand-Carry Allowed",
+          "walkableRooms": "Standard Hand-Carry & Pop-Up Permitted"
+        },
+        {
+          "name": "Hall License & Subvention",
+          "exhibitSpace": "$0.37\u2013$0.55/sf (LVCC) or $0 w/ Resort Block",
+          "breakouts": "$0.32\u2013$0.48/sf (50%\u2013100% CVB Subvention)",
+          "walkableRooms": "$0.34\u2013$0.52 / net sq. ft. (Municipal Standard)"
+        }
+      ],
+      "shows": [
+        {
+          "name": "SOF Week 2026 Manufacturing & Supply Chain",
+          "dates": "May 18\u201321, 2026",
+          "venue": "Tampa Convention Center",
+          "attendance": "15,000+ B2B Attendees",
+          "hotelSurge": "2.1\u00d7 Campus Ring ($415\u2013$485/nt)"
+        },
+        {
+          "name": "Florida Society of Anesthesiologists Annual Meeting 2026",
+          "dates": "Jun 12\u201314, 2026",
+          "venue": "JW Marriott Tampa Water Street",
+          "attendance": "850+ B2B Attendees",
+          "hotelSurge": "1.3\u00d7 In-House Block ($275\u2013$325/nt)"
+        },
+        {
+          "name": "Florida Dental Convention 2026 Dental & Orthodontics",
+          "dates": "Jun 25\u201327, 2026",
+          "venue": "Tampa Convention Center",
+          "attendance": "8,000+ B2B Attendees",
+          "hotelSurge": "1.6\u00d7 Campus Ring ($325\u2013$405/nt)"
+        },
+        {
+          "name": "Florida Association of Health Plans Annual Conference 2026",
+          "dates": "Oct 14\u201316, 2026",
+          "venue": "Tampa Marriott Water Street",
+          "attendance": "750+ B2B Attendees",
+          "hotelSurge": "1.4\u00d7 In-House Block ($280\u2013$340/nt)"
+        },
+        {
+          "name": "Florida Association of Counties Annual Conference & Educational Exhibition 2027 Fice, FinTech & Banking",
+          "dates": "Jun 22\u201325, 2027",
+          "venue": "Hilton Tampa Downtown",
+          "attendance": "1,200+ B2B Attendees",
+          "hotelSurge": "1.4\u00d7 In-House Block ($280\u2013$370/nt)"
+        }
+      ],
+      "hotels": [
+        {
+          "name": "JW Marriott Tampa Water Street",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/hotels/jw-marriott-tampa-water-street.webp",
+          "corridorSpec": "Primary Corridor HQ Anchor \u2022 Nearest Corridor HQ (2\u20134 Min Transfer) (Tampa Convention Center)",
+          "typicalRate": "$355/nt",
+          "summary": "Features 89,757 sq. ft. of meeting space; resort/destination fees waived via Conventions.com Housing Desk (Sara Chaval \u00b7 (702) 576-1312).",
+          "gsaPerDiemCap": "$197\u2013$237/nt (Seasonal)"
+        },
+        {
+          "name": "Tampa Marriott Water Street",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/hotels/tampa-marriott-water-street.webp",
+          "corridorSpec": "Corridor Group Block \u2022 6-Min Corridor Shuttle / Drive (Tampa Convention Center)",
+          "typicalRate": "$321/nt",
+          "summary": "Features 86,909 sq. ft. of meeting space; resort/destination fees waived via Conventions.com Housing Desk (Sara Chaval \u00b7 (702) 576-1312).",
+          "gsaPerDiemCap": "$197\u2013$237/nt (Seasonal)"
+        },
+        {
+          "name": "Hilton Tampa Downtown",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/hotels/arizona-biltmore-lxr-hotels-and-resorts.webp",
+          "corridorSpec": "Corridor Group Block \u2022 8-Min Corridor Shuttle / Drive (Tampa Convention Center)",
+          "typicalRate": "$300/nt",
+          "summary": "Features 30,714 sq. ft. of meeting space; resort/destination fees waived via Conventions.com Housing Desk (Sara Chaval \u00b7 (702) 576-1312).",
+          "gsaPerDiemCap": "$197\u2013$237/nt (Seasonal)"
+        }
+      ],
+      "dining": [
+        {
+          "name": "Ocean Prime",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/dining/tampa-ocean-prime.webp",
+          "cuisineAndProximity": "Seafood Restaurant \u2022 3-min walk / cab on 2205 N Westshore Blvd (Tampa Convention Center)",
+          "priceTier": "$$$$",
+          "groupSpec": "16\u2013120 Guests (Private Boardrooms & Main Salon) ($4,500 \u2013 $25,000+ F&B Min) \u2014 Verified Tampa executive dining & sponsor reception venue (4.7\u2605 across 4,728 reviews on 2205 N Westshore Blvd).",
+          "reservationTip": "30\u201360 days prior to show week"
+        },
+        {
+          "name": "Malio's",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/dining/tampa-malio-s.webp",
+          "cuisineAndProximity": "Steak House \u2022 5-min walk (400 N Ashley Dr) (Tampa Convention Center)",
+          "priceTier": "$$$$",
+          "groupSpec": "20\u2013160 Guests (Wine Cellar PDR & Full Buyout) ($5,500 \u2013 $32,000+ F&B Min) \u2014 Verified Tampa executive dining & sponsor reception venue (4.5\u2605 across 1,521 reviews on 400 N Ashley Dr).",
+          "reservationTip": "30\u201360 days prior to show week"
+        },
+        {
+          "name": "The Capital Grille",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/dining/tampa-the-capital-grille.webp",
+          "cuisineAndProximity": "Fine Dining Restaurant \u2022 6-min walk (2223 N Westshore Blvd) (Tampa Convention Center)",
+          "priceTier": "$$$$",
+          "groupSpec": "14\u201385 Guests (Executive Chef's Room & Terrace) ($3,800 \u2013 $18,500+ F&B Min) \u2014 Verified Tampa executive dining & sponsor reception venue (4.7\u2605 across 2,633 reviews on 2223 N Westshore Blvd).",
+          "reservationTip": "30\u201360 days prior to show week"
+        }
+      ]
     }
   },
   {
@@ -3009,6 +3461,187 @@
       "sourceName": "Ticketmaster Discovery API v2",
       "sourceUrl": "https://developer.ticketmaster.com/",
       "retrieved": "2026-10-31"
+    },
+    "conventionsAndHospitality": {
+      "sourceName": "Conventions.com Municipal CVB & U.S. GSA FY2027 Per Diem Intelligence",
+      "sourceUrl": "https://conventions.com/cities/orlando",
+      "retrieved": "2026-11-14",
+      "spec": {
+        "campusesSummary": "44+ Major Convention & Resort Campuses in Orlando",
+        "hallLicenseRate": "$0.30\u2013$0.45 / net sq. ft. (OCCC North/South/West)",
+        "subventionRule": "50%\u2013100% Hall License Subvention w/ 1,500+ Peak Room Nights in Orlando + $30/nt Master Block Rebate",
+        "hotelInventorySummary": "23,427+ Verified Convention Hotel Keys across 24 HQ Properties",
+        "hotelTaxSummary": "12.5% Combined Orlando Hotel Occupancy & Tourism Assessment",
+        "laborSummary": "$118\u2013$177/hr GSC Floor Rate (vs. $31.40/hr BLS Wage \u2022 3.8\u00d7 Markup \u2022 Right-to-Work (Exhibitor-Friendly Self-Install))"
+      },
+      "venues": [
+        {
+          "name": "Orange County Convention Center (OCCC) Tier-1 Municipal Flagship Campus (2,054k sf)",
+          "exhibitSpace": "2,053,820 net exhibit sq. ft. Max Hall: 1,103,538 sq. ft. (West Concourse Halls WA\u2013WF)",
+          "breakouts": "479,190 sq. ft. (74 meeting rooms / 232 breakouts + 2,643-seat Chapin Theater)",
+          "walkableRooms": "6,200+ rooms on immediate I-Drive skybridge ring (Anchored by Hyatt Regency Orlando (Skybridge Connected))"
+        },
+        {
+          "name": "Orange County Convention Center West Concourse Tier-1 Municipal Flagship Campus (1,100k sf)",
+          "exhibitSpace": "1,100,000 sq. ft. Max Hall: 300,000 sq. ft.",
+          "breakouts": "308,000 sq. ft. (74 configurable breakout rooms)",
+          "walkableRooms": "23,427+ convention corridor rooms (Anchored by Hyatt Regency Orlando)"
+        },
+        {
+          "name": "Rosen Shingle Creek",
+          "exhibitSpace": "524,000 sq. ft. Max Hall: 95,000 sq. ft.",
+          "breakouts": "146,720 sq. ft. (99 configurable breakout rooms)",
+          "walkableRooms": "1,501 In-House Tower Keys (Direct Elevator to Ballroom Level)"
+        },
+        {
+          "name": "Shingle Creek Conference Centre Tier-1 Municipal Flagship Campus (524k sf)",
+          "exhibitSpace": "524,000 sq. ft. Max Hall: 95,000 sq. ft.",
+          "breakouts": "146,720 sq. ft. (99 configurable breakout rooms)",
+          "walkableRooms": "23,427+ convention corridor rooms (Anchored by Hyatt Regency Orlando)"
+        },
+        {
+          "name": "Hyatt Regency Orlando Intl Airport",
+          "exhibitSpace": "315,000 sq. ft. Max Hall: 54,638 sq. ft.",
+          "breakouts": "88,200 sq. ft. (99 configurable breakout rooms)",
+          "walkableRooms": "445 In-House Tower Keys (Direct Elevator to Ballroom Level)"
+        },
+        {
+          "name": "Caribe Royale Orlando",
+          "exhibitSpace": "260,000 sq. ft. Max Hall: 50,000 sq. ft.",
+          "breakouts": "72,800 sq. ft. (58 configurable breakout rooms)",
+          "walkableRooms": "2,040+ District Rooms (Anchored by Caribe Royale Orlando)"
+        },
+        {
+          "name": "Signia by Hilton Orlando - Walt Disney",
+          "exhibitSpace": "249,000 sq. ft. Max Hall: 49,128 sq. ft.",
+          "breakouts": "69,720 sq. ft. (71 configurable breakout rooms)",
+          "walkableRooms": "1,009 In-House Tower Keys (Direct Elevator to Ballroom Level)"
+        },
+        {
+          "name": "DoubleTree by Hilton Orlando Theme Park",
+          "exhibitSpace": "249,000 sq. ft. Max Hall: 49,128 sq. ft.",
+          "breakouts": "69,720 sq. ft. (71 configurable breakout rooms)",
+          "walkableRooms": "1,042 In-House Tower Keys (Direct Elevator to Ballroom Level)"
+        }
+      ],
+      "shows": [
+        {
+          "name": "AAPD Comprehensive Review of Pediatric Dentistry 2026 Dental & Orthodontics",
+          "dates": "Jan 23\u201325, 2026",
+          "venue": "Renaissance Orlando at Seaworld",
+          "attendance": "650+ B2B Attendees",
+          "hotelSurge": "1.4\u00d7 In-House Block ($275\u2013$365/nt)"
+        },
+        {
+          "name": "NATE UNITE 2026 Manufacturing & Supply Chain",
+          "dates": "Feb 23\u201326, 2026",
+          "venue": "Rosen Shingle Creek",
+          "attendance": "2,500+ B2B Attendees",
+          "hotelSurge": "1.4\u00d7 In-House Block ($270\u2013$330/nt)"
+        },
+        {
+          "name": "Catersource + The Special Event 2026",
+          "dates": "Mar 3\u20136, 2026",
+          "venue": "Shingle Creek Conference Centre",
+          "attendance": "8,000+ B2B Attendees",
+          "hotelSurge": "1.8\u00d7 Campus Ring ($335\u2013$405/nt)"
+        },
+        {
+          "name": "Pediatric Emergency Medicine Assembly 2026",
+          "dates": "Mar 23\u201326, 2026",
+          "venue": "Disney's Yacht Club Resort",
+          "attendance": "850+ B2B Attendees",
+          "hotelSurge": "1.5\u00d7 In-House Block ($275\u2013$345/nt)"
+        },
+        {
+          "name": "Nareit REITwise: Law, Accounting & Fice Conference 2026 Fice, FinTech & Banking",
+          "dates": "Mar 24\u201326, 2026",
+          "venue": "JW Marriott Orlando Grande Lakes",
+          "attendance": "1,100+ B2B Attendees",
+          "hotelSurge": "1.3\u00d7 In-House Block ($250\u2013$300/nt)"
+        },
+        {
+          "name": "SHRM Talent Conference & Expo 2026 Fice, FinTech & Banking",
+          "dates": "Apr 19\u201322, 2026",
+          "venue": "Disney's Coronado Springs Resort",
+          "attendance": "2,000+ B2B Attendees",
+          "hotelSurge": "1.4\u00d7 In-House Block ($270\u2013$360/nt)"
+        },
+        {
+          "name": "NAPA 401(k) Summit 2026 Fice, FinTech & Banking",
+          "dates": "Apr 26\u201328, 2026",
+          "venue": "JW Marriott Orlando, Grande Lakes",
+          "attendance": "2,200+ B2B Attendees",
+          "hotelSurge": "1.4\u00d7 In-House Block ($275\u2013$365/nt)"
+        },
+        {
+          "name": "Microsoft 365 Conference 2026",
+          "dates": "May 5\u20137, 2026",
+          "venue": "Disney's Coronado Springs Resort",
+          "attendance": "3,000+ B2B Attendees",
+          "hotelSurge": "1.3\u00d7 In-House Block ($245\u2013$325/nt)"
+        }
+      ],
+      "hotels": [
+        {
+          "name": "Hyatt Regency Orlando (Skybridge Connected)",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/hotels/hyatt-regency-orlando.webp",
+          "corridorSpec": "Skybridge / Walk Ring \u2022 Covered Skybridge Direct to OCCC West (OCCC Orlando)",
+          "typicalRate": "$339/nt",
+          "summary": "Climate-protected pedestrian skybridge connects directly into OCCC West Concourse; 315,000 sq. ft. of on-site hospitality suites.",
+          "gsaPerDiemCap": "$180\u2013$220/nt (Seasonal)"
+        },
+        {
+          "name": "Hilton Orlando (Skybridge Connected)",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/hotels/hilton-orlando.webp",
+          "corridorSpec": "Skybridge / Walk Ring \u2022 Covered Skybridge to North/South Concourse (OCCC Orlando)",
+          "typicalRate": "$329/nt",
+          "summary": "Premier headquarters hotel for OCCC North/South events via dedicated covered walkway; resort lawn handles 500+ guest outdoor receptions.",
+          "gsaPerDiemCap": "$180\u2013$220/nt (Seasonal)"
+        },
+        {
+          "name": "Rosen Centre Hotel (Skybridge Connected)",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/hotels/rosen-centre.webp",
+          "corridorSpec": "Skybridge / Walk Ring \u2022 Covered Skybridge + No Resort Fee Policy (OCCC Orlando)",
+          "typicalRate": "$279/nt",
+          "summary": "Direct skybridge to OCCC West Concourse with executive VIP suites and transparent corporate group billing.",
+          "gsaPerDiemCap": "$180\u2013$220/nt (Seasonal)"
+        },
+        {
+          "name": "Rosen Plaza Hotel (Adjacent Pointe Orlando)",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/hotels/rosen-plaza.webp",
+          "corridorSpec": "Connected / Adjacent \u2022 6-Min Walk to OCCC West + Pointe Orlando (OCCC Orlando)",
+          "typicalRate": "$239/nt",
+          "summary": "Sits directly between OCCC West Concourse and Pointe Orlando's private dining restaurants\u2014zero shuttle dependence.",
+          "gsaPerDiemCap": "$180\u2013$220/nt (Seasonal)"
+        }
+      ],
+      "dining": [
+        {
+          "name": "The Capital Grille (Pointe Orlando)",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/dining/capital-grille-pointe.webp",
+          "cuisineAndProximity": "Dry-Aged Prime Steakhouse \u2022 5-min walk across I-Drive from OCCC West (OCCC Orlando)",
+          "priceTier": "$$$$",
+          "groupSpec": "3 AV Boardrooms (12\u201360) \u2022 250 Full Buyout ($2,200\u2013$8,500 PDR \u2022 $35,000+ Full Buyout) \u2014 Flagship executive closing venue directly across from OCCC West Concourse with built-in flat-screen presentation monitors.",
+          "reservationTip": "60\u201390 days ahead"
+        },
+        {
+          "name": "Cuba Libre Restaurant & Rum Bar (Pointe Orlando)",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/dining/cuba-libre-orlando.webp",
+          "cuisineAndProximity": "Latin Tropical & Two-Story Atrium \u2022 5-min walk from OCCC West Concourse (OCCC Orlando)",
+          "priceTier": "$$$",
+          "groupSpec": "Mezzanine (35\u2013120) \u2022 550 Full Two-Level Buyout ($4,000\u2013$14,000 Mezzanine \u2022 $42,000+ Full Buyout) \u2014 One of Orlando's largest walkable convention buyout venues\u2014accommodates up to 550 guests with stage lighting and custom branding.",
+          "reservationTip": "60\u201390 days ahead"
+        },
+        {
+          "name": "Del Frisco's Double Eagle Steakhouse (I-Drive)",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/dining/del-friscos-orlando.webp",
+          "cuisineAndProximity": "Two-Story Prime Steakhouse \u2022 4-min ride north on International Drive (OCCC Orlando)",
+          "priceTier": "$$$$",
+          "groupSpec": "Wine Cellar & Balcony PDRs (16\u201385) \u2022 450 Buyout ($2,800\u2013$12,000 PDR \u2022 $48,000+ Two-Story Buyout) \u2014 Purpose-built for corporate conventions: 6 distinct private rooms, soaring wine cellar, and covered balcony overlooking I-Drive.",
+          "reservationTip": "60\u201375 days ahead"
+        }
+      ]
     }
   },
   {
@@ -3650,7 +4283,7 @@
           "fullName": "De Soto National Memorial",
           "designation": "National Memorial",
           "distanceMiles": 16.6,
-          "description": "In May 1539, Conquistador Hernando de Soto’s army of soldiers, hired mercenaries, craftsmen, and clergy made landfall in Tampa Bay. They were met with fierce resistance of indigenous people protecting their homelands. De Soto’s quest...",
+          "description": "In May 1539, Conquistador Hernando de Soto\u2019s army of soldiers, hired mercenaries, craftsmen, and clergy made landfall in Tampa Bay. They were met with fierce resistance of indigenous people protecting their homelands. De Soto\u2019s quest...",
           "url": "https://www.nps.gov/deso/index.htm",
           "lat": 27.522726,
           "lng": -82.643354
@@ -11905,7 +12538,7 @@
           "fullName": "De Soto National Memorial",
           "designation": "National Memorial",
           "distanceMiles": 32.5,
-          "description": "In May 1539, Conquistador Hernando de Soto’s army of soldiers, hired mercenaries, craftsmen, and clergy made landfall in Tampa Bay. They were met with fierce resistance of indigenous people protecting their homelands. De Soto’s quest...",
+          "description": "In May 1539, Conquistador Hernando de Soto\u2019s army of soldiers, hired mercenaries, craftsmen, and clergy made landfall in Tampa Bay. They were met with fierce resistance of indigenous people protecting their homelands. De Soto\u2019s quest...",
           "url": "https://www.nps.gov/deso/index.htm",
           "lat": 27.522726,
           "lng": -82.643354
@@ -17430,7 +18063,7 @@
           "fullName": "De Soto National Memorial",
           "designation": "National Memorial",
           "distanceMiles": 42.2,
-          "description": "In May 1539, Conquistador Hernando de Soto’s army of soldiers, hired mercenaries, craftsmen, and clergy made landfall in Tampa Bay. They were met with fierce resistance of indigenous people protecting their homelands. De Soto’s quest...",
+          "description": "In May 1539, Conquistador Hernando de Soto\u2019s army of soldiers, hired mercenaries, craftsmen, and clergy made landfall in Tampa Bay. They were met with fierce resistance of indigenous people protecting their homelands. De Soto\u2019s quest...",
           "url": "https://www.nps.gov/deso/index.htm",
           "lat": 27.522726,
           "lng": -82.643354
@@ -19801,7 +20434,7 @@
           "fullName": "De Soto National Memorial",
           "designation": "National Memorial",
           "distanceMiles": 27.5,
-          "description": "In May 1539, Conquistador Hernando de Soto’s army of soldiers, hired mercenaries, craftsmen, and clergy made landfall in Tampa Bay. They were met with fierce resistance of indigenous people protecting their homelands. De Soto’s quest...",
+          "description": "In May 1539, Conquistador Hernando de Soto\u2019s army of soldiers, hired mercenaries, craftsmen, and clergy made landfall in Tampa Bay. They were met with fierce resistance of indigenous people protecting their homelands. De Soto\u2019s quest...",
           "url": "https://www.nps.gov/deso/index.htm",
           "lat": 27.522726,
           "lng": -82.643354
@@ -31257,7 +31890,7 @@
           "fullName": "De Soto National Memorial",
           "designation": "National Memorial",
           "distanceMiles": 14.1,
-          "description": "In May 1539, Conquistador Hernando de Soto’s army of soldiers, hired mercenaries, craftsmen, and clergy made landfall in Tampa Bay. They were met with fierce resistance of indigenous people protecting their homelands. De Soto’s quest...",
+          "description": "In May 1539, Conquistador Hernando de Soto\u2019s army of soldiers, hired mercenaries, craftsmen, and clergy made landfall in Tampa Bay. They were met with fierce resistance of indigenous people protecting their homelands. De Soto\u2019s quest...",
           "url": "https://www.nps.gov/deso/index.htm",
           "lat": 27.522726,
           "lng": -82.643354
@@ -32418,7 +33051,7 @@
           "fullName": "De Soto National Memorial",
           "designation": "National Memorial",
           "distanceMiles": 4.7,
-          "description": "In May 1539, Conquistador Hernando de Soto’s army of soldiers, hired mercenaries, craftsmen, and clergy made landfall in Tampa Bay. They were met with fierce resistance of indigenous people protecting their homelands. De Soto’s quest...",
+          "description": "In May 1539, Conquistador Hernando de Soto\u2019s army of soldiers, hired mercenaries, craftsmen, and clergy made landfall in Tampa Bay. They were met with fierce resistance of indigenous people protecting their homelands. De Soto\u2019s quest...",
           "url": "https://www.nps.gov/deso/index.htm",
           "lat": 27.522726,
           "lng": -82.643354
@@ -34229,7 +34862,7 @@
           "fullName": "De Soto National Memorial",
           "designation": "National Memorial",
           "distanceMiles": 23.6,
-          "description": "In May 1539, Conquistador Hernando de Soto’s army of soldiers, hired mercenaries, craftsmen, and clergy made landfall in Tampa Bay. They were met with fierce resistance of indigenous people protecting their homelands. De Soto’s quest...",
+          "description": "In May 1539, Conquistador Hernando de Soto\u2019s army of soldiers, hired mercenaries, craftsmen, and clergy made landfall in Tampa Bay. They were met with fierce resistance of indigenous people protecting their homelands. De Soto\u2019s quest...",
           "url": "https://www.nps.gov/deso/index.htm",
           "lat": 27.522726,
           "lng": -82.643354
@@ -43898,7 +44531,7 @@
           "fullName": "De Soto National Memorial",
           "designation": "National Memorial",
           "distanceMiles": 46.8,
-          "description": "In May 1539, Conquistador Hernando de Soto’s army of soldiers, hired mercenaries, craftsmen, and clergy made landfall in Tampa Bay. They were met with fierce resistance of indigenous people protecting their homelands. De Soto’s quest...",
+          "description": "In May 1539, Conquistador Hernando de Soto\u2019s army of soldiers, hired mercenaries, craftsmen, and clergy made landfall in Tampa Bay. They were met with fierce resistance of indigenous people protecting their homelands. De Soto\u2019s quest...",
           "url": "https://www.nps.gov/deso/index.htm",
           "lat": 27.522726,
           "lng": -82.643354
@@ -48419,7 +49052,7 @@
           "fullName": "De Soto National Memorial",
           "designation": "National Memorial",
           "distanceMiles": 36.3,
-          "description": "In May 1539, Conquistador Hernando de Soto’s army of soldiers, hired mercenaries, craftsmen, and clergy made landfall in Tampa Bay. They were met with fierce resistance of indigenous people protecting their homelands. De Soto’s quest...",
+          "description": "In May 1539, Conquistador Hernando de Soto\u2019s army of soldiers, hired mercenaries, craftsmen, and clergy made landfall in Tampa Bay. They were met with fierce resistance of indigenous people protecting their homelands. De Soto\u2019s quest...",
           "url": "https://www.nps.gov/deso/index.htm",
           "lat": 27.522726,
           "lng": -82.643354
@@ -55268,7 +55901,7 @@
           "fullName": "De Soto National Memorial",
           "designation": "National Memorial",
           "distanceMiles": 31.3,
-          "description": "In May 1539, Conquistador Hernando de Soto’s army of soldiers, hired mercenaries, craftsmen, and clergy made landfall in Tampa Bay. They were met with fierce resistance of indigenous people protecting their homelands. De Soto’s quest...",
+          "description": "In May 1539, Conquistador Hernando de Soto\u2019s army of soldiers, hired mercenaries, craftsmen, and clergy made landfall in Tampa Bay. They were met with fierce resistance of indigenous people protecting their homelands. De Soto\u2019s quest...",
           "url": "https://www.nps.gov/deso/index.htm",
           "lat": 27.522726,
           "lng": -82.643354
@@ -56431,7 +57064,7 @@
           "fullName": "De Soto National Memorial",
           "designation": "National Memorial",
           "distanceMiles": 39.5,
-          "description": "In May 1539, Conquistador Hernando de Soto’s army of soldiers, hired mercenaries, craftsmen, and clergy made landfall in Tampa Bay. They were met with fierce resistance of indigenous people protecting their homelands. De Soto’s quest...",
+          "description": "In May 1539, Conquistador Hernando de Soto\u2019s army of soldiers, hired mercenaries, craftsmen, and clergy made landfall in Tampa Bay. They were met with fierce resistance of indigenous people protecting their homelands. De Soto\u2019s quest...",
           "url": "https://www.nps.gov/deso/index.htm",
           "lat": 27.522726,
           "lng": -82.643354

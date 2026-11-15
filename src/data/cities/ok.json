@@ -814,6 +814,157 @@
       "sourceName": "Ticketmaster Discovery API v2",
       "sourceUrl": "https://developer.ticketmaster.com/",
       "retrieved": "2026-10-31"
+    },
+    "conventionsAndHospitality": {
+      "sourceName": "Conventions.com Municipal CVB & U.S. GSA FY2027 Per Diem Intelligence",
+      "sourceUrl": "https://conventions.com/cities/oklahoma-city",
+      "retrieved": "2026-11-14",
+      "spec": {
+        "campusesSummary": "4+ Major Convention & Resort Campuses in Oklahoma City",
+        "hallLicenseRate": "$0.34\u2013$0.52 / net sq. ft. (Municipal Standard)",
+        "subventionRule": "50%\u2013100% Hall License Subvention w/ 1,500+ Peak Room Nights in Oklahoma City + $30/nt Master Block Rebate",
+        "hotelInventorySummary": "1,009+ Verified Convention Hotel Keys across 2 HQ Properties",
+        "hotelTaxSummary": "13.5% Combined Oklahoma City Hotel Occupancy & Tourism Assessment",
+        "laborSummary": "$118\u2013$177/hr GSC Floor Rate (vs. $31.40/hr BLS Wage \u2022 3.8\u00d7 Markup \u2022 Right-to-Work State (Exhibitor-Friendly Self-Install))"
+      },
+      "venues": [
+        {
+          "name": "Cox Convention Center Tier-1 Municipal Flagship Campus (500k sf)",
+          "exhibitSpace": "500,000 sq. ft. Max Hall: 200,000 sq. ft.",
+          "breakouts": "140,000 sq. ft. (27 configurable breakout rooms)",
+          "walkableRooms": "1,009+ convention corridor rooms (Anchored by Omni Oklahoma City Hotel)"
+        },
+        {
+          "name": "OKANA Resort Indoor Waterpark",
+          "exhibitSpace": "160,000 sq. ft. Max Hall: 56,000 sq. ft.",
+          "breakouts": "44,800 sq. ft. (8 configurable breakout rooms)",
+          "walkableRooms": "404 In-House Tower Keys (Direct Elevator to Ballroom Level)"
+        },
+        {
+          "name": "Oklahoma City Convention Center",
+          "exhibitSpace": "78,000 sq. ft. Max Hall: 20,796 sq. ft.",
+          "breakouts": "21,840 sq. ft. (4 configurable breakout rooms)",
+          "walkableRooms": "2,160+ District Rooms (Anchored by Omni Oklahoma City Hotel)"
+        },
+        {
+          "name": "Omni Oklahoma City Hotel",
+          "exhibitSpace": "78,000 sq. ft. Max Hall: 20,796 sq. ft.",
+          "breakouts": "21,840 sq. ft. (4 configurable breakout rooms)",
+          "walkableRooms": "605 In-House Tower Keys (Direct Elevator to Ballroom Level)"
+        },
+        {
+          "name": "Oklahoma City Convention Center Tier-1 Municipal Flagship Campus",
+          "exhibitSpace": "500,000 sq. ft. Max Hall: 200,730 sq. ft.",
+          "breakouts": "27 Meeting & Breakout Rooms",
+          "walkableRooms": "1,009+ Verified Convention Hotel Keys across 2 HQ Properties"
+        },
+        {
+          "name": "Labor Regime & Carpenter Scale",
+          "exhibitSpace": "NV Union Contracts \u2022 $148\u2013$225/hr GSC (vs. $34.18 BLS)",
+          "breakouts": "AZ Right-to-Work \u2022 $108\u2013$134/hr GSC (vs. $31.40 BLS)",
+          "walkableRooms": "$118\u2013$177/hr GSC Floor Rate (vs. $31.40/hr BLS Wage \u2022 3.8\u00d7 Markup \u2022 Right-to-Work State (Exhibitor-Friendly Self-Install))"
+        },
+        {
+          "name": "Exhibitor Self-Install Rights",
+          "exhibitSpace": "Pop-Up Only (<100 sf) \u2022 Strict Teamsters 631 Dock",
+          "breakouts": "Full Self-Install & Hand-Carry Allowed",
+          "walkableRooms": "Standard Hand-Carry & Pop-Up Permitted"
+        },
+        {
+          "name": "Hall License & Subvention",
+          "exhibitSpace": "$0.37\u2013$0.55/sf (LVCC) or $0 w/ Resort Block",
+          "breakouts": "$0.32\u2013$0.48/sf (50%\u2013100% CVB Subvention)",
+          "walkableRooms": "$0.34\u2013$0.52 / net sq. ft. (Municipal Standard)"
+        }
+      ],
+      "shows": [
+        {
+          "name": "Oklahoma CareerTech Summer Conference 2026",
+          "dates": "Aug 3\u20135, 2026",
+          "venue": "Omni Oklahoma City Hotel",
+          "attendance": "3,500+ B2B Attendees",
+          "hotelSurge": "1.5\u00d7 In-House Block ($245\u2013$345/nt)"
+        },
+        {
+          "name": "Oklahoma Municipal League Annual Conference & Expo 2026",
+          "dates": "Sep 15\u201317, 2026",
+          "venue": "OKANA Resort Indoor Waterpark",
+          "attendance": "1,200+ B2B Attendees",
+          "hotelSurge": "1.5\u00d7 In-House Block ($250\u2013$350/nt)"
+        },
+        {
+          "name": "RoofCON 2026",
+          "dates": "Oct 21\u201323, 2026",
+          "venue": "Oklahoma City Convention Center",
+          "attendance": "3,500+ B2B Attendees",
+          "hotelSurge": "1.5\u00d7 Corridor Block ($245\u2013$345/nt)"
+        },
+        {
+          "name": "NBS Spring Annual Market 2027 Manufacturing & Supply Chain",
+          "dates": "Feb 7\u201311, 2027",
+          "venue": "Oklahoma City Convention Center",
+          "attendance": "2,500+ B2B Attendees",
+          "hotelSurge": "1.5\u00d7 Corridor Block ($250\u2013$350/nt)"
+        },
+        {
+          "name": "Oklahoma Dental Association Annual Meeting 2027 Dental & Orthodontics",
+          "dates": "Apr 22\u201324, 2027",
+          "venue": "Omni Oklahoma City Hotel",
+          "attendance": "1,500+ B2B Attendees",
+          "hotelSurge": "1.4\u00d7 In-House Block ($230\u2013$290/nt)"
+        },
+        {
+          "name": "Oklahoma Tribal Fice Consortium Conference 2027 Fice, FinTech & Banking",
+          "dates": "May 11\u201313, 2027",
+          "venue": "OKANA Resort Indoor Waterpark",
+          "attendance": "650+ B2B Attendees",
+          "hotelSurge": "1.4\u00d7 In-House Block ($220\u2013$310/nt)"
+        }
+      ],
+      "hotels": [
+        {
+          "name": "Omni Oklahoma City Hotel",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/hotels/omni-atlanta-centennial-park.webp",
+          "corridorSpec": "Connected / Adjacent \u2022 Skybridge / Adjacent HQ Anchor (Cox Convention Center)",
+          "typicalRate": "$304/nt",
+          "summary": "Features 78,000 sq. ft. of meeting space; resort/destination fees waived via Conventions.com Housing Desk (Sara Chaval \u00b7 (702) 576-1312).",
+          "gsaPerDiemCap": "$150\u2013$190/nt (Seasonal)"
+        },
+        {
+          "name": "OKANA Resort Indoor Waterpark",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/hotels/okana-resort-indoor-waterpark.webp",
+          "corridorSpec": "Corridor Group Block \u2022 6-Min Corridor Shuttle / Drive (Cox Convention Center)",
+          "typicalRate": "$281/nt",
+          "summary": "Features 160,000 sq. ft. of meeting space; resort/destination fees waived via Conventions.com Housing Desk (Sara Chaval \u00b7 (702) 576-1312).",
+          "gsaPerDiemCap": "$150\u2013$190/nt (Seasonal)"
+        }
+      ],
+      "dining": [
+        {
+          "name": "Mahogany Prime Steakhouse",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/dining/oklahoma-city-mahogany-prime-steakhouse.webp",
+          "cuisineAndProximity": "Steak House \u2022 3-min walk / cab (145 W Sheridan Ave) (Cox Convention Center)",
+          "priceTier": "$$$$",
+          "groupSpec": "16\u2013120 Guests (Private Boardrooms & Main Salon) ($4,500 \u2013 $24,000+ F&B Min) \u2014 Verified Oklahoma City executive dining & sponsor reception venue (4.7\u2605 across 1,820 Google reviews on 145 W Sheridan Ave).",
+          "reservationTip": "30\u201360 days prior to show week"
+        },
+        {
+          "name": "Red PrimeSteak",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/dining/oklahoma-city-red-primesteak.webp",
+          "cuisineAndProximity": "Steak House \u2022 5-min walk (504 N Broadway Ave) (Cox Convention Center)",
+          "priceTier": "$$$$",
+          "groupSpec": "20\u2013160 Guests (Wine Cellar PDR & Full Buyout) ($5,500 \u2013 $30,000+ F&B Min) \u2014 Verified Oklahoma City executive dining & sponsor reception venue (4.6\u2605 across 1,379 Google reviews on 504 N Broadway Ave).",
+          "reservationTip": "30\u201360 days prior to show week"
+        },
+        {
+          "name": "Mickey Mantle's Steakhouse",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/dining/oklahoma-city-mickey-mantle-s-steakhouse.webp",
+          "cuisineAndProximity": "Steak House \u2022 6-min walk (7 S Mickey Mantle Dr) (Cox Convention Center)",
+          "priceTier": "$$$$",
+          "groupSpec": "14\u201385 Guests (Executive Chef's Room & Terrace) ($3,800 \u2013 $18,500+ F&B Min) \u2014 Verified Oklahoma City executive dining & sponsor reception venue (4.4\u2605 across 1,736 Google reviews on 7 S Mickey Mantle Dr).",
+          "reservationTip": "30\u201360 days prior to show week"
+        }
+      ]
     }
   },
   {

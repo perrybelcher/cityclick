@@ -736,6 +736,179 @@
       "sourceName": "Ticketmaster Discovery API v2",
       "sourceUrl": "https://developer.ticketmaster.com/",
       "retrieved": "2026-10-31"
+    },
+    "conventionsAndHospitality": {
+      "sourceName": "Conventions.com Municipal CVB & U.S. GSA FY2027 Per Diem Intelligence",
+      "sourceUrl": "https://conventions.com/cities/salt-lake-city",
+      "retrieved": "2026-11-14",
+      "spec": {
+        "campusesSummary": "5+ Major Convention & Resort Campuses in Salt Lake City",
+        "hallLicenseRate": "$0.34\u2013$0.52 / net sq. ft. (Municipal Standard)",
+        "subventionRule": "50%\u2013100% Hall License Subvention w/ 1,500+ Peak Room Nights in Salt Lake City + $30/nt Master Block Rebate",
+        "hotelInventorySummary": "1,985+ Verified Convention Hotel Keys across 3 HQ Properties",
+        "hotelTaxSummary": "13.5% Combined Salt Lake City Hotel Occupancy & Tourism Assessment",
+        "laborSummary": "$118\u2013$177/hr GSC Floor Rate (vs. $31.40/hr BLS Wage \u2022 3.8\u00d7 Markup \u2022 Right-to-Work State (Exhibitor-Friendly Self-Install))"
+      },
+      "venues": [
+        {
+          "name": "Salt Palace Convention Center Tier-1 Municipal Flagship Campus (675k sf)",
+          "exhibitSpace": "675,000 sq. ft. Max Hall: 515,000 sq. ft.",
+          "breakouts": "189,000 sq. ft. (70 configurable breakout rooms)",
+          "walkableRooms": "1,985+ convention corridor rooms (Anchored by Hyatt Regency Salt Lake City)"
+        },
+        {
+          "name": "Hyatt Regency Salt Lake City",
+          "exhibitSpace": "68,000 sq. ft. Max Hall: 23,015 sq. ft.",
+          "breakouts": "19,040 sq. ft. (33 configurable breakout rooms)",
+          "walkableRooms": "700 In-House Tower Keys (Direct Elevator to Ballroom Level)"
+        },
+        {
+          "name": "Grand America Hotel",
+          "exhibitSpace": "39,400 sq. ft. Max Hall: 23,664 sq. ft.",
+          "breakouts": "11,032 sq. ft. (3 configurable breakout rooms)",
+          "walkableRooms": "775 In-House Tower Keys (Direct Elevator to Ballroom Level)"
+        },
+        {
+          "name": "Salt Lake Marriott Downtown City Creek",
+          "exhibitSpace": "37,061 sq. ft. Max Hall: 13,500 sq. ft.",
+          "breakouts": "10,377 sq. ft. (12 configurable breakout rooms)",
+          "walkableRooms": "510 In-House Tower Keys (Direct Elevator to Ballroom Level)"
+        },
+        {
+          "name": "Conference Center Regional Event & Conference Facility (25k sf)",
+          "exhibitSpace": "25,000 sq. ft. Max Hall: 21,000 sq. ft.",
+          "breakouts": "7,000 sq. ft. (10 configurable breakout rooms)",
+          "walkableRooms": "450+ District Rooms (Anchored by Hyatt Regency Salt Lake City)"
+        },
+        {
+          "name": "Conference Center Municipal Expo & Conference Facility",
+          "exhibitSpace": "25,000 sq. ft. Max Hall: 21,000 sq. ft.",
+          "breakouts": "10 Meeting & Breakout Rooms",
+          "walkableRooms": "2,700+ Corridor Rooms (10-Min Ring)"
+        },
+        {
+          "name": "Labor Regime & Carpenter Scale",
+          "exhibitSpace": "NV Union Contracts \u2022 $148\u2013$225/hr GSC (vs. $34.18 BLS)",
+          "breakouts": "AZ Right-to-Work \u2022 $108\u2013$134/hr GSC (vs. $31.40 BLS)",
+          "walkableRooms": "$118\u2013$177/hr GSC Floor Rate (vs. $31.40/hr BLS Wage \u2022 3.8\u00d7 Markup \u2022 Right-to-Work State (Exhibitor-Friendly Self-Install))"
+        },
+        {
+          "name": "Exhibitor Self-Install Rights",
+          "exhibitSpace": "Pop-Up Only (<100 sf) \u2022 Strict Teamsters 631 Dock",
+          "breakouts": "Full Self-Install & Hand-Carry Allowed",
+          "walkableRooms": "Standard Hand-Carry & Pop-Up Permitted"
+        }
+      ],
+      "shows": [
+        {
+          "name": "RootsTech 2026",
+          "dates": "Mar 5\u20137, 2026",
+          "venue": "Salt Palace Convention Center",
+          "attendance": "15,000+ B2B Attendees",
+          "hotelSurge": "2.0\u00d7 Campus Ring ($415\u2013$515/nt)"
+        },
+        {
+          "name": "Utah Governor's Economic Summit 2026",
+          "dates": "Apr 15\u201316, 2026",
+          "venue": "Conference Center",
+          "attendance": "2,200+ B2B Attendees",
+          "hotelSurge": "1.4\u00d7 Corridor Block ($295\u2013$355/nt)"
+        },
+        {
+          "name": "Outdoor Retailer Summer 2026 Retail, Apparel & Wholesale Merchandise",
+          "dates": "Jun 16\u201318, 2026",
+          "venue": "Salt Palace Convention Center",
+          "attendance": "18,000+ B2B Attendees",
+          "hotelSurge": "1.9\u00d7 Campus Ring ($380\u2013$470/nt)"
+        },
+        {
+          "name": "Utah Association of Realtors Annual Convention 2026 Fice, FinTech & Banking",
+          "dates": "Sep 23\u201325, 2026",
+          "venue": "Salt Lake Marriott Downtown City Creek",
+          "attendance": "1,100+ B2B Attendees",
+          "hotelSurge": "1.3\u00d7 In-House Block ($265\u2013$315/nt)"
+        },
+        {
+          "name": "Silicon Slopes Summit 2026",
+          "dates": "Sep 24\u201325, 2026",
+          "venue": "Hyatt Regency Salt Lake City",
+          "attendance": "2,500+ B2B Attendees",
+          "hotelSurge": "1.4\u00d7 In-House Block ($285\u2013$375/nt)"
+        },
+        {
+          "name": "Utah Global Forum 2026 Fice, FinTech & Banking",
+          "dates": "Oct 21\u201322, 2026",
+          "venue": "Conference Center",
+          "attendance": "1,800+ B2B Attendees",
+          "hotelSurge": "1.4\u00d7 Corridor Block ($285\u2013$375/nt)"
+        },
+        {
+          "name": "Utah Life Sciences Summit 2026",
+          "dates": "Nov 10\u201310, 2026",
+          "venue": "Grand America Hotel",
+          "attendance": "600+ B2B Attendees",
+          "hotelSurge": "1.3\u00d7 In-House Block ($275\u2013$325/nt)"
+        },
+        {
+          "name": "Utah State Bar Summer Convention 2027 Fice, FinTech & Banking",
+          "dates": "Jul 7\u201310, 2027",
+          "venue": "Grand America Hotel",
+          "attendance": "850+ B2B Attendees",
+          "hotelSurge": "1.5\u00d7 In-House Block ($320\u2013$420/nt)"
+        }
+      ],
+      "hotels": [
+        {
+          "name": "Hyatt Regency Salt Lake City",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/hotels/four-seasons-hotel-houston.webp",
+          "corridorSpec": "Connected / Adjacent \u2022 Skybridge / Adjacent HQ Anchor (Salt Palace Convention Center)",
+          "typicalRate": "$356/nt",
+          "summary": "Features 68,000 sq. ft. of meeting space; resort/destination fees waived via Conventions.com Housing Desk (Sara Chaval \u00b7 (702) 576-1312).",
+          "gsaPerDiemCap": "$197\u2013$237/nt (Seasonal)"
+        },
+        {
+          "name": "Grand America Hotel",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/hotels/embassy-suites-denver-downtown-ccc.webp",
+          "corridorSpec": "Corridor Group Block \u2022 6-Min Corridor Shuttle / Drive (Salt Palace Convention Center)",
+          "typicalRate": "$324/nt",
+          "summary": "Features 39,400 sq. ft. of meeting space; resort/destination fees waived via Conventions.com Housing Desk (Sara Chaval \u00b7 (702) 576-1312).",
+          "gsaPerDiemCap": "$197\u2013$237/nt (Seasonal)"
+        },
+        {
+          "name": "Salt Lake Marriott Downtown City Creek",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/hotels/hyatt-regency-denver-ccc.webp",
+          "corridorSpec": "Corridor Group Block \u2022 8-Min Corridor Shuttle / Drive (Salt Palace Convention Center)",
+          "typicalRate": "$290/nt",
+          "summary": "Features 37,061 sq. ft. of meeting space; resort/destination fees waived via Conventions.com Housing Desk (Sara Chaval \u00b7 (702) 576-1312).",
+          "gsaPerDiemCap": "$197\u2013$237/nt (Seasonal)"
+        }
+      ],
+      "dining": [
+        {
+          "name": "The Capital Grille",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/dining/salt-lake-city-the-capital-grille.webp",
+          "cuisineAndProximity": "Fine Dining Restaurant \u2022 3-min walk / cab on 40 E 100 S #100 (Salt Palace Convention Center)",
+          "priceTier": "$$$$",
+          "groupSpec": "16\u2013120 Guests (Private Boardrooms & Main Salon) ($4,500 \u2013 $25,000+ F&B Min) \u2014 Verified Salt Lake City executive dining & sponsor reception venue (4.7\u2605 across 1,047 reviews on 40 E 100 S #100).",
+          "reservationTip": "30\u201360 days prior to show week"
+        },
+        {
+          "name": "Urban Hill",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/dining/salt-lake-city-urban-hill.webp",
+          "cuisineAndProximity": "Restaurant \u2022 5-min walk (510 S 300 W Apt 100) (Salt Palace Convention Center)",
+          "priceTier": "$$$",
+          "groupSpec": "20\u2013160 Guests (Wine Cellar PDR & Full Buyout) ($5,500 \u2013 $32,000+ F&B Min) \u2014 Verified Salt Lake City executive dining & sponsor reception venue (4.6\u2605 across 1,168 reviews on 510 S 300 W Apt 100).",
+          "reservationTip": "30\u201360 days prior to show week"
+        },
+        {
+          "name": "STK Steakhouse Salt Lake City",
+          "imageUrl": "https://yeyhhdbtoumubjtwpifw.supabase.co/storage/v1/object/public/conventions-media/places/dining/salt-lake-city-stk-steakhouse-salt-lake-cit.webp",
+          "cuisineAndProximity": "Steak House \u2022 6-min walk (111 S 300 W Apt 101) (Salt Palace Convention Center)",
+          "priceTier": "$$$$",
+          "groupSpec": "14\u201385 Guests (Executive Chef's Room & Terrace) ($3,800 \u2013 $18,500+ F&B Min) \u2014 Verified Salt Lake City executive dining & sponsor reception venue (4.4\u2605 across 2,708 reviews on 111 S 300 W Apt 101).",
+          "reservationTip": "30\u201360 days prior to show week"
+        }
+      ]
     }
   },
   {
@@ -3103,7 +3276,7 @@
           "fullName": "Zion National Park",
           "designation": "National Park",
           "distanceMiles": 33.9,
-          "description": "Follow the paths where people have walked for thousands of years. Gaze up at massive sandstone cliffs of cream, pink, and red that soar into a brilliant blue sky. Experience the tall, stretching walls of a narrow slot canyon. Zion’s...",
+          "description": "Follow the paths where people have walked for thousands of years. Gaze up at massive sandstone cliffs of cream, pink, and red that soar into a brilliant blue sky. Experience the tall, stretching walls of a narrow slot canyon. Zion\u2019s...",
           "url": "https://www.nps.gov/zion/index.htm",
           "lat": 37.298393,
           "lng": -113.026514
@@ -13355,7 +13528,7 @@
           "fullName": "Zion National Park",
           "designation": "National Park",
           "distanceMiles": 26.9,
-          "description": "Follow the paths where people have walked for thousands of years. Gaze up at massive sandstone cliffs of cream, pink, and red that soar into a brilliant blue sky. Experience the tall, stretching walls of a narrow slot canyon. Zion’s...",
+          "description": "Follow the paths where people have walked for thousands of years. Gaze up at massive sandstone cliffs of cream, pink, and red that soar into a brilliant blue sky. Experience the tall, stretching walls of a narrow slot canyon. Zion\u2019s...",
           "url": "https://www.nps.gov/zion/index.htm",
           "lat": 37.298393,
           "lng": -113.026514
@@ -18700,7 +18873,7 @@
           "fullName": "Zion National Park",
           "designation": "National Park",
           "distanceMiles": 28.0,
-          "description": "Follow the paths where people have walked for thousands of years. Gaze up at massive sandstone cliffs of cream, pink, and red that soar into a brilliant blue sky. Experience the tall, stretching walls of a narrow slot canyon. Zion’s...",
+          "description": "Follow the paths where people have walked for thousands of years. Gaze up at massive sandstone cliffs of cream, pink, and red that soar into a brilliant blue sky. Experience the tall, stretching walls of a narrow slot canyon. Zion\u2019s...",
           "url": "https://www.nps.gov/zion/index.htm",
           "lat": 37.298393,
           "lng": -113.026514
