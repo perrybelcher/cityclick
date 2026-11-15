@@ -349,12 +349,15 @@ const sidebarCompareOptions = Array.from(compareOptionsMap.values()).slice(0, 14
 const stUpper = city.stateCode.toUpperCase();
 const factCount = keyFacts.length;
 const isLockedAnnArbor = city.slug === 'mi/ann-arbor';
+const isLockedAltamonteSprings = city.slug === 'fl/altamonte-springs';
 const baseTitleCandidate = `${city.name}, ${stUpper} (2027): ${factCount} Verified Facts [Cost + Tax]`;
 const pageTitle = isLockedAnnArbor
   ? 'Ann Arbor, MI Living Costs: 5 Surprises [2027 Data]'
-  : baseTitleCandidate.length <= 58
-    ? baseTitleCandidate
-    : `${city.name}, ${stUpper} Guide: ${factCount} Facts [2027 Data]`.slice(0, 58);
+  : isLockedAltamonteSprings
+    ? 'Altamonte Springs FL: 7 Living Costs [2027 Data]'
+    : baseTitleCandidate.length <= 58
+      ? baseTitleCandidate
+      : `${city.name}, ${stUpper} Guide: ${factCount} Facts [2027 Data]`.slice(0, 58);
 
 const homeValStr =
   city.housingAndTaxes?.medianHomeValue != null
@@ -370,9 +373,11 @@ const propTaxStr =
     : null;
 const pageDescription = isLockedAnnArbor
   ? 'We analyzed Ann Arbor living costs across housing, sales tax, and median income. 3 bills beat Michigan averages, but 1 hidden line item shocked newcomers.'
-  : homeValStr && rentStr && propTaxStr
-    ? `We compiled ${factCount} verified 2027 records for ${city.name}, ${stUpper}: ${homeValStr}, ${rentStr}, and ${propTaxStr}. See the full data.`
-    : `We compiled ${factCount} verified 2027 civic records for ${city.name}, ${stUpper}: Census housing, taxes, climate normals & ER hospitals. See the data.`;
+  : isLockedAltamonteSprings
+    ? 'We analyzed Altamonte Springs living costs across housing, taxes, and income. 3 bills beat Florida averages, but 1 utility surprise shocked new residents.'
+    : homeValStr && rentStr && propTaxStr
+      ? `We compiled ${factCount} verified 2027 records for ${city.name}, ${stUpper}: ${homeValStr}, ${rentStr}, and ${propTaxStr}. See the full data.`
+      : `We compiled ${factCount} verified 2027 civic records for ${city.name}, ${stUpper}: Census housing, taxes, climate normals & ER hospitals. See the data.`;
 ---
 
 <Layout
