@@ -351,6 +351,7 @@ const factCount = keyFacts.length;
 const isLockedAnnArbor = city.slug === 'mi/ann-arbor';
 const isLockedAltamonteSprings = city.slug === 'fl/altamonte-springs';
 const isLockedTampa = city.slug === 'fl/tampa';
+const isLockedBellevue = city.slug === 'wa/bellevue';
 const baseTitleCandidate = `${city.name}, ${stUpper} (2027): ${factCount} Verified Facts [Cost + Tax]`;
 const pageTitle = isLockedAnnArbor
   ? 'Ann Arbor, MI Living Costs: 5 Surprises [2027 Data]'
@@ -358,9 +359,11 @@ const pageTitle = isLockedAnnArbor
     ? 'Altamonte Springs FL: 7 Living Costs [2027 Data]'
     : isLockedTampa
       ? 'Tampa, FL Living Costs: 15 Verified Facts [2027]'
-      : baseTitleCandidate.length <= 58
-        ? baseTitleCandidate
-        : `${city.name}, ${stUpper} Guide: ${factCount} Facts [2027 Data]`.slice(0, 58);
+      : isLockedBellevue
+        ? 'Bellevue, WA Living Costs: 11 Verified Facts [2027]'
+        : baseTitleCandidate.length <= 58
+          ? baseTitleCandidate
+          : `${city.name}, ${stUpper} Guide: ${factCount} Facts [2027 Data]`.slice(0, 58);
 
 const homeValStr =
   city.housingAndTaxes?.medianHomeValue != null
@@ -380,9 +383,11 @@ const pageDescription = isLockedAnnArbor
     ? 'We analyzed Altamonte Springs living costs across housing, taxes, and income. 3 bills beat Florida averages, but 1 utility surprise shocked new residents.'
     : isLockedTampa
       ? 'We analyzed Tampa living costs across $375,300 homes, $1,567/mo rent, and 0.75% property tax. 3 metrics beat Florida norms, but 1 cost surprised buyers.'
-      : homeValStr && rentStr && propTaxStr
-        ? `We compiled ${factCount} verified 2027 records for ${city.name}, ${stUpper}: ${homeValStr}, ${rentStr}, and ${propTaxStr}. See the full data.`
-        : `We compiled ${factCount} verified 2027 civic records for ${city.name}, ${stUpper}: Census housing, taxes, climate normals & ER hospitals. See the data.`;
+      : isLockedBellevue
+        ? 'We analyzed Bellevue living costs across $1,203,100 homes, $2,505/mo rent, and 0.75% property tax. 3 metrics beat Seattle norms, but 1 cost shocked buyers.'
+        : homeValStr && rentStr && propTaxStr
+          ? `We compiled ${factCount} verified 2027 records for ${city.name}, ${stUpper}: ${homeValStr}, ${rentStr}, and ${propTaxStr}. See the full data.`
+          : `We compiled ${factCount} verified 2027 civic records for ${city.name}, ${stUpper}: Census housing, taxes, climate normals & ER hospitals. See the data.`;
 ---
 
 <Layout
