@@ -744,49 +744,57 @@
       "totalMatchingEvents": 655,
       "events": [
         {
-          "id": "Z7r9jZ1AAe8oY",
-          "name": "Hocus Pocus Drag Brunch",
-          "date": "2026-10-31",
-          "venueName": "Cap City Comedy Club",
-          "category": "Live Event",
-          "url": "https://www.ticketmaster.com/event/Z7r9jZ1AAe8oY"
-        },
-        {
-          "id": "Z7r9jZ1AAvgqp",
-          "name": "Freaky Deaky 2026 - Saturday 18+",
-          "date": "2026-10-31",
-          "venueName": "Travis County Expo Center",
-          "category": "Live Event",
-          "url": "https://www.ticketmaster.com/event/Z7r9jZ1AAvgqp"
-        },
-        {
-          "id": "Z7r9jZ1A7OZ4E",
-          "name": "Texas Longhorns Football vs. Mississippi State Bulldogs Football",
-          "date": "2026-10-31",
-          "venueName": "Darrell K Royal - Memorial Stadium",
-          "category": "Sports",
-          "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7OZ4E"
-        },
-        {
-          "id": "G5dIZ_3xNRMxO",
-          "name": "Mr. Fantasy - Sexy Saturday Nights Tour",
-          "date": "2026-10-31",
+          "id": "3A0064F5E8D0253C",
+          "name": "KUTX's Horizontes Pres:Aterciopelados: La Pipa De Laz Paz 30 Anos Tour",
+          "date": "2026-11-19",
           "venueName": "Scoot Inn",
           "category": "Music",
-          "url": "https://www.ticketmaster.com/mr-fantasy-sexy-saturday-nights-tour-austin-texas-10-31-2026/event/3A006528A3BF78A0"
+          "url": "https://www.ticketmaster.com/kutxs-horizontes-presaterciopelados-la-pipa-de-austin-texas-11-19-2026/event/3A0064F5E8D0253C"
         },
         {
-          "id": "Z7r9jZ1A70PPk",
-          "name": "Craig Robinson",
-          "date": "2026-10-31",
-          "venueName": "Cap City Comedy Club",
+          "id": "3A0064A79A26A82B",
+          "name": "An Evening With Band Of Horses",
+          "date": "2026-11-19",
+          "venueName": "Stubb's Waller Creek Amphitheater",
+          "category": "Music",
+          "url": "https://www.ticketmaster.com/an-evening-with-band-of-horses-austin-texas-11-19-2026/event/3A0064A79A26A82B"
+        },
+        {
+          "id": "3A0064C2F2FCF0DC",
+          "name": "Dexter and The Moonrocks",
+          "date": "2026-11-19",
+          "venueName": "Emo's Austin",
+          "category": "Music",
+          "url": "https://www.ticketmaster.com/dexter-and-the-moonrocks-austin-texas-11-19-2026/event/3A0064C2F2FCF0DC"
+        },
+        {
+          "id": "Z7r9jZ1AAZUAE",
+          "name": "Texas Longhorns Mens Basketball vs. Southern Utah Thunderbirds Mens Basketball",
+          "date": "2026-11-19",
+          "venueName": "Moody Center ATX",
+          "category": "Sports",
+          "url": "https://www.ticketmaster.com/event/Z7r9jZ1AAZUAE"
+        },
+        {
+          "id": "Z7r9jZ1A7PNZb",
+          "name": "Actors From The London Stage: Much Ado About Nothing",
+          "date": "2026-11-19",
+          "venueName": "McCullough Theater",
           "category": "Arts & Theatre",
-          "url": "https://www.ticketmaster.com/event/Z7r9jZ1A70PPk"
+          "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7PNZb"
+        },
+        {
+          "id": "Z7r9jZ1A7PtaM",
+          "name": "Actors From The London Stage",
+          "date": "2026-11-19",
+          "venueName": "McCullough Theater",
+          "category": "Arts & Theatre",
+          "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7PtaM"
         }
       ],
       "sourceName": "Ticketmaster Discovery API v2",
       "sourceUrl": "https://developer.ticketmaster.com/",
-      "retrieved": "2026-10-31"
+      "retrieved": "2026-11-19"
     },
     "conventionsAndHospitality": {
       "sourceName": "Conventions.com Municipal CVB & U.S. GSA FY2027 Per Diem Intelligence",

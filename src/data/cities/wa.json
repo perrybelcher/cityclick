@@ -664,7 +664,7 @@
           "fullName": "Ebey's Landing National Historical Reserve",
           "designation": "National Historical Reserve",
           "distanceMiles": 43.9,
-          "description": "This stunning landscape on the Salish Sea, with its rich farmland and promising seaport, lured the earliest American pioneers north of the Columbia River to Ebey’s Landing. Today Ebey’s Landing National Historical Reserve preserves the...",
+          "description": "This stunning landscape on the Salish Sea, with its rich farmland and promising seaport, lured the earliest American pioneers north of the Columbia River to Ebey\u2019s Landing. Today Ebey\u2019s Landing National Historical Reserve preserves the...",
           "url": "https://www.nps.gov/ebla/index.htm",
           "lat": 48.21403,
           "lng": -122.687721
@@ -3134,7 +3134,7 @@
           "fullName": "Ebey's Landing National Historical Reserve",
           "designation": "National Historical Reserve",
           "distanceMiles": 49.2,
-          "description": "This stunning landscape on the Salish Sea, with its rich farmland and promising seaport, lured the earliest American pioneers north of the Columbia River to Ebey’s Landing. Today Ebey’s Landing National Historical Reserve preserves the...",
+          "description": "This stunning landscape on the Salish Sea, with its rich farmland and promising seaport, lured the earliest American pioneers north of the Columbia River to Ebey\u2019s Landing. Today Ebey\u2019s Landing National Historical Reserve preserves the...",
           "url": "https://www.nps.gov/ebla/index.htm",
           "lat": 48.21403,
           "lng": -122.687721
@@ -3143,6 +3143,54 @@
       "sourceName": "U.S. National Park Service",
       "sourceUrl": "https://www.nps.gov/",
       "retrieved": "2026-10-31"
+    },
+    "upcomingEvents": {
+      "totalMatchingEvents": 7,
+      "events": [
+        {
+          "id": "bellevue-tm-1",
+          "name": "Sumo + Sushi - Seattle [Bellevue] (19:00)",
+          "date": "2026-11-20",
+          "venueName": "Meydenbauer Center",
+          "category": "Live Event",
+          "url": "https://www.universe.com/events/sumo-sushi-seattle-bellevue-tickets-ZL3X0R?ref=ticketmaster"
+        },
+        {
+          "id": "bellevue-tm-2",
+          "name": "Sumo + Sushi - Seattle [Bellevue] (16:00)",
+          "date": "2026-11-21",
+          "venueName": "Meydenbauer Center",
+          "category": "Live Event",
+          "url": "https://www.universe.com/events/sumo-sushi-seattle-bellevue-tickets-ZL3X0R?ref=ticketmaster"
+        },
+        {
+          "id": "bellevue-tm-3",
+          "name": "Sumo + Sushi - Seattle [Bellevue] (19:30)",
+          "date": "2026-11-21",
+          "venueName": "Meydenbauer Center",
+          "category": "Live Event",
+          "url": "https://www.universe.com/events/sumo-sushi-seattle-bellevue-tickets-ZL3X0R?ref=ticketmaster"
+        },
+        {
+          "id": "bellevue-tm-4",
+          "name": "Sumo + Sushi - Seattle [Bellevue] (13:30)",
+          "date": "2026-11-22",
+          "venueName": "Meydenbauer Center",
+          "category": "Live Event",
+          "url": "https://www.universe.com/events/sumo-sushi-seattle-bellevue-tickets-ZL3X0R?ref=ticketmaster"
+        },
+        {
+          "id": "bellevue-tm-5",
+          "name": "Sumo + Sushi - Seattle [Bellevue] (17:00)",
+          "date": "2026-11-22",
+          "venueName": "Meydenbauer Center",
+          "category": "Live Event",
+          "url": "https://www.universe.com/events/sumo-sushi-seattle-bellevue-tickets-ZL3X0R?ref=ticketmaster"
+        }
+      ],
+      "sourceName": "Ticketmaster Discovery API v2",
+      "sourceUrl": "https://developer.ticketmaster.com/",
+      "retrieved": "2026-11-19"
     }
   },
   {
@@ -4367,7 +4415,7 @@
           "fullName": "Ebey's Landing National Historical Reserve",
           "designation": "National Historical Reserve",
           "distanceMiles": 28.7,
-          "description": "This stunning landscape on the Salish Sea, with its rich farmland and promising seaport, lured the earliest American pioneers north of the Columbia River to Ebey’s Landing. Today Ebey’s Landing National Historical Reserve preserves the...",
+          "description": "This stunning landscape on the Salish Sea, with its rich farmland and promising seaport, lured the earliest American pioneers north of the Columbia River to Ebey\u2019s Landing. Today Ebey\u2019s Landing National Historical Reserve preserves the...",
           "url": "https://www.nps.gov/ebla/index.htm",
           "lat": 48.21403,
           "lng": -122.687721
@@ -7273,7 +7321,7 @@
           "fullName": "Ebey's Landing National Historical Reserve",
           "designation": "National Historical Reserve",
           "distanceMiles": 38.6,
-          "description": "This stunning landscape on the Salish Sea, with its rich farmland and promising seaport, lured the earliest American pioneers north of the Columbia River to Ebey’s Landing. Today Ebey’s Landing National Historical Reserve preserves the...",
+          "description": "This stunning landscape on the Salish Sea, with its rich farmland and promising seaport, lured the earliest American pioneers north of the Columbia River to Ebey\u2019s Landing. Today Ebey\u2019s Landing National Historical Reserve preserves the...",
           "url": "https://www.nps.gov/ebla/index.htm",
           "lat": 48.21403,
           "lng": -122.687721
@@ -7876,7 +7924,7 @@
           "fullName": "Ebey's Landing National Historical Reserve",
           "designation": "National Historical Reserve",
           "distanceMiles": 42.2,
-          "description": "This stunning landscape on the Salish Sea, with its rich farmland and promising seaport, lured the earliest American pioneers north of the Columbia River to Ebey’s Landing. Today Ebey’s Landing National Historical Reserve preserves the...",
+          "description": "This stunning landscape on the Salish Sea, with its rich farmland and promising seaport, lured the earliest American pioneers north of the Columbia River to Ebey\u2019s Landing. Today Ebey\u2019s Landing National Historical Reserve preserves the...",
           "url": "https://www.nps.gov/ebla/index.htm",
           "lat": 48.21403,
           "lng": -122.687721
@@ -9699,7 +9747,7 @@
           "fullName": "Ebey's Landing National Historical Reserve",
           "designation": "National Historical Reserve",
           "distanceMiles": 45.5,
-          "description": "This stunning landscape on the Salish Sea, with its rich farmland and promising seaport, lured the earliest American pioneers north of the Columbia River to Ebey’s Landing. Today Ebey’s Landing National Historical Reserve preserves the...",
+          "description": "This stunning landscape on the Salish Sea, with its rich farmland and promising seaport, lured the earliest American pioneers north of the Columbia River to Ebey\u2019s Landing. Today Ebey\u2019s Landing National Historical Reserve preserves the...",
           "url": "https://www.nps.gov/ebla/index.htm",
           "lat": 48.21403,
           "lng": -122.687721
@@ -10857,7 +10905,7 @@
           "fullName": "Ebey's Landing National Historical Reserve",
           "designation": "National Historical Reserve",
           "distanceMiles": 26.3,
-          "description": "This stunning landscape on the Salish Sea, with its rich farmland and promising seaport, lured the earliest American pioneers north of the Columbia River to Ebey’s Landing. Today Ebey’s Landing National Historical Reserve preserves the...",
+          "description": "This stunning landscape on the Salish Sea, with its rich farmland and promising seaport, lured the earliest American pioneers north of the Columbia River to Ebey\u2019s Landing. Today Ebey\u2019s Landing National Historical Reserve preserves the...",
           "url": "https://www.nps.gov/ebla/index.htm",
           "lat": 48.21403,
           "lng": -122.687721
@@ -11502,7 +11550,7 @@
           "fullName": "Ebey's Landing National Historical Reserve",
           "designation": "National Historical Reserve",
           "distanceMiles": 52.3,
-          "description": "This stunning landscape on the Salish Sea, with its rich farmland and promising seaport, lured the earliest American pioneers north of the Columbia River to Ebey’s Landing. Today Ebey’s Landing National Historical Reserve preserves the...",
+          "description": "This stunning landscape on the Salish Sea, with its rich farmland and promising seaport, lured the earliest American pioneers north of the Columbia River to Ebey\u2019s Landing. Today Ebey\u2019s Landing National Historical Reserve preserves the...",
           "url": "https://www.nps.gov/ebla/index.htm",
           "lat": 48.21403,
           "lng": -122.687721
@@ -13353,7 +13401,7 @@
           "fullName": "Ebey's Landing National Historical Reserve",
           "designation": "National Historical Reserve",
           "distanceMiles": 35.3,
-          "description": "This stunning landscape on the Salish Sea, with its rich farmland and promising seaport, lured the earliest American pioneers north of the Columbia River to Ebey’s Landing. Today Ebey’s Landing National Historical Reserve preserves the...",
+          "description": "This stunning landscape on the Salish Sea, with its rich farmland and promising seaport, lured the earliest American pioneers north of the Columbia River to Ebey\u2019s Landing. Today Ebey\u2019s Landing National Historical Reserve preserves the...",
           "url": "https://www.nps.gov/ebla/index.htm",
           "lat": 48.21403,
           "lng": -122.687721
@@ -15070,7 +15118,7 @@
           "fullName": "Ebey's Landing National Historical Reserve",
           "designation": "National Historical Reserve",
           "distanceMiles": 53.4,
-          "description": "This stunning landscape on the Salish Sea, with its rich farmland and promising seaport, lured the earliest American pioneers north of the Columbia River to Ebey’s Landing. Today Ebey’s Landing National Historical Reserve preserves the...",
+          "description": "This stunning landscape on the Salish Sea, with its rich farmland and promising seaport, lured the earliest American pioneers north of the Columbia River to Ebey\u2019s Landing. Today Ebey\u2019s Landing National Historical Reserve preserves the...",
           "url": "https://www.nps.gov/ebla/index.htm",
           "lat": 48.21403,
           "lng": -122.687721
@@ -15723,7 +15771,7 @@
           "fullName": "Ebey's Landing National Historical Reserve",
           "designation": "National Historical Reserve",
           "distanceMiles": 37.8,
-          "description": "This stunning landscape on the Salish Sea, with its rich farmland and promising seaport, lured the earliest American pioneers north of the Columbia River to Ebey’s Landing. Today Ebey’s Landing National Historical Reserve preserves the...",
+          "description": "This stunning landscape on the Salish Sea, with its rich farmland and promising seaport, lured the earliest American pioneers north of the Columbia River to Ebey\u2019s Landing. Today Ebey\u2019s Landing National Historical Reserve preserves the...",
           "url": "https://www.nps.gov/ebla/index.htm",
           "lat": 48.21403,
           "lng": -122.687721
@@ -16297,7 +16345,7 @@
           "fullName": "Ebey's Landing National Historical Reserve",
           "designation": "National Historical Reserve",
           "distanceMiles": 46.6,
-          "description": "This stunning landscape on the Salish Sea, with its rich farmland and promising seaport, lured the earliest American pioneers north of the Columbia River to Ebey’s Landing. Today Ebey’s Landing National Historical Reserve preserves the...",
+          "description": "This stunning landscape on the Salish Sea, with its rich farmland and promising seaport, lured the earliest American pioneers north of the Columbia River to Ebey\u2019s Landing. Today Ebey\u2019s Landing National Historical Reserve preserves the...",
           "url": "https://www.nps.gov/ebla/index.htm",
           "lat": 48.21403,
           "lng": -122.687721
@@ -16912,7 +16960,7 @@
           "fullName": "Ebey's Landing National Historical Reserve",
           "designation": "National Historical Reserve",
           "distanceMiles": 32.1,
-          "description": "This stunning landscape on the Salish Sea, with its rich farmland and promising seaport, lured the earliest American pioneers north of the Columbia River to Ebey’s Landing. Today Ebey’s Landing National Historical Reserve preserves the...",
+          "description": "This stunning landscape on the Salish Sea, with its rich farmland and promising seaport, lured the earliest American pioneers north of the Columbia River to Ebey\u2019s Landing. Today Ebey\u2019s Landing National Historical Reserve preserves the...",
           "url": "https://www.nps.gov/ebla/index.htm",
           "lat": 48.21403,
           "lng": -122.687721
@@ -17470,7 +17518,7 @@
           "fullName": "Ebey's Landing National Historical Reserve",
           "designation": "National Historical Reserve",
           "distanceMiles": 31.7,
-          "description": "This stunning landscape on the Salish Sea, with its rich farmland and promising seaport, lured the earliest American pioneers north of the Columbia River to Ebey’s Landing. Today Ebey’s Landing National Historical Reserve preserves the...",
+          "description": "This stunning landscape on the Salish Sea, with its rich farmland and promising seaport, lured the earliest American pioneers north of the Columbia River to Ebey\u2019s Landing. Today Ebey\u2019s Landing National Historical Reserve preserves the...",
           "url": "https://www.nps.gov/ebla/index.htm",
           "lat": 48.21403,
           "lng": -122.687721
@@ -18597,7 +18645,7 @@
           "fullName": "Ebey's Landing National Historical Reserve",
           "designation": "National Historical Reserve",
           "distanceMiles": 30.9,
-          "description": "This stunning landscape on the Salish Sea, with its rich farmland and promising seaport, lured the earliest American pioneers north of the Columbia River to Ebey’s Landing. Today Ebey’s Landing National Historical Reserve preserves the...",
+          "description": "This stunning landscape on the Salish Sea, with its rich farmland and promising seaport, lured the earliest American pioneers north of the Columbia River to Ebey\u2019s Landing. Today Ebey\u2019s Landing National Historical Reserve preserves the...",
           "url": "https://www.nps.gov/ebla/index.htm",
           "lat": 48.21403,
           "lng": -122.687721
@@ -19174,7 +19222,7 @@
           "fullName": "Ebey's Landing National Historical Reserve",
           "designation": "National Historical Reserve",
           "distanceMiles": 54.9,
-          "description": "This stunning landscape on the Salish Sea, with its rich farmland and promising seaport, lured the earliest American pioneers north of the Columbia River to Ebey’s Landing. Today Ebey’s Landing National Historical Reserve preserves the...",
+          "description": "This stunning landscape on the Salish Sea, with its rich farmland and promising seaport, lured the earliest American pioneers north of the Columbia River to Ebey\u2019s Landing. Today Ebey\u2019s Landing National Historical Reserve preserves the...",
           "url": "https://www.nps.gov/ebla/index.htm",
           "lat": 48.21403,
           "lng": -122.687721
@@ -20803,7 +20851,7 @@
           "fullName": "Ebey's Landing National Historical Reserve",
           "designation": "National Historical Reserve",
           "distanceMiles": 22.3,
-          "description": "This stunning landscape on the Salish Sea, with its rich farmland and promising seaport, lured the earliest American pioneers north of the Columbia River to Ebey’s Landing. Today Ebey’s Landing National Historical Reserve preserves the...",
+          "description": "This stunning landscape on the Salish Sea, with its rich farmland and promising seaport, lured the earliest American pioneers north of the Columbia River to Ebey\u2019s Landing. Today Ebey\u2019s Landing National Historical Reserve preserves the...",
           "url": "https://www.nps.gov/ebla/index.htm",
           "lat": 48.21403,
           "lng": -122.687721

@@ -154,6 +154,13 @@ const compareRobots =
   description={`Compare ${recordA.name} and ${recordB.name} side-by-side on Census demographics, housing costs, effective property tax, and combined sales tax.`}
   robots={compareRobots}
 >
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": pageTitle,
+    "url": canonicalUrl,
+    "description": pageDesc
+  })} />
   <section class="bg-gradient-to-b from-[#EDF4FC] to-white py-12 border-b border-slate-200">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 space-y-6">
       <div>

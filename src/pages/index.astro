@@ -32,6 +32,20 @@ const statesList = Object.values(stateCounts).sort((a, b) => a.name.localeCompar
   description={`Plan a visit, find a place to live, or research your next business location. Primary-sourced municipal guides for ${manifest.length.toLocaleString('en-US')} US cities across all 50 states and DC, including ${FEATURED_CITIES.length} featured flagship editions.`}
   image="https://cityclick.com/images/og-cityclick.jpg"
 >
+  <script type="application/ld+json" is:inline>
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "CityClick",
+      "url": "https://cityclick.com/",
+      "description": "Primary-sourced US city guides covering Census ACS demographics, housing costs, property taxes, Open-Meteo climate normals, CMS emergency hospitals, and 25-trade NAICS saturation.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "CityClick, Inc.",
+        "url": "https://cityclick.com/"
+      }
+    }
+  </script>
   <!-- Hero Section -->
   <section class="bg-gradient-to-b from-[#EDF4FC] via-[#F8FAFC] to-white pt-14 pb-20 border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
